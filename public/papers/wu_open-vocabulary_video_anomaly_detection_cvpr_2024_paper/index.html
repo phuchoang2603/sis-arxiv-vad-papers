@@ -1,0 +1,1926 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title> &middot; Blowfish</title>
+    <meta name="title" content=" &middot; Blowfish">
+  
+
+  
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/papers/wu_open-vocabulary_video_anomaly_detection_cvpr_2024_paper/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/papers/wu_open-vocabulary_video_anomaly_detection_cvpr_2024_paper/">
+  <meta property="og:site_name" content="Blowfish">
+  <meta property="og:title" content="Blowfish">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blowfish">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.7946532fa78157bafb1b4340d4074792811f18177af35790b3a0cb90566ce1cda3edd782eb92e134849964d14b6d9185c9d4ded2a12dcf5b706cb6a275c0cce0.css"
+    integrity="sha512-eUZTL6eBV7r7G0NA1AdHkoEfGBd681eQs6DLkFZs4c2j7deC65LhNISZZNFLbZGFydTe0qEtz1twbLaidcDM4A==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.9df4fc14d50efcc9aa4cfc2b6f348e365f421f5ad491278f8f48c0360cf2f93f08882fda6da162d7ace8e5add57c2df4ac46bd3861306b1d4c452cd31f448d64.js"
+      integrity="sha512-nfT8FNUO/MmqTPwrbzSONl9CH1rUkSePj0jANgzy&#43;T8IiC/abaFi16zo5a3VfC30rEa9OGEwax1MRSzTH0SNZA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Papers",
+    "name": "",
+    "headline": "",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/papers\/wu_open-vocabulary_video_anomaly_detection_cvpr_2024_paper\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "7786"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          Blowfish
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/papers/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="papers"
+  title="Papers">
+  
+  
+    <p class="text-base font-medium">
+      papers
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/test/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="test"
+  title="Tests">
+  
+  
+    <p class="text-base font-medium">
+      test
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href=""
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  
+  title="">
+  
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/papers/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="papers"
+    title="Papers">
+    
+    
+      <p class="text-bg font-bg">
+        papers
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/test/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="test"
+    title="Tests">
+    
+    
+      <p class="text-bg font-bg">
+        test
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    
+    title="">
+    
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>7786 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">37 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000000_9cce1efcf9690a02da88382ea9e5ea829a9ce42402fcf25545419199368f0e66.png"
+    ></figure>
+<p>This CVPR paper is the Open Access version, provided by the Computer Vision Foundation.</p>
+<p>Except for this watermark, it is identical to the accepted version;</p>
+<p>the final published version of the proceedings is available on IEEE Xplore.</p>
+
+<h2 class="relative group">Open-Vocabulary Video Anomaly Detection
+    <div id="open-vocabulary-video-anomaly-detection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#open-vocabulary-video-anomaly-detection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Peng Wu 1 , Xuerong Zhou 1 , Guansong Pang 2* *, Yujia Sun 3 , Jing Liu 3 , Peng Wang 1∗ , Yanning Zhang 1 1 Northwestern Polytechnical University, 2 Singapore Management University, 3 Xidian University</p>
+<p>{xdwupeng, <a
+  href="mailto:zxr2333%7d@gmail.com">zxr2333}@gmail.com</a>, <a
+  href="mailto:gspang@smu.edu.sg">gspang@smu.edu.sg</a>, <a
+  href="mailto:yjsun@stu.xidian.edu.cn">yjsun@stu.xidian.edu.cn</a> <a
+  href="mailto:neouma@163.com">neouma@163.com</a>,</p>
+
+<h2 class="relative group">Abstract
+    <div id="abstract" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abstract" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Current video anomaly detection (VAD) approaches with weak supervisions are inherently limited to a closed-set setting and may struggle in open-world applications where there can be anomaly categories in the test data unseen during training. A few recent studies attempt to tackle a more realistic setting, open-set VAD, which aims to detect unseen anomalies given seen anomalies and normal videos. However, such a setting focuses on predicting frame anomaly scores, having no ability to recognize the specific categories of anomalies, despite the fact that this ability is essential for building more informed video surveillance systems. This paper takes a step further and explores openvocabulary video anomaly detection (OVVAD), in which we aim to leverage pre-trained large models to detect and categorize seen and unseen anomalies. To this end, we propose a model that decouples OVVAD into two mutually complementary tasks – class-agnostic detection and class-specific classification – and jointly optimizes both tasks. Particularly, we devise a semantic knowledge injection module to introduce semantic knowledge from large language models for the detection task, and design a novel anomaly synthesis module to generate pseudo unseen anomaly videos with the help of large vision generation models for the classification task. These semantic knowledge and synthesis anomalies substantially extend our model&rsquo;s capability in detecting and categorizing a variety of seen and unseen anomalies. Extensive experiments on three widely-used benchmarks demonstrate our model achieves state-of-the-art performance on OVVAD task.</p>
+
+<h2 class="relative group">1. Introduction
+    <div id="1-introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video anomaly detection (VAD), which aims at detecting unusual events that do not conform to expected patterns, has become a growing concern in both academia and industry communities due to its promising application prospects</p>
+<ul>
+<li>Corresponding Authors</li>
+</ul>
+<p>{peng.wang, <a
+  href="mailto:ynzhang%7d@nwpu.edu.cn">ynzhang}@nwpu.edu.cn</a> in, such as, intelligent video surveillance and video content review. Through several years of vigorous development, VAD has made significant progress with many works continuously emerging.</p>
+<p>Traditional VAD can be broadly classified into two types based on the supervised mode, i.e., semi-supervised VAD [17] and weakly supervised VAD [38]. The main difference between them lies in the availability of abnormal training samples. Although they are different in terms of supervised mode and model design, both can be roughly regarded as classification tasks. In the case of semisupervised VAD, it falls under the category of one-class classification, while weakly supervised VAD pertains to binary classification. Specifically, semi-supervised VAD assumes that only normal samples are available during the training stage, and the test samples which do not conform to these normal training samples are identified as anomalies, as shown in Fig. 1(a). Most existing methods essentially endeavor to learn the one-class pattern, i.e., normal pattern, by means of one-class classifiers [50] or self-supervised learning technique, e.g. frame reconstruction [9], frame prediction [17], jigsaw puzzles [44], etc. Similarly, as illustrated in Fig. 1(b), weakly supervised VAD can be seen as a binary classification task with the assumption that both normal and abnormal samples are available during the training phase but the precise temporal annotation of abnormal events are unknown. Previous approaches widely adopt a binary classifier with the multiple instance learning (MIL) [38] or TopK mechanism [27] to discriminate between normal and abnormal events. In general, existing approaches of both semi-supervised and weakly supervision VAD restricts their focus to classification and use corresponding discriminator to categorize each video frame. While these practices have achieved significant success on several widely-used benchmarks, they are limited to detecting a closed set of anomaly categories and are unable to handle arbitrary unseen anomalies. This limitation restricts their application in open-world scenarios and poses a risk of increasing missing reports, as many real-world anomalies in actual deployment are not present in the training data.</p>
+<p>Figure 1. Comparison of different VAD tasks.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000001_022950470cb0f5ec1d13a11ce49921776449f5211c43ad6316f78de9ea8ac740.png"
+    ></figure>
+<p>To address this issue, a few recent works explore a whole new line of VAD, i.e., open-set VAD [1 , 5 , 66 , 67]. The core purpose of open-set VAD is to train a model with normal and seen abnormal samples to detect unseen anomalies (see Fig. 1(c)). For example, abnormal training samples only includes fighting and shooting events, and it is expected that the trained model can detect abnormal events that occur in the road accident scene. Compared to traditional VAD, open-set VAD breaks out of the close-set dilemma and then possesses ability to deal with open-world problems. Although these works partly reveal their openworld capacity, they fall short in addressing semantic understanding of the abnormal category, which leads to the ambiguous detection process in the open world.</p>
+<p>Recently, large language/vision model pre-training [11 , 29 , 34 , 64] has been phenomenally successful across a wide range of downstream tasks [13–15 , 24 , 25 , 28 , 47 , 48 , 58 , 65] on account of its learned cross-modal prior knowledge and powerful transfer learning ability, which also allow us to tackle open-vocabulary video anomaly detection (OVVAD). Therefore, in this paper, we propose a novel model built upon large pre-trained vision/language models for OVVAD that aims to detect and categorize seen and unseen anomalies, as shown in Fig. 1(d). Compared to previous VAD, OVVAD has high value to applications as it can provide more informed, fine-grained detection results, but it is more challenging since that 1) it not only needs to detect but also categorize the anomalies; 2) it needs to tackle seen (base) as well as unseen (novel) anomalies. To address these challenges, we explicitly disentangle the OVVAD task into two mutually complementary sub-tasks: one is classagnostic detection, while another one is class-specific categorization. To improve the class-agnostic detection, we make efforts from two aspects. We first introduce a nearly weight-free temporal adapter (TA) module to model temporal relationships, and then introduce a novel semantic knowledge injection (SKI) module designed to incorporate textual knowledge into visual signals with assistance of large language models. To enhance the class-specific categorization, we take inspirations from the contrastive language-image pre-training (CLIP) model [29], and use a scalable way to categorize anomalies, i.e., the alignment between textual labels and videos, and furthermore we design a novel anomaly synthesis (NAS) module to generate vision (e.g., images and videos) materials to assist the model better identify novel anomalies. Based on these operations, our model achieves state-of-the-art performance on three popular benchmarks for OVVAD, attaining 86.40% AUC, 66.53% AP and 62.94% AUC on UCF-Crime [38], XDViolence [51] and UBnormal [1], respectively.</p>
+<p>We summarize our contributions as follows:</p>
+<ul>
+<li>We explore video anomaly detection under a challenging yet practically important open-vocabulary setting. To our knowledge, this is the first work for OVVAD.</li>
+<li>We then propose a model built on top of pre-trained large models that disentangles the OVVAD task into two mutually complementary sub-tasks – class-agnostic detection and class-specific categorization – and jointly optimizes them for accurate OVVAD.</li>
+<li>In the class-agnostic detection task, we design a nearly weight-free temporal adapter module and a semantic knowledge injection module for substantially-enhanced normal/abnormal frame detection.</li>
+<li>In the fine-grained anomaly classification task, we introduce a novel anomaly synthesis module to generate pseudo unseen anomaly videos for accurate classification of novel anomaly types.</li>
+</ul>
+
+<h2 class="relative group">2. Related Work
+    <div id="2-related-work" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-related-work" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Semi-supervised VAD. Mainstream solutions are to build a normal pattern by self-supervised manner (e.g., reconstruction and prediction) or one-class manner. As for the self-supervised manner [8 , 54 , 56], reconstruction-based approaches [4 , 21 , 22 , 33 , 39 , 55 , 60] typically leverage encoder-decoder frameworks to reconstruct normal events and compute the reconstruction errors, and these events with large reconstruction error are classified as anomalies. Follow-up prediction-based approaches [17 , 19] focuses on predicting the future frame with previous video frames and determine whether it is an anomaly frame by calculating the difference between the predicted frame and the actual frame. Recent work [37] combined reconstruction- and prediction-based approaches to improve detection performance. As for one-class models, some works endeavors to learn normal patterns by making use of one-class frameworks [35], e.g., one-class support vector machine and its extension (OCSVM [36], SVDD [50], GODS [45]).</p>
+<p>Weakly supervised VAD. In contrast to semi-supervised VAD, weakly supervised VAD [10 , 40] consists of normal as well as abnormal samples, which can be regarded as a binary classification task and aims to detect anomalies at frame level under the limitation of temporal annotations. As a pioneer work, Sultani et al. [38] first proposed a large-</p>
+<p>scale benchmark and trained a lightweight network with MIL mechanism. Then Zhong et al. [61] proposed a graph convolutional network based approach to capture the similarity relations and temporal relations across frames. Tian et al. [42] introduced self-attention blocks and pyramid dilated convolution layers to capture multi-scale temporal relations. Wu et al. [51 , 52] built the largest-scale benchmark that includes audio-visual signals and proposed a multi-task model to deal with coarse- and fine-grained VAD. Zaheer et al. [57] presented a clustering assisted weakly supervised framework with novel normalcy suppression mechanism. Li et al. [16] proposed a transformer-based network with self-training multi-sequence learning. Zhang et al. [59] attempted to exploit the completeness and uncertainty of pseudo labels. The above approaches simply used video or audio inputs encoded by pre-trained models, such as C3D [43] and I3D [3], although a few works [12 , 23 , 53] introduced CLIP models to weakly-supervised VAD task, they simply used its powerful visual features and ignored the zero-shot ability of CLIP.</p>
+<p>Open-set VAD. VAD task naturally exists an open-world requirement. Faced with an open-world requirement, traditional semi-supervised works are more prone to producing large false alarms, while weak-supervised works are effective in detecting known anomalies but could fail in unseen anomalies. Open-set VAD aims to train the model based on normality and seen anomalies, and attempts to detect unseen anomalies. Acsintoae et al. [1] developed the first benchmark called UBnormal for supervised openset VAD task. Zhu et al. [67] proposed an approach to deal with open-set VAD task by integrating evidential deep learning and normalizing flows into a MIL framework. Besides, Ding et al. [5] proposed a multi-head network based model to learn the disentangled anomaly representations, with each head dedicated to capturing one specific type of anomaly. Compared to our model, these above works mainly devote themselves to open-world detection and overlook anomaly categorization, moreover, these works also fail to take full advantage of pre-trained models.</p>
+
+<h2 class="relative group">3. Method
+    <div id="3-method" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-method" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Problem Statement. The studied problem, OVVAD, can be formally stated as follows. Suppose we are given a set of training samples X = {xi} N+A i=1 , where Xn Xn = {xi} N i is the set of normal samples and Xa Xa = {xi} N+A i=N+1 is the set of abnormal samples. For each sample xiin Xa Xa , it has a corresponding video-level category label yi , yi ∈ Cbase , Here, Cbase represents the set of base (seen) anomaly categories, and C is the union of Cbase and Cnovel, where Cn Cnovel stands for the set of novel (unseen) anomaly categories. Based on the training samples X , the objective is to train a model capable of detecting and categorizing both base and novel anomalies. Specifically, the goal of model is to predict anomaly confidence for each frame, and identify the anomaly category if anomalies are present in the video.</p>
+
+<h2 class="relative group">3.1. Overall Framework
+    <div id="31-overall-framework" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#31-overall-framework" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Traditional methods based on close-set classifications are less likely to deal with VAD under the open-vocabulary scenario. To this end, we leverage language-image pretraining models, e.g., CLIP, as the foundation thanks to its powerful zero-shot generalization ability. As illustrated in Fig. 2, given a training video, we first feed it into image encoder of CLIP ΦCLIP − v to obtain frame-level features xf with shape of n × c, where n is the number of video frames, and c is the feature dimension. Then these features pass through TA module, SKI module and a detector to produce frame-level anomaly confidence p, this pipeline is mainly applied to class-agnostic detection task. On the other hand, for class-specific categorization, we take inspirations from other open-vocabulary works across different vision tasks [31 , 46 , 63] and use cross-modal alignment mechanism. Specifically, we first generate a videolevel aggregated feature across frame-level features, then also generate textual features/embeddings of anomaly categories, finally, we estimate the anomaly category based on alignments between video-level features and textual features. Moreover, we introduce NAS module to generate potential novel anomalies with the assistance of large language models (LLM) and AI-generated content models (AIGC) for novel category identification achievement.</p>
+
+<h2 class="relative group">3.2. Temporal Adapter Module
+    <div id="32-temporal-adapter-module" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#32-temporal-adapter-module" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Temporal dependencies plays a vital role in VAD [49 , 62]. In this work, we employ the frozen image encoder of CLIP to attain vision features, but it lacks consideration of temporal dependencies since CLIP is pre-trained on image-text pairs. To bridge the gap between images and videos, the use of a temporal transformer [13 , 25] has emerged as a routine practice in recent studies. However, such a paradigm suffers from a clear performance degradation on novel categories [13 , 32], the possible reason is that additional parameters in temporal transformer could specialise on the training set, thus harming the generalisation towards novel categories. Therefore, we design a nearly weight-free temporal adapter for temporal dependencies, which is built on top of classical graph convolutional networks. Mathematically, it can be presented as follows,</p>
+<!-- formula-not-decoded -->
+<p>where LN is the layer normalization operation, H is the adjacency matrix, the softmax normalization is used to ensure the sum of each row of H equals to one. Such a design is used to capture contextual dependencies based on positional distance between each two frames. The adjacency matrix is</p>
+<p>Figure 2. Overview of our proposed framework.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000002_9c3f3411a27fa5f72f4b90d4fb273f22feff0138770bddaf18817edb311763a8.png"
+    ></figure>
+<p>where Ft Ftext ∈ R l×c , ΦCLIP − t denotes the text encoder of CLIP, and Φtoken refers to the language tokenizer that converts words into vectors.</p>
+<p>Then, towards the goal of effectively incorporating these semantic knowledge into visual information to boost anomaly detection, we design a cross-modal injection strategy. This strategy encourage visual signals to seek related semantic knowledge and integrate it into the process. Such an operation is demonstrated as,</p>
+<!-- formula-not-decoded -->
+<p>where Fknow ∈ R n×c , and we employ sigmoid instead of softmax to ensure that visual signals can encompass more relevant semantic concepts.</p>
+<p>Finally, we concatenate Fknow and xt creating an input that contains both visual information and integrated semantic knowledge. We feed this input into a binary detector to generate anomaly confidence for class-agnostic detection.</p>
+
+<h2 class="relative group">3.4. Novel Anomaly Synthesis Module
+    <div id="34-novel-anomaly-synthesis-module" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#34-novel-anomaly-synthesis-module" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>While current pre-trained vision-language models, such as, CLIP, possess impressive zero-shot capacities, their zeroshot performance on various downstream tasks, especially video-related ones, remains far from satisfactory. For the same reason, our model, which is built on these pre-trained vision-language models, is trained on base anomalies and normal samples, making it susceptible to a generalization deficiency when faced with novel anomalies. With the advent of large generative models, generating samples as pseudo training data has become a feasible solution [20 , 26]. Consequently, we propose NAS module to generate a series of pseudo novel anomalies based solely on potential anomaly categories. We then leverage these samples to fine- calculated as follows:</p>
+<!-- formula-not-decoded -->
+<p>the proximity relation between i th and j th frames only determined by their relative temporal position. σ is a hyperparameter to control the range of influence of distance relation. According to this formula, the closer the temporal distance between two frames, the higher proximity relation the score, otherwise the lower. Notably, across TA module, only layer normalization involves few parameters.</p>
+
+<h2 class="relative group">3.3. Semantic Knowledge Injection Module
+    <div id="33-semantic-knowledge-injection-module" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#33-semantic-knowledge-injection-module" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Human often make use of prior knowledge when perceiving the environment, for example, we can infer the presence of a fire based on the smell and smoke without directly seeing the flames. Building on this idea, we propose SKI module to explicitly introduce additional semantic knowledge for assisting visual detection. As depicted in Fig. 2, for normal events in videos, we prompt the large-scale language models, e.g., ChatGPT [2] and SparkDesk 1 , with a fixed template, to obtain about common scenarios and actions, such as, street, park, shopping hall, walking, running, working, etc. Likewise, we generate additional words related to anomaly scenes, including terms like explosion, burst, firelight, etc. Finally, we obtain several phrase lists denoted by Mprior, which consists of noun words (scenes) and verb words (actions). With Mprior in hands, we exploit the text encoder of CLIP to extract textual embeddings as the semantic knowledge, which is show as follows,</p>
+<!-- formula-not-decoded -->
+<p>1 <a
+  href="https://xinghuo.xfyun.cn"
+    target="_blank"
+  >https://xinghuo.xfyun.cn</a></p>
+<p>tune the proposed model for improved categorization and detection of novel anomalies. On the whole, NAS module consists of three key processes:</p>
+<ol>
+<li>Initially, we prompt LLMs (e.g., ChatGPT, ERNIE Bot [41]) with pre-defined templates prompt gen like generate ten shorter scene descriptions about &ldquo;Fighting&rdquo; in real world to produce textual descriptions of potential novel categories. We then employ AIGC models, e.g., DALL·E mini [30], Gen-2 [7], to generate corresponding images or short videos. This can be represented as follows,</li>
+</ol>
+<!-- formula-not-decoded -->
+<p>where Vg Vgen is the combination of generated images (Ig Igen ) and short videos (Sg Sgen ).</p>
+<ol start="2">
+<li>
+<p>Subsequently, for Ig Igen , we draw inspiration from [18] and introduce a simple yet effective animation strategy to convert single images into video clips that simulates scene changes. Specifically, given an image, we employ the center crop mechanism with different crop ratios to select corresponding image regions, then resize these regions back to original size and cascade them to create new video clips S cat.</p>
+</li>
+<li>
+<p>Finally, to mimic real-world situation where anomaly videos are generally long and untrimmed, we introduce the third step, pseudo anomaly synthesis, by inserting Scat or Sg Sgen into randomly selected normal videos. Moreover, the insertion position is also randomly chosen. This process yields the final pseudo anomaly samples Vn Vnas . Refer to supplementary materials for detailed descriptions and results.</p>
+</li>
+</ol>
+<p>With Vn Vnas in hands, we fine-tune our model, which was initially trained on X , to enhance its generalization capacities for novel anomalies.</p>
+
+<h2 class="relative group">3.5. Objective Functions
+    <div id="35-objective-functions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#35-objective-functions" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">3.5.1 Training stage without pseudo anomaly samples
+    <div id="351-training-stage-without-pseudo-anomaly-samples" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#351-training-stage-without-pseudo-anomaly-samples" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>For class-agnostic detection, following previous VAD works [27 , 49], we use the Top-K mechanism to select the top K high anomaly confidences in both abnormal and normal videos. We compute the average values of these selections and feed the average values into the sigmoid function as the video-level predictions. Here, we set K = n/16 for abnormal videos and K = n for normal videos. Finally, we compute binary cross entropy Lbce between video-level prediction and binary labels.</p>
+<p>In regard to class-specific categorization, we compute the similarity between aggregated video-level features and textual category embeddings to derive video-level classification predictions. We also use a cross entropy loss function to compute the video-level categorization loss L ce . Given that OVVAD is a weakly supervised task, we can not obtain video-level aggregated features directly from frame-level annotations. Following [49], we employ a soft attention based aggregation, as shown below,</p>
+<!-- formula-not-decoded -->
+<p>For textual category embeddings, we are inspired by CoOp[63] and append the learnable prompt to original category embeddings.</p>
+<p>For the parameters of SKI module, namely Ftext, we aim for explicit optimization during the training stage. We intend to distinguish between normal knowledge embeddings and abnormal knowledge embeddings. For normal videos, we expect their visual features have higher similarities with normal knowledge embeddings and lower similarities with abnormal knowledge embeddings. To this end, we first extract the similarity matrix between each video and textual knowledge embeddings, and then select the top 10% highest scores for each frame and compute the average value, finally, we apply the cross-entropy-base loss L sim − n . For abnormal videos, we anticipate the high similarities between abnormal knowledge embeddings and abnormal video-frame features. Since precise frame-level annotations are absent under weak supervision, we employ a hard attention based selection mechanism know as Top-K to locate abnormal regions. The same operations are then performed to compute the loss Lsim − a.</p>
+<p>Overall, during the training phase, we employ three loss functions, with the total loss function given as:</p>
+<!-- formula-not-decoded -->
+<p>where L sim is the sum of L sim − n and L sim − a.</p>
+
+<h2 class="relative group">3.5.2 Fine-tuning stage with pseudo anomaly samples
+    <div id="352-fine-tuning-stage-with-pseudo-anomaly-samples" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#352-fine-tuning-stage-with-pseudo-anomaly-samples" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>After obtaining Vn Vnas from NAS module, we proceed with fine-tuning our model. Vn Vnas is synthetic, providing us with frame-level annotations and allowing us to optimize our model with full supervisions for detection. For categorization, L ce2 remains the same as L ce , with the key difference being that labels are available not only for base categories but also for potential novel categories. For detection, Lbce2 is the binary cross entropy loss at the frame level.</p>
+<p>Finally, the total loss function during the fine-tuning phase is shown as:</p>
+<!-- formula-not-decoded -->
+
+<h2 class="relative group">4. Experiments
+    <div id="4-experiments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-experiments" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">4.1. Experiment Setup
+    <div id="41-experiment-setup" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#41-experiment-setup" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Datasets. UCF-Crime [38] is a large-scale VAD dataset for surveillance scenes, containing 13 types of abnormal events. 800 normal videos and 810 abnormal videos are provided for training, and the remaining 140 normal videos</p>
+<p>and 150 abnormal videos for test. XD-Violence [51] is the largest VAD benchmark to date, it contains 6 anomalous categories with 3954 videos for training and 800 videos for test. To align with our model, which supports singlecategory identification, we exclude videos with multiple categories in XD-Violence. UBnormal [1] is a synthesized benchmark which defines seven types of normal events and 22 types of abnormal events. During training, only 7 abnormal categories are visible, while 12 abnormal categories are used for test.</p>
+<p>Evaluation metrics. OVVAD entails detecting and categorizing anomalies. To assess detection performance, we employ standard metrics from previous works [38 , 51]. For UCF-Crime and UBnormal, we use the area under the curve of the frame-level receiver operating characteristic (AUC) to evaluate performance. For XD-Violence, we utilize AUC of the frame-level precision-recall curve (AP). For classification, we report the video-level TOP1 accuracy for abnormal test videos on both UCF-Crime and XD-Violence. UBnormal lacks category labels, so we exclusively report AUC results. During the test phase, we provide these metrics for the entire set of categories, as well as separately for base and novel categories, on both UCF-Crime and XD-Violence.</p>
+<p>Implementation Details. The proposed model is implemented using PyTorch and trained on single RTX3090 GPU. The frozen image encoder and text encoder stem from pre-trained CLIP(ViT-B/16) [6] model. The detector is a modified feed-forward network (FFN) layer in Transformer with ReLU replaced by GeLU. In line with existing works, we process 1 out of 16 frames for each video, and during the training phase, the maximum video length is set to 256. For model optimization, we use AdamW optimizer to train the model with learning rate of 1e − 4 and train epoch of 20. The batch size is set to 64, consisting of an equal number of normal and abnormal samples. During the fine-tune phase with pseudo novel anomalies, the learning rate is set to 1e − 5 on UBnormal and 5e − 6 on UCF-Crime and XD-Violence. The fine-tuning process spans 10 epochs, with each batch containing 10 pseudo novel anomaly videos and 10 base anomaly videos. σ is set to 0.07 across all situations, and λ is set as 1e − 1 on UCF-Crime, 1e 0 on XD-Violence and UBnormal, respectively.</p>
+
+<h2 class="relative group">4.2. Comparison with State-of-the-Arts
+    <div id="42-comparison-with-state-of-the-arts" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#42-comparison-with-state-of-the-arts" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In Tab. 1 to Tab. 3, we report comparison results with existing approaches on three public benchmarks. Since prior approaches are designed for close-set VAD, our focus is primarily on the comparison results for open-set detection. For the sake of fairness, most of comparison approaches are reimplemented with the same visual feature as our approach. The symbol † indicates that these approaches follow traditional VAD works and use the entire training set, which includes novel anomaly samples. Consequently, the per-</p>
+<table>
+  <thead>
+      <tr>
+          <th>Mode</th>
+          <th>Method</th>
+          <th>AUC(%)</th>
+          <th>AUCb(%)</th>
+          <th>AUCn(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Si</td>
+          <td>SVM baseline</td>
+          <td>50.1</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td>Si</td>
+          <td>OCSVM[36]</td>
+          <td>63.2</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td>Si</td>
+          <td>Hasan et al.[9]</td>
+          <td>51.2</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>Sultani et al.†[38]</td>
+          <td>84.14</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>Wu et al.†[51]</td>
+          <td>84.57</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>AVVD†[52]</td>
+          <td>82.45</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>RTFM†[42]</td>
+          <td>85.66</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>DMU†[62]</td>
+          <td>86.75</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>UMIL†[23]</td>
+          <td>86.75</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>CLIP-TSA†[12]</td>
+          <td>87.58</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>Zhu et al.∗[67]</td>
+          <td>78.82</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>Sultani et al.[38]</td>
+          <td>78.25</td>
+          <td>86.31</td>
+          <td>80.12</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>Wu et al.[51]</td>
+          <td>82.24</td>
+          <td>90.62</td>
+          <td>84.13</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>RTFM[42]</td>
+          <td>84.47</td>
+          <td>92.54</td>
+          <td>85.87</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>DMU[62]</td>
+          <td>85.14</td>
+          <td>93.52</td>
+          <td>86.24</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>Ours</td>
+          <td>86.4</td>
+          <td>93.80</td>
+          <td>88.20</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table 1. AUC Comparisons on UCF-Crime.</p>
+<p>Table 2. AP Comparisons on XD-Violence.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Mode</th>
+          <th>Method</th>
+          <th>AP(%)</th>
+          <th>APb(%)</th>
+          <th>APn(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td>SVM baseline</td>
+          <td>50.8</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>OCSVM[36]</td>
+          <td>28.63</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>Hasan et al.[9]</td>
+          <td>31.25</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>Sultani et al.†[38]</td>
+          <td>75.18</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>Wu et al.†[51]</td>
+          <td>80</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>RTFM†[42]</td>
+          <td>78.27</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>AVVD†[52]</td>
+          <td>78.1</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>DMU†[62]</td>
+          <td>82.41</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>CLIP-TSA†[12]</td>
+          <td>82.17</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>Zhu et al.∗[67]</td>
+          <td>64.4</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>Sultani et al.[38]</td>
+          <td>52.26</td>
+          <td>51.25  5</td>
+          <td>54.64</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>Wu et al.[51]</td>
+          <td>55.43</td>
+          <td>52.94</td>
+          <td>64.10</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>RTFM[42]</td>
+          <td>58.99</td>
+          <td>55.72</td>
+          <td>65.97</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>DMU[62]</td>
+          <td>63.9</td>
+          <td>60.12</td>
+          <td>71.63</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>Ours</td>
+          <td>66.53</td>
+          <td>57.10</td>
+          <td>76.03</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table 3. AUC Comparisons on UBnormal.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Mode</th>
+          <th>Method</th>
+          <th>AUC(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Semi</td>
+          <td>Georgescu et al.[8]</td>
+          <td>59.3</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>Georgescu et al.[8]+anomalies  Sultani et al[38]</td>
+          <td>61.3</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>Sultani et al.[38]</td>
+          <td>50.3</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>Wu et al.[51]</td>
+          <td>53.7</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>RTFM[42]</td>
+          <td>60.94</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>DMU[62]</td>
+          <td>59.91</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>Ours</td>
+          <td>62.94</td>
+      </tr>
+  </tbody>
+</table>
+<p>formance of these approaches outperforms models trained without novel anomaly samples. This underscores the considerable challenge presented by OVVAD from a detection perspective. Regarding the comparison between our approach and other approaches on OVVAD task, we observe</p>
+<p>Table 4. Ablations studies with different designed module on UCF-Crime for detection.</p>
+<table>
+  <thead>
+      <tr>
+          <th>TA</th>
+          <th>SKI</th>
+          <th>NAS</th>
+          <th>AUC(%)</th>
+          <th>AUCb(%)</th>
+          <th>AUCn(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>84.79</td>
+          <td>92.75</td>
+          <td>86.73</td>
+      </tr>
+      <tr>
+          <td>√</td>
+          <td>×</td>
+          <td>×</td>
+          <td>85.14</td>
+          <td>93.22</td>
+          <td>86.79</td>
+      </tr>
+      <tr>
+          <td>×</td>
+          <td>√</td>
+          <td>×</td>
+          <td>85.04</td>
+          <td>92.96</td>
+          <td>86.89</td>
+      </tr>
+      <tr>
+          <td>√</td>
+          <td>√</td>
+          <td>×</td>
+          <td>85.81</td>
+          <td>93.85</td>
+          <td>87.62</td>
+      </tr>
+      <tr>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>86.4</td>
+          <td>93.8</td>
+          <td>88.2</td>
+      </tr>
+  </tbody>
+</table>
+<p>that our approach demonstrates distinct advantages over state-of-the-art counterparts. In fact, our model performs on par with the best competitors that make use of the complete training dataset. For example, our approach surpasses the top-performing model, DMU[62], by 1.26% AUC on UCF-Crime, 2.63% AP on XD-Violence, and 3.03% AUC on UBnormal. Particularly, when it comes to novel categories, our approach exhibits a clear performance advantage compared to other approaches. Notably, Zhu et al. [67] is the first work to tackle open-set VAD, where the symbol ∗ indicates that its category division setup differs from ours. We report its detection results under settings as identical as possible, with the number of novel categories matching ours. Our model outperforms it by a substantial margin on both UCF-Crime and XD-Violence datasets.</p>
+
+<h2 class="relative group">4.3. Ablation Studies
+    <div id="43-ablation-studies" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#43-ablation-studies" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">4.3.1 Contribution of TA module
+    <div id="431-contribution-of-ta-module" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#431-contribution-of-ta-module" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>As aforementioned, TA module is devised to capture temporal dependencies, thus enhancing class-agnostic detection abilities. To verify the effectiveness of TA module, we conduct experiments and present ablation results in Tab. 4 to Tab. 6. It can be found that the inclusion of TA module, our model achieves a significant performance improvement across various datasets and metrics. More importantly, unlike previous transformer-like temporal modeling modules [13 , 25] used on other open-vocabulary tasks, this nearly weight-free designed module also shows a clear gain for novel anomaly categories, e.g., adding TA module results in an improvement of 14.47% AP on XD-Violence.</p>
+
+<h2 class="relative group">4.3.2 Contribution of SKI module
+    <div id="432-contribution-of-ski-module" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#432-contribution-of-ski-module" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this section, we investigate the contribution of SKI module to class-agnostic detection. As reported in Tab. 4 to Tab. 6, SKI module boosts detection performance on all datasets regardless of whether TA module is introduced or not. Similar to TA module, SKI can also clearly improve performance for novel anomaly categories. The difference with TA module is that SKI module leverage LLMs to explicitly introduce semantic knowledge into visual signals and knowledge helps better distinguish between normal and abnormal events.</p>
+<table>
+  <thead>
+      <tr>
+          <th>TA</th>
+          <th>SKI</th>
+          <th>NAS</th>
+          <th>AP(%)</th>
+          <th>APb(%)</th>
+          <th>APn(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>53.11</td>
+          <td>54.84</td>
+          <td>53.69</td>
+      </tr>
+      <tr>
+          <td>√</td>
+          <td>×</td>
+          <td>×</td>
+          <td>60.13</td>
+          <td>59.38</td>
+          <td>68.16</td>
+      </tr>
+      <tr>
+          <td>×</td>
+          <td>√</td>
+          <td>×</td>
+          <td>56.62</td>
+          <td>53.03</td>
+          <td>63.92</td>
+      </tr>
+      <tr>
+          <td>√</td>
+          <td>√</td>
+          <td>×</td>
+          <td>65.6</td>
+          <td>61.4</td>
+          <td>73.67</td>
+      </tr>
+      <tr>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>66.53</td>
+          <td>57.1</td>
+          <td>76.03</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table 5. Ablations studies with different designed module on XDViolence for detection.</p>
+<table>
+  <thead>
+      <tr>
+          <th>TA</th>
+          <th>SKI</th>
+          <th>NAS</th>
+          <th>AUC(%)</th>
+          <th>AP(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>60.51</td>
+          <td>65.18</td>
+      </tr>
+      <tr>
+          <td>√</td>
+          <td>×</td>
+          <td>×</td>
+          <td>61.18</td>
+          <td>67.36</td>
+      </tr>
+      <tr>
+          <td>×</td>
+          <td>√</td>
+          <td>×</td>
+          <td>61.93</td>
+          <td>66.36</td>
+      </tr>
+      <tr>
+          <td>√</td>
+          <td>√</td>
+          <td>×</td>
+          <td>61.67</td>
+          <td>67.43</td>
+      </tr>
+      <tr>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>62.94</td>
+          <td>68.07</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table 6. Ablations studies with different designed module on UBnormal for detection.</p>
+<p>Table 7. Ablations studies on UCF-Crime and XD-Violence for categorization.</p>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th>ACC(%)</th>
+          <th>ACCb(%)</th>
+          <th>ACCn(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>w/o NAS</td>
+          <td>37.86</td>
+          <td>43.14</td>
+          <td>34.83</td>
+      </tr>
+      <tr>
+          <td>Finetune N</td>
+          <td>39.29</td>
+          <td>37.25</td>
+          <td>40.45</td>
+      </tr>
+      <tr>
+          <td>Finetune N+B(Ours)</td>
+          <td>41.43</td>
+          <td>49.02</td>
+          <td>37.08</td>
+      </tr>
+      <tr>
+          <td>w/o NAS</td>
+          <td>59.6</td>
+          <td>91.98</td>
+          <td>15.18</td>
+      </tr>
+      <tr>
+          <td>Finetune N</td>
+          <td>62.03</td>
+          <td>82.06</td>
+          <td>34.55</td>
+      </tr>
+      <tr>
+          <td>Finetune N+B(Ours)</td>
+          <td>64.68</td>
+          <td>89.31</td>
+          <td>30.9</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table 8. Cross-dataset results on UCF-Crime and XD-Violence.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Test⇒</th>
+          <th>UCF Crime</th>
+          <th>UCF Crime</th>
+          <th>XD Violence</th>
+          <th>XD Violence</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Train⇓</td>
+          <td>AUC(%)</td>
+          <td>ACC(%)</td>
+          <td>AP(%)</td>
+          <td>ACC(%)</td>
+      </tr>
+      <tr>
+          <td>UCF Crime</td>
+          <td>86.05</td>
+          <td>45.00</td>
+          <td>63.74</td>
+          <td>47.90</td>
+      </tr>
+      <tr>
+          <td>XD Violence</td>
+          <td>82.42</td>
+          <td>40.71</td>
+          <td>82.86</td>
+          <td>88.96</td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 class="relative group">4.3.3 Contribution of NAS module
+    <div id="433-contribution-of-nas-module" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#433-contribution-of-nas-module" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>From Tab. 4 to Tab. 6, we can see that, for all test categories and novel anomaly categories, NAS module can obtain a significant performance gain for the class-agnostic detection. For base categories, it causes a relatively small performance degradation, which is also observed in other openvocabulary tasks. We argue that the introduction of pseudo novel samples makes the model pay more attention to these generated novel samples, thus partially diminishing the importance of base categories. Moreover, Tab. 7 reveals that NAS module also obtains a significant performance gain for the class-specific categorization, especially for novel anomaly categories. Besides, we also found that only using generated novel samples results in a clear performance drop for base anomaly categories during the fine-tuning phase. This illustrates while generated anomaly samples benefit the generalization abilities of our model, it is essential to adopt reasonable and effective fine-tuning schemes.</p>
+<p>Figure 3. Qualitative results of our model on testing videos. Colored window denotes ground-truth anomalous region.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000003_a0d9f127c87ea134d659c0410074ecedd0040af0613c0a2ebdf9d4ac2f284310.png"
+    ></figure>
+
+<h2 class="relative group">4.3.4 Analysis of cross-dataset ability
+    <div id="434-analysis-of-cross-dataset-ability" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#434-analysis-of-cross-dataset-ability" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>To further investigate the zero-shot abilities of our model, we conducted experiments where we train our model under the cross-dataset setup. In this case, we take UCF-Crime and XD-Violence as examples. These datasets have some overlapping categories but completely different sources, with UCF-Crime developed from surveillance videos and XD-Violence collected from movies and online videos. From the evaluation results in Tab. 8, we can draw the following conclusions: First, our model achieves better performance with the whole training samples. Second, the crossdataset test results show that our model can compete with or outperform current approaches on both UCF-Crime and XD-Violence, further validating the favorable generalization abilities of the proposed model.</p>
+
+<h2 class="relative group">4.4. Qualitative Results
+    <div id="44-qualitative-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#44-qualitative-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We first present qualitative detection results on three datasets in Fig. 3, where the top column denotes UCFCrime, the first three in the bottom column denote XDViolence, and the rest denotes UBnormal. As we can see, whether base or novel categories, our method produces high anomaly confidence in anomaly regions, even there are multiple discontinuous abnormal regions in a video. Besides, we present confusion matrices of anomaly categorization in Fig. 4, it is not hard to see that there are some anomaly categories that our model cannot effectively identify, either base or novel, especially on UCF-Crime, such results indicate OVVAD is a unique and challenging task, especially for the anomaly categorization. Refer to supplementary materials for more ablation studies and qualitative results.</p>
+
+<h2 class="relative group">5. Conclusion
+    <div id="5-conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this paper, we present a new model built on top of pretrained large models for open-vocabulary video anomaly detection task under weak supervision. Owing to the chal-</p>
+<p>Figure 4. Confusion matrices of anomaly categorization.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000004_cad68872aac1591b82bf433b259e9d54596cb4f8d72d51142791c8cb50ee519f.png"
+    ></figure>
+<p>lenging nature of open-vocabulary video anomaly detection, current video anomaly detection approaches face difficulties in working efficiently. To address these unique challenges, we explicitly disentangle open-vocabulary video anomaly detection into the class-agnostic detection and class-specific classification sub-tasks. We then introduce several ad-hoc modules: temporal adapter and semantic knowledge injection modules mainly aim at promoting detection for both base and novel anomalies, novel anomaly synthesis module generates several potential pseudo novel sample to assist the proposed model in perceiving novel anomalies more accurately. Extensive experiments on three public datasets demonstrate the proposed model performs advantageously on open-vocabulary video anomaly detection task. In the future, generating more vivid pseudo anomaly samples in the form of videos with the assistance of AIGC models is yet to be explored.</p>
+
+<h2 class="relative group">6. Acknowledgments
+    <div id="6-acknowledgments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-acknowledgments" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This work is supported by the National Natural Science Foundation of China (No. 62306240, U23B2013), China Postdoctoral Science Foundation (No. 2023TQ0272), National Key R&amp;D Program of China (No.2020AAA0106900), and the Fundamental Research Funds for the Central Universities (No. D5000220431).</p>
+
+<h2 class="relative group">References
+    <div id="references" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#references" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>
+<p>[1] Andra Acsintoae, Andrei Florescu, Mariana-Iuliana Georgescu, Tudor Mare, Paul Sumedrea, Radu Tudor Ionescu, Fahad Shahbaz Khan, and Mubarak Shah. Ubnormal: New benchmark for supervised open-set video anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 20143–20153, 2022. 2 , 3 , 6</p>
+</li>
+<li>
+<p>[2] Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et al. Language models are few-shot learners. Advances in neural information processing systems, 33:1877–1901, 2020. 4</p>
+</li>
+<li>
+<p>[3] Joao Carreira and Andrew Zisserman. Quo vadis, action recognition? a new model and the kinetics dataset. In proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pages 6299–6308, 2017. 3</p>
+</li>
+<li>
+<p>[4] Yang Cong, Junsong Yuan, and Ji Liu. Sparse reconstruction cost for abnormal event detection. In CVPR 2011, pages 3449–3456. IEEE, 2011. 2</p>
+</li>
+<li>
+<p>[5] Choubo Ding, Guansong Pang, and Chunhua Shen. Catching both gray and black swans: Open-set supervised anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 7388– 7398, 2022. 2 , 3</p>
+</li>
+<li>
+<p>[6] Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, et al. An image is worth 16x16 words: Transformers for image recognition at scale. arXiv preprint arXiv:2010.11929, 2020. 6</p>
+</li>
+<li>
+<p>[7] Patrick Esser, Johnathan Chiu, Parmida Atighehchian, Jonathan Granskog, and Anastasis Germanidis. Structure and content-guided video synthesis with diffusion models. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 7346–7356, 2023. 5</p>
+</li>
+<li>
+<p>[8] Mariana-Iuliana Georgescu, Antonio Barbalau, Radu Tudor Ionescu, Fahad Shahbaz Khan, Marius Popescu, and Mubarak Shah. Anomaly detection in video via selfsupervised and multi-task learning. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 12742–12752, 2021. 2 , 6</p>
+</li>
+<li>
+<p>[9] Mahmudul Hasan, Jonghyun Choi, Jan Neumann, Amit K Roy-Chowdhury, and Larry S Davis. Learning temporal regularity in video sequences. In Proceedings of the IEEE conference on computer vision and pattern recognition, pages 733–742, 2016. 1 , 6</p>
+</li>
+<li>
+<p>[10] Chao Huang, Chengliang Liu, Jie Wen, Lian Wu, Yong Xu, Qiuping Jiang, and Yaowei Wang. Weakly supervised video anomaly detection via self-guided temporal discriminative transformer. IEEE Transactions on Cybernetics, 2022. 2</p>
+</li>
+<li>
+<p>[11] Chao Jia, Yinfei Yang, Ye Xia, Yi-Ting Chen, Zarana Parekh, Hieu Pham, Quoc Le, Yun-Hsuan Sung, Zhen Li, and Tom Duerig. Scaling up visual and vision-language representation learning with noisy text supervision. In International Conference on Machine Learning, pages 4904–4916. PMLR, 2021. 2</p>
+</li>
+<li>
+<p>[12] Hyekang Kevin Joo, Khoa Vo, Kashu Yamazaki, and Ngan Le. Clip-tsa: Clip-assisted temporal self-attention for weakly-supervised video anomaly detection. In 2023 IEEE International Conference on Image Processing (ICIP), pages 3230–3234. IEEE, 2023. 3 , 6</p>
+</li>
+<li>
+<p>[13] Chen Ju, Tengda Han, Kunhao Zheng, Ya Zhang, and Weidi Xie. Prompting visual-language models for efficient video understanding. In Computer Vision–ECCV 2022: 17th European Conference, Tel Aviv, Israel, October 23–27, 2022, Proceedings, Part XXXV, pages 105–124. Springer, 2022. 2 , 3 , 7</p>
+</li>
+<li>
+<p>[14] Chen Ju, Zeqian Li, Peisen Zhao, Ya Zhang, Xiaopeng Zhang, Qi Tian, Yanfeng Wang, and Weidi Xie. Multi-modal prompting for low-shot temporal action localization. arXiv preprint arXiv:2303.11732, 2023.</p>
+</li>
+<li>
+<p>[15] Dahun Kim, Anelia Angelova, and Weicheng Kuo. Regionaware pretraining for open-vocabulary object detection with vision transformers. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 11144–11154, 2023. 2</p>
+</li>
+<li>
+<p>[16] Shuo Li, Fang Liu, and Licheng Jiao. Self-training multisequence learning with transformer for weakly supervised video anomaly detection. In Proceedings of the AAAI Conference on Artificial Intelligence, pages 1395–1403, 2022. 3</p>
+</li>
+<li>
+<p>[17] Wen Liu, Weixin Luo, Dongze Lian, and Shenghua Gao. Future frame prediction for anomaly detection–a new baseline. In Proceedings of the IEEE conference on computer vision and pattern recognition, pages 6536–6545, 2018. 1 , 2</p>
+</li>
+<li>
+<p>[18] Yu Liu, Huai Chen, Lianghua Huang, Di Chen, Bin Wang, Pan Pan, and Lisheng Wang. Animating images to transfer clip for video-text retrieval. In Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval, pages 1906–1911, 2022. 5</p>
+</li>
+<li>
+<p>[19] Zhian Liu, Yongwei Nie, Chengjiang Long, Qing Zhang, and Guiqing Li. A hybrid video anomaly detection framework via memory-augmented flow reconstruction and flow-guided frame prediction. In Proceedings of the IEEE/CVF international conference on computer vision, pages 13588–13597, 2021. 2</p>
+</li>
+<li>
+<p>[20] Zuhao Liu, Xiao-Ming Wu, Dian Zheng, Kun-Yu Lin, and Wei-Shi Zheng. Generating anomalies for video anomaly detection with prompt-based feature mapping. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 24500–24510, 2023. 4</p>
+</li>
+<li>
+<p>[21] Cewu Lu, Jianping Shi, and Jiaya Jia. Abnormal event detection at 150 fps in matlab. In Proceedings of the IEEE international conference on computer vision, pages 2720–2727, 2013. 2</p>
+</li>
+<li>
+<p>[22] Weixin Luo, Wen Liu, and Shenghua Gao. Remembering history with convolutional lstm for anomaly detection. In 2017 IEEE International Conference on Multimedia and Expo (ICME), pages 439–444. IEEE, 2017. 2</p>
+</li>
+<li>
+<p>[23] Hui Lv, Zhongqi Yue, Qianru Sun, Bin Luo, Zhen Cui, and Hanwang Zhang. Unbiased multiple instance learning for weakly supervised video anomaly detection. arXiv preprint arXiv:2303.12369, 2023. 3 , 6</p>
+</li>
+<li>
+<p>[24] Sauradip Nag, Xiatian Zhu, Yi-Zhe Song, and Tao Xiang. Zero-shot temporal action detection via vision-language prompting. In Computer Vision–ECCV 2022: 17th European Conference, Tel Aviv, Israel, October 23–27, 2022, Proceedings, Part III, pages 681–697. Springer, 2022. 2</p>
+</li>
+<li>
+<p>[25] Bolin Ni, Houwen Peng, Minghao Chen, Songyang Zhang, Gaofeng Meng, Jianlong Fu, Shiming Xiang, and Haibin Ling. Expanding language-image pretrained models for general video recognition. In Computer Vision–ECCV 2022: 17th European Conference, Tel Aviv, Israel, October 23–27, 2022, Proceedings, Part IV, pages 1–18. Springer, 2022. 2 , 3 , 7</p>
+</li>
+<li>
+<p>[26] Minheng Ni, Zitong Huang, Kailai Feng, and Wangmeng Zuo. Imaginarynet: Learning object detectors without real images and annotations. arXiv preprint arXiv:2210.06886 , 2022. 4</p>
+</li>
+<li>
+<p>[27] Yujiang Pu, Xiaoyu Wu, and Shengjin Wang. Learning prompt-enhanced context features for weakly-supervised video anomaly detection. arXiv preprint arXiv:2306.14451 , 2023. 1 , 5</p>
+</li>
+<li>
+<p>[28] Jie Qin, Jie Wu, Pengxiang Yan, Ming Li, Ren Yuxi, Xuefeng Xiao, Yitong Wang, Rui Wang, Shilei Wen, Xin Pan, et al. Freeseg: Unified, universal and open-vocabulary image segmentation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 19446– 19455, 2023. 2</p>
+</li>
+<li>
+<p>[29] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, et al. Learning transferable visual models from natural language supervision. In International conference on machine learning, pages 8748–8763. PMLR, 2021. 2</p>
+</li>
+<li>
+<p>[30] Aditya Ramesh, Prafulla Dhariwal, Alex Nichol, Casey Chu, and Mark Chen. Hierarchical text-conditional image generation with clip latents. arXiv preprint arXiv:2204.06125, 1 (2):3, 2022. 5</p>
+</li>
+<li>
+<p>[31] Yongming Rao, Wenliang Zhao, Guangyi Chen, Yansong Tang, Zheng Zhu, Guan Huang, Jie Zhou, and Jiwen Lu. Denseclip: Language-guided dense prediction with contextaware prompting. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 18082–18091, 2022. 3</p>
+</li>
+<li>
+<p>[32] Hanoona Rasheed, Muhammad Uzair Khattak, Muhammad Maaz, Salman Khan, and Fahad Shahbaz Khan. Fine-tuned clip models are efficient video learners. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 6545–6554, 2023. 3</p>
+</li>
+<li>
+<p>[33] Nicolae-Catalin Ristea, Florinel-Alin Croitoru, Radu Tudor Ionescu, Marius Popescu, Fahad Shahbaz Khan, and Mubarak Shah. Self-distilled masked auto-encoders are efficient video anomaly detectors. arXiv preprint arXiv:2306.12041, 2023. 2</p>
+</li>
+<li>
+<p>[34] Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Bjorn Ommer. High-resolution image ¨ ¨ synthesis with latent diffusion models. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 10684–10695, 2022. 2</p>
+</li>
+<li>
+<p>[35] Mohammad Sabokrou, Mohammad Khalooei, Mahmood Fathy, and Ehsan Adeli. Adversarially learned one-class classifier for novelty detection. In Proceedings of the IEEE conference on computer vision and pattern recognition, pages 3379–3388, 2018. 2</p>
+</li>
+<li>
+<p>[36] Bernhard Scholkopf, Robert C Williamson, Alex Smola, ¨ ¨ John Shawe-Taylor, and John Platt. Support vector method for novelty detection. Advances in neural information processing systems, 12, 1999. 2 , 6</p>
+</li>
+<li>
+<p>[37] Chenrui Shi, Che Sun, Yuwei Wu, and Yunde Jia. Video anomaly detection via sequentially learning multiple pretext tasks. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 10330–10340, 2023. 2</p>
+</li>
+<li>
+<p>[38] Waqas Sultani, Chen Chen, and Mubarak Shah. Real-world anomaly detection in surveillance videos. In Proceedings of the IEEE conference on computer vision and pattern recognition, pages 6479–6488, 2018. 1 , 2 , 5 , 6</p>
+</li>
+<li>
+<p>[39] Shengyang Sun and Xiaojin Gong. Hierarchical semantic contrast for scene-aware video anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 22846–22856, 2023. 2</p>
+</li>
+<li>
+<p>[40] Shengyang Sun and Xiaojin Gong. Long-short temporal co-teaching for weakly supervised video anomaly detection. arXiv preprint arXiv:2303.18044, 2023. 2</p>
+</li>
+<li>
+<p>[41] Yu Sun, Shuohuan Wang, Yukun Li, Shikun Feng, Hao Tian, Hua Wu, and Haifeng Wang. Ernie 2.0: A continual pretraining framework for language understanding. In Proceedings of the AAAI Conference on Artificial Intelligence, pages 8968–8975, 2020. 5</p>
+</li>
+<li>
+<p>[42] Yu Tian, Guansong Pang, Yuanhong Chen, Rajvinder Singh, Johan W Verjans, and Gustavo Carneiro. Weakly-supervised video anomaly detection with robust temporal feature magnitude learning. In Proceedings of the IEEE/CVF international conference on computer vision, pages 4975–4986, 2021. 3 , 6</p>
+</li>
+<li>
+<p>[43] Du Tran, Lubomir Bourdev, Rob Fergus, Lorenzo Torresani, and Manohar Paluri. Learning spatiotemporal features with 3d convolutional networks. In Proceedings of the IEEE international conference on computer vision, pages 4489–4497, 2015. 3</p>
+</li>
+<li>
+<p>[44] Guodong Wang, Yunhong Wang, Jie Qin, Dongming Zhang, Xiuguo Bao, and Di Huang. Video anomaly detection by solving decoupled spatio-temporal jigsaw puzzles. In European Conference on Computer Vision, pages 494–511. Springer, 2022. 1</p>
+</li>
+<li>
+<p>[45] Jue Wang and Anoop Cherian. Gods: Generalized one-class discriminative subspaces for anomaly detection. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 8201–8211, 2019. 2</p>
+</li>
+<li>
+<p>[46] Mengmeng Wang, Jiazheng Xing, and Yong Liu. Actionclip: A new paradigm for video action recognition. arXiv preprint arXiv:2109.08472, 2021. 3</p>
+</li>
+<li>
+<p>[47] Zejia Weng, Xitong Yang, Ang Li, Zuxuan Wu, and YuGang Jiang. Transforming clip to an open-vocabulary video model via interpolated weight optimization. arXiv preprint arXiv:2302.00624, 2023. 2</p>
+</li>
+<li>
+<p>[48] Jianzong Wu, Xiangtai Li, Shilin Xu Haobo Yuan, Henghui Ding, Yibo Yang, Xia Li, Jiangning Zhang, Yunhai Tong,</p>
+</li>
+</ul>
+<p>Xudong Jiang, Bernard Ghanem, et al. Towards open vocabulary learning: A survey. arXiv preprint arXiv:2306.15880 , 2023. 2</p>
+<ul>
+<li>[49] Peng Wu and Jing Liu. Learning causal temporal relation and feature discrimination for anomaly detection. IEEE Transactions on Image Processing, 30:3513–3527, 2021. 3 , 5</li>
+<li>[50] Peng Wu, Jing Liu, and Fang Shen. A deep one-class neural network for anomalous event detection in complex scenes. IEEE transactions on neural networks and learning systems , 31(7):2609–2622, 2019. 1 , 2</li>
+<li>[51] Peng Wu, Jing Liu, Yujia Shi, Yujia Sun, Fangtao Shao, Zhaoyang Wu, and Zhiwei Yang. Not only look, but also listen: Learning multimodal violence detection under weak supervision. In Computer Vision–ECCV 2020: 16th European Conference, Glasgow, UK, August 23–28, 2020, Proceedings, Part XXX 16, pages 322–339. Springer, 2020. 2 , 3 , 6</li>
+<li>[52] Peng Wu, Xiaotao Liu, and Jing Liu. Weakly supervised audio-visual violence detection. IEEE Transactions on Multimedia, pages 1674–1685, 2022. 3 , 6</li>
+<li>[53] Peng Wu, Xuerong Zhou, Guansong Pang, Lingru Zhou, Qingsen Yan, Peng Wang, and Yanning Zhang. Vadclip: Adapting vision-language models for weakly supervised video anomaly detection. In Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2024. 3</li>
+<li>[54] Qingsen Yan, Tao Hu, Yuan Sun, Hao Tang, Yu Zhu, Wei Dong, Luc Van Gool, and Yanning Zhang. Towards highquality hdr deghosting with conditional diffusion models. IEEE Transactions on Circuits and Systems for Video Technology, pages 1–1, 2023. 2</li>
+<li>[55] Zhiwei Yang, Jing Liu, Zhaoyang Wu, Peng Wu, and Xiaotao Liu. Video event restoration based on keyframes for video anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 14592–14601, 2023. 2</li>
+<li>[56] Guang Yu, Siqi Wang, Zhiping Cai, En Zhu, Chuanfu Xu, Jianping Yin, and Marius Kloft. Cloze test helps: Effective video anomaly detection via learning to complete video events. In Proceedings of the 28th ACM International Conference on Multimedia, pages 583–591, 2020. 2</li>
+<li>[57] Muhammad Zaigham Zaheer, Arif Mahmood, Marcella Astrid, and Seung-Ik Lee. Claws: Clustering assisted weakly supervised learning with normalcy suppression for anomalous event detection. In Computer Vision–ECCV 2020: 16th European Conference, Glasgow, UK, August 23–28, 2020, Proceedings, Part XXII 16, pages 358–376. Springer, 2020. 3</li>
+<li>[58] Alireza Zareian, Kevin Dela Rosa, Derek Hao Hu, and ShihFu Chang. Open-vocabulary object detection using captions. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 14393–14402, 2021. 2</li>
+<li>[59] Chen Zhang, Guorong Li, Yuankai Qi, Shuhui Wang, Laiyun Qing, Qingming Huang, and Ming-Hsuan Yang. Exploiting completeness and uncertainty of pseudo labels for weakly supervised video anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 16271–16280, 2023. 3</li>
+<li>[60] Yiru Zhao, Bing Deng, Chen Shen, Yao Liu, Hongtao Lu, and Xian-Sheng Hua. Spatio-temporal autoencoder for video anomaly detection. In Proceedings of the 25th ACM international conference on Multimedia, pages 1933–1941, 2017. 2</li>
+<li>[61] Jia-Xing Zhong, Nannan Li, Weijie Kong, Shan Liu, Thomas H Li, and Ge Li. Graph convolutional label noise cleaner: Train a plug-and-play action classifier for anomaly detection. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 1237–1246, 2019. 3</li>
+<li>[62] Hang Zhou, Junqing Yu, and Wei Yang. Dual memory units with uncertainty regulation for weakly supervised video anomaly detection. arXiv preprint arXiv:2302.05160, 2023. 3 , 6 , 7</li>
+<li>[63] Kaiyang Zhou, Jingkang Yang, Chen Change Loy, and Ziwei Liu. Learning to prompt for vision-language models. International Journal of Computer Vision, 130(9):2337–2348, 2022. 3 , 5</li>
+<li>[64] Qihang Zhou, Guansong Pang, Yu Tian, Shibo He, and Jiming Chen. Anomalyclip: Object-agnostic prompt learning for zero-shot anomaly detection. arXiv preprint arXiv:2310.18961, 2023. 2</li>
+<li>[65] Ziqin Zhou, Yinjie Lei, Bowen Zhang, Lingqiao Liu, and Yifan Liu. Zegclip: Towards adapting clip for zero-shot semantic segmentation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 11175–11185, 2023. 2</li>
+<li>[66] Jiawen Zhu, Choubo Ding, Yu Tian, and Guansong Pang. Anomaly heterogeneity learning for open-set supervised anomaly detection. arXiv preprint arXiv:2310.12790, 2023. 2</li>
+<li>[67] Yuansheng Zhu, Wentao Bao, and Qi Yu. Towards open set video anomaly detection. In European Conference on Computer Vision, pages 395–412. Springer, 2022. 2 , 3 , 6 , 7</li>
+</ul>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_papers/Wu_Open-Vocabulary_Video_Anomaly_Detection_CVPR_2024_paper.md"
+          data-oid-likes="likes_papers/Wu_Open-Vocabulary_Video_Anomaly_Detection_CVPR_2024_paper.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/ye_vera_explainable_video_anomaly_detection_via_verbalized_learning_of_vision-language_cvpr_2025_paper/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/vlavad-vision-language-models-assisted-unsupervised-vad/">
+              <span class="leading-6">
+                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-24 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+      
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 overflow-x-auto py-2">
+        <ul class="flex list-none flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 me-4">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

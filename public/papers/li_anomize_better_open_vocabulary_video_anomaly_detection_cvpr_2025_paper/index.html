@@ -1,0 +1,1873 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title> &middot; Blowfish</title>
+    <meta name="title" content=" &middot; Blowfish">
+  
+
+  
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/papers/li_anomize_better_open_vocabulary_video_anomaly_detection_cvpr_2025_paper/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/papers/li_anomize_better_open_vocabulary_video_anomaly_detection_cvpr_2025_paper/">
+  <meta property="og:site_name" content="Blowfish">
+  <meta property="og:title" content="Blowfish">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blowfish">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.7946532fa78157bafb1b4340d4074792811f18177af35790b3a0cb90566ce1cda3edd782eb92e134849964d14b6d9185c9d4ded2a12dcf5b706cb6a275c0cce0.css"
+    integrity="sha512-eUZTL6eBV7r7G0NA1AdHkoEfGBd681eQs6DLkFZs4c2j7deC65LhNISZZNFLbZGFydTe0qEtz1twbLaidcDM4A==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.9df4fc14d50efcc9aa4cfc2b6f348e365f421f5ad491278f8f48c0360cf2f93f08882fda6da162d7ace8e5add57c2df4ac46bd3861306b1d4c452cd31f448d64.js"
+      integrity="sha512-nfT8FNUO/MmqTPwrbzSONl9CH1rUkSePj0jANgzy&#43;T8IiC/abaFi16zo5a3VfC30rEa9OGEwax1MRSzTH0SNZA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Papers",
+    "name": "",
+    "headline": "",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/papers\/li_anomize_better_open_vocabulary_video_anomaly_detection_cvpr_2025_paper\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "6692"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          Blowfish
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/papers/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="papers"
+  title="Papers">
+  
+  
+    <p class="text-base font-medium">
+      papers
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/test/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="test"
+  title="Tests">
+  
+  
+    <p class="text-base font-medium">
+      test
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href=""
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  
+  title="">
+  
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/papers/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="papers"
+    title="Papers">
+    
+    
+      <p class="text-bg font-bg">
+        papers
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/test/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="test"
+    title="Tests">
+    
+    
+      <p class="text-bg font-bg">
+        test
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    
+    title="">
+    
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>6692 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">32 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000000_6d1e247b7d0a98b62a35558742715e9c9ca643c3fbfd736fe597c595aff4e11b.png"
+    ></figure>
+<p>This CVPR paper is the Open Access version, provided by the Computer Vision Foundation.</p>
+<p>Except for this watermark, it is identical to the accepted version;</p>
+<p>the final published version of the proceedings is available on IEEE Xplore.</p>
+
+<h2 class="relative group">Anomize: Better Open Vocabulary Video Anomaly Detection
+    <div id="anomize-better-open-vocabulary-video-anomaly-detection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#anomize-better-open-vocabulary-video-anomaly-detection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Fei Li 1 , 2# Wenxuan Liu3,4# Jingjing Chen 2 Ruixu Zhang 1 Yuran Wang 1 Xian Zhong 4 Zheng Wang 1*</p>
+<p>1 National Engineering Research Center for Multimedia Software, School of Computer Science, Wuhan University 2 Shanghai Key Lab of Intelligent Information Processing, School of Computer Science, Fudan University 3 State Key Laboratory for Multimedia Information Processing, School of Computer Science, Peking University 4 Hubei Key Laboratory of Transportation Internet of Things, Wuhan University of Technology <a
+  href="mailto:lifeiwhu@whu.edu.cn">lifeiwhu@whu.edu.cn</a>, <a
+  href="mailto:liuwx66@pku.edu.cn">liuwx66@pku.edu.cn</a></p>
+<p>Figure 1. Challenges Related to Novel Anomalies. (a) Detection ambiguity: The model struggles to assign accurate anomaly scores to unfamiliar frames containing novel anomalies. (b) Categorization confusion: Novel anomalies are misclassified as visually similar base instances from the training set.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000001_c03ba3062043ba0d1fe0bc333cb305ae1412831ed238fcd32e51107afb092695.png"
+    ></figure>
+<p>Recent research has explored open-set VAD [1 , 9], where anomalies seen in training are considered base cases, while others are treated as novel cases. It trains on normal and base anomalies to detect all anomalies, overcoming the limitations of closed-set detection. However, it struggles with understanding anomaly categories, leading to unclear outputs [42]. Consequently, a leading study [42] has further investigated open vocabulary (OV) VAD, which aims to detect and categorize all anomalies using the same training data as open-set VAD, offering more informative results.</p>
+<p>Novel anomalies in OVVAD introduce two challenges that remain unexplored by existing methods: (1) Detection ambiguity, where the model often lacks sufficient information to accurately assign anomaly scores to unfamiliar data, as shown in Fig. 1(a). Current methods rely on training or fine-tuning the model, which is inherently limited and cannot adapt to the variability of samples in an open setting. (2) Categorization confusion, where novel cases visually similar to base cases are misclassified, as shown in Fig. 1(b). OV tasks generally rely on multimodal alignment for categorization. Since the model tends to extract visual features for novel videos similar to base videos, these features are more likely to align with base label encodings, leading to miscategorization. Traditional OV methods use pre-trained encoders to encode text, where the input contains labels with</p>
+
+<h2 class="relative group">Abstract
+    <div id="abstract" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abstract" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Open Vocabulary Video Anomaly Detection (OVVAD) seeks to detect and classify both base and novel anomalies. However, existing methods face two specific challenges related to novel anomalies. The first challenge is detection ambiguity, where the model struggles to assign accurate anomaly scores to unfamiliar anomalies. The second challenge is categorization confusion, where novel anomalies are often misclassified as visually similar base instances. To address these challenges, we explore supplementary information from multiple sources to mitigate detection ambiguity by leveraging multiple levels of visual data alongside matching textual information. Furthermore, we propose incorporating label relations to guide the encoding of new labels, thereby improving alignment between novel videos and their corresponding labels, which helps reduce categorization confusion. The resulting Anomize framework effectively tackles these issues, achieving superior performance on UCF-CRIME and XD-VIOLENCE datasets, demonstrating its effectiveness in OVVAD.</p>
+
+<h2 class="relative group">1. Introduction
+    <div id="1-introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video Anomaly Detection (VAD) identifies anomaly in videos and is widely used in public safety systems. Traditional VAD methods can be categorized based on the type of training data used. Semi-supervised VAD [3 , 22 , 49] is trained exclusively on normal samples, detecting anomalies as deviations from learned normal patterns. In contrast, weakly supervised VAD [13 , 33 , 50] is trained on both normal and anomalous samples but lacks precise temporal labels, treating VAD as a binary classification problem. Both methods focus on detecting specific anomaly within a closed set and exhibit limitations in open-world scenarios.</p>
+<ul>
+<li>Corresponding author. # Contributed equally to this work.</li>
+</ul>
+<p>Figure 2. Feature Visualization of Our Design. (a) Text augmentation shifts ambiguous frames to the anomalous feature space. In the static stream, text represents anomaly-related nouns (e.g., &ldquo;abandoned fire starter&rdquo;), while in the dynamic stream, it denotes label descriptions. (b) Group-guided text encoding improves the alignment of novel anomalies with novel labels, especially for those resembling base samples.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000002_8bb17da6db50a281f9f6905b5ea672a6022e6a28fee3cc33fe28a36f90a50d72.png"
+    ></figure>
+<p>unified templates [16 , 29 , 44 , 45] or embeddings [2 , 4 , 53]. These methods rely solely on pre-trained encoders without spatial guidance in label encoding, limiting multimodal alignment for novel cases.</p>
+<p>To address detection ambiguity, we introduce a TextAugmented Dual Stream mechanism with dynamic and static streams, each focusing on different visual features augmented by corresponding textual information. The dynamic stream captures sequential information through temporal visual encoding, augmented by label descriptions related to dynamic characteristics. The static stream captures scene information through original contrastive languageimage pre-training (CLIP)-encoded visual features, augmented by a concept library related to static characteristics. The complementarity between dynamic and static data is crucial: certain anomalies rely on temporal information, such as tailing, while others depend on contextual cues, such as running on a highway. Synergistic training of the streams ensures mutual supplementation and constraints, delivering comprehensive temporal and contextual information, minimizing overfitting to specific anomaly categories, and improving overall performance. Additionally, the augmentation follows common-sense reasoning. To detect anomalies in real-world scenarios, we first define the anomaly and establish correlations between visual data and anomaly texts, providing a reference for detection within the overall context. Similarly, we augment visual features with relevant anomaly text, providing additional information for detection. As shown in Fig. 2(a), novel visual features that cause ambiguous detections are shifted into the anomalous feature space with support from text, helping the model better assess unfamiliar anomalies.</p>
+<p>To address categorization confusion, we introduce a Group-Guided Text Encoding mechanism, encoding labels using group-based descriptions, with labels sharing similar visual characteristics grouped together. As shown in Fig. 2(b), this mechanism establishes connections be- tween base and novel data through grouping, positioning the encodings of novel labels close to those of base labels, where videos associated with both base and novel labels are visually similar, thereby enhancing multimodal alignment for novel data. For novel labels not grouped with base labels, the descriptions provide contextual support to pretrained encoders for text encoding, thus enhancing alignment. Compared to previous methods mainly relying on pre-trained models, our approach strengthens the guidance of the feature space for novel labels, achieving more effective alignment for categorization.</p>
+<p>With the Anomize framework, we achieve notable results across both XD-VIOLENCE [41] and UCFCRIME [33] datasets. For anomaly detection, we obtain a 2.78% overall improvement on XD-VIOLENCE and 8.21% on novel cases, with UCF-CRIME results comparable to a more complex state-of-the-art model. For categorization, we achieve a 25.61% overall increase in Top-1 accuracy on XD-VIOLENCE and 5.71% on UCF-CRIME, with improvements of 56.53% and 4.49% on novel cases, respectively. In summary, our contributions are threefold:</p>
+<ul>
+<li>To address detection ambiguity, we discover the importance of providing sufficient informational support. We combine dynamic and static streams to effectively constrain and complement each other. Operating at different levels of visual features, each stream is augmented with corresponding textual information, offering comprehensive support for detection.</li>
+<li>To tackle categorization confusion, we emphasize the importance of establishing connections between labels to guide their encodings. We propose a text encoding mechanism that groups labels based on visual characteristics and generates corresponding descriptions for encodings.</li>
+<li>Our Anomize framework targets the challenges of novel anomalies that remain unexplored, offering new insights for OVVAD and demonstrating superior performance on two widely-used datasets, particularly for novel cases.</li>
+</ul>
+
+<h2 class="relative group">2. Related Work
+    <div id="2-related-work" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-related-work" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">2.1. Video Anomaly Detection
+    <div id="21-video-anomaly-detection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#21-video-anomaly-detection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Semi-Supervised VAD. Existing semi-supervised video anomaly detection (VAD) methods are typically categorized into three groups: one-class classification (OCC), reconstruction-based models, and prediction-based models, all of which are trained exclusively on normal data. OCC models [31 , 32 , 35 , 40 , 49] classify anomalies by identifying data points that fall outside a learned hypersphere of normal data. However, defining normality can be ambiguous, which often reduces their effectiveness [23 , 46]. Reconstruction-based methods [3 , 25 , 30 , 48 , 52] use deep auto-encoders (DAEs) to learn normal patterns, detecting anomalies through high reconstruction errors. However,</p>
+<p>DAEs may still reconstruct anomalous frames with low error, weakening detection performance. Prediction models [5 , 8 , 18 , 22 , 24 , 26], often utilizing GANs, forecast future frames and identify anomalies by comparing predicted frames with actual frames.</p>
+<p>Weakly-Supervised VAD. Weakly-supervised video anomaly detection (WSVAD) identifies anomalies using only video-level labels without precise temporal or spatial information. WSVAD methods typically frame the task as a multiple instance learning (MIL) problem [19 , 33 , 34 , 39 , 50], where videos are divided into segments, and predictions are aggregated into video-level anomaly scores. Sultani et al. [33] first define the WSVAD paradigm using a deep multiple-instance ranking framework. Recent methods focus on optimizing models. Tian et al. [34] introduce RTFM, which combines dilated convolutions and self-attention to detect subtle anomalies, while Zaheer et al. [50] add a clustering-based normalcy suppression mechanism. Other approaches [13 , 27] leverage pre-trained models to gain task-agnostic knowledge. Wu et al. [43] propose VadCLIP, which uses CLIP [29] for dual-branch outputs of anomaly scores and labels.</p>
+<p>Open-Set VAD. Open-set VAD models are trained on normal behaviors and base anomalies to detect all anomalies, addressing the challenges of open-world environments. Acsintoae et al. [1] first introduce open-set VAD, along with a benchmark dataset and evaluation framework. Zhu et al. [54] combine evidential deep learning and normalizing flows within a multiple instance learning framework. Hirschorn et al. [9] propose a lightweight normalizing flows framework that utilizes human pose graph structures.</p>
+<p>Our method provides both detection and categorization results in an open setting, focusing on addressing the challenges related to novel anomalies.</p>
+
+<h2 class="relative group">2.2. Open Vocabulary Learning
+    <div id="22-open-vocabulary-learning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#22-open-vocabulary-learning" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Recent advancements in pre-trained vision-language models [11 , 29] have spurred significant interest in open vocabulary tasks, including object detection [6 , 15 , 51], semantic segmentation [7 , 20 , 47], and action recognition [12 , 14 , 21 , 36]. These studies leverage the pre-trained knowledge of multimodal models, demonstrating strong generalization. Wu et al. [42] first introduce open vocabulary video anomaly detection (OVVAD) using the pre-trained model CLIP. However, most methods emphasize the visual encoder while neglecting the text encoder, limiting zero-shot capabilities. Our method explores the text encoder and incorporates a guided encoding mechanism to enhance multimodal alignment in OVVAD.</p>
+
+<h2 class="relative group">3. Proposed Anomize Method
+    <div id="3-proposed-anomize-method" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-proposed-anomize-method" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">3.1. Overview
+    <div id="31-overview" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#31-overview" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Following Wu et al. [42], we define the training sample set as D = {(vi, yi)} N+A i=1 , which consists of N normal samples D n and A abnormal samples D a . Here, vi represents video samples, and yi ∈ Cbase denotes the corresponding anomaly labels. Each vi ∈ D a contains at least one anomalous frame, while vi ∈ D n consists entirely of normal frames. The complete label set C includes both base and novel anomaly labels. The objective of OVVAD is to train a model on D to predict frame-level anomaly scores and video-level anomaly labels from C .</p>
+<p>Fig. 3 illustrates the overview of framework. We leverage the encoder of the pre-trained CLIP model for its strong generalization capabilities. Video frames are processed by the CLIP image encoder Φvisual to extract original visual features xf ∈ R n×d , where n is the number of frames and d is the feature dimension. These features are temporally modeled by a lightweight temporal encoder. The original features, augmented by a concept library ConceptLib , pass through the static stream, while temporal features, augmented by label descriptions, pass through the dynamic stream. The prediction from each stream is obtained and aggregated to generate the final frame-level anomaly score s ∈ R n×1 . For categorization, a multimodal alignment method is used. A fused visual feature is first generated, and the CLIP text encoder Φ text extracts textual features via the group-guided text encoding mechanism. Frame-level predictions are then obtained through alignment and aggregated for the final video-level result pvideo .</p>
+
+<h2 class="relative group">3.2. Lightweight Temporal Encoder
+    <div id="32-lightweight-temporal-encoder" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#32-lightweight-temporal-encoder" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We utilize the frozen Φ visual for visual features to leverage its zero-shot capabilities. However, since CLIP is pretrained on image-text pairs, it lacks temporal modeling for video. Recent methods [14 , 37 , 38] commonly introduce a temporal encoder. However, this often leads to performance degradation on novel cases, as the additional parameters in the encoder may become specialized for the training set, leading to overfitting. Therefore, we adopt a lightweight long short-term memory (LSTM) [10] for temporal modeling, resulting in the temporal visual feature xtem ∈ R n×d :</p>
+<!-- formula-not-decoded -->
+<p>Other parameter-efficient models may also be suitable, as discussed in the supplementary material.</p>
+
+<h2 class="relative group">3.3. Group-Guided Text Encoding
+    <div id="33-group-guided-text-encoding" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#33-group-guided-text-encoding" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Previous methods mainly rely on the generalization capabilities of pre-trained models without task-specific guidance, often leading to categorization confusion. We introduce a group-guided text encoding mechanism to address this.</p>
+<p>Figure 3. Overview of Our Anomize Framework. (a) Process for obtaining label features via the Group-Guided Text Encoding mechanism. (b) Creation of the concept library ConceptLib for anomaly detection. (c) The framework processes anomaly labels and video frames to generate frame-level anomaly scores and detected labels. Scoring is performed using a Text-Augmented Dual Stream mechanism, where each stream receives corresponding text and visual features, and the fused scores are produced as output. For labeling, the model aligns label features from the Group-Guided Text Encoding mechanism with the fused original and temporal visual encodings. Both the text and image encoders, pre-trained on CLIP, remain frozen without further optimization.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000003_6062163c5e7c5e3604c879bebf573a0c6dfcd0dfe393dc6992616de89ca5401e.png"
+    ></figure>
+<p>We leverage large language models (LLM), specifically GPT-4 [28], for textual encoding. We first use the prompt prompt group to group labels, ensuring that corresponding videos in each group exhibit high visual similarity. Then, we apply the prompt promptdesc to generate text descriptions for each label based on the grouping. These descriptions capture shared elements while emphasizing unique characteristics within each group, ensuring the encodings remain similar yet distinguishable:</p>
+<!-- formula-not-decoded -->
+<!-- formula-not-decoded -->
+<p>where result group and result desc represent the label groups and their descriptions. The descriptions are then passed into the frozen CLIP text encoder Φ text to obtain encodings tdesc ∈ R c×d , where c is the number of anomaly labels:</p>
+<!-- formula-not-decoded -->
+<p>These encodings are used for multimodal alignment. For the visual features, we combine the temporal and original encodings, preserving the knowledge captured by the pretrained model:</p>
+<!-- formula-not-decoded -->
+<p>where α is a scalar weight. The prediction probabilities for video frames are expressed as:</p>
+<!-- formula-not-decoded -->
+<p>where pframe ∈ R n×c represents the probability distribution over c anomaly labels for each frame. To obtain the videolevel prediction, we select the top M probabilities for each label and average these top values, where M is the total number of frames divided by 16:</p>
+<!-- formula-not-decoded -->
+<p>where p avg ∈ R c is the average probabilities for each label after applying the softmax function σ(·). Finally, the videolevel prediction pvideo is determined as the label with the highest average probability:</p>
+<!-- formula-not-decoded -->
+
+<h2 class="relative group">3.4. Augmenter
+    <div id="34-augmenter" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#34-augmenter" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In our method, both streams utilize text to enhance visual encodings via a unified augmenter. The augmenter takes visual encodings evisual and textual encodings etext as input. These are processed by a multi-head attention layer MHA(·), where evisual acts as the query and etext acts as the key and value. This operation extracts the most relevant textual features for supplementation, denoted as erefine:</p>
+<!-- formula-not-decoded -->
+<p>A fully connected layer FC(·) linearly projects the visual encoding, which is concatenated with the refined textual features and passed through a multi-layer perceptron</p>
+<p>MLP(·) for dimensionality reduction. This results in the augmented output e aug :</p>
+<!-- formula-not-decoded -->
+
+<h2 class="relative group">3.5. Text-Augmented Dual Stream
+    <div id="35-text-augmented-dual-stream" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#35-text-augmented-dual-stream" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In open settings, models may struggle to assess unfamiliar anomalies due to limited information. We propose a TextAugmented Dual Stream mechanism with complementary dynamic and static streams, each augmented by relevant text to provide sufficient support for detection.</p>
+<p>Since video anomaly detection (VAD) relies on temporal cues, we employ a dynamic stream to predict anomaly scores s dyn ∈ R n×1 based on refined visual features fa faug ∈ R n×d , derived from temporal visual features and augmented by label descriptions via the augmenter in Sec. 3.4:</p>
+<!-- formula-not-decoded -->
+<!-- formula-not-decoded -->
+<p>where Sigmoid(·) converts predictions to [0, 1].</p>
+<p>Since the dynamic stream is limited in scene context, we employ a static stream with original visual features augmented by anomaly-relevant concept data.</p>
+<p>Specifically, we create a concept library ConceptLib containing key features related to anomalies. These features are generated by Φtext from various nouns describing significant characteristics of the anomalies:</p>
+<!-- formula-not-decoded -->
+<p>where prompt conc is a prompt for relevant nouns. We then compute the cosine similarity between the visual feature of frame i , x (i) f , and concept features h ∈ ConceptLib:</p>
+<!-- formula-not-decoded -->
+<p>The top K relevant concept features h (i) f ∈ R K×d and their scores s (i) f ∈ R K are selected:</p>
+<!-- formula-not-decoded -->
+<p>The selected features are then weighted by their scores and concatenated to form refined textual features for the video:</p>
+<!-- formula-not-decoded -->
+<p>Next, the refined features h new f ∈ R n×k×d and the original visual features xf are passed through the augmenter to generate the augmented encoding x aug ∈ R n×d :</p>
+<!-- formula-not-decoded -->
+<p>Similar to the dynamic stream, x aug is fed into a detector for anomaly score prediction ssta in the static stream:</p>
+<!-- formula-not-decoded -->
+<p>Finally, the outputs of the two streams are aggregated for the overall anomaly score prediction s:</p>
+<!-- formula-not-decoded -->
+<p>where β is a tunable parameter balancing the contributions of the dynamic and static streams.</p>
+
+<h2 class="relative group">3.6. Objective Functions
+    <div id="36-objective-functions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#36-objective-functions" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>First Training Stage. In the first stage, we focus on video anomaly categorization to train the LSTM while freezing other modules to prevent optimization conflicts. We use cross-entropy loss L ce for categorization. To prevent overfitting to normal data due to class imbalance, we add a separation loss L sep to enhance the distinction between normal and anomalous predictions. The loss for the first stage is:</p>
+<!-- formula-not-decoded -->
+<!-- formula-not-decoded -->
+<!-- formula-not-decoded -->
+<p>where p avg,i denotes the predicted probabilities for the i-th video, and the normal label is at the first index. giis the one-hot ground truth, and N denotes the batch size.</p>
+<p>Second Training Stage. In the second stage, we focus on anomaly detection to train the static and dynamic streams while freezing other modules. Following Wu et al. [43], we apply the MIL loss. Specifically, we first average the top M frame anomaly scores to obtain the video-level prediction qˆ ˆ i , then compute the loss LX − MIL for each stream using binary cross-entropy to quantify the difference between predictions and binary labels qi, where qi = 1 denotes an anomaly and X ∈ {D, S} denotes the type of stream. Additionally, we apply a weight wiin this phase to tackle data imbalance by increasing the penalty for incorrect scores related to anomalous videos. The loss is defined as follows:</p>
+<!-- formula-not-decoded -->
+<!-- formula-not-decoded -->
+<p>Table 1. Detection Metrics (%) Comparisons for XDVIOLENCE (left) and UCF-CRIME (right). The best results are highlighted in bold, our method is shaded in gray, the symbol ∗ indicates different category divisions, and underlined values represent the second-best results.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>AP</th>
+          <th>APb</th>
+          <th>APn</th>
+          <th>AUC</th>
+          <th>AUCb</th>
+          <th>AUCn</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Zhu et al.∗ [54]</td>
+          <td>64.4</td>
+          <td>-</td>
+          <td>-</td>
+          <td>78.82</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>Sultani et al. [33]</td>
+          <td>52.26</td>
+          <td>51.25</td>
+          <td>54.64</td>
+          <td>78.25</td>
+          <td>86.31</td>
+          <td>80.12</td>
+      </tr>
+      <tr>
+          <td>Wu et al. [41]</td>
+          <td>55.43</td>
+          <td>52.94</td>
+          <td>64.10</td>
+          <td>82.24</td>
+          <td>90.62</td>
+          <td>84.13</td>
+      </tr>
+      <tr>
+          <td>RTFM [34]</td>
+          <td>58.99</td>
+          <td>55.72</td>
+          <td>65.97</td>
+          <td>84.47</td>
+          <td>92.54</td>
+          <td>85.87</td>
+      </tr>
+      <tr>
+          <td>Wu et al. [42]</td>
+          <td>66.53</td>
+          <td>57.10</td>
+          <td>76.03</td>
+          <td>86.4</td>
+          <td>93.80</td>
+          <td>88.20</td>
+      </tr>
+      <tr>
+          <td>Ours</td>
+          <td>69.31</td>
+          <td>57.37</td>
+          <td>84.24</td>
+          <td>84.49</td>
+          <td>93.00</td>
+          <td>87.05</td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 class="relative group">4. Experimental Results
+    <div id="4-experimental-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-experimental-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">4.1. Datasets and Implementation Details
+    <div id="41-datasets-and-implementation-details" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#41-datasets-and-implementation-details" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Datasets. We evaluate the performance of Anomize on two widely-used benchmark datasets. XD-VIOLENCE [41] is the largest dataset focused on violent events in videos, containing 3,954 training videos and 800 testing videos. The videos are collected from movies and YouTube, capturing six types of anomalous events across diverse scenarios. UCF-CRIME [33] is a large-scale dataset with 1,610 untrimmed surveillance videos for training and 290 for testing, totaling 128 hours. This dataset includes 13 types of anomalous events, spanning both indoor and outdoor settings and providing broad coverage of real-world scenarios.</p>
+<p>Evaluation Metrics. For anomaly detection, we employ standard metrics from previous works [33 , 41]. Specifically, for UCF-CRIME, we compute AUC, which captures the trade-off between true positive and false positive rates. For XD-VIOLENCE, we report AP, reflecting the balance between precision and recall. For anomaly categorization, we report Top-1 accuracy on anomalous test videos from both datasets. These metrics are provided for all categories combined, as well as separately for base and novel categories, denoted by the subscripts b and n, respectively.</p>
+<p>Implementation Details. We implement our model in PyTorch and train it on an RTX 4090 with a 256-frame limit. Using the AdamW optimizer [17] with a learning rate of 2 × 10 − 5 and a batch size of 32, we train for 16 and 64 epochs in two phases. We use the pre-trained CLIP (ViT-B/16) model. The MLP module contains 2 fully connected layers with GeLU activation. The fusion weight α is 1 during training and 2 during testing. K is 25 for XDVIOLENCE and 5 for UCF-CRIME. Score weight β is 1 on XD-VIOLENCE (0 for base categories) and 0.5 on UCFCRIME (0 for novel categories). Loss weight wi follows the normal-to-anomaly ratio per iteration.</p>
+
+<h2 class="relative group">4.2. Comparison with State-of-the-Art Methods
+    <div id="42-comparison-with-state-of-the-art-methods" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#42-comparison-with-state-of-the-art-methods" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In Tab. 1, we compare the performance of our method with prior VAD methods, ensuring that all methods use the same</p>
+<p>Table 2. Top-1 Accuracy (%) Comparisons on XD-VIOLENCE (left) and UCF-CRIME (right).</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>ACC</th>
+          <th>ACCb</th>
+          <th>ACCn</th>
+          <th>ACC</th>
+          <th>ACCb</th>
+          <th>ACCn</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Wu et al. [42]</td>
+          <td>64.68</td>
+          <td>89.31</td>
+          <td>30.9</td>
+          <td>41.43</td>
+          <td>49.02</td>
+          <td>37.08</td>
+      </tr>
+      <tr>
+          <td>Ours</td>
+          <td>90.29</td>
+          <td>92.37</td>
+          <td>87.43</td>
+          <td>47.14</td>
+          <td>56.86</td>
+          <td>41.57</td>
+      </tr>
+  </tbody>
+</table>
+<p>visual features from CLIP and adopt an open-set setting. On XD-VIOLENCE, we achieve the best performance, with an increase of 2.78% overall and 8.21% on novel cases, demonstrating the effectiveness of our method in reducing detection ambiguity. On UCF-CRIME, our method achieves competitive results, likely due to the lightweight temporal encoder and segmented training, which limits optimization for the detection branch. Since other studies focus solely on traditional VAD without categorization, we compare our method&rsquo;s categorization performance with a leading study [42] in Tab. 2. Our method shows significant improvements, with a 25.61% gain on XD-VIOLENCE and 5.71% on UCF-CRIME, as well as further improvements of 56.53% and 4.49% on novel cases, highlighting its effectiveness in reducing categorization confusion.</p>
+
+<h2 class="relative group">4.3. Ablation Studies
+    <div id="43-ablation-studies" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#43-ablation-studies" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Effectiveness of Lightweight Temporal Encoder. The experiments confirm the importance of temporal information in video-level tasks. Tab. 3 shows that the dynamic stream, with temporal encoding, provides useful temporal cues and complements the static stream effectively. While relying solely on temporal information performs poorly due to noise, the dynamic stream becomes more effective with loss weighting and text augmentation. Tab. 4 shows that adding the temporal encoder improves performance on base cases, but without further guidance, the lightweight encoder still introduces confusion for novel anomalies.</p>
+<p>Effectiveness of Group-Guided Text Encoding Mechanism. Comparisons in Tab. 4 between the second and third rows, or the fourth and fifth rows, on both datasets show that textual encodings based on group descriptions outperform the baseline, demonstrating the importance of our text encoding mechanism.</p>
+<p>Effectiveness of Text Augmentation. As shown in Tab. 3, text augmentation in both dynamic and static streams generally reduces detection ambiguity by compensating for the limitations of visual features. The dynamic stream with only text augmentation shows a slight drop on UCFCRIME, suggesting noise in the temporal encodings. However, when combined with the loss weight, it demonstrates the importance of text, as shown in Rows 6 and 7.</p>
+<p>Effectiveness of Integrating Dynamic and Static Streams. Tab. 3 shows that integrating the two streams is generally more effective than using them independently, as</p>
+<p>Table 3. Effectiveness of Dynamic Mdyn and Static Msta Streams with Text-Augmented Visual Data, Additional Loss Weight wi , and Segmented Training (ST) on XD-VIOLENCE (left) and UCF-CRIME (right). In Msta, the visual data is the original visual feature output by CLIP, while in Mdyn, it is derived from a lightweight temporal encoder.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Msta</th>
+          <th>Msta</th>
+          <th>Msta</th>
+          <th>Mdyn</th>
+          <th>Mdyn</th>
+          <th>Mdyn</th>
+          <th>ST</th>
+          <th>XD-VIOLENCE</th>
+          <th>XD-VIOLENCE</th>
+          <th>XD-VIOLENCE</th>
+          <th>UCF-CRIME</th>
+          <th>UCF-CRIME</th>
+          <th>UCF-CRIME</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>visual</td>
+          <td>text</td>
+          <td>wi</td>
+          <td>visual</td>
+          <td>text</td>
+          <td>wi</td>
+          <td>ST</td>
+          <td>AP (%)</td>
+          <td>APb (%)</td>
+          <td>APn (%)</td>
+          <td>AUC (%)</td>
+          <td>AUCb (%)</td>
+          <td>AUCn (%)</td>
+      </tr>
+      <tr>
+          <td>√</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>√</td>
+          <td>54.75</td>
+          <td>46.30</td>
+          <td>76.61</td>
+          <td>48.47</td>
+          <td>47.72</td>
+          <td>50.05</td>
+      </tr>
+      <tr>
+          <td>√ √</td>
+          <td>√</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>√</td>
+          <td>59.65</td>
+          <td>56.41</td>
+          <td>75.29</td>
+          <td>52.21</td>
+          <td>59.18</td>
+          <td>48.45</td>
+      </tr>
+      <tr>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>√</td>
+          <td>59.26</td>
+          <td>57.20</td>
+          <td>74.28</td>
+          <td>84.26</td>
+          <td>92.06</td>
+          <td>86.86</td>
+      </tr>
+      <tr>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>√</td>
+          <td>×</td>
+          <td>×</td>
+          <td>√</td>
+          <td>47.19</td>
+          <td>36.87</td>
+          <td>69.79</td>
+          <td>26.93</td>
+          <td>17.39</td>
+          <td>25.73</td>
+      </tr>
+      <tr>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>√</td>
+          <td>√</td>
+          <td>×</td>
+          <td>√</td>
+          <td>54.98</td>
+          <td>57.79</td>
+          <td>69.40</td>
+          <td>23.06</td>
+          <td>14.68</td>
+          <td>19.74</td>
+      </tr>
+      <tr>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>54.16</td>
+          <td>56.03</td>
+          <td>68.19</td>
+          <td>83.21</td>
+          <td>91.94</td>
+          <td>85.43</td>
+      </tr>
+      <tr>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>√</td>
+          <td>×</td>
+          <td>√</td>
+          <td>√</td>
+          <td>48.55</td>
+          <td>51.15</td>
+          <td>59.93</td>
+          <td>80.97</td>
+          <td>90.71</td>
+          <td>83.63</td>
+      </tr>
+      <tr>
+          <td>√</td>
+          <td>√</td>
+          <td>×</td>
+          <td>√</td>
+          <td>√</td>
+          <td>×</td>
+          <td>√</td>
+          <td>64.92</td>
+          <td>52.93</td>
+          <td>79.91</td>
+          <td>52.37</td>
+          <td>59.44</td>
+          <td>48.61</td>
+      </tr>
+      <tr>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>×</td>
+          <td>58.22</td>
+          <td>58.58</td>
+          <td>72.31</td>
+          <td>84.52</td>
+          <td>92.62</td>
+          <td>86.52</td>
+      </tr>
+      <tr>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>69.31</td>
+          <td>57.37</td>
+          <td>84.24</td>
+          <td>84.49</td>
+          <td>93.00</td>
+          <td>87.05</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table 4. Effectiveness of the Lightweight Temporal Encoder Etem, Group-Guided Text Encoding Mechanism Mg Mgroup , Fusion Function Ffus, Additional Separation Loss L sep , and Segmented Training (ST) on XD-VIOLENCE (left) and UCF-CRIME (right).</p>
+<table>
+  <thead>
+      <tr>
+          <th>E</th>
+          <th>M</th>
+          <th>F</th>
+          <th>L</th>
+          <th>ST</th>
+          <th>XD-VIOLENCE</th>
+          <th>XD-VIOLENCE</th>
+          <th>XD-VIOLENCE</th>
+          <th>UCF-CRIME</th>
+          <th>UCF-CRIME</th>
+          <th>UCF-CRIME</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>E</td>
+          <td>M</td>
+          <td>F</td>
+          <td>L</td>
+          <td>ST</td>
+          <td>ACC (%)</td>
+          <td>ACCb (%)</td>
+          <td>ACCn (%)</td>
+          <td>ACC (%)</td>
+          <td>ACCb (%)</td>
+          <td>ACCn (%)</td>
+      </tr>
+      <tr>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>√</td>
+          <td>45.92</td>
+          <td>74.81</td>
+          <td>6.28</td>
+          <td>35.71</td>
+          <td>56.86</td>
+          <td>23.60</td>
+      </tr>
+      <tr>
+          <td>√</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>√</td>
+          <td>53.42</td>
+          <td>92.37</td>
+          <td>0</td>
+          <td>25.71</td>
+          <td>70.59</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>√</td>
+          <td>√</td>
+          <td>×</td>
+          <td>×</td>
+          <td>√</td>
+          <td>56.07</td>
+          <td>92.75</td>
+          <td>5.76</td>
+          <td>27.86</td>
+          <td>68.63</td>
+          <td>4.49</td>
+      </tr>
+      <tr>
+          <td>√</td>
+          <td>×</td>
+          <td>√</td>
+          <td>×</td>
+          <td>√</td>
+          <td>56.51</td>
+          <td>94.66</td>
+          <td>4.19</td>
+          <td>27.14</td>
+          <td>74.51</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>×</td>
+          <td>√</td>
+          <td>90.07</td>
+          <td>91.98</td>
+          <td>87.43</td>
+          <td>46.43</td>
+          <td>56.86</td>
+          <td>40.45</td>
+      </tr>
+      <tr>
+          <td>√  √</td>
+          <td>√  √</td>
+          <td>√</td>
+          <td>√</td>
+          <td>×</td>
+          <td>89.95</td>
+          <td>91.98</td>
+          <td>86.91</td>
+          <td>46.43</td>
+          <td>52.94</td>
+          <td>42.70</td>
+      </tr>
+      <tr>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>90.29</td>
+          <td>92.37</td>
+          <td>87.43</td>
+          <td>47.14</td>
+          <td>56.86</td>
+          <td>41.57</td>
+      </tr>
+  </tbody>
+</table>
+<p>they complement and constrain each other, which is evident from the comparisons in the third, sixth, and last rows.</p>
+<p>Effectiveness of Additional Loss Design. Tab. 3 emphasizes the importance of loss weight wi, especially when training dynamic and static streams together. On XD-VIOLENCE, adding wi slightly degrades single-stream training but significantly benefits integrated streams. Besides, Tab. 4 shows that adding separation loss L sep improves performance, effectively addressing class imbalance.</p>
+<p>Effectiveness of Segmented Training. Results in Tab. 3 and Tab. 4 show that segmented training generally outperforms single-phase training, especially for novel cases, confirming that single-phase training may cause optimization conflicts and increase overfitting risks. On UCF-CRIME , single-phase training shows slightly better categorization performance on novel categories, likely due to randomness caused by optimization conflicts, as reflected in the poor performance on base categories.</p>
+
+<h2 class="relative group">4.4. Qualitative results
+    <div id="44-qualitative-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#44-qualitative-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Fig. 4 presents qualitative results for anomaly detection, featuring two base and two novel categories from each dataset to cover all label groups. The comparison between the blue predicted score lines and the pink rectangles for ground truth demonstrates the effectiveness of our model in detecting anomalies. Notably, our method demonstrates</p>
+<p>Table 5. Cross-Dataset Detection and Categorization Results.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Test</th>
+          <th>XD-VIOLENCE</th>
+          <th>XD-VIOLENCE</th>
+          <th>UCF-CRIME</th>
+          <th>UCF-CRIME</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Train</td>
+          <td>AP (%)</td>
+          <td>ACC (%)</td>
+          <td>AUC (%)</td>
+          <td>ACC (%)</td>
+      </tr>
+      <tr>
+          <td>XD-VIOLENCE</td>
+          <td>69.31</td>
+          <td>90.29</td>
+          <td>81.69</td>
+          <td>45.71</td>
+      </tr>
+      <tr>
+          <td>UCF-CRIME</td>
+          <td>66.16</td>
+          <td>85.87</td>
+          <td>84.68</td>
+          <td>47.14</td>
+      </tr>
+  </tbody>
+</table>
+<p>its capability to handle novel cases with minimal detection ambiguity, highlighting the strong support of the textaugmented dual stream.</p>
+<p>Fig. 5 shows similarity matrices of textual encodings, where labels indicated by the same dot are grouped together. Fig. 5(a) and (c) show results from encoding text using only label text, where visually similar anomalies lack corresponding textual similarity, revealing the limitations of relying solely on pre-trained models. Fig. 5(b) and (d) present results after being guided, where textual similarities within groups are enhanced to better align with visual similarities. This demonstrates the benefit of establishing label connections to guide encoding.</p>
+
+<h2 class="relative group">4.5. Adaptability and Generalization
+    <div id="45-adaptability-and-generalization" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#45-adaptability-and-generalization" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Analysis of Cross-Dataset Ability. Tab. 5 shows that training on one dataset in an open-set manner and testing on another achieves results comparable to direct training on the target dataset, highlighting the adaptability of our method.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000004_0aaca1c168ef559551e08edca85efe3a711f5ebd347c452b537ef980b821aace.png"
+    ></figure>
+<p>Figure 4. Qualitative Results for Anomaly Detection. The first and second rows present results on XD-VIOLENCE and UCF-CRIME respectively. Red boxes and rectangles highlight the ground-truth anomalous frames, while blue lines represent predicted anomaly scores.</p>
+<p>Figure 5. Similarity Matrices of Textual Encoding. (a) and (c) depict results using encodings from the original label data, while (b) and (d) show improvements achieved with the group-guided text encoding mechanism.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000005_9cf6164b678aa2afd17d207555f98539f052d126386e767ade8e82e9196a6aba.png"
+    ></figure>
+<p>Table 6. Impact of Data Addition on Top-1 Accuracy for XDVIOLENCE (top) and UCF-CRIME (bottom). &ldquo;+ shoplifting&rdquo; denotes the addition of both videos and labels, while &ldquo;+ labels&rdquo; indicates adding new labels only.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Setting</th>
+          <th>ACC (%)</th>
+          <th>ACCb (%)</th>
+          <th>ACCn (%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>orig.</td>
+          <td>90.29</td>
+          <td>92.37</td>
+          <td>87.43</td>
+      </tr>
+      <tr>
+          <td>+ shoplifting</td>
+          <td>90.51</td>
+          <td>92.37</td>
+          <td>88.21</td>
+      </tr>
+      <tr>
+          <td>+ arrest</td>
+          <td>89.96</td>
+          <td>92.37</td>
+          <td>86.73</td>
+      </tr>
+      <tr>
+          <td>+ arson</td>
+          <td>88.77</td>
+          <td>92.37</td>
+          <td>84.08</td>
+      </tr>
+      <tr>
+          <td>+ assault</td>
+          <td>87.28</td>
+          <td>87.4</td>
+          <td>87.11</td>
+      </tr>
+      <tr>
+          <td>+ labels</td>
+          <td>85.21</td>
+          <td>86.64</td>
+          <td>83.25</td>
+      </tr>
+      <tr>
+          <td>orig.</td>
+          <td>47.14</td>
+          <td>56.86</td>
+          <td>41.57</td>
+      </tr>
+      <tr>
+          <td>+ riot</td>
+          <td>65.69</td>
+          <td>56.86</td>
+          <td>68.09</td>
+      </tr>
+      <tr>
+          <td>+ labels</td>
+          <td>45</td>
+          <td>54.9</td>
+          <td>39.33</td>
+      </tr>
+  </tbody>
+</table>
+<p>Analysis of Open Vocabulary Ability. The open vocabulary ability is demonstrated by stable categorization performance after adding novel anomaly data, which we further validate by evaluating top-1 accuracy with the added data, as shown in Tab. 6. The additional data for one dataset is sourced from another. On XD-VIOLENCE, incorporating both same-group (e.g., arson) and differentgroup data (e.g., shoplifting) leads to stable performance, though assault shows the clearest decline due to confusion with similar labels like fighting. On UCF-CRIME, incorporating riot leads to notable improvement, with most instances accurately categorized despite being grouped with four other labels. Although the addition of new labels introduces some confusion, the performance remains robust across both datasets.</p>
+
+<h2 class="relative group">5. Conclusion
+    <div id="5-conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We propose the Anomize framework to address detection ambiguity and categorization confusion in open vocabulary video anomaly detection (OVVAD). By augmenting visual encodings with anomaly-related text through a dualstream mechanism, Anomize improves the detection of unfamiliar samples and resolves ambiguity. Additionally, a group-guided text encoding mechanism enhances multimodal alignment and reduces categorization confusion. Experiments on XD-VIOLENCE and UCF-CRIME demonstrate the effectiveness of our method.</p>
+<p>Acknowledgments. This work was supported by the National Natural Science Foundation of China (Grants 62171325, 62271361), the Hubei Provincial Key Research and Development Program (Grant 2024BAB039), and the supercomputing system at Wuhan University.</p>
+
+<h2 class="relative group">References
+    <div id="references" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#references" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>
+<p>[1] Andra Acsintoae, Andrei Florescu, Mariana-Iuliana Georgescu, Tudor Mare, Paul Sumedrea, Radu Tudor Ionescu, Fahad Shahbaz Khan, and Mubarak Shah. Ubnormal: New benchmark for supervised open-set video anomaly detection. In Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit., pages 20111–20121, 2022. 1 , 3</p>
+</li>
+<li>
+<p>[2] Dibyadip Chatterjee, Fadime Sener, Shugao Ma, and Angela Yao. Opening the vocabulary of egocentric actions. In Adv. Neural Inf. Process. Syst., 2023. 2</p>
+</li>
+<li>
+<p>[3] Yang Cong, Junsong Yuan, and Ji Liu. Sparse reconstruction cost for abnormal event detection. In Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit., pages 3449–3456, 2011. 1 , 2</p>
+</li>
+<li>
+<p>[4] Yu Du, Fangyun Wei, Zihe Zhang, Miaojing Shi, Yue Gao, and Guoqi Li. Learning to prompt for open-vocabulary object detection with vision-language model. In Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit., pages 14064–14073, 2022. 2</p>
+</li>
+<li>
+<p>[5] Xinyang Feng, Dongjin Song, Yuncong Chen, Zhengzhang Chen, Jingchao Ni, and Haifeng Chen. Convolutional transformer based dual discriminator generative adversarial networks for video anomaly detection. In Proc. ACM Int. Conf. Multimedia, pages 5546–5554, 2021. 3</p>
+</li>
+<li>
+<p>[6] Xiuye Gu, Tsung-Yi Lin, Weicheng Kuo, and Yin Cui. Open-vocabulary object detection via vision and language knowledge distillation. In Proc. Int. Conf. Learn. Represent. , 2022. 3</p>
+</li>
+<li>
+<p>[7] Kunyang Han, Yong Liu, Jun Hao Liew, Henghui Ding, Jiajun Liu, Yitong Wang, Yansong Tang, Yujiu Yang, Jiashi Feng, Yao Zhao, and Yunchao Wei. Global knowledge calibration for fast open-vocabulary segmentation. In Proc. IEEE/CVF Int. Conf. Comput. Vis., pages 797–807, 2023. 3</p>
+</li>
+<li>
+<p>[8] Yi Hao, Jie Li, Nannan Wang, Xiaoyu Wang, and Xinbo Gao. Spatiotemporal consistency-enhanced network for video anomaly detection. Pattern Recognit., 121:108232, 2022. 3</p>
+</li>
+<li>
+<p>[9] Or Hirschorn and Shai Avidan. Normalizing flows for human pose anomaly detection. In Proc. IEEE/CVF Int. Conf. Comput. Vis., pages 13499–13508, 2023. 1 , 3</p>
+</li>
+<li>
+<p>[10] Sepp Hochreiter and Jurgen Schmidhuber. Long short-term ¨ ¨ memory. Neural Comput., 9(8):1735–1780, 1997. 3</p>
+</li>
+<li>
+<p>[11] Chao Jia, Yinfei Yang, Ye Xia, Yi-Ting Chen, Zarana Parekh, Hieu Pham, Quoc V. Le, Yun-Hsuan Sung, Zhen Li, and Tom Duerig. Scaling up visual and vision-language representation learning with noisy text supervision. In Proc. Int. Conf. Mach. Learn., pages 4904–4916, 2021. 3</p>
+</li>
+<li>
+<p>[12] Chengyou Jia, Minnan Luo, Xiaojun Chang, Zhuohang Dang, Mingfei Han, Mengmeng Wang, Guang Dai, Sizhe Dang, and Jingdong Wang. Generating action-conditioned prompts for open-vocabulary video action recognition. In Proc. ACM Int. Conf. Multimedia, pages 4640–4649, 2024. 3</p>
+</li>
+<li>
+<p>[13] Hyekang Kevin Joo, Khoa Vo, Kashu Yamazaki, and Ngan Le. CLIP-TSA: clip-assisted temporal self-attention for weakly-supervised video anomaly detection. In Proc. IEEE Int. Conf. Image Process., pages 3230–3234, 2023. 1 , 3</p>
+</li>
+<li>
+<p>[14] Chen Ju, Tengda Han, Kunhao Zheng, Ya Zhang, and Weidi Xie. Prompting visual-language models for efficient video understanding. In Proc. Eur. Conf. Comput. Vis., pages 105– 124, 2022. 3</p>
+</li>
+<li>
+<p>[15] Dahun Kim, Anelia Angelova, and Weicheng Kuo. Regionaware pretraining for open-vocabulary object detection with vision transformers. In Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit., pages 11144–11154, 2023. 3</p>
+</li>
+<li>
+<p>[16] Jooyeon Kim, Eulrang Cho, Sehyung Kim, and Hyunwoo J. Kim. Retrieval-augmented open-vocabulary object detection. In Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit., pages 17427–17436, 2024. 2</p>
+</li>
+<li>
+<p>[17] Diederik P. Kingma and Jimmy Ba. Adam: A method for stochastic optimization. In Proc. Int. Conf. Learn. Represent., 2015. 6</p>
+</li>
+<li>
+<p>[18] Sangmin Lee, Hak Gu Kim, and Yong Man Ro. BMAN: bidirectional multi-scale aggregation networks for abnormal event detection. IEEE Trans. Image Process., 29:2395–2408, 2020. 3</p>
+</li>
+<li>
+<p>[19] Shuo Li, Fang Liu, and Licheng Jiao. Self-training multisequence learning with transformer for weakly supervised video anomaly detection. In Proc. AAAI Conf. Artif. Intell. , pages 1395–1403, 2022. 3</p>
+</li>
+<li>
+<p>[20] Feng Liang, Bichen Wu, Xiaoliang Dai, Kunpeng Li, Yinan Zhao, Hang Zhang, Peizhao Zhang, Peter Vajda, and Diana Marculescu. Open-vocabulary semantic segmentation with mask-adapted CLIP. In Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit., pages 7061–7070, 2023. 3</p>
+</li>
+<li>
+<p>[21] Kun-Yu Lin, Henghui Ding, Jiaming Zhou, Yi-Xing Peng, Zhilin Zhao, Chen Change Loy, and Wei-Shi Zheng. Rethinking clip-based video learners in cross-domain openvocabulary action recognition. arXiv:2403.01560, 2024. 3</p>
+</li>
+<li>
+<p>[22] Wen Liu, Weixin Luo, Dongze Lian, and Shenghua Gao. Future frame prediction for anomaly detection - A new baseline. In Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit., pages 6536–6545, 2018. 1 , 3</p>
+</li>
+<li>
+<p>[23] Wenxuan Liu, Shilei Zhao, Xiyu Han, Aoyu Yi, Kui Jiang, Zheng Wang, and Xian Zhong. Pixel-refocused navigated trimargin for semi-supervised action detection. In Proc. ACM Int. Conf. Multimedia Workshop, pages 23–31, 2024. 2</p>
+</li>
+<li>
+<p>[24] Zhian Liu, Yongwei Nie, Chengjiang Long, Qing Zhang, and Guiqing Li. A hybrid video anomaly detection framework via memory-augmented flow reconstruction and flow-guided frame prediction. In Proc. IEEE/CVF Int. Conf. Comput. Vis., pages 13568–13577, 2021. 3</p>
+</li>
+<li>
+<p>[25] Cewu Lu, Jianping Shi, and Jiaya Jia. Abnormal event detection at 150 FPS in MATLAB. In Proc. IEEE/CVF Int. Conf. Comput. Vis., pages 2720–2727, 2013. 2</p>
+</li>
+<li>
+<p>[26] Yiwei Lu, K. Mahesh Kumar, Seyed Shahabeddin Nabavi, and Yang Wang. Future frame prediction using convolutional VRNN for anomaly detection. In Proc. IEEE Int. Conf. Adv. Video Signal Based Surveill., pages 1–8, 2019. 3</p>
+</li>
+<li>
+<p>[27] Hui Lv, Zhongqi Yue, Qianru Sun, Bin Luo, Zhen Cui, and Hanwang Zhang. Unbiased multiple instance learning for weakly supervised video anomaly detection. In Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit., pages 8022–8031, 2023. 3</p>
+</li>
+<li>
+<p>[28] OpenAI. GPT-4 technical report. arXiv:2303.08774, 2023. 4</p>
+</li>
+<li>
+<p>[29] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen Krueger, and Ilya Sutskever. Learning transferable visual models from natural language supervision. In Proc. Int. Conf. Mach. Learn., pages 8748–8763, 2021. 2 , 3</p>
+</li>
+<li>
+<p>[30] Nicolae-Catalin Ristea, Florinel-Alin Croitoru, Radu Tudor Ionescu, Marius Popescu, Fahad Shahbaz Khan, and Mubarak Shah. Self-distilled masked auto-encoders are efficient video anomaly detectors. In Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit., pages 15984–15995, 2024. 2</p>
+</li>
+<li>
+<p>[31] Mohammad Sabokrou, Mohammad Khalooei, Mahmood Fathy, and Ehsan Adeli. Adversarially learned one-class classifier for novelty detection. In Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit., pages 3379–3388, 2018. 2</p>
+</li>
+<li>
+<p>[32] Bernhard Scholkopf, Robert C. Williamson, Alexander J. ¨ ¨ Smola, John Shawe-Taylor, and John C. Platt. Support vector method for novelty detection. In Adv. Neural Inf. Process. Syst., pages 582–588, 1999. 2</p>
+</li>
+<li>
+<p>[33] Waqas Sultani, Chen Chen, and Mubarak Shah. Realworld anomaly detection in surveillance videos. In Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit., pages 6479–6488, 2018. 1 , 2 , 3 , 6</p>
+</li>
+<li>
+<p>[34] Yu Tian, Guansong Pang, Yuanhong Chen, Rajvinder Singh, Johan W. Verjans, and Gustavo Carneiro. Weakly-supervised video anomaly detection with robust temporal feature magnitude learning. In Proc. IEEE/CVF Int. Conf. Comput. Vis. , pages 4955–4966, 2021. 3 , 6</p>
+</li>
+<li>
+<p>[35] Jue Wang and Anoop Cherian. GODS: generalized one-class discriminative subspaces for anomaly detection. In Proc. IEEE/CVF Int. Conf. Comput. Vis., pages 8200–8210, 2019. 2</p>
+</li>
+<li>
+<p>[36] Mengmeng Wang, Jiazheng Xing, and Yong Liu. Actionclip: A new paradigm for video action recognition. arXiv:2109.08472, 2021. 3</p>
+</li>
+<li>
+<p>[37] Syed Talal Wasim, Muzammal Naseer, Salman H. Khan, Ming-Hsuan Yang, and Fahad Shahbaz Khan. Videogrounding-dino: Towards open-vocabulary spatiotemporal video grounding. In Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit., pages 18909–18918, 2024. 3</p>
+</li>
+<li>
+<p>[38] Zejia Weng, Xitong Yang, Ang Li, Zuxuan Wu, and YuGang Jiang. Open-vclip: Transforming CLIP to an openvocabulary video model via interpolated weight optimization. In Proc. Int. Conf. Mach. Learn., pages 36978–36989, 2023. 3</p>
+</li>
+<li>
+<p>[39] Peng Wu and Jing Liu. Learning causal temporal relation and feature discrimination for anomaly detection. IEEE Trans. Image Process., 30:3513–3527, 2021. 3</p>
+</li>
+<li>
+<p>[40] Peng Wu, Jing Liu, and Fang Shen. A deep one-class neural network for anomalous event detection in complex scenes. IEEE Trans. Neural Networks Learn. Syst., 31(7): 2609–2622, 2020. 2</p>
+</li>
+<li>
+<p>[41] Peng Wu, Jing Liu, Yujia Shi, Yujia Sun, Fangtao Shao, Zhaoyang Wu, and Zhiwei Yang. Not only look, but also</p>
+</li>
+</ul>
+<ol start="15">
+<li>listen: Learning multimodal violence detection under weak supervision. In Proc. Eur. Conf. Comput. Vis., pages 322– 339, 2020. 2 , 6</li>
+</ol>
+<ul>
+<li>[42] Peng Wu, Xuerong Zhou, Guansong Pang, Yujia Sun, Jing Liu, Peng Wang, and Yanning Zhang. Open-vocabulary video anomaly detection. In Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit., pages 18297–18307, 2024. 1 , 3 , 6</li>
+<li>[43] Peng Wu, Xuerong Zhou, Guansong Pang, Lingru Zhou, Qingsen Yan, Peng Wang, and Yanning Zhang. Vadclip: Adapting vision-language models for weakly supervised video anomaly detection. In Proc. AAAI Conf. Artif. Intell. , pages 6074–6082, 2024. 3 , 5</li>
+<li>[44] Tao Wu, Shuqiu Ge, Jie Qin, Gangshan Wu, and Limin Wang. Open-vocabulary spatio-temporal action detection. arXiv:2405.10832, 2024. 2</li>
+<li>[45] Zuxuan Wu, Zejia Weng, Wujian Peng, Xitong Yang, Ang Li, Larry S. Davis, and Yu-Gang Jiang. Building an openvocabulary video CLIP model with better architectures, optimization and data. IEEE Trans. Pattern Anal. Mach. Intell. , 46(7):4747–4762, 2024. 2</li>
+<li>[46] Haiyang Xie, Zhengwei Yang, Huilin Zhu, and Zheng Wang. Striking a balance: Unsupervised cross-domain crowd counting via knowledge diffusion. In Proceedings of the 31st ACM international conference on multimedia, pages 6520–6529, 2023. 2</li>
+<li>[47] Mengde Xu, Zheng Zhang, Fangyun Wei, Han Hu, and Xiang Bai. SAN: side adapter network for open-vocabulary semantic segmentation. IEEE Trans. Pattern Anal. Mach. Intell., 45(12):15546–15561, 2023. 3</li>
+<li>[48] Zhiwei Yang, Jing Liu, Zhaoyang Wu, Peng Wu, and Xiaotao Liu. Video event restoration based on keyframes for video anomaly detection. In Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit., pages 14592–14601, 2023. 2</li>
+<li>[49] Muhammad Zaigham Zaheer, Jin-Ha Lee, Marcella Astrid, and Seung-Ik Lee. Old is gold: Redefining the adversarially learned one-class classifier training paradigm. In Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit., pages 14171–14181, 2020. 1 , 2</li>
+<li>[50] Muhammad Zaigham Zaheer, Arif Mahmood, Marcella Astrid, and Seung-Ik Lee. CLAWS: clustering assisted weakly supervised learning with normalcy suppression for anomalous event detection. In Proc. Eur. Conf. Comput. Vis. , pages 358–376, 2020. 1 , 3</li>
+<li>[51] Alireza Zareian, Kevin Dela Rosa, Derek Hao Hu, and ShihFu Chang. Open-vocabulary object detection using captions. In Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit. , pages 14393–14402, 2021. 3</li>
+<li>[52] Yuanhong Zhong, Xia Chen, Jinyang Jiang, and Fan Ren. A cascade reconstruction model with generalization ability evaluation for anomaly detection in videos. Pattern Recognit., 122:108336, 2022. 2</li>
+<li>[53] Kaiyang Zhou, Jingkang Yang, Chen Change Loy, and Ziwei Liu. Learning to prompt for vision-language models. Int. J. Comput. Vis., 130(9):2337–2348, 2022. 2</li>
+<li>[54] Yuansheng Zhu, Wentao Bao, and Qi Yu. Towards open set video anomaly detection. In Proc. Eur. Conf. Comput. Vis. , pages 395–412, 2022. 3 , 6</li>
+</ul>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_papers/Li_Anomize_Better_Open_Vocabulary_Video_Anomaly_Detection_CVPR_2025_paper.md"
+          data-oid-likes="likes_papers/Li_Anomize_Better_Open_Vocabulary_Video_Anomaly_Detection_CVPR_2025_paper.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/liu_generating_anomalies_for_video_anomaly_detection_with_prompt-based_feature_mapping_cvpr_2023_paper/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/learning-suspected-anomalies-from-event-prompts/">
+              <span class="leading-6">
+                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-24 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+      
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 overflow-x-auto py-2">
+        <ul class="flex list-none flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 me-4">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

@@ -1,0 +1,1890 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title> &middot; Blowfish</title>
+    <meta name="title" content=" &middot; Blowfish">
+  
+
+  
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/papers/holmes-vad-towards-unbiased-and-explainable-video-anomaly-detection-via-multi-modal-llm/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/papers/holmes-vad-towards-unbiased-and-explainable-video-anomaly-detection-via-multi-modal-llm/">
+  <meta property="og:site_name" content="Blowfish">
+  <meta property="og:title" content="Blowfish">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blowfish">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.7946532fa78157bafb1b4340d4074792811f18177af35790b3a0cb90566ce1cda3edd782eb92e134849964d14b6d9185c9d4ded2a12dcf5b706cb6a275c0cce0.css"
+    integrity="sha512-eUZTL6eBV7r7G0NA1AdHkoEfGBd681eQs6DLkFZs4c2j7deC65LhNISZZNFLbZGFydTe0qEtz1twbLaidcDM4A==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.9df4fc14d50efcc9aa4cfc2b6f348e365f421f5ad491278f8f48c0360cf2f93f08882fda6da162d7ace8e5add57c2df4ac46bd3861306b1d4c452cd31f448d64.js"
+      integrity="sha512-nfT8FNUO/MmqTPwrbzSONl9CH1rUkSePj0jANgzy&#43;T8IiC/abaFi16zo5a3VfC30rEa9OGEwax1MRSzTH0SNZA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Papers",
+    "name": "",
+    "headline": "",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/papers\/holmes-vad-towards-unbiased-and-explainable-video-anomaly-detection-via-multi-modal-llm\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "8227"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          Blowfish
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/papers/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="papers"
+  title="Papers">
+  
+  
+    <p class="text-base font-medium">
+      papers
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/test/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="test"
+  title="Tests">
+  
+  
+    <p class="text-base font-medium">
+      test
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href=""
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  
+  title="">
+  
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/papers/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="papers"
+    title="Papers">
+    
+    
+      <p class="text-bg font-bg">
+        papers
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/test/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="test"
+    title="Tests">
+    
+    
+      <p class="text-bg font-bg">
+        test
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    
+    title="">
+    
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>8227 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">39 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Holmes-VAD: Towards Unbiased and Explainable Video Anomaly Detection via Multi-modal LLM
+    <div id="holmes-vad-towards-unbiased-and-explainable-video-anomaly-detection-via-multi-modal-llm" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#holmes-vad-towards-unbiased-and-explainable-video-anomaly-detection-via-multi-modal-llm" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Huaxin Zhang 1 , 3 , Xiaohao Xu 2 , Xiang Wang 1 , Jialong Zuo 1 , Chuchu Han 1 , 3 ,</p>
+<p>Xiaonan Huang 2 , Changxin Gao 1 , Yuehuan Wang 1 , Nong Sang 1</p>
+<p>1 Key Laboratory of Image Processing and Intelligent Control, School of Artificial Intelligence and Automation, Huazhong University of Science and Technology</p>
+<p>2 University of Michigan, Ann Arbor 3 Baidu Inc. Corresponding Author</p>
+
+<h2 class="relative group">Abstract
+    <div id="abstract" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abstract" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Towards open-ended Video Anomaly Detection (VAD), existing methods often exhibit biased detection when faced with challenging or unseen events and lack interpretability. To address these drawbacks, we propose Holmes-VAD, a novel framework that leverages precise temporal supervision and rich multimodal instructions to enable accurate anomaly localization and comprehensive explanations. Firstly, towards unbiased and explainable VAD system, we construct the first largescale multimodal VAD instruction-tuning benchmark, i.e. , VAD-Instruct50k. This dataset is created using a carefully designed semi-automatic labeling paradigm. Efficient single-frame annotations are applied to the collected untrimmed videos, which are then synthesized into high-quality analyses of both abnormal and normal video clips using a robust off-the-shelf video captioner and a large language model (LLM). Building upon the VAD-Instruct50k dataset, we develop a customized solution for interpretable video anomaly detection. We train a lightweight temporal sampler to select frames with high anomaly response and fine-tune a multimodal large language model (LLM) to generate explanatory content. Extensive experimental results validate the generality and interpretability of the proposed Holmes-VAD , establishing it as a novel interpretable technique for real-world video anomaly analysis. To support the community, our benchmark and model will be publicly available at <a
+  href="https://holmesvad.github.io/"
+    target="_blank"
+  >https://holmesvad.github.io/</a> .</p>
+
+<h2 class="relative group">1 Introduction
+    <div id="1-introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video Anomaly Detection (VAD) [14] aims to identify abnormal events in videos, which has been extensively researched in recent years due to its considerable application value in public safety [43] and video content understanding [55]. Current VAD approaches can be broadly classified into three categories according to the annotation type of the training data, i . e ., unsupervised, weaklysupervised and fully-supervised. Unsupervised methods [14 , 35 , 30 , 12 , 49 , 60] train solely on normal videos (one-class) or unlabeled normal/abnormal videos, while weakly supervised methods [43 , 71 , 45 , 23 , 54 , 72 , 37] train on normal/abnormal videos with video-level labels. Fully-supervised methods [29 , 19] are less studied due to the high cost of precise frame-by-frame annotations. Recently, inspired by the strong representation of multi-modal large language models (MLLMs) pretrained on massive data [46 , 7 , 16 , 59 , 26 , 74 , 28 , 69 , 62 , 9 , 4 , 51] and their impressive advancements in many downstream visual tasks [13 , 52 , 53], many efforts [41 , 17 , 57 , 61 , 56 , 65] start to integrate the multi-modal knowledge into VAD systems, which enables more precise anomaly detection.</p>
+<p>Despite significant progress, existing VAD models still face the following primary challenges:</p>
+<p>Preprint. Under review.</p>
+<p>Figure 1: Towards unbiased and explainable VAD. In contrast to prevailing VAD approaches (a) that primarily concentrate on identifying anomalies, our method (b) facilitates not only unbiased (i.e., less false alarms toward easily cofused or unseen normality) predictions of anomaly scores but also explanation of detected anomalies, through constructing a large scale VAD dataset with single-frame annotations for untrimmed videos and explanable instruction data for trimmed videos.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000000_42e06dfc5c044f9996feab15bec3e4b412f1e4f0ef47e164fbd2cb805a5f43a4.png"
+    ></figure>
+<ul>
+<li>Biased anomaly space: Due to the lack of reliable frame-level abnormal supervision, unsupervised methods fail to reconstruct or predict unseen normal data, while weakly supervised methods also struggle to select trustworthy snippets for training under the videolevel supervision. Consequently, the learned anomaly space of these methods develop a prevalent bias toward unseen or easily-confused normality, remain &ldquo;when does the anomaly happen&rdquo; still facing challenges. Although there are some fully supervised studies [29 , 19], the number of annotated videos is very small due to the inefficiency of the annotation process, resulting in a lack of scalability.</li>
+<li>Lack of explainability: Existing video anomaly detection approaches do not offer transparent explanations and reasoning for detected anomalies, i . e ., &ldquo;what is the anomaly&rdquo; , and &ldquo;why is it considered anomalous&rdquo;. This opacity restricts human comprehension and engagement with the system.</li>
+</ul>
+<p>Drawing from the above analysis, our insight is that a strong AI-powered anomaly detection system requires not only identifying deviations, but also providing insightful explanations, mirroring the deductive reasoning like the detective Sherlock Holmes. To this end, we present Holmes-VAD, an unbiased and explainable VAD framework based on MLLMs (see Fig.1).</p>
+<p>More specifically, to tackle the first issue, we propose a more label-friendly single-frame supervision (one-click for each abnormal event) [38 , 20 , 67 , 8 , 21] in the domain of video anomaly detection instead of the prohibitive frame-by-frame annotation. Following this labeling paradigm, we manually make single-frame annotations for the exsiting two largest VAD datasets, e . g., UCF-Crime [43] and XD-Violence [55]. To address the second problem of lacking explainability, we construct a large amount of anomaly-awared instruction conversation data for the finetuning of Multimodal LLM. We leverage the single-frame annotated videos and exsiting off-the-shell large foundation model to build an efficient semi-automated data engine. This data engine can be divided into three main steps: 1) Data Collection: gathering video data, primarily from open-source datasets. 2) Annotation Enhancement: generate reliable video event clips around the single-frame annotated frames and give textual descriptions to them through human effort or foundation models. 3) Instruction Construction: utilizing powerful LLM with open-world knowledge to generate explanable analysis in the context of the enhanced video annotations. Subsequently, the obtained analysis is filted manually and structured into conversational format. After on the above steps, a new benchmark containing single-frame temporal annotations and explanatory text descriptions is constructed, and we name the final obtained dataset as VAD-Intruct50k .</p>
+<p>Built upon the proposed VAD-Intruct50k, we develop a customized solution for interpretable video anomaly detection, which has three key components, i . e ., Video Encoder, Temporal Sampler and Multi-modal LLM. The Video Encoder and Multi-modal LLM are used to encode the input video and generate text response to the input text prompt, respectively. Additionally, the Temporal Sampler is used to predict the abnormal scores of video frames and sample high-responsive parts as the input for Multi-modal LLM, which is lightweight and enables effient inference. Specially, these three</p>
+<p>components can be replaced by any other Video-MLLMs or VAD-Networks. Our primary focus is on how to construct a supervised multi-modal dataset to train these components. Extensive experiments demonstrate that our Holmes-VAD achieve outstanding performance in video anomaly detection and can provide detailed explanations for the detected abnormal events.</p>
+<p>To summarize, our major contributions are as follows:</p>
+<ul>
+<li>We propose Holmes-VAD, a video anomaly detection system that is capable of identifying anomalies and providing insightful explainations across even hour-long videos.</li>
+<li>To bridge the dataset gap toward an unbiased and explanable VAD system, we introduce VAD-Intruct50k, a large-scale multimodal video anomaly detection datasets, including single-frame annotations for untrimmed videos, and a large amount of instruction conversation data for trimmed abnormal/normal video clips.</li>
+<li>Extensive quantitative and qualitative experiments demonstrate that the proposed HolmesVAD achieves superior performance and interpretability over recent state-of-the-art methods.</li>
+</ul>
+
+<h2 class="relative group">2 Related Works
+    <div id="2-related-works" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-related-works" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video Anomaly Detection. This task aims to temporally detect abnormal frames in a long untrimmed video [2 , 39 , 24 , 33 , 49 , 14]. The early VAD attempts are based on hand-crafted features [2 , 18 , 70 , 39 , 33 , 24]. Recently, deep learning approaches [14 , 60 , 37] have become dominant in Video Anomaly Detection (VAD), broadly classified into unsupervised, weakly-supervised, and fully-supervised methods. Unsupervised methods train only on normal videos to learn normal patterns and are often designed as reconstruction-based [14 , 58 , 12 , 60], prediction-based [30], or a combination [31]. Some methods [64 , 44 , 47] also explore a fully unsupervised setting, including both unlabeled normal and abnormal videos in the training set. Weakly-supervised methods [43 , 71 , 10 , 55 , 45 , 23 , 54 , 72 , 37 , 68] use both normal and abnormal videos with video-level annotations. Fully-supervised methods [29 , 19] are less common due to the high cost of precise frame-level annotations.</p>
+<p>Multi-modal Large Language Model. The universal and powerful conversational capabilities of ChatGPT [1] have inspired the entire AI community. This has prompted the emergence of the open-source Large Language Models (LMMs), such as LLaMA [46], Vicuna [7], and Mistral [16], based on autoregressive models [48], they are pretrained and instruction tuned via large amounts of text tokens, thus posses universal and powerful text generation capabilities. Recently, Multi-modal LLMs [59 , 26 , 74 , 28 , 27 , 69 , 62 , 9 , 4 , 51] empower LLMs with visual understanding capabilities. Additionally, MLLMs for videos (e.g., VideoChat [22], Video-LLaMA [66], and Video-LLaVA [25]) pave the way for multi-modal temporal understanding.</p>
+<p>Multi-modal Video Anomaly Detection. Large-scale visual-language pretrained models such as CLIP [42] serve as a bridge between visual and textual modalities. Some recent works [41 , 17 , 57 , 61] in the realm of video anomaly detection have leveraged textual information as prompts to enhance the model&rsquo;s anomaly representation. Based on this, [56] firstly proposed the open vocabulary VAD task. Furthermore, [65] extracted captions from video frames using a caption model and designed prompts for LLMs to provide anomaly scores. However, these approaches primarily focus on generating anomaly scores and lack fine-tuning on large-scale domain-specific instruction datasets, resulting in their performance being highly dependent on the base LLMs.</p>
+
+<h2 class="relative group">3 VAD-Instruct50k Benchmark
+    <div id="3-vad-instruct50k-benchmark" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-vad-instruct50k-benchmark" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this section, we will illustrate the process of VAD-Instruct50k dataset generation. Firstly, the data collection process of VAD-Instruct50k will be presented. Subsequently, we will elaborate on how to enhance the annotations of the collected videos. Finally, the generation process of the instruction conversation data will be introduced. The overall pipeline of the data engine is shown in Fig. 2 .</p>
+
+<h2 class="relative group">3.1 Data Collection
+    <div id="31-data-collection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#31-data-collection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We first collect videos from the training sets of the two largest weakly-supervised VAD datasets, UCF-Crime [43] and XD-Violence [55], because their video quantity far exceeds that of other existing datasets [50 , 32 , 34], and their video-level annotations provide a solid foundation for further data</p>
+<p>Figure 2: Data engine for the proposed VAD-Instruct50k. We collect numerous abnormal/normal videos from exsiting datasets, following by a series of annotation enhancement including temporal single-frame annotation, event clips generation and event clips captioning. Then we construct the instruction data by prompting the powerful LLM with the enhanced annotation. Throughout the pipeline, manual work and large fundation models coordinated with each other to ensure efficiency and quality in construction.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000001_d07d3e7dd80583a460815245e735adb2b5c2585a605ef3de35139df6aea68136.png"
+    ></figure>
+<p>processing. After filtering out some low-quality videos via human inspection, we collected a total of 5547 untrimmed videos, include 810/800 abnormal/normal videos from UCF-Crime and 1905/2032 abnormal/normal videos from XD-Violence.</p>
+
+<h2 class="relative group">3.2 Annotation Enhancement
+    <div id="32-annotation-enhancement" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#32-annotation-enhancement" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The collected videos from UCF-Crime [43] and XD-Violence [55] only offers video-level anomaly labels, which denotes whether the video includes anomalies. Going beyond these coarse annotations, we purify these annotations to enable more discriminative anomaly detection model training.</p>
+<p>Temporal single-frame annotation. We adopt an efficient temporal annotation method involving sparse single-frame annotation for the collected abnormal videos, inspired by [40 , 38 , 67 , 20 , 21 , 68] that use this approach to balance model performance and annotation cost. Specifically, we annotate only one frame for each abnormal event in the video 1 . Through this process, we collect an average of 2.35 single-frame annotations per video.</p>
+<p>Event clip generation. Based on the single-frame annotation, we design a reliable pseudo frame-level label generation method and leverage it to train a VAD network ϕ s 2 . For each abnormal video with single-frame annotations G = {gi} N g and its anomaly score estimated by the trained VAD network, we generate multiple anomaly event proposals around the annotated frame. Formally, each proposal is represented via a starting and ending timestamp, i.e. , s and e. For each normal video, we randomly extract several normal event proposals. After this process, we collect all trimmed event clips with anomaly labels: E = {si, ei, yi} N e , where yiis set to the anomaly class of the video (e . g ., Explosion) if the event clip is from an abnormal video, otherwise, it is set to Normal .</p>
+<p>Event clip captioning. To fully extract semantic information from the event clips, we utilize a video-based multimodal large language model (MLLM) [25] to generate detailed captions for each event clip. We also include the SurveillanceVision dataset [63], which provides manually annotated detailed fine-grained event descriptions for video clips from UCF-Crime [43]. After combining these resources, we obtain all event clips with corresponding captions c and anomaly labels: E = {si, ei, yi, ci} N e i .</p>
+<p>1 More details about the annotation process are illustrated in Sec. A.2 of the Appendix.</p>
+<p>2 See Sec. A.3 of the Appendix for more details about the network.</p>
+<p>Figure 3: Overview of Holmes-VAD . Holmes-VAD takes untrimmed video and user prompt as inputs, and takes the anomaly scores and explanation for detected anomalies outputs. The Temporal Sampler takes class tokens of frames as input and estimates the anomaly scores, and the dense visual tokens are resampled accroding to their anomaly scores before entering the projector.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000002_ef6cfaafef4ad39edeb13717b73c3ef105a95481515b17093bb55c610408d807.png"
+    ></figure>
+
+<h2 class="relative group">3.3 Instruction-tuning Data Construction
+    <div id="33-instruction-tuning-data-construction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#33-instruction-tuning-data-construction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The process of annotation enhancement effectively fills the gap of insufficient information in the original video-level annotation. However, there is still a lack of anomaly-awared explanation for these event clips, i . e ., what is the anomaly and why. To address this issue, we utilize the powerful LLM with sufficient open-world knowledge for further instruction dataset construction. Technically, for each event clip in E, we design a task prompts Pt combined with the referenceable anomaly context, i . e ., the abnormal label yi and the detail caption ci. Then we input the combined prompt into the LLM M to make a judgment on anomalies in the video clip and providing an explanation. The generated response is paired with a corresponding anomaly-awared quesion Pd, result in an instruction item:</p>
+<!-- formula-not-decoded -->
+<p>We use Llama3-Instruct-70B [3] as M here because of its open-source availability and comparable performance to GPT4. We design multiple Pd to ensure the diversity of the instruction data, a typical prompts of Pd is: &ldquo;&lt;video&gt;\n Are there any unexpected or unusual events in the video clip?&rdquo;.</p>
+
+<h2 class="relative group">4 Holmes-VAD
+    <div id="4-holmes-vad" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-holmes-vad" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Utilizing the proposed VAD-Intruct50k dataset for training, we develop a customised solution for interpretable video anomaly detection, namely Holmes-VAD, which has three key components, Video Encoder, Temporal Sampler and Multi-modal LLM with tunable LoRA [15] modules (see Fig. 3).</p>
+
+<h2 class="relative group">4.1 Model Architecture
+    <div id="41-model-architecture" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#41-model-architecture" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Visual Encoder. We utilize the frozen video encoder in LanguageBind [73] following [25]. It inherits the ViT-L/14 structure from CLIP [42], we refer to it as ϕ v . Different from the orginal ViT, it models the temporal relationship between frames through additional self-attention layer in the temporal dimension. Give a video frame sequence V ∈ R N×H×W×C , the output features of each frame can be denotes as follow:</p>
+<!-- formula-not-decoded -->
+<p>where f
+i cls f
+i indicates the class token feature of i-th video frame, f
+i j f
+i (j ∈ {1 , 2, &hellip;, Np Np }) denotes the visual embedding of each patch, and Np Np reperesents the number of patches of each frame.</p>
+<p>Temporal Sampler. Due to the excessive computational burden caused by numerous visual tokens in video, past video-based MLLM approaches [22 , 66 , 25] have resorted to uniform temporal frame sampling of videos, e . g., 8 frames. This method is clearly unsuitable for long videos in video anomaly detection task, as it increases the probability of ignoring key information. [65] conduct dense anomaly detection via MLLM in a frame-by-frame mode, which also inevitably leads to a large amount of redundant computation. To address this issue, we first input the dense video frames into the visual encoder, then we introduce the trained VAD network in 3.2 here, which receives the cls token of the video frames f cls 1 , f
+2 cls f
+2 , &hellip;, f
+N cls f
+N and outputs anomaly scores s1, s2, &hellip;, sN :</p>
+<!-- formula-not-decoded -->
+<p>where ϕ s denotes the trained VAD network.</p>
+<p>Then, we sample the video tokens according to the anomaly scores. Specifically, only the tokens fk from frames with corresponding anomaly score sk above a set threshold θ are then fed into the subsequent network:</p>
+<!-- formula-not-decoded -->
+<p>where F s denotes the sampled sparse visual tokens from the original dense visual tokens F d . In this way, the model can generate anomaly-awared response to long untrimmed video.</p>
+<p>Projector and LLM. To enable the LLM to understand the features output by the visual encoder, a projector ϕproj composed of two layers of MLPs is designed between them, after this, the feature dimention is aligned with the input dimension of LLM. We utilize Vicuna [7] as our LLM following [25].</p>
+<!-- formula-not-decoded -->
+<p>where T0 T0:i represents the input text tokens to LLM and Ti+1 indicates the predicted next token. ϕproj and ϕT represents the Projector and the Text Encoder, respectively. [· , · ] denotes concatenation.</p>
+
+<h2 class="relative group">4.2 Training
+    <div id="42-training" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#42-training" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Training of the Temporal Sampler. In this stage, we only train the Temporal Sampler under the single-frame supervision. In essence, we employed a pseudo-labeling supervision strategy. The pseudo-labels are initialized through single-frame annotations during the training process and are online updated around the annotated frames 3 . We use the generated pseudo label to supervise the predicted anomaly score, which can effectively reduce the bias of the temporal sampler towards easily confued normality.</p>
+<p>Instruction Tuning. During this stage, we take the trimmed event clips as input and do not perform Temporal Sampler because each clip has been labeled as abnormal or normal. In this stage, we train the projector and use LoRA [15] to fine-tune the Multi-modal LLM. We conduct different tuning strategy and compare them in the next section. Given the projected visual features Fv Fv and the textual input embedding Ft, the LLM decode them into a sequence words A. we follow mainstream works to use the original auto-regressive training objective. The objective aims to maximize the likelihood of generating the ground truth answer sequence given the input features, encouraging the model to produce coherent and accurate responses based on the input features.</p>
+
+<h2 class="relative group">5 Experiments
+    <div id="5-experiments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-experiments" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this section, we conduct extensive experiments to thoroughly demonstrate the capabilities of our proposed model, i.e. , Holmes-VAD .</p>
+
+<h2 class="relative group">5.1 Experiment Setup
+    <div id="51-experiment-setup" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#51-experiment-setup" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Datasets. We conduct the comparative experiments on two standard VAD datasets, namely, UCFCrime [43] and XD-Violence [55]. (1) UCF-Crime [43] comprises 1900 untrimmed videos totaling 128 hours from outdoor and indoor surveillance cameras. It encompasses 13 classes of real-world anomalies, including Abuse , Explosion , Fighting, and Shooting. In the weakly-supervised setting,</p>
+<p>3 More details about the generation of pseudo labels can be found in the Appendix.</p>
+<p>Table 1: Comparision with state-of-the-art Video Anomaly Detection approches. We include semisupervised (Semi.) methods, unsupervised (Un.) methods, weakly-supervised (W.) methods and some other methods. &ldquo;∗&rdquo; represents the result reported in [65].</p>
+<table>
+  <thead>
+      <tr>
+          <th>Methods</th>
+          <th>Backbone</th>
+          <th>Supervision</th>
+          <th>Explanation</th>
+          <th>XD-Violence</th>
+          <th>UCF-Crime</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td></td>
+          <td>p</td>
+          <td>p</td>
+          <td>AP/%</td>
+          <td>AUC/%</td>
+      </tr>
+      <tr>
+          <td>Non-explainable VAD</td>
+          <td>Non-explainable VAD</td>
+          <td>Non-explainable VAD</td>
+          <td>Non-explainable VAD</td>
+          <td>Non-explainable VAD</td>
+          <td>Non-explainable VAD</td>
+      </tr>
+      <tr>
+          <td>Conv-AE [14]</td>
+          <td>-</td>
+          <td>Semi.</td>
+          <td>✗</td>
+          <td>27.25</td>
+          <td>50.60</td>
+      </tr>
+      <tr>
+          <td>GODS [49]</td>
+          <td>I3D</td>
+          <td>Semi.</td>
+          <td>✗</td>
+          <td>N/A</td>
+          <td>70.46</td>
+      </tr>
+      <tr>
+          <td>GCL [64]</td>
+          <td>ResNext</td>
+          <td>Un.</td>
+          <td>✗</td>
+          <td>N/A</td>
+          <td>71.04</td>
+      </tr>
+      <tr>
+          <td>DYANNET [44]</td>
+          <td>I3D</td>
+          <td>Un.</td>
+          <td>✗</td>
+          <td>N/A</td>
+          <td>84.50</td>
+      </tr>
+      <tr>
+          <td>MIST [10]</td>
+          <td>I3D</td>
+          <td>W.</td>
+          <td>✗</td>
+          <td>N/A</td>
+          <td>82.30</td>
+      </tr>
+      <tr>
+          <td>Wu et al. [55]</td>
+          <td>I3D</td>
+          <td>W</td>
+          <td>✗</td>
+          <td>78.64</td>
+          <td>82.44</td>
+      </tr>
+      <tr>
+          <td>RTFM [45]</td>
+          <td>I3D</td>
+          <td>W</td>
+          <td>✗</td>
+          <td>77.81</td>
+          <td>84.30</td>
+      </tr>
+      <tr>
+          <td>MSL [23]</td>
+          <td>I3D</td>
+          <td>W</td>
+          <td>✗</td>
+          <td>78.28</td>
+          <td>85.30</td>
+      </tr>
+      <tr>
+          <td>S3R [54]</td>
+          <td>I3D</td>
+          <td>W.</td>
+          <td>✗</td>
+          <td>80.26</td>
+          <td>85.99</td>
+      </tr>
+      <tr>
+          <td>MGFN [6]</td>
+          <td>I3D</td>
+          <td>W.</td>
+          <td>✗</td>
+          <td>79.19</td>
+          <td>86.98</td>
+      </tr>
+      <tr>
+          <td>UR-DMU [72]</td>
+          <td>I3D</td>
+          <td>W.</td>
+          <td>✗</td>
+          <td>81.66</td>
+          <td>86.97</td>
+      </tr>
+      <tr>
+          <td>CLIP-TSA [17]</td>
+          <td>ViT</td>
+          <td>W.</td>
+          <td>✗</td>
+          <td>82.19</td>
+          <td>87.58</td>
+      </tr>
+      <tr>
+          <td>VadCLIP [57]</td>
+          <td>ViT</td>
+          <td>W.</td>
+          <td>✗</td>
+          <td>84.51</td>
+          <td>88.02</td>
+      </tr>
+      <tr>
+          <td>Yang et al. [61]</td>
+          <td>ViT</td>
+          <td>W.</td>
+          <td>✗</td>
+          <td>83.68</td>
+          <td>87.79</td>
+      </tr>
+      <tr>
+          <td>Wu et al. [56]</td>
+          <td>ViT</td>
+          <td>Open-Vocabulary</td>
+          <td>✗</td>
+          <td>66.53</td>
+          <td>86.40</td>
+      </tr>
+      <tr>
+          <td>Explainable Multi-modal VAD</td>
+          <td>Explainable Multi-modal VAD</td>
+          <td>Explainable Multi-modal VAD</td>
+          <td>Explainable Multi-modal VAD</td>
+          <td>Explainable Multi-modal VAD</td>
+          <td>Explainable Multi-modal VAD</td>
+      </tr>
+      <tr>
+          <td>ZS CLIP [42] ∗</td>
+          <td>ViT</td>
+          <td>Training-Free</td>
+          <td>✓</td>
+          <td>17.83</td>
+          <td>53.16</td>
+      </tr>
+      <tr>
+          <td>ZS IMAGEBIND [11] ∗</td>
+          <td>ViT</td>
+          <td>g Training-Free</td>
+          <td>✓</td>
+          <td>25.36</td>
+          <td>55.78</td>
+      </tr>
+      <tr>
+          <td>LLAVA-1.5 [27] ∗</td>
+          <td>ViT</td>
+          <td>g Training-Free</td>
+          <td>✓</td>
+          <td>50.26</td>
+          <td>72.84</td>
+      </tr>
+      <tr>
+          <td>LAVAD [65]</td>
+          <td>ViT</td>
+          <td>g Training-Free</td>
+          <td>✓</td>
+          <td>62.01</td>
+          <td>80.28</td>
+      </tr>
+      <tr>
+          <td>Holmes-VAD (Ours)</td>
+          <td>ViT</td>
+          <td>Instruction-Tuned</td>
+          <td>✓</td>
+          <td>90.67</td>
+          <td>89.51</td>
+      </tr>
+  </tbody>
+</table>
+<p>there are 1610/290 videos for training/testing, with the training set consisting of 810 abnormal videos and 800 normal videos, respectively. (2) XD-Violence [55] is the largest VAD benchmark, comprising 4754 videos totaling 217 hours sourced from surveillance, movies, car cameras, and games. It encompasses 6 anomaly classes: Abuse , Car Accidents , Explosions , Fighting , Riots, and Shooting. The training/testing video count stands at 3954/800, adhering to a weakly-supervised framework. The training set comprises 1905 abnormal videos and 2049 normal videos, respectively.</p>
+<p>Metrics. To evaluate the anomaly detection performance of the temporal sampler, we use the Area Under the Curve (AUC) as the main evaluation metric for UCF-Crime following [45 , 54 , 23 , 72 , 68]. Meanwhile, the AUC of the frame-level precision-recall curve (AP) is utilized for XD-Violence. To evaluate the quality of explanation response, we randomly extract 86 abnormal/normal video segments from the test videos of UCF-Crime and XD-Violence, and then invite 10 users to vote on the responses of different models from 3 aspects include Judgement Accuracy (JA), Content Perception (CP) and Anomaly Explanatory (AE). Please see the Appendix for more details about the metrics.</p>
+<p>Implementation details. In our study, we take the ViT in LanguageBind model [73] as the Video Encoder and initialize the Multi-modal LLM with Video-LLaVA [25]. UR-DMU [72] serves as the foundation structure for our Temporal Sampler. To optimize the Temporal Sampler, we ramdomly sample one frame at 16-frame intervals, and Adam optimizer with a learning rate of 1e-4 is adopted. Note that when evaluating performance on XD-Violence and UCF-Crime, only videos in the corresponding training sets are used to train our model for fair comparisons. For instruction tuning, we train with a batch size of 128 for 1 epoch, using the AdamW optimizer with cosine learning rate decay and a warm-up period, setting the projector&rsquo;s learning rate to 2e-5. The LoRA [15] parameters are set as: r=64, α=128, and learning rate=2e-4. The abnormal threshold θ is set to 0.8 during inference. Experiments are conducted on 2 NVIDIA A100 GPUs.</p>
+
+<h2 class="relative group">5.2 Main Results
+    <div id="52-main-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#52-main-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We compare our method with state-of-the-art methods, including semi-supervised methods [14 , 49], unsupervised methods [64 , 44], weakly-supervised methods [45 , 23 , 54 , 72 , 17 , 57] and recently training-free method [65]. We have indicated their backbones, supervision methods, and performance on the UCF-Crime and XD-Violence datasets, as shown in Table 1. Our method has an AP of 90.67% on XD-Violence and an AUC of 89.51% on UCF-Crime, significantly outperforming the</p>
+<p>prior state-of-the-art methods, which demonstrates that our method can generate less biased anomaly scores. It is worth noting that while achieving precise localization of anomalies, Holmes-VAD is also capable of providing explanations and analysis for the detected anomalies by the model, a feature unavailable in existing non-explainable VAD methods. Although LAVAD [65] has explainability, the training-free large language model lacks an understanding of anomaly knowledge due to the limitation of insufficient supervised data.</p>
+
+<h2 class="relative group">5.3 Analytic Results
+    <div id="53-analytic-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#53-analytic-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Table 2: Human evaluation on models under different training settings.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Training Strategy</th>
+          <th>Average Words of Model Reponse</th>
+          <th>JA(%)</th>
+          <th>CP(%)</th>
+          <th>AE(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Training-free</td>
+          <td>38.29</td>
+          <td>65.1</td>
+          <td>11.6</td>
+          <td>15.9</td>
+      </tr>
+      <tr>
+          <td>Projector</td>
+          <td>40.84</td>
+          <td>81.4</td>
+          <td>27.2</td>
+          <td>32.2</td>
+      </tr>
+      <tr>
+          <td>Projector+LoRA (Default)</td>
+          <td>46.13</td>
+          <td>86</td>
+          <td>61.2</td>
+          <td>51.9</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table 3: Ablation study of backbone and supervision in Temporal Sampler. Table 4: Effect of random temporal shifting of single-frame annotations.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Backbone</th>
+          <th>Single-frame</th>
+          <th>XD-AP(%)</th>
+          <th>UCF-AUC(%)</th>
+          <th>Shifted Timestamp</th>
+          <th>XD-AP(%)</th>
+          <th>UCF-AUC(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>I3D [5]</td>
+          <td>✗</td>
+          <td>82.4</td>
+          <td>86.54</td>
+          <td>0</td>
+          <td>90.67</td>
+          <td>89.51</td>
+      </tr>
+      <tr>
+          <td>ViT [73]</td>
+          <td>✗</td>
+          <td>84.96</td>
+          <td>84.61</td>
+          <td>10</td>
+          <td>90.55</td>
+          <td>89.45</td>
+      </tr>
+      <tr>
+          <td>I3D [5]</td>
+          <td>✓</td>
+          <td>89.4</td>
+          <td>90.8</td>
+          <td>50</td>
+          <td>90.45</td>
+          <td>89.32</td>
+      </tr>
+      <tr>
+          <td>ViT [73]</td>
+          <td>✓</td>
+          <td>90.67</td>
+          <td>89.51</td>
+          <td>100</td>
+          <td>90.12</td>
+          <td>88.95</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table 5: Temporal Sampler v.s. Uniform Sampler. We averaged the inference time of all test videos.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Sampling Strategy</th>
+          <th>XD-AP(%)</th>
+          <th>UCF-AUC(%)</th>
+          <th>Avg. Infer Speed (second per video)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Uniform Sampler</td>
+          <td>67.25</td>
+          <td>78.38</td>
+          <td>32.82</td>
+      </tr>
+      <tr>
+          <td>Temporal Sampler (Default)</td>
+          <td>90.67</td>
+          <td>89.52</td>
+          <td>4.24</td>
+      </tr>
+  </tbody>
+</table>
+<p>Influence of varied training strategies on anomaly explanation. We conduct a user study to evaluate three different training strategies over 86 test samples and 10 volunteers: a) Trainingfree: no fine-tuning; b) Projector: fine-tuning on VAD-Instruct50k, only training the projector while keeping the Multi-modal LLM fixed; c) Projector+LoRA: fine-tuning on VAD-Instruct50k, training the projector and using LoRA [15] to fine-tune the Multi-modal LLM. As shown in Table 2 , Projector+LoRA provide the most detailed response (46.13 words in average) and reaches the highest Judgement Accuracy (86.0%). Addtionally, it also achieves the highest voting rate, including 61.2% on Content Perception and 51.9% on Anomaly Explanatory, these demonstrate better interpretability by fine-tuning Multi-modal LLM on VAD-Instruct50k.</p>
+<p>Backbone and supervision matters in Temporal Sampler. In Table 3, we ablate the impact of video backbone and the supervision for Temporal Sampler. We use UR-DMU [72] as our baseline method. The results indicate that on XD-Violence dataset, LanguageBind [73] as a backbone outperforms I3D [5] significantly, whereas the opposite is observed on UCF-Crime. Additionally, single-frame supervision significantly enhances performance regardless of the backbone used, demonstrating the effectiveness of point supervision in improving anomaly localization capabilities.</p>
+<p>Influence of perturbed single-frame annotations. To assess the robustness of our method to the perturbed temporal position of single-frame annotation, we introduce varied temporal timestamp shifts to the original positions of the annotated frames. As shown in Table 4, there is no significant performance degradation of our model under perturbed annotation positions, indicating that our method possesses a notable tolerance towards variations in degraded supervision.</p>
+<p>Temporal Sampler v.s. Uniform Sampler. We replace the Temporal Sampler with Uniform Sampler while maintaining the frame rate. The video is then divided into non-overlapping clips, which are sequentially fed into the Multimodal LLM to output results. If the output is &ldquo;Yes&rdquo; the anomaly scores of all frames in the input segment are set to 1, otherwise, they are set to 0. Finally, we compare the</p>
+<p>Figure 4: Qualitative results. We compare our interpretability results with Video-LLaVA [36] (without instruction tuning). Correct and wrong explanations are in green and red, respectively.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000003_1fdc994f9be7c4ceac961b37547c6cc9976d8e68dc24d093592b266d72328229.png"
+    ></figure>
+<p>detection performance and inference efficiency in Table 5. The results demonstrate that the Temporal Sampler ensures higher inference efficiency while maintaining accurate detection results.</p>
+<p>Qualitative comparision. To provide a more intuitive understanding of the capabilities of MLLM in explaining complex anomalies, we provide qualitative comparisons between Holmes-VAD and Video-LLaVA in Fig. 4. The results demonstrate that Holmes-VAD can accurately identify anomalies in videos and provide specific explanations for conflicts in sports competitions, explosions, and accidents captured by car cameras (Abnormal Cases). Even for normal videos, Holmes-VAD exhibits robust analytical abilities, correcting erroneous responses from the Temporal Sampler (Normal Cases). These findings highlight the effectiveness and advantage of Holmes-VAD in perceiving video events and analyzing anomalies.</p>
+
+<h2 class="relative group">6 Conclusion
+    <div id="6-conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this paper, we introduce a video anomaly detection system called Holmes-VAD to address the biases and lack of interpretability in existing anomaly detection methods. By introducing a more efficient labeling paradigm and constructing a large-scale multimodal video anomaly detection dataset, VAD-Instruct50k, we validated the generality and interpretability of Holmes-VAD. Through extensive experiments, we positioned Holmes-VAD as a valuable tool for real-world applications.</p>
+<p>Limitation and Future work. Despite the human effort for filtering the noise instruction data during constructing the VAD-Instruct50k dataset, the reliance on off-the-shelf video captioning models for generating video description may not always capture the nuances and context-specific information. This is a trade-off we have made between labeling costs and efficiency, we believe that the quality of data is no less important than the quantity of data, and we plan to further enhance data quality and quantity within acceptable labor costs in the future. Furthermore, although we control the length of the video input to the Multi-modal LLM through Temporal Sampler and accurately analyze abnormal content in the trimmed video clips, there is still a lack of an effective solution for Multimodal LLM to understand long-term video anomalies without compromising its image-level perceptual capabilities. We leave these for our future exploration.</p>
+<p>Acknowledgement This work is supported by the National Natural Science Foundation of China under grant U22B2053 and 623B2039.</p>
+
+<h2 class="relative group">References
+    <div id="references" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#references" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>
+<p>[1] Josh Achiam, Steven Adler, Sandhini Agarwal, Lama Ahmad, Ilge Akkaya, Florencia Leoni Aleman, Diogo Almeida, Janko Altenschmidt, Sam Altman, Shyamal Anadkat, et al. Gpt-4 technical report. arXiv preprint arXiv:2303.08774, 2023.</p>
+</li>
+<li>
+<p>[2] Amit Adam, Ehud Rivlin, Ilan Shimshoni, and Daviv Reinitz. Robust real-time unusual event detection using multiple fixed-location monitors. IEEE transactions on pattern analysis and machine intelligence , 30(3):555–560, 2008.</p>
+</li>
+<li>
+<p>[3] AI@Meta. Llama 3 model card. 2024. URL <a
+  href="https://github.com/meta-llama/llama3/blob/"
+    target="_blank"
+  >https://github.com/meta-llama/llama3/blob/</a> main/MODEL_CARD.md .</p>
+</li>
+<li>
+<p>[4] Jinze Bai, Shuai Bai, Shusheng Yang, Shijie Wang, Sinan Tan, Peng Wang, Junyang Lin, Chang Zhou, and Jingren Zhou. Qwen-vl: A versatile vision-language model for understanding, localization, text reading, and beyond. 2023.</p>
+</li>
+<li>
+<p>[5] Joao Carreira and Andrew Zisserman. Quo vadis, action recognition? a new model and the kinetics dataset. In CVPR, pages 6299–6308, 2017.</p>
+</li>
+<li>
+<p>[6] Yingxian Chen, Zhengzhe Liu, Baoheng Zhang, Wilton Fok, Xiaojuan Qi, and Yik-Chung Wu. Mgfn: Magnitude-contrastive glance-and-focus network for weakly-supervised video anomaly detection. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 37, pages 387–395, 2023.</p>
+</li>
+<li>
+<p>[7] Wei-Lin Chiang, Zhuohan Li, Zi Lin, Ying Sheng, Zhanghao Wu, Hao Zhang, Lianmin Zheng, Siyuan Zhuang, Yonghao Zhuang, Joseph E Gonzalez, et al. Vicuna: An open-source chatbot impressing gpt-4 with 90%* chatgpt quality. See https://vicuna. lmsys. org (accessed 14 April 2023), 2(3):6, 2023.</p>
+</li>
+<li>
+<p>[8] Ran Cui, Tianwen Qian, Pai Peng, Elena Daskalaki, Jingjing Chen, Xiaowei Guo, Huyang Sun, and Yu-Gang Jiang. Video moment retrieval from text queries via single frame annotation. In Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval , pages 1033–1043, 2022.</p>
+</li>
+<li>
+<p>[9] Wenliang Dai, Junnan Li, Dongxu Li, Anthony Meng Huat Tiong, Junqi Zhao, Weisheng Wang, Boyang Li, Pascale N Fung, and Steven Hoi. Instructblip: Towards general-purpose vision-language models with instruction tuning. Advances in Neural Information Processing Systems, 36, 2024.</p>
+</li>
+<li>
+<p>[10] Jia-Chang Feng, Fa-Ting Hong, and Wei-Shi Zheng. Mist: Multiple instance self-training framework for video anomaly detection. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 14009–14018, 2021.</p>
+</li>
+<li>
+<p>[11] Rohit Girdhar, Alaaeldin El-Nouby, Zhuang Liu, Mannat Singh, Kalyan Vasudev Alwala, Armand Joulin, and Ishan Misra. Imagebind: One embedding space to bind them all. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 15180–15190, 2023.</p>
+</li>
+<li>
+<p>[12] Dong Gong, Lingqiao Liu, Vuong Le, Budhaditya Saha, Moussa Reda Mansour, Svetha Venkatesh, and Anton van den Hengel. Memorizing normality to detect anomaly: Memory-augmented deep autoencoder for unsupervised anomaly detection. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 1705–1714, 2019.</p>
+</li>
+<li>
+<p>[13] Zhaopeng Gu, Bingke Zhu, Guibo Zhu, Yingying Chen, Ming Tang, and Jinqiao Wang. Anomalygpt: Detecting industrial anomalies using large vision-language models. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 38, pages 1932–1940, 2024.</p>
+</li>
+<li>
+<p>[14] Mahmudul Hasan, Jonghyun Choi, Jan Neumann, Amit K Roy-Chowdhury, and Larry S Davis. Learning temporal regularity in video sequences. In Proceedings of the IEEE conference on computer vision and pattern recognition, pages 733–742, 2016.</p>
+</li>
+<li>
+<p>[15] Edward J Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean Wang, Lu Wang, and Weizhu Chen. Lora: Low-rank adaptation of large language models. arXiv preprint arXiv:2106.09685 , 2021.</p>
+</li>
+<li>
+<p>[16] Albert Q Jiang, Alexandre Sablayrolles, Arthur Mensch, Chris Bamford, Devendra Singh Chaplot, Diego de las Casas, Florian Bressand, Gianna Lengyel, Guillaume Lample, Lucile Saulnier, et al. Mistral 7b. arXiv preprint arXiv:2310.06825, 2023.</p>
+</li>
+<li>
+<p>[17] Hyekang Kevin Joo, Khoa Vo, Kashu Yamazaki, and Ngan Le. Clip-tsa: Clip-assisted temporal selfattention for weakly-supervised video anomaly detection. In 2023 IEEE International Conference on Image Processing (ICIP), pages 3230–3234. IEEE, 2023.</p>
+</li>
+<li>
+<p>[18] Jaechul Kim and Kristen Grauman. Observe locally, infer globally: a space-time mrf for detecting abnormal activities with incremental updates. In 2009 IEEE conference on computer vision and pattern recognition , pages 2921–2928. IEEE, 2009.</p>
+</li>
+<li>
+<p>[19] Federico Landi, Cees GM Snoek, and Rita Cucchiara. Anomaly locality in video surveillance. arXiv preprint arXiv:1901.10364, 2019.</p>
+</li>
+<li>
+<p>[20] Pilhyeon Lee and Hyeran Byun. Learning action completeness from points for weakly-supervised temporal action localization. In ICCV, pages 13648–13657, 2021.</p>
+</li>
+<li>
+<p>[21] Hanjun Li, Xiujun Shu, Sunan He, Ruizhi Qiao, Wei Wen, Taian Guo, Bei Gan, and Xing Sun. D3g: Exploring gaussian prior for temporal sentence grounding with glance annotation. arXiv preprint arXiv:2308.04197, 2023.</p>
+</li>
+<li>
+<p>[22] KunChang Li, Yinan He, Yi Wang, Yizhuo Li, Wenhai Wang, Ping Luo, Yali Wang, Limin Wang, and Yu Qiao. Videochat: Chat-centric video understanding. arXiv preprint arXiv:2305.06355, 2023.</p>
+</li>
+<li>
+<p>[23] Shuo Li, Fang Liu, and Licheng Jiao. Self-training multi-sequence learning with transformer for weakly supervised video anomaly detection. In Proceedings of the AAAI Conference on Artificial Intelligence , volume 36, pages 1395–1403, 2022.</p>
+</li>
+<li>
+<p>[24] Weixin Li, Vijay Mahadevan, and Nuno Vasconcelos. Anomaly detection and localization in crowded scenes. IEEE transactions on pattern analysis and machine intelligence, 36(1):18–32, 2013.</p>
+</li>
+<li>
+<p>[25] Bin Lin, Bin Zhu, Yang Ye, Munan Ning, Peng Jin, and Li Yuan. Video-llava: Learning united visual representation by alignment before projection. arXiv preprint arXiv:2311.10122, 2023.</p>
+</li>
+<li>
+<p>[26] Kevin Lin, Faisal Ahmed, Linjie Li, Chung-Ching Lin, Ehsan Azarnasab, Zhengyuan Yang, Jianfeng Wang, Lin Liang, Zicheng Liu, Yumao Lu, et al. Mm-vid: Advancing video understanding with gpt-4v (ision). arXiv preprint arXiv:2310.19773, 2023.</p>
+</li>
+<li>
+<p>[27] Haotian Liu, Chunyuan Li, Yuheng Li, and Yong Jae Lee. Improved baselines with visual instruction tuning. arXiv preprint arXiv:2310.03744, 2023.</p>
+</li>
+<li>
+<p>[28] Haotian Liu, Chunyuan Li, Qingyang Wu, and Yong Jae Lee. Visual instruction tuning. Advances in neural information processing systems, 36, 2024.</p>
+</li>
+<li>
+<p>[29] Kun Liu and Huadong Ma. Exploring background-bias for anomaly detection in surveillance videos. In Proceedings of the 27th ACM International Conference on Multimedia, pages 1490–1499, 2019.</p>
+</li>
+<li>
+<p>[30] Wen Liu, Weixin Luo, Dongze Lian, and Shenghua Gao. Future frame prediction for anomaly detection–a new baseline. In Proceedings of the IEEE conference on computer vision and pattern recognition, pages 6536–6545, 2018.</p>
+</li>
+<li>
+<p>[31] Zhian Liu, Yongwei Nie, Chengjiang Long, Qing Zhang, and Guiqing Li. A hybrid video anomaly detection framework via memory-augmented flow reconstruction and flow-guided frame prediction. In Proceedings of the IEEE/CVF international conference on computer vision, pages 13588–13597, 2021.</p>
+</li>
+<li>
+<p>[32] Cewu Lu, Jianping Shi, and Jiaya Jia. Abnormal event detection at 150 fps in matlab. In Proceedings of the IEEE international conference on computer vision, pages 2720–2727, 2013.</p>
+</li>
+<li>
+<p>[33] Cewu Lu, Jianping Shi, and Jiaya Jia. Abnormal event detection at 150 fps in matlab. In Proceedings of the IEEE international conference on computer vision, pages 2720–2727, 2013.</p>
+</li>
+<li>
+<p>[34] Weixin Luo, Wen Liu, and Shenghua Gao. A revisit of sparse coding based anomaly detection in stacked rnn framework. In Proceedings of the IEEE international conference on computer vision, pages 341–349, 2017.</p>
+</li>
+<li>
+<p>[35] Weixin Luo, Wen Liu, and Shenghua Gao. A revisit of sparse coding based anomaly detection in stacked rnn framework. In Proceedings of the IEEE international conference on computer vision, pages 341–349, 2017.</p>
+</li>
+<li>
+<p>[36] Hui Lv and Qianru Sun. Video anomaly detection and explanation via large language models. arXiv preprint arXiv:2401.05702, 2024.</p>
+</li>
+<li>
+<p>[37] Hui Lv, Zhongqi Yue, Qianru Sun, Bin Luo, Zhen Cui, and Hanwang Zhang. Unbiased multiple instance learning for weakly supervised video anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 8022–8031, 2023.</p>
+</li>
+<li>
+<p>[38] Fan Ma, Linchao Zhu, Yi Yang, Shengxin Zha, Gourab Kundu, Matt Feiszli, and Zheng Shou. Sf-net: Single-frame supervision for temporal action localization. In ECCV, pages 420–437. Springer, 2020.</p>
+</li>
+<li>
+<p>[39] Ramin Mehran, Alexis Oyama, and Mubarak Shah. Abnormal crowd behavior detection using social force model. In 2009 IEEE conference on computer vision and pattern recognition, pages 935–942. IEEE, 2009.</p>
+</li>
+<li>
+<p>[40] Pascal Mettes, Jan C Van Gemert, and Cees GM Snoek. Spot on: Action localization from pointlysupervised proposals. In Computer Vision–ECCV 2016: 14th European Conference, Amsterdam, The Netherlands, October 11-14, 2016, Proceedings, Part V 14, pages 437–453. Springer, 2016.</p>
+</li>
+<li>
+<p>[41] Yujiang Pu, Xiaoyu Wu, and Shengjin Wang. Learning prompt-enhanced context features for weaklysupervised video anomaly detection. arXiv preprint arXiv:2306.14451, 2023.</p>
+</li>
+<li>
+<p>[42] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, et al. Learning transferable visual models from natural language supervision. In International conference on machine learning, pages 8748–8763. PMLR, 2021.</p>
+</li>
+<li>
+<p>[43] Waqas Sultani, Chen Chen, and Mubarak Shah. Real-world anomaly detection in surveillance videos. In Proceedings of the IEEE conference on computer vision and pattern recognition, pages 6479–6488, 2018.</p>
+</li>
+<li>
+<p>[44] Kamalakar Vijay Thakare, Yash Raghuwanshi, Debi Prosad Dogra, Heeseung Choi, and Ig-Jae Kim. Dyannet: A scene dynamicity guided self-trained video anomaly detection network. In Proceedings of the IEEE/CVF Winter conference on applications of computer vision, pages 5541–5550, 2023.</p>
+</li>
+<li>
+<p>[45] Yu Tian, Guansong Pang, Yuanhong Chen, Rajvinder Singh, Johan W Verjans, and Gustavo Carneiro. Weakly-supervised video anomaly detection with robust temporal feature magnitude learning. In Proceedings of the IEEE/CVF international conference on computer vision, pages 4975–4986, 2021.</p>
+</li>
+<li>
+<p>[46] Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, et al. Llama: Open and efficient foundation language models. arXiv preprint arXiv:2302.13971, 2023.</p>
+</li>
+<li>
+<p>[47] Anil Osman Tur, Nicola Dall&rsquo;Asen, Cigdem Beyan, and Elisa Ricci. Exploring diffusion models for unsupervised video anomaly detection. In 2023 IEEE International Conference on Image Processing (ICIP), pages 2540–2544. IEEE, 2023.</p>
+</li>
+<li>
+<p>[48] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. Attention is all you need. Advances in neural information processing systems , 30, 2017.</p>
+</li>
+<li>
+<p>[49] Jue Wang and Anoop Cherian. Gods: Generalized one-class discriminative subspaces for anomaly detection. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 8201–8211, 2019.</p>
+</li>
+<li>
+<p>[50] Shu Wang and Zhenjiang Miao. Anomaly detection in crowd scene. In IEEE 10th International Conference on Signal Processing Proceedings, pages 1220–1223. IEEE, 2010.</p>
+</li>
+<li>
+<p>[51] Weihan Wang, Qingsong Lv, Wenmeng Yu, Wenyi Hong, Ji Qi, Yan Wang, Junhui Ji, Zhuoyi Yang, Lei Zhao, Xixuan Song, et al. Cogvlm: Visual expert for pretrained language models. arXiv preprint arXiv:2311.03079, 2023.</p>
+</li>
+<li>
+<p>[52] Xiang Wang, Shiwei Zhang, Jun Cen, Changxin Gao, Yingya Zhang, Deli Zhao, and Nong Sang. Clipguided prototype modulating for few-shot action recognition. International Journal of Computer Vision , pages 1–14, 2023.</p>
+</li>
+<li>
+<p>[53] Xiang Wang, Shiwei Zhang, Hangjie Yuan, Yingya Zhang, Changxin Gao, Deli Zhao, and Nong Sang. Few-shot action recognition with captioning foundation models. arXiv preprint arXiv:2310.10125, 2023.</p>
+</li>
+<li>
+<p>[54] Jhih-Ciang Wu, He-Yen Hsieh, Ding-Jie Chen, Chiou-Shann Fuh, and Tyng-Luh Liu. Self-supervised sparse representation for video anomaly detection. In European Conference on Computer Vision, pages 729–745. Springer, 2022.</p>
+</li>
+<li>
+<p>[55] Peng Wu, Jing Liu, Yujia Shi, Yujia Sun, Fangtao Shao, Zhaoyang Wu, and Zhiwei Yang. Not only look, but also listen: Learning multimodal violence detection under weak supervision. In Computer Vision–ECCV 2020: 16th European Conference, Glasgow, UK, August 23–28, 2020, Proceedings, Part XXX 16, pages 322–339. Springer, 2020.</p>
+</li>
+<li>
+<p>[56] Peng Wu, Xuerong Zhou, Guansong Pang, Yujia Sun, Jing Liu, Peng Wang, and Yanning Zhang. Openvocabulary video anomaly detection. arXiv preprint arXiv:2311.07042, 2023.</p>
+</li>
+<li>
+<p>[57] Peng Wu, Xuerong Zhou, Guansong Pang, Lingru Zhou, Qingsen Yan, Peng Wang, and Yanning Zhang. Vadclip: Adapting vision-language models for weakly supervised video anomaly detection. arXiv preprint arXiv:2308.11681, 2023.</p>
+</li>
+<li>
+<p>[58] Dan Xu, Yan Yan, Elisa Ricci, and Nicu Sebe. Detecting anomalous events in videos by learning deep representations of appearance and motion. Computer Vision and Image Understanding, 156:117–127, 2017.</p>
+</li>
+<li>
+<p>[59] Zhengyuan Yang, Linjie Li, Jianfeng Wang, Kevin Lin, Ehsan Azarnasab, Faisal Ahmed, Zicheng Liu, Ce Liu, Michael Zeng, and Lijuan Wang. Mm-react: Prompting chatgpt for multimodal reasoning and action. arXiv preprint arXiv:2303.11381, 2023.</p>
+</li>
+<li>
+<p>[60] Zhiwei Yang, Jing Liu, Zhaoyang Wu, Peng Wu, and Xiaotao Liu. Video event restoration based on keyframes for video anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 14592–14601, 2023.</p>
+</li>
+<li>
+<p>[61] Zhiwei Yang, Jing Liu, and Peng Wu. Text prompt with normality guidance for weakly supervised video anomaly detection. arXiv preprint arXiv:2404.08531, 2024.</p>
+</li>
+<li>
+<p>[62] Qinghao Ye, Haiyang Xu, Guohai Xu, Jiabo Ye, Ming Yan, Yiyang Zhou, Junyang Wang, Anwen Hu, Pengcheng Shi, Yaya Shi, et al. mplug-owl: Modularization empowers large language models with multimodality. arXiv preprint arXiv:2304.14178, 2023.</p>
+</li>
+<li>
+<p>[63] Tongtong Yuan, Xuange Zhang, Kun Liu, Bo Liu, Chen Chen, Jian Jin, and Zhenzhen Jiao. Towards surveillance video-and-language understanding: New dataset, baselines, and challenges, 2023.</p>
+</li>
+<li>
+<p>[64] M Zaigham Zaheer, Arif Mahmood, M Haris Khan, Mattia Segu, Fisher Yu, and Seung-Ik Lee. Generative cooperative learning for unsupervised video anomaly detection. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 14744–14754, 2022.</p>
+</li>
+<li>
+<p>[65] Luca Zanella, Willi Menapace, Massimiliano Mancini, Yiming Wang, and Elisa Ricci. Harnessing large language models for training-free video anomaly detection. arXiv preprint arXiv:2404.01014, 2024.</p>
+</li>
+<li>
+<p>[66] Hang Zhang, Xin Li, and Lidong Bing. Video-llama: An instruction-tuned audio-visual language model for video understanding. arXiv preprint arXiv:2306.02858, 2023.</p>
+</li>
+<li>
+<p>[67] Huaxin Zhang, Xiang Wang, Xiaohao Xu, Zhiwu Qing, Changxin Gao, and Nong Sang. Hr-pro: Point-supervised temporal action localization via hierarchical reliability propagation. arXiv preprint arXiv:2308.12608, 2023.</p>
+</li>
+<li>
+<p>[68] Huaxin Zhang, Xiang Wang, Xiaohao Xu, Xiaonan Huang, Chuchu Han, Yuehuan Wang, Changxin Gao, Shanjun Zhang, and Nong Sang. Glancevad: Exploring glance supervision for label-efficient video anomaly detection. arXiv preprint arXiv:2403.06154, 2024.</p>
+</li>
+<li>
+<p>[69] Renrui Zhang, Jiaming Han, Chris Liu, Peng Gao, Aojun Zhou, Xiangfei Hu, Shilin Yan, Pan Lu, Hongsheng Li, and Yu Qiao. Llama-adapter: Efficient fine-tuning of language models with zero-init attention. arXiv preprint arXiv:2303.16199, 2023.</p>
+</li>
+<li>
+<p>[70] Bin Zhao, Li Fei-Fei, and Eric P Xing. Online detection of unusual events in videos via dynamic sparse coding. In CVPR 2011, pages 3313–3320. IEEE, 2011.</p>
+</li>
+<li>
+<p>[71] Jia-Xing Zhong, Nannan Li, Weijie Kong, Shan Liu, Thomas H Li, and Ge Li. Graph convolutional label noise cleaner: Train a plug-and-play action classifier for anomaly detection. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 1237–1246, 2019.</p>
+</li>
+<li>
+<p>[72] Hang Zhou, Junqing Yu, and Wei Yang. Dual memory units with uncertainty regulation for weakly supervised video anomaly detection. arXiv preprint arXiv:2302.05160, 2023.</p>
+</li>
+<li>
+<p>[73] Bin Zhu, Bin Lin, Munan Ning, Yang Yan, Jiaxi Cui, HongFa Wang, Yatian Pang, Wenhao Jiang, Junwu Zhang, Zongwei Li, et al. Languagebind: Extending video-language pretraining to n-modality by languagebased semantic alignment. arXiv preprint arXiv:2310.01852, 2023.</p>
+</li>
+<li>
+<p>[74] Deyao Zhu, Jun Chen, Xiaoqian Shen, Xiang Li, and Mohamed Elhoseiny. Minigpt-4: Enhancing vision-language understanding with advanced large language models. arXiv preprint arXiv:2304.10592 , 2023.</p>
+</li>
+</ul>
+
+<h2 class="relative group">A Appendix
+    <div id="a-appendix" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-appendix" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">A.1 Broader Impact
+    <div id="a1-broader-impact" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a1-broader-impact" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The paper proposes a video anomaly detection framework, namely Holmes-VAD, that is capable of temporally identifying anomalies accurately and providing insightful explainations across even hour-long videos. Additionally, this paper provides VAD-Intruct50k, a large scale multimodal video anomaly detection datasets, including single-frame annotations for untrimmed videos, and a large amount of instruction conversation data for trimmed abnormal/normal video clips.</p>
+<p>The positive societal impacts of the work include:</p>
+<ul>
+<li>Improved public safety: The development of more accurate and interpretable video anomaly detection systems can enhance public safety by enabling quicker and more precise identification of anomalies in surveillance videos, such as criminal activities or accidents.</li>
+<li>Advancement in supervised and open-world VAD research: The proposed VADIntruct50k dataset provide a). accurate temporal timestamp of the abnormal events in videos, and b). video-explanation pair for both abnormal and normal video clips, which can pave the way for further supervised and open-world research in the video anomaly detection area.</li>
+</ul>
+<p>The negative societal impacts may include:</p>
+<ul>
+<li>Privacy concerns: The use of video surveillance technology, especially in public spaces, raises concerns about privacy and the potential for intrusive monitoring of individuals without their consent.</li>
+<li>Disregard for minor anomalies: Despite efforts to reduce bias in anomaly detection, there is still a risk of disregard for subtle anomalies such as stealing in the supermarket, leading to potential undetected anomalies.</li>
+</ul>
+<p>Consequently, researchers should adhere to relevent laws and regulations, and strive to avoid using our model or dataset for any improper invasion of privacy. Meanwhile, all our model and data will be only used for research purpose to avoid the potential negative societal impacts.</p>
+
+<h2 class="relative group">A.2 Process of single-frame annotation.
+    <div id="a2-process-of-single-frame-annotation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a2-process-of-single-frame-annotation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Figure 5: Screenshot of the single-frame annotation interface.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000004_42d1c8fe4d8b8b730b7a87976c66a6dd2eec77613feca98217bbc3a97fdcd7f6.png"
+    ></figure>
+<p>Annotation tool. We develop an interface designed specifically for single-frame annotation in videos, as shown in Fig. 5. This interface makes it easier to navigate through video lists, adjust video progress rapidly, and automatically record timestamps for annotating individual frames. Furthermore, it enables the preview of annotated frames. By clicking on the annotated frame ID, the video progress automatically synchronizes with the corresponding temporal position. These features greatly</p>
+<p>Figure 6: Examples of single-frame annotation.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000005_e1cbd2f2b7753731d7e818e81534040c807b81c73afa6ce8aac66d6bcb6405c8.png"
+    ></figure>
+<p>streamline the annotation process, enhancing convenience and efficiency. If annotators come across any errors or need to make adjustments, they can delete incorrect annotations and proceed with re-annotation.</p>
+<p>Quality control. We initially divide the entire dataset into various portions and distribute them among different annotators for labeling. Once the first round of annotations is completed, we proceed with a secondary review of the video annotations to eliminate incorrect or redundant annotations. In addition, we include ignored clicks to minimize the possibility of overlooking potential anomalies. This process ensures the Reliability and Comprehensiveness of the single-frame annotations.</p>
+<p>Examples of single-frame annotation. To facilitate a better understanding of the annotation process, we offer several examples of annotated videos in Fig. 6 .</p>
+
+<h2 class="relative group">A.3 Model architecture and training details of the Temporal Sampler.
+    <div id="a3-model-architecture-and-training-details-of-the-temporal-sampler" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a3-model-architecture-and-training-details-of-the-temporal-sampler" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Model architecture. We use UR-DMU [72] as the VAD network in our Temporal Sampler. As shown in Fig. 7, UR-DMU utilizes a Global and Local Multi-Head Self Attention (GLMHSA) module to capture both long-range and short-range temporal relationships among video snippets. Furthermore, UR-DMU introduces two memory banks to store and differentiate abnormal and normal prototypes, thereby maximizing the margins between these two representations. In order to learn discriminative representations, UR-DMU employs triplet loss to increase the feature distance after interacting with different memories. Simultaneously, it utilizes KL loss to constrain the normal memory to follow a Gaussian distribution, accounting for the variance introduced by noise. Thus, the base loss function for the UR-DMU baseline is defined as follows:</p>
+<p>Figure 7: Architecture of the Temporal Sampler.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000006_b14b1464e1a0e37d26e93d3d0bcc20b2673f146737bf4f8241835ec13febe12f.png"
+    ></figure>
+<!-- formula-not-decoded -->
+<p>Training details. During the training stage of the Temporal Sampler, we leverage the sparse singleframe annotations to generate reliable dense snippet-level pseudo label. As illustrated in Alg. 1 , we employ a dynamic threshold and perform local bidirectional mining based on the single-frame annotations. Snippets with anomaly scores exceeding a specific proportion of the annotated snippet&rsquo;s score are identified as pseudo anomaly snippets. We set α = 0 . 9 in our implementation. After mining the pseudo anomaly snippets, we adopt Gaussian function to smooth the binary pseudo label:</p>
+<!-- formula-not-decoded -->
+
+<h2 class="relative group">Algorithm 1 Pseudo Label Mining.
+    <div id="algorithm-1-pseudo-label-mining" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#algorithm-1-pseudo-label-mining" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<pre tabindex="0"><code>&amp;Algorithm 1 | Peudo Label Mining.
+      &amp;Input:  Anomaly score S  in `RT`, single-frame annotations G = {gi_}^9, anomaly ratio \alpha.
+      Output: Pseudo anomaly snippets `T^a = {t}^i^` .
+      1:  Let T^a  &lt;- \zeta.
+      2:  for every  g i  G do
+        3:      for t = g i to gi_1 do
+        4:        if S[t] &gt; \alpha - S[gi], then T^a  &lt;- t \cup T^a, else break
+        5:      end if
+        6:     end for
+        7:     for t == g i to gi_1 do
+        8:        if S[t] &gt; \alpha - S[gi], then T^a  &lt;- t \cup T^a, else break
+        9:       end if
+        10:     end for
+      11:  end for
+      12:  Return T^a
+</code></pre><p>where r = 0 . 1 indicates the smoothing ratio. We use the generated dense and smooth pseudo label to supervise the predicted anomaly score:</p>
+<!-- formula-not-decoded -->
+<p>where S and S ˆ denote the predicted anomaly score and the generated pseudo frame-level label, respectively.</p>
+
+<h2 class="relative group">A.4 Details of human evaluation.
+    <div id="a4-details-of-human-evaluation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a4-details-of-human-evaluation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Figure 8: Screenshot of the human evaluation interface.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000007_008623005d52bc5b7d805a7883a975512de9ea576668f1b2f81fe6cf9b031e3c.png"
+    ></figure>
+<p>To evaluate the quality of explanation response, we randomly extract 86 abnormal/normal video segments from the test videos of UCF-Crime and XD-Violence, and then invite 10 users to vote on the responses of different models from 3 aspects include Judgement Accuracy (JA), Content Perception (CP) and Anomaly Explanatory (AE).</p>
+<ul>
+<li>Judgement Accuracy (JA): Determine whether the model&rsquo;s judgment on anomalies is correct, we extract predictions by matching &ldquo;Yes&rdquo;/&ldquo;No&rdquo; in the answers, and compare them with the ground truth labels (abnormal/normal). Finally, we calculate the accuracy of the judgments.</li>
+<li>Content Perception (CP): The accuracy and clarity of the model&rsquo;s descriptions of the content, characters, and events in the video scenes, as well as any potential hallucination issues (descriptions of non-existent objects in the video or responses unrelated to the questions).</li>
+<li>Anomaly Explanatory (AE): The model&rsquo;s ability to analyze and interpret abnormal/normal events in the video.</li>
+</ul>
+<p>We provide the screenshot of the human evaluation interface in Fig. 8, to ensure a fair selection, the names of the models are not visible to the users, and choices can only be made from anonymous options. In Fig. 9, we provide several test examples, with the results of the Judgement Accuracy (JA), Content Perception (CP) and Anomaly Explanatory (AE).</p>
+
+<h2 class="relative group">A.5 Dats statistical analysis of VAD-Instruct50k
+    <div id="a5-dats-statistical-analysis-of-vad-instruct50k" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a5-dats-statistical-analysis-of-vad-instruct50k" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In Table 6, we conduct a statistical analysis of our proposed VAD-Instruct50k and compare it with representative datasets in the VAD field, which shows the significant volume and excellent diversity of our constructed instruction dataset.</p>
+<p>Table 6: Datasets Statistics .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Dataset</th>
+          <th>#Videos</th>
+          <th>Annotation Type</th>
+          <th>#Queries</th>
+          <th>Avg word</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CHUK Avenue</td>
+          <td>37</td>
+          <td>None</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td>ShanghaiTech</td>
+          <td>437</td>
+          <td>None/video label</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td>UCF-Crime [43]</td>
+          <td>1,610</td>
+          <td>video label</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td>XD-Violence [55]</td>
+          <td>4,754</td>
+          <td>video label</td>
+          <td>N/A</td>
+          <td>N/A</td>
+      </tr>
+      <tr>
+          <td>UCA [63]</td>
+          <td>1,854</td>
+          <td>segment caption</td>
+          <td>23,542</td>
+          <td>20.15</td>
+      </tr>
+      <tr>
+          <td>VAD-Instruct50k (Ours)</td>
+          <td>5,547</td>
+          <td>single-frame&amp;segment instruction</td>
+          <td>51,567</td>
+          <td>44.83</td>
+      </tr>
+  </tbody>
+</table>
+<p>Figure 9: Qualitative comparision in human evaluation. We show the results of Judgement Accuracy (JA), Content Perception (CP) and Anomaly Explanatory (AE) above the answer box of each model.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000008_fbf6977cfc36c01eddf12685c5b365a556d20842a302fa565a2b0150c6dcac46.png"
+    ></figure>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_papers/Holmes-VAD Towards Unbiased and Explainable Video Anomaly Detection via Multi-modal LLM.md"
+          data-oid-likes="likes_papers/Holmes-VAD Towards Unbiased and Explainable Video Anomaly Detection via Multi-modal LLM.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/holmes-vau-towards-long-term-video-anomaly-understanding-at-any-granularity/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/hierarchical-semantic-contrast-for-scene-aware-video-anomaly-detection/">
+              <span class="leading-6">
+                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-24 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+      
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 overflow-x-auto py-2">
+        <ul class="flex list-none flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 me-4">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

@@ -1,0 +1,2576 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title> &middot; Blowfish</title>
+    <meta name="title" content=" &middot; Blowfish">
+  
+
+  
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/papers/smarthome-bench-a-comprehensive-benchmark-for-video-anomaly-detection-in-smart-homes-using-multi-modal-large-language-models/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/papers/smarthome-bench-a-comprehensive-benchmark-for-video-anomaly-detection-in-smart-homes-using-multi-modal-large-language-models/">
+  <meta property="og:site_name" content="Blowfish">
+  <meta property="og:title" content="Blowfish">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blowfish">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.7946532fa78157bafb1b4340d4074792811f18177af35790b3a0cb90566ce1cda3edd782eb92e134849964d14b6d9185c9d4ded2a12dcf5b706cb6a275c0cce0.css"
+    integrity="sha512-eUZTL6eBV7r7G0NA1AdHkoEfGBd681eQs6DLkFZs4c2j7deC65LhNISZZNFLbZGFydTe0qEtz1twbLaidcDM4A==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.9df4fc14d50efcc9aa4cfc2b6f348e365f421f5ad491278f8f48c0360cf2f93f08882fda6da162d7ace8e5add57c2df4ac46bd3861306b1d4c452cd31f448d64.js"
+      integrity="sha512-nfT8FNUO/MmqTPwrbzSONl9CH1rUkSePj0jANgzy&#43;T8IiC/abaFi16zo5a3VfC30rEa9OGEwax1MRSzTH0SNZA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Papers",
+    "name": "",
+    "headline": "",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/papers\/smarthome-bench-a-comprehensive-benchmark-for-video-anomaly-detection-in-smart-homes-using-multi-modal-large-language-models\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "10610"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          Blowfish
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/papers/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="papers"
+  title="Papers">
+  
+  
+    <p class="text-base font-medium">
+      papers
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/test/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="test"
+  title="Tests">
+  
+  
+    <p class="text-base font-medium">
+      test
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href=""
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  
+  title="">
+  
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/papers/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="papers"
+    title="Papers">
+    
+    
+      <p class="text-bg font-bg">
+        papers
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/test/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="test"
+    title="Tests">
+    
+    
+      <p class="text-bg font-bg">
+        test
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    
+    title="">
+    
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>10610 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">50 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">SmartHome-Bench: A Comprehensive Benchmark for Video Anomaly Detection in Smart Homes Using Multi-Modal Large Language Models
+    <div id="smarthome-bench-a-comprehensive-benchmark-for-video-anomaly-detection-in-smart-homes-using-multi-modal-large-language-models" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#smarthome-bench-a-comprehensive-benchmark-for-video-anomaly-detection-in-smart-homes-using-multi-modal-large-language-models" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Xinyi Zhao 1∗ , Congjing Zhang 1∗ , Pei Guo 2 , Wei Li 2 , Lin Chen 2† , Chaoyue Zhao 1 , Shuai Huang 1 1 University of Washington 2 Wyze Labs, Inc.</p>
+<p>{xyzhao24, <a
+  href="mailto:congjing%7d@uw.edu">congjing}@uw.edu</a>, {pguo, wei.li, <a
+  href="mailto:lchen%7d@wyze.com">lchen}@wyze.com</a>, {cyzhao, <a
+  href="mailto:shuaih%7d@uw.edu">shuaih}@uw.edu</a></p>
+
+<h2 class="relative group">Abstract
+    <div id="abstract" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abstract" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video anomaly detection (VAD) is essential for enhancing safety and security by identifying unusual events across different environments. Existing VAD benchmarks, however, are primarily designed for general-purpose scenarios, neglecting the specific characteristics of smart home applications. To bridge this gap, we introduce SmartHomeBench, the first comprehensive benchmark specially designed for evaluating VAD in smart home scenarios, focusing on the capabilities of multi-modal large language models (MLLMs). Our newly proposed benchmark consists of 1,203 videos recorded by smart home cameras, organized according to a novel anomaly taxonomy that includes seven categories, such as Wildlife, Senior Care, and Baby Monitoring. Each video is meticulously annotated with anomaly tags, detailed descriptions, and reasoning. We further investigate adaptation methods for MLLMs in VAD, assessing state-of-the-art closed-source and open-source models with various prompting techniques. Results reveal significant limitations in current models&rsquo; ability to detect video anomalies accurately. To address these limitations, we introduce the Taxonomy-Driven Reflective LLM Chain (TRLC), a new LLM chaining framework that achieves a notable 11.62% improvement in detection accuracy. The benchmark dataset and code are publicly available at https://github. com/Xinyi-0724/SmartHome-Bench-LLM .</p>
+
+<h2 class="relative group">1. Introduction
+    <div id="1-introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video anomaly detection (VAD) identifies unexpected events to monitor and mitigate risks, thus improving security across diverse public spaces, including campuses, pedestrian zones, and crowded scenes [11 , 12 , 15 , 37 , 39]. A range of supervised, weakly-supervised, one-class classification, and unsupervised methods has been proposed to generate anomaly scores for videos [20 , 29 , 43 , 46 , 54].</p>
+<ul>
+<li>Equal contribution. Work done during the authors&rsquo; internship at Wyze.</li>
+</ul>
+<p>† Corresponding Author.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000000_c083a4fd53507d2f0f803d32faf422a56bc8ea639676479f3906476829ed75d3.png"
+    ></figure>
+<p>(b)</p>
+<p>Figure 1. (a) Statistics for event categories and anomaly tags in the SmartHome-Bench dataset. (b) Overall anomaly detection accuracy of various adaptation methods across seven event categories, using Gemini-1.5-pro.</p>
+<p>However, most of these methods cannot provide descriptive rationales to support their predictions. Offering clear rationales can help users understand which behaviors or events are flagged as anomalies and why, fostering trust in the system&rsquo;s assessments. Multi-modal large language models (MLLMs), with their substantial model size and capability to learn from extensive training data [2 , 9 , 17 , 18 , 41], demonstrate exceptional performance in multimodal tasks. Additionally, their generative nature enables them to make</p>
+<p>anomaly predictions and generate rationales, improving the transparency and trustworthiness of VAD [32 , 35].</p>
+<p>Researchers have assessed MLLMs for VAD in various domains [7 , 28 , 50 , 56]. For example, LAVAD [55] focused on detecting crimes and violent behaviors using the UCFCrime [39] and XD-Violence [47] datasets, while AnomalyRuler [53] focused on pedestrian anomalies related to biking or jumping using the ShanghaiTech [25], UCSD Ped2 [21], and CUHK Avenue [27] datasets. However, these studies focus on public spaces, overlooking anomalies within private environments like smart home scenarios. Unlike the goals of VAD in public environments, VAD in smart homes centers on more personal concerns, such as minimizing property damage, protecting vulnerable residents (e.g., young children and elderly family members), and monitoring pets and wildlife [3 , 38 , 58]. While anomalies in smart homes may overlap with incidents in public spaces, such as crimes, they also involve many unique events rarely seen in public, like a baby climbing out of a crib or a bear entering a backyard. It remains unclear whether existing methods can effectively handle VAD in smart home scenarios. This study aims to fill the gap by evaluating the feasibility of MLLMs for VAD in smart home scenarios.</p>
+<p>In particular, we identify two major research gaps: (1) the absence of a dedicated benchmark for VAD in smart home scenarios, and (2) the under-exploration of adaptation strategies for MLLMs in VAD. To address the first gap, we propose SmartHome-Bench, a benchmark dataset of 1,203 videos featuring distinct anomaly events, such as wildlife encounters, senior care incidents, and baby monitoring issues, all collected from smart home cameras. Each video is manually annotated with anomaly tags, detailed descriptions, and reasoning, positioning SmartHome-Bench as an ideal instructional dataset for advancing MLLM research and development in VAD. Dataset statistics are provided in Figure 1a .</p>
+<p>To address the second gap, we conduct experiments focused on two key aspects: adaptation methods and base MLLMs. We implemented a diverse set of adaptation techniques for MLLMs, including standard prompting (zeroshot, chain-of-thought, and few-shot), contextual strategies (in-context learning), and our proposed Taxonomy-Driven Reflective LLM Chain (TRLC). These adaptations are applied across both state-of-the-art open-source and proprietary MLLMs. By evaluating these off-the-shelf models, we aim to harness their instruction-following capabilities, assessing both their anomaly detection performance and the quality of model-generated descriptions and rationales.</p>
+<p>Our findings indicate that current MLLMs often struggle to deliver satisfactory performance using basic prompting alone. In contrast, the TRLC framework, which integrates taxonomy-driven rules and self-reflection modules into MLLM chains, significantly enhances MLLM capa- bilities for VAD in smart home scenarios. This method achieves a remarkable 11.62% improvement in anomaly detection accuracy over zero-shot prompting and outperforms all standalone prompting approaches across five out of seven event categories, as shown in Figure 1b .</p>
+<p>In summary, our contributions are threefold:</p>
+<ul>
+<li>We introduce SmartHome-Bench, the first benchmark for VAD in smart home scenarios, featuring a dataset of 1,203 videos annotated across seven event categories.</li>
+<li>We evaluate both closed-source and open-source MLLMs using various adaptation methods, offering insights for optimizing model performance and prompt design.</li>
+<li>We propose the TRLC, a novel LLM chaining framework that improves overall VAD accuracy by 11.62% compared to the zero-shot prompt approach.</li>
+</ul>
+
+<h2 class="relative group">2. Related Work
+    <div id="2-related-work" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-related-work" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video Anomaly Detection. MLLMs have been extensively applied in VAD recently. For instance, Holmes-VAD [56] processes untrimmed video with user prompts to produce frame-level anomaly scores and explanations for detected anomalies. CALLM [34] integrates a 3D autoencoder and a visual language model into a cascade system to predict anomalies. However, MLLMs have rarely been tested in VAD for smart home scenarios, where most methods primarily rely on motion detection algorithms, statistical models, or basic machine learning techniques to detect unusual behaviors or patterns [31 , 38 , 51]. For example, Withanage et al. [45] used depth cuboid similarity features with RGB-D imaging to detect falls, aiming to support insitu assistance for fall incidents in the context of independent living for the elderly. Liu et al. [24] transformed fall detection into a sparse recognition problem of the signal, incorporating visual shielding for enhanced privacy protection and recognition accuracy. Despite the potential of MLLMs, there remains a lack of benchmark datasets for smart home scenarios, preventing comprehensive evaluation and adaptation of these models. Our work addresses this gap by introducing SmartHome-Bench, a benchmark specifically designed for VAD in smart home scenarios.</p>
+<p>Benchmark for MLLMs. Recent advancements in MLLMs [1 , 2 , 9 , 17 , 23 , 42] have opened new avenues for processing diverse data types, including video, audio, and text. As a result, benchmarks designed to assess MLLM performance on video-related tasks have become increasingly important. Existing benchmarks like Flamingo [2] and VideoVista [22] demonstrate the effectiveness of MLLMs in video understanding and reasoning for finegrained video tasks across broad domains. To explore specific task capabilities, benchmarks such as MVBench [19] and NExT-QA [49] evaluate temporal understanding in visual language models for temporally-sensitive videos, while</p>
+<p>Figure 2. Example of video annotation from the SmartHomeBench dataset.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000001_e4a05328cdd833571f56888adc91563bd6089fea72865cf819d57211e3bbfc4c.png"
+    ></figure>
+<p>Video-ChatGPT [30] quantifies video dialogue capabilities for benchmarking video conversation models. VANEBench [7] uses question-answer pairs to evaluate VAD on both real-world and AI-generated videos. Other benchmarks, such as Video-MME [10] and TempCompass [26], focus on categorizing video datasets for specific evaluation needs, like trending topics on YouTube (Video-MME [10]) or temporal aspects (TempCompass [26]). However, these benchmarks primarily address general video domains and overlook the unique characteristics of smart home scenarios. In contrast, SmartHome-Bench is the first benchmark specifically tailored for smart home scenarios, offering a dataset with detailed video descriptions and reasoning for detected anomalies.</p>
+
+<h2 class="relative group">3. SmartHome-Bench Dataset
+    <div id="3-smarthome-bench-dataset" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-smarthome-bench-dataset" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This section presents the raw video collection and annotation process for SmartHome-Bench, with an emphasis on the proposed taxonomy used to categorize video anomalies in smart home scenarios.</p>
+
+<h2 class="relative group">3.1. Video Collection
+    <div id="31-video-collection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#31-video-collection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We crawl videos from public sources, such as YouTube, to create SmartHome-Bench. To identify keywords associated with common anomalies, we review the literature on home security [8], family care [57], and pet monitoring [16], creating an initial keyword set that was refined by smart home experts. Additionally, we develop a separate keyword set to capture typical, non-anomalous events in smart homes. Using these keywords, we identify 8,611 videos on YouTube. After manual filtering, we finalize a set of 1,203 videos captured by both indoor and outdoor smart home cameras. Details on the collection and filtering process are provided in Appendix A .</p>
+
+<h2 class="relative group">3.2. Video Annotation
+    <div id="32-video-annotation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#32-video-annotation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In SmartHome-Bench, each video is manually annotated with (1) the event category; (2) the anomaly tag indicat-</p>
+<p>Figure 3. Overview of the video anomaly taxonomy.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000002_fb2d9b6417e9be08e9024d991e92eee47c7c3deba1c9fcd1bf237ac635eee4e1.png"
+    ></figure>
+<p>ing whether the video event is normal , abnormal, or vague abnormal; (3) textual descriptions of the events; and (4) rationales explaining the reasoning behind the assigned anomaly tag. An example of an annotated video is shown in Figure 2 .</p>
+<p>Defining anomalies is a key challenge in VAD [33], especially in smart home scenarios where interpretations of what constitutes an anomaly can vary widely among users. To streamline the annotation process, we develop an anomaly taxonomy to guide the labeling of event categories and anomaly tags, as illustrated in Figure 3. This taxonomy defines seven primary categories: security , baby monitoring , kid monitoring , senior care , pet monitoring , wildlife, and other category. Each category is further divided into specific second-level event types, covering both normal and abnormal events. For example, the senior care category includes one normal event, routine activity, and three abnormal events: distress signal , senior fall, and elder abuse .</p>
+<p>The complete video anomaly taxonomy is provided in Appendix B, served as a structured guideline for annotators to ensure consistency and accuracy in labeling event categories and anomaly tags. Under the guidance of taxonomy, annotators label the video with normal or abnormal tags for well-defined scenarios. If annotators could not reach a consensus on a video&rsquo;s anomaly classification due to limited context, it is labeled as vague abnormal. The distribution of categories and anomaly tags across the dataset is shown in Figure 1a, with further details on the video annotation process available in Appendix C .</p>
+<p>In addition to categorizing events and tagging anomalies,</p>
+<p>Figure 4. Overview of adaptation methods and TRLC pipeline: The upper section shows vanilla adaptations, ICL methods, and the TRLC; The lower section presents the TRLC output from Gemini-1.5-pro on a SmartHome-Bench video.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000003_9afa0c3a5e365a8f0308dba5b47a8234e127f5a5508c7f592427789b65c3edcf.png"
+    ></figure>
+<p>human annotators provide detailed descriptions of video events and articulate the reasoning behind each anomaly judgment. Video descriptions are limited to 200 words, while reasoning explanations are all in 100 words, promoting concise and precise justification. To ensure the annotation quality, there is a human review process to avoid annotator bias. These high-quality textual annotations serve as a benchmark for validating MLLMs&rsquo; video understanding and reasoning processes, as demonstrated in our case analysis in Section 5.5 .</p>
+
+<h2 class="relative group">4. Methods
+    <div id="4-methods" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-methods" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>For smart home scenarios, users are often interested in receiving a clear alert about whether a video contains an anomalous event [5 , 52]. By leveraging MLLMs, we aim to go beyond anomaly detection by also generating detailed descriptions and reasoning, thereby enriching the interpretability of detection outputs. We evaluate MLLMs'</p>
+<p>performance for VAD in smart home scenarios across multiple adaptation methods. As illustrated in Figure 4, we begin with vanilla adaptations, such as zero-shot prompting, chain-of-thought (CoT) prompting, and few-shot CoT prompting, to gauge MLLM&rsquo;s baseline capabilities in recognizing video anomalies. Then, we further utilize an incontext learning (ICL) approach that incorporates the complete anomaly taxonomy, embedding expert knowledge to enhance MLLM anomaly understanding. Building on insights that MLLMs often struggle to follow complex instructions or capture nuanced details in a single pass, we develop the TRLC, a novel LLM chaining framework, to systematically address these challenges.</p>
+
+<h2 class="relative group">4.1. Vanilla Adaptations
+    <div id="41-vanilla-adaptations" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#41-vanilla-adaptations" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>All prompts used for the following three vanilla adaptation methods are provided in Appendix D.1 .</p>
+<p>Zero-Shot Prompting: In this setup, MLLM is prompted directly to return a binary anomaly label, where 0 indicates no anomaly detected and 1 indicates an anomaly detected.</p>
+<p>CoT Prompting: CoT prompting enhances complex reasoning by incorporating intermediate reasoning steps [44]. In this setup, we prompt MLLMs with the task instructions, smart home anomaly definitions, and video input, guiding them to complete the task in three steps: generating video descriptions, providing reasoning, and predicting the anomaly label.</p>
+<p>Few-Shot CoT Prompting: To enhance MLLMs&rsquo; understanding of smart home video anomalies, we add a few representative anomaly examples at the end of the CoT prompt. Each example includes a video description, anomaly reasoning, and the corresponding ground-truth anomaly label.</p>
+
+<h2 class="relative group">4.2. In-Context Learning
+    <div id="42-in-context-learning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#42-in-context-learning" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We further integrate the smart home anomaly taxonomy from Section 3.2 into the ICL prompts, building on a similar approach that effectively guides LLMs in conversation safety assessments using a safety risk taxonomy [14]. Building upon the CoT prompt, we include the complete anomaly taxonomy as a reference, allowing MLLMs to justify anomalies based on the taxonomy, and utilize their own knowledge if the video does not fit any predefined taxonomy category (see prompt in Appendix D.2). This integration provides MLLMs with structured guidelines and examples of both abnormal and normal events in smart home scenarios.</p>
+
+<h2 class="relative group">4.3. Taxonomy-Driven Reflective LLM Chain
+    <div id="43-taxonomy-driven-reflective-llm-chain" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#43-taxonomy-driven-reflective-llm-chain" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>LLM chaining refers to a pipeline that decomposes the task into multiple steps, each solved by a unique LLM call [48]. In our proposed TRLC framework, the VAD task is divided into three smaller subtasks: (a) Taxonomy-Driven Rule Generation, (b) Initial Prediction, and (c) Self-Reflection (see prompts for each subtask in Appendix D.3). An example of the process in our TRLC is illustrated in Figure 4 .</p>
+<p>Step (a): Taxonomy-Driven Rule Generation MLLMs often struggle to follow long instructions accurately and capture all detailed information in prompts. Therefore, at the first step, we make an MLLM call to condense the full taxonomy from Section 3.2 into a list of concise, actionable rules. This rule set is then incorporated as expert knowledge in the subsequent prompting steps. The complete set of summarized rules is provided in Appendix D.3 .</p>
+<p>Step (b): Initial Prediction Using the summarized rules, input videos, and a CoT prompt, we call an MLLM to generate the initial VAD prediction, which includes a video description, reasoning, and an anomaly label. This output then serves as the input for Step (c).</p>
+<p>Step (c): Self-Reflection It has been observed that with a single MLLM call often leads to misclassification of certain events due to the model&rsquo;s limited contextual understanding. A notable example is the misclassification of an unattended cat left alone outside as a normal event, as shown in Step (b) of Figure 4. The model&rsquo;s reasoning focuses solely on typical pet behavior, overlooking potential risks a pet may face when left alone outside, such as getting lost, encountering diseases, sustaining injuries, or facing dangerous wildlife. Adding an additional self-reflection step could help correct these types of initial misclassifications.</p>
+<p>In Step (c), we reintroduce the generated rules from Step (a) and the results from Step (b) to the MLLM, prompting it to refine the initial predictions. For instance, an unattended outdoor pet is highlighted as a common smart home anomaly in Rule #2. With this additional context, the model successfully applies this rule to refine the initial VAD results, correcting the original classification.</p>
+<p>In summary, our TRLC framework enhances MLLM&rsquo;s contextual understanding through taxonomy-driven rules and significantly improves reasoning abilities via selfreflection. Additionally, the TRLC framework&rsquo;s support for configurable video anomaly taxonomies enables broader applications, such as adapting VAD for diverse public and private environments. Furthermore, TRLC enables personalized VAD by allowing users to define tailored taxonomies that align with individual standards for anomalies.</p>
+
+<h2 class="relative group">5. Experiments
+    <div id="5-experiments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-experiments" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this section, we present the experimental results of the adaptation methods outlined in Section 4 across opensource and closed-source MLLMs. We convert the video&rsquo;s anomaly tags to binary labels: normal(0) , abnormal(1), and vague abnormal(1). The MLLM predictions, also in binary format, are then compared against these ground-truth labels.</p>
+
+<h2 class="relative group">5.1. Experiment Setup
+    <div id="51-experiment-setup" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#51-experiment-setup" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>There are two ways to perform VAD: (1) asking MLLMs if the video is abnormal, referred to as abnormal detection and (2) asking MLLMs if the video is normal, referred to as normal detection. We opt for abnormal detection because it is observed that anomaly detection prompts yield better results. This is likely because MLLMs are pre-dominantly trained on normal videos and may struggle to detect anomalies without additional instructions (see results in Appendix E).</p>
+<p>We involve six MLLMs in our experiments, including five closed-source models: Gemini-1.5-flash001 [42], Gemini-1.5-pro-001 [42], GPT-4o-2024-0806 [13], GPT-4o-mini-2024-07-18 [36], and Claude-3.5sonnet@20240229 [4], as well as one open-source model, VILA-13b [23]. For zero-shot, CoT, few-shot CoT, and ICL</p>
+<p>methods, we test all six models, while the TRLC is evaluated only with the five closed-source models, as VILA13b struggles to follow long, complex instructions. Overall, these models offer a comprehensive comparison and serve as the most representative benchmarks for state-ofthe-art MLLM performance in anomaly detection within smart home scenarios.</p>
+
+<h2 class="relative group">5.2. Benchmarking on Vanilla Adaptations
+    <div id="52-benchmarking-on-vanilla-adaptations" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#52-benchmarking-on-vanilla-adaptations" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Zero-Shot Prompting Table 1 presents VAD performance results under zero-shot prompting, showcasing each model&rsquo;s inherent understanding of smart home anomalies without additional guidance. Claude-3.5-sonnet achieves the highest accuracy, recall, and F1-score, while Gemini1.5-pro leads in precision. The accuracy of all closed-source MLLMs is only marginally above random chance (50%), indicating limited baseline performance. Notably, VILA13b classifies all videos as normal, underscoring its difficulty with zero-shot VAD tasks in detecting anomalies. These low VAD performance results suggest that, without guidance, these MLLMs have limited inherent understanding of smart home anomalies or may not fully utilize their capability to detect anomalies effectively.</p>
+<p>Table 1. Anomaly detection performance of different MLLMs with the zero-shot prompting (Bold values indicate the highest score for each metric; applies to all tables in this paper).</p>
+<table>
+  <thead>
+      <tr>
+          <th>Model</th>
+          <th>Accuracy</th>
+          <th>Precision</th>
+          <th>Recall</th>
+          <th>F1-score</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Gemini-1.5-flash</td>
+          <td>58.44</td>
+          <td>79.22</td>
+          <td>31.12</td>
+          <td>44.69</td>
+      </tr>
+      <tr>
+          <td>Gemini-1.5-pro</td>
+          <td>57.36</td>
+          <td>84.34</td>
+          <td>25.73</td>
+          <td>39.43</td>
+      </tr>
+      <tr>
+          <td>GPT-4o</td>
+          <td>68.41</td>
+          <td>80.09</td>
+          <td>55.16</td>
+          <td>65.33</td>
+      </tr>
+      <tr>
+          <td>GPT-4o-mini</td>
+          <td>69.91</td>
+          <td>76.52</td>
+          <td>63.79</td>
+          <td>69.58</td>
+      </tr>
+      <tr>
+          <td>Claude-3.5-sonnet</td>
+          <td>70.82</td>
+          <td>69.66</td>
+          <td>81.36</td>
+          <td>75.05</td>
+      </tr>
+      <tr>
+          <td>VILA-13b</td>
+          <td>46.05</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+      </tr>
+  </tbody>
+</table>
+<p>Chain-of-Thought Prompting Across all test MLLMs, CoT prompting consistently improves VAD accuracy compared to zero-shot prompting (see Table 2 vs. Table 1), underscoring the effectiveness of more granular anomaly definitions and step-by-step guidance. Among the models, Gemini-1.5-pro achieves the highest accuracy and precision. Notably, GPT-4o-mini outperforms GPT-4o in recall, albeit with reduced precision. For all closed-source MLLMs except Claude-3.5-sonnet, the gap between precision and recall narrows, resulting in a significantly improved F1-score compared to Table 1. VILA-13b also demonstrates substantial improvement across all metrics, highlighting the positive impact of CoT prompting on its performance.</p>
+<p>Few-Shot CoT Prompting In the few-shot CoT setup, we extend the CoT prompt by adding three representative examples of anomaly videos. Due to MLLM&rsquo;s processing limitations on the number of images or videos per request,</p>
+<p>Table 2. Anomaly detection performance of different MLLMs with the CoT prompting.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Model</th>
+          <th>Accuracy</th>
+          <th>Precision</th>
+          <th>Recall</th>
+          <th>F1-score</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Gemini-1.5-flash</td>
+          <td>69.58</td>
+          <td>74.44</td>
+          <td>66.41</td>
+          <td>70.2</td>
+      </tr>
+      <tr>
+          <td>Gemini-1.5-pro</td>
+          <td>74.06</td>
+          <td>83.77</td>
+          <td>64.41</td>
+          <td>72.82</td>
+      </tr>
+      <tr>
+          <td>GPT-4o</td>
+          <td>72.57</td>
+          <td>83.02</td>
+          <td>61.79</td>
+          <td>70.85</td>
+      </tr>
+      <tr>
+          <td>GPT-4o-mini</td>
+          <td>68.83</td>
+          <td>68.07</td>
+          <td>79.51</td>
+          <td>73.35</td>
+      </tr>
+      <tr>
+          <td>Claude-3.5-sonnet</td>
+          <td>71.9</td>
+          <td>83.44</td>
+          <td>59.78</td>
+          <td>69.66</td>
+      </tr>
+      <tr>
+          <td>VILA-13b</td>
+          <td>68.41</td>
+          <td>68.45</td>
+          <td>76.89</td>
+          <td>72.42</td>
+      </tr>
+  </tbody>
+</table>
+<p>these examples are provided as text tuples. As shown in Table 3, Gemini-1.5-pro achieves the highest accuracy, surpassing the previous CoT best of 74.06% and leading in precision and F1-score, while GPT-4o-mini performs best in recall. However, for models like Gemini-1.5-flash, GPT4o, GPT-4o-mini, and VILA-13b, accuracy is slightly lower than in Table 2, suggesting that few-shot CoT does not fundamentally enhance CoT performance. This may be because the three examples provided in the prompt do not fully capture the range of anomalies and may distort the MLLMs&rsquo; inherent knowledge, leading to misclassification.</p>
+<p>Table 3. Anomaly detection performance of different MLLMs with the few-shot CoT prompting.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Model</th>
+          <th>Accuracy</th>
+          <th>Precision</th>
+          <th>Recall</th>
+          <th>F1-score</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Gemini-1.5-flash</td>
+          <td>68.41</td>
+          <td>79.43</td>
+          <td>55.93</td>
+          <td>65.64</td>
+      </tr>
+      <tr>
+          <td>Gemini-1.5-pro</td>
+          <td>76.39</td>
+          <td>86.87</td>
+          <td>66.26</td>
+          <td>75.17</td>
+      </tr>
+      <tr>
+          <td>GPT-4o</td>
+          <td>71.65</td>
+          <td>83.19</td>
+          <td>59.48</td>
+          <td>69.36</td>
+      </tr>
+      <tr>
+          <td>GPT-4o-mini</td>
+          <td>68</td>
+          <td>66.3</td>
+          <td>82.74</td>
+          <td>73.61</td>
+      </tr>
+      <tr>
+          <td>Claude-3.5-sonnet</td>
+          <td>72.98</td>
+          <td>77.65</td>
+          <td>70.11</td>
+          <td>73.68</td>
+      </tr>
+      <tr>
+          <td>VILA-13b</td>
+          <td>67.17</td>
+          <td>69.18</td>
+          <td>70.57</td>
+          <td>69.87</td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 class="relative group">5.3. Benchmarking on ICL
+    <div id="53-benchmarking-on-icl" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#53-benchmarking-on-icl" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In CoT and few-shot CoT experiments, we find that adding more informative and precise anomaly definitions to the prompt improves VAD performance. With this insight, we utilize an ICL approach that incorporates the complete anomaly taxonomy in the prompt, providing MLLMs with structured categories and anomaly definitions specific to diverse smart home scenarios.</p>
+<p>Table 4. Anomaly detection performance of different MLLMs with the ICL method.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Model</th>
+          <th>Accuracy</th>
+          <th>Precision</th>
+          <th>Recall</th>
+          <th>F1-score</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Gemini-1.5-flash</td>
+          <td>67.08</td>
+          <td>80.78</td>
+          <td>51.16</td>
+          <td>62.64</td>
+      </tr>
+      <tr>
+          <td>Gemini-1.5-pro</td>
+          <td>74.4</td>
+          <td>86.2</td>
+          <td>62.56</td>
+          <td>72.5</td>
+      </tr>
+      <tr>
+          <td>GPT-4o</td>
+          <td>72.65</td>
+          <td>89.41</td>
+          <td>55.93</td>
+          <td>68.82</td>
+      </tr>
+      <tr>
+          <td>GPT-4o-mini</td>
+          <td>71.74</td>
+          <td>83.96</td>
+          <td>58.86</td>
+          <td>69.2</td>
+      </tr>
+      <tr>
+          <td>Claude-3.5-sonnet</td>
+          <td>73.82</td>
+          <td>84.22</td>
+          <td>63.33</td>
+          <td>72.3</td>
+      </tr>
+      <tr>
+          <td>VILA-13b</td>
+          <td>65.59</td>
+          <td>75.82</td>
+          <td>53.16</td>
+          <td>62.5</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table 4 shows each MLLM’s ability to directly apply the</p>
+<p>anomaly taxonomy in VAD with the ICL method. While half of the models (i.e., GPT-4o, GPT-4o-mini, and Claude3.5-sonnet) demonstrate improved accuracy, the other half do not, suggesting this approach does not consistently enhance few-shot CoT performance. Except for a slight decrease in precision for Gemini-1.5-pro, all other MLLMs show increased precision, indicating that the taxonomy helps MLLMs identify anomalies more accurately.</p>
+
+<h2 class="relative group">5.4. Benchmarking on TRLC
+    <div id="54-benchmarking-on-trlc" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#54-benchmarking-on-trlc" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>ICL experiment results indicate that directly integrating the full anomaly taxonomy does not significantly improve MLLMs&rsquo; VAD performance. Additionally, lengthy prompts in a single call tend to dilute the primary task, making it challenging for MLLMs to stay focus on VAD. To address this, our TRLC approach uses anomaly-specific rules generated from the taxonomy rather than the full taxonomy, providing targeted guidance and avoiding the excess detail that can lead to confusion in ICL.</p>
+<p>As shown in Table 5, applying this approach to MLLMs achieves better accuracy than all other adaptation methods in Table 1 -4, with Claude-3.5-sonnet reaching 79.05%. Figure 5 further illustrates the accuracy results for all adaptation methods. Notably, our TRLC approach significantly boosts performance across all tested MLLMs, outperforming all other methods in four of the five models. The exception is GPT-4o-mini, where the TRLC ranks second, just slightly below its ICL result. On average, the TRLC method increases accuracy by 11.62% over the zero-shot prompting across all five closed-source models. These results demonstrate that our TRLC approach provides MLLMs with an improved contextual understanding of smart home anomalies and enhances their reasoning abilities compared to nochaining methods.</p>
+<p>Table 5. Anomaly detection performance of different MLLMs with the TRLC method.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Model</th>
+          <th>Accuracy</th>
+          <th>Precision</th>
+          <th>Recall</th>
+          <th>F1-score</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Gemini-1.5-flash</td>
+          <td>77.14</td>
+          <td>77.74</td>
+          <td>80.74</td>
+          <td>79.21</td>
+      </tr>
+      <tr>
+          <td>Gemini-1.5-pro</td>
+          <td>78.47</td>
+          <td>82.18</td>
+          <td>76.73</td>
+          <td>79.36</td>
+      </tr>
+      <tr>
+          <td>GPT-4o</td>
+          <td>77.47</td>
+          <td>79.35</td>
+          <td>78.74</td>
+          <td>79.04</td>
+      </tr>
+      <tr>
+          <td>GPT-4o-mini</td>
+          <td>70.82</td>
+          <td>67.74</td>
+          <td>87.67</td>
+          <td>76.43</td>
+      </tr>
+      <tr>
+          <td>Claude-3.5-sonnet</td>
+          <td>79.05</td>
+          <td>79.67</td>
+          <td>82.13</td>
+          <td>80.88</td>
+      </tr>
+  </tbody>
+</table>
+<p>Majority Voting To assess the peak performance achievable with the TRLC, we combine TRLC results from the top three MLLMs: Gemini-1.5-pro, GPT-4o, and Claude-3.5sonnet, using majority voting to determine the final anomaly prediction for each video. There are two possible voting outcomes: unanimous agreement and absolute majority. When all three MLLMs produce the same anomaly prediction, such as Gemini-1.5-pro: 0, GPT-4o: 0, and Claude3.5-sonnet: 0, the result is classified as unanimous, and that prediction (normal(0)) becomes the final label. In all other cases, the majority prediction is used as the final classification.</p>
+<p>Figure 5. Overall VAD accuracy of all tested adaptation methods across different MLLMs.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000004_b77d1900eaf00bd7ea47f909f1c15aab263cc210ecc74b18a5a7e191f54e5a88.png"
+    ></figure>
+<p>As shown in Figure 6, this approach increases accuracy to 81.63%, surpassing the individual performance of each model in Table 5. Specifically, the number of videos with unanimous agreement and absolute majority outcomes are 781 and 422, with corresponding accuracies of 91.2% and 64.0%, respectively. The high VAD accuracy in cases of unanimous agreement suggests potential applications, such as leveraging unanimous MLLM votes to create reliable ground-truth anomaly labels for large smart home video datasets.</p>
+<p>Figure 6. Majority voting outcomes on VAD using TRLC results across the top three MLLMs (Gemini-1.5-pro, GPT-4o, and Claude-3.5-sonnet) with video distribution by ground-truth anomaly categories.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000005_39d82ba2725e180d95a7b837759d44eede23541e3cc42feb63c4e4a23ecdf3a2.png"
+    ></figure>
+
+<h2 class="relative group">5.5. In-Depth Analysis
+    <div id="55-in-depth-analysis" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#55-in-depth-analysis" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Hard Case Analysis As introduced in Section 3.2, our dataset includes a category of videos with ambiguous anomalies, labeled as vague abnormal. These videos</p>
+<p>present challenges even for human annotators, making them a useful subset for assessing the limits of MLLMs in VAD prediction. To explore this, we analyze the accuracy of MLLMs on all 91 vague abnormal videos, as shown in Table 6. Generally, the accuracy for vague cases is significantly lower than the other cases across all MLLMs. Notably, with the exception of Claude-3.5-sonnet, MLLMs achieve their highest vague accuracy using the TRLC, underscoring its effectiveness in improving VAD performance, even in challenging smart home scenarios.</p>
+<p>Table 6. VAD accuracy on 91 vague abnormal videos across different MLLMs with all adaptation methods (ZS: zero-shot, CoT: chain-of-thought, FS: few-shot chain-of-thought, ICL: in-context learning, TRLC: taxonomy-driven reflective LLM chain).</p>
+<table>
+  <thead>
+      <tr>
+          <th>Model</th>
+          <th>Accuracy FS ICL TRLC</th>
+          <th>Accuracy FS ICL TRLC</th>
+          <th>Accuracy FS ICL TRLC</th>
+          <th>Accuracy FS ICL TRLC</th>
+          <th>Accuracy FS ICL TRLC</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td>ZS</td>
+          <td>CoT</td>
+          <td>FS</td>
+          <td>ICL</td>
+          <td>TRLC</td>
+      </tr>
+      <tr>
+          <td>Gemini-1.5-flash</td>
+          <td>35.16</td>
+          <td>48.35</td>
+          <td>38.46</td>
+          <td>28.57</td>
+          <td>60.44</td>
+      </tr>
+      <tr>
+          <td>Gemini-1.5-pro</td>
+          <td>16.48</td>
+          <td>37.36</td>
+          <td>37.36</td>
+          <td>35.16</td>
+          <td>56.04</td>
+      </tr>
+      <tr>
+          <td>GPT-4o</td>
+          <td>47.25</td>
+          <td>37.36</td>
+          <td>30.77</td>
+          <td>23.08</td>
+          <td>50.55</td>
+      </tr>
+      <tr>
+          <td>GPT-4o-mini</td>
+          <td>52.75</td>
+          <td>69.23</td>
+          <td>71.43</td>
+          <td>34.07</td>
+          <td>81.32</td>
+      </tr>
+      <tr>
+          <td>Claude-3.5-sonnet</td>
+          <td>67.03</td>
+          <td>30.77</td>
+          <td>41.76</td>
+          <td>34.07</td>
+          <td>59.34</td>
+      </tr>
+  </tbody>
+</table>
+<p>Error Diagnosis To understand which aspects MLLMs struggle with in anomaly detection within our dataset, we evaluate their video descriptions and reasoning against annotated ground truth. To capture all possible outcomes, we manually analyze MLLM outputs for 100 videos and identify five types of failure outcomes: (1) Misinterpretation: misdescribing or misunderstanding video events; (2) Event Omission: missing key abnormal events; (3) Hallucination: adding content that is not present; (4) Context Lack: failing to grasp details like the identity of the people and the emotions of the participants; and (5) Technical Error: failing to generate a response. Using these identified failure types, we then employ GPT-4 to evaluate the description and reasoning for all videos (see the prompts in Appendix D.4). The results are presented in Figures 7 and 8. Overall, MLLMs make more mistakes in video descriptions than in reasoning, likely due to the longer length of descriptions (see examples in Figure 2).</p>
+<p>Since a single video may exhibit multiple failure types, the total count of categorized types exceeds the dataset size of 1,203. Among the failure types, Context Lack is more prominent in reasoning than in descriptions. This occurs when MLLMs fail to grasp smart home context beyond basic descriptions, such as the identities of individuals in the video, leading to misinterpretation of normal events as anomalies or overlooking true anomalies. For instance, a description of a dog engaging with a person could have two possible interpretations: (1) playing with its owner, which is normal, or (2) attempting to fend off an intruder, which would be an anomaly, depending on whether the person is a resident. Incorporating additional context, such as a customized anomaly taxonomy and recognition of familiar faces, may help address this limitation.</p>
+<p>Figure 7. Distribution of video outcomes for the top three MLLMs&rsquo; descriptions compared to human-annotated description.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000006_9b7eeff1b7f045236cc99a36e0cbe14ec56f6cc487f600697eb36f2b40a1b3bd.png"
+    ></figure>
+<p>Figure 8. Distribution of video outcomes for the top three MLLMs&rsquo; reasoning compared to human-annotated reasoning.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000007_292bd89ddfa4249d49a1567982b2d94b34b442c0862bda32dc08f0a9f0df0e36.png"
+    ></figure>
+
+<h2 class="relative group">6. Conclusion
+    <div id="6-conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this paper, we introduce SmartHome-Bench, the first benchmark specifically designed for detecting anomalies in smart home scenarios. The dataset comprises 1,203 video clips, each annotated with an event category, anomaly tag, and high-quality video description and reasoning. We assess the performance of state-of-the-art closed-source and open-source MLLMs using various prompting techniques. Notably, we propose the TRLC, a novel LLM chaining framework tailored for VAD tasks, which outperforms other methods and achieves the highest accuracy of 79.05% with Claude-3.5-sonnet.</p>
+
+<h2 class="relative group">7. Acknowledgment
+    <div id="7-acknowledgment" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#7-acknowledgment" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This work is supported by Wyze Labs, Inc. and the University of Washington. We thank Kevin Beussman for donating the videos. We also thank the annotators Lina Liu, Vincent Nguyen, Pengfei Gao, Yunyun Xi, Liting Jia, and Xiaoya Hu for their hard work on data annotation.</p>
+
+<h2 class="relative group">References
+    <div id="references" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#references" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>[1] Josh Achiam, Steven Adler, Sandhini Agarwal, Lama Ahmad, Ilge Akkaya, Florencia Leoni Aleman, Diogo Almeida, Janko Altenschmidt, Sam Altman, Shyamal Anadkat, et al. Gpt-4 technical report. arXiv preprint arXiv:2303.08774 , 2023. 2</li>
+<li>[2] Jean-Baptiste Alayrac, Jeff Donahue, Pauline Luc, Antoine Miech, Iain Barr, Yana Hasson, Karel Lenc, Arthur Mensch, Katherine Millican, Malcolm Reynolds, et al. Flamingo: a visual language model for few-shot learning. Advances in neural information processing systems, 35:23716–23736, 2022. 1 , 2</li>
+<li>[3] Manal Mostafa Ali. Real-time video anomaly detection for smart surveillance. IET Image Processing, 17(5):1375–1388, 2023. 2</li>
+<li>[4] Anthropic. Claude 3.5 sonnet, 2024. Accessed: 2025-04-05. 5</li>
+<li>[5] UABUA Bakar, Hemant Ghayvat, SF Hasanm, and Subhas Chandra Mukhopadhyay. Activity and anomaly detection in smart home: A survey. Next generation sensors and systems, pages 191–220, 2015. 4</li>
+<li>[6] Yassir Bendou, Giulia Lioi, Bastien Pasdeloup, Lukas Mauch, Ghouthi Boukli Hacene, Fabien Cardinaux, and Vincent Gripon. Llm meets vision-language models for zero-shot one-class classification. arXiv preprint arXiv:2404.00675, 2024. 24</li>
+<li>[7] Rohit Bharadwaj, Hanan Gani, Muzammal Naseer, Fahad Shahbaz Khan, and Salman Khan. Vane-bench: Video anomaly evaluation benchmark for conversational lmms. arXiv preprint arXiv:2406.10326, 2024. 2 , 3</li>
+<li>[8] Kellie Corona, Katie Osterdahl, Roderic Collins, and Anthony Hoogs. Meva: A large-scale multiview, multimodal video dataset for activity detection. In Proceedings of the IEEE/CVF winter conference on applications of computer vision, pages 1060–1068, 2021. 3 , 12</li>
+<li>[9] Danny Driess, Fei Xia, Mehdi SM Sajjadi, Corey Lynch, Aakanksha Chowdhery, Brian Ichter, Ayzaan Wahid, Jonathan Tompson, Quan Vuong, Tianhe Yu, et al. Palme: An embodied multimodal language model. arXiv preprint arXiv:2303.03378, 2023. 1 , 2</li>
+<li>[10] Chaoyou Fu, Yuhan Dai, Yondong Luo, Lei Li, Shuhuai Ren, Renrui Zhang, Zihan Wang, Chenyu Zhou, Yunhang Shen, Mengdan Zhang, et al. Video-mme: The first-ever comprehensive evaluation benchmark of multi-modal llms in video analysis. arXiv preprint arXiv:2405.21075, 2024. 3</li>
+<li>[11] Dong Gong, Lingqiao Liu, Vuong Le, Budhaditya Saha, Moussa Reda Mansour, Svetha Venkatesh, and Anton van den Hengel. Memorizing normality to detect anomaly: Memory-augmented deep autoencoder for unsupervised</li>
+</ul>
+<ol start="12">
+<li>anomaly detection. In Proceedings of the IEEE/CVF international conference on computer vision, pages 1705–1714, 2019. 1</li>
+</ol>
+<ul>
+<li>
+<p>[12] Mahmudul Hasan, Jonghyun Choi, Jan Neumann, Amit K Roy-Chowdhury, and Larry S Davis. Learning temporal regularity in video sequences. In Proceedings of the IEEE conference on computer vision and pattern recognition, pages 733–742, 2016. 1</p>
+</li>
+<li>
+<p>[13] Aaron Hurst, Adam Lerer, Adam P Goucher, Adam Perelman, Aditya Ramesh, Aidan Clark, AJ Ostrow, Akila Welihinda, Alan Hayes, Alec Radford, et al. Gpt-4o system card. arXiv preprint arXiv:2410.21276, 2024. 5</p>
+</li>
+<li>
+<p>[14] Hakan Inan, Kartikeya Upasani, Jianfeng Chi, Rashi Rungta, Krithika Iyer, Yuning Mao, Michael Tontchev, Qing Hu, Brian Fuller, Davide Testuggine, et al. Llama guard: Llmbased input-output safeguard for human-ai conversations. arXiv preprint arXiv:2312.06674, 2023. 5</p>
+</li>
+<li>
+<p>[15] Radu Tudor Ionescu, Fahad Shahbaz Khan, Mariana-Iuliana Georgescu, and Ling Shao. Object-centric auto-encoders and dummy anomalies for abnormal event detection in video. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 7842–7851, 2019. 1</p>
+</li>
+<li>
+<p>[16] Jinah Kim and Nammee Moon. Dog behavior recognition based on multimodal data from a camera and wearable device. Applied sciences, 12(6):3199, 2022. 3 , 12</p>
+</li>
+<li>
+<p>[17] Junnan Li, Dongxu Li, Silvio Savarese, and Steven Hoi. Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models. In International conference on machine learning, pages 19730– 19742. PMLR, 2023. 1 , 2</p>
+</li>
+<li>
+<p>[18] KunChang Li, Yinan He, Yi Wang, Yizhuo Li, Wenhai Wang, Ping Luo, Yali Wang, Limin Wang, and Yu Qiao. Videochat: Chat-centric video understanding. arXiv preprint arXiv:2305.06355, 2023. 1</p>
+</li>
+<li>
+<p>[19] Kunchang Li, Yali Wang, Yinan He, Yizhuo Li, Yi Wang, Yi Liu, Zun Wang, Jilan Xu, Guo Chen, Ping Luo, et al. Mvbench: A comprehensive multi-modal video understanding benchmark. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 22195– 22206, 2024. 2</p>
+</li>
+<li>
+<p>[20] Shuo Li, Fang Liu, and Licheng Jiao. Self-training multisequence learning with transformer for weakly supervised video anomaly detection. In Proceedings of the AAAI Conference on Artificial Intelligence, pages 1395–1403, 2022. 1</p>
+</li>
+<li>
+<p>[21] Weixin Li, Vijay Mahadevan, and Nuno Vasconcelos. Anomaly detection and localization in crowded scenes. IEEE transactions on pattern analysis and machine intelligence , 36(1):18–32, 2013. 2</p>
+</li>
+<li>
+<p>[22] Yunxin Li, Xinyu Chen, Baotian Hu, Longyue Wang, Haoyuan Shi, and Min Zhang. Videovista: A versatile benchmark for video understanding and reasoning. arXiv preprint arXiv:2406.11303, 2024. 2</p>
+</li>
+<li>
+<p>[23] Ji Lin, Hongxu Yin, Wei Ping, Pavlo Molchanov, Mohammad Shoeybi, and Song Han. Vila: On pre-training for visual language models. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 26689–26699, 2024. 2 , 5</p>
+</li>
+<li>
+<p>[24] Jixin Liu, Yinyun Xia, and Zheng Tang. Privacy-preserving video fall detection using visual shielding information. The Visual Computer, 37(2):359–370, 2021. 2</p>
+</li>
+<li>
+<p>[25] Wen Liu, Weixin Luo, Dongze Lian, and Shenghua Gao. Future frame prediction for anomaly detection–a new baseline. In Proceedings of the IEEE conference on computer vision and pattern recognition, pages 6536–6545, 2018. 2</p>
+</li>
+<li>
+<p>[26] Yuanxin Liu, Shicheng Li, Yi Liu, Yuxiang Wang, Shuhuai Ren, Lei Li, Sishuo Chen, Xu Sun, and Lu Hou. Tempcompass: Do video llms really understand videos? arXiv preprint arXiv:2403.00476, 2024. 3</p>
+</li>
+<li>
+<p>[27] Cewu Lu, Jianping Shi, and Jiaya Jia. Abnormal event detection at 150 fps in matlab. In Proceedings of the IEEE international conference on computer vision, pages 2720–2727, 2013. 2</p>
+</li>
+<li>
+<p>[28] Hui Lv and Qianru Sun. Video anomaly detection and explanation via large language models. arXiv preprint arXiv:2401.05702, 2024. 2</p>
+</li>
+<li>
+<p>[29] Hui Lv, Chen Chen, Zhen Cui, Chunyan Xu, Yong Li, and Jian Yang. Learning normal dynamics in videos with meta prototype network. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 15425–15434, 2021. 1</p>
+</li>
+<li>
+<p>[30] Muhammad Maaz, Hanoona Rasheed, Salman Khan, and Fahad Shahbaz Khan. Video-chatgpt: Towards detailed video understanding via large vision and language models. arXiv preprint arXiv:2306.05424, 2023. 3</p>
+</li>
+<li>
+<p>[31] Amir Markovitz, Gilad Sharir, Itamar Friedman, Lihi ZelnikManor, and Shai Avidan. Graph embedded pose clustering for anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 10539–10547, 2020. 2</p>
+</li>
+<li>
+<p>[32] Daye Nam, Andrew Macvean, Vincent Hellendoorn, Bogdan Vasilescu, and Brad Myers. Using an llm to help with code understanding. In Proceedings of the IEEE/ACM 46th International Conference on Software Engineering, pages 1–13, 2024. 2</p>
+</li>
+<li>
+<p>[33] Rashmiranjan Nayak, Umesh Chandra Pati, and Santos Kumar Das. A comprehensive review on deep learning-based methods for video anomaly detection. Image and Vision Computing, 106:104078, 2021. 3</p>
+</li>
+<li>
+<p>[34] Apostolos Ntelopoulos and Kamal Nasrollahi. Callm: Cascading autoencoder and large language model for video anomaly detection. In International Conference on Image Processing Theory, Tools and Applications. IEEE, 2024. 2</p>
+</li>
+<li>
+<p>[35] Richard Oelschlager. Evaluating the impact of hallucinations on user trust and satisfaction in llm-based systems, 2024. 2</p>
+</li>
+<li>
+<p>[36] OpenAI. Gpt-4o-mini: Advancing cost-efficient intelligence, 2024. Accessed: 2025-04-05. 5</p>
+</li>
+<li>
+<p>[37] Sharnil Pandya, Hemant Ghayvat, Ketan Kotecha, Mohammed Awais, Saeed Akbarzadeh, Prosanta Gope, Subhas Chandra Mukhopadhyay, and Wei Chen. Smart home anti-theft system: a novel approach for near real-time monitoring and smart home security for wellness protocol. Applied System Innovation, 1(4):42, 2018. 1</p>
+</li>
+<li>
+<p>[38] Jing Ren, Feng Xia, Yemeng Liu, and Ivan Lee. Deep video anomaly detection: Opportunities and challenges. In</p>
+</li>
+</ul>
+<ol start="16">
+<li>2021 international conference on data mining workshops (ICDMW), pages 959–966. IEEE, 2021. 2</li>
+</ol>
+<ul>
+<li>
+<p>[39] Waqas Sultani, Chen Chen, and Mubarak Shah. Real-world anomaly detection in surveillance videos. In Proceedings of the IEEE conference on computer vision and pattern recognition, pages 6479–6488, 2018. 1 , 2</p>
+</li>
+<li>
+<p>[40] Jiayu Sun, Jie Shao, and Chengkun He. Abnormal event detection for video surveillance using deep one-class learning. Multimedia Tools and Applications, 78(3):3633–3647, 2019. 24</p>
+</li>
+<li>
+<p>[41] Gemini Team, Rohan Anil, Sebastian Borgeaud, Yonghui Wu, Jean-Baptiste Alayrac, Jiahui Yu, Radu Soricut, Johan Schalkwyk, Andrew M Dai, Anja Hauth, et al. Gemini: a family of highly capable multimodal models. arXiv preprint arXiv:2312.11805, 2023. 1</p>
+</li>
+<li>
+<p>[42] Gemini Team, Petko Georgiev, Ving Ian Lei, Ryan Burnell, Libin Bai, Anmol Gulati, Garrett Tanzer, Damien Vincent, Zhufeng Pan, Shibo Wang, et al. Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context. arXiv preprint arXiv:2403.05530, 2024. 2 , 5</p>
+</li>
+<li>
+<p>[43] Yu Tian, Guansong Pang, Yuanhong Chen, Rajvinder Singh, Johan W Verjans, and Gustavo Carneiro. Weakly-supervised video anomaly detection with robust temporal feature magnitude learning. In Proceedings of the IEEE/CVF international conference on computer vision, pages 4975–4986, 2021. 1</p>
+</li>
+<li>
+<p>[44] Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Fei Xia, Ed Chi, Quoc V Le, Denny Zhou, et al. Chain-of-thought prompting elicits reasoning in large language models. Advances in neural information processing systems, 35:24824–24837, 2022. 5</p>
+</li>
+<li>
+<p>[45] Kalana Ishara Withanage, Ivan Lee, Russell Brinkworth, Shylie Mackintosh, and Dominic Thewlis. Fall recovery subactivity recognition with rgb-d cameras. IEEE transactions on industrial informatics, 12(6):2312–2320, 2016. 2</p>
+</li>
+<li>
+<p>[46] Peng Wu and Jing Liu. Learning causal temporal relation and feature discrimination for anomaly detection. IEEE Transactions on Image Processing, 30:3513–3527, 2021. 1</p>
+</li>
+<li>
+<p>[47] Peng Wu, Jing Liu, Yujia Shi, Yujia Sun, Fangtao Shao, Zhaoyang Wu, and Zhiwei Yang. Not only look, but also listen: Learning multimodal violence detection under weak supervision. In Computer Vision–ECCV 2020: 16th European Conference, Glasgow, UK, August 23–28, 2020, Proceedings, Part XXX 16, pages 322–339. Springer, 2020. 2</p>
+</li>
+<li>
+<p>[48] Tongshuang Wu, Michael Terry, and Carrie Jun Cai. Ai chains: Transparent and controllable human-ai interaction by chaining large language model prompts. In Proceedings of the 2022 CHI conference on human factors in computing systems, pages 1–22, 2022. 5</p>
+</li>
+<li>
+<p>[49] Junbin Xiao, Xindi Shang, Angela Yao, and Tat-Seng Chua. Next-qa: Next phase of question-answering to explaining temporal actions. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 9777–9786, 2021. 2</p>
+</li>
+<li>
+<p>[50] Xiaohao Xu, Yunkang Cao, Yongqi Chen, Weiming Shen, and Xiaonan Huang. Customizing visual-language foundation models for multi-modal anomaly detection and reasoning. arXiv preprint arXiv:2403.11083, 2024. 2</p>
+</li>
+<li>
+<p>[51] Salisu Wada Yahaya, Ahmad Lotfi, and Mufti Mahmud. Towards a data-driven adaptive anomaly detection system for human activity. Pattern Recognition Letters, 145:200–207, 2021. 2</p>
+</li>
+<li>
+<p>[52] Masaaki Yamauchi, Yuichi Ohsita, Masayuki Murata, Kensuke Ueda, and Yoshiaki Kato. Anomaly detection in smart home operation from user behaviors and home conditions. IEEE Transactions on Consumer Electronics, 66(2):183– 192, 2020. 4</p>
+</li>
+<li>
+<p>[53] Yuchen Yang, Kwonjoon Lee, Behzad Dariush, Yinzhi Cao, and Shao-Yuan Lo. Follow the rules: Reasoning for video anomaly detection with large language models. arXiv preprint arXiv:2407.10299, 2024. 2</p>
+</li>
+<li>
+<p>[54] M Zaigham Zaheer, Arif Mahmood, M Haris Khan, Mattia Segu, Fisher Yu, and Seung-Ik Lee. Generative cooperative learning for unsupervised video anomaly detection. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 14744–14754, 2022. 1</p>
+</li>
+<li>
+<p>[55] Luca Zanella, Willi Menapace, Massimiliano Mancini, Yiming Wang, and Elisa Ricci. Harnessing large language models for training-free video anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 18527–18536, 2024. 2</p>
+</li>
+<li>
+<p>[56] Huaxin Zhang, Xiaohao Xu, Xiang Wang, Jialong Zuo, Chuchu Han, Xiaonan Huang, Changxin Gao, Yuehuan Wang, and Nong Sang. Holmes-vad: Towards unbiased and explainable video anomaly detection via multi-modal llm. arXiv preprint arXiv:2406.12235, 2024. 2</p>
+</li>
+<li>
+<p>[57] Junge Zhang, Yanhu Shan, and Kaiqi Huang. Isee smart home (ish): Smart video analysis for home security. Neurocomputing, 149:752–766, 2015. 3 , 12</p>
+</li>
+<li>
+<p>[58] Sijie Zhu, Chen Chen, and Waqas Sultani. Video anomaly detection for smart surveillance. In Computer Vision: A Reference Guide, pages 1315–1322. Springer, 2021. 2</p>
+</li>
+</ul>
+
+<h2 class="relative group">A. Video Collection
+    <div id="a-video-collection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-video-collection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>To curate our SmartHome-Bench dataset, we collect videos from public sources, such as YouTube. We craft a keyword set to crawl and identify videos with anomalies in smart homes. To achieve this, we survey the literature on different aspects, such as home security [8], family care [57], and pet monitoring [16]. Additionally, we develop a separate keyword set to capture typical, normal events in smart homes. These keywords are then refined with input from smart home experts. Table 7 shows examples of keywords used in the search process. For each keyword, we collect approximately 20 videos from YouTube, resulting in an initial pool of 8,611 videos. We then filter out irrelevant footage, such as edited content and videos not captured by smart home cameras. For relevant videos that contain advertisements, we trim these segments to ensure the videos are clean. This curation process results in the final SmartHome-Bench dataset, comprising 1,203 videos recorded by both indoor and outdoor smart home cameras.</p>
+<p>Table 7. Example keywords for searching normal and abnormal videos.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Example Keywords</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Normal Videos</td>
+          <td>Normal Videos sleeping crib, kid surveillance, elderly resting safe, senior camera m visitor arrival video, vehicle arriving home, scheduled delivery h ibkdl hbkd iid</td>
+      </tr>
+      <tr>
+          <td>Abnormal Videos</td>
+          <td>vomiting home cam, child wandering outside, kid sharp objects, child sudden fall, se r unexpected fall, senior physical distress, elderly rough caregiver, unauthorized entry empt, package theft, car theft driveway, broken window home, suspicious person home, ere weather property, fire damage home, earthquake home safety, severe wind backyard, nderstorm backyard, flood property risk</td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 class="relative group">B. Smart Home Anomaly Taxonomy
+    <div id="b-smart-home-anomaly-taxonomy" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b-smart-home-anomaly-taxonomy" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We present a comprehensive taxonomy for video anomalies in the smart home domain. This taxonomy is developed based on user study, focusing on seven areas like security, senior care, and pet monitoring, and is further refined by smart home experts. Each category is further divided into normal and abnormal videos, with detailed descriptions provided for both.</p>
+
+<h2 class="relative group">1. Wildlife
+    <div id="1-wildlife" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-wildlife" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">Normal Videos:
+    <div id="normal-videos" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#normal-videos" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>– Harmless Wildlife: Harmless wildlife sightings, such as squirrels, birds, or rabbits, moving through the yard.</li>
+<li>– Common Pests: Common pest activity that doesn&rsquo;t pose immediate danger (e.g., bugs in the garden).</li>
+</ul>
+
+<h2 class="relative group">Abnormal Videos:
+    <div id="abnormal-videos" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abnormal-videos" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>– Dangerous Wildlife: Presence of dangerous wildlife like snakes, spiders, or raccoons that may pose a health risk.</li>
+<li>– Wildlife Damage: Any wildlife activity that causes or potentially causes damage to property or threatens human or pet safety.</li>
+<li>– Indoor Wildlife: Any wildlife (dangerous or not) that enters a home without clear containment.</li>
+</ul>
+
+<h2 class="relative group">2. Pet Monitoring
+    <div id="2-pet-monitoring" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-pet-monitoring" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">Normal Videos:
+    <div id="normal-videos-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#normal-videos-1" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>– Routine Pet Activity: Pets engaging in regular play, resting or moving around within designated safe areas.</li>
+<li>– Safe Interaction: Pets interacting with known family members or other pets.</li>
+<li>– Supervised Pets: Pets accompanied by their guardian without interacting with property or people in harmful ways. Abnormal Videos:</li>
+<li>– Unattended Pets: Pets left outside alone for extended periods.</li>
+<li>– Escape Attempts: Pets attempting to escape, leaving the designated area, or exhibiting behaviors indicating escape attempts.</li>
+<li>– Destructive Behavior: Pets causing property damage by actions like chewing, scratching, or digging.</li>
+<li>– Distress Signals: Behaviors that indicate illness or distress, like vomiting, excessive scratching, or erratic movements.</li>
+<li>– Conflict or Injury Risk: Any interaction with others that could lead to conflict or injury.</li>
+</ul>
+
+<h2 class="relative group">3. Baby Monitoring
+    <div id="3-baby-monitoring" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-baby-monitoring" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">Normal Videos:
+    <div id="normal-videos-2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#normal-videos-2" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>– Safe Play: Baby engaging in play or sleep within safe zones or under supervision.</li>
+<li>– Caregiver Interaction: Harmless interactions between the baby and caregivers.</li>
+</ul>
+
+<h2 class="relative group">Abnormal Videos:
+    <div id="abnormal-videos-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abnormal-videos-1" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>– Near Danger: Baby nearing dangerous zones (e.g., staircases, swimming pools) without adult supervision.</li>
+<li>– Unattended Baby: Baby wandering outside a crib, stroller, or designated play area without adult presence.</li>
+<li>– Injury Risk: Sudden, unexpected falls that may lead to injury.</li>
+<li>– Baby Abuse: Any abusive behavior toward the baby, such as hitting, or forcing them to act against their will.</li>
+</ul>
+
+<h2 class="relative group">4. Kid Monitoring
+    <div id="4-kid-monitoring" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-kid-monitoring" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">Normal Videos:
+    <div id="normal-videos-3" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#normal-videos-3" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>– Safe Play: Kids playing or moving around indoors or outdoors within designated areas.</li>
+<li>– Routine Activities: Regular daily activities under adult supervision.</li>
+</ul>
+
+<h2 class="relative group">Abnormal Videos:
+    <div id="abnormal-videos-2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abnormal-videos-2" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>– Wandering: Kids found wandering outdoors or in dangerous locations without adult supervision.</li>
+<li>– Dangerous Actions: Dangerous actions indoors (e.g., playing with sharp objects, accessing restricted areas) or significant health/safety concerns (e.g., choking hazards).</li>
+<li>– Injury Risk: Sudden, unexpected falls that may lead to injury.</li>
+</ul>
+
+<h2 class="relative group">5. Senior Care
+    <div id="5-senior-care" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-senior-care" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">Normal Videos:
+    <div id="normal-videos-4" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#normal-videos-4" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>– Routine Activity: Seniors engaging in routine activities like walking, resting, or interacting with caregivers or family. Abnormal Videos:</li>
+<li>– Senior Falls: Sudden, unexpected falls that may lead to injury.</li>
+<li>– Distress Signals: Signs of distress or calls for help through hand gestures or unusual body language.</li>
+<li>– Elder Abuse: Any abusive or rough behavior by caregivers toward seniors, including verbal and physical abuse.</li>
+</ul>
+
+<h2 class="relative group">6. Security
+    <div id="6-security" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-security" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">Normal Videos:
+    <div id="normal-videos-5" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#normal-videos-5" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>– Routine Activity: Routine activity of homeowners, known visitors, or vehicles arriving and leaving.</li>
+<li>– Scheduled Delivery: Scheduled package deliveries or pickups without interference.</li>
+</ul>
+
+<h2 class="relative group">Abnormal Videos:
+    <div id="abnormal-videos-3" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abnormal-videos-3" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>– Unauthorized Entry: Motion or presence indicating potential break-ins, or trespassing.</li>
+<li>– Suspicious Loitering: Loitering individuals or those wearing unusual attire that deviates from the norm.</li>
+<li>– Forced Entry: Forced entry attempts, such as fiddling with locks, tampering with doors or windows, or trying to enter a home or vehicle through unconventional means.</li>
+<li>– Theft or Vandalism: Unauthorized removal of packages, vehicles, or other items.</li>
+<li>– Property Damage: Acts of property damage like graffiti, broken windows, car crashes, or other forms of vandalism.</li>
+<li>– Violence or Threats: Actions that might cause harm, such as kidnapping, aggressive confrontations, or any threatening behavior.</li>
+<li>– Disturbing Behavior: Unusual or eccentric behavior by individuals that could alarm or frighten viewers.</li>
+</ul>
+
+<h2 class="relative group">7. Other Category
+    <div id="7-other-category" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#7-other-category" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">Normal Videos:
+    <div id="normal-videos-6" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#normal-videos-6" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>– Everyday Activity: Videos that do not fit any of the above categories but show harmless, everyday activities, such as trees waving, normal weather events, or background motion.</li>
+</ul>
+
+<h2 class="relative group">Abnormal Videos:
+    <div id="abnormal-videos-4" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abnormal-videos-4" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>– Severe Weather: Severe weather conditions or natural disasters like fires, earthquakes, floods, or storms causing property damage or safety hazards.</li>
+<li>– Unexplained Phenomena: Unexplained phenomena of inanimate objects.</li>
+<li>– Falling Objects: Sudden, unexpected falls of inanimate objects that may cause damage or injury.</li>
+<li>– Risky activities: Irregular activities that do not fit into other categories but may pose risks or concerns.</li>
+</ul>
+
+<h2 class="relative group">C. Video Annotation
+    <div id="c-video-annotation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c-video-annotation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>During the video annotation process, we assign unique IDs to the downloaded videos to prevent annotators from being influenced by the original titles or metadata. The annotators classify each video into one or more of the seven categories in the taxonomy outlined in Appendix B, as real-world events in a single video may span multiple categories. Each video is then assigned an anomaly tag of normal , abnormal, or vague abnormal, based on the definitions outlined in the</p>
+<p>taxonomy. The vague abnormal category is created for videos where annotators cannot reach a consensus on whether the content is normal or abnormal. This category is specifically introduced to challenge the video anomaly detection (VAD) capabilities of multi-modal large language models (MLLMs) with videos that are difficult for even humans to classify. A vague normal category is not included, as any ambiguity regarding the presence of an anomaly is classified under vague abnormal .</p>
+<p>We instruct annotators to write high-quality video descriptions and provide detailed reasoning for the assignment of each video&rsquo;s anomaly tag. These annotations establish a strong foundation for future research by enabling the generation of diverse question-answer pairs to assess the video understanding and reasoning capabilities of MLLMs. Additionally, the inclusion of ground-truth reasoning ensure a transparent inference process for classifying normal and abnormal videos, which can be leveraged to fine-tune MLLMs and improve anomaly detection accuracy in smart home scenarios. To maintain consistency and quality across video descriptions and reasoning annotations, we use the Gemini-1.5-pro model to generate initial drafts. Annotators then review each video and refine or rewrite these drafts according to three main criteria: (1) clarity and precision of language, (2) alignment of descriptions and reasoning with the video content, and (3) accuracy in identifying key elements such as objects triggering anomalies, abnormal movements, participants, and environmental conditions.</p>
+<p>Figure 9. The UI enables annotators to label videos by selecting event categories, assigning anomaly tags, and providing detailed video descriptions along with the reasoning behind the observed anomalies or normality.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000008_22c866750172adf51c5f08ec01694388176aefa91c592d60c7007d321d545ecf.png"
+    ></figure>
+<p>To streamline the annotation process and maximize efficiency, annotators use a customized user interface (UI), shown in Figure 9, to label each video&rsquo;s event category and anomaly tag, as well as to manually write the description and reasoning. To ensure the quality and consistency of the annotations, we conduct a human review of a randomly select 200 videos after the initial round of annotation .</p>
+<p>Following the annotation process for all 1,203 videos, the statistics of the SmartHome-Bench dataset are presented in Figure 1a of the main paper. The dataset shows a balanced distribution between abnormal and normal videos, with the</p>
+<p>security category containing the largest number of videos among the seven event categories. Additionally, Figure 10 illustrates the distribution of video durations and word counts for descriptions and reasoning annotations. The average video length is approximately 20 seconds, with most clips being shorter than 80 seconds. This duration aligns well with the frameprocessing limitations of some existing MLLMs, enabling relatively comprehensive predictions in VAD tasks. The word count distribution reveals that reasoning annotations are typically more concise than descriptions, as they focus solely on the key event leading to the assigned anomaly tag. In contrast, descriptions provide a detailed account of all events within the video.</p>
+<p>Figure 10. Distribution of video durations and word counts for human-annotated video descriptions and reasoning.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000009_325362785d76fd9671a2c3290980331373d437dc3545df0cc26cc13fb9f2c8ca.png"
+    ></figure>
+
+<h2 class="relative group">D. Prompts for Adaptation Methods and In-Depth Analysis
+    <div id="d-prompts-for-adaptation-methods-and-in-depth-analysis" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d-prompts-for-adaptation-methods-and-in-depth-analysis" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We provide all prompts used for adaptation methods and error diagnosis in in-depth analysis as follows.</p>
+
+<h2 class="relative group">D.1. System Prompt for Vanilla Adaptations
+    <div id="d1-system-prompt-for-vanilla-adaptations" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d1-system-prompt-for-vanilla-adaptations" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Figure 11 shows the prompts used in zero-shot prompting for the VAD task.</p>
+<p>Zero
+ot p -
+r Shot Prompting for Video Normality Detection
+rompting for VAD. MLLMs are prom Zero-Shot Prompting for Video Normality Detection
+Figure 11. System prompts adopted in zero-shot prompting for VAD. MLLMs are prompted directly to return a binary anomaly label.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000010_e634832ea376d3f6493a117389ca52282b22553966458ce4a7c043fb127604a3.png"
+    ></figure>
+<p>Please watch the video carefully and determine whether the situation captured in the video is normal.
+pts used is normal.
+Figure 12 shows the prompts used in chain-of-thought (CoT) prompting for the VAD task.</p>
+<p>Response Format:</p>
+<p>Reply using the following format:</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000011_e09d345e4333f8792c1840cf933a15b1f713935b74f1ab9b85a82759660a5016.png"
+    ></figure>
+<p>movements, and environmental conditions (max 200 words)&quot;,</p>
+<p>&ldquo;reasoning&rdquo;: &ldquo;Detailed reasoning for why the situation is considered abnormal or</p>
+<p>concerning, if applicable (max 100 words)&rdquo;,
+d in CoT prompting include task i &ldquo;anomaly&rdquo;: 0 or 1 // 0 for no anomaly detected, 1 for anomaly detected
+Chain-of-Thought Prompting for Video Normality D
+ppg ,
+ttiidditiidi }
+th y&quot;: 0 or
+Chain
+p 1
+//
+of
+p 0
+0 for no anomaly detected, 1 for anomaly detected
+Thought Prompting for Video Normality Detection
+g ,
+ating video descriptionsproviding reasoninga concerning, if applicable (max 100 words)&quot;,
+&ldquo;aoal&quot;0 o1 // 0 foo aoaldetected1 foaoaldetected
+ChifThht PtifVidNlitDtti
+Figure 12. System prompts adopted in CoT prompting include task instructions, smart home anomaly definitions, and video input, guiding anomaly: 0 or 1 // 0 for no anomaly detected, 1 for anomaly detected
+}
+ChainofThought Prompting for Video Normality Detection
+MLLMs to complete the task in three steps: generating video descriptions, providing reasoning, and predicting the anomaly label.</p>
+<p>You are an excellent smart video vigilance expert agent in the smart home security domain.</p>
+<p>Task Instruction:</p>
+<p>You are given a smart home video clip, and your job is to carefully identify normal, expected, or ordinary situations captured by the surveillance cameras. These cameras are set up by</p>
+<p>users to enhance their safety and security. Keep in mind that the people in the video may or may not be the camera owners.</p>
+<p>Normality Definition:</p>
+<p>In this context, normality refers to behaviors or events that are typical and do not raise concerns related to security, personal safety, child safety, wildlife activity, pet behavior,</p>
+<p>senior monitoring, or any other situations that seem usual.</p>
+<p>Response Format:</p>
+<p>Please think step by step and respond using the format below:</p>
+<p>{</p>
+<p>}</p>
+<p>&ldquo;video_description&rdquo;: &ldquo;A concise description of the video content, including objects, movements, and environmental conditions (max 200 words)&rdquo;,</p>
+<p>&ldquo;reasoning&rdquo;: &ldquo;Detailed reasoning for why the situation is considered normal and not concerning, if applicable (max 100 words)”</p>
+<p>,</p>
+<p>&ldquo;normality&rdquo;: 0 or 1 // 0 for the video is normal, 1 for anomaly detected</p>
+<p>Figure 13 shows the prompts used in the few-shot CoT prompting for the VAD task.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000012_4b0033a8a1ab56b5265b661de2164c8736cdc3ff677a9b5390f4451d6bbe7ffb.png"
+    ></figure>
+<p>Figure 13. System prompts adopted in few-shot CoT prompting for VAD. Each example provided includes a video description, anomaly reasoning, and the corresponding ground-truth anomaly label.</p>
+
+<h2 class="relative group">D.2. System Prompt for In-Context Learning
+    <div id="d2-system-prompt-for-in-context-learning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d2-system-prompt-for-in-context-learning" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The prompts used in in-context learning (ICL) for the VAD task are shown in Figure 14 .</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000013_f2c089618bb95add3bde30e1f617f0c3bc8367e04f85a8df36cf115f5a980385.png"
+    ></figure>
+<p>Figure 14. System prompts adopted in ICL for VAD. Building upon the CoT prompt, we include the complete anomaly taxonomy as a reference.</p>
+
+<h2 class="relative group">D.3. System Prompt for Taxonomy-Driven Reflective LLM Chain
+    <div id="d3-system-prompt-for-taxonomy-driven-reflective-llm-chain" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d3-system-prompt-for-taxonomy-driven-reflective-llm-chain" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The prompts used in the taxonomy-driven reflective LLM chain (TRLC) framework for the VAD task are detailed as follows. First, the prompts in Figure 15 are used in step (a) of the TRLC to generate rules from the complete video anomaly taxonomy, with the resulting rules from step (a) shown in Figure 16. Next, the prompts in Figure 17 are employed to predict the initial detection for the VAD task. Finally, the self-reflection step is carried out using the prompts provided in Figure 18 .</p>
+<p>Figure 15. System prompts adopted in step (a) of the TRLC for VAD: taxonomy-driven rule generation.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000014_09e948ba55b06e799c7b59bad9f8c7fb7c33d6343c9fba27cb8f44d58b001ec1.png"
+    ></figure>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000015_372f1261c0014dcabdb4d2e72be67c7a0d1d4a5e76b30aea2b8ff2646cae80a8.png"
+    ></figure>
+<p>&ldquo;Rule 10: Identify individuals tampering with locks, attempting forced entry, or wearing</p>
+<p>Figure 16. 10 rules generated from the full video anomaly taxonomy in step (a) of TRLC by GPT-4o.
+TRLC for Video Anomaly Detection: Initial Prediction (Step b)
+unusual attire.
+] 0 rules generat
+TRLC
+unusual attire.&rdquo; ]</p>
+<p>P
+}</p>
+<p>Prompt:
+}</p>
+<p>You are an excellent smart video vigilance expert agent in the smart home security domain.</p>
+
+<h2 class="relative group">Task Instruction:
+    <div id="task-instruction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#task-instruction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Figure 17. System prompts adopted in step (b) of the TRLC for VAD: initial prediction. (These prompts are identical to the CoT prompts shown in Figure 12).</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000016_2921879a2deb068fad5dcb520c3f0fd37d566b775f6919125fb5f1a0f2b42bb4.png"
+    ></figure>
+<p>Figure 18. System prompts adopted in step (c) of the TRLC for VAD: self-reflection.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000017_49e2a9c37e41553d03af118c6dcaff53a7d3d31cb5abf73f85293dca66d1ba02.png"
+    ></figure>
+
+<h2 class="relative group">D.4. System Prompt for Error Diagnosis in In-Depth Analysis
+    <div id="d4-system-prompt-for-error-diagnosis-in-in-depth-analysis" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d4-system-prompt-for-error-diagnosis-in-in-depth-analysis" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We use the prompts in Figure 19 and Figure 20 to evaluate MLLM-generated video descriptions and reasoning against human-annotated counterparts, respectively.</p>
+<p>Figure 19. System prompts adopted in evaluating the MLLM-generated video description for VAD.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000018_dda938cb7ee58d8d9bb922294270d7a932d73a65a0cf5a39d30678f88720529b.png"
+    ></figure>
+<p>Figure 20. System prompts adopted in evaluating the MLLM-generated video reasoning for VAD.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000019_75330cc8e1105944f656ad73bf5eeb359817471d1fe7a4af60a2c1665c483d38.png"
+    ></figure>
+<p>Table 8. Performance of MLLMs with two prompt frames: accuracy, precision, recall (%), and processing time (s) compared across different MLLMs using zero-shot prompting (AD: anomaly detection, ND: normality detection).</p>
+<table>
+  <thead>
+      <tr>
+          <th>Model</th>
+          <th>Accuracy</th>
+          <th>Accuracy</th>
+          <th>Precision</th>
+          <th>Precision</th>
+          <th>Recall</th>
+          <th>Recall</th>
+          <th>Video Processing Time</th>
+          <th>Video Processing Time</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Model</td>
+          <td>AD</td>
+          <td>ND</td>
+          <td>AD</td>
+          <td>ND</td>
+          <td>AD</td>
+          <td>ND</td>
+          <td>AD</td>
+          <td>ND</td>
+      </tr>
+      <tr>
+          <td>Gemini-1.5-flash</td>
+          <td>58.44</td>
+          <td>72.90</td>
+          <td>79.22</td>
+          <td>81.36</td>
+          <td>31.12</td>
+          <td>64.56</td>
+          <td>3.43</td>
+          <td>3.26</td>
+      </tr>
+      <tr>
+          <td>Gemini-1.5-pro</td>
+          <td>57.36</td>
+          <td>74.15</td>
+          <td>84.34</td>
+          <td>86.58</td>
+          <td>25.73</td>
+          <td>61.63</td>
+          <td>4.14</td>
+          <td>4.02</td>
+      </tr>
+      <tr>
+          <td>GPT-4o</td>
+          <td>68.41</td>
+          <td>70.74</td>
+          <td>80.09</td>
+          <td>82.07</td>
+          <td>55.16</td>
+          <td>58.55</td>
+          <td>10.15</td>
+          <td>9.79</td>
+      </tr>
+      <tr>
+          <td>GPT-4o-mini</td>
+          <td>69.91</td>
+          <td>73.07</td>
+          <td>76.52</td>
+          <td>78.66</td>
+          <td>63.79</td>
+          <td>68.72</td>
+          <td>10.09</td>
+          <td>10.39</td>
+      </tr>
+      <tr>
+          <td>Claude-3.5-sonnet</td>
+          <td>70.82</td>
+          <td>74.06</td>
+          <td>69.66</td>
+          <td>82.97</td>
+          <td>81.36</td>
+          <td>65.33</td>
+          <td>20.87</td>
+          <td>21.51</td>
+      </tr>
+      <tr>
+          <td>VILA-13b</td>
+          <td>46.05</td>
+          <td>55.28</td>
+          <td>0.00</td>
+          <td>78.46</td>
+          <td>0.00</td>
+          <td>23.57</td>
+          <td>1.38</td>
+          <td>1.28</td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 class="relative group">E. Additional Experiments
+    <div id="e-additional-experiments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#e-additional-experiments" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">E.1. Comparison between Anomaly Detection and Normality Detection
+    <div id="e1-comparison-between-anomaly-detection-and-normality-detection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#e1-comparison-between-anomaly-detection-and-normality-detection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Anomaly detection is a classical binary classification task [6]. In the context of VAD, we employ two distinct prompt frames to evaluate the accuracy of MLLMs in this classification task. First, we prompt the MLLMs to identify abnormal events within a sequence of normal activities, targeting the anomaly detection task. Conversely, given that &ldquo;normal videos&rdquo; constitute the majority of training data [40], we also frame the task as a normality detection issue, prompting MLLMs to justify whether a video is normal. This bidirectional approach allows for a comprehensive evaluation of the MLLMs&rsquo; capabilities in understanding and reasoning about smart home video clips, highlighting performance differences across different task frames in MLLM-based VAD.</p>
+<p>Zero-Shot Prompting The zero-shot prompt for anomaly detection is illustrated in Figure 11, while the prompt for normality detection is provided in Figure 21. Table 8 presents the VAD results for both anomaly detection and normality detection
+Zero-Shot Prompting for Video Anomaly Detection tasks using zero-shot prompting. All MLLMs, except Claude-3.5-sonnet, achieve higher accuracy, precision, and recall in the normality detection task. VILA-13b classifies all videos as normal when tasked with anomaly detection, emphasizing its
+Please watch the video carefully and determine whether it contains any anomalies. limitations in zero-shot VAD tasks, despite being the fastest model in processing videos. Given that VAD is a binary classifi-
+Response Format: cation task, the random guess accuracy is 50%. Even the best-performing MLLMs achieve accuracy close to this threshold,
+Reply using the following format:
+{ highlighting their limited understanding of anomalies in smart home contexts. These results likely reflect the models&rsquo; train-
+{
+&ldquo;anomaly&rdquo;: 0 or 1 // 0 for no anomaly detected, 1 for anomaly detected ing on datasets primarily composed of normal videos, leading to stronger prior knowledge of normal events in smart home
+} scenarios. taskVILA-13b classifies all videos as normal when tasked with an
+Please watch the video carefully and determine whether it contains any anomalies. VAD tasksdesp
+Response Format: guess accuracy is 50%Ev
+Reply using the following format: g
+d
+{ understanding of anomalies in smart home contexts. The
+&ldquo;anomaly&rdquo;: 0 or 1 // 0 for no anomaly detected, 1 for anomaly detected y
+} able
+Zero 8
+8 presents the VAD results for both an
+Shot Prompting for Video Anomaly Detection</p>
+<p>Figure 21. System prompts adopted in zero-shot prompting for video normality detection.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000020_b76f82a7653f67927c682188e36f8f749528bacc448b8e974cb6245997f1d458.png"
+    ></figure>
+<p>Chain</p>
+<ul>
+<li></li>
+</ul>
+<p>of</p>
+<ul>
+<li></li>
+</ul>
+<p>Thought Prompting for Video Anomaly Detection</p>
+<p>You are an excellent smart video vigilance expert agent in the smart home security domain.
+t question arises: does this trend continue with CoT prompting? CoT Prompting Given that all MLLMs perform better on normality detection than anomaly detection with zero-shot You are an excellent smart video vigilance expert agent in the smart home secu
+prompting, an important question arises: does this trend continue with CoT prompting?</p>
+<p>Task Instruction:
+valuate CoT pe You are given a smart home video clip, and your job is to carefully identify potentially risky,
+py y
+2 and Figure 22respectivelyAs shown in Table 9for the AD results suspicious, or anomalous situations captured by the surveillance cameras. These cameras
+2 and Figure 22, respectively. As shown in Table 9, for the AD results, are set up by users to enhance their safety and security. Keep in mind that the people in the
+pared to the zero-shot prompting in Table 8, meeting expectations for CoT video may or may not be the camera owners.
+ty detection declines with CoT prom Task Instruction:
+Yit hidlid jb itfllidtifttillik
+To investigate, we evaluate CoT performance for both anomaly detection and normality detection. The prompts used You are given a smart home video clip, and your job is to carefully identify potentially risky,
+suspiciousor anomalous situations captured by the surveillance camerasThese cameras
+are detailed in Figure 12 and Figure 22, respectively. As shown in Table 9, for the AD results, CoT prompting improves are set up by users to enhance their safety and security. Keep in mind that the people in the
+accuracy and recall compared to the zero-shot prompting in Table 8, meeting expectations for CoT&rsquo;s effectiveness. However, video may or may not be the camera owners.
+performance in normality detection declines with CoT prompting. While four MLLMs achieve over 90% precision in the</p>
+<p>Anomaly Definition:</p>
+<p>In this context, anomalies refer to behaviors or events that raise concerns related to</p>
+<p>security, personal safety, child safety, wildlife alerts, unusual pet behavior, senior
+24 ale
+24</p>
+<p>monitoring, or any other situations that seem out of the ordinary.</p>
+<p>Response Format:</p>
+<p>Please think step by step and respond using the format below:</p>
+<p>{</p>
+<p>}</p>
+<p>&ldquo;video_description&rdquo;: &ldquo;A concise description of the video content, including objects, movements, and environmental conditions (max 200 words)&rdquo;,</p>
+<p>&ldquo;reasoning&rdquo;: &ldquo;Detailed reasoning for why the situation is considered abnormal or concerning, if applicable (max 100 words)&rdquo;,</p>
+<p>&ldquo;anomaly&rdquo;: 0 or 1 // 0 for no anomaly detected, 1 for anomaly detected</p>
+<p>Chain</p>
+<ul>
+<li></li>
+</ul>
+<p>of</p>
+<ul>
+<li></li>
+</ul>
+<p>Thought Prompting for Video Anomaly Detection</p>
+<p>You are an excellent smart video vigilance expert agent in the smart home security domain.</p>
+<p>Task Instruction:</p>
+<p>You are given a smart home video clip, and your job is to carefully identify potentially risky, suspicious, or anomalous situations captured by the surveillance cameras. These cameras</p>
+<p>are set up by users to enhance their safety and security. Keep in mind that the people in the video may or may not be the camera owners.</p>
+<p>Anomaly Definition:</p>
+<p>In this context, anomalies refer to behaviors or events that raise concerns related to security, personal safety, child safety, wildlife alerts, unusual pet behavior, senior</p>
+<p>monitoring, or any other situations that seem out of the ordinary.</p>
+<p>Response Format:</p>
+<p>Please think step by step and respond using the format below:</p>
+<p>{</p>
+<p>}</p>
+<p>Figure 22. System prompts adopted in CoT prompting for video normality detection.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000021_9f9b797dcfc56719304c3798fd3670ad8847cb0194b0c7f3e6d0e894a50bf53d.png"
+    ></figure>
+<p>Table 9. Performance of MLLMs with two prompt frames: accuracy, precision, recall (%), and processing time (s) compared across different MLLMs using CoT prompting (AD: anomaly detection, ND: normality detection).</p>
+<table>
+  <thead>
+      <tr>
+          <th>Mdl</th>
+          <th>Accuracy</th>
+          <th>Accuracy</th>
+          <th>Precision</th>
+          <th>Precision</th>
+          <th>Recall</th>
+          <th>Recall</th>
+          <th>Video Processing Time</th>
+          <th>Video Processing Time</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Model</td>
+          <td>AD</td>
+          <td>ND</td>
+          <td>AD</td>
+          <td>ND</td>
+          <td>AD</td>
+          <td>ND</td>
+          <td>AD</td>
+          <td>ND</td>
+      </tr>
+      <tr>
+          <td>Gemini-1.5-flash</td>
+          <td>69.58</td>
+          <td>45.47</td>
+          <td>74.44</td>
+          <td>40.00</td>
+          <td>66.41</td>
+          <td>2.16</td>
+          <td>4.61</td>
+          <td>4.57</td>
+      </tr>
+      <tr>
+          <td>Gemini-1.5-pro</td>
+          <td>74.06</td>
+          <td>61.60</td>
+          <td>83.77</td>
+          <td>93.90</td>
+          <td>64.41</td>
+          <td>30.82</td>
+          <td>7.05</td>
+          <td>6.83</td>
+      </tr>
+      <tr>
+          <td>GPT-4o</td>
+          <td>72.57</td>
+          <td>57.94</td>
+          <td>83.02</td>
+          <td>100.00</td>
+          <td>61.79</td>
+          <td>22.03</td>
+          <td>12.55</td>
+          <td>14.27</td>
+      </tr>
+      <tr>
+          <td>GPT-4o-mini</td>
+          <td>68.83</td>
+          <td>49.46</td>
+          <td>68.07</td>
+          <td>100.00</td>
+          <td>79.51</td>
+          <td>6.32</td>
+          <td>12.28</td>
+          <td>13.39</td>
+      </tr>
+      <tr>
+          <td>Claude-3.5-sonnet</td>
+          <td>71.90</td>
+          <td>54.20</td>
+          <td>83.44</td>
+          <td>95.37</td>
+          <td>59.78</td>
+          <td>15.87</td>
+          <td>24.49</td>
+          <td>24.09</td>
+      </tr>
+      <tr>
+          <td>VILA-13b</td>
+          <td>68.41</td>
+          <td>43.39</td>
+          <td>68.45</td>
+          <td>13.64</td>
+          <td>76.89</td>
+          <td>0.92</td>
+          <td>6.74</td>
+          <td>11.56</td>
+      </tr>
+  </tbody>
+</table>
+<p>normality detection task, the overall accuracy drops significantly compared to the ND results in Table 8. This suggests that while MLLMs have a solid grasp of normality, CoT prompting reinforces their existing strengths without addressing their weaknesses in anomaly detection, resulting in a decrease in overall VAD accuracy. In terms of efficiency, Gemini-1.5-flash emerges as the fastest model with CoT prompting, whereas VILA-13b, previously the fastest, likely loses this advantage due to difficulties in processing longer prompts.</p>
+<p>From the comparison between two prompt frames under zero-shot and CoT prompting, we observe that a feasible way to stably enhance MLLM VAD performance is to focus on anomaly detection while enriching the prompt with contextual information about anomalies in smart home scenarios. This strategy helps compensate for the models&rsquo; inherent limited understanding of anomalies.</p>
+
+<h2 class="relative group">E.2. Evaluation on Video Understanding of MLLMs
+    <div id="e2-evaluation-on-video-understanding-of-mllms" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#e2-evaluation-on-video-understanding-of-mllms" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>From Figure 7 and Figure 8 in the main paper, we analyze the five failure types where MLLMs failed to generate correct video description and reasoning. Additionally, we examine the distribution of MLLM outcomes for video description and reasoning across three ground-truth anomaly tags, i.e., Normal , Abnormal, and Vague Abnormal, as shown in Figures 23 and 24, respectively. The possible outcomes are defined as follows: (1) Correct: the MLLM&rsquo;s response matches the annotated description or reasoning; (2) Error: the MLLM generates &ldquo;nan&rdquo; or nonsensical information; (3) Incorrect: there is at least one mismatch between the MLLM output and human annotation.</p>
+<p>For video description, over 1000 MLLM outputs are incorrect from the top three MLLMs, whereas over half of the reasoning outputs are correct. This discrepancy is likely because the description tends to include more detailed information</p>
+<p>&ldquo;video_description&rdquo;: &ldquo;A concise description of the video content, including objects, movements, and environmental conditions (max 200 words)&rdquo;,</p>
+<p>&ldquo;reasoning&rdquo;: &ldquo;Detailed reasoning for why the situation is considered abnormal or concerning, if applicable (max 100 words)&rdquo;,</p>
+<p>&ldquo;anomaly&rdquo;: 0 or 1 // 0 for no anomaly detected, 1 for anomaly detected</p>
+<p>compared to the reasoning, as illustrated in Figure 10, making it more challenging for MLLMs to match every detail in the descriptions. The error rates for the three models follow the same ranking for both description and reasoning: Gemini-1.5pro exhibits the highest error rate, followed by Claude-3.5-sonnet, with GPT-4o showing the least, indicating the relative stability of GPT-4o in response generation. The proportion of videos with correct descriptions across MLLMs remains consistent between normal and abnormal videos. However, the proportion of correct reasoning decreases progressively from normal to abnormal and further to vague abnormal. This trend highlights the limited understanding MLLMs have of smart home anomalies in our dataset, particularly for more ambiguous cases.</p>
+<p>Figure 23. Distribution of video outcomes for the top three MLLMs&rsquo; description compared to human-annotated description across different video anomaly tags.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000022_ca55f7257810a656ac75d7a9b4a51b6d69e7466c6f3b0097f6cc1f4b83245e26.png"
+    ></figure>
+<p>Figure 24. Distribution of video outcomes for the top three MLLMs&rsquo; reasoning compared to human-annotated reasoning across different video anomaly tags.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000023_be7be854d92a37284051c25ed568957390b30907e3b9698c0df0568245dbba99.png"
+    ></figure>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_papers/SmartHome-Bench A Comprehensive Benchmark for Video Anomaly Detection in Smart Homes Using Multi-Modal Large Language Models.md"
+          data-oid-likes="likes_papers/SmartHome-Bench A Comprehensive Benchmark for Video Anomaly Detection in Smart Homes Using Multi-Modal Large Language Models.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/survey-2/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/slowfastvad-video-anomaly-detection-via-integrating-simpledetector-and-rag-enhanced-vision-language-model/">
+              <span class="leading-6">
+                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-24 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+      
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 overflow-x-auto py-2">
+        <ul class="flex list-none flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 me-4">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

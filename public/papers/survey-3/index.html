@@ -1,0 +1,3246 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title> &middot; Blowfish</title>
+    <meta name="title" content=" &middot; Blowfish">
+  
+
+  
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/papers/survey-3/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/papers/survey-3/">
+  <meta property="og:site_name" content="Blowfish">
+  <meta property="og:title" content="Blowfish">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blowfish">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.7946532fa78157bafb1b4340d4074792811f18177af35790b3a0cb90566ce1cda3edd782eb92e134849964d14b6d9185c9d4ded2a12dcf5b706cb6a275c0cce0.css"
+    integrity="sha512-eUZTL6eBV7r7G0NA1AdHkoEfGBd681eQs6DLkFZs4c2j7deC65LhNISZZNFLbZGFydTe0qEtz1twbLaidcDM4A==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.9df4fc14d50efcc9aa4cfc2b6f348e365f421f5ad491278f8f48c0360cf2f93f08882fda6da162d7ace8e5add57c2df4ac46bd3861306b1d4c452cd31f448d64.js"
+      integrity="sha512-nfT8FNUO/MmqTPwrbzSONl9CH1rUkSePj0jANgzy&#43;T8IiC/abaFi16zo5a3VfC30rEa9OGEwax1MRSzTH0SNZA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Papers",
+    "name": "",
+    "headline": "",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/papers\/survey-3\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "18513"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          Blowfish
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/papers/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="papers"
+  title="Papers">
+  
+  
+    <p class="text-base font-medium">
+      papers
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/test/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="test"
+  title="Tests">
+  
+  
+    <p class="text-base font-medium">
+      test
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href=""
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  
+  title="">
+  
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/papers/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="papers"
+    title="Papers">
+    
+    
+      <p class="text-bg font-bg">
+        papers
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/test/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="test"
+    title="Tests">
+    
+    
+      <p class="text-bg font-bg">
+        test
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    
+    title="">
+    
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>18513 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">87 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">A Survey on Video Anomaly Detection via Deep Learning: Human, Vehicle, and Environment
+    <div id="a-survey-on-video-anomaly-detection-via-deep-learning-human-vehicle-and-environment" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-survey-on-video-anomaly-detection-via-deep-learning-human-vehicle-and-environment" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Ghazal Alinezhad Noghre 1 , Armin Danesh Pazho 1 , Hamed Tabkhi 1</p>
+<p>Abstract—Video Anomaly Detection (VAD) has emerged as a pivotal task in computer vision, with broad relevance across multiple fields. Recent advances in deep learning have driven significant progress in this area, yet the field remains fragmented across domains and learning paradigms. This survey offers a comprehensive perspective on VAD, systematically organizing the literature across various supervision levels, as well as adaptive learning methods such as online, active, and continual learning. We examine the state of VAD across three major application categories: human-centric, vehicle-centric, and environment-centric scenarios, each with distinct challenges and design considerations. In doing so, we identify fundamental contributions and limitations of current methodologies. By consolidating insights from subfields, we aim to provide the community with a structured foundation for advancing both theoretical understanding and real-world applicability of VAD systems. This survey aims to support researchers by providing a useful reference, while also drawing attention to the broader set of open challenges in anomaly detection, including both fundamental research questions and practical obstacles to real-world deployment.</p>
+<p>Index Terms—video anomaly detection, deep learning, computer vision</p>
+
+<h2 class="relative group">I. INTRODUCTION
+    <div id="i-introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#i-introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>V IDEO Anomaly Detection (VAD), also known as outlier detection, abnormal event detection, and abnormal activity detection, has emerged as a crucial technology across a range of applications [1]–[5], from public safety [6]–[10] to healthcare monitoring [11]–[14], autonomous driving [15]– [18], road surveillance [19]–[21], and environmental disaster detection and response [22]–[27]. In this age, where thousands of cameras continuously capture data, automated systems for detecting unusual events offer transformative potential [28]– [31]. For example, surveillance VAD (see Supplementary Materials for list of abbreviations) can automatically flag crimes or accidents, relieving human operators of the impossible task of watching hours of mostly uneventful footage. Another example is in healthcare, where VAD can monitor patients or older adults for sudden falls or distress. The growing importance of VAD in such domains stems from its ability to consistently watch for anomalies that could signify security threats, medical emergencies, or catastrophic events.</p>
+<p>VAD confronts unique challenges inherent to video data. A video is a high-dimensional spatiotemporal signal: each anomaly may involve not just an unusual appearance in a single frame, but an irregular motion pattern unfolding over time [32]–[34]. An anomaly in video can be formally defined as &ldquo;The manifestation of atypical visual or motion characteristics,</p>
+<p>1 Electrical and Computer Engineering Department, UNC Charlotte (galinezh, adaneshp, <a
+  href="mailto:htabkhiv@charlotte.edu">htabkhiv@charlotte.edu</a>)</p>
+<p>or the presence of typical visual or motion patterns occurring in a spatiotemporal contexts that deviate from established norms&rdquo;. An example of an abnormal pattern can be a car accident, which represents a deviation from expected vehicular operation. On the other hand, a normal pattern occurring in an inappropriate context is exemplified by riding a bicycle on a pedestrian-only sidewalk. Moreover, regardless of the specific domain or application area, anomalous events are inherently rare, often occurring with low frequency and unpredictability [8], [35]–[39]. VAD may encounter novel, unforeseen abnormal events that were never observed. Even new patterns of normal activity may continually emerge, especially in openworld environments [40]–[43].</p>
+<p>Traditionally, VAD relied on statistical models and handcrafted features to identify unusual patterns [44], [45]. These methods often struggled with the complexity and variability inherent in video data and previously mentioned general challenges, leading to limited accuracy and adaptability. Deep learning has been a driving force behind recent progress in VAD, enabling models to automatically learn rich representations of normal and abnormal patterns. A wide spectrum of learning paradigms, from fully supervised [21], [46]–[51] to unsupervised [32], [52]–[55], has been explored in the literature. Beyond the training data regime, researchers have also looked at adaptive learning paradigms for VAD [43], [56], [57]. The abundance of these paradigms reflects the community&rsquo;s efforts to tackle VAD&rsquo;s challenges from different angles. Each paradigm comes with its own assumptions, strengths, and failure modes, and part of the goal of our survey is to clarify how these pieces fit into the larger picture.</p>
+<p>Considering the breadth of applications and methods, there is a clear need for a unifying, structured perspective on VAD. Past surveys have typically focused on a subset of this space [2], [4], [6]–[9], [11]–[20], [23], [58]–[62]. For instance, on algorithms for a single domain (e.g. autonomous vehicles) or on specific training paradigms (e.g., unsupervised anomaly detection). However, VAD research has now grown to encompass diverse domains and a wide array of deep learning techniques. Researchers in one domain may not be fully aware of relevant techniques developed in another domain, even though the underlying problems share similarities. We aim to bridge this gap by providing a comprehensive survey that treats VAD holistically. In particular, we bring together humancentric, vehicle-centric, and environment-centric VAD under one umbrella (see Figure 1). By comparing and contrasting the problem formulations, data characteristics, and successful techniques across these domains, our survey highlights common principles as well as domain-specific nuances. This</p>
+<p>1</p>
+<p>Fig. 1. Overview of the paper structure. The advancements in vehicle, human, and environmental VAD are explored.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000000_14ccb66c43f2f04350a14673972df056e903afa856bc270fbdbb7220d5782992.png"
+    ></figure>
+<p>unified viewpoint is intended to help transfer knowledge across application domains. Moreover, we organize the growing literature on deep learning for VAD into a coherent taxonomy, which makes it easier to understand how different approaches relate to each other. Rather than seeing the field as a collection of disjoint research focuses, readers will gain a structured map of VAD research: the key problem settings, the algorithmic families, and the connections between them. We aim to help the research community identify open problems and practical barriers that must be addressed to advance VAD towards widespread deployment. This survey aims to bring clarity to what has been accomplished and what remains to be done. We summarize not only the State-of-The-Art (SOTA) techniques but also their limitations, and we pinpoint areas ready for new exploration. To this end, the main contributions of this paper are as follow:</p>
+<ul>
+<li>We identify and critically analyze key challenges and open problems in VAD. By highlighting these gaps, the survey outlines practical considerations necessary for building reliable, adaptive, and deployable VAD systems.</li>
+<li>We present a structured taxonomy of VAD approaches categorized by supervision levels and learning paradigms, including supervised, unsupervised, weakly supervised, self-supervised, and adaptive learning. This taxonomy clarifies the underlying assumptions, strengths, and limitations of each paradigm and guides readers in selecting appropriate methods for different problem settings.</li>
+<li>We provide a comprehensive and unified survey of VAD via deep learning, encompassing human-centric, vehiclecentric, and environment-centric domains. This work bridges the gap between fragmented subfields by systematically comparing problem formulations, data characteristics, and methods across application areas, enabling knowledge transfer and cross-domain insights.</li>
+</ul>
+
+<h2 class="relative group">II. VAD CHALLENGES
+    <div id="ii-vad-challenges" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ii-vad-challenges" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>VAD presents unique challenges, summarized in Table I, which are explained in detail in this section.</p>
+
+<h2 class="relative group">A. Data Scarcity and Annotation Challenges
+    <div id="a-data-scarcity-and-annotation-challenges" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-data-scarcity-and-annotation-challenges" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>
+<ol>
+<li>C1: Rarity of Anomalies and Class Imbalance: By definition, anomalies are rare events compared to normal. For instance, traffic accidents in autonomous driving are infrequent compared to normal driving scenarios. Deep learning models</li>
+</ol>
+</li>
+</ul>
+<p>typically thrive on abundant data, but the scarcity of anomalous examples means they struggle to learn generalizable patterns.</p>
+<ul>
+<li>
+<ol start="2">
+<li>C2: Limited and Difficult Labeling: Not only are anomalies rare, but they are also inherently difficult to label. Annotating frame-by-frame or pixel-level ground truth is labor-intensive. In many instances, expert knowledge is also essential to perform correct labeling. For example, in healthcare applications like monitoring Parkinson&rsquo;s disease, identifying the exact onset and offset of anomalous behavior necessitates the involvement of domain specialists.</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>C3: Ambiguity in Defining Anomalies and Context Specificity: Unlike standard vision tasks, anomaly detection is highly context-dependent. The same behavior may be normal in one setting but anomalous in another. For instance, in public safety, punching signals violence unless occurring in a boxing gym. Such contextual ambiguity complicates defining anomalies. Modeling such context is difficult and requires auxiliary inputs or learning multiple modes of normality. While deep models must be robust to these ambiguities, current methods often struggle with subtle or context-sensitive anomalies.</li>
+</ol>
+</li>
+</ul>
+
+<h2 class="relative group">B. Spatiotemporal Modeling Challenges
+    <div id="b-spatiotemporal-modeling-challenges" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b-spatiotemporal-modeling-challenges" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>
+<ol>
+<li>C4: Complex Temporal Patterns and Long-Term Dependencies: Anomalies unfold as irregular motion patterns or unusual events over time. Capturing temporal dynamics is a core difficulty. For instance, in Autonomous Driving, an accident might be inferred from a vehicle&rsquo;s erratic trajectory over several seconds. Some anomalies have a slow temporal build-up (e.g., a person slowly loitering in a restricted area). Detecting these requires integrating information over long durations. On the other hand, anomalies can be instantaneous (a sudden explosion). Balancing responsiveness to quick events with the ability to analyze extended sequences is non-trivial.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>C5: Multi-Agent Interactions and Crowded Scenes: Many anomalies involve multiple entities interacting with each other. Detecting these anomalies requires modeling collective behavior patterns. However, modeling them is difficult due to occlusions and complex dynamics. In some events the anomaly is evident in the group&rsquo;s joint configuration (e.g. a group of people suddenly running away) even if each individual&rsquo;s motion by itself might appear normal.</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>C6: Feature Abstraction Level: Deep video anomaly detectors traditionally operate on raw pixel data, but this raises feature redundancy issues. Raw pixel-based models</li>
+</ol>
+</li>
+</ul>
+<p>TABLE I COMPREHENSIVE SUMMARY OF KEY CHALLENGES IN VIDEO ANOMALY DETECTION. THE TABLE CATEGORIZES THE CHALLENGES INTO SIX BROAD THEMES. THIS CATEGORIZATION AIMS TO GUIDE FUTURE RESEARCH AND DEVELOPMENT DIRECTIONS IN VIDEO ANOMALY DETECTION SCENARIOS .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Category</th>
+          <th>Challeng</th>
+          <th>Short Description</th>
+          <th>References</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1: Rarity of Anomalies  Class Imbalance</td>
+          <td>C1: Rarity of Anomalies and Class Imbalance</td>
+          <td>[8], [35], [36]</td>
+          <td>Data Scarcity and Annotation Chll</td>
+      </tr>
+      <tr>
+          <td>1: Rarity of Anomalies  Class Imbalance</td>
+          <td>C2: Limited and Difficult Labeling</td>
+          <td>e annotation is labor-intensive and often require domain experts</td>
+          <td>[40], [63], [64]</td>
+      </tr>
+      <tr>
+          <td>1: Rarity of Anomalies  Class Imbalance</td>
+          <td>C3: Ambiguity in Defining Anomalies and Context Specificity</td>
+          <td>omalies are context-dependent; similar actions ca be normal or abnormal depending on scenario.  liifi</td>
+          <td>[64]–[66]</td>
+      </tr>
+      <tr>
+          <td>Spatiotemporal Modeling Challenges</td>
+          <td>C4: Complex Temporal Patterns and Long-Term Dependencies</td>
+          <td>Many anomalies manifest over time. Instantaneous and rolonged anomalies must be detected with appropriate temporal context. ilfilid</td>
+          <td>[32]–[34</td>
+      </tr>
+      <tr>
+          <td>Spatiotemporal Modeling Challenges</td>
+          <td>C5: Multi-Agent Interactions and Crowded Scenes</td>
+          <td>eractions are complex, often involving crowd behavior or occlusion.</td>
+          <td>[6], [67], [68</td>
+      </tr>
+      <tr>
+          <td>Spatiotemporal Modeling Challenges</td>
+          <td>C6: Feature Abstraction Leve</td>
+          <td>-based models are affected by visual noise. Higher abstraction may lose contextual cues.</td>
+          <td>[9], [41], [43], [69], [70</td>
+      </tr>
+      <tr>
+          <td>Robustness and Generalization</td>
+          <td>C7: Environmental Variations and Noise C8DiShifd</td>
+          <td>orld conditions (e.g., weather, lighting) degrade model performance.  dlffil hdld iil</td>
+          <td>[65], [71], [72]</td>
+      </tr>
+      <tr>
+          <td>Robustness and Generalization</td>
+          <td>C8: Domain Shift and Cross-Scene Generalization</td>
+          <td>ten fail when deployed in new v environments.  f l/lb</td>
+          <td>[73]–[75]</td>
+      </tr>
+      <tr>
+          <td>Robustness and Generalization</td>
+          <td>C9: Open-Set Nature of Anomalies and Novelty</td>
+          <td>ot all types of normal/anomaly can be seen during training or validation.</td>
+          <td>[40]–[42</td>
+      </tr>
+      <tr>
+          <td>Robustness and Generalization</td>
+          <td>C10: Handling Concept Drift and Evolving Normality</td>
+          <td>Normal behavior may evolve over time; failure to adapt causes false alarms, while over-adaptation risks misclassifying anomalies</td>
+          <td>[56], [57], [64]</td>
+      </tr>
+      <tr>
+          <td>Evaluation and Benchmarking Challenges</td>
+          <td>C11: Scarcity of Comprehensiv Benchmark Datasets</td>
+          <td>Benchmark datasets are limited in diversity and detail</td>
+          <td>[37]–[39]</td>
+      </tr>
+      <tr>
+          <td>Evaluation and Benchmarking Challenges</td>
+          <td>C12: Limitations of Current Evaluation Metrics C13: Gap Between Offline</td>
+          <td>ommon metrics often fail to reflect deployment performance.</td>
+          <td>[8], [39], [41], [42]</td>
+      </tr>
+      <tr>
+          <td>Evaluation and Benchmarking Challenges</td>
+          <td>C13: Gap Between Offline Evaluation and Deployment Performance</td>
+          <td>Real-time scenarios require new protocols for accurate assessment.</td>
+          <td>[5], [41], [42]</td>
+      </tr>
+      <tr>
+          <td>Real-Time and Deployment Challenges</td>
+          <td>4: Real-Time Processing and Low Latency</td>
+          <td>Timely detection is essential in safety-critical domains.</td>
+          <td>[76]–[78]</td>
+      </tr>
+      <tr>
+          <td>Real-Time and Deployment Challenges</td>
+          <td>Resource Constraints and Scalability Clibid hhldi</td>
+          <td>odels require significant computationa resources. hlhhld iiil b</td>
+          <td>[8], [56], [79]</td>
+      </tr>
+      <tr>
+          <td>Real-Time and Deployment Challenges</td>
+          <td>C16: Calibration and Thresholding (False Alarms vs. Misses) C17ChiFi</td>
+          <td>g the right anomaly threshold is critical to balance false positives and false negatives.</td>
+          <td>[80]–[82]</td>
+      </tr>
+      <tr>
+          <td>Adaptive Learning Challenges</td>
+          <td>C17: Catastrophic Forgetting or Stability-Plasticity Dilemma C18: Efficient Label Utilization During Adaptation</td>
+          <td>odels may lose previously learned information whe updated with new data.</td>
+          <td>[57], [83], [84</td>
+      </tr>
+      <tr>
+          <td>Challenges</td>
+          <td>C18: Efficient Label Utilization During Adaptation</td>
+          <td>Labels are scarce in streaming settings</td>
+          <td>[43], [56], [57]</td>
+      </tr>
+  </tbody>
+</table>
+<p>must contend with background clutter, illumination changes, and camera motion that can obscure the relevant pattern. An emerging approach is to use other modalities such as pose, optical flows, object landmarks, etc. However, these approaches rely on accurate preprocessing steps. Additionally, detecting certain anomalies requires detailed visual queues that may be lost in higher levels of abstraction (e.g., detecting someone carrying a weapon would be more challenging).</p>
+
+<h2 class="relative group">C. Robustness and Generalization Challenges
+    <div id="c-robustness-and-generalization-challenges" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c-robustness-and-generalization-challenges" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>
+<ol>
+<li>C7: Environmental Variations and Noise: VAD methods must operate in diverse real-world conditions that can affect their inputs. Models may face day/night cycles, various weather conditions, and lighting changes. These factors can introduce visual noise that are unrelated to anomalies but can confuse deep models. Another aspect is highly dynamic backgrounds that could lead to high false alarm rates when the model interprets normal background changes as abnormal. Robustness to these perturbations is crucial.</li>
+</ol>
+</li>
+</ul>
+<ol start="2">
+<li>
+<p>C8: Domain Shift and Cross-Scene Generalization: Related to C7 is the domain shift problem: an anomaly detection model trained in one setting often fails when deployed in a new setting. This is because deep models internalize the statistics of their training data&rsquo;s environment. Domain adaptation and generalization techniques are actively researched. This is a critical issue for scalability as well: a city-wide deployment across hundreds of street cameras would require per-camera calibration if the model cannot generalize.</p>
+</li>
+<li>
+<p>C9: Open-Set Nature of Anomalies and Novelty: VAD is an open-set problem: a model can never see examples of all possible anomalies in training, since by definition anomalies encompass anything that deviates from normal, including novel events that have never occurred before. On the same note, capturing all normal behaviors is also not feasible. VAD must be prepared for the unforeseen. This translates to the &ldquo;unknown unknowns&rdquo; problem: an AI may handle known rare events but fail to recognize a truly odd hazard as an anomaly. The open-set challenge also complicates evaluation. A model could correctly detect all anomalies in a test set and still be unreliable in practice if a new kind of anomaly occurs.</p>
+</li>
+</ol>
+
+<h2 class="relative group">4) C10: Handling Concept Drift and Evolving Normality:
+    <div id="4-c10-handling-concept-drift-and-evolving-normality" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-c10-handling-concept-drift-and-evolving-normality" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Over time, what is considered normal or even anomalous may evolve. This phenomenon is known as concept drift. In a traffic monitoring scenario seasonal differences may cause normal behavior patterns to shift. In healthcare, a patient&rsquo;s baseline behavior might gradually change due to therapy or disease progression. If a model is not updated, it may raise false alarms on these evolving behaviors.</p>
+
+<h2 class="relative group">D. Evaluation and Benchmarking Challenges
+    <div id="d-evaluation-and-benchmarking-challenges" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d-evaluation-and-benchmarking-challenges" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>
+<ol>
+<li>C11: Scarcity of Comprehensive Benchmark Datasets: Most current VAD models are trained and tested on a limited set of benchmarks. While useful for initial development, these datasets often lack diversity in scenes, environmental conditions, and anomaly categories.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>C12: Limitations of Current Evaluation Metrics: The dominant metrics used in VAD fail to fully capture the realworld effectiveness of a model. These metrics often abstract away threshold selection and ignore the impact of false alarms. Additionally, metrics rarely account for operational concerns such as alert fatigue, latency, or the cost of misclassification.</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>C13: Gap Between Offline Evaluation and Deployment Performance: Many VAD methods are evaluated in offline settings using pre-recorded video clips. Offline evaluation may overstate model accuracy. Bridging the gap between offline benchmarks and online performance requires new evaluation protocols that account for temporal causality, resource constraints, and continuous learning needs.</li>
+</ol>
+</li>
+</ul>
+
+<h2 class="relative group">E. Real-Time and Deployment Challenges
+    <div id="e-real-time-and-deployment-challenges" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#e-real-time-and-deployment-challenges" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>
+<ol>
+<li>C14: Real-Time Processing and Low Latency: For many applications, detecting anomalies promptly is crucial. For example, autonomous vehicles must detect and react to road anomalies within a very short time to avoid accidents. Such scenarios demand that deep learning models operate in real-time on video streams. Even if accuracy is high, a method that triggers an alert too late is often unacceptable in practice. Achieving real-time anomaly detection without sacrificing detection quality is an active challenge.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>C15: Resource Constraints and Scalability: Deep learning models for video require significant memory and computation. In a real-world deployment like city-wide surveillance, running a deep anomaly detector on all feeds simultaneously is a massive scalability challenge. Likewise, an autonomous vehicle has a power and hardware budget. Thus, anomaly detection methods must be efficient in terms of computation, memory, and energy. Another aspect of scalability is handling long durations and continuous monitoring: a model might need to run 24/7. Storing and analyzing such long video sequences can be difficult. There is also a data management challenge: if anomalies are flagged often, how to store or review these events efficiently. Ensuring that a solution scales from a small benchmark to a deployment is a non-trivial jump.</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>C16: Calibration and Thresholding (False Alarms vs. Misses): Deploying an anomaly detector in the real world requires choosing how sensitive it should be. In other words, setting thresholds or decision criteria for what is flagged as anomalous. This leads to a classic precision-recall trade-off: a very sensitive system will catch nearly all true anomalies (high recall) but at the cost of many false alarms (low precision), whereas a strict system will raise fewer false alerts but might miss anomalies. Finding the right balance is extremely challenging and often application-specific.</li>
+</ol>
+</li>
+</ul>
+
+<h2 class="relative group">F. Adaptive Learning Challenges
+    <div id="f-adaptive-learning-challenges" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#f-adaptive-learning-challenges" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ol>
+<li>C17: Catastrophic Forgetting or Stability-Plasticity Dilemma: Catastrophic forgetting is the tendency of models to overwrite previously learned knowledge when updated with new data. If a model is updated incrementally to learn from new scenes or behaviors, it may degrade in performance on previously seen data. This is critical in safety or surveillance settings, where remembering rare but significant events is essential. This challenge is closely related to the StabilityPlasticity Dilemma, which describes the trade-off between retaining existing knowledge (stability) and acquiring new knowledge (plasticity) without interference.</li>
+</ol>
+
+<h2 class="relative group">2) C18: Efficient Label Utilization During Adaptation:
+    <div id="2-c18-efficient-label-utilization-during-adaptation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-c18-efficient-label-utilization-during-adaptation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Obtaining labels in a streaming setting is expensive and timeconsuming. Therefore, continual learning must proceed with minimal supervision. Designing models that can effectively leverage sparse and noisy labels, or self-supervise their adaptation process, is a key challenge.</p>
+
+<h2 class="relative group">III. DEFINITIONS AND SOLUTIONS
+    <div id="iii-definitions-and-solutions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#iii-definitions-and-solutions" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>VAD focuses on identifying patterns or events in video sequences that deviate significantly from expected or normal behavior [5]. As discussed in Section I, the complexity of VAD has led researchers to adopt varying levels of supervision (see Figure 6). This section identifies and discusses the definition and solutions within each supervision level. Table II summarizes the solutions and their weaknesses and strengths.</p>
+
+<h2 class="relative group">A. Supervised VAD
+    <div id="a-supervised-vad" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-supervised-vad" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Supervised VAD involves training models on labeled datasets where both normal and anomalous events are explicitly annotated. This approach is particularly effective in domains where anomalies are well-defined and annotated data is available, such as in healthcare. By learning from labeled examples, supervised methods can achieve high accuracy in detecting known types of anomalies. However, as outlined in Section II due to challenges such as Rarity of Anomalies and Class Imbalance, Limited and Difficult Labeling, Ambiguity in Defining Anomalies and Context Specificity, and Open-set nature of Anomalies and Novelty (challenges C1, C2, C3, and C9) supervised approaches exhibit limited applicability [5], [8], [35], [85], [86]. The main solution in this supervision level is treating VAD as a classification problem.</p>
+<p>Supervised Classification (S1): The most common formulation of supervised VAD is as a classification task, where models are trained to distinguish between predefined normal and anomalous events. This setup leverages well-established classification algorithms to learn discriminative features.</p>
+
+<h2 class="relative group">B. Weakly-Supervised VAD
+    <div id="b-weakly-supervised-vad" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b-weakly-supervised-vad" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>To address the challenge of obtaining accurately labeled data for supervised solutions (challenges C2 and C3), weaklysupervised approaches offer greater flexibility. In these methods, labels may be incomplete, noisy, or ambiguous. Weaklysupervised solutions mostly take advantage of Multiple Instance Learning (MIL) and try to improve it for better efficacy.</p>
+<p>Multiple Instance Learning (S2): MIL treats each video as a bag of instances, labeling it anomalous if at least one instance is abnormal (see Figure 2). During training, the model</p>
+<p>Fig. 2. VAD formulated as a weakly supervised problem, commonly addressed using MIL (S2).</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000001_7309d0e041a83f6b8b5eac633fc3a663102e1188e4d2652e5c6b9cd5c577ca5f.png"
+    ></figure>
+<p>Fig. 3. Self/semi-supervised VAD achieved through reconstruction(S3) or prediction (S4). The top figure illustrates the training phase using only normal data, while the bottom shows the inference phase, where elevated loss indicates abnormal behavior.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000002_2ef5f2761dc71a29d7ef805ff8f4f5f0605fe2564d5bd2eaec57ac773e74abe0.png"
+    ></figure>
+<p>learns to identify which instances within positive bags are anomalous, without needing fine-grained labels. One-stage MIL often focuses on the most prominent anomaly, risking missed detections of subtle instances, while two-stage selftraining methods use MIL to generate pseudo-labels iteratively, refining both the model and labels, enabling more robust and comprehensive detection of both obvious and subtle anomalies.</p>
+
+<h2 class="relative group">C. Self/Semi-supervised VAD
+    <div id="c-selfsemi-supervised-vad" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c-selfsemi-supervised-vad" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Semi-supervised solutions bridge supervised and unsupervised learning paradigms by using only normal videos during training to learn the characteristics of normal behavior. Previous literature often classified these methods as unsupervised. However, recent works [54], [55] have reclassified them as semi-supervised due to the inherent supervision involved: normal and abnormal sequences are distinguished, and only normal sequences are utilized during training. This shift in terminology acknowledges the partial labeling and guidance provided, which differentiates these methods from truly unsupervised approaches. In general, most of these methods also fall under the self-supervised paradigm, where supervisory signals are derived from inherent characteristics of the normal data. Depending on the learning objective, these solutions can be categorized into four main groups: Reconstruction-based, Prediction-based, Jigsaw Puzzle, and Distribution Estimation.</p>
+<p>Reconstruction-based (S3): This strategy employs autoencoders to reconstruct normal data; anomalies are indicated by high reconstruction loss when the model fails to reconstruct anomalous snippets accurately, as seen in Figure 3.</p>
+<p>Prediction-based (S4): In these approaches, models are trained to predict the future normal behavior, with anomalies identified through higher prediction loss on abnormal sequences, as seen in Figure 3.</p>
+<p>Jigsaw Puzzle (S5): A supervisory signal is generated by formulating a jigsaw puzzle task, which may be spatial, temporal, or a combination of both (see Figure 4). The model is trained exclusively on normal data, learning to reassemble shuffled video segments. During inference, its ability to correctly reconstruct these sequences is used as a measure for computing anomaly scores.</p>
+<p>Distribution Estimation (S6): This category employs either non-deep learning or deep learning methods to model the distribution of normal samples during training. At inference, instances with low likelihood are identified as anomalies.</p>
+
+<h2 class="relative group">D. Unsupervised
+    <div id="d-unsupervised" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d-unsupervised" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In unsupervised training, no labels are available to distinguish between normal and anomalous instances. However, the literature frequently misclassifies certain self-supervised or semi-supervised approaches as unsupervised. A critical observation is that many of these methods are trained exclusively on normal data. This implicitly introduces label information, violating the core principle of unsupervised learning [54]. Consequently, such models should not be considered unsupervised. The degree of supervision must be evaluated not only based on the methodology but also in relation to the informational content embedded in the training data. Despite its fundamental nature, fully unsupervised anomaly detection remains relatively underexplored compared to its self-supervised and semisupervised counterparts, indicating a significant opportunity for advancement and application in real-world scenarios.</p>
+<p>Truly unsupervised methods operate without any access to ground-truth labels. These approaches aim to exploit the normality advantage; the observation that anomalies represent rare and irregular events, whereas the majority of the data corresponds to normal behavior [87], [88]. The core strategy behind these methods is to leverage this statistical imbalance: given that normal samples dominate the dataset, the global structure and distributional trends of the data are expected to reflect normal characteristics. Unsupervised models are therefore trained to capture these prevailing patterns, under the assumption that deviations from the learned representation will correspond to anomalous instances.</p>
+<p>Clustering (S7): Clustering methods assume that normal data form dense clusters in feature space, while outliers in low-density regions are potential anomalies, as illustrated in Figure 5. Approaches range from classical algorithms like kmeans to deep clustering methods that jointly learn features and clusters. Despite their effectiveness, clustering methods face challenges such as sensitivity to hyperparameters, such as the number of clusters, and reliance on clear structural differences between normal and anomalous data.</p>
+<p>Pseudo-label Induction (S8): This strategy leverages the normality assumption: normal data dominate the input distribution. While conceptually related to self or semi-supervised approaches, a key distinction is that the training data includes unknown anomalies. These methods use reconstruction errors or prediction inconsistencies to assign pseudo-labels, guiding anomaly filtering or classifier training. As they rely on selfgenerated signals without ground truth, they are considered unsupervised self-supervised approaches. However, unreliable pseudo-labels and feedback loops can undermine robustness and generalizability, especially in noisy or complex data.</p>
+<p>Fig. 4. Self/semi-supervised VAD achieved through jigsaw puzzle task (S5). The puzzle can be spatial, temporal, or a combination. The left figure illustrates the training phase using only normal data, while the right shows the inference phase, where wrong permutation prediction indicates abnormal behavior.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000003_03cef2c174968423b60444e0ddf2b309c4d2cbc654764443239bbde5401b4d00.png"
+    ></figure>
+<p>Fig. 5. Unsupervised anomaly detection through clustering.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000004_82bf5e80201e99669578140533bda5493526d51a487e01e615aa8d5016da4c65.png"
+    ></figure>
+
+<h2 class="relative group">IV. ADAPTIVE LEARNING IN VAD
+    <div id="iv-adaptive-learning-in-vad" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#iv-adaptive-learning-in-vad" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Fig. 6. Percentage distribution of supervision levels within each domain.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000005_863851e37829b31602d8363fa2cbaa4410fe02e99a4e4fda5679bb7d21af7a7e.png"
+    ></figure>
+<p>As discussed in Section I and Section II, VAD is a dynamic and complex problem, ever evolving and heavily affected by spatio-temporal changes. This includes but is not limited to Environmental Variations and Noise, Domain Shift, OpenSet Nature, Concept Drift, and Calibration and Thresholding</p>
+<p>(challenges C7, C8, C9, C10, and C16). To address these challenges, adaptive learning methods such as meta-learning, online learning, continual learning, and active learning have become essential [89]–[92]. In this survey, the term &ldquo;adaptive</p>
+<p>TABLE II OVERALL CLASSIFICATION OF VAD SOLUTIONS .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Supervision Level</th>
+          <th>Solution</th>
+          <th>Definition</th>
+          <th>Main Strength</th>
+          <th>Main Limitation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Supervised</td>
+          <td>S1: Supervised Classification</td>
+          <td>Frames VAD as a classification task using labeled datasets.</td>
+          <td>High accuracy and reliability in detecting predefined, labeled anomalies.</td>
+          <td>Supervised</td>
+      </tr>
+      <tr>
+          <td>WeaklySupervised</td>
+          <td>S2: Multiple Instance Learning</td>
+          <td>Labels video bags; identifies anomalous instances.</td>
+          <td>Can handle weak labels where only bag-level annotation is provided, reducing labeling efforts.</td>
+          <td>WeaklySupervised</td>
+      </tr>
+      <tr>
+          <td>Supervise</td>
+          <td>S3: Reconstruction</td>
+          <td>Uses autoencoders to reconstruct ormal data; anomalies have high reconstruction loss.</td>
+          <td>Effective for capturing the structure of normal behaviors</td>
+          <td>Struggles with generalization when normal patterns exhibit high variability. Suffers in scenarios with non</td>
+      </tr>
+      <tr>
+          <td>pervised</td>
+          <td>Predicts future behavio prediction loss indic anomalies.</td>
+          <td>Predicts future behavior; high prediction loss indicates anomalies.</td>
+          <td>Effective for capturing the structure of normal behaviors</td>
+          <td>Struggles with generalization when normal patterns exhibit high variability. Suffers in scenarios with non</td>
+      </tr>
+      <tr>
+          <td>S5: Jigsaw Puzzle</td>
+          <td>Challenges models to reassembl shuffled video segments.</td>
+          <td>ubtle Complexity of s permutations in  puzzles, affecting r VAD.</td>
+          <td>Effective for capturing the structure of normal behaviors</td>
+          <td>Complexity of solving permutations in jigsaw puzzles, affecting real-time VAD.</td>
+      </tr>
+      <tr>
+          <td>S6: Distribution Estimation</td>
+          <td>Uses generative models or statistical methods to learn normal behavior distributions.</td>
+          <td>tional properties behaviors. Sen</td>
+          <td>Effective for capturing the structure of normal behaviors</td>
+          <td>Sensitive to noise.</td>
+      </tr>
+      <tr>
+          <td>Unsupervised</td>
+          <td>S7: Clustering</td>
+          <td>No reliance on labeled dat simple implementation</td>
+          <td>No reliance on labeled data and simple implementation.</td>
+          <td>Limited generalizability, sensitive to hyperparameters</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>S8: Pseudo-Label Induction</td>
+          <td>verage error magnitude to do pseudo-labeling for filtering anomalies.</td>
+          <td>No reliance on labeled data and simple implementation.</td>
+          <td>do No reliance on labeled data. Pseudo labels are uncertain and can potentially reinforce false patterns.</td>
+      </tr>
+  </tbody>
+</table>
+<p>learning&rdquo; encompasses a range of general adaptation methods. These techniques enable models to update and adjust to new data, trying to manage the aforementioned challenges.</p>
+<p>Meta-learning, also known as &ldquo;learning to learn,&rdquo; [93] focuses on designing models capable of rapidly adapting to new tasks by leveraging knowledge acquired from previous tasks. This approach involves training across a variety of tasks to develop a general learning strategy, enabling the model to perform effectively on novel tasks with minimal data, which is particularly useful for solving the domain shift problems in VAD models. One significant weakness of meta-learning, particularly in real-time VAD, is the high computational expense associated with training across multiple tasks. However, integrating meta-learning with few-shot training methods can help mitigate this issue by enabling the model to learn from a limited number of examples, thereby reducing the computational burden while maintaining adaptability and performance. [94] introduces a meta-learning framework using the ModelAgnostic Meta-Learning (MAML) [95] algorithm to enhance semi/self-supervised anomaly detection in surveillance videos. This approach involves training the model on various scenes, creating tasks that simulate few-shot learning scenarios.</p>
+<p>Online Learning is a paradigm where the model is updated incrementally as it receives new data points [96], [97]. This approach allows the model to adapt continuously to new information. Online learning is particularly advantageous when dealing with large datasets or streaming data, as it can handle data efficiently without requiring access to the entire dataset simultaneously. Online learning has been explored for anomaly detection on other types of data, such as time series [90], text [98], and medical images [99]. In VAD, Yao et al. [100] introduced a framework optimized for real-world deployment, integrating inference and training in a pipeline to enhance public safety applications. While effective under conditions of minimal distributional shift, online learning faces notable limitations. These include susceptibility to noisy or unrepresentative data (challenges C1 and C7), as well as challenges such as the stability-plasticity dilemma and catastrophic forgetting (challenge C17), where frequent updates may overwrite prior knowledge.</p>
+<p>Continual Learning is a strategy in machine learning where a model is designed to continually acquire, fine-tune, and retain knowledge from a stream of data over an extended period. This approach addresses the challenge of catastrophic forgetting (challenge C17), where learning new information can lead to a loss of previously acquired knowledge [101], [102]. This enables models to adapt to new tasks and changes in data distribution without sacrificing performance on previously learned tasks, making it particularly valuable in dynamic environments where the data evolves over time. Continual learning encounters challenges related to managing the high volume of streaming data and maintaining the efficiency of continuous model training. That is why most of the works in this area move toward few-shot learning to be able to handle the complexity of the training process while making real-time decisions. [56] proposed a two-step method for anomaly detection using deep learning-based feature extractors combined with kNN and a memory module, enhanced by two continual learning approaches. The first approach involves exact k-Nearest Neighbor kNN distance computation, effective for incrementally learning nominal behaviors when the training data size is manageable, updating the memory module with kNN distances from each training split. To address the computational expense as the training set grows, the second approach employs a fully connected deep neural network (kDNN) to estimate kNN distances, ensuring scalability and efficiency.</p>
+<p>Active Learning [103] is a technique where the algorithm selectively queries the user (or domain experts) to label new data points to improve the learning efficiency and model performance [104], [105]. In scenarios where labeling data is costly or time-consuming, active learning is particularly valuable because it allows the model to focus on acquiring labels for the most informative data points. This is achieved through various strategies that prioritize data points based on criteria such as uncertainty, representativeness, or expected model change [105]. By enabling the model to query the most useful data points for annotation, active learning reduces the need for large pre-labeled data and enhances the model&rsquo;s ability to generalize from fewer labeled instances (challenges C1, C2, and C18). Incorporating human feedback on selected samples within an active learning framework establishes a fewshot learning paradigm that improves the efficacy of anomaly detection systems and the efficiency of training the model. A significant challenge associated with this technique is the requisite involvement of a human or domain expert (challenges C2 and C18). This requirement can introduce complexities related to scalability and efficiency, as the continuous need for expert input can limit the speed and autonomy of the learning process. [52] proposes an active learning framework using YOLO v3 [106] and Flownet 2 [107] for feature extraction and kNN for anomaly detection. The model constructs a statistical baseline of normal behaviors using kNN distances and continually updates it with new nominal data. Anomalies trigger human feedback for labeling, which categorizes this work as an active learning framework rather than continual learning, as described in the original paper. Several other works propose a more advanced method for selecting the data queries. [108] proposes an adaptive weighting scheme for dynamically selecting between various criteria such as the likelihood criterion, which selects samples with low likelihood according to the current model to discover new classes, and the uncertainty criterion, which selects samples that cause the most disagreement among committee members to refine the decision boundary. [109] utilizes a Bayesian nonparametric model, specifically the Pitman-Yor Process (PYP) for managing imbalanced class distributions (challenge C1) and models probabilities for both known and unknown classes.</p>
+
+<h2 class="relative group">V. HUMAN-CENTRIC VAD
+    <div id="v-human-centric-vad" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#v-human-centric-vad" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">A. Healthcare
+    <div id="a-healthcare" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-healthcare" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In healthcare VAD, the goal is to detect deviations in physiological or behavioral patterns that may signal disease, injury, or other medical conditions, enabling early diagnosis and intervention to improve outcomes and reduce costs. These systems might process various data types, but in this work,</p>
+<p>TABLE III REVIEWED WORKS IN HEALTHCARE: ALL STUDIES EMPLOY SUPERVISED LEARNING; * DENOTES STUDIES THAT EVALUATE MULTIPLE ARCHITECTURES .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Task</th>
+          <th>Approach</th>
+          <th>Architecture</th>
+          <th>Distinct Characteristics / Novel Contri</th>
+          <th>Modalit</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Task  Fall Detection</td>
+          <td>[110]</td>
+          <td>CNN, LSTM</td>
+          <td>Performs person detection and contour-based feature extraction, follo by attentionguided LSTM</td>
+          <td>RGB</td>
+      </tr>
+      <tr>
+          <td>Task  Fall Detection</td>
+          <td>[111]</td>
+          <td>CNN</td>
+          <td>Mitigates feature loss through multi-task learning and leverages la features for decision-making</td>
+          <td>RGB</td>
+      </tr>
+      <tr>
+          <td>Task  Fall Detection</td>
+          <td>[112]</td>
+          <td>MLP</td>
+          <td>Proposes enhanced optical dynamic flow for improved temporal motion estimation in fall scenarios  Ubd ffll idbd bd</td>
+          <td>Optical Flow</td>
+      </tr>
+      <tr>
+          <td>Task  Fall Detection</td>
+          <td>[113]</td>
+          <td>Heuristic Rule-based Model</td>
+          <td>Uses pose-based features to compute fall index based on body posture changes  Ctttitl h f hd lih</td>
+          <td>Pose</td>
+      </tr>
+      <tr>
+          <td>Task  Fall Detection</td>
+          <td>[114]</td>
+          <td>GCN</td>
+          <td>Constructs a spatiotemporal graph of human poses and applies grap convolution</td>
+          <td>Pose</td>
+      </tr>
+      <tr>
+          <td>Task  Fall Detection</td>
+          <td>[46]</td>
+          <td>Random Forest, MLP  CNNLogistic</td>
+          <td>Divides falls into dynamic/static states; uses fusion of vision-based da dlbddiih id dld li</td>
+          <td>RGB, Pose</td>
+      </tr>
+      <tr>
+          <td>Task  Fall Detection</td>
+          <td>[115]</td>
+          <td>CNN, Logistic Regression</td>
+          <td>ls body dynamics with an inverted pendulum and analyzes motio stability to extract features</td>
+          <td>RGB, Pose</td>
+      </tr>
+      <tr>
+          <td>Task  Fall Detection</td>
+          <td>[116]</td>
+          <td>CNN</td>
+          <td>A multi-stream CNN where each stream processes different features</td>
+          <td>RGB, Depth, Optical Flow</td>
+      </tr>
+      <tr>
+          <td>Parkinson’s Detection</td>
+          <td>[117]</td>
+          <td>Deep Residual Network</td>
+          <td>multimodal system using facial features and expression-specific act for effective detection  Alkd fil iididiff</td>
+          <td>RGB (Facial Video)</td>
+      </tr>
+      <tr>
+          <td>Parkinson’s Detection</td>
+          <td>[118]</td>
+          <td>CNN, SVM</td>
+          <td>yzes evoked facial expressions using domain adaptation from fac recognition  gait energy images to classify Parkinson’s gait leveraging onecla</td>
+          <td>RGB (Facial Video</td>
+      </tr>
+      <tr>
+          <td>Parkinson’s Detection</td>
+          <td>[118]</td>
+          <td>CNN, SVM</td>
+          <td>gait energy images to classify Parkinson’s gait leveraging one-clas SVM  tit dftibtti2D tti3D i</td>
+          <td>GB (Facial Vid</td>
+      </tr>
+      <tr>
+          <td>Parkinson’s Detection</td>
+          <td>[119]</td>
+          <td>*</td>
+          <td>icts gait dysfunction by extracting 2D poses, reconstructing 3D ga multiviews, and analyzing features using classical and deep learnin models</td>
+          <td>Gait</td>
+      </tr>
+      <tr>
+          <td>Parkinson’s Detection</td>
+          <td>[120]</td>
+          <td>Random Fores</td>
+          <td>yzes stride variability and cadence using pose-based features for effective detection</td>
+          <td>Pose</td>
+      </tr>
+      <tr>
+          <td>Parkinson’s Detection</td>
+          <td>[48]</td>
+          <td>*</td>
+          <td>es Parkinson’s symptoms via jitter and amplitude of small muscle groups in face videos</td>
+          <td>Facial Landmarks</td>
+      </tr>
+      <tr>
+          <td>Parkinson’s Detection</td>
+          <td>[121]</td>
+          <td>*</td>
+          <td>ms remote assessment using webcam video by extracting hand landmarks</td>
+          <td>Hand Landmarks</td>
+      </tr>
+      <tr>
+          <td>Parkinson’s Detection</td>
+          <td>[122]</td>
+          <td>CNN, Random Forest</td>
+          <td>eye-tracking and gait data using covariance descriptors for Parkinson progression quantification</td>
+          <td>RGB (Eye Video), Gait</td>
+      </tr>
+      <tr>
+          <td>Autism Detection</td>
+          <td>[123]</td>
+          <td>3D CNN, LSTM</td>
+          <td>oses spatial attentional bilinear pooling to capture fine-grained atial features and dynamic attention on discriminative regions  tegrates phototaking and imageviewing modalities through</td>
+          <td>RGB</td>
+      </tr>
+      <tr>
+          <td>Autism Detection</td>
+          <td>[124]</td>
+          <td>CNN, LSTM</td>
+          <td>Integrates phototaking and imageviewing modalities through ti-modal knowledge distillation, enabling accurate detection using temporal and attentional behavioral features</td>
+          <td>RGB</td>
+      </tr>
+      <tr>
+          <td>Autism Detection</td>
+          <td>[125]</td>
+          <td>CNN, SVM</td>
+          <td>Analyzes attention pattern differences using discriminative image selection and fixation maps, followed by linear SVM classification  Extracts visual and temporal features from gaze scanpaths using</td>
+          <td>RGB (Eye Video)</td>
+      </tr>
+      <tr>
+          <td>Autism Detection</td>
+          <td>[126]</td>
+          <td>CNN, LSTM</td>
+          <td>Extracts visual and temporal features from gaze scanpaths using saliency-guided patch extraction for sequence-based prediction</td>
+          <td>Scanpath</td>
+      </tr>
+      <tr>
+          <td>Autism Detection</td>
+          <td>[127]</td>
+          <td>3D-CNN</td>
+          <td>izes 3D-CNN for spatiotemporal analysis, focusing on a recognition to detect symptoms</td>
+          <td>RGB, Optical Flow</td>
+      </tr>
+      <tr>
+          <td>Autism Detection</td>
+          <td>[128]</td>
+          <td>CNN, MLP</td>
+          <td>Processes facial expressions for autism screening</td>
+          <td>RGB, Facial</td>
+      </tr>
+      <tr>
+          <td>Autism Detection</td>
+          <td>[129]</td>
+          <td>LSTM</td>
+          <td>es on posture and movement data in social interactions for detection</td>
+          <td>Pose</td>
+      </tr>
+      <tr>
+          <td>Seizure Detection</td>
+          <td>[130]</td>
+          <td>CNNLSTM</td>
+          <td>Analyzes spatial vs. spatiotemporal features for detection, showing the latter performs better</td>
+          <td>RGB</td>
+      </tr>
+      <tr>
+          <td>Seizure Detection</td>
+          <td>[131]</td>
+          <td>Transformer</td>
+          <td>pplies BART-inspired self-supervised training on hospital videos to learn contextfollowed by classification for seizure detection</td>
+          <td>RGB</td>
+      </tr>
+      <tr>
+          <td>Seizure Detection</td>
+          <td>[132]</td>
+          <td>ansforme</td>
+          <td>pplies BART-inspired self-supervised training on hospital videos t learn contextfollowed by classification for seizure detection</td>
+          <td>RGB</td>
+      </tr>
+      <tr>
+          <td>Seizure Detection</td>
+          <td>[132]</td>
+          <td>*</td>
+          <td>learn context, followed by classification for seizure detection  Emotion detection used as a feature extractor  Reconstructs 3D facial geometry to capture mouth and cheek motions,</td>
+          <td>RGB (Facial Video)</td>
+      </tr>
+      <tr>
+          <td>Seizure Detection</td>
+          <td>[134]</td>
+          <td>CNN</td>
+          <td>p,  temporal dynamics for seizure classification Transforms EEG into second-order Poincare plots and uses pre-trained ´ CNNtlifit</td>
+          <td>RGB (EEG Vid)</td>
+      </tr>
+      <tr>
+          <td>Seizure Detection</td>
+          <td>[135]</td>
+          <td>SVM</td>
+          <td>Applies dimensionality reduction techniques (PCA and ICA), and defines handcrafted features for a SVM classifier</td>
+          <td>Optical Flow</td>
+      </tr>
+      <tr>
+          <td>Seizure Detection</td>
+          <td>SETR [49]</td>
+          <td>Transformer</td>
+          <td>Uses pretrained networks for spatial features, a transformer for temporal modeling, and Progressive Knowledge Distillation for early detection  iiihlii</td>
+          <td>Optical Flow</td>
+      </tr>
+      <tr>
+          <td>Seizure Detection</td>
+          <td>[136]</td>
+          <td>CNN</td>
+          <td>Generates a compact image representation capturing the location variance and periodicity of semiology</td>
+          <td>RGB, Optical Flow</td>
+      </tr>
+      <tr>
+          <td>Seizure Detection</td>
+          <td>[137], [138]</td>
+          <td>GCN, TCN</td>
+          <td>A multistream framework leveraging GCN, spatio-temporal feature extraction, and late fusion</td>
+          <td>RGB, Pose, Facial Ldk</td>
+      </tr>
+      <tr>
+          <td>Seizure Detection</td>
+          <td>[] [138]</td>
+          <td>GCN, TCN</td>
+          <td>gg , pp extraction, and late fusion</td>
+          <td>RGB, Pose, Facial Landmarks</td>
+      </tr>
+  </tbody>
+</table>
+<p>we focused on methods that use video as their primary data. As shown in Figure 1, most approaches adopt a supervised learning paradigm, reflecting the domain&rsquo;s need for precise, reliable detection. Research primarily targets events with strong visual cues, such as falls, Parkinson&rsquo;s episodes, autistic behaviors, and seizures, which exhibit distinctive motion or posture patterns amenable to visual analysis (see Table III).</p>
+<ol>
+<li>Fall Detection: Fall detection is a key task in healthcarerelated video analysis due to its distinct visual patterns and practical significance. Early methods typically use RGB video and leverage pre-trained models, applying object detection and temporal modeling to track human motion. For instance, [110] uses an LSTM to distinguish fall-like behaviors over time, while [111] proposes a two-stage approach with a convolutional autoencoder for feature extraction, followed by a lightweight classifier for final prediction.</li>
+</ol>
+<p>To address the limitations of RGB-only approaches, particularly under challenging conditions such as poor lighting, occlusions, or background clutter, recent works have incorporated additional modalities to improve fall detection</p>
+<p>performance. Optical flow captures pixel-level motion between frames, offering a richer representation of dynamic events; for instance, [112] uses optical flow with a fine-tuned VGG16 network [139] to enhance motion-specific feature learning. Human pose estimation further improves robustness by abstracting subjects into skeletal representations, which are less sensitive to visual noise. Pose-based features such as centroid velocity and rotational energy have been applied using both deep learning and traditional classifiers, including logistic regression [115], and hybrid models like the Multi Layer Perceptron (MLP) combined with random forest in [46]. Advancing beyond handcrafted descriptors, [114] introduces a spatiotemporal graph convolutional network (ST-GCN) for end-to-end learning of pose dynamics. To further enhance robustness and capture complementary information, some studies combine multiple modalities such as RGB, depth maps, optical flow, and motion history images, processed through specialized network branches [116].</p>
+<ol start="2">
+<li>Parkinson Detection: Parkinson&rsquo;s disease (PD) exhibits both motor and non-motor symptoms, with motor manifestations such as tremor, rigidity, bradykinesia, postural instability, and shuffling gait being the most visually detectable and thus well-suited for computer vision analysis. Leveraging this visual accessibility, recent research has focused on facial and body movement analysis to identify Parkinsonian signs. A key facial symptom, hypomimia (reduced expressiveness) has been widely studied. For instance, [48] applies facial landmark detection to extract handcrafted features classified with traditional algorithms, while [117] enhances facial analysis through segmentation and hybrid learning strategies. More recent endto-end approaches, such as [118], repurpose pretrained face recognition models via transfer learning to detect PD and assess motor impairment severity using multiple Support Vector Machine (SVM) classifiers.</li>
+</ol>
+<p>Another line of research focuses on gait and pose-based analysis, targeting motor irregularities such as bradykinesia (slowness and reduced movement amplitude) common in PD. For example, [121] uses hand keypoint trajectories during motor tasks, classifying temporal patterns with conventional models like logistic regression and random forests. Other studies analyze full-body motion through silhouettes or skeletal poses; [47] creates Gait Energy Images (GEIs), while [120] applies pose estimation followed by SVM classification. A more advanced approach by [119] combines multiview RGB video with 3D skeletal reconstruction and deep models, including multi-scale residual networks, achieving strong generalization. Some studies have sought to combine multiple modalities, such as facial and body movement cues, to enhance detection robustness. For instance, [122] proposes a multimodal framework that integrates facial expressions and skeletal motion features, aiming to capture complementary signals associated with Parkinsonian motor deficits.</p>
+<ol start="3">
+<li>Autism Detection: Autism Spectrum Disorder (ASD) is a common neurodevelopmental condition in children, marked by social communication deficits and atypical attention patterns. Clinical assessment relies on repeated, time-intensive behavioral evaluations by trained professionals, which are prone to subjective variability. As a result, developing automated, objective tools for ASD detection is critical to enable early, consistent, and scalable diagnosis.</li>
+</ol>
+<p>One research direction leverages eye gaze patterns as behavioral biomarkers for ASD, given their link to impaired social engagement and disruptions in the social brain network. Jiang et al. [125] used VGG-16 to analyze fixation difference maps and classified visual attention features with a linear SVM. Chen and Zhao [124] combined ResNet-50 [140] with LSTM layers to model spatial-temporal gaze dynamics. Tao et al. [126] proposed SP-ASDNet, using saliency maps from neurotypical individuals to guide patch selection, followed by a CNN-LSTM network to detect deviations indicative of ASD.</p>
+<p>Beyond gaze, many studies focus on general behavioral patterns, especially stereotypical behaviors like clapping, arm flapping, and repetitive movements, common indicators in ASD diagnosis. Ali et al. [127] use 3D CNNs to detect such actions, supporting clinical assessments without providing a final diagnosis. Wu et al. [128] offer a more integrated pipeline, combining deep models on RGB and facial landmarks with statistical features (e.g., behavior frequency and duration), fed into a neural network for classification, linking low-level behavior detection with high-level diagnostic inference.</p>
+<p>A more recent, data-driven approach eliminates manual feature engineering by end-to-end deep learning models that learn discriminative patterns directly from video. Sun et al. [123] combine CNNs with LSTMs to extract spatial-temporal features from pixel data, while Kojovic et al. [129] use a similar architecture with human pose inputs, offering a more abstract and potentially robust representation.</p>
+<p>Together, these studies form a continuum from explicit behavior modeling to implicit feature learning, highlighting the progression toward more generalizable and efficient systems. Each category of methods, whether based on gaze analysis, stereotyped motor behavior, or end-to-end learning, addresses different aspects of the complex behavioral phenotype associated with ASD, and collectively, they underscore the potential of machine learning in revolutionizing autism diagnosis.</p>
+<ol start="4">
+<li>Seizure Detection: Seizure detection has traditionally relied on Electroencephalography (EEG), often paired with video (VEEG) to link motor behaviors with brain activity. Some works, such as [134], convert EEG data into visual forms like Poincare plots for classification via pre-trained ´ ´ CNNs. While effective, EEG remains intrusive and impractical for long-term or ambulatory use. As a result, recent efforts have focused on video-only systems that analyze visible cues such as facial expressions and body movements, offering noninvasive, scalable, and more comfortable alternatives.</li>
+</ol>
+<p>Building on this shift, recent work has explored methods focusing on facial features and expressions, particularly facial semiology (e.g., involuntary movements). Pothula et al. [132] use standard facial recognition pipelines to extract features for classification, while Ahmedt-Aristizabal et al. [133] enhance this by modeling 3D facial dynamics, especially mouth motion, using LSTM networks.</p>
+<p>Another research direction focuses on full-body movement, which is more pronounced in generalized seizures. Yang et al. [130] use CNNs and LSTMs to capture spatial and temporal motion features. More recent work, such as Hou et al. [131],</p>
+<p>introduces transformer-based models with BART-style selfsupervised pretraining, enabling effective seizure classification with reduced dependence on large labeled datasets.</p>
+<p>To address privacy concerns in video-based seizure monitoring, recent studies use de-identified features such as optical flow, which captures motion without revealing identity. Garc¸ao et al. [135] apply dimensionality reduction and SVMs ˜ ˜ to optical flow, while Mehta et al. [49] propose a CNNtransformer hybrid with Progressive Knowledge Distillation for early prediction. Complementing this, multimodal fusion strategies have been explored to improve detection robustness. Ahmedt-Aristizabal et al. [136] integrate facial and hand movements to create compact semiology descriptors, while Hou et al. [137], [138] fuse RGB, optical flow, body pose, and facial landmarks via multi-branch networks to produce richer representations for seizure classification.</p>
+
+<h2 class="relative group">B. Public Safety
+    <div id="b-public-safety" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b-public-safety" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In public safety, video anomaly detection focuses on identifying risky behaviors like violence or rule violations by analyzing external cues. Pixel-based methods capture rich context but are sensitive to environment changes and privacy issues, while pose-based approaches improve robustness and privacy at the cost of visual detail. Some studies combine both in multimodal frameworks. Real-time applications demand efficient trade-offs between accuracy, privacy, and speed.</p>
+<ol>
+<li>Pixel-Based Methods: In the context of public safety, pixel-based methods for VAD continue to play a central role due to their ability to capture fine-grained visual details, including both environmental context and object appearance. Table IV summarizes these methods. Some works pursue taskspecific anomaly detection, focusing on particular threats such as shoplifting [50], [141], [142], weapon detection [143], [144], [156], or vandalism [145]. While these methods offer high precision for well-defined scenarios, their generalizability remains limited, which motivates the mainstream research direction in VAD: detecting a broad range of anomalies without pre-defining their nature.</li>
+</ol>
+<p>Recent progress in weakly supervised VAD has shown that it is possible to achieve fine-grained temporal localization using only video-level labels. A prominent direction in this field involves pseudo-label refinement: Tian et al. [154] propose a two-stage strategy using a multi-head classifier with diversity loss and Monte Carlo Dropout-based uncertainty filtering to generate high-quality pseudo labels. Similarly, Wang et al. [152] introduce ARMS, a multi-phase training framework that incrementally increases the assumed ratio of abnormal segments to progressively discover harder anomalies, supported by temporal convolution and attention. Complementary to these efforts, RTFM [32] avoids over-reliance on classifier outputs by focusing on feature magnitudes, selecting topk high-magnitude snippets to separate normal and abnormal segments using a multi-scale temporal architecture. In parallel, vision-language models have emerged as powerful tools for semantic alignment: Li et al. [155] utilize CLIP-based featuretext alignment combined with temporal context learning, while An et al. [153] adopt ViLBERT features in an MIL framework for snippet-level classification from coarse labels.</p>
+<p>In self-supervised learning, models define proxy tasks to learn representations of normal behavior without requiring labeled anomalies, as mentioned in Section III. Among these, reconstruction-based methods have long been popular. To enhance reconstruction accuracy and enforce better anomaly separation, adversarial training has been widely adopted. For instance, Yang et al. [146] use a discriminator to distinguish between real and reconstructed patches, pushing the generator (autoencoder) to reconstruct more accurately. Chen et al. [147] instead use the discriminator to differentiate between real reconstruction error maps and synthetic noise, penalizing abnormality through structural deviations. In another approach, Georgescu et al. [150] use irrelevant pseudo-anomalies (e.g., flowers, anime images) to train a discriminator to separate pseudo-abnormal and normal samples, encouraging the generator to focus specifically on human behavioral features.</p>
+<p>Prediction-based models have also evolved to integrate optical flow for more accurate future frame prediction. Luo et al. [151] replace basic MSE loss with a combination of flow, intensity, and gradient-based losses, alongside adversarial training for sharper predictions. Huang et al. [53] employ separate encoders for appearance and flow, feeding both into a unified decoder with skip connections and memory modules to compare current behavior with learned normal prototypes for better suppression of anomalies.</p>
+<p>Other self-supervised tasks, such as jigsaw puzzle-based learning, aim to improve generalization by encouraging spatiotemporal reasoning. Wang et al. [149] decouple spatial and temporal dimensions to form dual puzzles, solved via a 3D CNN trained to predict permutations learning both visual structure and motion patterns. Further extending generalization, some methods employ multiple proxy tasks. Georgescu et al. [64] use a suite of four self-supervised tasks: arrowof-time prediction, motion shuffling, irregularity localization, and knowledge distillation, while its successor, SSMTL++ [148], adds jigsaw puzzles and adversarial pseudo-anomalies for broader robustness. Beyond reconstruction and prediction, Doshi et al. [52] use deep learning for feature extraction and statistical modeling to estimate the distribution of normal data, enabling adaptive decision-making through continual learning. Trained solely on normal data, the approach falls under semisupervised learning and focuses on dynamic thresholds in evolving environments.</p>
+<p>While these approaches reduce dependence on labeled data, even self-supervised methods often assume that training videos are purely normal. Recent research aims to relax this assumption. ESSL [55] builds on puzzle-based learning but incorporates a self-selective module to identify and exclude suspected anomalies during training, enabling learning from mixed datasets. Similarly, Zaheer et al. [54] propose a Generative Cooperative Learning framework, where a generator reconstructs input features and a discriminator classifies them as normal or anomalous using pseudo-labels derived from reconstruction errors. A negative learning strategy intentionally trains the generator to reconstruct anomalous samples poorly, reinforcing clear distinctions between normal and abnormal patterns, achieving truly unsupervised anomaly detection.</p>
+<p>TABLE IV</p>
+<p>OVERVIEW OF PIXEL -BASED APPROACHES IN VAD FOR PUBLIC SAFETY. * DENOTES THAT MULTIPLE ALTERNATIVE ARCHITECTURES HAVE BEEN USED .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Approach</th>
+          <th>Supervision</th>
+          <th>Strategy</th>
+          <th>rchitecture</th>
+          <th>Distinct Characteristics / Novel Cont</th>
+          <th>Modalit</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>[50]</td>
+          <td>Supervised</td>
+          <td>S1</td>
+          <td>CNN, RNN</td>
+          <td>Using CNN as spatial feature extractor and RNN fo temporal pattern detection and final classification</td>
+          <td>Pixel</td>
+      </tr>
+      <tr>
+          <td>[141</td>
+          <td>Supervised</td>
+          <td>S1</td>
+          <td>3D CNN</td>
+          <td>pp Use 3D CNN for simultaneous spatiotempo</td>
+          <td>Pixe</td>
+      </tr>
+      <tr>
+          <td>[142</td>
+          <td>Supervised</td>
+          <td>S1</td>
+          <td>CNN, LSTM</td>
+          <td>Uses Inception V3 blocks and LSTM for feature extract</td>
+          <td>Pixel</td>
+      </tr>
+      <tr>
+          <td>ADOS [143]</td>
+          <td>Supervised</td>
+          <td>S1</td>
+          <td>CNN</td>
+          <td>Minimizes multi-object detection errors by segmenting frames and applying a saliency-aware classification</td>
+          <td>Pixel</td>
+      </tr>
+      <tr>
+          <td>[51]</td>
+          <td>Supervised</td>
+          <td>S1</td>
+          <td>*</td>
+          <td>o-stage gun detection using fine-tuned spatial classi and temporal sequence models</td>
+          <td>Pixel</td>
+      </tr>
+      <tr>
+          <td>[144]</td>
+          <td>Supervised</td>
+          <td>S1</td>
+          <td>CNN</td>
+          <td>Uses off-the-shelf object detectors and reduces fals positives by incorporating confusion classes  CNNLSTM deep learning model that combines spa</td>
+          <td>Pixel</td>
+      </tr>
+      <tr>
+          <td>[145]</td>
+          <td>Supervised</td>
+          <td>S1</td>
+          <td>CNN, LSTM</td>
+          <td>CNNLSTM deep learning model that combines spatia feature extraction from convolutional layers with tempor sequence modeling from LSTM</td>
+          <td>Pixel</td>
+      </tr>
+      <tr>
+          <td>[146]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S4</td>
+          <td>CNN</td>
+          <td>y  reconstruction and object-focused scoring based on likelihood, position, and confidence Uses noisemodulated adversarial learningwhere a</td>
+          <td>Pixel</td>
+      </tr>
+      <tr>
+          <td>NM-GAN [147]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S4</td>
+          <td>CNN</td>
+          <td>Uses noisemodulated adversarial learning, where a discriminator trained on noise-injected reconstruction erro distinguishes normal from anomalous patterns</td>
+          <td>Pixel</td>
+      </tr>
+      <tr>
+          <td>[64]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S5, S6</td>
+          <td>CNN, 3D CNN</td>
+          <td>Defining multiple tasksarrow of time prediction, motio shuffling, irregularity prediction (viewed as various jigsaw puzzles), and knowledge distillation</td>
+          <td>Pixel</td>
+      </tr>
+      <tr>
+          <td>[148]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S5, S6</td>
+          <td>CNN, 3D CNN</td>
+          <td>Adds adversarial pseudo anomalies, segmentation, jigsaw pose estimation, and inpainting to multi-task training  Dld til d tl jild</td>
+          <td>Pixel</td>
+      </tr>
+      <tr>
+          <td>[149]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S6</td>
+          <td>3D CNN</td>
+          <td>Decoupled spatial and temporal jigsaw puzzles and employed a multi-label paradigm for more accurate VAD  Udbl ltidthtd</td>
+          <td>Pixel</td>
+      </tr>
+      <tr>
+          <td>[150]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S4</td>
+          <td>CNN</td>
+          <td>Uses pseudo-abnormal examples to guide the autoencode and binary classifiers for each branch  A dldildddl tht li</td>
+          <td>Pixel, Flow</td>
+      </tr>
+      <tr>
+          <td>[53]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S5</td>
+          <td>CNN</td>
+          <td>A dualencoder singledecoder model that aligns appearan and flow features and uses memory of normal prototypes  enhance detection accuracy</td>
+          <td>Pixel, Flow</td>
+      </tr>
+      <tr>
+          <td>[151]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S5</td>
+          <td>CNN</td>
+          <td>Future prediction is guided by flow, intensity, and gradie losses, with a discriminator improving frame realism Combines flow and object detections to form feature vec</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>ARMS [152]</td>
+          <td>Weakly-supervised</td>
+          <td>S2</td>
+          <td>CNN</td>
+          <td>Trained through bootstrapped pseudo labeling, hard anoma mining, and adaptive self-training with dynamic abnorma ratios to capture both easy and subtle anomalies Abl ihhihfid</td>
+          <td>Pixel</td>
+      </tr>
+      <tr>
+          <td>RTFM [32]</td>
+          <td>Weakly-supervised</td>
+          <td>S2</td>
+          <td>CNN</td>
+          <td>Assumes abnormal snippets have higher feature magnitude selects top-k segments per video to maximize abnormal-normal separation</td>
+          <td>Pixel</td>
+      </tr>
+      <tr>
+          <td>[153]</td>
+          <td>Weakly-supervised</td>
+          <td>S2</td>
+          <td>Transformer</td>
+          <td>pg followed by a fully connected network trained with a soft-margin ranking loss on mean anomaly scores of positive and negative bags</td>
+          <td>Pixel, Flow</td>
+      </tr>
+      <tr>
+          <td>[154]</td>
+          <td>Weakly-supervised</td>
+          <td>S2</td>
+          <td>Transformer</td>
+          <td>mproves pseudo labels through completeness modeling and diversity-enhanced multi-head classification, followed by uncertainty-aware self-training that selects reliable clips using Monte Carlo Dropout</td>
+          <td>Pixel, Flow</td>
+      </tr>
+      <tr>
+          <td>TPWNG [155]</td>
+          <td>Weakly-supervised</td>
+          <td>S2</td>
+          <td>Transformer</td>
+          <td>Uses CLIP for pseudolabeling, then trains a classifier wit a Temporal Context Self-Adaptive Learning module that adjusts attention spans based on event duration</td>
+          <td>Pixel, Flow</td>
+      </tr>
+      <tr>
+          <td>ESSL [55]</td>
+          <td>Unsupervised</td>
+          <td>S8</td>
+          <td>3D CNN</td>
+          <td>Extends the jigsaw puzzle concept with a self-selective module to filter potential anomalies, enabling truly unsupervised training</td>
+          <td>Pixe</td>
+      </tr>
+      <tr>
+          <td>[54]</td>
+          <td></td>
+          <td>S8</td>
+          <td>3D CNN</td>
+          <td>xtends the jigsaw puzzle concept with a selfselective module to filter potential anomalies, enabling truly unsupervised training</td>
+          <td>Pixe</td>
+      </tr>
+  </tbody>
+</table>
+<ol start="2">
+<li>Pose-Based Methods: Pose-based VAD has emerged as a powerful alternative to appearance-based methods, particularly in applications where privacy, robustness to environmental variation, and focus on human motion are essential (see Table V for summary). The dominant paradigm in this area is semi-supervised or self-supervised learning, where models aim to learn the regular patterns of human skeletal motion using only normal data. A central challenge lies in capturing the complexity of human movement while ensuring effective generalization to unseen abnormal patterns. To this end, researchers have explored increasingly sophisticated architectures that improve reconstruction or prediction quality by modeling the temporal and spatial dynamics of the human skeleton. Given the inherent graph structure of the human pose, where joints are nodes and limbs form edges, many works [42], [69], [158], [159], [161], [163]–[166], [169] naturally adopt graph-based architectures, particularly graph convolutional networks (GCNs), to model both temporal sequences and body structure.</li>
+</ol>
+<p>Traditional reconstruction frameworks are extended by integrating more powerful sequence modeling mechanisms, such as transformers, which excel at capturing long-range dependencies. For instance, Yu et al. [70] propose a tokenization scheme based on the first-order difference between pose frames and introduce a motion prior derived from training statistics to explicitly model the distribution of joint displace-</p>
+<p>ments, enhancing anomaly detection sensitivity.</p>
+<p>A notable trend in recent years is the combination of reconstruction-based learning with distribution modeling. Several works [163], [164], [169] adopt a two-stage framework: first, training an autoencoder on normal data and then performing latent space clustering at test time to detect anomalies as outliers. Jain et al. [162] utilize a variational autoencoder (VAE) to impose a probabilistic structure on the latent space, enabling more principled distribution estimation. Extending this idea further, Hirschorn et al. [69] propose a purely probabilistic model using normalizing flows, where input pose sequences are transformed into a standard Gaussian distribution, and anomaly scores are computed via log-likelihood.</p>
+<p>In parallel, prediction-based methods have evolved to leverage both sequential modeling and skeletal structure. Prior to the widespread adoption of GCNs, Fan et al. [160] used a combination of feedforward and recurrent (GRU) networks for future pose prediction. More recent works incorporate GCNs to simultaneously capture spatial (joint connectivity) and temporal (movement trajectory) patterns [161]. To further enrich the input representation, some researchers propose decomposing the pose into local (individual motion) and global (interpersonal interaction) components, as seen in [158], [159], leading to a better understanding of both individual and group behavior. Alternatively, Rodrigues et al. [157] introduce a multi-timescale approach, predicting both past and future frames at varying temporal resolutions to effectively capture both short-term and long-term anomalies.</p>
+<p>To boost overall performance, several studies adopt multibranch architectures that combine reconstruction and prediction tasks. These systems benefit from complementary perspectives: reconstruction captures spatial structure while prediction leverages temporal dynamics. For instance, GRUbased [167], LSTM-based [166], and transformer-based [168], [170] multi-branch models all report improved performance by sharing an encoder while diverging into task-specific decoders. Li et al. [165] enhance this design by incorporating adversarial training, aligning with trends in pixel-based VAD to improve the quality of generated sequences. Additionally, Noghre et al. [42] propose a hybrid model that combines variational autoencoding for distribution-based scoring with a trajectory prediction branch, demonstrating the advantage of unifying multiple learning objectives under a coherent architecture.</p>
+<p>Overall, pose-based VAD methods are evolving toward architectures that jointly model structure, motion, and probability, offering a privacy-aware and semantically rich alternative to pixel-level approaches. The integration of reconstruction, prediction, and distribution modeling, along with architectural</p>
+<p>TABLE V OVERVIEW OF POSE -BASED APPROACHES IN VAD FOR PUBLIC SAFETY. * DENOTES THAT MULTIPLE ALTERNATIVE ARCHITECTURES HAVE BEEN USED .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Approach</th>
+          <th>Supervision</th>
+          <th>Strategy</th>
+          <th>Architecture</th>
+          <th>Distinct Characteristics / Novel Contributions</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>MoPRL [70]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S3</td>
+          <td>Transforme</td>
+          <td>Uses a motion embedder followed by a spatio-temporal transforme for reconstruction, leveraging motion priors extracted through first-order difference statistics Uses 1D convolutions to predict past and future poses at multiple</td>
+      </tr>
+      <tr>
+          <td>[157]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S4</td>
+          <td>CNN</td>
+          <td>Uses 1D convolutions to predict past and future poses at multiple timescales, capturing short- and long-term anomalies without relyin on fixed observation windows Combines hierarchical spatiotemporal graphs with a twobranch</td>
+      </tr>
+      <tr>
+          <td>STGformer [158]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S4</td>
+          <td>GCN, Transforme</td>
+          <td>Combines hierarchical spatio-temporal graphs with a two-branch architecture (local and global prediction) using spatial and tempor Transformers alongside GCNs</td>
+      </tr>
+      <tr>
+          <td>HSTGCNN [159]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S4</td>
+          <td>GCN, CNN</td>
+          <td>Uses hierarchical spatio-temporal graphs with local and global prediction branches, applying 2D temporal followed by 2D spatia graph convolutions CNN il fhilGRU l</td>
+      </tr>
+      <tr>
+          <td>[160]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S4</td>
+          <td>CNN, GRU</td>
+          <td>NN extracts spatial features, while GRU captures temporal dependencies il h lifdiid di</td>
+      </tr>
+      <tr>
+          <td>Normal Graph [161]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S4</td>
+          <td>GCN</td>
+          <td>es spatiotemporal graph convolution for prediction and deriv anomaly scores from the prediction loss ltliiltt Giitd iti</td>
+      </tr>
+      <tr>
+          <td>PoseCVAE [162]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S4</td>
+          <td>CNN</td>
+          <td>imulates anomalies via latent Gaussian mixtures, and is trained through a three-stage process combining reconstruction, KL-divergence, and binary cross-entropy losses</td>
+      </tr>
+      <tr>
+          <td>[163]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S6</td>
+          <td>GCN</td>
+          <td>An autoencoder is used for feature extraction, with latent space clustering for final detection liiflill diibi</td>
+      </tr>
+      <tr>
+          <td>STG-NF [69]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S6</td>
+          <td>GCN</td>
+          <td>Uses normalizing flow to map inputs to a latent normal distributio computing normality scores via likelihood and minimizing negativ log-likelihood during training</td>
+      </tr>
+      <tr>
+          <td>GEPC [164]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S6</td>
+          <td>GCN</td>
+          <td>encoder is used for feature extraction, with latent sp clustering applied for VAD titl h ltiiVAE tt</td>
+      </tr>
+      <tr>
+          <td>TSGAD [42]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S6</td>
+          <td>GCN</td>
+          <td>Leverages spatio-temporal graph convolution in a VAE structure using the distance from the latent mean and variance to score anomalies based on deviation from the learned normal distributio</td>
+      </tr>
+      <tr>
+          <td>MemWGAN-GP [165]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S3, S4</td>
+          <td>CNN</td>
+          <td>A single-encoder dual-decoder generator with a critic, reconstructin past and predicts future sequences via memory-augmented branche</td>
+      </tr>
+      <tr>
+          <td>STGCAE-LSTM [166]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S3, S4</td>
+          <td>GCN, LSTM</td>
+          <td>ppqyg Single-encoder, dual-decoder architecture with LSTM in the latent space for enhanced temporal analysis</td>
+      </tr>
+      <tr>
+          <td>MPED-RNN [167]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S3, S4</td>
+          <td>GRU</td>
+          <td>es global-local decomposition with a single encoder and dual GRU-based decoders ilddlddfdid</td>
+      </tr>
+      <tr>
+          <td>SPARTA [168]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S3, S4</td>
+          <td>Transformer</td>
+          <td>Features a single-encoder, dual-decoder transformer design and introduces a novel pose tokenization method by incorporating relative movement to emphasize motion dynamics patio-temporal GCN and attention are used for reconstruction, wi</td>
+      </tr>
+      <tr>
+          <td>MSTA-GCN [169]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S3, S6</td>
+          <td>GCN</td>
+          <td>Spatio-temporal GCN and attention are used for reconstruction, wit both reconstruction and latent space clustering</td>
+      </tr>
+  </tbody>
+</table>
+<p>TABLE VI OVERVIEW OF VEHICLE -CENTRIC VAD APPROACHES .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Task</th>
+          <th>Approach</th>
+          <th>Supervision</th>
+          <th>Strategy</th>
+          <th>Architectur</th>
+          <th>Distinct Characteristics / Novel Contributions</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Task  Surveillance</td>
+          <td>[171]</td>
+          <td>Supervised</td>
+          <td>S1</td>
+          <td>-</td>
+          <td>The system detects five types of traffic anomalies (speeding, one-way violations, overtaking, illegal parking, and improper drop-offs) by combining deep learning for object detection and tracking with handcrafted algorithms YOLOv5 is used for object detectionwhile anomalies are detecte</td>
+      </tr>
+      <tr>
+          <td>Task  Surveillance</td>
+          <td>[172]</td>
+          <td>Supervised</td>
+          <td>S1</td>
+          <td>Decision Tree</td>
+          <td>YOLOv5 is used for object detection, while anomalies are detected using decision trees</td>
+      </tr>
+      <tr>
+          <td>Task  Surveillance</td>
+          <td>[21]</td>
+          <td>Supervised</td>
+          <td>S1</td>
+          <td>CNN</td>
+          <td>s frames as accident or non-accident using a rolling a prediction algorithm</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>DiffTAD [173]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S3</td>
+          <td>Transformer</td>
+          <td>Models anomalies as a noisytonormal reconstruction process usin Denoising Diffusion Probabilistic Models (DDPM), integrating Transformer-based temporal and spatial encoders to capture inter-vehicle dynamics</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>VegaEdge [174]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S4</td>
+          <td>GIN</td>
+          <td>A pipeline from object detection to trajectory prediction detect anomalies by comparing expected and actual trajectories rajectories are encoded into smoothed feature vectors with first a</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>[175]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S6</td>
+          <td>SOM</td>
+          <td>Trajectories are encoded into smoothed feature vectors with first a second-order motion information, allowing the SOM to detect unusual behavior by learning the distribution of normal trajectorie</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>[176]</td>
+          <td>Unsupervised</td>
+          <td>S7</td>
+          <td>-</td>
+          <td>clustering method based on K-means, modeling each motion pattern as a chain of Gaussian distributions, and enabling both anomaly detection and behavior prediction A hihil Bifk hLDA d HDP</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>[177]</td>
+          <td>Unsupervised</td>
+          <td>S8</td>
+          <td>Bayesian Model</td>
+          <td>A hierarchical Bayesian framework that uses LDA and HDP to jointly model atomic activities and multi-agent interactions withou requiring labeled data Converts vehicle trajectories into gradient imagesleverages a CNN</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>[178]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S3, S6</td>
+          <td>CNN</td>
+          <td>Converts vehicle trajectories into gradient images, leverages a CNN to classify normal trajectories via unsupervised clustering, and uses  VAE to detect unseen anomalies through reconstruction loss</td>
+      </tr>
+      <tr>
+          <td>Autonomous Driving</td>
+          <td>[179]</td>
+          <td>Supervised</td>
+          <td>S1</td>
+          <td>CNN, MLP SVM</td>
+          <td>Temporal features are clustered after MLP processing to identif potential accidents, which are then combined with CNN-based spatial features and classified using an SVM</td>
+      </tr>
+      <tr>
+          <td>Autonomous Driving</td>
+          <td>[180]</td>
+          <td>Supervised</td>
+          <td>S1</td>
+          <td>CNN</td>
+          <td>Combines YOLOv5, lane alignment, and motion tracking to det td hil</td>
+      </tr>
+      <tr>
+          <td>Autonomous Driving</td>
+          <td>TempoLearn [181]</td>
+          <td>Supervised</td>
+          <td>S1</td>
+          <td>CNN, LSTM, Transformer</td>
+          <td>pp ses CNN and LSTM for spatiotemporal feature extraction and a Transformer classifier for accident detection</td>
+      </tr>
+      <tr>
+          <td>Autonomous Driving</td>
+          <td>[182]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S4</td>
+          <td>CNN, LSTM</td>
+          <td>ollaborative multi-task framework for jointly predicting fut frames, object locations, and scene context fd jid hl j</td>
+      </tr>
+      <tr>
+          <td>Autonomous Driving</td>
+          <td>FOL [183]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S4</td>
+          <td>CNN</td>
+          <td>e expected trajectory is compared to the actu for detecting abnormal behaviors</td>
+      </tr>
+      <tr>
+          <td>Autonomous Driving</td>
+          <td>[184]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S4</td>
+          <td>Transformer</td>
+          <td>A dual GAN framework with a Swin-Unet-based generator to predi intermediate frames using both optical flow and cropped inputs Combines memoryaugmented autoencoders for reconstruction an</td>
+      </tr>
+      <tr>
+          <td>Autonomous Driving</td>
+          <td>HF2-VAD [185]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S3, S4</td>
+          <td>CNN</td>
+          <td>Combines memoryaugmented autoencoders for reconstruction and onditional VAEs for future frame prediction, enabling fine-grained dense anomaly localization</td>
+      </tr>
+      <tr>
+          <td>Autonomous Driving</td>
+          <td>[186]</td>
+          <td>Self/Semi-supervised</td>
+          <td>S3, S6</td>
+          <td>3D CNN, GCN</td>
+          <td>Proposes two models: one based on manifold learning to identify out-of-distribution anomalies, and another using reconstruction to detect deviations from normal data</td>
+      </tr>
+  </tbody>
+</table>
+<p>innovations such as GCNs and transformer positions posebased methods as a robust and scalable direction in VAD.</p>
+
+<h2 class="relative group">VI. VEHICLE-CENTRIC VAD
+    <div id="vi-vehicle-centric-vad" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vi-vehicle-centric-vad" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">A. Road Surveillance
+    <div id="a-road-surveillance" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-road-surveillance" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In the context of vehicle VAD for road surveillance, systems are primarily utilized by traffic monitoring authorities and urban infrastructure. These systems demand high-resolution spatial coverage, real-time or near-real-time processing, and robustness under diverse environmental conditions. The corresponding responses are typically passive and retrospective, including alert generation, traffic violation reporting, or data archiving for forensic purposes.</p>
+<p>Early methods in vehicle-focused VAD followed similar trajectories to general VAD research, relying on handcrafted features and rule-based logic (see Table VI). These approaches often combine object detection and tracking with non-deep learning models for classification. Pramanik et al. [171] employed five distinct algorithms to identify specific behaviors such as speed violations and illegal parking. Zhou et al. [179]</p>
+<p>utilized Support Vector Machines (SVMs) for accident detection based on extracted spatial-temporal features. Although effective for narrowly defined tasks, these approaches lack flexibility and generalization to unforeseen behaviors. While early deep learning-based models such as [21] extended detection capabilities, they still largely operated within constrained anomaly categories.</p>
+<p>To mitigate these limitations, Aboah et al. [172] proposed a decision-tree-based method that evaluates foreground and background object detections using spatial thresholds and Intersection-over-Union (IoU) metrics, offering a more adaptable and interpretable rule-based framework.</p>
+<p>A more flexible perspective involves casting anomaly detection as an unsupervised clustering problem, where anomalies are treated as statistical outliers. These methods utilize features such as motion trajectories, foreground activity, or background dynamics to learn normal patterns without requiring explicit labels. Hu et al. [176] applied k-means clustering to vehicle trajectories, while Niebles et al. [177] adopted hierarchical Bayesian models—originally developed for language modeling—to cluster interactions and motions, thereby learning the</p>
+<p>TABLE VII OVERVIEW OF REVIEWED WORK IN FIRE AND FLOOD DETECTION. ARCHITECTURES ARE INFERRED FROM REPORTED METHODOLOGIES WHEN POSSIBLE .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Task</th>
+          <th>Approach</th>
+          <th>Architecture</th>
+          <th>Distinct Characteristics / Novel Contribution</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td>[187]</td>
+          <td>GMM</td>
+          <td>Uses GMM motion detection and a region growth tracking, enabling accurate fire segmentation, growth rate estimation, and significant false alarm reduction Integrates 2D Haar wavelet transforms with convolutional neural networks to combi spatial and spectral features, achieving higher detection accuracy and significantly diflld ttil lit</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>[22]</td>
+          <td>CNN</td>
+          <td>segmentation, growth rate estimation, and significant false alarm reduction Integrates 2D Haar wavelet transforms with convolutional neural networks to combin spatial and spectral features, achieving higher detection accuracy and significantly reducing false alarms and computational complexity A fk biiidiih ilid id</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>Fire-Det [24]</td>
+          <td>CNN</td>
+          <td>A two-stage framework combining motion detection with specialized Fire-Det an lightweight Fire-Det Nano models, enabling fast, accurate early fire detection ased on EfficientNetB0 enhanced with stacked autoencoders and dense connectio</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>[189]</td>
+          <td>CNN</td>
+          <td>achieving high accuracy, reduced false alarms, and efficient real-time inferencing Combining EfficientNet and YOLOv5, leveraging compound scaling and real-tim bjdi</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>object detection modified YOLOv5 model within an edge computing framework using Jetson Nan featuring a dropout-enhanced architecture for improved accuracy and speedand</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>[191]</td>
+          <td>CNN</td>
+          <td>featuring a dropoutenhanced architecture for improved accuracy and speed, and integration with cloud services for real-time alerting n improved YOLOv5s-based fire detection model that enhances detection accuracy</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>[191]</td>
+          <td>CNN</td>
+          <td>and efficiency by integrating CBAM, BiFPN, and transposed convolution LiWihFi(LWF) fk blfl</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>[192]</td>
+          <td>CNN</td>
+          <td>y y gg , , p oposes Learning Without Forgetting (LWF) framework to enable transfer lea</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>[193]</td>
+          <td>CNN</td>
+          <td>pg gg  nalyzes the efficacy of famous networks such as AlexNet, GoogLeNet, and VGG</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>[195]</td>
+          <td>CNN</td>
+          <td>p g models YOLOv8 and VQ-VAE, achieving high precision and robustness Combines transfer learning with YOLOv8 and the TranSDet model, incorporating</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>[196]</td>
+          <td>CNN</td>
+          <td>Integrates a dehazing algorithm with a fine-tuned YOLO-v10 for ship fire detectio</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>[197]</td>
+          <td>3D CNN</td>
+          <td>A modified MobileNetV3 integrated with a 3D CNN and a novel soft attention mechanism, enhancing spatial awareness and reducing model complexity A ViiTfbd dl iilfid if</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>FWSRNet [198]</td>
+          <td>Transformer</td>
+          <td>mechanism, enhancing spatial awareness and reducing model complexity A Vision Transformer-based model incorporating self-attention and contrastive feat learning for fine-grained wildfire and smoke recognition</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>[199]</td>
+          <td>Transformer</td>
+          <td>learning for fine-grained wildfire and smoke recognition A modified vision transformer architecture for fire detection that enables learnin from scratch on small to medium-sized datasets by integrating shifted patch tokenisation and locality selfattention</td>
+      </tr>
+      <tr>
+          <td>Flood Detection</td>
+          <td>[26]</td>
+          <td>-</td>
+          <td>Combines background subtraction, morphological operations, color probability modeling across, and spatial features like edge density and boundary roughnes robabilistic model for flood detection by combining spatial features with temp</td>
+      </tr>
+      <tr>
+          <td>Flood Detection</td>
+          <td>[200]</td>
+          <td>Bayesian Classifier</td>
+          <td>modeling across, and spatial features like edge density and boundary roughness A probabilistic model for flood detection by combining spatial features with temp variation and a non-central chi-square-based positional prior, using Bayes</td>
+      </tr>
+      <tr>
+          <td>Flood Detection</td>
+          <td>V-FloodNet [25]</td>
+          <td>CNN</td>
+          <td>variation and a noncentral chisquarebased positional prior, usin classification and patch-level scoring A video segmentation system that uses template-matching-based w</td>
+      </tr>
+      <tr>
+          <td>Flood Detection</td>
+          <td>FRAD [201]</td>
+          <td>CNN</td>
+          <td>Applies a CNN network to high-resolution multispectral remote sensing ima (SPOT-5) for supervised classification of urban flood risk YOLO4bd dlihd fbfld dh iii</td>
+      </tr>
+      <tr>
+          <td>Flood Detection</td>
+          <td>[202]</td>
+          <td>CNN</td>
+          <td>Applies a CNN network to high-resolution multispectral remote sensing image (SPOT-5) for supervised classification of urban flood risk A YOLOv4-based deep learning method for urban flood depth estimation using tr</td>
+      </tr>
+      <tr>
+          <td>Flood Detection</td>
+          <td></td>
+          <td>CNN</td>
+          <td>p g pg  images, leveraging submerged reference objects Flood severity classification from videos, combining spatial features extracted by</td>
+      </tr>
+      <tr>
+          <td>Flood Detection</td>
+          <td>[203]</td>
+          <td>CNN, GRU</td>
+          <td>Flood severity classification from videos, combining spatial features extracted by  modified VGG16-based CNN with temporal dependencies captured by GRUs Fld dttiiil dibbiiil ftifitd</td>
+      </tr>
+      <tr>
+          <td>Flood Detection</td>
+          <td>[204]</td>
+          <td>CNN, LSTM</td>
+          <td>Flood detection in social media by combining visual features using a fine-tune InceptionV3 CNN with semantic features from metadata using a bidirectional LS</td>
+      </tr>
+  </tbody>
+</table>
+<p>structure of normal behavior in a probabilistic manner. Such clustering-based methods offer greater adaptability in complex or evolving environments.</p>
+<p>More recent work has shifted toward deep learning models that emphasize generalization. Many of these methods fall into the prediction/reconstruction-based paradigms discussed in Section III. Santhosh et al. [178] employed a variational autoencoder to reconstruct trajectory data, while Li et al. [173] leveraged diffusion models to learn the data distribution. In the prediction domain, Katariya et al. [174] used a graph isomorphism network with attention mechanisms to model interactions and forecast future trajectories, and Fang et al. [182] proposed a multi-task learning framework that predicts future frames, object locations, and scene context simultaneously.</p>
+
+<h2 class="relative group">B. Autonomous Driving
+    <div id="b-autonomous-driving" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b-autonomous-driving" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In autonomous driving, Vehicle VAD serves as a realtime, safety-critical component integrated into the vehicle&rsquo;s decision-making pipeline. These systems demand low-latency processing, precise detection of complex motion patterns, and seamless integration with multi-sensor fusion modules including LiDAR, radar, and cameras.</p>
+<p>Early research in this domain primarily focused on detecting well-defined types of anomalies, often formulated as supervised classification (see Table VI). Park et al. [180] addressed the detection of stopped vehicles using dense optical flow to estimate host vehicle motion and bounding-box analysis to track surrounding vehicles. Similarly, some works have narrowed their scope to the detection and categorization of different types of collisions. Htun et al. [181] proposed a deep learning architecture that uses CNNs and LSTMs to extract spatial and temporal features, respectively, followed by a region proposal module and a classification head to detect and categorize collision types.</p>
+<p>Building upon these constrained approaches, more flexible systems have emerged. Zhou et al. [179] introduced a two-stage coarse-to-fine framework: the first stage performs clustering of encoded temporal features to identify outlier frames as potential anomaly candidates, while the second stage applies object-level spatial feature extraction and a trained</p>
+<p>Y Axis</p>
+<p>Fig. 7. Severity of Each Challenge Across Different VAD Domains.</p>
+<p>SVM classifier to confirm accident frames.</p>
+<p>Reconstruction-based methods have also gained traction due to their generalization capacity to unseen anomalies. Haresh et al. [186] enhanced traditional autoencoder architectures by incorporating region proposal networks for object detection and graph convolutional networks (GCNs) to model object interactions, improving the semantic richness of reconstructions.</p>
+<p>One of the most adopted modalities is optical flow, which provides dense motion information. Optical flow enables the detection of sudden or abnormal motion patterns, making it useful across both prediction and reconstruction-based paradigms. Bogdoll et al. [185] proposed a convolutional variational autoencoder that fuses features from both RGB and optical flow, improving anomaly reconstruction. In predictionbased frameworks, Yao et al. [183] leveraged optical flow for future object localization and ego-motion prediction, detecting anomalies based on deviations from expected motion trajectories. Ru et al. [184] extended this idea through a dualGAN framework that jointly predicts both optical flow and appearance features in regions of interest using a Swin-Unet backbone, achieving high accuracy at the cost of computational efficiency. Similarly, Fang et al. [182] proposed a multi-task framework incorporating future frame prediction, motion trajectory consistency, and visual context modeling, with optical flow as a core feature to enhance anomaly detection performance.</p>
+<p>Despite the demonstrated success of prediction-based models, their performance can degrade in highly dynamic environments involving complex multi-agent interactions or unexpected environmental changes. These limitations are particularly pronounced in ego-centric settings, where the camera is mounted on a moving vehicle, increasing the risk of false positives due to background motion or occlusions.</p>
+
+<h2 class="relative group">VII. ENVIRONMENTAL-CENTERIC VAD
+    <div id="vii-environmental-centeric-vad" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vii-environmental-centeric-vad" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Environmental VAD is critical for enabling rapid response and minimizing harm, particularly during the real-time detection stage of disaster management. Unlike prediction and postevent assessment, which rely on early indicators or support recovery and fall outside the scope of this work, real-time detection has been primarily approached through supervised methods that treat specific disasters as classification tasks. Video-based fire and flood detection have received the most attention in computer vision due to their structured visual signatures, whereas disasters like hurricanes and tsunamis are better suited to satellite imagery, and events like earthquakes</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000006_3e498f348643bf533e2d2a7d5b7a1008ae42bef415b3a1cdbae73e048537c4f9.png"
+    ></figure>
+<p>X Axis and droughts often lack distinct visual cues. This survey focuses on video-based methods for detecting floods and fires (see Table VII), where vision remains a central and effective modality.</p>
+
+<h2 class="relative group">A. Fire Detection
+    <div id="a-fire-detection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-fire-detection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>CNN-based methods have been explored for fire detection due to their ability to capture spatial features. Early works utilized pretrained CNN models such as MobileNetV2 [205], AlexNet [206], and GoogLeNet [207], fine-tuning them for fire detection tasks. Some studies combined these models with additional techniques to enhance performance. For instance, wavelet transforms were used to extract critical spectral features [22], while transfer learning with &ldquo;learning without forgetting&rdquo; ensured models retained prior knowledge when adapting to new environments [193]. Advanced approaches integrated 3D CNNs with modified attention mechanisms to improve accuracy and employed Grad-CAM for visual interpretability of model decisions [197].</p>
+<p>Another group of studies [189], [190], [195], [196] defined fire detection as a subset of object detection, leveraging and adapting well-known algorithms such as Faster R-CNN [208] and YOLO [106] for this purpose. For instance, [191] extended YOLOv5s by incorporating Convolutional Block Attention Modules (CBAM) [209] for improving feature fusion and replacing nearest neighbor interpolation with transposed convolution, introducing a fast, compact model and a more complex, accurate version tailored for fire detection. Similarly, [194] utilized YOLOv8 as a feature extractor to identify regions likely to contain fire. While this approach alone can serve as a fire detection method, they augmented it with a Vector Quantized Autoencoder (VQ-VAE) [210] to model the distribution of fire patterns, thereby providing an additional layer of analysis to reduce false positives and enhance detection reliability.</p>
+<p>With the growing popularity of transformers, several studies have begun employing the Vision Transformers (ViT) [211] for fire detection. [199] introduces a specialized tokenization method designed for effective input tokenization for transformers. Additionally, [198] utilizes a contrastive feature learning mechanism to enhance the model&rsquo;s discriminative capabilities.</p>
+<p>Earlier works treated video as independent frames, ignoring temporal dynamics. Recent studies, however, emphasize the importance of motion. For example, [187] uses segmentation and GMMs to identify flame-like motion and estimate fire growth, while [24] applies GMMs for motion filtering before</p>
+<p>fire classification. These approaches demonstrate how incorporating temporal cues enhances accuracy and context awareness.</p>
+
+<h2 class="relative group">B. Flood Detection
+    <div id="b-flood-detection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b-flood-detection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Earlier works [26], [200] rely on fundamental probabilistic models and heuristic approaches. These methods focus on extracting visual features like color, texture, and motion to identify flood regions. [200] integrates color, texture, and dynamic features within a probabilistic framework, leveraging spatial distributions to enhance detection accuracy. [26] employs background subtraction, morphological processing, and boundary roughness analysis for improved efficacy.</p>
+<p>Deep learning brought strong advancements [201], [203], [204]. [203] utilizes a hybrid CNN-GRU model to classify flood severity in videos, combining spatial feature extraction with temporal modeling of sequential frames. [201] adopts a CNN-based Flood-Risk Assessment and Detection (FRAD) method for processing multispectral satellite images to identify flood-risk zones, emphasizing urban planning applications. [204] combines visual CNN-based analysis with a BiLSTM network for textual metadata processing, creating a multimodal approach to flood detection. These approaches exemplify the power of deep learning in capturing both spatial and temporal intricacies, demonstrating significant improvements over traditional models in accuracy and versatility.</p>
+<p>More advanced architectures [25], [202], [212], incorporate SOTA techniques to enhance flood detection capabilities. [25] proposes V-FloodNet, a system integrating video segmentation (AFB-URR) and image segmentation (EfficientNet-B4 and LinkNet) with novel template-matching for depth estimation. [212] introduces DX-FloodLine, combining VGG16-LSTM for flood classification and Faster R-CNN with Mask R-CNN for object detection. [202] applies YOLOv4 for urban flood detection, utilizing traffic images with submerged reference objects and achieving real-time performance.</p>
+
+<h2 class="relative group">VIII. CONCLUSIONS AND FUTURE DIRECTIONS
+    <div id="viii-conclusions-and-future-directions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#viii-conclusions-and-future-directions" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This survey provides a comprehensive and structured overview of deep learning-based Video Anomaly Detection (VAD), examining major challenges, learning paradigms, and a range of application domains. By incorporating human, vehicle-, and environment-centric perspectives, it reveals both shared foundations and domain-specific characteristics, facilitating meaningful cross-domain insights. The proposed taxonomy of supervision levels and adaptive strategies clarifies the strengths and limitations of existing methods, offering actionable guidance for designing effective VAD systems. In identifying critical research gaps, this work outlines promising directions for future exploration and serves as both a primer for newcomers and a valuable reference for researchers seeking to build robust, scalable solutions for real-world applications. Building on the challenges and trends observed across different VAD domains, we further evaluate the severity of open problems, as visualized in Figure 7, to support strategic research planning. Environment-centric VAD tends to be more manageable due to its structured, constrained settings. In contrast, autonomous driving remains highly challenging due to issues like domain shift, real-time performance, and sensor calibration (C8, C14, C16). Large-scale deployment in road surveillance and public safety introduces major scalability concerns (C15), driving the development of resource-efficient models, along with alternative data modalities. In healthcare, annotation remains a significant bottleneck (C2) due to the dependence on expert knowledge, underscoring the importance of label-efficient approaches such as few-shot and weakly supervised learning. Moreover, data scarcity (C1) persists across nearly all domains, prompting increased interest in synthetic data generation, especially with generative AI to simulate anomalies and boost model robustness.</p>
+
+<h2 class="relative group">ACKNOWLEDGMENTS
+    <div id="acknowledgments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#acknowledgments" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This research is funded by the United States National Science Foundation (NSF) under award number 2329816.</p>
+
+<h2 class="relative group">REFERENCES
+    <div id="references" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#references" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>
+<p>[1] K. Shaukat et al., &ldquo;A review of time-series anomaly detection techniques: A step to future perspectives,&rdquo; in Advances in information and communication: proceedings of the 2021 future of information and communication conference (FICC), volume 1. Springer, 2021, pp. 865–877.</p>
+</li>
+<li>
+<p>[2] J. Liu et al., &ldquo;Deep industrial image anomaly detection: A survey,&rdquo; Machine Intelligence Research, vol. 21, pp. 104–135, 2024.</p>
+</li>
+<li>
+<p>[3] P. Mishra et al., &ldquo;Vt-adl: A vision transformer network for image anomaly detection and localization,&rdquo; in 2021 IEEE 30th International Symposium on Industrial Electronics (ISIE). IEEE, 2021, pp. 01–06.</p>
+</li>
+<li>
+<p>[4] J. Yang et al., &ldquo;Visual anomaly detection for images: A systematic survey,&rdquo; Procedia computer science, vol. 199, pp. 471–478, 2022.</p>
+</li>
+<li>
+<p>[5] A. D. Pazho et al., &ldquo;A survey of graph-based deep learning for anomaly detection in distributed systems,&rdquo; IEEE Trans. Knowl. Data Eng. , vol. 36, pp. 1–20, 2023.</p>
+</li>
+<li>
+<p>[6] K. Rezaee et al., &ldquo;A survey on deep learning-based real-time crowd anomaly detection for secure distributed video surveillance,&rdquo; Personal and Ubiquitous Computing, vol. 28, pp. 135–151, 2024.</p>
+</li>
+<li>
+<p>[7] D. Fahrmann ¨ ¨ et al., &ldquo;Anomaly detection in smart environments: a comprehensive survey,&rdquo; IEEE access, 2024.</p>
+</li>
+<li>
+<p>[8] Y. A. Samaila et al., &ldquo;Video anomaly detection: A systematic review of issues and prospects,&rdquo; Neurocomputing, p. 127726, 2024.</p>
+</li>
+<li>
+<p>[9] P. K. Mishra et al., &ldquo;Skeletal video anomaly detection using deep learning: Survey, challenges, and future directions,&rdquo; IEEE Trans. Emerg. Topics Comput., 2024.</p>
+</li>
+<li>
+<p>[10] A. D. Pazho et al., &ldquo;Ancilia: Scalable intelligent video surveillance for the artificial intelligence of things,&rdquo; IEEE Internet Things J., vol. 10, pp. 14 940–14 951, 2023.</p>
+</li>
+<li>
+<p>[11] X. Yang et al., &ldquo;Deep learning technologies for time series anomaly detection in healthcare: A review,&rdquo; Ieee Access, vol. 11, pp. 117 788– 117 799, 2023.</p>
+</li>
+<li>
+<p>[12] A. A. Ali et al., &ldquo;Anomaly detection in healthcare monitoring survey,&rdquo; in Advanced Research Trends in Sustainable Solutions, Data Analytics, and Security. IGI Global Scientific Publishing, 2025, pp. 29–56.</p>
+</li>
+<li>
+<p>[13] T. Fernando et al., &ldquo;Deep learning for medical anomaly detection–a survey,&rdquo; ACM Computing Surveys (CSUR), vol. 54, pp. 1–37, 2021.</p>
+</li>
+<li>
+<p>[14] Y. M. Galvao˜ ˜ et al., &ldquo;Anomaly detection in smart houses for healthcare: Recent advances, and future perspectives,&rdquo; SN Computer Science , vol. 5, p. 136, 2024.</p>
+</li>
+<li>
+<p>[15] D. Bogdoll et al., &ldquo;Anomaly detection in autonomous driving: A survey,&rdquo; in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2022, pp. 4488–4499.</p>
+</li>
+<li>
+<p>[16] S. Baccari et al., &ldquo;Anomaly detection in connected and autonomous vehicles: A survey, analysis, and research challenges,&rdquo; IEEE Access , vol. 12, pp. 19 250–19 276, 2024.</p>
+</li>
+<li>
+<p>[17] D. Bogdoll et al., &ldquo;Perception datasets for anomaly detection in autonomous driving: A survey,&rdquo; in 2023 IEEE Intelligent Vehicles Symposium (IV). IEEE, 2023, pp. 1–8.</p>
+</li>
+<li>
+<p>[18] J. R. V. Solaas et al., &ldquo;Systematic literature review: Anomaly detection in connected and autonomous vehicles,&rdquo; IEEE Trans. Intell. Transp. Syst., 2024.</p>
+</li>
+<li>
+<p>[19] K. K. Santhosh et al., &ldquo;Anomaly detection in road traffic using visual surveillance: A survey,&rdquo; Acm Computing Surveys (CSUR), vol. 53, pp. 1–26, 2020.</p>
+</li>
+<li>
+<p>[20] M. Rathee et al., &ldquo;Automated road defect and anomaly detection for traffic safety: a systematic review,&rdquo; Sensors, vol. 23, p. 5656, 2023.</p>
+</li>
+<li>
+<p>[21] S. W. Khan et al., &ldquo;Anomaly detection in traffic surveillance videos using deep learning,&rdquo; Sensors, vol. 22, p. 6563, 2022.</p>
+</li>
+<li>
+<p>[22] L. Huang et al., &ldquo;Fire detection in video surveillances using convolutional neural networks and wavelet transform,&rdquo; Engineering Applications of Artificial Intelligence, vol. 110, p. 104737, 2022.</p>
+</li>
+<li>
+<p>[23] A. Saleh et al., &ldquo;Forest fire surveillance systems: A review of deep learning methods,&rdquo; Heliyon, vol. 10, 2024.</p>
+</li>
+<li>
+<p>[24] S. Gao et al., &ldquo;Two-stage deep learning-based video image recognition of early fires in heritage buildings,&rdquo; Engineering Applications of Artificial Intelligence, vol. 129, p. 107598, 2024.</p>
+</li>
+<li>
+<p>[25] Y. Liang et al., &ldquo;V-floodnet: A video segmentation system for urban flood detection and quantification,&rdquo; Environmental Modelling &amp; Software , vol. 160, p. 105586, 2023.</p>
+</li>
+<li>
+<p>[26] A. Filonenko et al., &ldquo;Real-time flood detection for video surveillance,&rdquo; in IECON 2015-41st annual conference of the IEEE industrial electronics society. IEEE, 2015, pp. 004 082–004 085.</p>
+</li>
+<li>
+<p>[27] L. Lopez-Fuentes et al., &ldquo;Review on computer vision techniques in emergency situations,&rdquo; Multimedia Tools and Applications, vol. 77, pp. 17 069–17 107, 2018.</p>
+</li>
+<li>
+<p>[28] B. R. Ardabili et al., &ldquo;Understanding policy and technical aspects of ai-enabled smart video surveillance to address public safety,&rdquo; Computational Urban Science, vol. 3, p. 21, 2023.</p>
+</li>
+<li>
+<p>[29] B. Rahimi Ardabili et al., &ldquo;Understanding ethics, privacy, and regulations in smart video surveillance for public safety,&rdquo; arXiv preprint arXiv:2212.12936, 2022.</p>
+</li>
+<li>
+<p>[30] A. D. Pazho et al., &ldquo;Vt-former: An exploratory study on vehicle trajectory prediction for highway surveillance through graph isomorphism and transformer,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2024, pp. 5651–5662.</p>
+</li>
+<li>
+<p>[31] B. R. Ardabili et al., &ldquo;Exploring public&rsquo;s perception of safety and video surveillance technology: A survey approach,&rdquo; Technology in Society , vol. 78, p. 102641, 2024.</p>
+</li>
+<li>
+<p>[32] Y. Tian et al., &ldquo;Weakly-supervised video anomaly detection with robust temporal feature magnitude learning,&rdquo; in Proceedings of the IEEE/CVF international conference on computer vision, 2021, pp. 4975–4986.</p>
+</li>
+<li>
+<p>[33] P. Wu et al., &ldquo;Vadclip: Adapting vision-language models for weakly supervised video anomaly detection,&rdquo; in Proceedings of the AAAI Conference on Artificial Intelligence, vol. 38, no. 6, 2024, pp. 6074– 6082.</p>
+</li>
+<li>
+<p>[34] X. Wang et al., &ldquo;Robust unsupervised video anomaly detection by multipath frame prediction,&rdquo; IEEE Trans. Neural Netw. Learn. Syst. , vol. 33, pp. 2301–2312, 2021.</p>
+</li>
+<li>
+<p>[35] B. Ramachandra et al., &ldquo;A survey of single-scene video anomaly detection,&rdquo; IEEE Trans. Pattern Anal. Mach. Intell., vol. 44, pp. 2293– 2312, 2020.</p>
+</li>
+<li>
+<p>[36] Y. Yang et al., &ldquo;Follow the rules: reasoning for video anomaly detection with large language models,&rdquo; in European Conference on Computer Vision. Springer, 2024, pp. 304–322.</p>
+</li>
+<li>
+<p>[37] W. Liu et al., &ldquo;Future frame prediction for anomaly detection – a new baseline,&rdquo; in 2018 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018.</p>
+</li>
+<li>
+<p>[38] R. Rodrigues et al., &ldquo;Multi-timescale trajectory prediction for abnormal human activity detection,&rdquo; in Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), March 2020.</p>
+</li>
+<li>
+<p>[39] A. Danesh Pazho et al., &ldquo;Chad: Charlotte anomaly dataset,&rdquo; in Scandinavian Conference on Image Analysis. Springer, 2023, pp. 50–66.</p>
+</li>
+<li>
+<p>[40] Y. Zhu et al., &ldquo;Towards open set video anomaly detection,&rdquo; in European Conference on Computer Vision. Springer, 2022, pp. 395–412.</p>
+</li>
+<li>
+<p>[41] G. Alinezhad Noghre et al., &ldquo;Understanding the challenges and opportunities of pose-based anomaly detection,&rdquo; in Proceedings of the 8th International Workshop on Sensor-Based Activity Recognition and Artificial Intelligence, 2023, pp. 1–9.</p>
+</li>
+<li>
+<p>[42] G. A. Noghre et al., &ldquo;An exploratory study on human-centric video anomaly detection through variational autoencoders and trajectory prediction,&rdquo; in Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision, 2024, pp. 995–1004.</p>
+</li>
+<li>
+<p>[43] S. Yao et al., &ldquo;Evaluating the effectiveness of video anomaly detection in the wild: Online learning and inference for real-world deployment,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2024, pp. 4832–4841.</p>
+</li>
+<li>
+<p>[44] Y. Zhu et al., &ldquo;Context-aware activity recognition and anomaly detection in video,&rdquo; IEEE J. Sel. Topics Signal Process., vol. 7, pp. 91–101, 2012.</p>
+</li>
+<li>
+<p>[45] Y. Zhou et al., &ldquo;Detecting anomaly in videos from trajectory similarity analysis,&rdquo; in 2007 IEEE international conference on multimedia and expo. IEEE, 2007, pp. 1087–1090.</p>
+</li>
+<li>
+<p>[46] B.-H. Wang et al., &ldquo;Fall detection based on dual-channel feature integration,&rdquo; IEEE Access, vol. 8, pp. 103 443–103 453, 2020.</p>
+</li>
+<li>
+<p>[47] L. Gong et al., &ldquo;A novel computer vision based gait analysis technique for normal and parkinson&rsquo;s gaits classification,&rdquo; in 2020 IEEE Intl Conf on Dependable, Autonomic and Secure Computing, Intl Conf on Pervasive Intelligence and Computing, Intl Conf on Cloud and Big Data Computing, Intl Conf on Cyber Science and Technology Congress (DASC/PiCom/CBDCom/CyberSciTech). IEEE, 2020, pp. 209–215.</p>
+</li>
+<li>
+<p>[48] B. Jin et al., &ldquo;Diagnosing parkinson disease through facial expression recognition: video analysis,&rdquo; Journal of medical Internet research , vol. 22, p. e18697, 2020.</p>
+</li>
+<li>
+<p>[49] D. Mehta et al., &ldquo;Privacy-preserving early detection of epileptic seizures in videos,&rdquo; in International Conference on Medical Image Computing and Computer-Assisted Intervention. Springer, 2023, pp. 210–219.</p>
+</li>
+<li>
+<p>[50] L. Kirichenko et al., &ldquo;Detection of shoplifting on video using a hybrid network,&rdquo; Computation, vol. 10, p. 199, 2022.</p>
+</li>
+<li>
+<p>[51] B. C. Das et al., &ldquo;Efficient gun detection in real-world videos: Challenges and solutions,&rdquo; 2025.</p>
+</li>
+<li>
+<p>[52] K. Doshi et al., &ldquo;Continual learning for anomaly detection in surveillance videos,&rdquo; in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition workshops, 2020, pp. 254–255.</p>
+</li>
+<li>
+<p>[53] X. Huang et al., &ldquo;Multi-level memory-augmented appearance-motion correspondence framework for video anomaly detection,&rdquo; in 2023 IEEE International Conference on Multimedia and Expo (ICME). IEEE, 2023, pp. 2717–2722.</p>
+</li>
+<li>
+<p>[54] M. Z. Zaheer et al., &ldquo;Generative cooperative learning for unsupervised video anomaly detection,&rdquo; in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2022, pp. 14 744–14 754.</p>
+</li>
+<li>
+<p>[55] Q. Li et al., &ldquo;Essl: Enhanced spatio-temporal self-selective learning framework for unsupervised video anomaly detection.&rdquo; in ECAI, 2023, pp. 1398–1405.</p>
+</li>
+<li>
+<p>[56] K. Doshi et al., &ldquo;Rethinking video anomaly detection-a continual learning approach,&rdquo; in Proceedings of the IEEE/CVF winter conference on applications of computer vision, 2022, pp. 3961–3970.</p>
+</li>
+<li>
+<p>[57] K. Faber et al., &ldquo;Lifelong continual learning for anomaly detection: New challenges, perspectives, and insights,&rdquo; IEEE Access, vol. 12, pp. 41 364–41 380, 2024.</p>
+</li>
+<li>
+<p>[58] R. Jiao et al., &ldquo;Survey on video anomaly detection in dynamic scenes with moving cameras,&rdquo; Artificial Intelligence Review, vol. 56, pp. 3515– 3570, 2023.</p>
+</li>
+<li>
+<p>[59] Z. Zamanzadeh Darban et al., &ldquo;Deep learning for time series anomaly detection: A survey,&rdquo; ACM Computing Surveys, vol. 57, pp. 1–42, 2024.</p>
+</li>
+<li>
+<p>[60] Y. Lin et al., &ldquo;A survey on rgb, 3d, and multimodal approaches for unsupervised industrial image anomaly detection,&rdquo; Information Fusion , p. 103139, 2025.</p>
+</li>
+<li>
+<p>[61] S. Olugbade et al., &ldquo;A review of artificial intelligence and machine learning for incident detectors in road transport systems,&rdquo; Mathematical and Computational Applications, vol. 27, p. 77, 2022.</p>
+</li>
+<li>
+<p>[62] S. A. Ahmed et al., &ldquo;Trajectory-based surveillance analysis: A survey,&rdquo; IEEE Trans. Circuits Syst. Video Technol., vol. 29, pp. 1985–1997, 2018.</p>
+</li>
+<li>
+<p>[63] A. Al-Lahham et al., &ldquo;A coarse-to-fine pseudo-labeling (c2fpl) framework for unsupervised video anomaly detection,&rdquo; in Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision , 2024, pp. 6793–6802.</p>
+</li>
+<li>
+<p>[64] M.-I. Georgescu et al., &ldquo;Anomaly detection in video via self-supervised and multi-task learning,&rdquo; in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2021, pp. 12 742–12 752.</p>
+</li>
+<li>
+<p>[65] Z. Yang et al., &ldquo;Context-aware video anomaly detection in long-term datasets,&rdquo; in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2024, pp. 4002–4011.</p>
+</li>
+<li>
+<p>[66] P. Narwade et al., &ldquo;Synthetic video generation for weakly supervised cross-domain video anomaly detection,&rdquo; in International Conference on Pattern Recognition. Springer, 2025, pp. 375–391.</p>
+</li>
+<li>
+<p>[67] A. Ponraj et al., &ldquo;A video surveillance: Crowd anomaly detection and management alert system,&rdquo; Quantum Computing Models for Cybersecurity and Wireless Communications, pp. 139–152, 2025.</p>
+</li>
+<li>
+<p>[68] L. Luo et al., &ldquo;Detecting and quantifying crowd-level abnormal behaviors in crowd events,&rdquo; IEEE Trans. Inf. Forensics Security, 2024.</p>
+</li>
+<li>
+<p>[69] O. Hirschorn et al., &ldquo;Normalizing flows for human pose anomaly detection,&rdquo; in Proceedings of the IEEE/CVF International Conference on Computer Vision, 2023, pp. 13 545–13 554.</p>
+</li>
+<li>
+<p>[70] S. Yu et al., &ldquo;Regularity learning via explicit distribution modeling for skeletal video anomaly detection,&rdquo; IEEE Trans. Circuits Syst. Video Technol., 2023.</p>
+</li>
+<li>
+<p>[71] K. Biradar et al., &ldquo;Robust anomaly detection through transformerencoded feature diversity learning,&rdquo; in Proceedings of the Asian Conference on Computer Vision, 2024, pp. 115–128.</p>
+</li>
+<li>
+<p>[72] D. Bhardwaj et al., &ldquo;Leveraging dual encoders with feature disentanglement for anomaly detection in thermal videos,&rdquo; in International Conference on Pattern Recognition. Springer, 2025, pp. 237–253.</p>
+</li>
+<li>
+<p>[73] D. Guo et al., &ldquo;Ada-vad: Domain adaptable video anomaly detection,&rdquo; in Proceedings of the 2024 SIAM International Conference on Data Mining (SDM). SIAM, 2024, pp. 634–642.</p>
+</li>
+<li>
+<p>[74] Z. Wang et al., &ldquo;Domain generalization for video anomaly detection considering diverse anomaly types,&rdquo; Signal, Image and Video Processing, vol. 18, pp. 3691–3704, 2024.</p>
+</li>
+<li>
+<p>[75] M. Cho et al., &ldquo;Towards multi-domain learning for generalizable video anomaly detection,&rdquo; Advances in Neural Information Processing Systems, vol. 37, pp. 50 256–50 284, 2024.</p>
+</li>
+<li>
+<p>[76] R. Nawaratne et al., &ldquo;Spatiotemporal anomaly detection using deep learning for real-time video surveillance,&rdquo; IEEE Transactions on Industrial Informatics, vol. 16, pp. 393–402, 2019.</p>
+</li>
+<li>
+<p>[77] M. M. Ali, &ldquo;Real-time video anomaly detection for smart surveillance,&rdquo; IET Image Processing, vol. 17, pp. 1375–1388, 2023.</p>
+</li>
+<li>
+<p>[78] H. Karim et al., &ldquo;Real-time weakly supervised video anomaly detection,&rdquo; in Proceedings of the IEEE/CVF winter conference on applications of computer vision, 2024, pp. 6848–6856.</p>
+</li>
+<li>
+<p>[79] S. Zhu et al., &ldquo;Video anomaly detection for smart surveillance,&rdquo; in Computer Vision: A Reference Guide. Springer, 2021, pp. 1315–1322.</p>
+</li>
+<li>
+<p>[80] K. Doshi et al., &ldquo;Online anomaly detection in surveillance videos with asymptotic bound on false alarm rate,&rdquo; Pattern Recognition, vol. 114, p. 107865, 2021.</p>
+</li>
+<li>
+<p>[81] J. Micorek et al., &ldquo;Mulde: Multiscale log-density estimation via denoising score matching for video anomaly detection,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2024, pp. 18 868–18 877.</p>
+</li>
+<li>
+<p>[82] Y. Nie et al., &ldquo;Interleaving one-class and weakly-supervised models with adaptive thresholding for unsupervised video anomaly detection,&rdquo; in European Conference on Computer Vision. Springer, 2024, pp. 449–467.</p>
+</li>
+<li>
+<p>[83] A. Ntelopoulos et al., &ldquo;Callm: Cascading autoencoder and large language model for video anomaly detection,&rdquo; in 2024 IEEE Thirteenth International Conference on Image Processing Theory, Tools and Applications (IPTA). IEEE, 2024, pp. 1–6.</p>
+</li>
+<li>
+<p>[84] B. Asal et al., &ldquo;Ensemble-based knowledge distillation for video anomaly detection,&rdquo; Applied Sciences, vol. 14, p. 1032, 2024.</p>
+</li>
+<li>
+<p>[85] Y. Cai et al., &ldquo;Medianomaly: A comparative study of anomaly detection in medical images,&rdquo; Medical Image Analysis, p. 103500, 2025.</p>
+</li>
+<li>
+<p>[86] Z. Z. Darban et al., &ldquo;Dacad: Domain adaptation contrastive learning for anomaly detection in multivariate time series,&rdquo; arXiv preprint arXiv:2404.11269, 2024.</p>
+</li>
+<li>
+<p>[87] S. Wang et al., &ldquo;Effective end-to-end unsupervised outlier detection via inlier priority of discriminative network,&rdquo; Advances in neural information processing systems, vol. 32, 2019.</p>
+</li>
+<li>
+<p>[88] G. Yu et al., &ldquo;Deep anomaly discovery from unlabeled videos via normality advantage and self-paced refinement,&rdquo; in Proceedings of the IEEE/CVF Conference on computer vision and pattern recognition , 2022, pp. 13 987–13 998.</p>
+</li>
+<li>
+<p>[89] J. Lu et al., &ldquo;Learning under concept drift: A review,&rdquo; IEEE Trans. Knowl. Data Eng., vol. 31, pp. 2346–2363, 2018.</p>
+</li>
+<li>
+<p>[90] S. Saurav et al., &ldquo;Online anomaly detection with concept drift adaptation using recurrent neural networks,&rdquo; in Proceedings of the acm india joint international conference on data science and management of data , 2018, pp. 78–87.</p>
+</li>
+<li>
+<p>[91] S. Wu et al., &ldquo;Adversarial sparse transformer for time series forecasting,&rdquo; Advances in neural information processing systems, vol. 33, pp. 17 105–17 115, 2020.</p>
+</li>
+<li>
+<p>[92] X. Tang et al., &ldquo;Deep anomaly detection with ensemble-based active learning,&rdquo; in 2020 IEEE International Conference on Big Data (Big Data). IEEE, 2020, pp. 1663–1670.</p>
+</li>
+<li>
+<p>[93] S. Thrun et al., &ldquo;Learning to learn: Introduction and overview,&rdquo; in Learning to learn. Springer, 1998, pp. 3–17.</p>
+</li>
+<li>
+<p>[94] Y. Lu et al., &ldquo;Few-shot scene-adaptive anomaly detection,&rdquo; in Computer Vision–ECCV 2020: 16th European Conference, Glasgow, UK, August 23–28, 2020, Proceedings, Part V 16. Springer, 2020, pp. 125–141.</p>
+</li>
+<li>
+<p>[95] C. Finn et al., &ldquo;Model-agnostic meta-learning for fast adaptation of deep networks,&rdquo; in International conference on machine learning . PMLR, 2017, pp. 1126–1135.</p>
+</li>
+<li>
+<p>[96] E. Hazan et al., &ldquo;Introduction to online convex optimization,&rdquo; Foundations and Trends® in Optimization, vol. 2, pp. 157–325, 2016.</p>
+</li>
+<li>
+<p>[97] S. C. Hoi et al., &ldquo;Online learning: A comprehensive survey,&rdquo; Neurocomputing, vol. 459, pp. 249–289, 2021.</p>
+</li>
+<li>
+<p>[98] S. Han et al., &ldquo;Log-based anomaly detection with robust feature extraction and online learning,&rdquo; IEEE Trans. Inf. Forensics Security , vol. 16, pp. 2300–2311, 2021.</p>
+</li>
+<li>
+<p>[99] Z. Chen et al., &ldquo;An effective cost-sensitive sparse online learning framework for imbalanced streaming data classification and its application to online anomaly detection,&rdquo; Knowledge and Information Systems , vol. 65, pp. 59–87, 2023.</p>
+</li>
+<li>
+<p>[100] S. Yao et al., &ldquo;Evaluating the effectiveness of video anomaly detection in the wild: Online learning and inference for real-world deployment,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops, June 2024, pp. 4832–4841.</p>
+</li>
+<li>
+<p>[101] R. M. French, &ldquo;Catastrophic forgetting in connectionist networks,&rdquo; Trends in cognitive sciences, vol. 3, pp. 128–135, 1999.</p>
+</li>
+<li>
+<p>[102] M. McCloskey et al., &ldquo;Catastrophic interference in connectionist networks: The sequential learning problem,&rdquo; in Psychology of learning and motivation. Elsevier, 1989, vol. 24, pp. 109–165.</p>
+</li>
+<li>
+<p>[103] D. Cohn et al., &ldquo;Improving generalization with active learning,&rdquo; Machine learning, vol. 15, pp. 201–221, 1994.</p>
+</li>
+<li>
+<p>[104] R. M. Monarch, Human-in-the-Loop Machine Learning: Active learning and annotation for human-centered AI. Simon and Schuster, 2021.</p>
+</li>
+<li>
+<p>[105] B. Settles, “Active learning literature survey,” 2009.</p>
+</li>
+<li>
+<p>[106] J. Redmon et al., &ldquo;You only look once: Unified, real-time object detection,&rdquo; in Proceedings of the IEEE conference on computer vision and pattern recognition, 2016, pp. 779–788.</p>
+</li>
+<li>
+<p>[107] E. Ilg et al., &ldquo;Flownet 2.0: Evolution of optical flow estimation with deep networks,&rdquo; in Proceedings of the IEEE conference on computer vision and pattern recognition, 2017, pp. 2462–2470.</p>
+</li>
+<li>
+<p>[108] C. C. Loy et al., &ldquo;Stream-based active unusual event detection,&rdquo; in Asian Conference on Computer Vision. Springer, 2010, pp. 161–175.</p>
+</li>
+<li>
+<p>[109] C. Change Loy et al., &ldquo;Stream-based joint exploration-exploitation active learning,&rdquo; in 2012 IEEE Conference on Computer Vision and Pattern Recognition. IEEE, 2012, pp. 1560–1567.</p>
+</li>
+<li>
+<p>[110] Y. Chen et al., &ldquo;Vision-based fall event detection in complex background using attention guided bi-directional lstm,&rdquo; IEEE Access, vol. 8, pp. 161 337–161 348, 2020.</p>
+</li>
+<li>
+<p>[111] X. Cai et al., &ldquo;Vision-based fall detection with multi-task hourglass convolutional auto-encoder,&rdquo; IEEE Access, vol. 8, pp. 44 493–44 502, 2020.</p>
+</li>
+<li>
+<p>[112] S. Chhetri et al., &ldquo;Deep learning for vision-based fall detection system: Enhanced optical dynamic flow,&rdquo; Computational Intelligence, vol. 37, pp. 578–595, 2021.</p>
+</li>
+<li>
+<p>[113] W. Chen et al., &ldquo;Fall detection based on key points of human-skeleton using openpose,&rdquo; Symmetry, vol. 12, p. 744, 2020.</p>
+</li>
+<li>
+<p>[114] O. Keskes et al., &ldquo;Vision-based fall detection using st-gcn,&rdquo; IEEE Access, vol. 9, pp. 28 224–28 236, 2021.</p>
+</li>
+<li>
+<p>[115] J. Zhang et al., &ldquo;Human fall detection based on body posture spatiotemporal evolution,&rdquo; Sensors, vol. 20, p. 946, 2020.</p>
+</li>
+<li>
+<p>[116] C. Khraief et al., &ldquo;Elderly fall detection based on multi-stream deep convolutional networks,&rdquo; Multimedia Tools and Applications, vol. 79, pp. 19 537–19 560, 2020.</p>
+</li>
+<li>
+<p>[117] L. F. Gomez et al., &ldquo;Improving parkinson detection using dynamic features from evoked expressions in video,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2021, pp. 1562–1570.</p>
+</li>
+<li>
+<p>[118] L. Gomez-Gomez et al., &ldquo;Exploring facial expressions and affective domains for parkinson detection. arxiv 2020,&rdquo; arXiv preprint arXiv:2012.06563, 2012.</p>
+</li>
+<li>
+<p>[119] R. Kaur et al., &ldquo;A vision-based framework for predicting multiple sclerosis and parkinson&rsquo;s disease gait dysfunctions—a deep learning approach,&rdquo; IEEE J. Biomed. Health Inform., vol. 27, pp. 190–201, 2022.</p>
+</li>
+<li>
+<p>[120] T. Connie et al., &ldquo;Pose-based gait analysis for diagnosis of parkinson&rsquo;s disease,&rdquo; Algorithms, vol. 15, p. 474, 2022.</p>
+</li>
+<li>
+<p>[121] M. H. Monje et al., &ldquo;Remote evaluation of parkinson&rsquo;s disease using a conventional webcam and artificial intelligence,&rdquo; Frontiers in neurology, vol. 12, p. 742654, 2021.</p>
+</li>
+<li>
+<p>[122] J. Archila et al., &ldquo;A multimodal parkinson quantification by fusing eye and gait motion patterns, using covariance descriptors, from non-invasive computer vision,&rdquo; Computer methods and programs in biomedicine, vol. 215, p. 106607, 2022.</p>
+</li>
+<li>
+<p>[123] K. Sun et al., &ldquo;Spatial attentional bilinear 3d convolutional network for video-based autism spectrum disorder detection,&rdquo; in ICASSP 20202020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2020, pp. 3387–3391.</p>
+</li>
+<li>
+<p>[124] S. Chen et al., &ldquo;Attention-based autism spectrum disorder screening with privileged modality,&rdquo; in Proceedings of the IEEE/CVF International Conference on Computer Vision, 2019, pp. 1181–1190.</p>
+</li>
+<li>
+<p>[125] M. Jiang et al., &ldquo;Learning visual attention to identify people with autism spectrum disorder,&rdquo; in Proceedings of the ieee international conference on computer vision, 2017, pp. 3267–3276.</p>
+</li>
+<li>
+<p>[126] Y. Tao et al., &ldquo;Sp-asdnet: Cnn-lstm based asd classification model using observer scanpaths,&rdquo; in 2019 IEEE International conference on multimedia &amp; expo workshops (ICMEW). IEEE, 2019, pp. 641–646.</p>
+</li>
+<li>
+<p>[127] A. Ali et al., &ldquo;Video-based behavior understanding of children for objective diagnosis of autism,&rdquo; in VISAPP 2022-17th International Conference on Computer Vision Theory and Applications, 2022.</p>
+</li>
+<li>
+<p>[128] C. Wu et al., &ldquo;Machine learning based autism spectrum disorder detection from videos,&rdquo; in 2020 IEEE International Conference on Ehealth Networking, Application &amp; Services (HEALTHCOM). IEEE, 2021, pp. 1–6.</p>
+</li>
+<li>
+<p>[129] N. Kojovic et al., &ldquo;Using 2d video-based pose estimation for automated prediction of autism spectrum disorders in young children,&rdquo; Scientific Reports, vol. 11, p. 15069, 2021.</p>
+</li>
+<li>
+<p>[130] Y. Yang et al., &ldquo;Video-based detection of generalized tonic-clonic seizures using deep learning,&rdquo; IEEE J. Biomed. Health Inform., vol. 25, pp. 2997–3008, 2021.</p>
+</li>
+<li>
+<p>[131] J.-C. Hou et al., &ldquo;A self-supervised pre-training framework for visionbased seizure classification,&rdquo; in ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) . IEEE, 2022, pp. 1151–1155.</p>
+</li>
+<li>
+<p>[132] P. K. Pothula et al., &ldquo;A real-time seizure classification system using computer vision techniques,&rdquo; in 2022 IEEE International Systems Conference (SysCon). IEEE, 2022, pp. 1–6.</p>
+</li>
+<li>
+<p>[133] D. Ahmedt-Aristizabal et al., &ldquo;Vision-based mouth motion analysis in epilepsy: A 3d perspective,&rdquo; in 2019 41st Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC). IEEE, 2019, pp. 1625–1629.</p>
+</li>
+<li>
+<p>[134] C.-H. Chou et al., &ldquo;Convolutional neural network-based fast seizure detection from video electroencephalograms,&rdquo; Biomedical Signal Processing and Control, vol. 80, p. 104380, 2023.</p>
+</li>
+<li>
+<p>[135] V. M. Garc¸ao˜ ˜ et al., &ldquo;A novel approach to automatic seizure detection using computer vision and independent component analysis,&rdquo; Epilepsia , vol. 64, pp. 2472–2483, 2023.</p>
+</li>
+<li>
+<p>[136] D. Ahmedt-Aristizabal et al., &ldquo;Motion signatures for the analysis of seizure evolution in epilepsy,&rdquo; in 2019 41st Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC). IEEE, 2019, pp. 2099–2105.</p>
+</li>
+<li>
+<p>[137] J.-C. Hou et al., &ldquo;A multi-stream approach for seizure classification with knowledge distillation,&rdquo; in 2021 17th IEEE International Conference on Advanced Video and Signal Based Surveillance (AVSS). IEEE, 2021, pp. 1–8.</p>
+</li>
+<li>
+<p>[138] J. C. Hou et al., &ldquo;Automated video analysis of emotion and dystonia in epileptic seizures,&rdquo; Epilepsy Research, vol. 184, p. 106953, 2022.</p>
+</li>
+<li>
+<p>[139] K. Simonyan et al., &ldquo;Very deep convolutional networks for large-scale image recognition,&rdquo; arXiv preprint arXiv:1409.1556, 2014.</p>
+</li>
+<li>
+<p>[140] K. He et al., &ldquo;Deep residual learning for image recognition,&rdquo; in Proceedings of the IEEE conference on computer vision and pattern recognition, 2016, pp. 770–778.</p>
+</li>
+<li>
+<p>[141] G. A. Mart ´ ´ınez-Mascorro et al., &ldquo;Criminal intention detection at early stages of shoplifting cases by using 3d convolutional neural networks,&rdquo; Computation, vol. 9, p. 24, 2021.</p>
+</li>
+<li>
+<p>[142] I. Muneer et al., &ldquo;Shoplifting detection using hybrid neural network cnn-bilsmt and development of benchmark dataset,&rdquo; Applied Sciences , vol. 13, p. 8341, 2023.</p>
+</li>
+<li>
+<p>[143] V. Manikandan et al., &ldquo;A neural network aided attuned scheme for gun detection in video surveillance images,&rdquo; Image and Vision Computing , vol. 120, p. 104406, 2022.</p>
+</li>
+<li>
+<p>[144] M. T. Bhatti et al., &ldquo;Weapon detection in real-time cctv videos using deep learning,&rdquo; Ieee Access, vol. 9, pp. 34 366–34 382, 2021.</p>
+</li>
+<li>
+<p>[145] T. Nyajowi et al., &ldquo;Cnn real-time detection of vandalism using a hybridlstm deep learning neural networks,&rdquo; in 2021 IEEE AFRICON. IEEE, 2021, pp. 1–6.</p>
+</li>
+<li>
+<p>[146] Y. Yang et al., &ldquo;Enhanced adversarial learning based video anomaly detection with object confidence and position,&rdquo; in 2019 13th International Conference on Signal Processing and Communication Systems (ICSPCS). IEEE, 2019, pp. 1–5.</p>
+</li>
+<li>
+<p>[147] D. Chen et al., &ldquo;Nm-gan: Noise-modulated generative adversarial network for video anomaly detection,&rdquo; Pattern Recognition, vol. 116, p. 107969, 2021.</p>
+</li>
+<li>
+<p>[148] A. Barbalau et al., &ldquo;Ssmtl++: Revisiting self-supervised multi-task learning for video anomaly detection,&rdquo; Computer Vision and Image Understanding, vol. 229, p. 103656, 2023.</p>
+</li>
+<li>
+<p>[149] G. Wang et al., &ldquo;Video anomaly detection by solving decoupled spatiotemporal jigsaw puzzles,&rdquo; in European Conference on Computer Vision . Springer, 2022, pp. 494–511.</p>
+</li>
+<li>
+<p>[150] M. I. Georgescu et al., &ldquo;A background-agnostic framework with adversarial training for abnormal event detection in video,&rdquo; IEEE Trans. Pattern Anal. Mach. Intell., vol. 44, pp. 4505–4523, 2021.</p>
+</li>
+<li>
+<p>[151] W. Luo et al., &ldquo;Future frame prediction network for video anomaly detection,&rdquo; IEEE Trans. Pattern Anal. Mach. Intell., vol. 44, pp. 7505– 7520, 2021.</p>
+</li>
+<li>
+<p>[152] H. Shi et al., &ldquo;Abnormal ratios guided multi-phase self-training for weakly-supervised video anomaly detection,&rdquo; IEEE Trans. Multimedia , vol. 26, pp. 5575–5587, 2023.</p>
+</li>
+<li>
+<p>[153] Q. Li et al., &ldquo;Attention-based anomaly detection in multi-view surveillance videos,&rdquo; Knowledge-Based Systems, vol. 252, p. 109348, 2022.</p>
+</li>
+<li>
+<p>[154] C. Zhang et al., &ldquo;Exploiting completeness and uncertainty of pseudo labels for weakly supervised video anomaly detection,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2023, pp. 16 271–16 280.</p>
+</li>
+<li>
+<p>[155] Z. Yang et al., &ldquo;Text prompt with normality guidance for weakly supervised video anomaly detection,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2024, pp. 18 899–18 908.</p>
+</li>
+<li>
+<p>[156] J. Salido et al., &ldquo;Automatic handgun detection with deep learning in video surveillance images,&rdquo; Applied Sciences, vol. 11, p. 6085, 2021.</p>
+</li>
+<li>
+<p>[157] R. Rodrigues et al., &ldquo;Multi-timescale trajectory prediction for abnormal human activity detection,&rdquo; in Proceedings of the IEEE/CVF winter conference on applications of computer vision, 2020, pp. 2626–2634.</p>
+</li>
+<li>
+<p>[158] C. Huang et al., &ldquo;Hierarchical graph embedded pose regularity learning via spatio-temporal transformer for abnormal behavior detection,&rdquo; in Proceedings of the 30th ACM international conference on multimedia , 2022, pp. 307–315.</p>
+</li>
+<li>
+<p>[159] X. Zeng et al., &ldquo;A hierarchical spatio-temporal graph convolutional neural network for anomaly detection in videos,&rdquo; IEEE Trans. Circuits Syst. Video Technol., vol. 33, pp. 200–212, 2021.</p>
+</li>
+<li>
+<p>[160] B. Fan et al., &ldquo;Anomaly detection based on pose estimation and gruffn,&rdquo; in 2021 IEEE Sustainable Power and Energy Conference (iSPEC) . IEEE, 2021, pp. 3821–3825.</p>
+</li>
+<li>
+<p>[161] W. Luo et al., &ldquo;Normal graph: Spatial temporal graph convolutional networks based prediction network for skeleton based video anomaly detection,&rdquo; Neurocomputing, vol. 444, pp. 332–337, 2021.</p>
+</li>
+<li>
+<p>[162] Y. Jain et al., &ldquo;Posecvae: Anomalous human activity detection,&rdquo; in 2020 25th International Conference on Pattern Recognition (ICPR). IEEE, 2021, pp. 2927–2934.</p>
+</li>
+<li>
+<p>[163] C. Liu et al., &ldquo;A self-attention augmented graph convolutional clustering networks for skeleton-based video anomaly behavior detection,&rdquo; Applied Sciences, vol. 12, p. 4, 2021.</p>
+</li>
+<li>
+<p>[164] A. Markovitz et al., &ldquo;Graph embedded pose clustering for anomaly detection,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2020, pp. 10 539–10 547.</p>
+</li>
+<li>
+<p>[165] n. Li et al., &ldquo;Human-related anomalous event detection via memoryaugmented wasserstein generative adversarial network with gradient penalty,&rdquo; Pattern Recognition, vol. 138, p. 109398, 2023.</p>
+</li>
+<li>
+<p>[166] N. Li et al., &ldquo;Human-related anomalous event detection via spatialtemporal graph convolutional autoencoder with embedded long shortterm memory network,&rdquo; Neurocomputing, vol. 490, pp. 482–494, 2022.</p>
+</li>
+<li>
+<p>[167] R. Morais et al., &ldquo;Learning regularity in skeleton trajectories for anomaly detection in videos,&rdquo; in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2019, pp. 11 996– 12 004.</p>
+</li>
+<li>
+<p>[168] G. A. Noghre et al., &ldquo;Human-centric video anomaly detection through spatio-temporal pose tokenization and transformer,&rdquo; 2025.</p>
+</li>
+<li>
+<p>[169] X. Chen et al., &ldquo;Multiscale spatial temporal attention graph convolution network for skeleton-based anomaly behavior detection,&rdquo; Journal of visual communication and image representation, vol. 90, p. 103707, 2023.</p>
+</li>
+<li>
+<p>[170] G. A. Noghre et al., &ldquo;Posewatch: A transformer-based architecture for human-centric video anomaly detection using spatio-temporal pose tokenization,&rdquo; arXiv preprint arXiv:2408.15185, 2024.</p>
+</li>
+<li>
+<p>[171] A. Pramanik et al., &ldquo;A real-time video surveillance system for traffic pre-events detection,&rdquo; Accident Analysis &amp; Prevention, vol. 154, p. 106019, 2021.</p>
+</li>
+<li>
+<p>[172] A. Aboah, &ldquo;A vision-based system for traffic anomaly detection using deep learning and decision trees,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2021, pp. 4207–4212.</p>
+</li>
+<li>
+<p>[173] C. Li et al., &ldquo;Difftad: Denoising diffusion probabilistic models for vehicle trajectory anomaly detection,&rdquo; Knowledge-Based Systems, vol. 286, p. 111387, 2024.</p>
+</li>
+<li>
+<p>[174] V. Katariya et al., &ldquo;Vegaedge: Edge ai confluence for real-time iotapplications in highway safety,&rdquo; Internet of Things, vol. 27, p. 101268, 2024.</p>
+</li>
+<li>
+<p>[175] J. Owens et al., &ldquo;Application of the self-organising map to trajectory classification,&rdquo; in Proceedings Third IEEE International Workshop on Visual Surveillance. IEEE, 2000, pp. 77–83.</p>
+</li>
+<li>
+<p>[176] W. Hu et al., &ldquo;A system for learning statistical motion patterns,&rdquo; IEEE Trans. Pattern Anal. Mach. Intell., vol. 28, pp. 1450–1464, 2006.</p>
+</li>
+<li>
+<p>[177] X. Wang et al., &ldquo;Unsupervised activity perception by hierarchical bayesian models,&rdquo; in 2007 IEEE Conference on Computer Vision and Pattern Recognition, 2007, pp. 1–8.</p>
+</li>
+<li>
+<p>[178] K. K. Santhosh et al., &ldquo;Vehicular trajectory classification and traffic anomaly detection in videos using a hybrid cnn-vae architecture,&rdquo; IEEE Trans. Intell. Transp. Syst., vol. 23, pp. 11 891–11 902, 2021.</p>
+</li>
+<li>
+<p>[179] Z. Zhou et al., &ldquo;Spatio-temporal feature encoding for traffic accident detection in vanet environment,&rdquo; IEEE Transactions on Intelligent Transportation Systems, vol. 23, pp. 19 772–19 781, 2022.</p>
+</li>
+<li>
+<p>[180] J. Park et al., &ldquo;Deep learning-based stopped vehicle detection method utilizing in-vehicle dashcams,&rdquo; Electronics, vol. 13, p. 4097, 2024.</p>
+</li>
+<li>
+<p>[181] S. S. Htun et al., &ldquo;Tempolearn network: Leveraging spatio-temporal learning for traffic accident detection,&rdquo; IEEE Access, vol. 11, pp. 142 292–142 303, 2023.</p>
+</li>
+<li>
+<p>[182] J. Fang et al., &ldquo;Traffic accident detection via self-supervised consistency learning in driving scenarios,&rdquo; IEEE Trans. Intell. Transp. Syst. , vol. 23, pp. 9601–9614, 2022.</p>
+</li>
+<li>
+<p>[183] Y. Yao et al., &ldquo;Unsupervised traffic accident detection in first-person videos,&rdquo; in 2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS). IEEE, 2019, pp. 273–280.</p>
+</li>
+<li>
+<p>[184] H. Ru et al., &ldquo;Enhanced anomaly detection in dashcam videos: Dual gan approach with swin-unet for optical flow and region of interest analysis,&rdquo; in 2024 International Joint Conference on Neural Networks (IJCNN). IEEE, 2024, pp. 1–8.</p>
+</li>
+<li>
+<p>[185] D. Bogdoll et al., &ldquo;Hybrid video anomaly detection for anomalous scenarios in autonomous driving,&rdquo; arXiv preprint arXiv:2406.06423 , 2024.</p>
+</li>
+<li>
+<p>[186] S. Haresh et al., &ldquo;Towards anomaly detection in dashcam videos,&rdquo; in 2020 IEEE Intelligent Vehicles Symposium (IV). IEEE, 2020, pp. 1407–1414.</p>
+</li>
+<li>
+<p>[187] A. Khalil et al., &ldquo;Fire detection using multi color space and background modeling,&rdquo; Fire technology, vol. 57, pp. 1221–1239, 2021.</p>
+</li>
+<li>
+<p>[188] H. Farman et al., &ldquo;Efficient fire detection with e-efnet: A lightweight deep learning-based approach for edge devices,&rdquo; Applied Sciences , vol. 13, p. 12941, 2023.</p>
+</li>
+<li>
+<p>[189] S. Chitram et al., &ldquo;Enhancing fire and smoke detection using deep learning techniques,&rdquo; Engineering Proceedings, vol. 62, p. 7, 2024.</p>
+</li>
+<li>
+<p>[190] A. S. Mahdi et al., &ldquo;An edge computing environment for early wildfire detection,&rdquo; Annals of Emerging Technologies in Computing (AETiC) , vol. 6, pp. 56–68, 2022.</p>
+</li>
+<li>
+<p>[191] Z. Dou et al., &ldquo;An improved yolov5s fire detection model,&rdquo; Fire Technology, vol. 60, pp. 135–166, 2024.</p>
+</li>
+<li>
+<p>[192] V. E. Sathishkumar et al., &ldquo;Forest fire and smoke detection using deep learning-based learning without forgetting,&rdquo; Fire ecology, vol. 19, p. 9, 2023.</p>
+</li>
+<li>
+<p>[193] G. Son et al., &ldquo;Video based smoke and flame detection using convolutional neural network,&rdquo; in 2018 14th International Conference on Signal-Image Technology &amp; Internet-Based Systems (SITIS). IEEE, 2018, pp. 365–368.</p>
+</li>
+<li>
+<p>[194] H. Zhao et al., &ldquo;Fsdf: A high-performance fire detection framework,&rdquo; Expert Systems with Applications, vol. 238, p. 121665, 2024.</p>
+</li>
+<li>
+<p>[195] N. Yunusov et al., &ldquo;Robust forest fire detection method for surveillance systems based on you only look once version 8 and transfer learning approaches,&rdquo; Processes, vol. 12, p. 1039, 2024.</p>
+</li>
+<li>
+<p>[196] F. Akhmedov et al., &ldquo;Dehazing algorithm integration with yolo-v10 for ship fire detection,&rdquo; Fire, vol. 7, p. 332, 2024.</p>
+</li>
+<li>
+<p>[197] H. Yar et al., &ldquo;An efficient deep learning architecture for effective fire detection in smart surveillance,&rdquo; Image and Vision Computing, vol. 145, p. 104989, 2024.</p>
+</li>
+<li>
+<p>[198] Y. Wang et al., &ldquo;Computer vision-driven forest wildfire and smoke recognition via iot drone cameras,&rdquo; Wireless Networks, vol. 30, pp. 7603–7616, 2024.</p>
+</li>
+<li>
+<p>[199] H. Yar et al., &ldquo;A modified vision transformer architecture with scratch learning capabilities for effective fire detection,&rdquo; Expert Systems with Applications, vol. 252, p. 123935, 2024.</p>
+</li>
+<li>
+<p>[200] P. V. K. Borges et al., &ldquo;A probabilistic model for flood detection in video sequences,&rdquo; in 2008 15th IEEE International Conference on Image Processing. IEEE, 2008, pp. 13–16.</p>
+</li>
+<li>
+<p>[201] I. E. Villalon-Turrubiates, &ldquo;Convolutional neural network for flood-risk assessment and detection within a metropolitan area,&rdquo; in 2021 IEEE International Geoscience and Remote Sensing Symposium IGARSS . IEEE, 2021, pp. 1339–1342.</p>
+</li>
+<li>
+<p>[202] P. Zhong et al., &ldquo;Detection of urban flood inundation from traffic images using deep learning methods,&rdquo; Water Resources Management , vol. 38, pp. 287–301, 2024.</p>
+</li>
+<li>
+<p>[203] K. Lohumi et al., &ldquo;Automatic detection of flood severity level from flood videos using deep learning models,&rdquo; in 2018 5th International Conference on Information and Communication Technologies for Disaster Management (ICT-DM). IEEE, 2018, pp. 1–7.</p>
+</li>
+<li>
+<p>[204] L. Lopez-Fuentes et al., &ldquo;Multi-modal deep learning approach for flood detection.&rdquo; MediaEval, vol. 17, pp. 13–15, 2017.</p>
+</li>
+<li>
+<p>[205] M. Sandler et al., &ldquo;Mobilenetv2: Inverted residuals and linear bottlenecks,&rdquo; in Proceedings of the IEEE conference on computer vision and pattern recognition, 2018, pp. 4510–4520.</p>
+</li>
+<li>
+<p>[206] A. Krizhevsky et al., &ldquo;Imagenet classification with deep convolutional neural networks,&rdquo; Advances in neural information processing systems , vol. 25, 2012.</p>
+</li>
+<li>
+<p>[207] C. Szegedy et al., &ldquo;Going deeper with convolutions,&rdquo; in Proceedings of the IEEE conference on computer vision and pattern recognition , 2015, pp. 1–9.</p>
+</li>
+<li>
+<p>[208] S. Ren et al., &ldquo;Faster r-cnn: Towards real-time object detection with region proposal networks,&rdquo; IEEE Trans. Pattern Anal. Mach. Intell. , vol. 39, pp. 1137–1149, 2016.</p>
+</li>
+<li>
+<p>[209] S. Woo et al., &ldquo;Cbam: Convolutional block attention module,&rdquo; in Proceedings of the European conference on computer vision (ECCV) , 2018, pp. 3–19.</p>
+</li>
+<li>
+<p>[210] A. Van Den Oord et al., &ldquo;Neural discrete representation learning,&rdquo; Advances in neural information processing systems, vol. 30, 2017.</p>
+</li>
+<li>
+<p>[211] A. Dosovitskiy et al., &ldquo;An image is worth 16x16 words: Transformers for image recognition at scale,&rdquo; arXiv preprint arXiv:2010.11929, 2020.</p>
+</li>
+<li>
+<p>[212] N. Humaira et al., &ldquo;Dx-floodline: End-to-end deep explainable pipeline for real time flood scene object detection from multimedia images,&rdquo; IEEE Access, vol. 11, pp. 110 644–110 655, 2023.</p>
+</li>
+</ul>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000007_eb12f1819572ba4c45b4e59425538b139b3c3f7e2bfac02768a54e48a9154315.png"
+    ></figure>
+<p>Ghazal Alinezhad Noghre is currently a Ph.D. candidate in Electrical and Computer Engineering at the University of North Carolina at Charlotte, Charlotte, North Carolina, United States. Her research focuses on artificial intelligence, machine learning, and computer vision, with a particular emphasis on the application of AI in real-world environments and the associated challenges.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000008_1e65d2afaa5bbbe8f4c6c1128f0df2b159bc2297cbda019deebbb2b2dd007b86.png"
+    ></figure>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000009_682b2232083f94475cf6f0c6a5590ea5083b5f9899fec791c9ab7a4fb3eb801c.png"
+    ></figure>
+<p>Armin Danesh Pazho is a Ph.D. candidate in Electrical and Computer Engineering at the University of North Carolina at Charlotte. His research focuses on artificial intelligence, machine learning, and computer vision, with emphasis on developing scalable AI solutions for practical applications. He has researched, designed, and developed novel AI/ML algorithms, systems, and datasets with deployment in real-world testbeds.</p>
+<p>Hamed Tabkhi is an associate professor of Electrical and Computer Engineering at the University of North Carolina at Charlotte. His research focuses on advancing artificial intelligence and computer vision to solve real-world challenges through close collaboration with experts and community stakeholders. The National Science Foundation recognized Dr. Tabkhi&rsquo;s Smart and Connected Communities award as a program success story. His work has been featured by local news for its significant contributions to community-driven responsible AI solutions.</p>
+<p>TABLE VIII LIST OF ABBREVIATIONS USED THROUGHOUT THE PAPER. THIS TABLE PROVIDES FULL FORMS FOR TECHNICAL TERMS COMMONLY REFERENCED IN THE CONTEXT OF VIDEO ANOMALY DETECTION (VAD).</p>
+<table>
+  <thead>
+      <tr>
+          <th>Abbreviation</th>
+          <th>Full Form</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>VAD</td>
+          <td>Video Anomaly Detection</td>
+      </tr>
+      <tr>
+          <td>SOTA</td>
+          <td>State-of-The-Art</td>
+      </tr>
+      <tr>
+          <td>AI</td>
+          <td>Artificial Intelligence</td>
+      </tr>
+      <tr>
+          <td>CNN</td>
+          <td>Convolutional Neural Network</td>
+      </tr>
+      <tr>
+          <td>VQ-VAE</td>
+          <td>Vector Quantized Variational Autoencoder</td>
+      </tr>
+      <tr>
+          <td>ViT</td>
+          <td>Vision Transformer</td>
+      </tr>
+      <tr>
+          <td>GMM</td>
+          <td>Gaussian Mixture Model</td>
+      </tr>
+      <tr>
+          <td>GRU</td>
+          <td>Gated Recurrent Unit</td>
+      </tr>
+      <tr>
+          <td>LSTM</td>
+          <td>Long Short-Term Memory</td>
+      </tr>
+      <tr>
+          <td>RGB</td>
+          <td>Red Green Blue (color video input)</td>
+      </tr>
+      <tr>
+          <td>MLP</td>
+          <td>Multi-Layer Perceptron</td>
+      </tr>
+      <tr>
+          <td>PD</td>
+          <td>Parkinson’s Disease</td>
+      </tr>
+      <tr>
+          <td>SVM</td>
+          <td>Support Vector Machine</td>
+      </tr>
+      <tr>
+          <td>GEI</td>
+          <td>Gait Energy Image</td>
+      </tr>
+      <tr>
+          <td>ASD</td>
+          <td>Autism Spectrum Disorde</td>
+      </tr>
+      <tr>
+          <td>EEG</td>
+          <td>Electroencephalography</td>
+      </tr>
+      <tr>
+          <td>VEEG</td>
+          <td>Video Electroencephalography</td>
+      </tr>
+      <tr>
+          <td>MIL</td>
+          <td>Multiple Instance Learning</td>
+      </tr>
+      <tr>
+          <td>MSE</td>
+          <td>Mean Squared Error</td>
+      </tr>
+      <tr>
+          <td>GCN</td>
+          <td>Graph Convolutional Networ</td>
+      </tr>
+      <tr>
+          <td>VAE</td>
+          <td>Variational Autoencoder</td>
+      </tr>
+      <tr>
+          <td>GIN</td>
+          <td>Graph Isomorphism Networ</td>
+      </tr>
+      <tr>
+          <td>kNN</td>
+          <td>k-Nearest Neighbors</td>
+      </tr>
+      <tr>
+          <td>kDNN</td>
+          <td>k-Nearest Distance Neural Network (DNN-based approximation of kNN</td>
+      </tr>
+      <tr>
+          <td>IoU</td>
+          <td>Intersection-over-Union</td>
+      </tr>
+      <tr>
+          <td>GAN</td>
+          <td>Generative Adversarial Netwo</td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 class="relative group">IX. ABBREVIATIONS
+    <div id="ix-abbreviations" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ix-abbreviations" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This section provides a list of abbreviations and their corresponding full forms used throughout the survey. These terms are commonly referenced in the literature on Video Anomaly Detection (VAD). The purpose of this list is to assist readers with quick reference and improve the clarity and accessibility of the material presented.</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_papers/survey-3.md"
+          data-oid-likes="likes_papers/survey-3.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/survey-4/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/survey-2/">
+              <span class="leading-6">
+                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-24 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+      
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 overflow-x-auto py-2">
+        <ul class="flex list-none flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 me-4">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

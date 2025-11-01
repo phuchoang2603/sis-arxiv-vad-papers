@@ -1,0 +1,3601 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title> &middot; Blowfish</title>
+    <meta name="title" content=" &middot; Blowfish">
+  
+
+  
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/papers/follow-the-rules-reasonin-for-vad-with-llm/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/papers/follow-the-rules-reasonin-for-vad-with-llm/">
+  <meta property="og:site_name" content="Blowfish">
+  <meta property="og:title" content="Blowfish">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blowfish">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.7946532fa78157bafb1b4340d4074792811f18177af35790b3a0cb90566ce1cda3edd782eb92e134849964d14b6d9185c9d4ded2a12dcf5b706cb6a275c0cce0.css"
+    integrity="sha512-eUZTL6eBV7r7G0NA1AdHkoEfGBd681eQs6DLkFZs4c2j7deC65LhNISZZNFLbZGFydTe0qEtz1twbLaidcDM4A==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.9df4fc14d50efcc9aa4cfc2b6f348e365f421f5ad491278f8f48c0360cf2f93f08882fda6da162d7ace8e5add57c2df4ac46bd3861306b1d4c452cd31f448d64.js"
+      integrity="sha512-nfT8FNUO/MmqTPwrbzSONl9CH1rUkSePj0jANgzy&#43;T8IiC/abaFi16zo5a3VfC30rEa9OGEwax1MRSzTH0SNZA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Papers",
+    "name": "",
+    "headline": "",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/papers\/follow-the-rules-reasonin-for-vad-with-llm\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "13539"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          Blowfish
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/papers/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="papers"
+  title="Papers">
+  
+  
+    <p class="text-base font-medium">
+      papers
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/test/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="test"
+  title="Tests">
+  
+  
+    <p class="text-base font-medium">
+      test
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href=""
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  
+  title="">
+  
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/papers/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="papers"
+    title="Papers">
+    
+    
+      <p class="text-bg font-bg">
+        papers
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/test/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="test"
+    title="Tests">
+    
+    
+      <p class="text-bg font-bg">
+        test
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    
+    title="">
+    
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>13539 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">64 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Follow the Rules: Reasoning for Video Anomaly Detection with Large Language Models
+    <div id="follow-the-rules-reasoning-for-video-anomaly-detection-with-large-language-models" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#follow-the-rules-reasoning-for-video-anomaly-detection-with-large-language-models" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Yuchen Yang 1⋆ , Kwonjoon Lee 2 , Behzad Dariush 2 , Yinzhi Cao 1 , and Shao-Yuan Lo 2</p>
+<p>1</p>
+<p>Johns Hopkins University {yc.yang, <a
+  href="mailto:yinzhi.cao%7d@jhu.edu">yinzhi.cao}@jhu.edu</a> 2 Honda Research Institute USA {kwonjoon_lee, bdariush, shao-yuan_lo}@honda-ri.com</p>
+<p>Abstract. Video Anomaly Detection (VAD) is crucial for applications such as security surveillance and autonomous driving. However, existing VAD methods provide little rationale behind detection, hindering public trust in real-world deployments. In this paper, we approach VAD with a reasoning framework. Although Large Language Models (LLMs) have shown revolutionary reasoning ability, we find that their direct use falls short of VAD. Specifically, the implicit knowledge pre-trained in LLMs focuses on general context and thus may not apply to every specific real-world VAD scenario, leading to inflexibility and inaccuracy. To address this, we propose AnomalyRuler, a novel rule-based reasoning framework for VAD with LLMs. AnomalyRuler comprises two main stages: induction and deduction. In the induction stage, the LLM is fed with few-shot normal reference samples and then summarizes these normal patterns to induce a set of rules for detecting anomalies. The deduction stage follows the induced rules to spot anomalous frames in test videos. Additionally, we design rule aggregation, perception smoothing, and robust reasoning strategies to further enhance AnomalyRuler&rsquo;s robustness. AnomalyRuler is the first reasoning approach for the one-class VAD task, which requires only few-normal-shot prompting without the need for full-shot training, thereby enabling fast adaption to various VAD scenarios. Comprehensive experiments across four VAD benchmarks demonstrate AnomalyRuler&rsquo;s state-of-the-art detection performance and reasoning ability. AnomalyRuler is open-source and available at: <a
+  href="https://github.com/Yuchen413/AnomalyRuler"
+    target="_blank"
+  >https://github.com/Yuchen413/AnomalyRuler</a></p>
+
+<h2 class="relative group">1 Introduction
+    <div id="1-introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video Anomaly Detection (VAD) aims to identify anomalous activities, which are infrequent or unexpected in surveillance videos. It has a wide range of practical applications, including security (e.g., violence), autonomous driving (e.g., traffic accidents), etc. VAD is a challenging problem since anomalies are rare and longtailed in real life, leading to a lack of large-scale representative anomaly data.</p>
+<p>⋆ This work was mostly done when Y. Yang was an intern at HRI-USA.</p>
+<p>Fig. 1: Comparison of one-class VAD approaches. In this specific safety application example, only &ldquo;walking&rdquo; is normal. The test frame contains &ldquo;skateboarding&rdquo;, so it is abnormal. (a) Traditional methods require full-shot training and only output anomaly scores, lacking reasoning. (b) Direct LLM use may not align with specific VAD needs. Here GPT-4V mistakenly treats &ldquo;skateboarding&rdquo; as normal. (c) Our AnomalyRuler has induction and deduction stages. It derives rules from few-shot normal reference frames to detect anomalies, correctly identifying &ldquo;skateboarding&rdquo; as an anomaly.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000000_45eec9f6a4c0e414719a2dc30bd1db2c330ccb0ef9d2c84335de3b05040dde20.png"
+    ></figure>
+<p>Hence, the one-class VAD (a.k.a. unsupervised VAD) paradigm [16 , 36 , 43 , 45 , 53] is preferred, as it assumes that only the more accessible normal data are available for training. Most existing one-class VAD methods learn to model normal patterns via self-supervised pretext tasks, such as frame reconstruction [16 , 25 , 27 , 36 , 45 , 53 , 54] and frame order classification [14 , 43 , 49]. Despite good performance, these traditional methods can only output anomaly scores, providing little rationale behind their detection results (see Fig. 1a). This hinders them from earning public trust when deployed in real-world products.</p>
+<p>We approach the VAD task with a reasoning framework toward a trustworthy system, which is less explored in the literature. An intuitive way is to incorporate the emergent Large Language Models (LLMs) [1 , 7 , 19 , 38 , 39 , 47], which have shown revolutionary capability in various reasoning tasks. Still, we find that their direct use falls short of performing VAD. Specifically, the implicit knowledge pre-trained in LLMs focuses on general context, meaning that it may not always align with specific real-world VAD applications. In other words, there is a mismatch between an LLM&rsquo;s understanding of anomalies and the anomaly definitions required for certain scenarios. For example, the GPT-4V [1] typically treats &ldquo;skateboarding&rdquo; as a normal activity, whereas certain safety applications need to define it as an anomaly, such as within a restricted campus (see Fig. 1b). However, injecting such specific knowledge by fine-tuning LLMs for each application is costly. This highlights the necessity for a flexible prompting approach that steers LLMs&rsquo; reasoning strengths to different uses of VAD.</p>
+<p>To arrive at such a solution, we revisit the fundamental process of the scientific method [4] emphasizing reasoning, which involves drawing conclusions in a rigorous manner [41]. Our motivation stems from two types of reasoning: inductive reasoning, which infers generic principles from given observations, and deductive reasoning, which derives conclusions based on given premises. In this</p>
+<p>paper, we propose AnomalyRuler, a new VAD framework based on reasoning with LLMs. AnomalyRuler consists of an induction stage and a deduction stage as shown in Fig. 1c. In the induction stage, the LLM is fed with visual descriptions of few-shot normal samples as references to derive a set of rules for determining normality. Here we employ a Vision-Language Model (VLM) [23 , 51] to generate the description for each input video frame. Next, the LLM derives a set of rules for detecting anomalies by contrasting the rules for normality. The deduction, which is also an inference stage, follows the induced rules to identify anomalous frames in test video sequences. Additionally, in response to potential perception and reasoning errors by the VLM and LLM, we design strategies including rule aggregation via the randomized smoothing [10] for rule induction error mitigation, perception smoothing via the proposed Exponential Majority Smoothing for perception error reduction together with temporal consistency enhancement, and robust reasoning via a recheck mechanism for reliable reasoning output. These strategies are integrated into the AnomalyRuler pipeline to further enhance its detection robustness.</p>
+<p>Apart from equipping VAD with reasoning ability, AnomalyRuler offers several advantages. First, AnomalyRuler is a novel few-normal-shot prompting approach that utilizes only a few normal samples from a training set as references to derive the rules for VAD. This avoids the need for expensive full-shot training or fine-tuning of the entire training set, as required by traditional one-class VAD methods. Importantly, it enables efficient adaption by redirecting LLM&rsquo;s implicit knowledge to different specific VAD applications through just a few normal reference samples. Second, AnomalyRuler shows strong domain adaptability across datasets, as the language provides consistent descriptions across different visual domains, e.g., &ldquo;walking&rdquo; over visual data variance. This allows the application of induced rules to datasets with similar scenarios but distinct visual appearances. Furthermore, AnomalyRuler is a generic framework that is complementary to VLM and LLM backbones. It accommodates both closed-source models such as the GPT family [1 , 39] and open-source alternatives such as Mistral [19]. To the best of our knowledge, the proposed AnomalyRuler is the first reasoning approach for the one-class VAD problem. Extensive experiments on four VAD datasets demonstrate AnomalyRuler&rsquo;s state-of-the-art performance, reasoning ability, and domain adaptability.</p>
+<p>In summary, this paper has three main contributions. (1) We propose a novel rule-based reasoning framework for VAD with LLMs, namely AnomalyRuler. To the best of our knowledge, it is the first reasoning approach for one-class VAD. (2) The proposed AnomalyRuler is a novel few-normal-shot prompting approach that eliminates the need for expensive full-shot tuning and enables fast adaption to various VAD scenarios. (3) We propose rule aggregation, perception smoothing, and robust reasoning strategies for AnomalyRuler to enhance its robustness, leading to state-of-the-art detection performance, reasoning ability, and domain adaptability.</p>
+
+<h2 class="relative group">2 Related Work
+    <div id="2-related-work" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-related-work" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video Anomaly Detection. VAD is a challenging task since anomaly data are scarce and long-tailed. Therefore, researchers often focus on the one-class VAD (a.k.a. unsupervised VAD) paradigm [14 , 16 , 18 , 25 , 27 , 36 , 43 , 45 , 49 , 53 , 54], which uses only normal data during training. Most one-class methods learn to model normal patterns via self-supervised pretext tasks, based on the assumption that the model would obtain poor pretext task performance on anomaly data. Reconstruction-based methods [16 , 25 , 27 , 36 , 45 , 53 , 54] employ generative models such as auto-encoders and diffusion models to perform frame reconstruction or frame prediction as pretext tasks. Distance-based [14 , 43 , 49] methods use classifiers to perform pretext tasks such as frame order classification. These traditional methods can only output anomaly scores, providing little rationale behind their detection. Several recent studies explore utilizing VLMs or LLMs in anomaly detection. Elhafsi et al. [12] analyze semantic anomalies with an object detector [33] an LLM [7] in driving scenes. However, it relies on predefined concepts of normality and anomaly, which limits its adaption to different scenarios and cannot handle long-tailed undefined anomalies. Moreover, this method has not been evaluated on standard VAD benchmarks [2 , 22 , 24 , 28]. Cao et al. [8] explore the use of GPT-4V for anomaly detection, but their direct use may fall into the misalignment between GPT-4V&rsquo;s implicit knowledge and specific VAD needs, as discussed. Gu et al. [15] adopt a large VLM for anomaly detection, but it focuses on industrial images. Despite supporting dialogues, this method can only describe anomalies rather than explain the rationales behind its detection. Lv et al. [31] equip video-based LLMs in the VAD framework to provide detection explanations. It involves three-phase training to fine-tune the heavy video-based LLMs. Besides, it focuses on weakly-supervised VAD, a relaxed paradigm that requires training with anomaly data and labels. Different from these works, our AnomalyRuler provides rule-based reasoning via efficient few-normal-shot prompting and enables fast adaption to different VAD scenarios.</p>
+<p>Large Language Models. LLMs [1 , 7 , 19 , 38 , 39 , 46 , 47] have achieved significant success in natural language processing and are recently being explored for computer vision problems. Recent advances, such as the GPT family [1 , 7 , 38 , 39], the LLaMA family [46 , 47], and Mistral [19], have shown remarkable capabilities in understanding and generating human language. On the other hand, large VLMs [1 , 21 , 23 , 34 , 44 , 51 , 57 , 58 , 60] have shown promise in bridging the vision and language domains. BLIP-2 [21] leverages Q-Former to integrate visual features into a language model. LLaVA [23] introduces a visual instruction tuning method for visual and language understanding. CogVLM [51] trains a visual expert module to improve large VLM&rsquo;s vision ability. Video-LLaMA [57] extends LLMs to understand video data. These models&rsquo; parametric knowledge is trained for general purposes and thus may not apply to every VAD application. Recent studies explore prompting methods to exploit LLMs&rsquo; reasoning ability. Chain-of-Thought (CoT) [11 , 52] guides LLMs to solve complex problems via multiple smaller and manageable intermediate steps. Least-to-Most (LtM) [20 , 59] decomposes a complex problem into multiple simpler sub-problems and solves them in sequence.</p>
+<p>Fig. 2: The AnomalyRuler pipeline consists of two main stages: induction and deduction. The induction stage involves: i) visual perception transfers normal reference frames to text descriptions; ii) rule generation derives rules based on these descriptions to determine normality and anomaly; iii) rule aggregation employs a voting mechanism to mitigate errors in rules. The deduction stage involves: i) visual perception transfers continuous frames to descriptions; ii) perception smoothing adjusts these descriptions considering temporal consistency to ensure neighboring frames share similar characteristics; iii) robust reasoning rechecks the previous dummy answers and outputs reasoning.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000001_5761d5255ed4dac996bd2f520f63f400b7ed0f7b3c0a8a734ea1d3576389083f.png"
+    ></figure>
+<p>Hypotheses-to-Theories (HtT) [61] learns a rule library for reasoning from labeled training data in a supervised manner. However, a reasoning approach for the VAD task in the one-class paradigm is not well-explored.</p>
+
+<h2 class="relative group">3 Induction
+    <div id="3-induction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-induction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The induction stage aims to derive a set of rules from a few normal reference frames for performing VAD. The top part of Fig. 2 shows the three modules in the induction pipeline. The visual perception module utilizes a VLM which takes a few normal reference frames as inputs and outputs frame descriptions. The rule generation module uses an LLM to generate rules based on these descriptions. The rule aggregation module employs a voting mechanism to mitigate the errors from rule generation. In the following sections, we discuss each module and the strategies applied in detail.</p>
+
+<h2 class="relative group">3.1 Visual Perception
+    <div id="31-visual-perception" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#31-visual-perception" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We design the visual perception module as the initial step in our pipeline. This module utilizes a VLM to convert video frames into text descriptions. We define Fn Fnormal = {fnormal 0 , . . . , fnormal n } as the few-normal-shot reference frames, with each frame fnormal i ∈ Fnormal randomly chosen from the training set. This module outputs the text description of each normal reference frame:</p>
+<p>D normal = {VLM(fnormal i , pv) | fnormal i ∈ Fnormal}, with p v as the prompt &ldquo;What are people doing? What are in the images other than people?&rdquo;. Instead of directly asking &ldquo;What are in the image?&rdquo;, we design p v to separate humans and the environment with the following advantages. First, it enhances perception precision by directing the model&rsquo;s attention to specific aspects of the scene, ensuring that no details are overlooked. Second, it simplifies the following rule generation module by dividing the task into two subproblems [20], i.e., rules for human activities and rules for environmental objects. We denote this strategy as Human and Environment.</p>
+
+<h2 class="relative group">3.2 Rule Generation
+    <div id="32-rule-generation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#32-rule-generation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>With the text descriptions from normal reference frames Dnormal, we design a Rule Generation module that uses a frozen LLM to generate rules (denoted as R). In formal terms, R = {LLM(dnormal i , pg) | dnormal i ∈ Dnormal}, where p g is the prompt detailed in Appendix A.2. We craft p g with three strategies to guide the LLM in gradually deriving rules from the observed normal patterns:</p>
+<p>Normal and Anomaly. The prompt p g guides the LLM to perform contrast , which first induces rules for normal based on D normal , which are assumed to be ground-truth normal. Then, it generates rules for anomalies by contrasting them with the rules for normal. For instance, if &ldquo;walking&rdquo; is a common pattern in D normal , it becomes a normal rule, and then &ldquo;non-walking movement&rdquo; will be included in the rules for anomaly. This strategy sets a clear boundary between normal and anomaly without access to anomaly frames.</p>
+<p>Abstract and Concrete. The prompt p g helps the LLM to perform analogy , which starts from an abstract concept and then effectively generalizes to more concrete examples. Taking the same &ldquo;walking&rdquo; example, the definition of a normal rule is now expanded to &ldquo;walking, whether alone or with others.&rdquo; Consequently, the anomaly rule evolves to include specific non-walking movements, i.e., &ldquo;nonwalking movement, such as riding a bicycle, scooting, or skateboarding.&rdquo; This strategy clarifies the rules with detailed examples and enables the LLM to use analogy for reasoning without exhaustively covering every potential scenario.</p>
+<p>Human and Environment. This strategy is inherited from the Visual Perception module. The prompt p g leads the LLM to pay attention separately to environmental elements (e.g., vehicles or scene factors) and human activities, separately. This enriches the rule set for VAD tasks, where anomalies often arise from interactions between humans and their environment.</p>
+<p>These strategies align with the spirit of CoT [52] yet are further refined for the VAD task. The ablation study in Section 5.4 demonstrates their effectiveness.</p>
+
+<h2 class="relative group">3.3 Rule Aggregation
+    <div id="33-rule-aggregation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#33-rule-aggregation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The rule aggregation module uses a LLM as an aggregator with a voting mechanism to combine n sets of rules (i.e., R) generated independently from n randomly chosen normal reference frames into one set of robust rules, Rrobust = LLM(R, p a ) .</p>
+<p>This module aims to mitigate errors from previous stages, such as the visual perception module&rsquo;s potential misinterpretation of &ldquo;walking&rdquo; as &ldquo;skateboarding&rdquo;, leading to incorrect rules. The aggregation process filters out uncommon elements by retaining rule elements consistently present across the n sets. The prompt p a for the LLM to achieve this is detailed in Appendix A.2. This strategy is based on the assumption of randomize smoothing [10], where errors may occur on a single input but are less likely to consistently occur across multiple randomly sampled inputs. Therefore, by aggregating these outputs, AnomalyRuler generates rules more resilient to individual errors. The hyperparameter n can be treated as the number of batches. For simplicity, previous discussions assume that each batch has only one frame, i.e., m = 1. Here we define m as the number of normal reference frames per batch, i.e., batch size. We show the effectiveness of the rule aggregation and provide an ablation on different n and m values in Section 5.4 .</p>
+
+<h2 class="relative group">4 Deduction
+    <div id="4-deduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-deduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>After the induction stage derives a set of robust rules, the deduction stage follows these rules to perform VAD. The bottom part of Fig. 2 illustrates the deduction stage, which aims to precisely perceive each frame of videos and then use the LLM to reason if they are normal or abnormal based on the rules. To achieve this goal, we design three modules. First, the visual perception module works similarly as described in the induction stage. However, instead of taking the few-normalshot reference frames, the deduction processes continuous frames from each test video and outputs a series of frame descriptions D = {d0, d1, . . . , dt}. Second, the perception smoothing module reduces errors with the proposed Exponential Majority Smoothing. This step alone can provide preliminary detection results, referred to as AnomalyRuler-base. Third, the robust reasoning module utilizes an LLM to recheck the preliminary detection results against the rules and perform reasoning. The perception smoothing and robust reasoning modules are elaborated in the following sections.</p>
+
+<h2 class="relative group">4.1 Perception Smoothing
+    <div id="41-perception-smoothing" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#41-perception-smoothing" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>As we discussed in Section 3.3, visual perception errors would happen in the induction stage, and this concern extends to the deduction stage as well. To address this challenge, we propose a novel mechanism named Exponential Majority Smoothing. This mechanism mitigates the errors by considering temporal consistency in videos, i.e., movements are continuous and should exhibit consistent patterns over time. We utilize the results of this smoothing to guide the correction of frame descriptions, enhancing AnomalyRuler&rsquo;s robustness to errors. There are four key steps:</p>
+<p>Initial Anomaly Matching. For the continuous frame descriptions D = {d0, d1, . . . , dt}, AnomalyRuler first match anomaly keywords K found within the anomaly rules from the induction stage (see details in Appendix A.2), and assigns di with label yi where i ∈ [0, t], represents the predicted label. Formally,</p>
+<p>we have yi = 1 if ∃k ∈ K ⊆ di, indicating an anomaly triggered by keywords such as ing-verb &ldquo;riding&rdquo; or &ldquo;running&rdquo;. Otherwise, yi = 0 indicates the normal. We denote the initial matching predictions as Y = {y0, y1, . . . , yt} .</p>
+<p>Exponential Majority Smoothing. We propose an approach that combines Exponential Moving Average (EMA) and Majority Vote. This approach is designed to enhance the continuity in human or object movements by adjusting the predictions to reflect the most common state within a specified window. The final smoothed predictions are denoted as Y ˆ = {yˆ ˆ 0, y ˆ 1, . . . , y ˆ t }, where each yˆ ˆ i is either 1 or 0. Formally, we have:</p>
+<ul>
+<li>Step I: EMA. For original prediction yt, the EMA value st is computed as st = P t i=0 (1−α) t − i P yi t i=0 (1−α) i . We denote α as the parameter that influences the weighting of data points in the EMA calculation.</li>
+<li>Step II: Majority Vote. The idea is to apply a majority vote to smooth the prediction within a window centered at each EMA value si with a padding size p. This means that for each si, we consider its neighboring EMA values within the window and determine the smoothed prediction yˆ ˆ i based on the majority of these values being above or below a threshold τ . We define this threshold as the mean of all EMA values: τ = 1 t P t i=1 si. Formally, the smoothed prediction y ˆ i is determined as:</li>
+</ul>
+<!-- formula-not-decoded -->
+<p>where 1(·) denotes the indicator function and the window size is adaptively defined as min(i + p, t) − max(1, i − p) + 1 ensuring that the window does not extend beyond the boundaries determined by the range from max(1, i − p) to min(i + p, t) .</p>
+<p>Anomaly Score. Given that Y ˆ represents the initial detection results of AnomalyRuler, we can further assess these by calculating an anomaly score through a secondary EMA. Specifically, the anomaly scores, denoted as A = {a0, a1, . . . , at} , where a t is:</p>
+<!-- formula-not-decoded -->
+<p>We denote the above procedure AnomalyRuler-base as a baseline of our method, which provides a dummy answer, i.e., &ldquo;Anomaly&rdquo; if yˆ ˆ i = 1 otherwise &ldquo;Normal&rdquo;, with an anomaly score that is comparable with the state-of-the-art VAD methods [3 , 25 , 35 , 43]. Subsequently, AnomalyRuler utilizes the dummy answer in the robust reasoning module for further analysis.</p>
+<p>Description Modification. In this step, AnomalyRuler modifies the description D comparing Y and Y ˆ and outputs the modified D ˆ . If yi = 0 while yˆ ˆ i = 1 , indicating a false negative in the perception module, AnomalyRuler corrects di by adding &ldquo;There is a person {k}.&rdquo;, where k ∈ K is the most frequent anomaly keyword within the window size w. Conversely, if yi = 1 while yˆ ˆ i = 0, indicating a false positive in the perception module, so AnomalyRuler modifies di by removing parts of the description that contain the anomaly keyword k .</p>
+
+<h2 class="relative group">4.2 Robust Reasoning
+    <div id="42-robust-reasoning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#42-robust-reasoning" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In the robust reasoning module, AnomalyRuler utilizes an LLM to achieve the reasoning task for VAD, with the robust rule Rrobust derived from the induction stage as the context. The LLM is fed with each frame&rsquo;s modified description ˆ d i with its dummy answer, i.e., either &ldquo;Anomaly&rdquo; or &ldquo;Normal&rdquo; generated from AnomalyRuler-base. We denote the output of robust reasoning as Y ∗ = {LLM( ˆ d i
+, y ˆ i , Rrobust, p r ) | ˆ d i ∈ D, ˆ y ˆ i ∈ Y ˆ }. To ensure reliable results, the prompt p r , detailed in Appendix A.2, guides the LLM to recheck whether the dummy answer yˆ ˆ i matches the description ˆ di according to Rrobust. This validation step, instead of directly asking the LLM to analyze ˆ d i , improves decision-making by using the dummy answer as a hint. This approach helps AnomalyRuler reduce missed anomalies (false negatives) and ensures that its reasoning is more closely aligned with the rules. Additionally, to compare AnomalyRuler with the state-ofthe-art approaches based on thresholding anomaly scores, we apply Equation (2) with replacing yˆ ˆ i by y ∗ i ∈ Y ∗ to output anomaly scores.</p>
+
+<h2 class="relative group">5 Experiments
+    <div id="5-experiments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-experiments" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This section compares AnomalyRuler with LLM-based baselines and state-ofthe-art methods in terms of both detection and reasoning abilities. We also conduct an ablation study on each module within AnomalyRuler to evaluate their contributions. Examples of complete prompts, derived rules, and outputs are illustrated in Appendix A.2 .</p>
+
+<h2 class="relative group">5.1 Experimental Setup
+    <div id="51-experimental-setup" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#51-experimental-setup" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Datasets. We evaluate our method on four VAD benchmark datasets. (1) UCSD Ped2 (Ped2) [22]: A single-scene dataset captured in pedestrian walkways with over 4,500 frames of videos, including anomalies such as skating and biking. (2) CUHK Avenue (Ave) [28]: A single-scene dataset captured in the CUHK campus avenue with over 30,000 frames of videos, including anomalies such as running and biking. (3) ShanghaiTech (ShT) [24]: A challenging dataset that contains 13 campus scenes with over 317,000 frames of videos, containing anomalies such as biking, fighting, and vehicles in pedestrian areas. (4) UBnormal (UB) [2]: An open-set virtual dataset generated by the Cinema4D software, which contains 29 scenes with over 236,000 frames of videos. For each dataset, we use the default training and test sets that adhere to the one-class setting. The normal reference frames used by AnomalyRuler are randomly sampled from the normal training set. The methods are evaluated on the entire test set if not otherwise specified. Evaluation Metrics. Following the common practice, we use the Area Under the receiver operating characteristic Curve (AUC) as the main detection performance metric. To compare with LLM-based methods that cannot output anomaly scores, we use the accuracy, precision, and recall metrics. Besides, we adopt the DoublyRight metric [32] to evaluate reasoning ability. All the metrics are calculated with frame-level ground truth labels.</p>
+<p>Table 1: Detection performance with accuracy, precision, and recall (%) compared with different VAD with LLM methods on the ShT dataset.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>Accuracy</th>
+          <th>Precision</th>
+          <th>Recall</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Ask LLM Directly</td>
+          <td>52.1</td>
+          <td>97.1</td>
+          <td>6.2</td>
+      </tr>
+      <tr>
+          <td>Ask LLM with Elhafsi et al. [12]</td>
+          <td>58.4</td>
+          <td>97.9</td>
+          <td>15.2</td>
+      </tr>
+      <tr>
+          <td>[ Ask Video-based LLM Directly</td>
+          <td>54.7</td>
+          <td>85.4</td>
+          <td>8.5</td>
+      </tr>
+      <tr>
+          <td>AnomalyRuler</td>
+          <td>81.8</td>
+          <td>90.2</td>
+          <td>64.3</td>
+      </tr>
+  </tbody>
+</table>
+<p>Implementation Details. We implement our method, AnomalyRuler, using PyTorch [37]. If not otherwise specified, we employ CogVLM-17B [51] as the VLM for visual perception, GPT-4-1106-Preview [1] as the LLM for induction, and the open-source Mistral-7B-Instruct-v0.2 [19] as the LLM for deduction (i.e., inference) due to using GPTs on entire test sets is too costly. We discuss other VLMs/LLMs choices in Appendix A.4. The default hyperparameters of AnomalyRuler are set as follows: The number of batches in rule aggregation n = 10, the number of normal reference frames per batch m = 1, the padding size p = 5 in majority vote, and the weighting parameter α = 0 . 33 in EMA.</p>
+
+<h2 class="relative group">5.2 Comparison with LLM-based Baselines
+    <div id="52-comparison-with-llm-based-baselines" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#52-comparison-with-llm-based-baselines" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Reasoning for one-class VAD using LLMs is not well-explored. To demonstrate AnomalyRuler&rsquo;s superiority over the direct LLM use, we build asking LLM/Videobased LLM directly as baselines and also adapt related works [8 , 12] to our target problem as baselines. At test time, let us denote test video frames as F = {f1, f2, . . . , ft}. We elaborate on our four baselines as follows. (1) Ask LLM Directly: {LLM(di, p) | di ∈ D}, where the LLM is Mistral-7B, D is F&rsquo;s frame descriptions generated by CogVLM, and p is &ldquo;Is this frame description anomaly or normal?&rdquo; (2) Ask LLM with Elhafsi et al. [12]: {LLM(di, p) | di ∈ D}, where the LLM is Mistral-7B, D is F&rsquo;s frame descriptions generated by CogVLM, and p is [12]&rsquo;s prompts and predefined concepts of normality/anomaly. (3) Ask Video-based LLMs Directly: {Video-based LLM(ci, p) | ci ∈ C}, where p is &ldquo;Is this clip anomaly or normal?&rdquo; We use Video-LLaMA [57] as the Videobased LLM, which performs clip-wise inference. Each video clip ci consists of consecutive frames in F with the same label. (4) Ask GPT-4V with Cao et al. [8]: {GPT-4V(fi, p) | fi ∈ F}, where p is [8]&rsquo;s prompts. As a large VLM, GPT-4V directly takes frames as inputs.</p>
+<p>Detection Performance. Table 1 compares the accuracy, precision, and recall on the ShT dataset. Overall, AnomalyRuler achieves significant improvements with an average increase of 26.2% in accuracy and 54.3% in recall. Such improvements are attributed to the reasoning based on the rules generated in the induction stage. In contrast, the baselines tend to predict most samples as normal based on the implicit knowledge pre-trained in LLMs, resulting in very low recall and accuracy close to a random guess. Their relatively high precision is due to that they rarely predict anomalies, leading to fewer false positives.</p>
+<p>Table 2: Reasoning performance with the Doubly-Right metric: {RR, RW, WR, WW} (%) on 100 (limited by GPT-4&rsquo;s query capacity) randomly selected frames from the ShT test set. We evaluate cases with visual perception errors (w. Perception Errors) and with manually corrected visual perception (w/o. Perception Errors).</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>w. Perception Errors</th>
+          <th>w. Perception Errors</th>
+          <th>w. Perception Errors</th>
+          <th>w. Perception Errors</th>
+          <th>. Perception Errors RW WR WW</th>
+          <th>. Perception Errors RW WR WW</th>
+          <th>. Perception Errors RW WR WW</th>
+          <th>. Perception Errors RW WR WW</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Method</td>
+          <td>RR</td>
+          <td>RW</td>
+          <td>WR</td>
+          <td>WW</td>
+          <td>RR</td>
+          <td>RW</td>
+          <td>WR</td>
+          <td>WW</td>
+      </tr>
+      <tr>
+          <td>Ask GPT-4 Directly</td>
+          <td>57</td>
+          <td>4</td>
+          <td>15</td>
+          <td>24</td>
+          <td>73</td>
+          <td>3</td>
+          <td>0</td>
+          <td>24</td>
+      </tr>
+      <tr>
+          <td>Ask GPT-4 with Elhafsi et al. [12]</td>
+          <td>60</td>
+          <td>3</td>
+          <td>15</td>
+          <td>22</td>
+          <td>76</td>
+          <td>2</td>
+          <td>0</td>
+          <td>22</td>
+      </tr>
+      <tr>
+          <td>Ask GPT-4V with Cao et al. [8]</td>
+          <td>74</td>
+          <td>2</td>
+          <td>7</td>
+          <td>17</td>
+          <td>81</td>
+          <td>2</td>
+          <td>0</td>
+          <td>17</td>
+      </tr>
+      <tr>
+          <td>AnomalyRuler</td>
+          <td>83</td>
+          <td>1</td>
+          <td>15</td>
+          <td>1</td>
+          <td>99</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+      </tr>
+  </tbody>
+</table>
+<p>Reasoning Performance. The reasoning performance is evaluated using the Doubly-Right metric [32]: {RR, RW, WR, WW} (%), where RR denotes Right detection with Right reasoning, RW denotes Right detection with Wrong reasoning, WR denotes Right detection with Wrong reasoning, and WW denotes Wrong detection with Wrong reasoning. We desire a high accuracy of RR (the best is 100%) and low percentages of RW, WR and WW (the best is 0%). Since {RW, WR, WW} may be caused by visual perception errors rather than reasoning errors, we also consider the case with manually corrected visual perception to exclusively evaluate each method&rsquo;s reasoning ability, i.e., w. Perception Errors vs. w/o. Perception Errors in Table 2 .</p>
+<p>Due to the lack of benchmarks for evaluating reasoning for VAD, we create a dataset consisting of 100 randomly selected frames from the ShT test set, with an equal split of 50 normal and 50 abnormal frames. For each frame, we offer four choices: one normal and three anomalies, where only one choice with the matched rules is labeled as RR, while the other choices correspond to RW, WR or WW. Details and examples of this dataset are illustrated in Appendix A.3 . Since the 100 randomly selected frames are not consecutive, here AnomalyRuler&rsquo;s perception smoothing is not used.</p>
+<p>Table 2 shows the evaluation results. With perception errors, AnomalyRuler outperforms the baselines by 10% to 27% RR, and it achieves a very low WW of 1% compared to the 17% WW of the second best Ask GPT-4V with Cao et al. [8]. Without perception errors, AnomalyRuler&rsquo;s RR jumps to 99%. These results demonstrate AnomalyRuler&rsquo;s superiority over the GPT-4(V) baselines and its great ability to make correct detection along with correct reasoning.</p>
+
+<h2 class="relative group">5.3 Comparison with State-of-the-Art Methods
+    <div id="53-comparison-with-state-of-the-art-methods" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#53-comparison-with-state-of-the-art-methods" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This section compares AnomalyRuler with 15 state-of-the-art one-class VAD methods across four datasets, evaluating their detection performance and domain adaptability. The performance values of these methods are sourced from their respective original papers.</p>
+<p>Detection Performance. Table 3 shows the effectiveness of AnomalyRuler. There are three main observations. First, AnomalyRuler, even with its basic version AnomalyRuler-base, outperforms all the Image-Only competitors, which</p>
+<p>Table 3: AUC (%) compared with different one-class VAD methods. &ldquo;Image Only&rdquo; methods only rely on image features. In contrast, others employ additional features such as bounding boxes from object detectors or 3D features from action recognition networks. &ldquo;Training&rdquo; indicates the methods that need a full-shot training process.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>Venue</th>
+          <th>Image Only</th>
+          <th>Training</th>
+          <th>Ped2</th>
+          <th>Ave</th>
+          <th>ShT</th>
+          <th>UB</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>MNAD [36]</td>
+          <td>CVPR-20</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>97.0</td>
+          <td>88.5</td>
+          <td>70.5</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>rGAN [29]</td>
+          <td>ECCV-20</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>96.2</td>
+          <td>85.8</td>
+          <td>77.9</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>[]  CDAE [9]</td>
+          <td>ECCV-20</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>96.5</td>
+          <td>86.0</td>
+          <td>73.3</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>[]  MPN [30]</td>
+          <td>CVPR-21</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>96.9</td>
+          <td>89.5</td>
+          <td>73.8</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>[]  NGOF [50]</td>
+          <td>CVPR-21</td>
+          <td>✗</td>
+          <td>✓</td>
+          <td>94.2</td>
+          <td>88.4</td>
+          <td>75.3</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>[ HF2 [25]</td>
+          <td>ICCV-21</td>
+          <td>✗</td>
+          <td>✓</td>
+          <td>99.2</td>
+          <td>91.1</td>
+          <td>76.2</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>[]  BAF [14]</td>
+          <td>TPAMI-21</td>
+          <td>✗</td>
+          <td>✓</td>
+          <td>98.7</td>
+          <td>92.3</td>
+          <td>82.7</td>
+          <td>59.3</td>
+      </tr>
+      <tr>
+          <td>GCL [56]</td>
+          <td>CVPR-22</td>
+          <td>✗</td>
+          <td>✓</td>
+          <td>-</td>
+          <td>-</td>
+          <td>79.6</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>S3R [53]</td>
+          <td>ECCV-22</td>
+          <td>✗</td>
+          <td>✓</td>
+          <td>-</td>
+          <td>-</td>
+          <td>80.5</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>SSL [49]</td>
+          <td>ECCV-22</td>
+          <td>✗</td>
+          <td>✓</td>
+          <td>99.0</td>
+          <td>92.2</td>
+          <td>84.3</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>zxVAD [3]</td>
+          <td>WACV-23</td>
+          <td>✗</td>
+          <td>✓</td>
+          <td>96.9</td>
+          <td>-</td>
+          <td>71.6</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>HSC [45]</td>
+          <td>CVPR-23</td>
+          <td>✗</td>
+          <td>✓</td>
+          <td>98.1</td>
+          <td>93.7</td>
+          <td>83.4</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>FPDM [54]</td>
+          <td>ICCV-23</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>-</td>
+          <td>90.1</td>
+          <td>78.6</td>
+          <td>62.7</td>
+      </tr>
+      <tr>
+          <td>SLM [43]</td>
+          <td>ICCV-23</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>97.6</td>
+          <td>90.9</td>
+          <td>78.8</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>[]  STG-NF [18]</td>
+          <td>ICCV-23</td>
+          <td>✗</td>
+          <td>✓</td>
+          <td>-</td>
+          <td>-</td>
+          <td>85.9</td>
+          <td>71.8</td>
+      </tr>
+      <tr>
+          <td>AnomalyRuler-base</td>
+          <td>-</td>
+          <td>✓</td>
+          <td>✗</td>
+          <td>96.5</td>
+          <td>82.2</td>
+          <td>84.6</td>
+          <td>69.8</td>
+      </tr>
+      <tr>
+          <td>AnomalyRuler</td>
+          <td>-</td>
+          <td>✓</td>
+          <td>✗</td>
+          <td>97.9</td>
+          <td>89.7</td>
+          <td>85.2</td>
+          <td>71.9</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table 4: AUC (%) compared with different cross-domain VAD methods. We follow the compared works to use ShT as the source domain dataset for other target datasets.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>Venue</th>
+          <th>Image Only</th>
+          <th>Training</th>
+          <th>Ped2</th>
+          <th>Ave</th>
+          <th>ShT1</th>
+          <th>UB</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>rGAN [29]</td>
+          <td>ECCV-20</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>81.9</td>
+          <td>71.4</td>
+          <td>77.9</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>[ MPN [30]</td>
+          <td>CVPR-21</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>84.7</td>
+          <td>74.1</td>
+          <td>73.8</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>[]  zxVAD [3]</td>
+          <td>WACV-23</td>
+          <td>✗</td>
+          <td>✓</td>
+          <td>95.7</td>
+          <td>82.2</td>
+          <td>71.6</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>AnomalyRuler-base</td>
+          <td>-</td>
+          <td>✓</td>
+          <td>✗</td>
+          <td>97.4</td>
+          <td>81.6</td>
+          <td>83.5</td>
+          <td>65.4</td>
+      </tr>
+  </tbody>
+</table>
+<p>1 AnomalyRuler employs UB as the source domain when ShT serves as the target domain. The competitors have no cross-domain evaluation on ShT, so we report their same-domain results.</p>
+<p>also do not use any additional features (e.g., bounding boxes from object detectors or 3D features from action recognition networks), on the challenging ShT and UB datasets. This suggests that our rule-based reasoning benefits the challenging oneclass VAD task. Second, for Ped2 and Ave, AnomalyRuler performs on par with the Image-Only methods. This is achieved without any tuning, meaning that our few-normal-shot prompting approach is as effective as the costly full-shot training on these benchmarks. Third, AnomalyRuler outperforms AnomalyRuler-base, indicating that the robust reasoning module improves performance further.</p>
+<p>Domain Adaptability. Domain adaptation considers the scenario that the source domain (i.e., training/induction) dataset differs from the target domain (i.e., testing/deduction) dataset [13 , 26 , 48]. We compare AnomalyRuler with three state-of-the-art VAD methods that claim their domain adaptation ability [3 , 29 , 30]. We follow the compared works to use ShT as the source domain dataset for other target datasets. As shown in Table 4, AnomalyRuler achieves the highest AUC on Ped2, ShT and UB, outperforming with an average of 9.88%. While AnomalyRuler trails zxVAD [3] by 0.6%, it is still higher than the others with an average of 8.85%. The results indicate that AnomalyRuler has better</p>
+<p>domain adaptability across different datasets. This advantage is due to that the language provides consistent descriptions across different visual domains, which allows the application of induced rules to datasets with similar anomaly scenarios but distinct visual appearances. In contrast, traditional methods extract high-dimensional visual features that are sensitive to visual appearances, thereby struggling to transfer their knowledge across datasets.</p>
+
+<h2 class="relative group">5.4 Ablation Study
+    <div id="54-ablation-study" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#54-ablation-study" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this section, we look into how the proposed strategies affect AnomalyRuler. We investigate two aspects: rule quantity (i.e., the number of induced rules) and rule quality (i.e., their resulting performance). Regarding this, we evaluate variants of AnomalyRuler-base on the ShT dataset.</p>
+<p>Ablation on Strategies. Table 5 shows the effects of removing individual strategies compared to using all strategies. In terms of rule quantity, removing Human and Environment or Normal and Anomaly significantly reduces rules by 47.6% and 82.4%, respectively. This reduction is due to not separating the rules for humans and the environment halves the number of rules. Moreover, without deriving anomaly rules from normal rules, we only have a limited set of normal rules. Removing Abstract and Concrete or Rule Aggregation slightly increases the number of rules, as the former merges rules within the same categories and the latter removes incorrect rules. Perception Smoothing does not affect rule quantity since it is used in the deduction stage. In terms of rule quality, removing Normal and Anomaly or Rule Aggregation has the most negative impact. The former happens because when only normal rules are present, the LLM overreacts to slightly different actions such as &ldquo;walking with an umbrella&rdquo; compared to the rule for &ldquo;walking&rdquo;, leading to false positives. Furthermore, without rules for anomalies as a reference, the LLM easily misses anomalies. The latter is due to that perception errors in the induction stage would lead to incorrect rules for normal. Besides, removing other strategies also decreases AUC, underscoring their significance. In summary, the proposed strategies effectively improve AnomalyRuler&rsquo;s performance. There is no direct positive/negative correlation between rule quantity and quality, i.e., having too few rules leads to inadequate coverage of normality and anomaly concepts while having too many rules would cause redundancy and errors.</p>
+<p>Ablation on Hyperparameters. Fig. 3 illustrates the effects of the hyperparameters in the rule aggregation and perception smoothing modules. For rule aggregation, we conduct cross-validation on the number of batches n = [1, 5, 10, 20] and the number of normal reference frames per batch m = [1, 2, 5, 10]. We observe that both the number of rules and AUC increase with the increases of n and m, but they start to fluctuate when n × m becomes large. For example, when n = 20, AUC drops from 85.9% to 72.2% as m increases because having too many reference frames (e.g., over 100) results in redundant information in a long context. For perception smoothing, we test the padding size in majority vote p = [1, 5, 10, 20] and the weighting parameter in EMA α = [0.09, 0.18, 0.33, 1]. We</p>
+<p>Table 5: Ablation on strategies. We assess the effects of removing individual strategies in AnomalyRuler. We conduct the experiments five times with different randomly selected normal reference frames for induction and report their mean and standard deviation on the ShT dataset.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Strategy</th>
+          <th>Stage</th>
+          <th># Rules A</th>
+          <th># Rules A</th>
+          <th># Rules A</th>
+          <th>Accuracy Pr</th>
+          <th>Accuracy Pr</th>
+          <th>Accuracy Pr</th>
+          <th>Recall</th>
+          <th>Recall</th>
+          <th>AUC</th>
+          <th>AUC</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Strategy</td>
+          <td>Stage</td>
+          <td>mean</td>
+          <td>std</td>
+          <td>mean</td>
+          <td>std</td>
+          <td>mean</td>
+          <td>std</td>
+          <td>mean</td>
+          <td>std</td>
+          <td>mean</td>
+          <td>std</td>
+      </tr>
+      <tr>
+          <td>w. All Below (default)</td>
+          <td>Both</td>
+          <td>42.2</td>
+          <td>4.2</td>
+          <td>81.6</td>
+          <td>1.3</td>
+          <td>90.9</td>
+          <td>0.8</td>
+          <td>63.9</td>
+          <td>2.7</td>
+          <td>84.5</td>
+          <td>1.1</td>
+      </tr>
+      <tr>
+          <td>w/o. Human and Environmen</td>
+          <td>Both</td>
+          <td>-20.1</td>
+          <td>+1.</td>
+          <td>-3.3</td>
+          <td>+0.8</td>
+          <td>-3.9</td>
+          <td>+0.8</td>
+          <td>-1.9</td>
+          <td>+1.6</td>
+          <td>-2.4</td>
+          <td>+2.0</td>
+      </tr>
+      <tr>
+          <td>w/o. Normal and Anomaly</td>
+          <td>Induction -</td>
+          <td>-34.8</td>
+          <td>8 -1.3</td>
+          <td>-20.5</td>
+          <td>+4.3</td>
+          <td>-41.2</td>
+          <td>+7.0</td>
+          <td>-14.4</td>
+          <td>+11.6</td>
+          <td>-18.8</td>
+          <td>+1.2</td>
+      </tr>
+      <tr>
+          <td>w/o. Abstract and Concrete</td>
+          <td>Induction</td>
+          <td>+2.3</td>
+          <td>3 +2.</td>
+          <td>-0.6</td>
+          <td>-0.2</td>
+          <td>-0.9</td>
+          <td>-0.2</td>
+          <td>-0.3</td>
+          <td>-0.4</td>
+          <td>-0.9</td>
+          <td>+0.1</td>
+      </tr>
+      <tr>
+          <td>w/o. Rule Aggregation</td>
+          <td>Induction</td>
+          <td>+8.5</td>
+          <td>+6.1</td>
+          <td>-9.6</td>
+          <td>+ 14.7</td>
+          <td>+1.1</td>
+          <td>+2.9</td>
+          <td>-10.7</td>
+          <td>+14.</td>
+          <td>-15.8</td>
+          <td>+0.8</td>
+      </tr>
+      <tr>
+          <td>w/o. Perception Smoothing</td>
+          <td>Deduction</td>
+          <td>NA</td>
+          <td>NA</td>
+          <td>-1.7</td>
+          <td>-0.9</td>
+          <td>-1.9</td>
+          <td>+0.1</td>
+          <td>-3.8</td>
+          <td>-0.3</td>
+          <td>-3.3</td>
+          <td>+0.8</td>
+      </tr>
+  </tbody>
+</table>
+<p>Fig. 3: Ablation on hyperparameters of the (a) (b) rule aggregation and (c) perception smoothing modules on the ShT dataset.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000002_2cc20761cf937dc10f006bc720788c05b8d39fb4d5fc75741595b708e4f603d8.png"
+    ></figure>
+<p>found p = 5 to be optimal for capturing the motion continuity in a video while avoiding the excessive noise that can occur with more neighborhoods. α adjusts the weight of the most recent frames compared to previous frames. A smaller α emphasizes previous frames, resulting in more smoothing but less responsiveness to recent changes. In general, increasing α from 0.09 to 0.33 improves AUC, suggesting that moderate EMA smoothing is beneficial.</p>
+
+<h2 class="relative group">6 Conclusion
+    <div id="6-conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this paper, we propose AnomalyRuler, a novel rule-based reasoning framework for VAD with LLMs. With the induction and deduction stages, AnomalyRuler requires only few-normal-shot prompting without the need for expensive full-shot tuning, thereby fast steering LLMs&rsquo; reasoning strengths to various specific VAD applications. To the best of our knowledge, AnomalyRuler is the first reasoning approach for one-class VAD. Extensive experiments demonstrate AnomalyRuler&rsquo;s state-of-the-art performance, reasoning ability, and domain adaptability. Limitations and potential negative social impact of this work are discussed in the Appendix A.1. In future research, we expect this work to advance broader oneclass problems and related tasks, such as industrial anomaly detection [6 , 55], open-set recognition [5 , 40], and out-of-distribution detection [17 , 42].</p>
+
+<h2 class="relative group">Acknowledgments
+    <div id="acknowledgments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#acknowledgments" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This work was supported in part by National Science Foundation (NSF) under grants OAC-23-19742 and Johns Hopkins University Institute for Assured Autonomy (IAA) with grants 80052272 and 80052273. The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies or endorsements, either expressed or implied, of NSF or JHU-IAA.</p>
+
+<h2 class="relative group">References
+    <div id="references" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#references" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ol>
+<li>
+<p>Achiam, J., Adler, S., Agarwal, S., Ahmad, L., Akkaya, I., Aleman, F.L., Almeida, D., Altenschmidt, J., Altman, S., Anadkat, S., et al.: Gpt-4 technical report. arXiv preprint arXiv:2303.08774 (2023)</p>
+</li>
+<li>
+<p>Acsintoae, A., Florescu, A., Georgescu, M.I., Mare, T., Sumedrea, P., Ionescu, R.T., Khan, F.S., Shah, M.: Ubnormal: New benchmark for supervised open-set video anomaly detection. In: IEEE/CVF Conference on Computer Vision and Pattern Recognition (2022)</p>
+</li>
+<li>
+<p>Aich, A., Peng, K.C., Roy-Chowdhury, A.K.: Cross-domain video anomaly detection without target domain adaptation. In: IEEE/CVF Winter Conference on Applications of Computer Vision (2023)</p>
+</li>
+<li>
+<p>Bacon, F.: Novum organum (1620)</p>
+</li>
+<li>
+<p>Bendale, A., Boult, T.E.: Towards open set deep networks. In: IEEE/CVF Conference on Computer Vision and Pattern Recognition (2016)</p>
+</li>
+<li>
+<p>Bergmann, P., Fauser, M., Sattlegger, D., Steger, C.: Mvtec ad–a comprehensive real-world dataset for unsupervised anomaly detection. In: IEEE/CVF Conference on Computer Vision and Pattern Recognition (2019)</p>
+</li>
+<li>
+<p>Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J.D., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., et al.: Language models are few-shot learners. In: Conference on Neural Information Processing Systems (2020)</p>
+</li>
+<li>
+<p>Cao, Y., Xu, X., Sun, C., Huang, X., Shen, W.: Towards generic anomaly detection and understanding: Large-scale visual-linguistic model (gpt-4v) takes the lead. arXiv preprint arXiv:2311.02782 (2023)</p>
+</li>
+<li>
+<p>Chang, Y., Tu, Z., Xie, W., Yuan, J.: Clustering driven deep autoencoder for video anomaly detection. In: European Conference on Computer Vision (2020)</p>
+</li>
+<li>
+<p>Cohen, J., Rosenfeld, E., Kolter, Z.: Certified adversarial robustness via randomized smoothing. In: International Conference on Machine Learning (2019)</p>
+</li>
+<li>
+<p>Diao, S., Wang, P., Lin, Y., Zhang, T.: Active prompting with chain-of-thought for large language models. arXiv preprint arXiv:2302.12246 (2023)</p>
+</li>
+<li>
+<p>Elhafsi, A., Sinha, R., Agia, C., Schmerling, E., Nesnas, I.A., Pavone, M.: Semantic anomaly detection with large language models. In: Autonomous Robots (2023)</p>
+</li>
+<li>
+<p>Ganin, Y., Lempitsky, V.: Unsupervised domain adaptation by backpropagation. In: International Conference on Machine Learning (2015)</p>
+</li>
+<li>
+<p>Georgescu, M.I., Ionescu, R.T., Khan, F.S., Popescu, M., Shah, M.: A backgroundagnostic framework with adversarial training for abnormal event detection in video. In: IEEE Transactions on Pattern Analysis and Machine Intelligence (2021)</p>
+</li>
+<li>
+<p>Gu, Z., Zhu, B., Zhu, G., Chen, Y., Tang, M., Wang, J.: Anomalygpt: Detecting industrial anomalies using large vision-language models. In: AAAI Conference on Artificial Intelligence (2024)</p>
+</li>
+<li>
+<p>Hasan, M., Choi, J., Neumann, J., Roy-Chowdhury, A.K., Davis, L.S.: Learning temporal regularity in video sequences. In: IEEE/CVF Conference on Computer Vision and Pattern Recognition (2016)</p>
+</li>
+<li>
+<p>Hendrycks, D., Gimpel, K.: A baseline for detecting misclassified and out-ofdistribution examples in neural networks. In: International Conference on Learning Representations (2017)</p>
+</li>
+<li>
+<p>Hirschorn, O., Avidan, S.: Normalizing flows for human pose anomaly detection. In: IEEE/CVF International Conference on Computer Vision (2023)</p>
+</li>
+<li>
+<p>Jiang, A.Q., Sablayrolles, A., Mensch, A., Bamford, C., Chaplot, D.S., Casas, D.d.l., Bressand, F., Lengyel, G., Lample, G., Saulnier, L., et al.: Mistral 7b. arXiv preprint arXiv:2310.06825 (2023)</p>
+</li>
+<li>
+<p>Lee, S., Kim, G.: Recursion of thought: A divide-and-conquer approach to multicontext reasoning with language models. In: Annual Meeting of the Association for Computational Linguistics (2023)</p>
+</li>
+<li>
+<p>Li, J., Li, D., Savarese, S., Hoi, S.: Blip-2: Bootstrapping language-image pretraining with frozen image encoders and large language models. In: International Conference on Machine Learning (2023)</p>
+</li>
+<li>
+<p>Li, W., Mahadevan, V., Vasconcelos, N.: Anomaly detection and localization in crowded scenes. In: IEEE Transactions on Pattern Analysis and Machine Intelligence (2013)</p>
+</li>
+<li>
+<p>Liu, H., Li, C., Wu, Q., Lee, Y.J.: Visual instruction tuning. In: Conference on Neural Information Processing Systems (2023)</p>
+</li>
+<li>
+<p>Liu, W., Luo, W., Lian, D., Gao, S.: Future frame prediction for anomaly detection– a new baseline. In: IEEE/CVF Conference on Computer Vision and Pattern Recognition (2018)</p>
+</li>
+<li>
+<p>Liu, Z., Nie, Y., Long, C., Zhang, Q., Li, G.: A hybrid video anomaly detection framework via memory-augmented flow reconstruction and flow-guided frame prediction. In: IEEE/CVF International Conference on Computer Vision (2021)</p>
+</li>
+<li>
+<p>Lo, S.Y., Oza, P., Chennupati, S., Galindo, A., Patel, V.M.: Spatio-temporal pixel-level contrastive learning-based source-free domain adaptation for video semantic segmentation. In: IEEE/CVF Conference on Computer Vision and Pattern Recognition (2023)</p>
+</li>
+<li>
+<p>Lo, S.Y., Oza, P., Patel, V.M.: Adversarially robust one-class novelty detection. In: IEEE Transactions on Pattern Analysis and Machine Intelligence (2022)</p>
+</li>
+<li>
+<p>Lu, C., Shi, J., Jia, J.: Abnormal event detection at 150 fps in matlab. In: IEEE/CVF International Conference on Computer Vision (2013)</p>
+</li>
+<li>
+<p>Lu, Y., Yu, F., Reddy, M.K.K., Wang, Y.: Few-shot scene-adaptive anomaly detection. In: European Conference on Computer Vision (2020)</p>
+</li>
+<li>
+<p>Lv, H., Chen, C., Cui, Z., Xu, C., Li, Y., Yang, J.: Learning normal dynamics in videos with meta prototype network. In: IEEE/CVF Conference on Computer Vision and Pattern Recognition (2021)</p>
+</li>
+<li>
+<p>Lv, H., Sun, Q.: Video anomaly detection and explanation via large language models. arXiv preprint arXiv:2401.05702 (2024)</p>
+</li>
+<li>
+<p>Mao, C., Teotia, R., Sundar, A., Menon, S., Yang, J., Wang, X., Vondrick, C.: Doubly right object recognition: A why prompt for visual rationales. In: IEEE/CVF Conference on Computer Vision and Pattern Recognition (2023)</p>
+</li>
+<li>
+<p>Minderer, M., Gritsenko, A., Stone, A., Neumann, M., Weissenborn, D., Dosovitskiy, A., Mahendran, A., Arnab, A., Dehghani, M., Shen, Z., et al.: Simple open-vocabulary object detection. In: European Conference on Computer Vision (2022)</p>
+</li>
+<li>
+<p>Mittal, H., Agarwal, N., Lo, S.Y., Lee, K.: Can&rsquo;t make an omelette without breaking some eggs: Plausible action anticipation using large video-language models. In: IEEE/CVF Conference on Computer Vision and Pattern Recognition (2024)</p>
+</li>
+<li>
+<p>Morais, R., Le, V., Tran, T., Saha, B., Mansour, M., Venkatesh, S.: Learning regularity in skeleton trajectories for anomaly detection in videos. In: Proceedings of the IEEE/CVF conference on computer vision and pattern recognition (2019)</p>
+</li>
+<li>
+<p>Park, H., Noh, J., Ham, B.: Learning memory-guided normality for anomaly detection. In: IEEE/CVF Conference Computer Vision and Pattern Recognition (2020)</p>
+</li>
+<li>
+<p>Paszke, A., Gross, S., Massa, F., Lerer, A., Bradbury, J., Chanan, G., Killeen, T., Lin, Z., Gimelshein, N., Antiga, L., et al.: Pytorch: An imperative style, highperformance deep learning library. In: Conference on Neural Information Processing Systems (2019)</p>
+</li>
+<li>
+<p>Radford, A., Narasimhan, K., Salimans, T., Sutskever, I., et al.: Improving language understanding by generative pre-training. OpenAI Blog (2018)</p>
+</li>
+<li>
+<p>Radford, A., Wu, J., Child, R., Luan, D., Amodei, D., Sutskever, I., et al.: Language models are unsupervised multitask learners. OpenAI Blog (2019)</p>
+</li>
+<li>
+<p>Safaei, B., Vibashan, V., de Melo, C.M., Hu, S., Patel, V.M.: Open-set automatic target recognition. In: IEEE International Conference on Acoustics, Speech and Signal Processing (2023)</p>
+</li>
+<li>
+<p>Seel, N.M.: Encyclopedia of the sciences of learning (2011)</p>
+</li>
+<li>
+<p>Sharifi, S., Entesari, T., Safaei, B., Patel, V.M., Fazlyab, M.: Gradient-regularized out-of-distribution detection. In: European Conference on Computer Vision (2024)</p>
+</li>
+<li>
+<p>Shi, C., Sun, C., Wu, Y., Jia, Y.: Video anomaly detection via sequentially learning multiple pretext tasks. In: IEEE/CVF International Conference on Computer Vision (2023)</p>
+</li>
+<li>
+<p>Su, Y., Lan, T., Li, H., Xu, J., Wang, Y., Cai, D.: Pandagpt: One model to instruction-follow them all. arXiv preprint arXiv:2305.16355 (2023)</p>
+</li>
+<li>
+<p>Sun, S., Gong, X.: Hierarchical semantic contrast for scene-aware video anomaly detection. In: IEEE/CVF Computer Vision and Pattern Recognition Conference (2023)</p>
+</li>
+<li>
+<p>Touvron, H., Lavril, T., Izacard, G., Martinet, X., Lachaux, M.A., Lacroix, T., Rozière, B., Goyal, N., Hambro, E., Azhar, F., et al.: Llama: Open and efficient foundation language models. arXiv preprint arXiv:2302.13971 (2023)</p>
+</li>
+<li>
+<p>Touvron, H., Martin, L., Stone, K., Albert, P., Almahairi, A., Babaei, Y., Bashlykov, N., Batra, S., Bhargava, P., Bhosale, S., et al.: Llama 2: Open foundation and fine-tuned chat models. arXiv preprint arXiv:2307.09288 (2023)</p>
+</li>
+<li>
+<p>Tsai, Y.H., Hung, W.C., Schulter, S., Sohn, K., Yang, M.H., Chandraker, M.: Learning to adapt structured output space for semantic segmentation. In: IEEE/CVF Conference on Computer Vision and Pattern Recognition (2018)</p>
+</li>
+<li>
+<p>Wang, G., Wang, Y., Qin, J., Zhang, D., Bao, X., Huang, D.: Video anomaly detection by solving decoupled spatio-temporal jigsaw puzzles. In: European Conference on Computer Vision (2022)</p>
+</li>
+<li>
+<p>Wang, H., Zhang, X., Yang, S., Zhang, W.: Video anomaly detection by the duality of normality-granted optical flow. arXiv preprint arXiv:2105.04302 (2021)</p>
+</li>
+<li>
+<p>Wang, W., Lv, Q., Yu, W., Hong, W., Qi, J., Wang, Y., Ji, J., Yang, Z., Zhao, L., Song, X., et al.: Cogvlm: Visual expert for pretrained language models. arXiv preprint arXiv:2311.03079 (2023)</p>
+</li>
+<li>
+<p>Wei, J., Wang, X., Schuurmans, D., Bosma, M., Xia, F., Chi, E., Le, Q.V., Zhou, D., et al.: Chain-of-thought prompting elicits reasoning in large language models. In: Conference on Neural Information Processing Systems (2022)</p>
+</li>
+<li>
+<p>Wu, J.C., Hsieh, H.Y., Chen, D.J., Fuh, C.S., Liu, T.L.: Self-supervised sparse representation for video anomaly detection. In: European Conference on Computer Vision (2022)</p>
+</li>
+<li>
+<p>Yan, C., Zhang, S., Liu, Y., Pang, G., Wang, W.: Feature prediction diffusion model for video anomaly detection. In: IEEE/CVF International Conference on Computer Vision (2023)</p>
+</li>
+<li>
+<p>You, Z., Cui, L., Shen, Y., Yang, K., Lu, X., Zheng, Y., Le, X.: A unified model for multi-class anomaly detection. Conference on Neural Information Processing Systems (2022)</p>
+</li>
+<li>
+<p>Zaheer, M.Z., Mahmood, A., Khan, M.H., Segu, M., Yu, F., Lee, S.I.: Generative cooperative learning for unsupervised video anomaly detection. In: IEEE/CVF Conference on Computer Vision and Pattern Recognition (2022)</p>
+</li>
+<li>
+<p>Zhang, H., Li, X., Bing, L.: Video-llama: An instruction-tuned audio-visual language model for video understanding. In: Conference on Empirical Methods in Natural Language Processing (2023)</p>
+</li>
+<li>
+<p>Zhang, Y., Huang, X., Ma, J., Li, Z., Luo, Z., Xie, Y., Qin, Y., Luo, T., Li, Y., Liu, S., et al.: Recognize anything: A strong image tagging model. arXiv preprint arXiv:2306.03514 (2023)</p>
+</li>
+<li>
+<p>Zhou, D., Schärli, N., Hou, L., Wei, J., Scales, N., Wang, X., Schuurmans, D., Cui, C., Bousquet, O., Le, Q., et al.: Least-to-most prompting enables complex reasoning in large language models. In: International Conference on Learning Representations (2023)</p>
+</li>
+<li>
+<p>Zhu, D., Chen, J., Shen, X., Li, X., Elhoseiny, M.: Minigpt-4: Enhancing visionlanguage understanding with advanced large language models. In: International Conference on Learning Representations (2024)</p>
+</li>
+<li>
+<p>Zhu, Z., Xue, Y., Chen, X., Zhou, D., Tang, J., Schuurmans, D., Dai, H.: Large language models can learn rules. arXiv preprint arXiv:2310.07064 (2023)</p>
+</li>
+</ol>
+
+<h2 class="relative group">A Appendix
+    <div id="a-appendix" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-appendix" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">A.1 Limitations and Potential Negative Social Impact
+    <div id="a1-limitations-and-potential-negative-social-impact" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a1-limitations-and-potential-negative-social-impact" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Limitations. Similar to most existing LLM-based studies, AnomalyRuler assumes that the employed LLM backbones have decent capabilities. Sub-optimal LLMs may hinder the effectiveness of the methods. Exploring this limitation further could be an interesting future investigation.</p>
+<p>Potential Negative Social Impact. The proposed method may enable malicious actors to more easily adapt VLMs/LLMs for illegal surveillance. To mitigate this risk, computer security mechanisms could be integrated.</p>
+
+<h2 class="relative group">A.2 Examples of Input Prompts and Outputs Results
+    <div id="a2-examples-of-input-prompts-and-outputs-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a2-examples-of-input-prompts-and-outputs-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Induction. This stage starts from n randomly chosen normal reference frames Fn Fnormal = {fnormal 1 , . . . , fnormal n } and outputs a set of robust rules Rrobust. To simplify the illustration, we show one frame fnormal i ∈ Fnormal as an example in the visual perception and rule generation steps.</p>
+<ul>
+<li>Visual Perception</li>
+<li>– Input fnormal i and prompt p v :</li>
+</ul>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000003_c3bdd35de9fd44f622b08cdf6f3372e3f0a50dcef72d885f40e215cefd003ead.png"
+    ></figure>
+<p>pv = How many people are in the image and what is each of them doing ? What are in the image other than people ? Think step by step .</p>
+<ul>
+<li>– Outputs: Frame description dnormal i = V LM(fnormal i , pv)</li>
+<li>Rule Generation</li>
+<li>– Input prompt p g :</li>
+</ul>
+<pre tabindex="0"><code>d normal i = There are four people in the image . Starting from the left , the first person is walking on the path . The second person is walking on the bridge . The third person is also walking on the bridge . The fourth person is also walking on the bridge . Other than people , there are trees , a railing , a path , and a bridge visible in the image .
+</code></pre><pre tabindex="0"><code>pg = [ {&#39; &#39; role &#39; &#39;: &#39;&#39; system &#39;&#39;, &#39;&#39; content &#39; &#39;: As a surveillance monitor for urban safety using the ShanghaiTech dataset , my job is to derive rules for detecting abnormal human activities or environmental objects .} , {&#39; &#39; role &#39; &#39;: &#39;&#39; user &#39; &#39;, &#39;&#39; content &#39; &#39;: Based on the assumption that the given frame descriptions are normal , Please derive rules for normal , start from an abstract concept , and then generalize to concrete activities or objects .} , {&#39; &#39; role &#39; &#39;: &#39;&#39; assistant &#39;&#39;, &#39;&#39; content &#39; &#39;: ** Rules for Normal Human Activities : 1. ** Rules for Normal Environmental Objects : 1. }, {&#39; &#39; role &#39; &#39;: &#39;&#39; user &#39; &#39;,
+</code></pre><pre tabindex="0"><code>&#39;&#39; content &#39; &#39;: Compared with the above rules for normal , can you provide potential rules for anomaly ? Please start from an abstract concept then generalize to concrete activities or objects , compared with normal ones .} , {&#39; &#39; role &#39; &#39;: &#39;&#39; assistant &#39;&#39;, &#39;&#39; content &#39; &#39;: ** Rules for Anomaly Human Activities : 1. ** Rules for Anomaly Environmental Objects : 1. }, {&#39; &#39; role &#39; &#39;: &#39;&#39; user &#39; &#39;, &#39;&#39; content &#39; &#39;: Now you are given frame description {dnormal i }. What are the Normal and Anomaly rules you have ? Think step by step . Reply following the above format , start from an abstract concept and then generalize to concrete activities or objects . List them using short terms , not an entire sentence .} , ]
+</code></pre><ul>
+<li>– Outputs: For each normal reference frame dnormal i , we will get one set of rules r i = LLM(dnormal i , pg). Since the structure of the rules is identical to the robust rules, we only present the robust rules in the following step as an illustration of our final induction output.</li>
+<li>Rule Aggregation</li>
+<li>– Input prompt p a :</li>
+<li>– Outputs: Robust rules Rrobust = LLM(R = {r1, . . . , r n }, p a )</li>
+</ul>
+<pre tabindex="0"><code>pa = [ {&#39; &#39; role &#39; &#39;: &#39;&#39; system &#39;&#39;, &#39;&#39; content &#39; &#39;: As a surveillance monitor for urban safety using the ShanghaiTech dataset , my job is to organize rules for detecting abnormal activities and objects .} , {&#39; &#39; role &#39; &#39;: &#39;&#39; user &#39; &#39;, &#39;&#39; content &#39; &#39;: You are given {n} independent sets of rules for Normal and Anomaly . For the organized normal Rules , list the given normal rules with high - frequency elements For the organized anomaly Rules , list all the given anomaly rules }, {&#39; &#39; role &#39; &#39;: &#39;&#39; assistant &#39;&#39;, &#39;&#39; content &#39; &#39;: ** Rules for Anomaly Human Activities : 1. ** Rules for Anomaly Environmental Objects : 1. ** Rules for Normal Human Activities : 1. ** Rules for Normal Environmental Objects : 1. }, {&#39; &#39; role &#39; &#39;: &#39;&#39; user &#39; &#39;, &#39;&#39; content &#39; &#39;: Now you are given {n} independent sets of rules as the sublists of {R}. What rules for Anomaly and Normal do you get ? Think step by step , and reply following the above format .} , ]
+</code></pre><pre tabindex="0"><code>** Rules for Anomaly Human Activities :** 1. Using any non - walking movement such as riding a bicycle or scooter , skateboarding 2. Running or jumping 3. Moving with the usual speed such as very fast or in a hurry 4. Person lying or bending down on the ground 5. Aggressive or unusual movements such as fighting or pushing 6. Loitering around the trash bin
+</code></pre><pre tabindex="0"><code>7. Climbing on trees or into manhole / utility access points 8. Tampering with manhole covers 9. Engaging in physical altercation 10. Lingering without a clear purpose near a sensitive area 11. Falling unexpectedly ** Rules for Anomaly Environmental Objects :** 1. Missing , removed , or ajar manhole covers 2. Ground transportation such as vehicles , vans , bicycles . 3. Unattended bags or objects ( security threat ) 4. Unusual objects ( vehicles , large unattended luggage , etc .) 5. Unauthorized posters or signs 6. Damaged manhole cover or trees 7. Abandoned items in a public area 8. Yellow objects ( when not commonly seen ) 9. Graffiti on building windows or vandalism to a fence 10. Obstructions on pedestrian crossing 11. Fire hydrant spraying water without presence of emergency services 12. Unidentified objects near the tall structure 13. Smoke or fire coming from a utility access point 14. Objects thrown or falling from a height ** Rules for Normal Human Activities :** 1. Walking alone or with another person 2. Standing and using a mobile device 3. Walking on the sidewalk 4. Walking towards or away from a building 5. Entering a building 6. Standing near a trash bin 7. Waiting at traffic lights 8. Walking on pedestrian crossing 9. Sitting on bench or ground ** Rules for Normal Environmental Objects :** 1. Manhole covers on the ground or street 2. Trees along the street or Plants present 3. Trash bin in vicinity or placed beside the street 4. Posters on glass door 5. Static building with glass windows 6. Fence along the water 7. Pedestrian crossing markings visible 8. Standing fire hydrant 9. Static tall structure in the background 10. Utility access points on the ground
+</code></pre><p>Deduction. This stage starts from a test video that contains t continuous frames F = {f1, . . . , ft} and outputs the reasoning results Y ˆ ∗ = {yˆ ˆ ∗ 1
+, . . . , y ˆ ∗ t }. To simplify the illustration, we show two frames of this test video, fi, fj ∈ F as examples that represent one anomaly frame and one normal frame, respectively.</p>
+
+<h2 class="relative group">· Visual Perception:
+    <div id="-visual-perception" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-visual-perception" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>– Input test frames fi , fj and prompt p v :</li>
+<li>– Outputs: Frame descriptions di = V LM(fi, p v ) , d j = V LM(fj , p v )</li>
+</ul>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000004_13cb8f4faab94474cee7f54d7163accd8c721903a0290036adaf2b3d0cbe760a.png"
+    ></figure>
+
+<h2 class="relative group">22 Y. Yang et al.
+    <div id="22-y-yang-et-al" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#22-y-yang-et-al" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>d i = There are four people in the image . One person is walking , another is also walking , the third person is riding a bicycle , and the fourth person is walking near the bicycle . Other than people , there are trees , a pathway , a trash bin , a bicycle , and two manhole covers visible in the image .</li>
+</ul>
+<p>d j = There are two people in the image . One person appears to be walking , the other seems to be walking together . Other than people , there are two manhole covers on the ground , a trash bin , and some trees and plants .</p>
+
+<h2 class="relative group">· Perception Smoothing:
+    <div id="-perception-smoothing" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-perception-smoothing" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>–</li>
+<li>Rrobust → K (generate anomaly keywords from anomaly rules, see Section 4).</li>
+</ul>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000005_6821bb3ec1dcd6591a66fe9ca69053f7a14ee6a3905240617030b50389d9963f.png"
+    ></figure>
+
+<h2 class="relative group">· Input prompt pk:
+    <div id="-input-prompt-pk" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-input-prompt-pk" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>pk = You will be given a set of rules for detecting abnormal activities and objects ; please extract the anomaly keywords , activities using &lsquo;&lsquo;ing &rsquo; &rsquo; verbs , and anomaly objects using nouns , and provide a combined Python list with each represented by a single word . The output should be in the format : [&quot; object1 &quot; , &hellip; , &quot; activity1 &ldquo;, &quot; activity2 &ldquo;, &hellip;]. Now you are given {Rrobust} :</p>
+
+<h2 class="relative group">· Output K:
+    <div id="-output-k" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-output-k" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<pre tabindex="0"><code>anomaly_from_rule = [&#34; trolley &#34; , &#34; cart &#34; , &#34; luggage &#34;, &#34; bicycle &#34;, &#34; skateboard &#34;, &#34; scooter &#34;, &#34; vehicles &#34;, &#34; vans &#34;, &#34; accident &#34; , &#34; running &#34;, &#34; jumping &#34;, &#34; riding &#34; , &#34; skateboarding &#34;, &#34; scooting &#34;, &#34; lying &#34;, &#34; falling &#34;, &#34; bending &#34;, &#34; fighting &#34;, &#34; pushing &#34;, &#34; loitering &#34;, &#34; climbing &#34;, &#34; tampering &#34; , &#34; lingering &#34;]
+</code></pre><ul>
+<li>– d i → ˆ d i &amp; yˆ ˆ i
+, d j → ˆ d j &amp; yˆ ˆ j (generate modified descriptions and smoothed predictions, see Section 4).</li>
+</ul>
+
+<h2 class="relative group">· Robust Reasoning:
+    <div id="-robust-reasoning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-robust-reasoning" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>– Input prompt p r :</li>
+</ul>
+<pre tabindex="0"><code>pr = You will be given an description of frame , your task is to double check my initial anomaly detection result based on the rules . The rules are : {R robust } My initial result is {yˆ ˆ i } First , if human activity is present , which rule is matching ? List the rule category , e.g. , normal or anomaly , with the rule number . Second , if an environmental object is present , which rule is matching ? List the rule category , e.g ., normal or anomaly , with the rule number . Third , are the human activities or environmental objects anomaly ? Answer : anomaly , if ANY anomaly rule ( even if only one , no matter human activities or environmental objects ) matches , otherwise answer : normal . Now you are given the frame {d ˆ i }, think step by step .
+</code></pre>
+<h2 class="relative group">– Final reasoning output: y ∗ i = LLM( ˆ d i
+    <div id="-final-reasoning-output-y--i--llm-ˆ-d-i" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-final-reasoning-output-y--i--llm-%cb%86-d-i" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>, y ˆ i , Rrobust, p r )</p>
+<pre tabindex="0"><code>y ˆ ∗ i = The third person is riding a bicycle , which matches rule number 1 under Anomaly Human Activities . The bicycle matches rule number 2 under Anomaly Environmental Objects . Answer : anomaly .
+</code></pre><pre tabindex="0"><code>y ∗ j = LLM( ˆ d j , y ˆ j , Rrobust, p r ) y ˆ ∗ j = The human activities present are two people walking . The rules for normal human activities include walking alone or with another person . So , the rule matching is : 1. Walking alone or with another person ( normal ) The environmental objects present are two manhole covers on the ground , a trash bin , and some trees and plants . So , the rules matching are : 1. Manhole covers on the ground or street ( normal ) 2. Trees along the street or Plants present ( normal ) 3. Trash bin in vicinity or placed beside the street ( normal ) Answer : normal .
+</code></pre>
+<h2 class="relative group">A.3 Examples of Doubly-Right Reasoning Evaluation
+    <div id="a3-examples-of-doubly-right-reasoning-evaluation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a3-examples-of-doubly-right-reasoning-evaluation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In Section 5.2, we evaluate reasoning ability using the Doubly-Right metric [32]. We create a benchmark dataset with multiple choices for Doubly-Right reasoning evaluation. The evaluation is conducted in the deduction stage, where we input the visual perception description and the induced rules to an LLM. The goal is to demonstrate that the induced rules enable LLMs to perform correct reasoning.</p>
+<p>We list the prompt for reasoning evaluation below and one example of the description and its four choices as Table 6. The content in normal choice is fixed, while the anomaly choices include one correct reasoning with a matched rule and two randomly chosen non-matched rules from our generated anomaly rules. In this example, Choices A, B, C and D correspond to RW, WW, RR and RW, respectively.</p>
+<pre tabindex="0"><code>[ {&#39; &#39; role &#39; &#39;: &#39;&#39; system &#39;&#39;, &#39;&#39; content &#39; &#39;: You will be given a description of the frame and four choices . Your task is to make the correct choice based on the rules . The rules are : {R robust }} , {&#39; &#39; role &#39; &#39;: &#39;&#39; user &#39; &#39;, &#39;&#39; content &#39; &#39;: Description : {d ˆ i } Choices : { Four Choices } Choose just one correct answer from the options (A , B , C , or D) and output without any explanation . Please Answer :} , ]
+</code></pre>
+<h2 class="relative group">A.4 Different VLMs/LLMs as Backbones
+    <div id="a4-different-vlmsllms-as-backbones" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a4-different-vlmsllms-as-backbones" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Table 7 shows the results of using various VLMs/LLMs as backbones in the deduction stage, compared to the default setting (the first row). All the results are based on the same rules derived in the induction stage with the default setting.</p>
+<p>We categorize the comparisons into three types: (1) VLMs only: AnomalyRuler uses the same VLMs as an end-to-end solution, combining visual perception and robust reasoning. It inputs the test frame and outputs the reasoning result. This category includes GPT-4V [1], LLaVA [23], and PandaGPT [44]. (2) VLMs + Mistrial [19]: We keep Mistrial as the default LLM for robust reasoning and test different VLMs (e.g., OWLViT [33], LLaVA, BLIP-2 [21], RAM [58]) for visual</p>
+<p>Table 6: An example of reasoning performance evaluation with multiple reasoning choices. In this example, Choices A, B, C and D correspond to RW, WW, RR and RW of the Doubly-Right metric, respectively. The RR choice is highlighted in yellow .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Frame Description</th>
+          <th>Multiple Choices for Reasoning Evaluation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>There are four people in the imA.</td>
+          <td>he imA. Anomaly, since “climbing on a tree” matches anomaly human</td>
+      </tr>
+      <tr>
+          <td>age. One pe</td>
+          <td>g withactivities “Climbing on trees or into manhole/utility access points”.</td>
+      </tr>
+      <tr>
+          <td>a backpack, an</td>
+          <td>her person isB. Normal, since no rules for anomaly human activities or non</td>
+      </tr>
+      <tr>
+          <td>riding a bicycle, a th</td>
+          <td>another person is le, a third person B. Normal, since no rules for anomaly  human objects match.</td>
+      </tr>
+      <tr>
+          <td>is standing and looking at</td>
+          <td>and looking at the d hfh  C. Anomaly, since “riding a bicycle” matches anomaly human ac “lkh dbl</td>
+      </tr>
+      <tr>
+          <td>bicyclist, and the four</td>
+          <td>nd the fourth persontivities “Using any non-walking movement such as riding a bicycle</td>
+      </tr>
+      <tr>
+          <td>is sitting on a bench. Other thanor scooter, skateb</td>
+          <td>her thanor scooter, skateboarding”.</td>
+      </tr>
+      <tr>
+          <td>people, there are trees</td>
+          <td>re trees, a trashD. Anomaly, since “a vehicle parked blocking a pedestrian crossing”</td>
+      </tr>
+      <tr>
+          <td>bin, and two manh</td>
+          <td>covers vismatches anomaly non-human objects “Obstructions on pedestrian</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>is sitting on a bench. Other thanor scooter, skatebo</td>
+          <td>ther thanor scooter, skateboarding”.</td>
+      </tr>
+      <tr>
+          <td>is sitting on a bench. Other thanor scooter, skatebo</td>
+          <td>Other thanor scooter, skateboarding”.</td>
+      </tr>
+      <tr>
+          <td>people, there are trees, a trashD</td>
+          <td>trees, a trashD. Anomaly, since “a vehicle parked blocking a pedestrian crossing”</td>
+      </tr>
+      <tr>
+          <td>people, there are trees, a trashD. Ano</td>
+          <td>rees, a trashD. Anomaly, since “a vehicle parked blocking a pedestrian crossing”</td>
+      </tr>
+      <tr>
+          <td>bin, and two manhole covers</td>
+          <td>covers vismatches anomaly non-human objects “Obstructions on pedestrian</td>
+      </tr>
+      <tr>
+          <td>bin, and two manhole covers vis</td>
+          <td>covers vismatches anomaly non-human objects “Obstructions on pedestrian</td>
+      </tr>
+      <tr>
+          <td>,  ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>bicyclist, and the fourth persontiviti</td>
+          <td>the fourth persontivities “Using any non-walking movement such as riding a bicycle</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>p h. Other than g y g g y or scooter, skateboarding”.</td>
+      </tr>
+      <tr>
+          <td>bin, and two manhol ible in the image</td>
+          <td>satces aoay ouaobjects Obstuctos opedesta crossing”.</td>
+      </tr>
+      <tr>
+          <td>bin, and two manh ible in the image</td>
+          <td>matches anomaly nonhuman objects Obstructions on pedest crossing”</td>
+      </tr>
+      <tr>
+          <td>,  ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>pp,  bin, and two manhole</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>bin, and two manhole covers vismat</td>
+          <td>covers vismatches anomaly non-human objects “Obstructions on pedestrian</td>
+      </tr>
+      <tr>
+          <td>bin, and two manhole covers vismatc</td>
+          <td>covers vismatches anomaly non-human objects “Obstructions on pedestrian</td>
+      </tr>
+      <tr>
+          <td>bin, and two manhole covers vismat</td>
+          <td>covers vismatches anomaly non-human objects “Obstructions on pedestrian</td>
+      </tr>
+      <tr>
+          <td>bin, and two manhole covers vis</td>
+          <td>covers vismatches anomaly non-human objects “Obstructions on pedestrian</td>
+      </tr>
+      <tr>
+          <td>bin, and two manhole covers vismatches</td>
+          <td>covers vismatches anomaly non-human objects “Obstructions on pedestrian</td>
+      </tr>
+      <tr>
+          <td>bin, and two manhole covers vis</td>
+          <td>covers vismatches anomaly non-human objects “Obstructions on pedestrian</td>
+      </tr>
+      <tr>
+          <td>bin, and two manhole</td>
+          <td>y j rossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>c</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>ble in the image.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”.</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+      <tr>
+          <td>ible in the image.</td>
+          <td>crossing”</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table 7: Detection performance with accuracy, precision, and recall (%) using different VLMs/LLMs as backbones in the deduction stage on 100 (limited by GPT-4&rsquo;s query capacity) randomly selected frames from the ShT test set.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Visual Perception</th>
+          <th>Robust Rea</th>
+          <th>Accuracy</th>
+          <th>Precision</th>
+          <th>Recall</th>
+          <th>Open Sourc</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CogVLM [51] (default)</td>
+          <td>Mistral [19] (defaul</td>
+          <td>82</td>
+          <td>88.1</td>
+          <td>74</td>
+          <td>✓</td>
+      </tr>
+      <tr>
+          <td>GPT-4V [1]</td>
+          <td>GPT-4V</td>
+          <td>83</td>
+          <td>88.4</td>
+          <td>76</td>
+          <td>✗</td>
+      </tr>
+      <tr>
+          <td>LLaVA [23]</td>
+          <td>LLaVA</td>
+          <td>40</td>
+          <td>40.4</td>
+          <td>42</td>
+          <td>✓</td>
+      </tr>
+      <tr>
+          <td>PandaGPT [44]</td>
+          <td>PandaGPT</td>
+          <td>37</td>
+          <td>31.4</td>
+          <td>22</td>
+          <td>✓</td>
+      </tr>
+      <tr>
+          <td>OWLViT [33]</td>
+          <td>Mistral</td>
+          <td>71</td>
+          <td>82</td>
+          <td>54</td>
+          <td>✓</td>
+      </tr>
+      <tr>
+          <td>LLaVA</td>
+          <td>Mistral</td>
+          <td>76</td>
+          <td>79.5</td>
+          <td>70</td>
+          <td>✓</td>
+      </tr>
+      <tr>
+          <td>BLIP-2 [21]</td>
+          <td>Mistral</td>
+          <td>50</td>
+          <td>50</td>
+          <td>94</td>
+          <td>✓</td>
+      </tr>
+      <tr>
+          <td>RAM [58]</td>
+          <td>Mistral</td>
+          <td>45</td>
+          <td>47.2</td>
+          <td>84</td>
+          <td>✓</td>
+      </tr>
+      <tr>
+          <td>CogVLM</td>
+          <td>GPT-3.5 [7]</td>
+          <td>81</td>
+          <td>86</td>
+          <td>74</td>
+          <td>✗</td>
+      </tr>
+      <tr>
+          <td>CogVLM</td>
+          <td>LLaMA-2 [47]</td>
+          <td>60</td>
+          <td>70.8</td>
+          <td>34</td>
+          <td>✓</td>
+      </tr>
+  </tbody>
+</table>
+<p>perception. (3) CogVLM [51] + LLMs: We use CogVLM as the fixed VLM for visual perception and test different LLMs for robust reasoning (e.g., GPT-3.5 [7], LLaMA-2 [47]). We have the following observations.</p>
+<p>For the VLMs-only category, GPT-4V performs well, but it has limitations on the number of queries and a high cost per query, making it expensive for largescale testing. LLaVA and PandaGPT, on the other hand, show poor reasoning ability. They cannot follow the provided robust rules, and generate irrelevant content or hallucinations. An example frame with their outputs is shown below:</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000006_00c232cb34c2b736d7667cc61b1dbb6d8e5754f83aa4c16019986876effec819.png"
+    ></figure>
+<p>For the VLMs + Mistrial category, using OWLViT and LLaVA as visual perception modules yields usable results, though they are still 6 to 10% lower than using CogVLM. However, the results with BLIP-2 and RAM are not usable due to serious hallucinations. For example, in a normal frame featuring only</p>
+<p>people walking, BLIP-2 outputs &ldquo;A sidewalk with trees, two people are walking down a sidewalk, a man is riding a skateboard on a sidewalk, a woman walking down a sidewalk in a park.&rdquo;, while RAM (recognize anything) outputs &ldquo;Image Tags: path | person | skate | park | pavement | plaza | skateboarder | walk&rdquo;.</p>
+<p>For the CogVLM + LLMs category, GPT-3.5 performs well but is expensive for large-scale testing. LLaMA-2, on the other hand, struggles with reasoning and fails to follow the given rules as context effectively.</p>
+<p>In summary, the propose AnomalyRuler is a generic plug-and-play framework that can improve VAD performance upon both the closed-source GPTs and the open-source VLMs/LLMs such as CogVLM and Mistral. AnomalyRuler applies to various VLMs/LLMs backbones as long as they have decent visual perception and rule-following capabilities.</p>
+
+<h2 class="relative group">A.5 Further Discussions on Perception Smoothing and Robust Reasoning
+    <div id="a5-further-discussions-on-perception-smoothing-and-robust-reasoning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a5-further-discussions-on-perception-smoothing-and-robust-reasoning" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Sections 5.3 and 5.4 demonstrate the effectiveness of the proposed perception smoothing and robust reasoning strategies. In this section, we provide a deeper investigation into them. Specifically, we aim to examine the extent to which the smoothing step may incorrectly smooth out anomalies from a sequence of video frames, and the extent to which the robust reasoning step can rectify these errors.</p>
+<p>Table 8 shows that less than 0.7% of anomalies are incorrectly smoothed out by the perception smoothing step (before the robust reasoning step), indicating very low false negative rates. The subsequent robust reasoning step successfully rechecks and corrects inaccuracies in the smoothed results, further reducing the false negative rates to below 0.15%.</p>
+<p>Table 8: The percentage (%) of incorrectly smoothed-out anomalies by the perception smoothing strategy on each dataset.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Dataset</th>
+          <th>ShT</th>
+          <th>Ave</th>
+          <th>Ped2</th>
+          <th>UB</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Before Robust Reasoning</td>
+          <td>0.7%</td>
+          <td>0.4%</td>
+          <td>0.6%</td>
+          <td>0.3%</td>
+      </tr>
+      <tr>
+          <td>After Robust Reasoning</td>
+          <td>0.08%</td>
+          <td>0.15%</td>
+          <td>0.08%</td>
+          <td>0.01%</td>
+      </tr>
+  </tbody>
+</table>
+<p>The low false negative rates are due to that the smoothing step only smooths out the brief, isolated frames within a sequence of continuous frames. Table 9 shows that brief anomalies are rare in VAD datasets, as they typically persist for 97.9 to 441.3 continuous frames due to the time required for an anomaly to enter and exit the camera&rsquo;s view. We also calculated the percentage of brief frames, i.e., ≤ 10 frames, among all continuous anomaly frames. The ShT dataset has the highest percentage at 17.5% and an average length of 5.5 frames. In Section 5.4 , we find that a padding size p = 5 in our majority vote step is the optimal window size for ShT for capturing the predominant motion continuity in a video. This aligns with the average length of brief continuous anomalies (5.5 frames) and may explain the reason behind this optimal value.</p>
+<p>Table 9: Statistics for the number of continuous anomaly frames per video clip of each dataset.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Dataset</th>
+          <th>ShT</th>
+          <th>Ave</th>
+          <th>Ped2</th>
+          <th>UB</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td># Average continuous anomaly frames</td>
+          <td>111.3</td>
+          <td>97.9</td>
+          <td>137.3</td>
+          <td>441.3</td>
+      </tr>
+      <tr>
+          <td>% Brief continuous anomalies (≤ 10 frames)</td>
+          <td>17.5%</td>
+          <td>2.1%</td>
+          <td>0.0%</td>
+          <td>0.0%</td>
+      </tr>
+      <tr>
+          <td># Average brief continuous anomaly frames</td>
+          <td>5.5</td>
+          <td>10.0</td>
+          <td>0.0</td>
+          <td>0.0</td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 class="relative group">A.6 Normal Reference Frame Sampling
+    <div id="a6-normal-reference-frame-sampling" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a6-normal-reference-frame-sampling" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The proposed few-normal-shot prompting method is particularly beneficial when only a few normal data points are available in real-world scenarios. In our experiments, we simulate this scenario by randomly sampling normal reference frames from a training set, assuming only the randomly sampled frames are available.</p>
+<p>However, even when a set of normal data (e.g., a training set) has already been collected, our few-normal-shot prompting method is still useful for fast adaptation. In this scenario, different normal reference frame sampling strategies beyond random sampling can be considered, such as sampling by GPT-4V [1]. Table 10 compares the random sampling and GPT-4V sampling (sampling ten frames) on the ShT dataset. The results of five trials show similar performance. The reason is that normal patterns in existing VAD datasets are not very diverse. Hence, randomly sampled normal frames are efficient as references for rule induction. Requiring only a few randomly sampled reference frames is one of our contributions, but GPT-4V sampling could be a promising extension for more complicated VAD scenarios.</p>
+<p>Table 10: Random sampling vs. GPT-4V sampling on the ShT dataset. Results of five trials are reported.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th># Rules</th>
+          <th>AUC (%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Random sampling (ten frames)</td>
+          <td>42.2 ± 4.2</td>
+          <td>84.5 ± 1.1</td>
+      </tr>
+      <tr>
+          <td>GPT-4V sampling (ten frames)</td>
+          <td>39.9 ± 6.9</td>
+          <td>84.8 ± 1.6</td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 class="relative group">A.7 Unified Anomaly Detection
+    <div id="a7-unified-anomaly-detection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a7-unified-anomaly-detection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Unified anomaly detection [55] considers image anomaly detection that trains a single model across different object classes. We extend this setting to VAD by considering a single model across different datasets. Specifically, the proposed AnomalyRuler can perform as a unified anomaly detection approach by using normal reference frames randomly sampled from various datasets and deriving a set of unified rules for all datasets. Table 11 shows the results, which are on par with the main evaluation in Table 3. This demonstrates that AnomalyRuler performs well under the unified anomaly detection setting by inducing effective unified rules across datasets with similar anomaly scenarios but distinct visual appearances.</p>
+<p>Table 11: AUC (%) of AnomalyRuler under the unified anomaly detection setting. AnomalyRuler induces unified rules from a few normal reference frames across all four datasets and is evaluated on these datasets.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Ped2</th>
+          <th>Ave</th>
+          <th>ShT</th>
+          <th>UB</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>97.6</td>
+          <td>85.6</td>
+          <td>84.7</td>
+          <td>68.8</td>
+      </tr>
+  </tbody>
+</table>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_papers/follow the rules, reasonin for VAD with LLM.md"
+          data-oid-likes="likes_papers/follow the rules, reasonin for VAD with LLM.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/hawk--learning-to-understand-open-world-video-anomalies/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/exploring-large-vision-language-models-for-robust-and-efficient-industrial-anomaly-detection/">
+              <span class="leading-6">
+                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-24 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+      
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 overflow-x-auto py-2">
+        <ul class="flex list-none flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 me-4">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

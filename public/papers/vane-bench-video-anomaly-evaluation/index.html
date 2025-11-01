@@ -1,0 +1,1706 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title> &middot; Blowfish</title>
+    <meta name="title" content=" &middot; Blowfish">
+  
+
+  
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/papers/vane-bench-video-anomaly-evaluation/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/papers/vane-bench-video-anomaly-evaluation/">
+  <meta property="og:site_name" content="Blowfish">
+  <meta property="og:title" content="Blowfish">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blowfish">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.7946532fa78157bafb1b4340d4074792811f18177af35790b3a0cb90566ce1cda3edd782eb92e134849964d14b6d9185c9d4ded2a12dcf5b706cb6a275c0cce0.css"
+    integrity="sha512-eUZTL6eBV7r7G0NA1AdHkoEfGBd681eQs6DLkFZs4c2j7deC65LhNISZZNFLbZGFydTe0qEtz1twbLaidcDM4A==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.9df4fc14d50efcc9aa4cfc2b6f348e365f421f5ad491278f8f48c0360cf2f93f08882fda6da162d7ace8e5add57c2df4ac46bd3861306b1d4c452cd31f448d64.js"
+      integrity="sha512-nfT8FNUO/MmqTPwrbzSONl9CH1rUkSePj0jANgzy&#43;T8IiC/abaFi16zo5a3VfC30rEa9OGEwax1MRSzTH0SNZA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Papers",
+    "name": "",
+    "headline": "",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/papers\/vane-bench-video-anomaly-evaluation\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "8275"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          Blowfish
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/papers/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="papers"
+  title="Papers">
+  
+  
+    <p class="text-base font-medium">
+      papers
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/test/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="test"
+  title="Tests">
+  
+  
+    <p class="text-base font-medium">
+      test
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href=""
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  
+  title="">
+  
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/papers/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="papers"
+    title="Papers">
+    
+    
+      <p class="text-bg font-bg">
+        papers
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/test/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="test"
+    title="Tests">
+    
+    
+      <p class="text-bg font-bg">
+        test
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    
+    title="">
+    
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>8275 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">39 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">VANE-Bench: Video Anomaly Evaluation Benchmark for Conversational LMMs
+    <div id="vane-bench-video-anomaly-evaluation-benchmark-for-conversational-lmms" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vane-bench-video-anomaly-evaluation-benchmark-for-conversational-lmms" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Hanan Gani</p>
+<p>*1 Rohit Bharadwaj *2 Fahad Shahbaz Khan1,4 Salman Khan1,5</p>
+<p>Muzammal Naseer 3</p>
+<p>1 Mohamed Bin Zayed University of Artificial Intelligence, 2 University of Edinburgh,</p>
+<p>3 Department of Computer Science, Khalifa University,</p>
+<p>4 Linköping University, 5 Australian National University</p>
+<p>Correspondence: <a
+  href="mailto:hanan.ghani@mbzuai.ac.ae">hanan.ghani@mbzuai.ac.ae</a> , <a
+  href="mailto:rohit.bharadwaj@ed.ac.uk">rohit.bharadwaj@ed.ac.uk</a></p>
+
+<h2 class="relative group">Abstract
+    <div id="abstract" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abstract" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The recent advancements in Large Language Models (LLMs) have greatly influenced the development of Large Multi-modal Video Models (Video-LMMs), significantly enhancing our ability to interpret and analyze video data. Despite their impressive capabilities, current Video-LMMs have not been evaluated for anomaly detection tasks, which is critical to their deployment in practical scenarios e.g., towards identifying deepfakes, manipulated video content, traffic accidents and crimes. In this paper, we introduce VANE-Bench, a benchmark designed to assess the proficiency of Video-LMMs in detecting and localizing anomalies and inconsistencies in videos. Our dataset comprises an array of videos synthetically generated using existing state-of-the-art text-to-video generation models, encompassing a variety of subtle anomalies and inconsistencies grouped into five categories: unnatural transformations, unnatural appearance, pass-through, disappearance and sudden appearance. Additionally, our benchmark features real-world samples from existing anomaly detection datasets, focusing on crime-related irregularities, atypical pedestrian behavior, and unusual events. The task is structured as a visual question-answering challenge to gauge the models&rsquo; ability to accurately detect and localize the anomalies within the videos. We evaluate nine existing Video-LMMs, both open and closed sources, on this benchmarking task and find that most of the models encounter difficulties in effectively identifying the subtle anomalies. In conclusion, our research offers significant insights into the current capabilities of Video-LMMs in the realm of anomaly detection, highlighting the importance of our work in evaluating and improving these models for real-world applications. Our code and data is publicly available at <a
+  href="https://github.com/"
+    target="_blank"
+  >https://github.com/</a> rohit901/VANE-Bench .</p>
+<ul>
+<li>Equal contribution</li>
+</ul>
+
+<h2 class="relative group">1 Introduction
+    <div id="1-introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Large Language Models (LLMs) like ChatGPT have ushered in a new era of real-world AI applications in varied and diverse sectors like manufacturing, legal services, space exploration, transportation, retail, healthcare, education, and technology (Abdullah et al. , 2022; Marr , 2023). Further, the current trend in the development of these LLMs has been to introduce multi-modal capabilities like vision and audio to these models along with text (et al. , 2024; OpenAI , 2024). This motivates us to ask the question whether the current Large Multi-modal Models (LMMs) are capable and accurate in tackling the problem statement of Video Anomaly Detection (VAD) which has immense practical applications in factories, autonomous driving, crime warning, and traffic management (Liu et al. , 2024a).</p>
+<p>Further, we have recently observed superior visual quality of various AI-generated videos due to the improvements in the underlying algorithms, which are based on diffusion models, and transformers (Brooks et al. , 2024; HPCAI Tech , 2024; Peebles and Xie , 2023). The current state-of-theart (SOTA) AI text-to-video model is SORA from OpenAI (Brooks et al. , 2024). The videos produced by SORA are of extremely high fidelity, which makes them nearly indistinguishable from real-life footage. Thus, SORA brings new challenges in tackling misinformation, identifying deepfakes, and distinguishing real from fake videos, especially during crucial events like democratic elections. Therefore, developing automated solutions to identify AI-generated videos has become the need of the hour.</p>
+<p>Motivated by the above-mentioned points, we propose a novel and challenging benchmark, VANE-Bench: Video ANomaly Evaluation Benchmark, to evaluate various closed-source and open-source Video-LMMs on their ability to detect</p>
+<p>Figure 1: Samples showing the AI-Generated video category of VANE-Bench. We collect these synthetic videos from SORA (Brooks et al. , 2024), Open-Sora (HPCAI Tech , 2024), Runway Gen2 (Runway Research , 2024), ModelScopeT2V (Wang et al. , 2023a), and VideoLCM (Wang et al. , 2023b). The correct option in each question is highlighted in bold. Note that many of these anomalies are extremely subtle and difficult for humans to detect since the changes happen in rapid succession, with the entire video played in under a second. Anomalies are identified with red bounding boxes for clarity. Note that our actual dataset does not contain bounding box overlays.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000000_396a14ae0cdb99109fd57607935ff14244432fcf4d8b6a92ff6fd9176d6ce12c.png"
+    ></figure>
+<p>anomalies in the videos. Our VANE-Bench consists of both real-world video anomalies from diverse surveillance footage capturing unusual pedestrian behaviour, criminal activities, and unusual events, as well as subtle and challenging anomalies and inconsistencies present in various AI-generated videos (See Fig 1). These AI-generated videos, especially from SOTA models like SORA, have subtle and hard to detect anomalies, which makes this a challenging task even for many humans. However, automatically detecting and identifying the anomalies in these synthetic video clips serves as an important step towards identifying AI-generated videos in the wild. We reformulate the problem statement of VAD into a visual question-answering (VQA) task to facilitate easier evaluation of LMMs. However, despite evaluating over nine recent VideoLMMs on VANE-Bench, we find that most current LMMs still struggle on this benchmark (see Fig.2), making VANE-Bench a challenging and a useful benchmark for tracking the progress of Video-LMMs for the foreseeable future.</p>
+<p>Our contributions can be summarized as follows:</p>
+<ol>
+<li>
+<p>We present VANE-Bench: Video ANomaly Evaluation Benchmark, consisting of 325 video clips, and 559 challenging questionanswer pairs from both real-world video surveillance, and AI-generated videos.</p>
+</li>
+<li>
+<p>We perform detailed evaluation of over nine state-of-the-art closed-source and open-source Video-LMMs on VANE-Bench, and show that most models exhibit poor performance, highlighting the challenging nature of our proposed benchmark.</p>
+</li>
+<li>
+<p>We conduct detailed result analysis, and also perform human evaluation on VANE-Bench to set a reasonable benchmark target.</p>
+</li>
+<li>
+<p>We will open-source our code, and describe the data construction process of VANE-Bench along with making our data publicly available.</p>
+</li>
+</ol>
+<p>We hope that VANE-Bench serves as a strong benchmark to improve the performance and capabilities of Video-LMMs on anomaly detection.</p>
+
+<h2 class="relative group">2 Related Work
+    <div id="2-related-work" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-related-work" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video-LMMs: LMMs integrate linguistic and visual data to process videos, leveraging LLMs like Llama (Meta , 2024) and connecting them with modality-specific encoders via interfaces like Qformer (Zhang et al. , 2024; Dai et al. , 2023; Yin et al. , 2024). Notable open-source Video-LMMs include VideoChat (Li et al. , 2023b), which uses a chat-centric system, and VideoChatGPT (Maaz et al. , 2023), which combines a visual encoder with an LLM for detailed video conversations. VideoLLaMA (Zhang et al. , 2023a) integrates audio and visual signals using Q-formers, while LLaMAVID (Li et al. , 2023c) represents each frame with context and content tokens for efficient processing. Despite these advancements, our work shows current LMMs perform poorly on VANE-Bench, highlighting the need for stronger models in anomaly detection.</p>
+<p>Video-LMMs Benchmarking: Benchmarks like SEED-Bench (Li et al. , 2023a) and MV-Bench (Li et al. , 2024b) assess general comprehension through multiple-choice questions but lack focus on anomaly detection in AI-generated videos. CVRR-ES (khattak et al. , 2024) evaluates realworld scenarios with open-ended questions but doesn&rsquo;t address AI-generated inconsistencies. VANE-Bench specifically evaluates VAD in both real-world and AI-generated videos, providing a targeted benchmark for this task. While Perception Test (Patr ˘ ˘ aucean et al. ˘ ˘ , 2023) focuses on lower-level perception in real-world videos, VANEBench targets subtle anomalies in AI-generated content, making it essential for assessing VideoLMM robustness.</p>
+<p>Video Anomaly Detection: Traditional VAD methods typically rely on hand-crafted features and statistical models to identify deviations from normality. CUVA (Du et al. , 2024) is a comprehensive benchmark that focuses on the causation of video anomalies. A survey on generalized VAD (Liu et al. , 2024b) categorizes various methodologies and highlights benchmark limitations. These methods often fail with complex AI-generated videos. VANE-Bench addresses this by focusing on VAD in such videos, complementing existing benchmarks and targeting subtle inconsistencies in high-fidelity AI-generated content.</p>
+
+<h2 class="relative group">3 Dataset &amp; Benchmark
+    <div id="3-dataset--benchmark" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-dataset--benchmark" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Recent advancements in multi-modal Large Language Models (LLMs) have enabled these models to process text, image, and video data, presenting new opportunities and challenges in Video Anomaly Detection (VAD) (Liu et al. , 2024a). Motivated by this progress, we aim to benchmark the capabilities of these multi-modal models (LMMs) on VAD.</p>
+<p>To address VAD, we propose VANE-Bench: Video ANomaly Evaluation Benchmark for Conversational LMMs, comprising 325 video clips and 559 challenging ground-truth question-answer (QA) pairs. We have adapted the VAD problem into a Multiple-Choice Video Question Answering (MC-Video QA) (Tapaswi et al. , 2016; Lei et al. , 2019; Yu et al. , 2019) task to facilitate the evaluation of LMMs, allowing for a more granular assessment of their video content understanding.</p>
+<p>We evaluate the latest closed-source and opensource LMMs on VANE-Bench. Sec. 3.1 provides an overview of VANE-Bench, Sec. 3.2 describes the dataset categories, and Sec. 3.3 outlines our data collection methodology.</p>
+
+<h2 class="relative group">3.1 Overview
+    <div id="31-overview" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#31-overview" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>VANE-Bench consists of 325 video clips spanning real-world and synthetic video anomalies. We adapted standard VAD surveillance datasets such as CUHK Avenue (Lu et al. , 2013), UCF-Crime (Sultani et al. , 2018), and UCSD Pedestrian (Li et al. , 2014) to our MC-Video QA problem. Additionally, we included 197 video clips from various opensource and state-of-the-art closed-source text-tovideo diffusion models (Brooks et al. , 2024; HP-</p>
+<p>Figure 2: Left: Performance of Video-LMMs on five anomaly categories of SORA dataset. Right: Overall performance of Video-LMMs averaged across all the benchmark datasets, including AI-generated and real-world anomaly datasets.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000001_3d2ac099f9735dfb725153d228a24737cfc9a655b8eb2d4c1de9338e7994c0a2.png"
+    ></figure>
+
+<h2 class="relative group">CAI Tech , 2024; Runway Research , 2024; Wang et al. , 2023a , b).
+    <div id="cai-tech--2024-runway-research--2024-wang-et-al--2023a--b" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#cai-tech--2024-runway-research--2024-wang-et-al--2023a--b" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The diverse data backgrounds and varied difficulty levels in VANE-Bench make it ideal for evaluating the reasoning and understanding capabilities of video LMMs. Benchmarking these models on a range of real-world and synthetic anomalies helps us understand their strengths and limitations, guiding future multi-modal AI research.</p>
+<p>Overall, VANE-Bench aims to push the boundaries of what LMMs can achieve in video anomaly detection, providing a rigorous standard for evaluating their performance on this challenging task.</p>
+
+<h2 class="relative group">3.2 Categories
+    <div id="32-categories" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#32-categories" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The VANE-Bench dataset encompasses a variety of categories derived from both real-world surveillance footage and AI-generated video clips. Each category represents a distinct source and type of video anomaly. Below, we detail the different categories included in the dataset:</p>
+<p>Real-World anomalies: The videos with these anomalies are sourced from several established real-world anomaly datasets, encompassing diverse anomaly types. The distribution of these anomalies is depicted in Fig. 3 (middle). Fig. 3 (right) provides the total number of anomaly clips along with corresponding QA pairs for each dataset in this category. Detailed descriptions of each dataset within this category follow below.</p>
+<ol>
+<li>CUHK Avenue (Lu et al. , 2013): This category consists of 11 video clips with 33 associated question-answer (QA) pairs. The clips capture anomalous events in a campus environment, which shows individuals commuting in a university campus, and walking in and out of buildings. Anomaly types. The anomalies include unusual pedestrian behav-</li>
+<li>ior like randomly throwing bags and papers or performing weird actions or dance moves.</li>
+<li>UCF-Crime (Sultani et al. , 2018): Comprising 95 video clips with 95 QA pairs, this category includes real-world surveillance footage. Anomaly types. The videos depict various criminal activities, such as arrest, assault, burglary, robbery, stealing, and vandalism.</li>
+<li>UCSD-Ped1 (Li et al. , 2014): This category contains 10 video clips with 30 QA pairs. The videos focus on pedestrian walkways. The Ped1 dataset is captured by a camera facing perpendicular to the road. Anomaly types. The anomalous events are due to the presence of non pedestrian entities (i.e. bikers, skaters, small carts, and wheelchairs) in the walkways.</li>
+<li>UCSD-Ped2 (Li et al. , 2014): Similar to UCSD-Ped1, this category includes 12 video clips with 36 QA pairs. In contrast with Ped1, the Ped2 dataset uses camera which is parallel to the road. Anomaly types. Abnormal events are due to non pedestrian entities in the walkways including bikers, skaters, small carts, and people walking across a walkway.</li>
+</ol>
+<p>AI-Generated anomalies: The videos with these anomalies are obtained from various closed-source, and open-source text-to-video diffusion models. The anomalies in these clips are usually subtle, and hard to detect, which makes our VANE-Bench benchmark challenging. General anomaly types: The anomalies include the sudden appearance of objects, the unnatural transformation of solid physical objects, the disappearance of objects, objects passing through other solids, and unnatural appearance of objects (i.e., distorted and deformed facial</p>
+<p>Figure 3: VANE-Bench dataset statistics: Left and Middle: Composition and type of anomalies present in AIgenerated and real-world videos. Right: Number of samples and QA pairs present in each type of video dataset.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000002_a554903ff16eb57358465961564dfde023acaf5eebc4c518df39a3172c578330.png"
+    ></figure>
+<p>features, or other unnatural appearance like presence of extra fingers). The distribution of these anomalies in the dataset is shown in Fig. 3 (left), and statistics about the number of clips and corresponding QA pairs are presented in Fig. 3 (right). Below, we describe the type of video samples in this category.</p>
+<ol>
+<li>SORA (Brooks et al. , 2024): This category consists of 46 video clips with 138 QA pairs. The video clips are generated using SORA, a state-of-the-art AI text-to-video model. Due to the high quality and almost realistic-looking videos generated by SORA, it becomes quite difficult to accurately identify the inconsistencies or anomalies present in the videos.</li>
+<li>OpenSora (HPCAI Tech , 2024): With 50 video clips and 50 QA pairs, this category features AI-generated videos from the opensource version of SORA.</li>
+<li>Runway Gen2 (Runway Research , 2024): This category includes 25 video clips with 25 QA pairs created using a commercial text-tovideo AI model.</li>
+<li>ModelScopeT2V (Wang et al. , 2023a): This category comprises of 24 video clips with 48 QA pairs, leveraging the video diffusion model trained by (Wang et al. , 2023a) to produce videos from text captions. The videos were generated with 50 diffusion steps with 16 fps.</li>
+<li>VideoLCM (Wang et al. , 2023b): This category features 52 video clips with 104 QA pairs, generated using latent consistency models (Wang et al. , 2023b) designed to create videos with high variability and with less latency. We used 20 diffuson steps to generate</li>
+</ol>
+<p>the videos with 16 fps. The videos were further post-processed by an LCM model trained on higher resolution videos to obtain better quality videos.</p>
+<p>By including a wide range of video sources and anomaly types, the VANE-Bench dataset provides a comprehensive benchmark for evaluating the capabilities of large multi-modal models in video anomaly detection.</p>
+
+<h2 class="relative group">3.3 Constructing VANE-Bench
+    <div id="33-constructing-vane-bench" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#33-constructing-vane-bench" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Fig. 4 describes the construction process of the VANE-Bench dataset. Since the synthetic AIgenerated videos from state-of-the-art models like SORA (Brooks et al. , 2024) have subtle and hardto-detect inconsistencies, we require high-quality captions describing all of the specific inconsistencies present in the given video. Our pipeline first annotates the anomalies using the frame annotation module (FAM). The caption-generating module (CGM) then utilizes these annotations to produce captions, followed by the question-answer generation module (QAGM), creating QA pairs based on the annotated frames and captions. Annotating the clips before caption generation is crucial for focusing the model on the specific anomaly regions in the video (Shtedritski et al. , 2023; Zhang et al. , 2023b; Yang et al. , 2023). Without annotations, the CGM often fails to reference the anomalies in the captions, as demonstrated in Sec. C of supplementary material. We briefly describe all the three stages involved in the semi-automatic dataset construction pipeline below.</p>
+
+<h2 class="relative group">3.3.1 Frame Annotation Module (FAM)
+    <div id="331-frame-annotation-module-fam" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#331-frame-annotation-module-fam" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>As described in Sec. 3.2, we first collect raw videos from existing VAD datasets like CUHK Avenue (Lu et al. , 2013), UCF-Crime (Sultani et al. , 2018), UCSD-Ped (Li et al. , 2014), and also add additional challenging AI generated videos</p>
+<p>Figure 4: Flow diagram showing the semi-automatic construction process of our VANE-Bench dataset. The entire process can be divided into 3 interconnected stages/modules, i.e., i. Frame Annotation Module (FAM), ii. Caption Generation Module (CGM), iii. Question Answer Generation Module (QAGM).</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000003_04ac6515077a79954dc69cef9caed486981e763a06e6b5301008638a2c336c63.png"
+    ></figure>
+<p>to the mix. For the VAD datasets, the bounding box annotations were already provided for a subset of the videos from these datasets. Thus, we only annotate the anomalies present in the AIgenerated videos. In this stage, we first break down the raw videos into their constituent image frames. Second, we select and filter 10 consecutive frames from the video that contain the inconsistency. We annotate these selected frames with a bounding box mentioning the type of inconsistency. We consider the following inconsistency types: &lsquo;Sudden Appearance&rsquo;, &lsquo;Unnatural Transform&rsquo;, &lsquo;Disappearance&rsquo;, &lsquo;Pass-through , and &lsquo;Unnatural Appearance&rsquo;. Fig. 4 shows the annotated &lsquo;Unnatural Transform&rsquo; inconsistency affecting the kangaroo&rsquo;s legs and tails.</p>
+
+<h2 class="relative group">3.3.2 Caption Generation Module (CGM)
+    <div id="332-caption-generation-module-cgm" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#332-caption-generation-module-cgm" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The second stage of our data collection process involves the Caption Generation Module (CGM), which uses the annotated video frames from FAM to generate a high-quality and detailed caption which describes the inconsistency, along with the general events in the video. To generate the caption, we design a specialised custom prompt (Sec. D.1), and use the recently released GPT-4o (OpenAI , 2024) LMM, which has shown both impressive performance gains and cost savings. Thus, GPT-4o model takes in our custom prompt, along with the annotated frames to generate the descriptive video caption as shown in Fig. 4 .</p>
+
+<h2 class="relative group">3.3.3 Question Answer Generation Module (QAGM)
+    <div id="333-question-answer-generation-module-qagm" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#333-question-answer-generation-module-qagm" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The final stage of our VANE-Bench construction process involves using the generated caption from CGM, and the annotated frames from FAM to output the final high-quality, and challenging Question and Answer (QA) pairs. We create another custom prompt (Sec. D.2) which we pass to the GPT-4o model, along with caption, and the annotated frames as input to generate the QA pairs. The selected raw frames containing the inconsistency, and their corresponding generated QA pairs form our VANE-Bench dataset.</p>
+
+<h2 class="relative group">4 Experiments and Results
+    <div id="4-experiments-and-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-experiments-and-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video-LMMs. We evaluate the anomaly detection and comprehension capabilities of both opensource and closed-source models. Among the open-source models, we evaluate 7 recent VideoLMMs, including Video-LLaVA (Lin et al. , 2023), TimeChat (Ren et al. , 2023), MovieChat (Song et al. , 2023), LLaMA-ViD (Li et al. , 2023c), VideoChat (Li et al. , 2023b), Video-ChatGPT (Maaz et al. , 2023), and Video-LLaMA-2 (Zhang et al. , 2023a). For evaluating closed-source models, we use Gemini-1.5 Pro (Google , 2023) and GPT-4o (OpenAI , 2024).</p>
+<p>Evaluation Protocol. For the evaluation of Gemini and GPT-4o, we utilize their respective official APIs, with each model receiving 10 video frames as input. The 10 frames are selected in a manner that encompasses all or the majority of the inconsistencies present in the video. In cases where an anomaly spans a longer duration, we sample mul-</p>
+<p>Table 1: Evaluation results of Video-LMMs across different types of video samples on the VANE benchmark. We present results for both open-source and closed-source models. The first five rows show results on AI-generated videos and last four contain results on real world anomaly datasets.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Benchmark Category</th>
+          <th>Video-LLaMA</th>
+          <th>VideoChV</th>
+          <th>Video-CVide</th>
+          <th>Video-L</th>
+          <th>MovieC</th>
+          <th>LLaMA-VTimeC</th>
+          <th>TimeChat</th>
+          <th>Gemini-1.5</th>
+          <th>GPT4o</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>SORA</td>
+          <td>11.59</td>
+          <td>10.74</td>
+          <td>26.47</td>
+          <td>10.86</td>
+          <td>8.69</td>
+          <td>7.97</td>
+          <td>21.73</td>
+          <td>51.45</td>
+          <td>55.8</td>
+      </tr>
+      <tr>
+          <td>OpenSORA</td>
+          <td>18</td>
+          <td>28</td>
+          <td>22</td>
+          <td>18</td>
+          <td>10</td>
+          <td>14</td>
+          <td>26</td>
+          <td>84</td>
+          <td>68</td>
+      </tr>
+      <tr>
+          <td>Runway Gen2</td>
+          <td>16</td>
+          <td>4</td>
+          <td>12</td>
+          <td>16</td>
+          <td>1600</td>
+          <td>20</td>
+          <td>28</td>
+          <td>28</td>
+          <td>40</td>
+      </tr>
+      <tr>
+          <td>VideoLCM</td>
+          <td>10.57</td>
+          <td>17.64</td>
+          <td>18.26</td>
+          <td>19.23</td>
+          <td>14.42</td>
+          <td>19.23</td>
+          <td>22.11</td>
+          <td>49.04</td>
+          <td>50.96</td>
+      </tr>
+      <tr>
+          <td>Modelscope-T2V</td>
+          <td>10.41</td>
+          <td>20.83</td>
+          <td>16.66</td>
+          <td>16.66</td>
+          <td>6.25</td>
+          <td>14.58</td>
+          <td>20.83</td>
+          <td>75</td>
+          <td>64.58</td>
+      </tr>
+      <tr>
+          <td>Avenue</td>
+          <td>30</td>
+          <td>32.25</td>
+          <td>39.39</td>
+          <td>3.03</td>
+          <td>18.18</td>
+          <td>27.27</td>
+          <td>24.2</td>
+          <td>100</td>
+          <td>84.85</td>
+      </tr>
+      <tr>
+          <td>UCFCrime</td>
+          <td>9.47</td>
+          <td>11.57</td>
+          <td>31.57</td>
+          <td>10.52</td>
+          <td>18.51</td>
+          <td>15.78</td>
+          <td>7.3</td>
+          <td>76.84</td>
+          <td>83.16</td>
+      </tr>
+      <tr>
+          <td>UCSD-Ped1</td>
+          <td>16.66</td>
+          <td>13.33</td>
+          <td>40</td>
+          <td>2.77</td>
+          <td>6.66</td>
+          <td>6.66</td>
+          <td>27.58</td>
+          <td>96.67</td>
+          <td>93.33</td>
+      </tr>
+      <tr>
+          <td>UCSD-Ped2</td>
+          <td>5.55</td>
+          <td>13.88</td>
+          <td>19.44</td>
+          <td>6.06</td>
+          <td>11.11</td>
+          <td>19.44</td>
+          <td>11.11</td>
+          <td>94.44</td>
+          <td>86.11</td>
+      </tr>
+  </tbody>
+</table>
+<p>tiple sets of 10 frames to ensure comprehensive coverage. As GPT-4o does not inherently support videos, we input the video clips as 10 frames to the GPT API, accompanied by the corresponding Visual Question-Answering (VQA) query. For each model under assessment, we generate responses to the questions independently and without retaining the conversation history. Few models, such as Moviechat, output hallucinated responses when instructed to answer the query. In such cases, we consider the hallucinated responses as incorrect answers due to the inability of the model to comprehend the situation in the video.</p>
+<p>Evaluation metric. For the evaluation results of the Video-LMMs on our proposed VANE-Bench benchmark, we employ the standard VQA accuracy measure, which assigns a score of 1 to each correct answer and a score of 0 to each incorrect answer.</p>
+
+<h2 class="relative group">4.1 Main Evaluation Results
+    <div id="41-main-evaluation-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#41-main-evaluation-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">4.1.1 Evaluation on Video-LLMs
+    <div id="411-evaluation-on-video-llms" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#411-evaluation-on-video-llms" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>AI-Generated anomalies. The AI-generated videos in our dataset are derived from five distinct models: SORA, OpenSORA, Runaway Gen-2, VideoLCM, and Modelscope-T2V. In the majority of these videos, the anomalies are subtle and not readily apparent, even to the human eye. As previously stated in section 3.2, the synthetic anomalies can manifest in five different forms. As shown in Table 1, the performance of open-source models in detecting anomalies in these videos is subpar. Although closed-source models outperform their open-source counterparts, their overall comprehension and detection of anomalies in the videos re- main inadequate. This indicates that even robust closed-source models encounter difficulties in identifying subtle anomalies within the videos.</p>
+<p>Real-world anomalies. Our real-world anomaly datasets benchmark, as discussed in section 3.2 , comprises four real-world datasets and focuses on detecting crime-related irregularities, atypical pedestrian behavior, and unusual events. These anomalies are prevalent in real-world scenarios. In our analysis, we find that open-source models encounter difficulties in locating and identifying these anomalies. As shown in Table 1, these models perform poorly on these datasets. Conversely, we observe that closed-source models excel at detecting such real-world anomalies, indicating that they can effectively differentiate between unusual events in real-world scenarios. This can be attributed to the fact that these models are trained on a vast amount of existing real-world, internet-scale data.</p>
+<p>We provide results on additional latest VideoLMMs in Section A.1 of Supplementary.</p>
+
+<h2 class="relative group">4.1.2 Human Evaluation
+    <div id="412-human-evaluation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#412-human-evaluation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We conducted a human evaluation on SORAgenerated videos, which contain subtle and challenging anomalies that are difficult for humans to detect (see Fig. 1 top row) in a single viewing. Moreover, most of the video clips contain a multitude of foreground and background characters and elements, which makes it difficult for humans to focus on the inconsistencies within the short time frame. Some of the questions also specifically inquire about inconsistencies present in the background characters of the clips rather than the foreground ones. To ensure fairness, our human eval-</p>
+<p>Figure 5: Human vs Video-LMMs&rsquo; performance on SORA. Performance comparison of humans vs VideoLMMs on VQA task of detecting anomalies in SORA dataset. We find that closed-source Video-LMMs perform comparably to humans while open-source VideoLMMs struggle to detect subtle anomalies.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000004_9d2c2e9d746c945f1613d96d85e31b24361d6c3b19b3fed5c1fe3fe5fcc59d35.png"
+    ></figure>
+<p>uation was conducted under a set of rules, which include showing all 10 frames of the video to the human evaluator only once, followed by the question. Our human evaluation comparisons are presented in Fig 5. While humans outperform open-source models in detecting these subtle anomalies, their performance remains sub-optimal. This indicates that, with the advancements in video generation techniques, there is a pressing need for more sophisticated and effective Video-LMMs capable of assisting in the detection of such challenging cases capable of evading human eyes as well.</p>
+
+<h2 class="relative group">4.2 Additional Analysis
+    <div id="42-additional-analysis" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#42-additional-analysis" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Inconsistencies in Predictions. We find that, in the majority of cases, open-source Video-LMMs generate different results when prompted to answer the same query multiple times. Fig. 6 illustrates a sample example where the same questions were posed twice to the corresponding Video-LMMs, yielding different responses. In some instances, the answers generated by the Video-LMMs in both rounds were dissimilar and incorrect. However, we also found cases where Video-LMMs initially produced the correct answer, followed by an incorrect answer to the same query, albeit phrased slightly differently. This suggests that the majority of these open-source Video-LMMs struggle to comprehend the same query when presented in a different manner, leading to inconsistent and paradoxical predictions. In contrast, closed-source Video-LMMs are less prone to such inconsistent predictions and consistently produce the same output for the same queries, regardless of how they are phrased, indicating a superior comprehension of language. Refer to supplementary Section B for additional results. Performance Analysis on SORA anomalies. The overall performance of open-source Video-LMMs on anomaly categories in synthetically generated SORA videos is subpar. To gain further insights, as depicted in Figure 2 (left), all open-source VideoLMMs exhibit less than 10% accuracy in detecting the &ldquo;disappearance&rdquo; anomaly, indicating that this particular type is the most difficult to identify for the majority of Video-LMMs. Among the open-source models, Videochat demonstrates above par performance compared to its open-source counterparts on most anomaly types, with the exception of the &ldquo;unnatural appearance&rdquo; category, where Timechat outperforms it. The remaining models display a fluctuating trend, with accuracy levels ranging from extremely low to moderately low across all anomaly types. The closed source-models, on the other hand, demonstrate superior performance compared to open-source models across all anomaly types.</p>
+<p>We provide more insights and discussions in Section A.4 of Supplementary material.</p>
+
+<h2 class="relative group">5 Conclusion
+    <div id="5-conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We introduced VANE-Bench, a comprehensive benchmark for evaluating Video LMMs in VAD tasks, featuring real-world and AI-generated video clips. The AI-generated content, especially from advanced models like SORA, includes subtle inconsistencies, making VANE-Bench particularly challenging. Our evaluation of nine recent VideoLMMs on VANE-Bench shows significant gaps in detecting video anomalies, with even robust closedsource models struggling with nuanced discrepancies. Human assessments on SORA-generated videos confirm these subtle anomalies are challenging to identify, highlighting the need for advanced Video-LMMs. VANE-Bench is vital for advancing Video-LMMs in anomaly detection. As highfidelity AI-generated content rises, our benchmark is crucial for developing models to identify subtle inconsistencies, aiding in the fight against misinformation and deepfakes. We hope VANE-Bench will guide future research to enhance the robustness and capability of Video-LMMs in this critical area.</p>
+
+<h2 class="relative group">6 Limitations
+    <div id="6-limitations" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-limitations" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Our VANE-Bench is the first benchmark for evaluating Video-LMMs on anomalous videos from both AI-generated and real-world sources. While we have done our best to ensure a high-quality evaluation of these Video-LMMs, certain limitations</p>
+<p>Figure 6: Inconsistency in Predictions: Left: Video-ChatGPT and VideoChat predict accurately, while VideoLLAMA selects incorrectly. Right: With a rephrased query, predictions shift. Video-ChatGPT and VideoChat err, whereas Video-LLAMA predicts correctly. This indicates the sensitivity of Video-LMMs towards query rephrasing.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000005_667b9fbe60cb8958cfb05d22a2000e1fdabd8b325a3d46279395cd24f86b260b.png"
+    ></figure>
+<p>still manifest.</p>
+<p>Our Question-answer pairs are designed to have 4 options. We design the instruct prompt to ensure that each Video-LMM outputs one out of 4 options. However, in some instances, the model outputs a hallucinated response and does not follow the instructions. As a result, we employ a post-response human-based filtration process, which involves an exhaustive verification and rectification of these errors. In our current setup, we mark these cases as wrong. We believe that future Video-LLMs will be more aligned with human intent and will follow human instructions appropriately.</p>
+<p>Additionally, the video samples from the SORA are limited in VANE-Bench. This is due to the fact that SORA model is not open-source yet, hence we rely on publicly available samples of SORA for evaluation.</p>
+
+<h2 class="relative group">References
+    <div id="references" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#references" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Malak Abdullah, Alia Madain, and Yaser Jararweh. 2022. Chatgpt: Fundamentals, applications and social impacts. In 2022 Ninth International Conference on Social Networks Analysis, Management and Security (SNAMS), pages 1–8. Ieee.</p>
+<p>Kirolos Ataallah, Xiaoqian Shen, Eslam Abdelrahman, Essam Sleiman, Deyao Zhu, Jian Ding, and Mohamed Elhoseiny. 2024a. Minigpt4-video: Advancing multimodal llms for video understanding with interleaved visual-textual tokens. arXiv preprint arXiv:2404.03413 .</p>
+<p>Kirolos Ataallah, Xiaoqian Shen, Eslam Abdelrahman, Essam Sleiman, Mingchen Zhuge, Jian Ding, Deyao Zhu, Jürgen Schmidhuber, and Mohamed Elhoseiny. 2024b. Goldfish: Vision-language understanding of arbitrarily long videos . Preprint, arXiv:2407.12679.</p>
+<p>Tim Brooks, Bill Peebles, Connor Holmes, Will DePue, Yufei Guo, Li Jing, David Schnurr, Joe Taylor, Troy Luhman, Eric Luhman, Clarence Ng, Ricky Wang, and Aditya Ramesh. 2024. Video generation models as world simulators.</p>
+<p>Wenliang Dai, Junnan Li, Dongxu Li, Anthony Meng Huat Tiong, Junqi Zhao, Weisheng Wang, Boyang Li, Pascale Fung, and Steven Hoi. 2023. Instructblip: Towards general-purpose visionlanguage models with instruction tuning . Preprint , arXiv:2305.06500.</p>
+<p>Hang Du, Sicheng Zhang, Binzhu Xie, Guoshun Nan, Jiayang Zhang, Junrui Xu, Hangyu Liu, Sicong Leng, Jiangming Liu, Hehe Fan, Dajiu Huang, Jing Feng, Linli Chen, Can Zhang, Xuhuan Li, Hao Zhang, Jianhang Chen, Qimei Cui, and Xiaofeng Tao. 2024. Uncovering what, why and how: A comprehensive benchmark for causation understanding of video anomaly . Preprint, arXiv:2405.00181.</p>
+<p>Gemini Team et al. 2024. Gemini: A family of highly capable multimodal models . Preprint , arXiv:2312.11805.</p>
+<p>Google. 2023. Gemini .</p>
+<p>HPCAI Tech. 2024. Open-sora: Democratizing efficient video production for all. https://github. com/hpcaitech/Open-Sora .</p>
+<p>Muhammad Uzair khattak, Muhammad Ferjad Naeem, Jameel Hassan, Naseer Muzzamal, Federcio Tombari, Fahad Shahbaz Khan, and Salman Khan. 2024. How good is my video lmm? complex video reasoning and robustness evaluation suite for video-lmms. arXiv:2405.03690 .</p>
+<p>Jie Lei, Licheng Yu, Mohit Bansal, and Tamara L. Berg. 2019. Tvqa: Localized, compositional video question answering . Preprint, arXiv:1809.01696.</p>
+<p>Bohao Li, Rui Wang, Guangzhi Wang, Yuying Ge, Yixiao Ge, and Ying Shan. 2023a. Seed-bench: Benchmarking multimodal llms with generative comprehension . Preprint, arXiv:2307.16125.</p>
+<ul>
+<li>
+<p>Feng Li, Renrui Zhang, Hao Zhang, Yuanhan Zhang, Bo Li, Wei Li, Zejun Ma, and Chunyuan Li. 2024a. Llava-next-interleave: Tackling multi-image, video, and 3d in large multimodal models. arXiv preprint arXiv:2407.07895 .</p>
+</li>
+<li>
+<p>KunChang Li, Yinan He, Yi Wang, Yizhuo Li, Wenhai Wang, Ping Luo, Yali Wang, Limin Wang, and Yu Qiao. 2023b. Videochat: Chat-centric video understanding. arXiv preprint arXiv:2305.06355 .</p>
+</li>
+<li>
+<p>Kunchang Li, Yali Wang, Yinan He, Yizhuo Li, Yi Wang, Yi Liu, Zun Wang, Jilan Xu, Guo Chen, Ping Luo, Limin Wang, and Yu Qiao. 2024b. Mvbench: A comprehensive multimodal video understanding benchmark . Preprint , arXiv:2311.17005.</p>
+</li>
+<li>
+<p>Weixin Li, Vijay Mahadevan, and Nuno Vasconcelos. 2014. Anomaly detection and localization in crowded scenes . IEEE Transactions on Pattern Analysis and Machine Intelligence, 36(1):18–32.</p>
+</li>
+<li>
+<p>Yanwei Li, Chengyao Wang, and Jiaya Jia. 2023c. Llama-vid: An image is worth 2 tokens in large language models. arXiv preprint arXiv:2311.17043 .</p>
+</li>
+<li>
+<p>Bin Lin, Bin Zhu, Yang Ye, Munan Ning, Peng Jin, and Li Yuan. 2023. Video-llava: Learning united visual representation by alignment before projection. arXiv preprint arXiv:2311.10122 .</p>
+</li>
+<li>
+<p>Yang Liu, Dingkang Yang, Yan Wang, Jing Liu, Jun Liu, Azzedine Boukerche, Peng Sun, and Liang Song. 2024a. Generalized video anomaly event detection: Systematic taxonomy and comparison of deep models . ACM Comput. Surv., 56(7).</p>
+</li>
+<li>
+<p>Yang Liu, Dingkang Yang, Yan Wang, Jing Liu, Jun Liu, Azzedine Boukerche, Peng Sun, and Liang Song. 2024b. Generalized video anomaly event detection: Systematic taxonomy and comparison of deep models . Preprint, arXiv:2302.05087.</p>
+</li>
+<li>
+<p>Cewu Lu, Jianping Shi, and Jiaya Jia. 2013. Abnormal event detection at 150 fps in matlab. In 2013 IEEE International Conference on Computer Vision, pages 2720–2727.</p>
+</li>
+<li>
+<p>Muhammad Maaz, Hanoona Rasheed, Salman Khan, and Fahad Shahbaz Khan. 2023. Video-chatgpt: Towards detailed video understanding via large vision and language models. arXiv preprint arXiv:2306.05424 .</p>
+</li>
+<li>
+<p>Bernard Marr. 2023. 15 amazing real-world applications of ai everyone should know about. https: //bit.ly/4f2nrTd. Accessed: 26 Mar, 2024.</p>
+</li>
+<li>
+<p>Meta. 2024. Introducing meta llama 3: The most capable openly available llm to date. <a
+  href="https://ai.meta"
+    target="_blank"
+  >https://ai.meta</a>. com/blog/meta-llama-3/ .</p>
+</li>
+<li>
+<p>OpenAI. 2024. Hello gpt-4o. <a
+  href="https://openai.com/"
+    target="_blank"
+  >https://openai.com/</a> index/hello-gpt-4o/ .</p>
+</li>
+<li>
+<p>William Peebles and Saining Xie. 2023. Scalable diffusion models with transformers . Preprint , arXiv:2212.09748.</p>
+</li>
+<li>
+<p>Viorica Patr ˘ ˘ aucean, Lucas Smaira, Ankush Gupta, ˘ ˘ Adrià Recasens Continente, Larisa Markeeva, Dylan Banarse, Skanda Koppula, Joseph Heyward, Mateusz Malinowski, Yi Yang, Carl Doersch, Tatiana Matejovicova, Yury Sulsky, Antoine Miech, Alex Frechette, Hanna Klimczak, Raphael Koster, Junlin Zhang, Stephanie Winkler, Yusuf Aytar, Simon Osindero, Dima Damen, Andrew Zisserman, and João Carreira. 2023. Perception test: A diagnostic benchmark for multimodal video models . Preprint , arXiv:2305.13786.</p>
+</li>
+<li>
+<p>Shuhuai Ren, Linli Yao, Shicheng Li, Xu Sun, and Lu Hou. 2023. Timechat: A time-sensitive multimodal large language model for long video understanding. arXiv preprint arXiv:2312.02051 .</p>
+</li>
+<li>
+<p>Runway Research. 2024. Gen-2: The next step forward for generative ai. <a
+  href="https://research.runwayml"
+    target="_blank"
+  >https://research.runwayml</a>. com/gen2 .</p>
+</li>
+<li>
+<p>Aleksandar Shtedritski, Christian Rupprecht, and Andrea Vedaldi. 2023. What does clip know about a red circle? visual prompt engineering for vlms. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 11987–11997.</p>
+</li>
+<li>
+<p>Enxin Song, Wenhao Chai, Guanhong Wang, Yucheng Zhang, Haoyang Zhou, Feiyang Wu, Xun Guo, Tian Ye, Yan Lu, Jenq-Neng Hwang, et al. 2023. Moviechat: From dense token to sparse memory for long video understanding. arXiv preprint arXiv:2307.16449 .</p>
+</li>
+<li>
+<p>Waqas Sultani, Chen Chen, and Mubarak Shah. 2018. Real-world anomaly detection in surveillance videos. In Proceedings of the IEEE conference on computer vision and pattern recognition, pages 6479–6488.</p>
+</li>
+<li>
+<p>Makarand Tapaswi, Yukun Zhu, Rainer Stiefelhagen, Antonio Torralba, Raquel Urtasun, and Sanja Fidler. 2016. Movieqa: Understanding stories in movies through question-answering . Preprint , arXiv:1512.02902.</p>
+</li>
+<li>
+<p>Jiuniu Wang, Hangjie Yuan, Dayou Chen, Yingya Zhang, Xiang Wang, and Shiwei Zhang. 2023a. Modelscope text-to-video technical report . Preprint , arXiv:2308.06571.</p>
+</li>
+<li>
+<p>Xiang Wang, Shiwei Zhang, Han Zhang, Yu Liu, Yingya Zhang, Changxin Gao, and Nong Sang. 2023b. Videolcm: Video latent consistency model . Preprint , arXiv:2312.09109.</p>
+</li>
+<li>
+<p>Jianwei Yang, Hao Zhang, Feng Li, Xueyan Zou, Chunyuan Li, and Jianfeng Gao. 2023. Set-of-mark prompting unleashes extraordinary visual grounding in gpt-4v. arXiv preprint arXiv:2310.11441 .</p>
+</li>
+<li>
+<p>Shukang Yin, Chaoyou Fu, Sirui Zhao, Ke Li, Xing Sun, Tong Xu, and Enhong Chen. 2024. A survey on multimodal large language models . Preprint , arXiv:2306.13549.</p>
+</li>
+<li>
+<p>Zhou Yu, Dejing Xu, Jun Yu, Ting Yu, Zhou Zhao, Yueting Zhuang, and Dacheng Tao. 2019. Activitynet-qa: A dataset for understanding complex web videos via question answering . Preprint, arXiv:1906.02467.</p>
+</li>
+<li>
+<p>Duzhen Zhang, Yahan Yu, Jiahua Dong, Chenxing Li, Dan Su, Chenhui Chu, and Dong Yu. 2024. Mmllms: Recent advances in multimodal large language models . Preprint, arXiv:2401.13601.</p>
+</li>
+<li>
+<p>Hang Zhang, Xin Li, and Lidong Bing. 2023a. Videollama: An instruction-tuned audio-visual language model for video understanding. arXiv preprint arXiv:2306.02858 .</p>
+</li>
+<li>
+<p>Shilong Zhang, Peize Sun, Shoufa Chen, Min Xiao, Wenqi Shao, Wenwei Zhang, Kai Chen, and Ping Luo. 2023b. Gpt4roi: Instruction tuning large language model on region-of-interest. arXiv preprint arXiv:2307.03601 .</p>
+</li>
+</ul>
+
+<h2 class="relative group">Appendix
+    <div id="appendix" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#appendix" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In the following sections, we provide additional information for the paper: VANE-Bench: Video Anomaly Evaluation Benchmark for Conversational LMMs. The contents are organized in the following order.</p>
+<ul>
+<li>Additional Findings and Results (Appendix A)</li>
+<li>Additional Results on Prediction Inconsistency (Appendix B)</li>
+<li>Importance of Frame Annotation Module (FAM) (Appendix C)</li>
+<li>Implementation Details (Appendix D)</li>
+<li>Distribution of VANE-Bench dataset (Appendix E)</li>
+</ul>
+
+<h2 class="relative group">A Additional Findings and Qualitative Results
+    <div id="a-additional-findings-and-qualitative-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-additional-findings-and-qualitative-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">A.1 Additional Quantitative Results
+    <div id="a1-additional-quantitative-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a1-additional-quantitative-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video-LMMs are fewer in number compared to image-based multi-modal models, which limits the range of options available for evaluation. Given this scarcity, we selected 7 open-source and 2 closedsource LMMs that are currently among the most widely used. To ensure that our benchmark remains representative, we have also included additional results from other latest open-source LMMs: (Ataallah et al. , 2024a , b; Li et al. , 2024a), as shown in Table 2. Our findings reveal that open-source models still lag behind their closed-source counterparts in performance, indicating that simply adding more models wouldn&rsquo;t necessarily improve the overall representativeness of our benchmark. Our selected set, which includes both open-source and closedsource models, is already comprehensive, featuring state-of-the-art models like GPT-4o and Gemini1.5 Pro. Given the limited number of Video-LMMs available, our reliance on this specific set of models is justified, as it accurately represents the current landscape of Video-LMM capabilities.</p>
+
+<h2 class="relative group">A.2 Qualitative Results
+    <div id="a2-qualitative-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a2-qualitative-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In Fig. 8, we showcase the response of both opensource and closed-source Video-LMMs on anomalous video samples from our VANE-benchmark. The query to the Video-LMMs contains the video and a question with multiple options associated</p>
+<p>Table 2: Evaluation results of additional latest Video-LMMs across different types of video samples on the VANE benchmark. We present results for both open-source and closedsource models. The first five rows show results on AIgenerated videos and last three contain results on real world anomaly datasets.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Benchmark Category</th>
+          <th>ry LLaVA-Ne</th>
+          <th>LLaVA-NeXT MiniG</th>
+          <th>MiniGPT4-Video</th>
+          <th>Goldfish</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>SORA</td>
+          <td></td>
+          <td>11.59</td>
+          <td>10.74</td>
+          <td>26.47</td>
+      </tr>
+      <tr>
+          <td>OpenSORA</td>
+          <td></td>
+          <td>18</td>
+          <td>28</td>
+          <td>22</td>
+      </tr>
+      <tr>
+          <td>Runway Gen2</td>
+          <td></td>
+          <td>16</td>
+          <td>4</td>
+          <td>12</td>
+      </tr>
+      <tr>
+          <td>VideoLCM</td>
+          <td></td>
+          <td>10.57</td>
+          <td>17.64</td>
+          <td>18.26</td>
+      </tr>
+      <tr>
+          <td>Modelscope-T2V</td>
+          <td></td>
+          <td>10.41</td>
+          <td>20.83</td>
+          <td>16.66</td>
+      </tr>
+      <tr>
+          <td>UCFCrime</td>
+          <td></td>
+          <td>9.47</td>
+          <td>11.57</td>
+          <td>31.57</td>
+      </tr>
+      <tr>
+          <td>UCSD-Ped1</td>
+          <td></td>
+          <td>16.66</td>
+          <td>13.33</td>
+          <td>40</td>
+      </tr>
+      <tr>
+          <td>UCSD-Ped2</td>
+          <td></td>
+          <td>5.55</td>
+          <td>13.88</td>
+          <td>19.44</td>
+      </tr>
+  </tbody>
+</table>
+<p>with the specific anomaly present in the video. The anomalies in Fig. 8 constitute pass through (first row), unnatural appearance (second row), sudden appearance (third row), disappearance (fourth row) and unnatural transformation (fifth row).</p>
+
+<h2 class="relative group">A.3 VANE-Bench frequent instances
+    <div id="a3-vane-bench-frequent-instances" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a3-vane-bench-frequent-instances" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Figure 7: Frequent keywords: Illustration of the most frequent keywords in the correct option set of VANE benchmark. These keywords signify the objects or human attributes in the videos that are most likely to exhibit anomalous behavior</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000006_448c525df0e58f7c8f169c3782dca7e0004e51a019957fefe678fb527215ec46.png"
+    ></figure>
+<p>Figure 7 presents a word cloud visualization, highlighting the most frequently occurring keywords within the correct option set of the VANEBenchmark dataset. These prominent words are indicative of objects or human attributes in the videos that are most likely to exhibit anomalous behavior. From the figure, the most frequently occurring keyword is &ldquo;Face&rdquo; which indicates that the synthetically generated videos most likely struggle to generate a perfect human face.</p>
+
+<h2 class="relative group">A.4 Additional Discussions on Experimental Results
+    <div id="a4-additional-discussions-on-experimental-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a4-additional-discussions-on-experimental-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Per anomaly performance: To give further insights, Figure 2 (left) of the main paper illustrates the performance of LMMs on each type of anomaly present in the AI-generated videos. We can observe that closed-source models like GPT-4o and Gemini-1.5 Pro consistently exhibit strong performance across all five anomaly categories compared to their open-source counterparts. This likely stems from their access to significantly larger training datasets and model parameters, allowing for a more robust understanding of visual anomalies. Conversely, open-source models exhibit fluctuating performance depending on the anomaly type. We also note that open-source models struggle, especially with the &ldquo;disappearance&rdquo; anomaly. We believe that it might be because of the fact that these models are trained on datasets focusing on the presence of objects and actions, and hence being more biased towards presence. Further, we believe that open-source models suffers from limited temporal reasoning capability and often use short-term mechanisms that limit their ability to track objects over time. The lack of datasets focusing on anomalies like &ldquo;disappearance&rdquo; also limits the model&rsquo;s capability to detect such patterns.</p>
+<p>Higher performance of some LMMs: As seen in Table 1 and Figure 5 of main paper, we notice that some open-source LMMs perform better than their counterparts. For instance, we notice VideoChatGPT achieves higher performance compared to other open-source models. We believe that it might be because of the following two reasons: 1. Training Data: While most open-source models rely solely on web-scraped video captioning data, Video-ChatGPT incorporates a manually annotated video instruction dataset specifically designed for video understanding. This provides the model with a more direct and targeted learning experience, potentially enhancing its sensitivity to anomalies. 2. Two-Stage Training: Video-ChatGPT employs a two-stage training process involving both videolanguage pre-training and instruction tuning. This enables the model to first develop a strong understanding of general video semantics and then refine its ability to follow user instructions and reason about specific events within videos.</p>
+
+<h2 class="relative group">B Additional results on Prediction inconsistency
+    <div id="b-additional-results-on-prediction-inconsistency" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b-additional-results-on-prediction-inconsistency" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>As discussed in section 4.2 almost all Video-LMMs generate different results when prompted to answer the same query rephrased multiple times. While it is most common in open-source Video-LMMs, we found that closed-source Video-LMMs occasionally suffer from this problem as well. Fig. 9 illustrates additional sample examples where the same questions (phrased slightly differently) were posed twice to the corresponding Video-LMMs, yielding different responses.</p>
+<p>We find that, in the majority of cases, opensource Video-LMMs generate different results when prompted to answer the same query multiple times. Fig. 6 illustrates a sample example where the same questions were posed twice to the corresponding Video-LMMs, yielding different responses. In some instances, the answers generated by the Video-LMMs in both rounds were dissimilar and incorrect. However, we also found cases where Video-LMMs initially produced the correct answer, followed by an incorrect answer to the same query, albeit phrased slightly differently. This suggests that the majority of these opensource Video-LMMs struggle to comprehend the same query when presented in a different manner, leading to inconsistent and paradoxical predictions. In contrast, closed-source Video-LMMs are less prone to such inconsistent predictions and consistently produce the same output for the same queries, regardless of how they are phrased, indicating a superior comprehension of language.</p>
+
+<h2 class="relative group">C Importance of Frame annotation module
+    <div id="c-importance-of-frame-annotation-module" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c-importance-of-frame-annotation-module" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Since the video inconsistencies present in state of the art AI models like SORA are quite subtle, and hard to detect, our Frame Annotation Module (FAM) ensures that we are able to generate highquality and accurate captions for these videos. As shown in Fig. 10, without FAM, the generated caption is not able to describe the sudden appearance of the kangaroo&rsquo;s right foot near its tail. Further, the caption generated without our FAM is also not able to describe the extra set of paws that appear suddenly from the legs of the cat. Thus, FAM plays an important role in curating high-quality and accurate video captions.</p>
+
+<h2 class="relative group">D Implementation Details
+    <div id="d-implementation-details" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d-implementation-details" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We use the official code of each open-source VideoLMM for evaluation. Each of these codes are implemented in pytorch framework. We evaluate each one of them on a single NVIDIA A100 40GB GPU. For closed source Video-LMMs, we use their respective API for evaluation. We use GPT-4o (OpenAI , 2024) as our LMM to generate the captions and the final QA pairs in VANE-Bench. Next, we describe the prompts used in our Caption Generation Module (CGM), Question Answer Generation Module (QAGM), and in evaluating various Video-LMMs on VANE-Bench in the subsequent subsections.</p>
+
+<h2 class="relative group">D.1 Caption Generation Module (CGM)
+    <div id="d1-caption-generation-module-cgm" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d1-caption-generation-module-cgm" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>System Prompt: You are a helpful and intelligent AI assistant which can generate informative captions for a given input of 10 consecutive images/frames from a video. The video is generated from an AI text-to-video diffusion model and has some obvious inconsistencies or anomalies in the form of various deformations, unrealistic physical transformations, unnatural appearance of objects, human faces, body parts, or sudden appearance, disappearance, or merging of objects. Your task is to generate a descriptive caption for the given input video, highlighting the inconsistencies or anomalies present in the video.</p>
+<p>Text Prompt: Please generate a detailed caption which describes all the given frames. Some of the frames may contain inconsistencies which are annotated with a green bounding box around them with the type/name of the inconsistency. Your generated caption should capture the details of the entire video, while also describing all the inconsistencies. Thus, properly look at all the given frames and the region marked by the green bounding boxes when describing the inconsistencies. Further, make sure to mention specific details about each of the inconsistencies, and mention the exact names of the inconsistencies from the marked green bounding box. Also, while describing the inconsistency please be as specific and detailed as possible, don&rsquo;t be vague or general about the inconsistency. The reader of the caption should perfectly understand what inconsistencies/anomalies are in the video and what the video is about. Do not mention the green bounding box in your response; it is only for you to identify the inconsistencies. Make sure to describe all the inconsistencies in your caption. Do not ana- lyze the impact of the inconsistencies; you should only describe them. There is no need to mention when the inconsistencies start or end, just describe them.</p>
+
+<h2 class="relative group">D.2 Question Answer Generation Module (QAGM)
+    <div id="d2-question-answer-generation-module-qagm" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d2-question-answer-generation-module-qagm" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>System Prompt: You are a helpful and intelligent AI assistant which can curate high-quality and challenging question and their corresponding answers, which are used to test the video understanding capabilities of an multi-modal LLM model capable of taking videos as their inputs.</p>
+<p>Text Prompt: You are given a video input, which is generated by a state-of-the-art AI algorithm. Thus, these videos look very natural and almost realistic, but they are actually synthetic and generated by an AI algorithm. The videos may have some inconsistencies or anomalies present in them, which are generally localized to only a specific location in the video as identified by the green bounding boxes in the video. The rest of the video appears completely natural or realistic. This specific inconsistency may last for only a few frames of the video or may last for the entire video itself. The inconsistency or anomalies in the video are generally events and phenomena which is not observed in real-world and physical scenarios. You will also be given a caption as input that describes the video, along with the specific inconsistency present in the video. Based on the given video and caption input, your task is to formulate 3 diverse and misleading questions to test whether the multi-modal LLM model can correctly identify the options based on the inconsistencies present in the video or not. So, your generated questions should give the model few options to choose from to make its answer, and these options should be of high quality and also have misleading choices so that you can test deeper level of understanding of these multi-modal LLM models. Thus, the goal of these questions is to accurately assess the multi-modal LLM&rsquo;s ability to accurately identify the inconsistencies present in the video. Generate questions that comprise both interrogative and declarative sentences, utilizing different language styles, and provide an explanation for each. Your response should be presented as a list of dictionary strings with keys &lsquo;Q&rsquo; for questions and &lsquo;A&rsquo; for the answer. Follow these rules while generating question and answers:</p>
+<ol>
+<li>Do not provide answers in the question itself. For example, the ground-truth attribute or compo-</li>
+</ol>
+<p>nent that makes the video scene unusual should never be mentioned in the question itself.</p>
+<ol start="2">
+<li>Ensure the questions are concrete and specific, and not vague or ambiguous.</li>
+<li>The questions should be formed based on your deep understanding of the video and the caption. Thus, properly read the caption and look at the given video to generate the questions.</li>
+<li>The questions should only pertain to the inconsistencies present in the video, and not about the video in general.</li>
+<li>You may also ask the model some misleading questions talking about non-existent inconsistencies in the video, to test the model&rsquo;s ability to differentiate between real and fake inconsistencies.</li>
+<li>Do not ask vague questions, and the answer should only contain one of the correct option mentioned in the question.</li>
+<li>In your question itself you must provide multiple choice options for the answer, and the answer should be one of the options provided in the question. Please ensure you provide option choices and their corresponding letters in the question itself.</li>
+<li>In your answer, only mention the correct option letter from the question. Make sure that the correct option letter is not always the same, and randomly shuffle the correct option letter for each question.</li>
+<li>You must only follow the below output format and strictly must not output any other extra information or text. Your output format should be strictly as follows, without any additional information or text:</li>
+</ol>
+<p>[&ldquo;Q&rdquo;: &lsquo;first question A) &lt;option1&gt; B) &lt;option2&gt; C) &lt;option3&gt; D) &lt;option4&gt;&rsquo;, &ldquo;A&rdquo;: &lsquo;Pick the correct option letter from A) B) C) D)&rsquo;, &ldquo;Q&rdquo;: &lsquo;second question A) &lt;option1&gt; B) &lt;option2&gt; C) &lt;option3&gt; D) &lt;option4&gt;&rsquo;, &ldquo;A&rdquo;: &lsquo;Pick the correct option letter from A) B) C) D)&rsquo;, &hellip; }]</p>
+<p>Given below is the caption input which describes the given video along with the specific inconsistency present in the video. The caption is: {caption}</p>
+
+<h2 class="relative group">D.3 Evaluating Video-LMMs
+    <div id="d3-evaluating-video-lmms" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d3-evaluating-video-lmms" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>System Prompt: You are a helpful and intelligent multi-modal AI assistant, capable of performing visual question-answering (VQA) tasks. You will be given as input 10 consecutive frames from a video, and a corresponding question related to the video, you have to answer the given question after analyzing and understanding the given input video.</p>
+<p>The question itself will present you with 4 lettered options like A) B) C) D), your task is to only output single letter corresponding to the correct answer (i.e. string literal &lsquo;A&rsquo;, &lsquo;B&rsquo;, &lsquo;C&rsquo;, or &lsquo;D&rsquo;), and you should not output anything else.</p>
+<p>Text Prompt: {question}</p>
+
+<h2 class="relative group">E Distribution of VANE-Bench dataset
+    <div id="e-distribution-of-vane-bench-dataset" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#e-distribution-of-vane-bench-dataset" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>How to view the dataset? The dataset alongside metadata will be hosted on the Hugging Face platform for download post acceptance of the paper. Users can directly load the dataset using Hugging Face Datasets library or download the zip file in the same Hugging Face repository. All instructions and code files to reproduce the experiments of the paper will be provided in a github repository.</p>
+<p>How will the dataset be distributed? The dataset will be distributed to the public using the Hugging Face Dataset Hub. We have publicly released the codebase alongside instructions to reproduce and evaluate models on GitHub.</p>
+<p>Dataset License. This work and dataset is licensed under a Creative Commons AttributionNonCommercial-ShareAlike 4.0 International License. The videos in the VANE-Bench dataset are collected from publicly available sources and existing real-world datasets and are for academic research use only. The video generative models used to synthesize data samples in our VANE-Bench benchmark are open to use publicly and do not pose any privacy concerns as the persons or objects present in the generated videos are synthetic and do not exist in the real world. The real-world surveillance datasets - UCFCrime (Sultani et al. , 2018), UCSD Pedestrian (Li et al. , 2014), Avenue (Lu et al. , 2013); on the other hand, used in our work are all existing well-known and publicly available datasets that are released under open-source licenses. Thus, the original creators of these datasets have collected the data after taking informed consent from the stakeholders. By using VANE-Bench, you agree not to use the dataset for any harm or unfair discrimination. Please note that the data in this dataset may be subject to other agreements. Video copyrights belong to the original dataset providers, video creators, or platforms.</p>
+<p>Figure 8: Qualitative examples: Figure shows the response of Video-LMMs to the VQA task of detecting anomalies in the video. The correct answer is written in bold in the user query. We find that majority of Video-LMMs struggle to answer the questions correctly.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000007_64b278f7dac8b6907f9d322cf5b5178b191ee12da90ca43a7b3f96b9ad824869.png"
+    ></figure>
+<p>Figure 9: Prediction Inconsistency: Figure shows the response of Video-LMMs to the VQA task of detecting anomalies in the video. The correct answer is written in bold in the user query. We find that the majority of Video-LMMs struggle to answer the questions correctly.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000008_28c9d07ad6ce366623605441d6606ccfc8401ef4b3105593d6ecb483730096c2.png"
+    ></figure>
+<p>Figure 10: Example showcasing the importance of our Frame Annotation Module (FAM). We note that without FAM, the LMM responsible for generating the captions is not able to identify or describe the accurate anomaly present in the video. However, by providing the bounding box annotation for the inconsistency, we are able to ensure that the generated caption accurately describes the anomaly in the video.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000009_dfa1b48eb672212dae689e6b2e4db59b8dc56e2fef38aca1c99e9faea82f924c.png"
+    ></figure>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_papers/Vane-bench Video anomaly evaluation.md"
+          data-oid-likes="likes_papers/Vane-bench Video anomaly evaluation.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/vau-r1-advancing-video-anomaly-understanding-via-reinforcement-fine-tuning/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/vadsk-video-anomaly-detection-with-structured/">
+              <span class="leading-6">
+                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-24 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+      
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 overflow-x-auto py-2">
+        <ul class="flex list-none flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 me-4">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

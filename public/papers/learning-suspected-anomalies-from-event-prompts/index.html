@@ -1,0 +1,1815 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title> &middot; Blowfish</title>
+    <meta name="title" content=" &middot; Blowfish">
+  
+
+  
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/papers/learning-suspected-anomalies-from-event-prompts/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/papers/learning-suspected-anomalies-from-event-prompts/">
+  <meta property="og:site_name" content="Blowfish">
+  <meta property="og:title" content="Blowfish">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blowfish">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.7946532fa78157bafb1b4340d4074792811f18177af35790b3a0cb90566ce1cda3edd782eb92e134849964d14b6d9185c9d4ded2a12dcf5b706cb6a275c0cce0.css"
+    integrity="sha512-eUZTL6eBV7r7G0NA1AdHkoEfGBd681eQs6DLkFZs4c2j7deC65LhNISZZNFLbZGFydTe0qEtz1twbLaidcDM4A==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.9df4fc14d50efcc9aa4cfc2b6f348e365f421f5ad491278f8f48c0360cf2f93f08882fda6da162d7ace8e5add57c2df4ac46bd3861306b1d4c452cd31f448d64.js"
+      integrity="sha512-nfT8FNUO/MmqTPwrbzSONl9CH1rUkSePj0jANgzy&#43;T8IiC/abaFi16zo5a3VfC30rEa9OGEwax1MRSzTH0SNZA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Papers",
+    "name": "",
+    "headline": "",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/papers\/learning-suspected-anomalies-from-event-prompts\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "7289"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          Blowfish
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/papers/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="papers"
+  title="Papers">
+  
+  
+    <p class="text-base font-medium">
+      papers
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/test/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="test"
+  title="Tests">
+  
+  
+    <p class="text-base font-medium">
+      test
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href=""
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  
+  title="">
+  
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/papers/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="papers"
+    title="Papers">
+    
+    
+      <p class="text-bg font-bg">
+        papers
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/test/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="test"
+    title="Tests">
+    
+    
+      <p class="text-bg font-bg">
+        test
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    
+    title="">
+    
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>7289 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">35 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Learning Suspected Anomalies from Event Prompts for Video Anomaly Detection
+    <div id="learning-suspected-anomalies-from-event-prompts-for-video-anomaly-detection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#learning-suspected-anomalies-from-event-prompts-for-video-anomaly-detection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Chenchen Tao ∗ , Xiaohao Peng ∗ , Chong Wang R , Member, IEEE, Jiafei Wu, Puning Zhao, Jun Wang, Jiangbo Qian</p>
+<p>Abstract—Most models for weakly supervised video anomaly detection (WS-VAD) rely on multiple instance learning, aiming to distinguish normal and abnormal snippets without specifying the type of anomaly. However, the ambiguous nature of anomaly definitions across contexts may introduce inaccuracy in discriminating abnormal and normal events. To show the model what is anomalous, a novel framework is proposed to guide the learning of suspected anomalies from event prompts. Given a textual prompt dictionary of potential anomaly events and the captions generated from anomaly videos, the semantic anomaly similarity between them could be calculated to identify the suspected events for each video snippet. It enables a new multi-prompt learning process to constrain the visual-semantic features across all videos, as well as provides a new way to label pseudo anomalies for self-training. To demonstrate its effectiveness, comprehensive experiments and detailed ablation studies are conducted on four datasets, namely XD-Violence, UCF-Crime, TAD, and ShanghaiTech. Our proposed model outperforms most state-of-the-art methods in terms of AP or AUC (86.5%, 90.4%, 94.4%, and 97.4%). Furthermore, it shows promising performance in openset and cross-dataset cases. The data, code, and models can be found at: <a
+  href="https://github.com/shiwoaz/lap"
+    target="_blank"
+  >https://github.com/shiwoaz/lap</a>.</p>
+<p>Index Terms—Weakly Supervised, Video Anomaly Detection, Event Prompt, Multiple Instanse Learning.</p>
+
+<h2 class="relative group">I. INTRODUCTION
+    <div id="i-introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#i-introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>V IDEO anomaly detection (VAD) [1], [2], [3] is crucial in video surveillance, given the extensive use of surveillance cameras. The task of VAD is to determine whether each frame in a video is normal or abnormal, which poses a significant challenge as it is not feasible to train a model with complete supervision. Consequently, weakly supervised learning methods (WS-VAD) [4], [5], [6] that solely rely on video-level annotations have gained importance and popularity in recent years.</p>
+<p>The general paradigm of these methods involves utilizing convolutional networks such as 3D ConvNet (C3D) [7], inflated 3D ConvNet (I3D) [8], or vision transformer [9] to extract visual features and aggregate spatio-temporal information between consecutive frames. Subsequently, an anomalydetection network is trained using multiple instance learning (MIL) [10]. This approach simultaneously maximizes and minimizes the top-k highest scores from individual anomaly and normal videos, respectively. Most methods [10], [11] only focused on the visual-related modality, while some [12], [13] have incorporated semantic descriptions into videos. However,</p>
+<p>∗ These authors contributed equally to this work and should be considered co-first authors.</p>
+<p>R Corresponding Author: Chong Wang.</p>
+<p>Fig. 1. The difference between the traditional multiple instance learning methods (upper) and our model (lower). The former one only learns the anomalies using top-k scores in each abnormal video, while the latter utilizes a prompt dictionary to provide extra guidance across different videos.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000000_f0b78b61f2d1a554478a7aaa07669acb8581343eb089e613837715a1f37b89fc.png"
+    ></figure>
+<p>such semantic information was simply fused with the visual one, instead of delving into the underlying meaning of the textual descriptions. As a result, the MIL based approaches often suffer from a relatively high false alarm rate (FAR) and low accuracy in detecting ambiguous abnormal events.</p>
+<p>Meanwhile, foundation models in natural language processing (NLP) and computer vision (CV), such as InstructGPT [14] and CLIP [15], have demonstrated impressive performance on multimodal tasks. Additionally, prompting techniques in the image field provide a new way to transfer semantic information from well-trained foundation models into vision tasks. It is intriguing to explore whether CLIP&rsquo;s zero-shot detection ability can be effectively transferred into video anomaly detection.</p>
+<p>Therefore, a novel framework to Learn suspected Anomalies from event Prompts, called LAP, is proposed in this paper. As illustrated in Figure 1, a prompt dictionary is designed to list the potential anomaly events. In order to mark suspected anomalies, it is utilized to compare with the captions generated from anomaly videos in the form of semantic features. As a result, an anomaly vector that records the most suspected anomalous events for each video snippet can be obtained. This vector is used to guide a new multi-prompt learning scheme across different videos, as well as form a new set of pseudo anomaly labels.</p>
+<p>The main contributions of this work are threefold:</p>
+<ul>
+<li>
+<p>The new textual prompts describing the abnormal events are introduced into weakly supervised video anomaly detection. Giving the explanation of what is anomalous, the score predictor can implicitly learn more details about</p>
+</li>
+<li>
+<p>the anomalies. It leads to incredible performance on openset and cross-database problems.</p>
+</li>
+<li>
+<p>A new multi-prompt learning strategy is proposed to provide an overall understanding of normal and abnormal patterns across different videos, while MIL is limited to individual videos.</p>
+</li>
+<li>
+<p>Additional pseudo labels are excavated from the anomaly videos according to the semantic similarity between the event prompts and videos. They are utilized to train the predictor effectively in a self-supervised manner.</p>
+</li>
+</ul>
+
+<h2 class="relative group">II. RELATED WORKS
+    <div id="ii-related-works" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ii-related-works" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">A. Weakly Supervised Video Anomaly Detection
+    <div id="a-weakly-supervised-video-anomaly-detection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-weakly-supervised-video-anomaly-detection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The weakly supervised methods tackle frame-level anomaly detection by video-level annotations. Most of them are based primarily on multiple instance learning (MIL) due to limited annotated labels [10]. However, conventional MIL faces challenges in providing sufficient supervision for various anomalies, leading to misclassifications and a high false alarm rate. To address these issues, Yu et al. propose cross-epoch learning (XEL) [4], which stores hard instances from previous epochs to optimize the anomaly predictor in the latest epoch. Additionally, dual memory units with uncertainty regulation (URDMU) [16] extend the anomaly memory unit into learnable dual memory units to alleviate the high false alarm rate issue. Another approach called robust temporal feature magnitude learning (RTFM) [11] trains a feature magnitude learning function to effectively recognize positive instances. All these methods are based on single or multiple visual modalities, including RGB and optical flow.</p>
+<p>As the field embraces multi-modality models like GPT [14] and CLIP [15], researchers are now focusing on text-visual models. Text-empowered video anomaly detection (TEVAD) [12] demonstrates improvements by generating text and visual features independently. However, TEVAD treats text features as auxiliary to visual features. In contrast, our approach aims to capitalize on the high semantic-level guidance provided by text, offering a unique perspective for enhancing anomaly detection performance.</p>
+
+<h2 class="relative group">B. Prompt Tuning for Visual Tasks
+    <div id="b-prompt-tuning-for-visual-tasks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b-prompt-tuning-for-visual-tasks" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In the realm of pre-trained foundation multimodality models, a cost-effective prompt tuning approach is gaining traction for adapting models to downstream tasks in the domains of natural language processing (NLP) [17], [18] and computer vision [19].</p>
+<p>The concept of prompt tuning originated in computer vision to tackle zero-shot or few-shot image tasks by incorporating semantic guidance. Multimodal models such as CLIP [15] leverage textual prompts for image classification, demonstrating state-of-the-art performance. In the video domain, Sato [20] explores prompt tuning for zero-shot anomaly action recognition, using skeleton features and text embeddings in a shared space to refine decision boundaries. Wang et al. introduce prompt learning for action recognition (PLAR) [21], which incorporates optical flow and learnable prompts to acquire input-invariant knowledge from a prompt expert dictionary and input-specific knowledge based on the data.</p>
+<p>A previous effort, the prompt-based feature mapping framework (PFMF) [22], applies prompt-based learning to semisupervised video anomaly detection. PFMF generates anomaly prompts by concatenating anomaly vectors from virtual datasets and scene vectors from real datasets, guiding the feature mapping network. However, the prompt in PFMF defines anomalies at the visual level, introducing ambiguity. In our work, we propose textual anomaly prompts based on prior knowledge to mine fine-grained anomalies to achieve high performance.</p>
+<p>Several recent studies have introduced additional information or tasks to maximize the CLIP&rsquo;s effectiveness in WSVAD. CLIP-assisted temporal self-attention (CLIP-TSA) [23] incorporates temporal information into CLIP features using a self-attention mechanism. In contrast, VadCLIP [13] delves deeper into aligning textual category labels with CLIP&rsquo;s visual features to enhance its WS-VAD performance. Unlike VadCLIP, which constructs learnable prompts based on class labels, our approach designs event prompts to describe specific anomaly-related situations, eliminating the need for additional supervised information or learning tasks.</p>
+
+<h2 class="relative group">III. METHODOLOGY
+    <div id="iii-methodology" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#iii-methodology" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The proposed LAP framework, as shown in Figure 2, is built upon the basic VAD structure consisting of a visual feature extractor and a score predictor. To enhance discrimination between normal and abnormal videos, semantic clues from anomaly events are integrated using a prompt dictionary and an additional semantic feature extractor. This integration introduces three key processes: feature synthesis, multi-prompt learning, and pseudo anomaly labeling. Semantic features are extracted from videos and fused with visual features, enriching the overall representation. Simultaneously, anomaly prompts, describing abnormal events, are employed to generate another set of semantic features. An anomaly similarity matrix is then computed between these two semantic feature sets. This matrix identifies the most anomalous features corresponding to each prompt in the dictionary. This batch-level anomaly vector not only facilitates a new multi-prompt learning procedure but also acts as a set of snippet-level pseudo labels. The subsequent subsections delve into the specifics of these procedures.</p>
+
+<h2 class="relative group">A. Feature Synthesis
+    <div id="a-feature-synthesis" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-feature-synthesis" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Following the protocol of WS-VAD [24], we adopt a training approach using pairwise normal and abnormal data. Each training batch comprises an abnormal bag and a normal bag, consisting of b abnormal and normal videos with labels y a = 1 ∈ R b×1 and y n = 0 ∈ R b×1 , respectively. In this setup, every video is divided into L snippets, each containing 16 consecutive frames. Consequently, the total number of snippets in each bag is N = b × L. All of these snippets are then processed by the visual and semantic feature extractors.</p>
+<p>To clarify, we acquire the visual features V a ∈ R N×d v and V n ∈ R N×d v from video snippets in the abnormal and normal bags, utilizing the visual encoder of a CLIP model [15]. Given</p>
+<p>Fig. 2. The overview of the proposed LAP framework. Synthetic features, as input to score predictors, are generated through the visual and semantic feature extractors. A prompt dictionary is used to produce the anomaly matrix and vector, which is employed to perform multi-prompt learning (MPL) and pseudo anomaly labeling (PAL) across different videos.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000001_35711b94eb911e1cca2cfc6cb62db70a209da23bf7429162fbe84a791b71e93f.png"
+    ></figure>
+<p>that many VAD videos, primarily from surveillance, often lack associated text descriptions, we leverage a pre-trained visualto-text encoder from SwinBERT [25], following TEVAD [12], to generate descriptions for each video snippet. These textual descriptions then undergo processing by the semantic feature extractor (SimCSE [26]), producing corresponding semantic features T a ∈ R N×d t and T n ∈ R N×d t for abnormal and normal video snippets. With extracted visual features and semantic features in hand, we feed these features into a multiscale temporal network (MTN) to obtain both local and global temporal fused features.</p>
+<p>Intuitively, a combination of visual and semantic features is employed to synthesize new features F a ∈ R N×df and F n ∈ R N×df , aiming for an enhanced feature representation,</p>
+<!-- formula-not-decoded -->
+<!-- formula-not-decoded -->
+<p>where θ symbolizes a feature alignment and fusion operation. It can be either a concatenation or addition. Subsequently, the anomaly scores s a and s n can be calculated by applying F a and F n to a score predictor. Typically, this predictor takes the form of a multi-layer perceptron (MLP) [27], expressed as:</p>
+<!-- formula-not-decoded -->
+<!-- formula-not-decoded -->
+
+<h2 class="relative group">B. Multi-Prompt Learning
+    <div id="b-multi-prompt-learning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b-multi-prompt-learning" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In recent WS-VAD, the prevalent approach for training the anomaly score predictor involves a multiple instance learning (MIL) framework [12], [28]. This framework selects the top-k highest anomaly scores from each video, whether abnormal or normal and employs their average ˆ ˆy as the predicted value for the respective video. Given the complete score set s = [s a ;sn] ∈ R 2N×1 ,</p>
+<!-- formula-not-decoded -->
+<p>where maxk(s) denotes the operator to select k largest values from vector s , k is usually from 2 to 5, i and j indicate the snippet and video indices, respectively. Then the MIL loss L MIL is formulated as,</p>
+<!-- formula-not-decoded -->
+<p>From Equation 5, it can be seen that the top-k strategy focuses only on a few snippets with the highest scores within an individual video. Moreover, the top anomaly scores in an abnormal video may not be from an abnormal snippet. Therefore, a new textual prompt dictionary consisting of P anomaly prompts is designed to link abnormal video snippets from different videos. Unlike the category annotations used in VadCLIP [13], we expanded the single word annotations into complete anomaly sentences, like &ldquo;someone is doing something to whom&rdquo; or &ldquo;something is what&rdquo;. These sentences can better describe the events/actions related to a certain anomaly category. Then, the prompt dictionary is constructed as a set of these anomaly sentences, e.g. &ldquo;A man is shooting a gun&rdquo; or &ldquo;Something is on fire&rdquo;. As depicted in Figure 2, these prompts undergo the same semantic extraction process (SimCSE [26]) as the earlier video captions, generating their respective semantic features M ∈ R P ×d t . Subsequently, we calculate the similarity between each prompt in the dictionary</p>
+<p>Fig. 3. Visualization of the proposed anomaly matrix Ψ ⊤ . It is truncated due to the limited column width.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000002_93ab115d690a36afe995ddce752a2d89c124809976676596903a479cfb34733d.png"
+    ></figure>
+<p>and every snippet in T a to construct an anomaly matrix Ψ ∈ R N×P as,</p>
+<!-- formula-not-decoded -->
+<p>in which || · || denotes the l 2 -norm. The consideration of T n is dismissed here since there are no abnormal snippets in the normal bag. In essence, each element in Ψ provides insights into the probable type of anomaly associated with each snippet or indicates where a predetermined abnormal event might occur. Figure 3 offers a visual representation of Ψ, where frames containing abnormal events exhibit more pronounced colors. Notably, there is a discernible alignment between the frames and prompts.</p>
+<p>In order to exploit the anomaly features across different videos, the most likely anomalous event of each snippet, i.e. the highest values in each row of Ψ, is picked to construct a new anomaly vector c ∈ R N×1 .</p>
+<p>To leverage these potential anomaly samples, we introduce a novel multi-prompt learning strategy. Based on the predicted score s and the anomaly vector c, all features in F n and F a are categorized into three sets: anchor set, positive set, and negative set. Subsequently, their averages are computed, denoted as fa fanc, fp fpos , and fn fneg . It&rsquo;s important to note that fa fanc and fp fpos model the normal features in normal and abnormal videos, respectively, and can be expressed as,</p>
+<!-- formula-not-decoded -->
+<!-- formula-not-decoded -->
+<p>where argmin P (s) denotes the operator to obtain the indices of P lowest values in vector s , F n [i, :] and F a [i, :] are the i-th row of F n and F a , respectively, which is a synthetic feature vector to represent a certain video snippet. In contrast, the negative set is built by choosing the most anomalous samples in anomaly videos, according to the similarity values in c . Thus the feature fn fneg can be formulated as,</p>
+<!-- formula-not-decoded -->
+<p>where argmax P (c) denotes the operator to obtain the indices of P largest values in vector c .</p>
+<p>Based on these representative features, it is possible to provide an overall understanding of normal and abnormal patterns across different videos. Thus, the multi-prompt learning loss L MPL is defined in a form of triplet loss,</p>
+<!-- formula-not-decoded -->
+<p>where α represents the margin coefficient. The goal of LMPL is to establish a considerable distance between fn fneg and both fa fanc and fp fpos while simultaneously bringing fa fanc and fp fpos closer together. This feature-level examination implicitly impacts the training of the score predictor, given that the selection of fa fanc and fp fpos is based on s .</p>
+
+<h2 class="relative group">C. Pseudo Anomaly Labeling
+    <div id="c-pseudo-anomaly-labeling" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c-pseudo-anomaly-labeling" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In addition to constructing the negative set in MPL, the anomaly vector c serves as a metric for pseudo-labels, enabling the extraction of more latent information in the anomaly bag T a . Specifically, the snippet-level pseudo-anomaly label p is determined by a dynamic threshold within the current batch,</p>
+<!-- formula-not-decoded -->
+<!-- formula-not-decoded -->
+<p>where p[i] and c[i] are the i-th element of p and c, mean{c} and std{c} are the mean and standard deviation considering the anomaly vector c, and τ is a hyper-parameter. Then, the anomaly score predictor can be trained in a fully supervised manner, through a pseudo anomaly loss LPAL ,</p>
+<!-- formula-not-decoded -->
+<p>By incorporating prior knowledge into the pseudo label, the PAL module can better distinguish fine-grained anomalies and generate more accurate detecting results across abnormal videos.</p>
+<p>TABLE I PERFORMANCE COMPARISON OF STATE -OF -THE -ART METHODS ON XD-VIOLENCE (AP%) AND UCF-CRIME (AUC%). BOLD AND UNDERLINE INDICATE THE BEST AND SECOND -BEST RESULTS .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Source</th>
+          <th>Method</th>
+          <th>Feat.</th>
+          <th>XD</th>
+          <th>UCF UC AUC</th>
+          <th>UCF UC AUC</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Typ</td>
+          <td>Source</td>
+          <td>Method</td>
+          <td>Feat.</td>
+          <td>AP</td>
+          <td>AUC  all</td>
+          <td>AUC abn</td>
+      </tr>
+      <tr>
+          <td>emi</td>
+          <td>CVPR 16’</td>
+          <td>Conv-AE [29]</td>
+          <td>AE</td>
+          <td>30.7</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>Sem</td>
+          <td>CVPR 22’</td>
+          <td>GCL [30]</td>
+          <td>CNN</td>
+          <td>-</td>
+          <td>71.0</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>y</td>
+          <td>ICCV 21’</td>
+          <td>RTFM [11]</td>
+          <td>CLIP</td>
+          <td>78.3</td>
+          <td>85.7</td>
+          <td>63.9</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>AAAI 22’</td>
+          <td>MSL [31]</td>
+          <td>ViT</td>
+          <td>78.6</td>
+          <td>85.6</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>ECCV 22’</td>
+          <td>CSL-TAL [32]</td>
+          <td>I3D</td>
+          <td>71.7</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>CVPR 22’</td>
+          <td>BN-SVP [33]</td>
+          <td>I3D</td>
+          <td>-</td>
+          <td>83.4</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>CSVT 23’</td>
+          <td>Yang [34]</td>
+          <td>I3D</td>
+          <td>77.7</td>
+          <td>81.5</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>kly</td>
+          <td>AAAI 23’</td>
+          <td>UR-DMU [16]</td>
+          <td>CLIP</td>
+          <td>82.4</td>
+          <td>86.7</td>
+          <td>68.6</td>
+      </tr>
+      <tr>
+          <td>Weak</td>
+          <td>CVPR 23’</td>
+          <td>ECUPL [35]</td>
+          <td>I3D</td>
+          <td>81.4</td>
+          <td>86.2</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>We</td>
+          <td>CVPR 23’</td>
+          <td>CMRL [36]</td>
+          <td>I3D</td>
+          <td>81.3</td>
+          <td>86.1</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>CVPR 23’</td>
+          <td>TEVAD [12]</td>
+          <td>I3D</td>
+          <td>79.8</td>
+          <td>84.9</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>AAAI 23’</td>
+          <td>MGFN [37]</td>
+          <td>ViT</td>
+          <td>80.1</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>CVPR 23’</td>
+          <td>UMIL [28]</td>
+          <td>XCLIP</td>
+          <td>-</td>
+          <td>86.7</td>
+          <td>68.7</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>ICIP 23’</td>
+          <td>CLIP-TSA [23]</td>
+          <td>CLIP</td>
+          <td>82.2</td>
+          <td>87.6</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>CVPR 24’</td>
+          <td>Wu et al. [38]</td>
+          <td>CLIP</td>
+          <td>66.5</td>
+          <td>86.4</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>AAAI 24’</td>
+          <td>VadCLIP [13]</td>
+          <td>CLIP</td>
+          <td>84.5</td>
+          <td>88.0</td>
+          <td>70.2</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>ours</td>
+          <td>LAP</td>
+          <td>CLIP (SwinBert) CLIP (CA)</td>
+          <td>86.5</td>
+          <td>88.9</td>
+          <td>73.0</td>
+      </tr>
+  </tbody>
+</table>
+<p>The final training loss LLAP can be denoted as,</p>
+<!-- formula-not-decoded -->
+<p>where β and γ are hyper-parameters utilized in our model. Importantly, it&rsquo;s worth noting that the MPL and PAL modules are trained collaboratively. During the inference stage, the test samples will only traverse the feature extractors and the predictor to acquire abnormal scores, and the MPL and PAL modules incur no additional computational cost.</p>
+
+<h2 class="relative group">D. Inference Process
+    <div id="d-inference-process" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d-inference-process" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The inference process is identical to the baseline model, i.e. TEVAD [12], which is the left part of Figure 2 without the prompt dictionary. We initially extract visual and text features, which are processed through the feature alignment and fusion operation. Then, the fused features are fed into the anomaly predictor to calculate the anomaly score for each video snippet.</p>
+
+<h2 class="relative group">IV. EXPERIMENTS
+    <div id="iv-experiments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#iv-experiments" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this section, the performance of our LAP model is evaluated on four datasets, namely XD-Violence [39], UCFCrime [10], TAD [40] and ShanghaiTech [41]. The area under the precision-recall curve, also known as the average precision (AP) is employed as the evaluation metric for XD-Violence following the protocol in [35]. For UCF-Crime, TAD and ShanghaiTech, the area under the curve (AUC) of the framelevel receiver operating characteristics (ROC) is used instead. Specifically, AUCall represents the AUC for all testing videos, while AUCabn focuses only on abnormal videos in test set. The</p>
+<p>TABLE II PERFORMANCE COMPARISON OF STATE -OF -THE -ART METHODS ON TAD (AUC%) AND SHANGHAITECH (AUC%). BOLD AND UNDERLINE INDICATE THE BEST AND SECOND -BEST RESULTS .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Source</th>
+          <th>Method</th>
+          <th>Feat.</th>
+          <th>TAD  AUC</th>
+          <th>ST AUC</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>T</td>
+          <td>Source</td>
+          <td>Method</td>
+          <td>Feat.</td>
+          <td>TAD  AUC</td>
+          <td>ST AUC</td>
+      </tr>
+      <tr>
+          <td>mi</td>
+          <td>ICCV 17’</td>
+          <td>Luo et al. [43]</td>
+          <td>-</td>
+          <td>57.9</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>Sem</td>
+          <td>CVPR 18’</td>
+          <td>Liu et al. [44]</td>
+          <td>-</td>
+          <td>69.1</td>
+          <td>72.8</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>CVPR 21’</td>
+          <td>MIST [45]</td>
+          <td>UNet</td>
+          <td>89.2</td>
+          <td>94.8</td>
+      </tr>
+      <tr>
+          <td>ICCV 21’</td>
+          <td>ICCV 21’</td>
+          <td>RTFM [11]</td>
+          <td>I3D</td>
+          <td>89.6</td>
+          <td>97.2</td>
+      </tr>
+      <tr>
+          <td>TIP 2</td>
+          <td>P 21’ W</td>
+          <td>WSAL [40]</td>
+          <td>I3D</td>
+          <td>89.6</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>CVPR 2</td>
+          <td>CVPR 23’</td>
+          <td>ECUPL [35]</td>
+          <td>I3D</td>
+          <td>91.6</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>CVP</td>
+          <td>CVPR 23’</td>
+          <td>CMRL [36]</td>
+          <td>I3D</td>
+          <td>-</td>
+          <td>97.6</td>
+      </tr>
+      <tr>
+          <td>CV</td>
+          <td>CVPR 23’</td>
+          <td>TEVAD [12]</td>
+          <td>CLIP</td>
+          <td>92.3</td>
+          <td>97.3</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>CVPR 23’</td>
+          <td>UMIL [28]</td>
+          <td>XCLIP</td>
+          <td>92.9</td>
+          <td>96.8</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>ours</td>
+          <td>LAP</td>
+          <td>CLIP</td>
+          <td>94.4</td>
+          <td>97.4</td>
+      </tr>
+  </tbody>
+</table>
+<p>false alarm rates for all videos (FARall) and abnormal videos (FARabn) are also reported in our ablation studies.</p>
+
+<h2 class="relative group">A. Datasets
+    <div id="a-datasets" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-datasets" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>XD-Violence [39] is a multi-scene public dataset for VAD. It consists of a total duration of 217 hours and includes 4,754 untrimmed videos. The training set contains 3,954 videos while the test set comprises 800 videos. XD-Violence covers various unusual types of events including abuse incidents, car accidents, explosions, fights, riots, and shootings. UCFCrime dataset [10] is a large-scale collection of 1,900 videos captured by surveillance cameras in various indoor and outdoor scenarios. This dataset consists of 1,610 labeled training videos and 290 labeled test videos with a total duration of 217 hours. The dataset covers 13 types of anomalous events such as abuse, robbery, shootings and arson. TAD [40] is a dataset for anomaly detection in traffic scenes, consisting of 400 training videos and 100 test videos, with a total of 25 hours of video footage. It covers seven types of real-world anomalies. ShanghaiTech consists of surveillance videos from different scenes on a campus [42]. The training set contains 237 videos while the testing set has 200 videos.</p>
+
+<h2 class="relative group">B. Implementation Details
+    <div id="b-implementation-details" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b-implementation-details" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The dimension of the visual features d v extracted by CLIP(ViT-L/14) [15] is 768, while the dimension of semantic features d t is also 768. The prompt dictionary capacity P is set to 30 for UCF-Crime, XD-Violence and TAD datasets, 25 for ShanghaiTech. The batch size b is set to 64 for TAD dataset, and it is halved to 32 on the other three datasets. The number of snippets per video L is set to 64 for all datasets. The feature operation θ is set as, a) concatenation for UCF-Crime, b) addition for the other three datasets. The hyper-parameters α = 1 , β = 0 . 1 , γ = 0 . 001 and τ = 1 are consistent across all datasets. The Adam optimizer is utilized with a learning rate of 0.001 and weight decay of 0.005 during the training process.</p>
+<p>Fig. 4. Qualitative comparisons of TEVAD [12] and our method on both UCF-Crime (UCF) and XD-Violence (XD). The ground truth of anomalous events is represented by light red regions.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000003_8d6eec2730f35ce077300e848ce36f82848425f5e9723beca304ea398f837695.png"
+    ></figure>
+
+<h2 class="relative group">C. Comparison Results
+    <div id="c-comparison-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c-comparison-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Quantitative analysis. The comparisons between our LAP model and other state-of-the-art (SOTA) WS-VAD models on the XD-Violence and UCF-Crime datasets are presented in Table I, and Table II shows the comparisons on the TAD and Shanghaitech datasets. It can be seen that the proposed model outperforms almost all the other methods in all datasets.</p>
+<p>Specifically, our model achieves the highest AP of 86.5% on the XD-Violence dataset, outperforming the second best method VadCLIP [13] by 2.0%, which also combines RGB and text data. Unlike the single-word description, i.e. class labels, used in VadCLIP, the event-level descriptions in our LAP model can provide much richer information, leading to a better understanding of the anomalies. Another ClIP-based method (CLIP-TSA [23]) leverages the visual features from CLIP (VIT/B), while a transformer is employed to enhance its features. However, due to the lack of semantic guidance, its AP falls 4.3% below the proposed LAP. The performance of the other compared the methods are also limited by the absence of efficient anomaly definitions.</p>
+<p>In the UCF-Crime dataset, our LAP model achieves an AUCall of 88.9%, surpassing the most recent methods by at least 0.9%, including VadCLIP [13] (88.0%), CLIP-TSA [23] (87.6%) and UMIL [12] (86.7%). Notably, the learnable prompts of VadCLIP are based on class labels, which leads to a video-level anomaly matching. While our concise descriptions of basic suspected anomaly events can effectively match the segment-level features. This difference results in a relatively high AUCabn of our LAP (73.0%) comparing to VadCLIP (70.2%). It is important to note that if we use more accurate text descriptions [46] of each snippet, we can achieve a higher AUCall of 90.4% and an AUCabn of 76.1%. The results indicate that our model can effectively utilize the textual prompts of abnormal events for an accurate detection.</p>
+<p>Table II shows the comparisons on the other two less challenging datasets. The AUC of our approach (94.4%) is constantly higher than all SOTA methods compared [35], [40], [28] by a margin of 1.5% to 4.8% on TAD dataset. And our method achieves the second highest AUC (97.4%) in ShanghaiTech, which is only 0.2% lower than the best CMRL method [36]. Noting that, if we switch our visual extractor from CLIP to I3D [8] as the same as CMRL, the AUC will be boosted to 98.0% (0.4% higher CMRL). It indicates that the ShanghaiTech dataset is relatively less complex, while I3D [8] is good enough. The details will be discussed in Section IV-E. For fair comparation, we reimplement TEVAD[12] with visual features from CLIP. The AUC of our LAP exceeds TEVAD for 2.1% in the TAD dataset and 0.1% in the ShanghaiTech dataset. This minor performance gain on ShanghaiTech is due to the anomalies on campus being actually common activities such as riding, skating, and driving on the road, which are quite different from our suspected anomaly descriptions such as fighting, firing, or clashing.</p>
+<p>Overall, these results highlight the superior performance of our LAP model compared to state-of-the-art methods on all four datasets in terms of both AP and AUC metrics. For fair comparison, the UMIL [28], TEVAD [12], CLIP-TSA [23], VadCLIP [13], and the work by Wu et al. [38] are based on the same feature extractor (CLIP) as our LAP.</p>
+<p>Fig. 5. The distribution of matched suspected anomalies in the UCF-Crime (upper) and TAD (lower) datasets.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000004_d7c6a55d3532a7fc913aaad96eed6aac33a45de87c6e9941bc63af08c25027c8.png"
+    ></figure>
+<p>Qualitative analysis. To further demonstrate the effectiveness of our method, the qualitative comparisons between our approach (LAP) and the TEVAD SOTA method [12] are visualized in Figure 4. The normal and abnormal frames of videos from the UCF-Crime and XD-Violence datasets are presented along with their corresponding frame-level anomaly scores, while green and red dashed rectangles indicate normal and abnormal ones, respectively. As shown in the figures, our method not only outperforms TEVAD [12] in terms of anomaly detection ability but also reduces false alarms on normal parts.</p>
+<p>Our prompt dictionary contains event descriptions for various conditions. For the UCF-Crime social dataset and the TAD traffic dataset, Figure 5 illustrates the distributions of matched suspected anomalies in the anomaly vector c, showcasing how our prompt dictionary operates. Since the majority of anomalies in UCF-Crime are linked to human behavior like fights, robbery and violence, the predominant subject is &ldquo;person&rdquo; and the most frequent activities include falling and using weapons. While in the other circumstance, the Traffic Anomaly Dataset (TAD) is consists of anomalies caused by traffic accidents. As expected, &ldquo;car&rdquo; is the main subject, and the most common activities involve smoking and crashes. It indicates the effectiveness of our proposed event prompts.</p>
+
+<h2 class="relative group">D. Ablation Studies
+    <div id="d-ablation-studies" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d-ablation-studies" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Components. The proposed prompt-related components, i.e. feature synthesis (FS), multi-prompt learning (MPL) and pseudo anomaly labeling (PAL) are the keys to our superior performance in VAD. The ablation results of these three components on three datasets are shown in Table III. The baseline module is a visual-only branch MIL-based network with a CLIP feature extractor [15]. By cooperating text branch for feature synthesis, our model achieves 1.2%, 1.8% and 0.4% AUCall improvement, respectively, which shows the efficiency of semantic information. The MPL module can also improve the AUCall for all datasets by 0.3%, 0.4% and 0.1%, while</p>
+<p>TABLE III ABLATION STUDY OF PROPOSED MODULES. THE DEFAULT SETTINGS OF ALL EXPERIMENTS ARE MARKED IN GRAY COLOR .</p>
+<table>
+  <thead>
+      <tr>
+          <th>ne</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th>UCF-Crime</th>
+          <th>UCF-Crime</th>
+          <th>XD-Violence</th>
+          <th>XD-Violence</th>
+          <th>TAD</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Basel</td>
+          <td>FS</td>
+          <td>MPL</td>
+          <td>PAL</td>
+          <td>AUC  ll b</td>
+          <td>AUC  ll b</td>
+          <td>AUC  all</td>
+          <td>AP  all</td>
+          <td>AUC all</td>
+      </tr>
+      <tr>
+          <td>✓</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>87.0</td>
+          <td>67.0</td>
+          <td>93.2</td>
+          <td>81.3</td>
+          <td>93.7</td>
+      </tr>
+      <tr>
+          <td>✓</td>
+          <td>✓</td>
+          <td></td>
+          <td></td>
+          <td>88.2</td>
+          <td>70.4</td>
+          <td>95.0</td>
+          <td>84.1</td>
+          <td>94.1</td>
+      </tr>
+      <tr>
+          <td>✓</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td></td>
+          <td>88.5</td>
+          <td>70.7</td>
+          <td>95.4</td>
+          <td>85.0</td>
+          <td>94.2</td>
+      </tr>
+      <tr>
+          <td>✓</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>88.9</td>
+          <td>73.0</td>
+          <td>95.6</td>
+          <td>86.5</td>
+          <td>94.4</td>
+      </tr>
+  </tbody>
+</table>
+<p>TABLE IV COMPARISONS OF THE AUC (%) FOR OPEN-SET VAD ON UCF-CRIME . THE NUMBERS IN BRACES ARE THE AMOUNT OF VIDEOS .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Open  Category</th>
+          <th>No</th>
+          <th>Explo-  sion (21)</th>
+          <th>RoadAcci-  dents (23)</th>
+          <th>Shoplif ting (21)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>RTFM [11]</td>
+          <td>84.3</td>
+          <td>83.6(-0.7)</td>
+          <td>82.1(-2.2)</td>
+          <td>83.4(-0.9)</td>
+      </tr>
+      <tr>
+          <td>MLAD [47]</td>
+          <td>85.4</td>
+          <td>84.3(-1.1)</td>
+          <td>83.2(-2.2)</td>
+          <td>84.5(-0.9)</td>
+      </tr>
+      <tr>
+          <td>TEVAD [12]</td>
+          <td>84.9</td>
+          <td>83.7(-1.2)</td>
+          <td>81.0(-3.9)</td>
+          <td>83.1(-1.8)</td>
+      </tr>
+      <tr>
+          <td>Ours</td>
+          <td>88.9</td>
+          <td>88.1(-0.8)</td>
+          <td>87.0(-1.9)</td>
+          <td>88.4(-0.5)</td>
+      </tr>
+  </tbody>
+</table>
+<p>the AP on XD-Violence and AUCabn on UCF-Crime are also boosted by 0.9% and 0.3%. Further incorporating the PAL module yields better results. It outperforms the baseline by 1.9% in AUCall and 6.0% in AUCabn on UCF-Crime, 0.7% in AUCall on TAD, as well as 2.4% in AUCall and 5.2% in AP on XD-Violence.</p>
+<p>Prompt format. The prompt format plays an important role in the proposed LAP model. Thus, two different formats are tested in this experiment. One is organized by anomaly phrases, such as &ldquo;falling down&rdquo; or &ldquo;on fire&rdquo;. The other contains complete anomaly sentences, like &ldquo;someone is doing something to whom&rdquo; or &ldquo;something is what&rdquo;. As shown in Figure 6a, the sentence-based prompt dictionary outperforms the phrase-based one by 3.1% on XD-Violence and 0.7% on UCF-Crime, respectively. It suggests that prompts containing richer information are more helpful in identifying suspected anomalies.</p>
+<p>Pseudo anomaly threshold. As required by the PAL module, pseudo labels are determined according to the threshold Gh. The dynamic threshold given in Eq. 13 is used in previous experiments, which is based on the distribution of the data in the current batch. The hyper-parameter τ will determine the number for pseudo anomalies. When it is set to 0.5, 1.0 and 2.0, the AUC results on UCF-Crime are 88.05%, 88.90%, and 88.21%, correspondingly. Another static threshold strategy is also compared in this test, while Gh is set to 0.5 as prior knowledge. As shown in Figure 6b, the dynamic threshold is better than the static one, whose AP and AUC are 2.1% and 0.5% higher on XD-Violence and UCF-Crime datasets.</p>
+<p>TABLE V CROSS -DATASET EXPERIMENTAL RESULTS ON UCF-CRIME (UCF) AND XD-VIOLENCE (XD) BENCHMARKS .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Source</th>
+          <th>UCF</th>
+          <th>XD</th>
+          <th>XD</th>
+          <th>UCF</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Target</td>
+          <td>UCF</td>
+          <td>(AUC %)</td>
+          <td>XD</td>
+          <td>XD (AP %)</td>
+      </tr>
+      <tr>
+          <td>RTFM [11]</td>
+          <td>84.3</td>
+          <td>68.6 (-15.7)</td>
+          <td>76.6</td>
+          <td>37.3 (-39.3)</td>
+      </tr>
+      <tr>
+          <td>CMRL [36]</td>
+          <td>6.1</td>
+          <td>69.9 (-16.2)</td>
+          <td>81.3</td>
+          <td>46.7 (-34.6)</td>
+      </tr>
+      <tr>
+          <td>Ours</td>
+          <td>88.9</td>
+          <td>83.5 (-5.4)</td>
+          <td>86.5</td>
+          <td>60.9(-25.6)</td>
+      </tr>
+  </tbody>
+</table>
+<p>Fig. 6. The ablation studies of the prompt format and pseudo anomaly threshold.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000005_f114e2f5a51324ab722fe0bd2bb7968a94886e22cd4f32f69627419f3e0ac061.png"
+    ></figure>
+
+<h2 class="relative group">E. Discussions
+    <div id="e-discussions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#e-discussions" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Class-wise AUC. To demonstrate the detailed performance on specific abnormal events, the class AUC of our model is compared with RTFM [11] in Figure 7. It shows that the proposed LAP model outperforms RTFM in most categories, especially on &ldquo;Assault&rdquo;, &ldquo;Explosion&rdquo;, &ldquo;RoadAccidents&rdquo; and &ldquo;Robbery&rdquo;. This can be attributed to the effective use of our prompt dictionary to describe those anomalies including representative texts such as &ldquo;fire&rdquo;, &ldquo;knife&rdquo; or &ldquo;accident&rdquo;. Combined with the MPL module, their synthetic features are more likely to be identified as abnormal ones. However, our model may be less effective in some cases if the action is subtle or difficult to describe, such as &ldquo;Shoplifting&rdquo; and &ldquo;Fighting&rdquo; in Figure 7.</p>
+<p>Open set VAD. In practical applications, it is impossible to collect or define all possible anomalies in advance. Hence, it is crucial to examine the robustness of anomaly detection models when confronted with open abnormal categories in real-world scenarios. Following the protocol of open set VAD in MLAD [47], experiments are conducted on the top 3 largest anomaly categories from the UCF-Crime dataset, namely &ldquo;Explosion&rdquo;, &ldquo;RoadAccidents&rdquo; and &ldquo;Shoplifting&rdquo;. These categories are sequentially removed from the training set and treated as real open abnormal events. The comparisons with three SOTA models are presented in Table IV. It is obvious that the proposed LAP model outperforms RTFM [11], MLAD [47] and TEVAD [12] in all three categories. It is worth noting that our method achieves minimal decreases in AUC values when compared to alternative approaches. This indicates that our method is more efficient in handling open abnormal event issues.</p>
+<p>Cross-dataset performance. The categories of anomalies varies from different VAD datasets. For instance, the abnormal events in UCF-Crime dataset are collected from surveillance videos, which is quite different from the abnormal categories</p>
+<p>TABLE VI PERFORMANCE OF MPL AND PAL EMBEDDED RTFM [11] ON SHANGHAITECH .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method (ST)</th>
+          <th>AUCall</th>
+          <th>AUCabn</th>
+          <th>FARall</th>
+          <th>FARabn</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>RTFM</td>
+          <td>97.2</td>
+          <td>64.3</td>
+          <td>0.06</td>
+          <td>0.86</td>
+      </tr>
+      <tr>
+          <td>RTFM+MPL</td>
+          <td>97.6</td>
+          <td>72.2</td>
+          <td>0.06</td>
+          <td>0.71</td>
+      </tr>
+      <tr>
+          <td>RTFM+PAL</td>
+          <td>97.5</td>
+          <td>73.9</td>
+          <td>0.03</td>
+          <td>0.44</td>
+      </tr>
+      <tr>
+          <td>RTFM+Both</td>
+          <td>98</td>
+          <td>75.6</td>
+          <td>0.04</td>
+          <td>0.58</td>
+      </tr>
+  </tbody>
+</table>
+<p>Fig. 7. Comparison of class-wise AUC (%) on UCF-Crime dataset with RTFM [11].</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000006_2a7e080a7fc374b2f3a0ac011d040963e4f730dde315af3edf076c41b935252a.png"
+    ></figure>
+<p>in XD-Violence developed from movies and online videos. Thus, it will become a challenging transfer learning task, if the model is trained and inferred on different datasets. However, it is actually what will happen in real-world anomaly detection applications. To evaluate the generalization and zero-shot abilities of our proposed method, another set of experiments using different sources of training and inference videos is conducted. Compared with RTFM [11] and CMRL [36], our model explains the definition of anomalies with their descriptions using the prompt dictionary and multi-prompt learning scheme. Such a new paradigm of utilizing the semantic information leads to an extraordinary cross-dataset performance as shown in Table V. The performance degradation of the proposed model is only one-third of the ones of RTFM and CMRL, when it is trained on XD-Violence and tested on ShanghaiTech. It indicates that our method is much less sensitive to variations in the data domain, which is important for practical applications.</p>
+<p>Plug and play. To further explore the potential of our method, the proposed MPL and PAL modules are embedded into the representative WS-VAD work RTFM [11] on ShanghaiTech. For a fair comparison, I3D [8], instead of CLIP [15], is used as the feature extractor, while all experimental settings were kept the same as in RTFM paper. As shown in Table VI, the reimplemented frameworks generally exhibited better performance. By incorporating either MPL or PAL alone, enhancements of 0.4% and 0.3% can be achieved on AUCall, whereas more significant enhancements of 7.9% and 9.6% can be observed on AUCabn. The efficacy of MPL and PAL is demonstrated by their ability to improve the performance of the conventional WSAD framework. Through the collaboration of MPL and PAL, LAP integrated RTFM demonstrates superior AUC and reduced FAR compared to</p>
+<p>its original version, showing significant enhancements (0.8%, 0.02%) on the ShanghaiTech dataset. It is worth noting that the reimplemented RTFM model (98. 0%) could even surpass the latest SOTA model CMRL [36] by 0.4%. It indicates that more frameworks may benefit from our prompt-related modules, which are plug-and-play.</p>
+
+<h2 class="relative group">V. CONCLUSION
+    <div id="v-conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#v-conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this study, we presented the LAP model, a straightforward yet effective method for WS-VAD. Specifically, the synthesized visual-semantic features have been employed for better feature representation. The multi-prompt learning strategy has shown its capability to guide the learning of suspected anomalies with a prompt dictionary. Additionally, the pseudo anomaly labels generated by the anomaly similarity between the prompts and video captions are useful to enhance the VAD performance. Extensive experiments have demonstrated the effectiveness of our model. We hope that our work will inspire further exploration of defining and learning anomalies from natural languages.</p>
+
+<h2 class="relative group">REFERENCES
+    <div id="references" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#references" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>
+<p>[1] Y. Zhao, B. Deng, C. Shen, Y. Liu, H. Lu, and X.-S. Hua, &ldquo;Spatiotemporal autoencoder for video anomaly detection,&rdquo; in Proceedings of the 25th ACM international conference on Multimedia, 2017, pp. 1933– 1941.</p>
+</li>
+<li>
+<p>[2] G. Yu, S. Wang, Z. Cai, E. Zhu, C. Xu, J. Yin, and M. Kloft, &ldquo;Cloze test helps: Effective video anomaly detection via learning to complete video events,&rdquo; in Proceedings of the 28th ACM international conference on multimedia, 2020, pp. 583–591.</p>
+</li>
+<li>
+<p>[3] C. Tao, C. Wang, S. Lin, S. Cai, D. Li, and J. Qian, &ldquo;Feature reconstruction with disruption for unsupervised video anomaly detection,&rdquo; IEEE Transactions on Multimedia, 2024.</p>
+</li>
+<li>
+<p>[4] S. Yu, C. Wang, Q. Mao, Y. Li, and J. Wu, &ldquo;Cross-epoch learning for weakly supervised anomaly detection in surveillance videos,&rdquo; IEEE Signal Processing Letters, vol. 28, pp. 2137–2141, 2021.</p>
+</li>
+<li>
+<p>[5] H. Shi, L. Wang, S. Zhou, G. Hua, and W. Tang, &ldquo;Abnormal ratios guided multi-phase self-training for weakly-supervised video anomaly detection,&rdquo; IEEE Transactions on Multimedia, 2023.</p>
+</li>
+<li>
+<p>[6] J. Yu, B. Zhang, Q. Li, H. Chen, and Z. Teng, &ldquo;Hierarchical reasoning network with contrastive learning for few-shot human-object interaction recognition,&rdquo; in Proceedings of the 31st ACM International Conference on Multimedia, ser. MM &lsquo;23. New York, NY, USA: Association for Computing Machinery, 2023, p. 4260–4268. [Online]. Available: <a
+  href="https://doi.org/10.1145/3581783.3612311"
+    target="_blank"
+  >https://doi.org/10.1145/3581783.3612311</a></p>
+</li>
+<li>
+<p>[7] D. Tran, L. Bourdev, R. Fergus, L. Torresani, and M. Paluri, &ldquo;Learning spatiotemporal features with 3d convolutional networks,&rdquo; in Proceedings of the IEEE international conference on computer vision, 2015, pp. 4489–4497.</p>
+</li>
+<li>
+<p>[8] J. Carreira and A. Zisserman, &ldquo;Quo vadis, action recognition? a new model and the kinetics dataset,&rdquo; in proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 2017, pp. 6299–6308.</p>
+</li>
+<li>
+<p>[9] A. Dosovitskiy, L. Beyer, A. Kolesnikov, D. Weissenborn, X. Zhai, T. Unterthiner, M. Dehghani, M. Minderer, G. Heigold, S. Gelly et al. , &ldquo;An image is worth 16x16 words: Transformers for image recognition at scale,&rdquo; arXiv preprint arXiv:2010.11929, 2020.</p>
+</li>
+<li>
+<p>[10] W. Sultani, C. Chen, and M. Shah, &ldquo;Real-world anomaly detection in surveillance videos,&rdquo; in Proceedings of the IEEE conference on computer vision and pattern recognition, 2018, pp. 6479–6488.</p>
+</li>
+<li>
+<p>[11] Y. Tian, G. Pang, Y. Chen, R. Singh, J. W. Verjans, and G. Carneiro, &ldquo;Weakly-supervised video anomaly detection with robust temporal feature magnitude learning,&rdquo; in Proceedings of the IEEE/CVF international conference on computer vision, 2021, pp. 4975–4986.</p>
+</li>
+<li>
+<p>[12] W. Chen, K. T. Ma, Z. J. Yew, M. Hur, and D. A.-A. Khoo, &ldquo;Tevad: Improved video anomaly detection with captions,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2023, pp. 5548–5558.</p>
+</li>
+<li>
+<p>[13] P. Wu etal., &ldquo;Vadclip: Adapting vision-language models for weakly supervised video anomaly detection,&rdquo; AAAI, 2024.</p>
+</li>
+<li>
+<p>[14] L. Ouyang, J. Wu, X. Jiang, D. Almeida, C. Wainwright, P. Mishkin, C. Zhang, S. Agarwal, K. Slama, A. Ray et al., &ldquo;Training language models to follow instructions with human feedback,&rdquo; Advances in Neural Information Processing Systems, vol. 35, pp. 27 730–27 744, 2022.</p>
+</li>
+<li>
+<p>[15] A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark et al., &ldquo;Learning transferable visual models from natural language supervision,&rdquo; in International conference on machine learning. PMLR, 2021, pp. 8748–8763.</p>
+</li>
+<li>
+<p>[16] H. Zhou, J. Yu, and W. Yang, &ldquo;Dual memory units with uncertainty regulation for weakly supervised video anomaly detection,&rdquo; in Proceedings of the AAAI Conference on Artificial Intelligence, vol. 37, no. 3, 2023, pp. 3769–3777.</p>
+</li>
+<li>
+<p>[17] X. L. Li and P. Liang, &ldquo;Prefix-tuning: Optimizing continuous prompts for generation,&rdquo; arXiv preprint arXiv:2101.00190, 2021.</p>
+</li>
+<li>
+<p>[18] B. Lester, R. Al-Rfou, and N. Constant, &ldquo;The power of scale for parameter-efficient prompt tuning,&rdquo; arXiv preprint arXiv:2104.08691 , 2021.</p>
+</li>
+<li>
+<p>[19] M. Jia, L. Tang, B.-C. Chen, C. Cardie, S. Belongie, B. Hariharan, and S.-N. Lim, &ldquo;Visual prompt tuning,&rdquo; in European Conference on Computer Vision. Springer, 2022, pp. 709–727.</p>
+</li>
+<li>
+<p>[20] F. Sato, R. Hachiuma, and T. Sekii, &ldquo;Prompt-guided zero-shot anomaly action recognition using pretrained deep skeleton features,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2023, pp. 6471–6480.</p>
+</li>
+<li>
+<p>[21] X. Wang, R. Xian, T. Guan, and D. Manocha, &ldquo;Prompt learning for action recognition,&rdquo; arXiv preprint arXiv:2305.12437, 2023.</p>
+</li>
+<li>
+<p>[22] Z. Liu, X.-M. Wu, D. Zheng, K.-Y. Lin, and W.-S. Zheng, &ldquo;Generating anomalies for video anomaly detection with prompt-based feature mapping,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2023, pp. 24 500–24 510.</p>
+</li>
+<li>
+<p>[23] Z. Joo etal., &ldquo;Clip-tsa:clip-assisted temporal self-attention for weakly supervised video anomaly detection,&rdquo; ICIP, 2023.</p>
+</li>
+<li>
+<p>[24] C. Cao, X. Zhang, S. Zhang, P. Wang, and Y. Zhang, &ldquo;Weakly supervised video anomaly detection based on cross-batch clustering guidance,&rdquo; in 2023 IEEE International Conference on Multimedia and Expo (ICME) . IEEE, 2023, pp. 2723–2728.</p>
+</li>
+<li>
+<p>[25] K. Lin, L. Li, C.-C. Lin, F. Ahmed, Z. Gan, Z. Liu, Y. Lu, and L. Wang, &ldquo;Swinbert: End-to-end transformers with sparse attention for video captioning,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022, pp. 17 949–17 958.</p>
+</li>
+<li>
+<p>[26] T. Gao, X. Yao, and D. Chen, &ldquo;Simcse: Simple contrastive learning of sentence embeddings,&rdquo; arXiv preprint arXiv:2104.08821, 2021.</p>
+</li>
+<li>
+<p>[27] M.-C. Popescu, V. E. Balas, L. Perescu-Popescu, and N. Mastorakis, &ldquo;Multilayer perceptron and neural networks,&rdquo; WSEAS Transactions on Circuits and Systems, vol. 8, no. 7, pp. 579–588, 2009.</p>
+</li>
+<li>
+<p>[28] H. Lv, Z. Yue, Q. Sun, B. Luo, Z. Cui, and H. Zhang, &ldquo;Unbiased multiple instance learning for weakly supervised video anomaly detection,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2023, pp. 8022–8031.</p>
+</li>
+<li>
+<p>[29] M. Hasan, J. Choi, J. Neumann, A. K. Roy-Chowdhury, and L. S. Davis, &ldquo;Learning temporal regularity in video sequences,&rdquo; in Proceedings of the IEEE conference on computer vision and pattern recognition, 2016, pp. 733–742.</p>
+</li>
+<li>
+<p>[30] M. Z. Zaheer, A. Mahmood, M. H. Khan, M. Segu, F. Yu, and S.-I. Lee, &ldquo;Generative cooperative learning for unsupervised video anomaly detection,&rdquo; in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2022, pp. 14 744–14 754.</p>
+</li>
+<li>
+<p>[31] S. Li, F. Liu, and L. Jiao, &ldquo;Self-training multi-sequence learning with transformer for weakly supervised video anomaly detection,&rdquo; in Proceedings of the AAAI Conference on Artificial Intelligence, vol. 36, no. 2, 2022, pp. 1395–1403.</p>
+</li>
+<li>
+<p>[32] A. Panariello, A. Porrello, S. Calderara, and R. Cucchiara, &ldquo;Consistencybased self-supervised learning for temporal anomaly localization,&rdquo; in European Conference on Computer Vision. Springer, 2022, pp. 338– 349.</p>
+</li>
+<li>
+<p>[33] H. Sapkota and Q. Yu, &ldquo;Bayesian nonparametric submodular video partition for robust anomaly detection,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022, pp. 3212–3221.</p>
+</li>
+<li>
+<p>[34] Z. Yang, Y. Guo, J. Wang, D. Huang, X. Bao, and Y. Wang, &ldquo;Towards video anomaly detection in the real world: A binarization embedded weakly-supervised network,&rdquo; IEEE Transactions on Circuits and Systems for Video Technology, 2023.</p>
+</li>
+<li>
+<p>[35] C. Zhang, G. Li, Y. Qi, S. Wang, L. Qing, Q. Huang, and M.-H. Yang, &ldquo;Exploiting completeness and uncertainty of pseudo labels for weakly supervised video anomaly detection,&rdquo; in Proceedings of the IEEE/CVF</p>
+</li>
+<li>
+<p>Conference on Computer Vision and Pattern Recognition, 2023, pp. 16 271–16 280.</p>
+</li>
+<li>
+<p>[36] M. Cho, M. Kim, S. Hwang, C. Park, K. Lee, and S. Lee, &ldquo;Look around for anomalies: Weakly-supervised anomaly detection via context-motion relational learning,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2023, pp. 12 137–12 146.</p>
+</li>
+<li>
+<p>[37] Y. Chen, Z. Liu, B. Zhang, W. Fok, X. Qi, and Y.-C. Wu, &ldquo;Mgfn: Magnitude-contrastive glance-and-focus network for weakly-supervised video anomaly detection,&rdquo; in Proceedings of the AAAI Conference on Artificial Intelligence, vol. 37, no. 1, 2023, pp. 387–395.</p>
+</li>
+<li>
+<p>[38] P. Wu, X. Zhou, G. Pang, Y. Sun, J. Liu, P. Wang, and Y. Zhang, &ldquo;Openvocabulary video anomaly detection,&rdquo; arXiv preprint arXiv:2311.07042 , 2023.</p>
+</li>
+<li>
+<p>[39] P. Wu, J. Liu, Y. Shi, Y. Sun, F. Shao, Z. Wu, and Z. Yang, &ldquo;Not only look, but also listen: Learning multimodal violence detection under weak supervision,&rdquo; in Computer Vision–ECCV 2020: 16th European Conference, Glasgow, UK, August 23–28, 2020, Proceedings, Part XXX 16. Springer, 2020, pp. 322–339.</p>
+</li>
+<li>
+<p>[40] H. Lv, C. Zhou, Z. Cui, C. Xu, Y. Li, and J. Yang, &ldquo;Localizing anomalies from weakly-labeled videos,&rdquo; IEEE transactions on image processing , vol. 30, pp. 4505–4515, 2021.</p>
+</li>
+<li>
+<p>[41] J.-X. Zhong, N. Li, W. Kong, S. Liu, T. H. Li, and G. Li, &ldquo;Graph convolutional label noise cleaner: Train a plug-and-play action classifier for anomaly detection,&rdquo; in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2019, pp. 1237–1246.</p>
+</li>
+<li>
+<p>[42] Y. Zhang, H. Lu, L. Zhang, X. Ruan, and S. Sakai, &ldquo;Video anomaly detection based on locality sensitive hashing filters,&rdquo; Pattern Recognition , vol. 59, pp. 302–311, 2016.</p>
+</li>
+<li>
+<p>[43] W. Luo, W. Liu, and S. Gao, &ldquo;Remembering history with convolutional lstm for anomaly detection,&rdquo; in 2017 IEEE International conference on multimedia and expo (ICME). IEEE, 2017, pp. 439–444.</p>
+</li>
+<li>
+<p>[44] W. Liu, W. Luo, D. Lian, and S. Gao, &ldquo;Future frame prediction for anomaly detection–a new baseline,&rdquo; in Proceedings of the IEEE conference on computer vision and pattern recognition, 2018, pp. 6536– 6545.</p>
+</li>
+<li>
+<p>[45] J.-C. Feng, F.-T. Hong, and W.-S. Zheng, &ldquo;Mist: Multiple instance selftraining framework for video anomaly detection,&rdquo; in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2021, pp. 14 009–14 018.</p>
+</li>
+<li>
+<p>[46] T. Yuan, X. Zhang, K. Liu, B. Liu, C. Chen, J. Jin, and Z. Jiao, &ldquo;Towards surveillance video-and-language understanding: New dataset baselines and challenges,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2024, pp. 22 052–22 061.</p>
+</li>
+<li>
+<p>[47] C. Zhang, G. Li, Q. Xu, X. Zhang, L. Su, and Q. Huang, &ldquo;Weakly supervised anomaly detection in videos considering the openness of events,&rdquo; IEEE transactions on intelligent transportation systems, vol. 23, no. 11, pp. 21 687–21 699, 2022.</p>
+</li>
+</ul>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_papers/Learning Suspected Anomalies from Event Prompts.md"
+          data-oid-likes="likes_papers/Learning Suspected Anomalies from Event Prompts.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/li_anomize_better_open_vocabulary_video_anomaly_detection_cvpr_2025_paper/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/language-guided-open-world-vad/">
+              <span class="leading-6">
+                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-24 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+      
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 overflow-x-auto py-2">
+        <ul class="flex list-none flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 me-4">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

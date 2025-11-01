@@ -1,0 +1,17 @@
+[[main]]
+none = "none"
+
+[[main]]
+name = "papers"
+pageRef = "papers"
+identifier = "3vxdSNuqxZ"
+weight = 9_999
+
+[[main]]
+name = "test"
+pageRef = "test"
+identifier = "yKaTdvWJRt"
+weight = 9_999
+
+[[footer]]
+none = "none"

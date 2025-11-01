@@ -1,0 +1,1280 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title> &middot; Blowfish</title>
+    <meta name="title" content=" &middot; Blowfish">
+  
+
+  
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/papers/a-vlm-based-method-for-visual-anomaly-detection-in-robotic-scientific-laboratories/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/papers/a-vlm-based-method-for-visual-anomaly-detection-in-robotic-scientific-laboratories/">
+  <meta property="og:site_name" content="Blowfish">
+  <meta property="og:title" content="Blowfish">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blowfish">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.7946532fa78157bafb1b4340d4074792811f18177af35790b3a0cb90566ce1cda3edd782eb92e134849964d14b6d9185c9d4ded2a12dcf5b706cb6a275c0cce0.css"
+    integrity="sha512-eUZTL6eBV7r7G0NA1AdHkoEfGBd681eQs6DLkFZs4c2j7deC65LhNISZZNFLbZGFydTe0qEtz1twbLaidcDM4A==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.9df4fc14d50efcc9aa4cfc2b6f348e365f421f5ad491278f8f48c0360cf2f93f08882fda6da162d7ace8e5add57c2df4ac46bd3861306b1d4c452cd31f448d64.js"
+      integrity="sha512-nfT8FNUO/MmqTPwrbzSONl9CH1rUkSePj0jANgzy&#43;T8IiC/abaFi16zo5a3VfC30rEa9OGEwax1MRSzTH0SNZA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Papers",
+    "name": "",
+    "headline": "",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/papers\/a-vlm-based-method-for-visual-anomaly-detection-in-robotic-scientific-laboratories\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "4541"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          Blowfish
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/papers/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="papers"
+  title="Papers">
+  
+  
+    <p class="text-base font-medium">
+      papers
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/test/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="test"
+  title="Tests">
+  
+  
+    <p class="text-base font-medium">
+      test
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href=""
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  
+  title="">
+  
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/papers/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="papers"
+    title="Papers">
+    
+    
+      <p class="text-bg font-bg">
+        papers
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/test/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="test"
+    title="Tests">
+    
+    
+      <p class="text-bg font-bg">
+        test
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    
+    title="">
+    
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>4541 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">22 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">A VLM-based Method for Visual Anomaly Detection in Robotic Scientific Laboratories
+    <div id="a-vlm-based-method-for-visual-anomaly-detection-in-robotic-scientific-laboratories" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-vlm-based-method-for-visual-anomaly-detection-in-robotic-scientific-laboratories" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Shiwei Lin, Chenxu Wang, Xiaozhen Ding, Yi Wang, Boyuan Du, Lei Song,</p>
+<p>Chenggang Wang, and Huaping Liu</p>
+<p>Abstract- In robot scientific laboratories, visual anomaly detection is important for the timely identification and resolution of potential faults or deviations. It has become a key factor in ensuring the stability and safety of experimental processes. To address this challenge, this paper proposes a VLM-based visual reasoning approach that supports different levels of supervision through four progressively informative prompt configurations. To systematically evaluate its effectiveness, we construct a visual benchmark tailored for process anomaly detection in scientific workflows. Experiments on two representative visionlanguage models show that detection accuracy improves as more contextual information is provided, confirming the effectiveness and adaptability of the proposed reasoning approach for process anomaly detection in scientific workflows. Furthermore, realworld validations at selected experimental steps confirm that first-person visual observation can effectively identify processlevel anomalies. This work provides both a data-driven foundation and an evaluation framework for vision anomaly detection in scientific experiment workflows.</p>
+<p>Image</p>
+
+<h2 class="relative group">I. INTRODUCTION
+    <div id="i-introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#i-introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In scientific experiments, when unexpected events occur during the process, accurately and efficiently detecting anomalies through visual information is critical for dynamic task scheduling [1], embodied perceptual decision-making [2], minimizing downtime, improving system efficiency, and reducing human intervention. It also contributes to the development of robust laboratory safety protocols [3]. Most existing experimental designs in scientific laboratories focus on workflow planning and schedule optimization, while paying limited attention to potential anomalies that may arise during the experimental process [4]-[6]. Current visionbased anomaly detection methods are mainly developed for specific domains such as manufacturing processes and abnormal behavior analysis [7]-[15], are not well suited to handle process anomaly detection in diverse scientific experiments, and exhibit limited transferability between diverse experimental setups.</p>
+<p>In scientific experiments, process anomaly detection is context-dependent, as the same target state may be normal or</p>
+<p>*This work was supported by the National Natural Science Fund for Key International Collaboration under grant 62120106005.</p>
+<p>Shiwei Lin, Chenxu Wang, Yi Wang, and Huaping Liu are with the Department of Computer Science and Technology, Tsinghua University, Beijing 100084, China. <a
+  href="mailto:linsw23@mails.tsinghua.edu.cn">linsw23@mails.tsinghua.edu.cn</a>, <a
+  href="mailto:hpliu@tsinghua.edu.cn">hpliu@tsinghua.edu.cn</a>.</p>
+<p>Xiaozhen Ding is with the School of Physics and Electronic Information, Yantai University, Yantai 264005, China.</p>
+<p>Boyuan Du is with the School of Computer and Big Data, Fuzhou University, Fuzhou 350108, China.</p>
+<p>Lei Song and Chenggang Wang are with Department of Automation, Shanghai Jiao Tong University, Shanghai, 200240, P. R. China.</p>
+<p>Huaping Liu is the corresponding author.</p>
+<p>Fig. 1. Illustration of context-dependent anomaly determination. Each experimental stage is represented by a combination of a visual state (image) and a corresponding textual description (context). The same image may be considered normal or anomalous depending on the subtask context. (a) Without contextual information, the status of the image is ambiguous. (b) In a stage where the presence of the test tube is expected, the image is considered normal. (c) During the pouring stage, the absence of the test tube makes the image is considered abnormal.</p>
+<p>abnormal at different workflow stages. This context-sensitive nature makes it difficult for conventional classification-based methods to accurately identify such anomalies, as illustrated in Fig.1.</p>
+<p>Recent advances have shown that VLMs possess strong multimodal reasoning capabilities, supporting zero-shot anomaly detection via context-aware VQA [13], [16], precise anomaly localization by integrating traditional industrial knowledge with visual encoders [14], [15], and enhanced visual tracking through linguistic guidance [17], [18]. These developments build on the growing role of LLM-powered agents in scientific domains [4], [19], [20]. Therefore, we adopt VLMs for anomaly detection, as they are capable of reasoning about the semantic meaning of target states in images, making them more suitable for context-aware decision-making in experimental workflows. Specifically, we propose a method that utilizes visual information collected during experimental execution, combined with structured prompt information to perform anomaly detection using VLMs. As shown in Fig.2, this approach integrates experiment perception, visual-language reasoning, and contextual understanding to determine whether the current stage is anomalous.</p>
+<p>To systematically evaluate the proposed method, we con-</p>
+
+<h2 class="relative group">Experiment Schedule
+    <div id="experiment-schedule" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#experiment-schedule" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Fig. 2. Illustration of the process anomaly detection problem in scientific experiments. A robotic system performs experimental steps while collecting visual data from a first-person perspective. At each step, the visual observations are used to determine whether the current process state is normal or anomalous, based on contextual information from the experimental workflow. The visual detection results can influence the subsequent experimental schedule.</p>
+<p>Image</p>
+<p>struct a multimodal visual benchmark for process anomaly detection in scientific experiments. Using the silicone preparation workflow, we collect and annotate first-person visual data in a real chemical laboratory, covering 15 key stages and 20 monitoring points. This benchmark supports both stagelevel and full-process anomaly detection tasks. Based on this dataset, we introduce four progressively informative prompt configurations to study the impact of prompt granularity on VLM reasoning performance, enabling evaluation and analysis of different models. We conduct systematic experiments on two representative VLMs, GPT-4o and Qwen2.5-VL-72BInstruct, and demonstrate that prompt design plays a crucial role in improving model accuracy and decision robustness.</p>
+<p>Our main contributions are summarized as follows:</p>
+<ul>
+<li>We propose a VLM-based visual anomaly detection method that utilizes first-person images and stagedependent semantics across diverse scientific scenarios, enabling systematic investigation of prompt granularity effects and providing an evaluation standard for process anomaly detection in scientific experiments.</li>
+<li>We construct a vision-based benchmark for process anomaly detection in scientific experiments, grounded in a real silicone preparation workflow in a chemical lab. The benchmark includes multi-step, multi-view firstperson images with detailed annotations, supporting multimodal models with contextual input, enabling research on anomaly understanding in scientific workflows.</li>
+<li>We conduct real-world experiments to validate the effectiveness of our method in the selected stage, demon-</li>
+</ul>
+<p>strating the practical applicability of first-person visual anomaly detection.</p>
+
+<h2 class="relative group">II. RELATED WORK
+    <div id="ii-related-work" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ii-related-work" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">A. Anomaly Detection in Automated Systems
+    <div id="a-anomaly-detection-in-automated-systems" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-anomaly-detection-in-automated-systems" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Anomaly detection has long been applied in manufacturing, behavior monitoring, and defect inspection. Traditional approaches based on statistical analysis and handcrafted features remain prevalent. For example, liquid motion patterns in video frames have been used to improve experimental safety [7]. However, these methods struggle with adaptability in complex or dynamic environments. Spatiotemporal regression has also been applied for the detection of localized overheating in additive manufacturing [8], but its computational cost limits the practical deployment.</p>
+<p>Deep learning enables more effective feature extraction in industrial anomaly detection. Unsupervised methods improve the detection of human and vehicle anomalies in surveillance settings [9], though high false positives remain under changing conditions. AMP-Net, which fuses spatial and temporal features, performs well in complex scenarios [10], but like many deep models, it relies on domain-specific training data and lacks generalization to diverse environments.</p>
+<p>GANs with attention mechanisms have achieved high accuracy in surface defect detection [11], but are sensitive to data distribution and resource-intensive. Transformer-based models that incorporate prior knowledge handle various types of anomalies [12], yet require extensive annotations and high inference costs. Overall, while deep learning outperforms traditional methods, it still faces limitations in robustness, adaptability, and resource demands.</p>
+<p>Despite progress in industrial contexts, existing methods often fail to generalize to the complex and dynamic workflows of scientific experiments.</p>
+
+<h2 class="relative group">B. VLMs for Anomaly Detection
+    <div id="b-vlms-for-anomaly-detection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b-vlms-for-anomaly-detection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>With the rapid development of multimodal learning, Vision Question Answering (VQA) has become a flexible and extensible solution for anomaly detection. AnyAnomaly [13] introduces a context-aware VQA framework that leverages userdefined textual anomaly descriptions to enable fast, zeroshot detection, evaluated on the proposed C-VAD dataset. MiniGPT-4 and Myriad enhance multimodal models by integrating prior knowledge from traditional industrial detection models with visual encoders, improving the accuracy of anomaly localization [14], [15], with MiniGPT-4 evaluated on the COCO caption benchmark and Myriad validated across MVTec-AD, VisA, and PCB Bank datasets. However, these methods are primarily designed for static production environments or fixed defect types, making them less suitable for the diverse processes and irregular events encountered in scientific experiments.</p>
+<p>In video monitoring and tracking, adding textual descriptions can enhance visual features and improve behavior recognition [17]. Applied to experimental settings, keyframes from different time points can be described in natural language and semantically compared using large models [21],</p>
+<p>System Prompt: You are an AI assistant for automated anomaly detection in a robotic chemical laboratory . Your role is to visually inspect laboratory procedures, identifying any abnormalities that may disrupt experiments or pose safety risks to laboratory staff. f.</p>
+<p>Fig. 3. Hierarchical prompt design and reasoning process. The left part shows the construction of prompts at different information levels, including experimental context, stage description, detection content, and anomaly label description. The right part shows how the VLM takes the image and prompt as input and performs step-by-step reasoning to identify potential anomalies.</p>
+<p>Image</p>
+<p>enabling the detection of both environmental and procedural anomalies. Additionally, few-shot learning improves model adaptability to unseen scenarios and rare anomaly types, offering a promising direction for low-resource conditions [22]. Existing vision-based anomaly detection methods are primarily developed for fixed industrial scenarios and often fail to generalize to the complex and variable workflows of scientific experiments. This limitation mainly stems from their dependence on task-specific data and limited adaptability to diverse procedural structures.</p>
+
+<h2 class="relative group">III. PROBLEM FORMULATION
+    <div id="iii-problem-formulation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#iii-problem-formulation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>A complete automated experimental workflow, as illustrated in Fig.2, can be formally represented by an ordered set of steps S = {s1 , s2 ,&hellip;, s n } along with fundamental information I about the context of the experiment. Each step si , defined as a meta-step, may include one or multiple robotic actions. Each meta-step si requires certain prerequisites (e.g., materials, reagents, or equipment) and completion conditions, which together serve as the anomaly detection target C, and may include a fine-grained anomaly description Cd . To support different levels of prompt granularity in anomaly detection, we introduce an information control function φ(S , C , Cd), which determines the semantic content provided to the model during inference. Given a visual observation x captured from the experiment, the anomaly detection task is formulated as a binary classification function:</p>
+<p>where y ∈ {0 , 1} indicates whether an anomaly is present (1 for anomaly, 0 for normal). The function φ selectively includes the step information S, the detection target C, and the fine-grained anomaly description Cd, depending on the evaluation configuration. Formally, φ serves as a semantic controller that determines the composition and granularity of the prompt content. One specific instantiation of φ is presented in Section IV to support hierarchical prompt analysis.</p>
+<p>This formulation provides a unified framework for modeling open-ended reasoning and goal-conditioned anomaly detection, and serves as the foundation for our benchmark&rsquo;s layered evaluation strategy.</p>
+
+<h2 class="relative group">IV. METHOD
+    <div id="iv-method" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#iv-method" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Our method takes a first-person image and structured textual information as input, and uses VLMs to perform multimodal reasoning. By progressively incorporating contextual and semantic information through prompt design, the model determines whether the current experimental state is normal or anomalous.</p>
+<p>At each monitoring point within the experimental procedure, a first-person image is captured by the robotic system. This image is then paired with a natural language prompt that encodes progressively detailed contextual information. The prompt may include the experimental background, the specific subtask being performed, the detection target, and a semantic description of abnormal conditions.</p>
+<p>The resulting multimodal input is fed into a VLM, which jointly processes the visual and textual information to infer the state of the experiment. Rather than producing a direct binary classification, we adopt a reasoning-based approach using Chain-of-Thought (CoT) prompting, which guides the model to analyze the situation step by step before reaching a conclusion. The final output is then used to assess whether an anomaly is present and to support subsequent experimental decision-making.</p>
+
+<h2 class="relative group">A. Multimodal Input Formatting
+    <div id="a-multimodal-input-formatting" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-multimodal-input-formatting" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>To enable effective reasoning by VLMs, our method formats both visual and textual information into a unified multimodal input. This section describes how the two modalities-first-person images and structured prompts-are prepared and combined, as illustrated in Fig.3.</p>
+<p>Visual Input. The visual input consists of RGB images captured from a first-person perspective by robotic arms during the execution of each experimental stage. These images provide contextual views of critical equipment, materials, and objects in the workspace. All images are resized to 640×480 resolution before being passed into the model to match input constraints and maintain visual consistency.</p>
+<p>Prompt Structure. The textual input follows a structured natural language format and is dynamically generated based on the current experimental stage and prompt configuration level. Each prompt is composed of up to four textual elements: Experiment Context, Stage Description, Detection Content, and Anomaly Label Description.</p>
+<ul>
+<li>Experiment Context: A brief description of the overall experimental background.</li>
+<li>Stage Description: A description of the current subtask, includes the information about the operator, target object, start and destination position, and actions.</li>
+<li>Detection Content: A structured sentence that specifies the content to be checked in the scene, typically in the form of &ldquo;Check whether [object] is [in a specific state or location]&rdquo;.</li>
+<li>Anomaly Label Description: A semantic-level textual description that defines the condition under which a state is considered abnormal or normal.</li>
+</ul>
+<p>Multimodal Integration. The image and prompt are submitted as a combined query to VLMs via its multimodal input interface. No additional segmentation tokens are required; the model handles joint encoding of vision and text natively. This consistent formatting ensures that the model receives clearly organized information, allowing it to focus on relevant aspects of the visual scene during reasoning.</p>
+
+<h2 class="relative group">B. Hierarchical Prompt Design
+    <div id="b-hierarchical-prompt-design" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b-hierarchical-prompt-design" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>To investigate how the granularity of textual input affects model reasoning, we design a four-level hierarchical prompting scheme. Each level incrementally adds semantic or contextual information, enabling progressively more detailed guidance for the model.</p>
+<ul>
+<li>Level 1: Contains only the Experiment Context, which provides a general background of the experiment and helps the model understand the overall task setting.</li>
+<li>Level 2: Includes both the Experiment Context and the Stage Description, describing the specific subtask being performed in the current stage.</li>
+<li>Level 3: Adds the Detection Content on top of Level 2, specifying what should be visually checked in the current image.</li>
+<li>Level 4: Further incorporates the Anomaly Label Description, offering a semantic-level explanation of how normal and abnormal states differ.</li>
+</ul>
+<p>This layered design enables a systematic evaluation of how varying prompt specificity influences model behavior. A visual illustration of this hierarchical prompt structure is provided in Fig.3. It also directly corresponds to the instantiation of the prompt function φi defined in our problem formulation, where each level represents an increasing degree of semantic richness and contextual precision in the input.</p>
+<p>This progressive design allows us to systematically evaluate the effect of prompt granularity on model performance. As more context and guidance are provided, the model is expected to exhibit more accurate and consistent reasoning capabilities.</p>
+
+<h2 class="relative group">C. Reasoning Process
+    <div id="c-reasoning-process" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c-reasoning-process" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Given a first-person image and its corresponding hierarchical prompt, the VLM is required to jointly interpret both the visual input and structured textual information to assess whether the current experimental state is normal or anomalous. Rather than performing direct classification, the model is guided to reason step by step through Chain-ofThought (CoT) prompting. This approach encourages more</p>
+<p>(a)</p>
+<p>Abnormal pictures from mobile robotic arm camera with different viewpoints.</p>
+<p>Image</p>
+<p>Abnormal pictures from fixed robotic arm camera with different perspectives</p>
+<p>.</p>
+<p>Fig. 4. Examples from two detection points in the proposed benchmark. Each example includes first-person images captured from different devices and viewpoints, along with their associated textual annotations. (a) Images captured near the workbench, show both the presence and absence of the silicone container on the table. (b) Images captured near the shaking device, show both the presence or missing on the shaking device.</p>
+<p>interpretable and robust decisions, especially under complex or ambiguous visual conditions.</p>
+<p>The model output is a natural language response that typically includes reasoning steps followed by a conclusion. To derive the final anomaly label, we apply a post-processing procedure that converts the model&rsquo;s conclusion into a binary decision. Specifically, a rule-based natural language parser is employed to extract the final decision from the response.</p>
+<p>This reasoning and decision pipeline ensures that model predictions are semantically grounded and suitable for comparison against annotated ground truth labels in the benchmark.</p>
+
+<h2 class="relative group">V. BENCHMARK IMPLEMENTATION
+    <div id="v-benchmark-implementation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#v-benchmark-implementation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The benchmark is constructed based on a real chemical laboratory setting. It provides a unified dataset, task definition, and evaluation protocol to systematically assess the performance of multimodal models in detecting anomalies during experiments.</p>
+<p>Our dataset captures a complete automated silicone preparation process and contains 1001 first-person images, including 501 normal and 500 abnormal samples. The workflow is divided into 15 discrete stages, with 20 monitoring points. Visual data are collected using both fixed and mobile robotic arms from multiple viewpoints to ensure diversity in spatial and visual configurations. Examples are shown in Fig.4.</p>
+<p>Each image is accompanied by structured textual annotations that provide contextual information for multimodal reasoning. These annotations include four distinct elements as introduced in the Method section. Annotations were initially provided independently by three annotators, followed by a consensus process to ensure consistency, semantic clarity, and alignment with real-world scientific procedures. An overview of the dataset structure and annotation scheme is shown in Fig.4. The evaluation metrics are introduced in the following section.</p>
+<p>Fig. 5. Qualitative examples illustrating the effects of hierarchical prompting. Left: The model corrects its focus and successfully detects the anomaly after receiving all four levels of prompts. Right: The model succeeds at Level 3 when provided with clear detection content, but fails at Level 4 due to misinterpretation of the anomaly label description, resulting in incorrect judgment.</p>
+<p>Image</p>
+
+<h2 class="relative group">VI. EXPERIMENTS
+    <div id="vi-experiments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vi-experiments" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">A. Experimental Setup
+    <div id="a-experimental-setup" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-experimental-setup" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We evaluate two representative VLMs: GPT-4o and Qwen2.5-VL-72B-Instruct. The latter is abbreviated as QwenVL-72B. Both models are capable of performing image-text reasoning and support natural language prompting. Inference is conducted via publicly available APIs, without any fine-tuning.</p>
+<p>In addition, we perform a real-world validation in a robotic laboratory, where anomaly detection is performed through a GPT-4o-driven reasoning pipeline to verify model behavior in actual experimental procedures.</p>
+
+<h2 class="relative group">B. Evaluation Metrics
+    <div id="b-evaluation-metrics" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b-evaluation-metrics" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>To comprehensively evaluate model performance, we adopt the following four metrics:</p>
+<p>Accuracy (ACC): The percentage of samples correctly classified as normal or abnormal, indicating the overall effectiveness.</p>
+<p>False Positive Rate (FPR): The percentage of normal samples incorrectly predicted as abnormal. This reflects the model&rsquo;s tendency to generate false alarms, which may cause unnecessary workflow interruptions.</p>
+<p>Missed Detection Rate (MDR): The percentage of abnormal samples mistakenly classified as normal, representing the model&rsquo;s failure to detect true anomalies - a critical factor in high-risk experimental contexts.</p>
+<p>Uncertainty Rate (UR): The percentage of cases where the model cannot provide a confident judgment. This metric indicates the model&rsquo;s ambiguity when handling visually complex or previously unseen samples, and provides insight into its robustness and reliability.</p>
+
+<h2 class="relative group">C. Results and Analysis
+    <div id="c-results-and-analysis" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c-results-and-analysis" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Table I reports the average performance of both models across the four prompt levels.</p>
+
+<h2 class="relative group">Overall Performance Trends
+    <div id="overall-performance-trends" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#overall-performance-trends" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>GPT-4o shows a significant performance improvement, with accuracy increasing from 41.6% at Level 1 to 79.2% at Level 4, and MDR dropping to 3.0%.</li>
+<li>QwenVL-72B demonstrates a more limited gain, with accuracy improving from 41.6% to 61.4%. A noticeable reduction in MDR (to 3.0%) only occurs at Level 4, indicating its stronger reliance on explicit anomaly descriptions.</li>
+</ul>
+
+<h2 class="relative group">Differences in False Positive Rate
+    <div id="differences-in-false-positive-rate" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#differences-in-false-positive-rate" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>QwenVL-72B has a high FPR of 38.6% at Level 1, suggesting a tendency to over-predict anomalies when contextual information is insufficient. Even with the most detailed prompts at Level 4, its FPR remains high at 35.6%, reflecting sensitivity to prompt design.</li>
+<li>In contrast, GPT-4o maintains more a stable FPR across levels and achieves the lowest FPR of 16.8% at Level 4, showing better robustness to prompt variations.</li>
+</ul>
+
+<h2 class="relative group">Sensitivity to Prompt Granularity
+    <div id="sensitivity-to-prompt-granularity" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sensitivity-to-prompt-granularity" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>GPT-4o exhibits a sharp performance boost at Level 3, where MDR drops to 5.0%, indicating that specifying the detection objective alone can significantly enhance its anomaly recognition.</li>
+<li>QwenVL-72B only shows notable improvement at Level 4, where explicit anomaly descriptions are included, suggesting that its reasoning capability is more dependent on semantic cues provided in the prompt.</li>
+</ul>
+<p>In addition to quantitative metrics, we further conduct qualitative analysis to better understand how prompt granularity influences model decision-making. As shown in Fig. 5, we present two representative cases. In the left example, the model initially fails due to inaccurate focus or object localization, but successfully identifies the anomaly after receiving all four levels of prompt information. In contrast, the right example remains misclassified at Levels 1 and 2, but correctly identifies the anomaly at Level 3 after receiving the detection content. However, when the anomaly label description is added at Level 4, the model incorrectly classifies the image as abnormal. This suggests that overly specific descriptions may inadvertently shift the model&rsquo;s attention toward secondary features, leading to misjudgment. These cases illustrate how hierarchical prompting can both enhance and, in some cases, misguide model reasoning, depending on how well the prompt aligns with the visual context.</p>
+<p>TABLE I PERFORMANCE (%) ACROSS DIFFERENT PROMPT LEVELS .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Model</th>
+          <th>Level</th>
+          <th>ACC↑</th>
+          <th>FPR↓</th>
+          <th>MDR↓</th>
+          <th>UR↓</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>GPT-4o</td>
+          <td>Level 1</td>
+          <td>41.6</td>
+          <td>25.7</td>
+          <td>32.7</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>GPT-4o</td>
+          <td>Level 2</td>
+          <td>50.5</td>
+          <td>27.7</td>
+          <td>20.8</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>GPT-4o</td>
+          <td>Level 3</td>
+          <td>67.3</td>
+          <td>27.7</td>
+          <td>5</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>GPT-4o</td>
+          <td>Level 4</td>
+          <td>79.2</td>
+          <td>16.8</td>
+          <td>3</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>QwenVL-72B</td>
+          <td>Level 1</td>
+          <td>41.6</td>
+          <td>38.6</td>
+          <td>19.8</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>QwenVL-72B</td>
+          <td>Level 2</td>
+          <td>49.5</td>
+          <td>23.8</td>
+          <td>26.7</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>QwenVL-72B</td>
+          <td>Level 3</td>
+          <td>57.4</td>
+          <td>19.8</td>
+          <td>22.8</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>QwenVL-72B</td>
+          <td>Level 4</td>
+          <td>61.4</td>
+          <td>35.6</td>
+          <td>3</td>
+          <td>0</td>
+      </tr>
+  </tbody>
+</table>
+<p>Image</p>
+<p>Pre condition Check</p>
+<p>Post</p>
+<p>condition Check</p>
+<p>Fig. 6. Real-world demonstration of anomaly detection: verifying the presence and correct placement of a silicone bottle during a robotic transfer operation.</p>
+
+<h2 class="relative group">D. Real-World Demonstration
+    <div id="d-real-world-demonstration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d-real-world-demonstration" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>To further validate the benchmark&rsquo;s applicability, we conducted a real-world test in a robotic chemical laboratory. The test focused on the operation where a robotic arm transfers a silicone bottle from the material table to the operation table.</p>
+<p>As shown in Fig.6, the experiment is divided into two key checkpoints: before and after the execution of the transfer step. At the beginning of the step, the model receives the experiment background and step description as input, and is prompted to check whether the silicone bottle is present on the material table. The model correctly responds with no anomaly, confirming that the setup is valid.</p>
+<p>After the robotic arm completes the transfer, another image is captured at the workbench. The model is again prompted to verify whether the silicone bottle has been successfully placed. The result is also no anomaly, demonstrating the model&rsquo;s ability to monitor the correctness of step execution under real-world conditions.</p>
+
+<h2 class="relative group">VII. CONCLUSIONS
+    <div id="vii-conclusions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vii-conclusions" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This paper proposes a vision-language reasoning approach for process anomaly detection in scientific experiments, leveraging VLMs guided by hierarchical prompts and CoT inference for step-wise anomaly judgment. To support systematic evaluation, we construct a visual reasoning benchmark based on a real-world chemical workflow. Experimental results show that prompt granularity significantly affects model performance. Real-world validation confirms the method&rsquo;s effectiveness in detecting execution anomalies from first-person visual input. Future work will expand the benchmark and explore automatic prompt generation for broader applicability, and generate descriptive anomaly reports from VLM reasoning traces to support more explainable and actionable outputs.</p>
+
+<h2 class="relative group">REFERENCES
+    <div id="references" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#references" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>[1] D. Ouelhadj and S. Petrovic, &ldquo;A survey of dynamic scheduling in manufacturing systems,&rdquo; Journal of scheduling, vol. 12, pp. 417-431, 2009.</li>
+<li>[2] H. Liu, D. Guo, and A. Cangelosi, &ldquo;Embodied intelligence: A synergy of morphology, action, perception and learning,&rdquo; ACM Computing Surveys, 2025.</li>
+<li>[3] G. Tom, S. P. Schmid, S. G. Baird, Y. Cao, K. Darvish, H. Hao, S. Lo, S. Pablo-Garc ´ ´ıa, E. M. Rajaonson, M. Skreta et al., &ldquo;Selfdriving laboratories for chemistry and materials science,&rdquo; Chemical Reviews, vol. 124, no. 16, pp. 9633-9732, 2024.</li>
+<li>[4] K. Darvish, M. Skreta, Y. Zhao, N. Yoshikawa, S. Som, M. Bogdanovic, Y. Cao, H. Hao, H. Xu, A. Aspuru-Guzik et al., &ldquo;Organa: a robotic assistant for automated chemistry experimentation and characterization,&rdquo; Matter, vol. 8, no. 2, 2025.</li>
+<li>[5] Z. Yang, Y. Du, D. Liu, K. Zhao, and M. Cong, &ldquo;A human-robot interaction system for automated chemical experiments based on vision and natural language processing semantics,&rdquo; Engineering Applications of Artificial Intelligence, vol. 146, p. 110226, 2025.</li>
+<li>[6] D. A. Boiko, R. MacKnight, B. Kline, and G. Gomes, &ldquo;Autonomous chemical research with large language models,&rdquo; Nature, vol. 624, no. 7992, pp. 570-578, 2023.</li>
+<li>[7] N. H. Sarker, Z. A. Hakim, A. Dabouei, M. R. Uddin, Z. Freyberg, A. MacWilliams, J. Kangas, and M. Xu, &ldquo;Detecting anomalies from liquid transfer videos in automated laboratory setting,&rdquo; Frontiers in Molecular Biosciences, vol. 10, p. 1147514, 2023.</li>
+<li>[8] H. Yan, M. Grasso, K. Paynabar, and B. M. Colosimo, &ldquo;Real-time detection of clustered events in video-imaging data with applications to additive manufacturing,&rdquo; IISE Transactions, vol. 54, no. 5, pp. 464- 480, 2022.</li>
+<li>[9] B. Li, S. Leroux, and P. Simoens, &ldquo;Decoupled appearance and motion learning for efficient anomaly detection in surveillance video,&rdquo; Computer Vision and Image Understanding, vol. 210, p. 103249, 2021.</li>
+<li>[10] Y. Liu, J. Liu, K. Yang, B. Ju, S. Liu, Y. Wang, D. Yang, P. Sun, and L. Song, &ldquo;Amp-net: Appearance-motion prototype network assisted automatic video anomaly detection system,&rdquo; IEEE Transactions on Industrial Informatics, vol. 20, no. 2, pp. 2843-2855, 2023.</li>
+<li>[11] L. Zhang, Y. Dai, F. Fan, and C. He, &ldquo;Anomaly detection of gan industrial image based on attention feature fusion,&rdquo; Sensors, vol. 23, no. 1, p. 355, 2022.</li>
+<li>[12] H. Yao, Y. Cao, W. Luo, W. Zhang, W. Yu, and W. Shen, &ldquo;Prior normality prompt transformer for multiclass industrial image anomaly detection,&rdquo; IEEE Transactions on Industrial Informatics, 2024.</li>
+<li>[13] S. M. Lukin and R. Sharma, &ldquo;Anomaly detection with visual question answering,&rdquo; DEVCOM Army Research Laboratory, Tech. Rep. ARLTR9817, 2023.</li>
+<li>[14] D. Zhu, J. Chen, X. Shen, X. Li, and M. Elhoseiny, &ldquo;Minigpt-4: Enhancing vision-language understanding with advanced large language models,&rdquo; arXiv preprint arXiv:2304.10592, 2023.</li>
+<li>[15] Y. Li, H. Wang, S. Yuan, M. Liu, D. Zhao, Y. Guo, C. Xu, G. Shi, and W. Zuo, &ldquo;Myriad: Large multimodal model by applying vision experts for industrial anomaly detection,&rdquo; arXiv preprint arXiv:2310.19070 , 2023.</li>
+<li>[16] S. Tan, M. Ge, D. Guo, H. Liu, and F. Sun, &ldquo;Knowledge-based embodied question answering,&rdquo; IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 45, no. 10, pp. 11 948-11 960, 2023.</li>
+<li>[17] D. Chen, H. Zhang, J. Song, Y. Feng, and Y. Yang, &ldquo;Mamtrack: Vision-language tracking with mamba fusion,&rdquo; in Proceedings of the 2024 8th International Conference on Computer Science and Artificial Intelligence, 2024, pp. 119-126.</li>
+<li>[18] X. Liu, X. Li, D. Guo, S. Tan, H. Liu, and F. Sun, &ldquo;Embodied multiagent task planning from ambiguous instruction.&rdquo; in Robotics: Science and Systems, 2022.</li>
+<li>[19] L. Wang, C. Ma, X. Feng, Z. Zhang, H. Yang, J. Zhang, Z. Chen, J. Tang, X. Chen, Y. Lin et al., &ldquo;A survey on large language model based autonomous agents,&rdquo; Frontiers of Computer Science, vol. 18, no. 6, p. 186345, 2024.</li>
+<li>[20] N. C. Frey, R. Soklaski, S. Axelrod, S. Samsi, R. Gomez-Bombarelli, C. W. Coley, and V. Gadepally, &ldquo;Neural scaling of deep chemical models,&rdquo; Nature Machine Intelligence, vol. 5, no. 11, pp. 1297-1305, 2023.</li>
+<li>[21] U. De Silva, L. Fernando, B. L. P. Lik, Z. Koh, S. C. Joyce, B. Yuen, and C. Yuen, &ldquo;Large language models for video surveillance applications,&rdquo; in TENCON 2024-2024 IEEE Region 10 Conference (TENCON). IEEE, 2024, pp. 563-566.</li>
+<li>[22] Y. Wang, Q. Yao, J. T. Kwok, and L. M. Ni, &ldquo;Generalizing from a few examples: A survey on few-shot learning,&rdquo; ACM computing surveys (csur), vol. 53, no. 3, pp. 1-34, 2020.</li>
+</ul>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_papers/A VLM-based Method for Visual Anomaly Detection in Robotic Scientific Laboratories.md"
+          data-oid-likes="likes_papers/A VLM-based Method for Visual Anomaly Detection in Robotic Scientific Laboratories.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/aadc-net_a_multimodal_deep_learning_framework_for_automatic_anomaly_detection_in_real-time_surveillance/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/3552_ex_vad_explainable_fine_g/">
+              <span class="leading-6">
+                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-24 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+      
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 overflow-x-auto py-2">
+        <ul class="flex list-none flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 me-4">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

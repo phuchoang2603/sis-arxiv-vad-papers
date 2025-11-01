@@ -1,0 +1,2503 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title> &middot; Blowfish</title>
+    <meta name="title" content=" &middot; Blowfish">
+  
+
+  
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/papers/towards-zero-shot-anomaly-detection-and-reasoning/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/papers/towards-zero-shot-anomaly-detection-and-reasoning/">
+  <meta property="og:site_name" content="Blowfish">
+  <meta property="og:title" content="Blowfish">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blowfish">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.7946532fa78157bafb1b4340d4074792811f18177af35790b3a0cb90566ce1cda3edd782eb92e134849964d14b6d9185c9d4ded2a12dcf5b706cb6a275c0cce0.css"
+    integrity="sha512-eUZTL6eBV7r7G0NA1AdHkoEfGBd681eQs6DLkFZs4c2j7deC65LhNISZZNFLbZGFydTe0qEtz1twbLaidcDM4A==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.9df4fc14d50efcc9aa4cfc2b6f348e365f421f5ad491278f8f48c0360cf2f93f08882fda6da162d7ace8e5add57c2df4ac46bd3861306b1d4c452cd31f448d64.js"
+      integrity="sha512-nfT8FNUO/MmqTPwrbzSONl9CH1rUkSePj0jANgzy&#43;T8IiC/abaFi16zo5a3VfC30rEa9OGEwax1MRSzTH0SNZA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Papers",
+    "name": "",
+    "headline": "",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/papers\/towards-zero-shot-anomaly-detection-and-reasoning\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "11621"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          Blowfish
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/papers/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="papers"
+  title="Papers">
+  
+  
+    <p class="text-base font-medium">
+      papers
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/test/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="test"
+  title="Tests">
+  
+  
+    <p class="text-base font-medium">
+      test
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href=""
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  
+  title="">
+  
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/papers/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="papers"
+    title="Papers">
+    
+    
+      <p class="text-bg font-bg">
+        papers
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/test/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="test"
+    title="Tests">
+    
+    
+      <p class="text-bg font-bg">
+        test
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    
+    title="">
+    
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>11621 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">55 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Towards Zero-Shot Anomaly Detection and Reasoning with Multimodal Large Language Models
+    <div id="towards-zero-shot-anomaly-detection-and-reasoning-with-multimodal-large-language-models" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#towards-zero-shot-anomaly-detection-and-reasoning-with-multimodal-large-language-models" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>1* 2 1 1 2</p>
+<p>Jiacong Xu Shao-Yuan Lo Bardia Safaei Vishal M. Patel Isht Dwivedi 1 Johns Hopkins University 2 Honda Research Institute USA</p>
+<p>{jxu155, bsafaei1, <a
+  href="mailto:vpatel36%7d@jhu.edu">vpatel36}@jhu.edu</a> {shao-yuan lo, <a
+  href="mailto:idwivedi%7d@honda-ri.com">idwivedi}@honda-ri.com</a></p>
+
+<h2 class="relative group">Abstract
+    <div id="abstract" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abstract" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Zero-Shot Anomaly Detection (ZSAD) is an emerging AD paradigm. Unlike the traditional unsupervised AD setting that requires a large number of normal samples to train a model, ZSAD is more practical for handling data-restricted real-world scenarios. Recently, Multimodal Large Language Models (MLLMs) have shown revolutionary reasoning capabilities in various vision tasks. However, the reasoning of image abnormalities remains underexplored due to the lack of corresponding datasets and benchmarks. To facilitate research in AD &amp; reasoning, we establish the first visual instruction tuning dataset, Anomaly-Instruct-125k, and the evaluation benchmark, VisA-D&amp;R. Through investigation with our benchmark, we reveal that current MLLMs like GPT-4o cannot accurately detect and describe fine-grained anomalous details in images. To address this, we propose Anomaly-OneVision (Anomaly-OV), the first specialist visual assistant for ZSAD and reasoning. Inspired by human behavior in visual inspection, Anomaly-OV leverages a LookTwice Feature Matching (LTFM) mechanism to adaptively select and emphasize abnormal visual tokens. Extensive experiments demonstrate that Anomaly-OV achieves significant improvements over advanced generalist models in both detection and reasoning. Extensions to medical and 3D AD are provided for future study. The link to our project page: <a
+  href="https://xujiacong.github.io/Anomaly-OV/"
+    target="_blank"
+  >https://xujiacong.github.io/Anomaly-OV/</a></p>
+
+<h2 class="relative group">1. Introduction
+    <div id="1-introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Visual Anomaly Detection (AD) is a well-established task in computer vision, extensively applied in scenarios such as industrial defect inspection [2 , 3 , 5 , 12 , 35 , 69 , 76 , 77 , 92 , 98] and medical image diagnosis [1 , 24 , 31 , 36 , 89 , 90 , 103 , 106]. In the traditional unsupervised AD (a.k.a. one-class AD) setting, models learn the distribution of normal visual features from normal samples and are required to identify anomaly samples during inference. While recent advance-</p>
+<ul>
+<li>Most of this work was done when J. Xu was an intern at HRI-USA.</li>
+</ul>
+<p>Figure 1. Visualization of the image-level AUROC comparison between our Anomaly-OV and current state-of-the-art ZSAD methods (WinCLIP [38], AnoVL [19], AnomalyCLIP [110], AdaCLIP [6]). Notably, our zero-shot performance on VisA even surpasses most recent advances in the few-shot setting [28 , 51 , 112].</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000000_4ea19699cd8b3fdfd40c7b511bdcf32d981bdde7f60a83d9b689060607e82a55.png"
+    ></figure>
+<p>ments [9 , 25 , 32 – 34 , 37 , 42 , 82 , 84 , 95 , 97 , 104] have significantly improved the detection performance, these approaches assume the availability of a substantial number of normal samples. However, this assumption becomes impractical in certain scenarios due to strict data privacy policies and the significant human effort required for data classification, sometimes involving experts or specialists. Therefore, ZeroShot Anomaly Detection (ZSAD) is emerging as a popular research direction, leading to the development of many innovative methods [6 , 17 , 27 , 38 , 43 , 52 , 78 , 79 , 110 , 113].</p>
+<p>Recent advances in Multimodal Large Language Models (MLLMs) [7 , 15 , 44 , 45 , 47 , 48 , 57 , 58 , 111] have shown revolutionary reasoning capabilities in various vision tasks [14 , 29 , 67 , 70 , 80 , 91 , 94 , 107 , 109]. However, the rea-</p>
+<p>soning of image abnormalities has not been explored due to the challenges of collecting large-scale datasets and establishing benchmarks. Existing methods simply predict the likelihood of an anomaly without providing rationales [6 , 11 , 19 , 38 , 110]. In contrast, for better interpretability, robustness, and trustworthiness, people would expect models to explain why an image is considered anomalous and provide visual evidence. Interestingly, we find that recent advanced MLLMs, such as GPT-4o [72], fall short in AD &amp; reasoning. As shown in Figure 2, while the detection is correct, the explanation from GPT-4o lacks accuracy, indicating a gap in a comprehensive understanding of the anomaly.</p>
+<p>To expedite research in AD &amp; reasoning, we establish the first visual instruction tuning dataset, Anomaly-Instruct125k, and the evaluation benchmark, VisA-D&amp;R, through intensive human efforts. After evaluating current generalist MLLMs, we observe that these models fail to accurately detect and describe fine-grained anomalous details in images. To address this, we propose Anomaly-OneVision (AnomalyOV), the first specialist visual assistant for ZSAD and reasoning. Unlike existing ZSAD methods [6 , 11 , 19 , 38 , 110], Anomaly-OV directly learns object-awareness abnormality embeddings in feature space using only the visual encoder. Inspired by human behavior in visual inspection, AnomalyOV employs a Look-Twice Feature Matching (LTFM) mechanism to assist its LLM in adaptively selecting and emphasizing the most suspicious abnormal visual tokens.</p>
+<p>Extensive experiments demonstrate that Anomaly-OV achieves significant improvements over advanced generalist models in both detection and reasoning. Extended results of Anomaly-OV, from applications in industrial defect detection to 3D inspection and medical image diagnosis, are provided for future study. With precise descriptions and rationales of visual anomalies, our model can infer potential causes (see Figure 2), assess current impacts, and offer improvement suggestions, positioning itself as a reliable assistant for visual inspection. Our contributions are in two folds:</p>
+<ul>
+<li>We establish the first visual instruction tuning dataset and benchmark for anomaly detection and reasoning.</li>
+<li>We propose the first specialist visual assistant with stateof-the-art performance for this new impactful domain.</li>
+</ul>
+
+<h2 class="relative group">2. Related Work
+    <div id="2-related-work" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-related-work" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Multimodal Large Language Models. Vision-Language Models (VLMs), such as CLIP [73], exhibit robust zero-shot classification capabilities and have been applied to a range of downstream vision tasks [10 , 53 , 56 , 61 , 86]. Combining a VLM&rsquo;s vision encoder and an LLM [20 , 62 , 74], MLLMs [15 , 48 , 49 , 57 , 111] enable text-based interactions related to visual content. MLLMs have shown remarkable reasoning capability, particularly when incorporated with prompting strategies such as Chain-of-Thought [66 , 88 , 105]. Recent studies have harnessed MLLMs to provide reasoning for</p>
+<p>Figure 2. Industrial image anomaly reasoning results from GPT-4o [72] and our Anomaly-OV. The responses for fine-grained anomaly reasoning are highlighted, with the ground truth given for reference.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000001_201998b29e70aa543198faa7b171adcc674de292863998ad885838f9734bb84b.png"
+    ></figure>
+<p>downstream tasks, e.g., video anomaly detection [67 , 94], affective computing [14 , 29], and visual commonsense reasoning [109], revealing more interpretability.</p>
+<p>Unsupervised Anomaly Detection. Due to the scarcity and difficulty of collecting anomalous data, researchers often focus on the unsupervised AD setting, which exclusively uses normal data to train an AD model. Earlier studies, such as reconstruction-based [63 , 69 , 99], student-teacher [18 , 85 , 102], and augmentation-based [46] approaches, assume a large amount of normal data is available. These traditional approaches are less practical when data are restricted or expensive, such as in the medical domain.</p>
+<p>Zero-Shot Anomaly Detection. Unlike unsupervised AD [35 , 77] and few-shot AD [22 , 28 , 36 , 51 , 112], ZSAD models directly access the likelihood of abnormality for a given image without requiring data specific to the target object. Existing works [6 , 19 , 38 , 110] accomplish ZSAD by comparing visual and textual features encoded by visual and text encoders of CLIP and constructing their positive (anomaly) and negative (normal) prompts in the format of:</p>
+<!-- formula-not-decoded -->
+<p>where Vi Vi and Wi Wi are handcrafted or learnable tokens, and object refers to the word object or the class name of the object. However, simply utilizing object to represent all kinds of objects cannot capture the class-awareness abnormality types. Also, for an intelligent visual assistant, the images should be totally blind to the user (object-agnostic).</p>
+<p>Figure 3. Overview of the Anomaly-OV architecture. It consists of two training stages: (1) professional training for the anomaly expert, and (2) visual instruction tuning for anomaly detection and reasoning. Text and visual tokens are distinguished by different colors.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000002_52939310ca80bea9f1d881085b6bf53d446171d491e84b0a90feea79ef04e23c.png"
+    ></figure>
+
+<h2 class="relative group">3. Method
+    <div id="3-method" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-method" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">3.1. Preliminary
+    <div id="31-preliminary" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#31-preliminary" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Training an MLLM from scratch demands extensive data and computational resources to align the visual and textual embedding spaces and develop robust instruction-following capabilities. Recent studies [23 , 83 , 93] reveal that pretrained MLLMs function as generalists, possessing a broad knowledge base but underperforming in specialized domains. Therefore, our goal is to introduce an auxiliary specialist or expert model designed to guide the generalist in selecting and utilizing critical visual tokens. This approach circumvents the need for large-scale pre-training while preserving the generalization capacity of the original model.</p>
+<p>We choose LLaVA-OneVision [44] as our base MLLM because it is open-sourced and performs similarly to other commercial models. LLaVA-OneVision follows the model architectures for LLaVA family [47 , 57 – 59] and other generic MLLMs, which typically consist of three major components: Visual Encoder, Projector, and LLM. The visual encoder [73 , 100] extracts the visual information from the raw images, the projector aligns the spaces of visual features with the word embedding, and the LLM is responsible for textual instruction processing and complex reasoning. Since the image resolution for CLIP pre-training is fixed, LLaVAOneVision leverages AnyRes with pooling strategy to scale up the input raw image resolution. Specifically, the highresolution images are divided into a prototyped number of crops, and the visual encoder independently processes the image crops before final spatial pooling.</p>
+
+<h2 class="relative group">3.2. Architecture Overview
+    <div id="32-architecture-overview" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#32-architecture-overview" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>With the same image-splitting strategy AnyRes as LLaVAOneVision, the input high-resolution image is split into several crops, and the new image set can be written as:</p>
+<!-- formula-not-decoded -->
+<p>where I0 I0 is the resized original image and Ij̸=0 refers to the image crops. As shown in Figure 3, the image set I will be processed by the visual encoder Fθ to generate the final visual features {v o j }. Similar to AnomalyCLIP [110], we store the outputs for four selected layers in the ViT [21] to capture the image representations from different levels and apply four adapters to compress the feature dimension. Then, the extracted visual features can be written as:</p>
+<!-- formula-not-decoded -->
+<p>where i denotes the i-th level and j refers to the index of corresponding image in I. These multi-level features have been demonstrated to be effective in capturing fine-grained local semantics by recent works [6 , 28 , 110].</p>
+<p>Figure 4. Simulation of visual anomaly inspection by humans.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000003_d805f2b31fa60dad414ee6e1e9f81ab67918d56cfc73d4a263c5e323a4db837c.png"
+    ></figure>
+<p>The large-scale pre-trained CLIP models align the projection spaces of the textual and visual encoder. Therefore, the encoded image features already contain the class information required by ZSAD. To avoid human involvement in object classification and reduce the model complexity, we remove the heavy text encoder commonly utilized in existing works and let the visual model itself parse the information for suspicious classes or objects. Specifically, the output visual features for the original image v o 0 are leveraged to provide the global description of the target object or regions in the look-back path. With the multi-level features and the global embeddings, the LTFM module is responsible for the recognition and localization of suspicious tokens.</p>
+<p>Drawing inspiration from human visual inspection, where suspicious objects or regions are identified and then inspected closely (see Figure 4), we design the VT selector module for aggregating (zooming in) the crucial visual tokens and explicitly assisting the LLM in distinguishing these tokens from many irrelevant ones when dealing with instructions regarding anomaly detection and reasoning. Additionally, the original visual features are preserved to maintain the generalization capability of the base model on regular instructions, such as Can you describe the content of the image?</p>
+
+<h2 class="relative group">3.3. Look-Twice Feature Matching
+    <div id="33-look-twice-feature-matching" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#33-look-twice-feature-matching" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Given the global object information v o 0 provided by the lookback path, we generate the class-awareness abnormality description by merging v o 0 with two learnable embeddings: e + ∈ R D and e − ∈ R D , where + and − indicate positive (anomalous) and negative (normal) patterns and D is the embedding dimension. Specifically, a linear layer T
+i o T
+i is applied along the token dimension to select and fuse useful tokens from v o 0 , and then the fused vector will be concatenated with e</p>
+<ul>
+<li>and e − independently and pass through two MLPs {G + i , G − i } to generate the abnormality and normality descriptions {d + i , d − i }, which can be represented by:</li>
+</ul>
+<!-- formula-not-decoded -->
+<p>The visual features extracted from different levels of the ViT focus on different scales of semantics. Thus, the parameters of T
+i o T
+i and {G + i , G − i } should be independent for different levels, where i indicate the level number.</p>
+<p>Similar to the zero-shot classification mechanism of CLIP</p>
+<p>models, we calculate the possibilities of each patch token in v i j belonging to the anomalous patterns by combining cosine similarity and softmax operations:</p>
+<!-- formula-not-decoded -->
+<p>where m i j represents the significance map for visual tokens, τ is the temperature hyperparameter, and &lt;, &gt; refers to the cosine similarity operator. The patch weight in m i j indicates the closeness of the corresponding visual token to the anomalous pattern. Then, all the maps are averaged to capture the token significances from low to high levels:</p>
+<!-- formula-not-decoded -->
+<p>The visual features are leveraged twice in the forward and look-back paths, so this module is named by Look-Twice Feature Matching (LTFM), following the nature of two-step human visual inspection shown in Figure 4 .</p>
+
+<h2 class="relative group">3.4. Visual Token Selector
+    <div id="34-visual-token-selector" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#34-visual-token-selector" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Under the image cropping strategy widely applied in recent MLLMs, there will be a large number of visual tokens for a high-resolution image, e.g., 7290 tokens for an image with 1152×1152 resolution in LLaVA-OneVision. While these tokens provide rich visual details, the LLM is required to pick the most useful information when adapting to a specific task. When the LLM lacks enough knowledge in this domain, the token-picking process will become complicated. Thus, our solution is to introduce a specialist or expert who knows which token is crucial or not and assist the LLM in selecting and emphasizing (zooming in) the crucial tokens.</p>
+<p>Given the encoded visual tokens {v o j } for each image crop in I and the corresponding significance map mj , the suspicious tokens are emphasized by direct multiplication of the two tensors. Then, the normal tokens will be scaled to zero while the anomalous tokens will be maintained. After that, spatial average pooling P is applied to reduce the number of tokens. This process can be written as:</p>
+<!-- formula-not-decoded -->
+<p>where q j ∈ R h×w×D refers to the pooled query tokens. Empirically, setting h = w = 2 provides a better trade-off than other options. Then, a Q-Former Q [49] is leveraged to aggregate the correlated tokens in the original output by forwarding q j as the query and v o j as the key and value:</p>
+<!-- formula-not-decoded -->
+<p>The Visual Token Selector (VT Selector) serves as a tool for the anomaly expert to hand-pick visual tokens that contain the most suspicious semantics for a given image.</p>
+<p>Figure 5. Composition of the instruction data in Anomaly-Instruct-125k. There are four main types of image samples: in-the-wild , industrial , medical, and 3D (in the format of multi-view images), covering most image anomaly detection tasks and enabling the possibility of a unified assistant for visual inspection. The reasoning words are highlighted in blue. For more information about dataset establishment, statistics, and the data collection pipeline, please refer to Section A1 in the supplementary.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000004_5a0ac4b9575e1a0221ca5bef4f0f8f6805cd513eedd514b48128dea56d16289b.png"
+    ></figure>
+
+<h2 class="relative group">3.5. Inference and Loss
+    <div id="35-inference-and-loss" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#35-inference-and-loss" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Anomaly Prediction. In the traditional anomaly detection task, the model predicts the possibility of the image being abnormal. To achieve anomaly score prediction, we aggregate the anomaly information from all the image crops by an average operation weighted on the significance maps:</p>
+<!-- formula-not-decoded -->
+<p>where P is the same spatial pooling in VT Selector and r(I) is a vector containing the global anomaly information for the entire image. Then, the anomaly expert can calculate the image-level abnormal possibility by parsing r(I):</p>
+<!-- formula-not-decoded -->
+<p>where G o is an MLP for distinguishing normal and abnormal semantics. To handle the unbalanced sample distribution, we employ the balanced BCE loss as the professional training objective for the anomaly expert components.</p>
+<p>Text Generation. Instead of directly forwarding the concatenation of the original {v o j } and the selected {r(I) , v s j } visual tokens into the LLM, we apply an indication prompt with &lt;adv&gt; suspicious feature: in the middle of the two series of tokens, which will highlight the selected tokens for LLM when handling anomaly-related instructions. This approach can be considered a form of prompt engineering in MLLMs. Besides, the &lt;adv&gt; is chosen from {highly , moderately , slightly} and is determined by score(I) and predefined thresholds {slow , s high }. When the input image I has a high likelihood of anomaly, the LLM will place greater emphasis on the selected tokens; otherwise, these tokens will have less significance. The text generation is implemented by the original auto-regressive token prediction mechanism of LLM:</p>
+<!-- formula-not-decoded -->
+<p>where X a,&lt;t and X q,&lt;t are the answer and instruction tokens from all prior turns before the current prediction token xt for a sequence of length L. The entire model is parameterized by θ and trained by the original language model cross-entropy loss for each predicted answer token xt .</p>
+
+<h2 class="relative group">4. Dataset and Benchmark
+    <div id="4-dataset-and-benchmark" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-dataset-and-benchmark" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The lack of multimodal instruction-following data for image anomaly detection and reasoning hinders the development of special intelligent assistants in this domain. Even though AnomalyGPT [28] introduces a prompt tuning dataset by simulating the anomalies, the scale of their dataset and the diversity of their instructions and answers are limited, only focusing on anomaly localization. To resolve the data scarcity issue, we establish the first large-scale instruction tuning dataset: Anomaly-Instruct-125k and the corresponding anomaly detection and reasoning benchmark: VisA-D&amp;R .</p>
+
+<h2 class="relative group">4.1. Anomaly-Instruct-125k
+    <div id="41-anomaly-instruct-125k" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#41-anomaly-instruct-125k" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>LLaVA [57] builds its instruction tuning dataset by leveraging the image caption and bounding boxes available in the COCO dataset[55] to prompt the text-only GPT-4. ShareGPT4V [8] provides a higher-quality dataset by directly prompting GPT-4V [71]. However, there is no image caption provided in existing anomaly detection datasets [1 , 2], and no matter GPT-4V [71] or most recent GPT-4o [72] cannot accurately locate and describe the anomalies in the image without explicit human involvement.</p>
+<p>To resolve these issues, we design a new prompt pipeline for accurate anomaly description generation. Since most of the datasets contain annotations for anomaly types, we manually combine the class name and anomaly type, such as a [capsule] with [poke] on surface. If the anomaly masks are provided, we draw bounding boxes on the images to highlight the anomalous area. The short description and the image with (or w/o) bounding boxes are used to prompt GPT-4o to generate the detailed image and anomaly descriptions. Then, we employ an in-context learning strategy similar to LLaVA to create the instructions.</p>
+<p>Figure 6. Prompt examples in VisA-D&amp;R for detection and reasoning. The complex reasoning instructions are highlighted.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000005_c4786b7dcdd337e0df701ab6e55e6fc39f011396609e9f37b8e2a9d7ff6845c9.png"
+    ></figure>
+<p>For a unified visual inspection dataset, precise instruction data is collected from MVTec AD [2], the training set of BMAD [1], Anomaly-ShapeNet [50], Real3D-AD [60], and MVTec-3D AD [4], covering both 2D to 3D data across industry to medical domains. The 3D point cloud data are converted into 9 multi-view images, and the corresponding masks are rendered using predefined camera positions. However, the diversities and scales of these datasets are relatively limited, probably due to the difficulty of collecting anomaly images. To scale up the instruction data, we introduce an automatic anomaly data collection pipeline combining GPT4o [72] and Google Image Search [26] for image collection, data cleaning, and instruction generation. Finally, 72k in-thewild images (named as WebAD) targeting anomaly detection are collected, significantly enriching our instruction dataset. Several samples from Anomaly-Instruct-125k are shown in Figure 5. The instructions are mainly in the format of multi-round conversations, covering anomaly detection and description in low-level reasoning and potential cause and future suggestions for complex understanding.</p>
+
+<h2 class="relative group">4.2. VisA-D&amp;R
+    <div id="42-visa-dr" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#42-visa-dr" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>VisA [115] is a classic but challenging industrial anomaly detection dataset, providing fine-grained anomaly type and segmentation for each image. For evaluation of the anomaly detection and reasoning performance on existing and future methods, we select 10 classes from VisA and follow a similar data generation pipeline of Anomaly-Instruct-125k to create the benchmark. Differently, significant human effort has been invested in meticulously reviewing all generated images and anomaly descriptions. Wrong descriptions are picked out and re-annotated by humans before utilizing them for Q&amp;A generation. Totally, the benchmark consists of 761 normal samples and 1000 anomalous ones.</p>
+<p>For evaluating detection performance, questions designed to elicit a one-word answer are used to prompt the MLLMs (Figure 6), with results quantified using Accuracy, Precision, Recall, and F1-score. We divide the reasoning performance into two parts: low-level reasoning that focuses on the description of visual defects or anomalies and complex reasoning requiring the MLLMs to provide the potential cause and future improvement strategies for the detected anomalies, where ROUGE-L [54], Sentence-BERT (SBERT) [75], and</p>
+<p>GPT-Score (GPT-4 as the judge [57]) are utilized to quantify the similarity between generated text and ground truth. Note that low-level reasoning is highly correlated to detection performance, while anomaly-type descriptions of low-level reasoning determine the output of complex reasoning.</p>
+
+<h2 class="relative group">5. Experiments
+    <div id="5-experiments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-experiments" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">5.1. Training &amp; Evaluation
+    <div id="51-training--evaluation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#51-training--evaluation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>There are two independent training stages for Anomaly-OV. In Stage 1, the components of the anomaly expert are trained to obtain the token selection capability, targeting traditional ZSAD. This stage utilizes all of the data with anomaly labels in Anomaly-Instruct-125k. Similar to previous works [6 , 110], when evaluating the model on the datasets contained in the training set, the corresponding datasets are replaced by VisA [115]. In Stage 2, the anomaly expert and visual encoder are frozen, while the projector and LLM are trainable. In addition to our instruction dataset, we sample around 350k data from the original training recipe of LLaVAOneVision to maintain the generalization ability. For more details on training, please refer to the supplementary.</p>
+<p>The ZSAD performance for the anomaly expert is evaluated on nine benchmarks, including MVTec AD [2], VisA [115], AITEX [81], ELPV [16], BTAD [68], and MPDD [39] for industrial inspection, and BrainMRI [40], HeadCT [41], and Br35H [30] for medical diagnosis. AUROC (Area Under the Receiver Operating Characteristic) is leveraged to quantify the image-level AD performance. For text-based anomaly detection, both normal and anomaly data are employed to assess the accuracy by examining if the generated text contains the word Yes. Differently, only anomaly data are utilized to prompt the MLLMs to determine their anomaly reasoning capabilities since the justifications of normality are similar for different models.</p>
+<p>Table 1. Ablation study for the anomaly expert of Anomaly-OV. w/o. Look-back refers to the removal of v o 0 in LTFM.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>MVTec</th>
+          <th>VisA</th>
+          <th>HeadCT</th>
+          <th>BrainMRI</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Full Model</td>
+          <td>94</td>
+          <td>91.1</td>
+          <td>97.6</td>
+          <td>93.9</td>
+      </tr>
+      <tr>
+          <td>w/o. Look-back  w/o. e + &amp; e−</td>
+          <td>92.8</td>
+          <td>90.5</td>
+          <td>96.6</td>
+          <td>93.5</td>
+      </tr>
+      <tr>
+          <td>w/o. Look-back  w/o. e + &amp; e−</td>
+          <td>92.1</td>
+          <td>90.1</td>
+          <td>94.7</td>
+          <td>92.9</td>
+      </tr>
+      <tr>
+          <td>w/o. Look-back  w/o. e + &amp; e−</td>
+          <td>91.7</td>
+          <td>89.9</td>
+          <td>92.8</td>
+          <td>95.1</td>
+      </tr>
+      <tr>
+          <td>w/o. Look-back  w/o. e + &amp; e−</td>
+          <td>88.5</td>
+          <td>88.9</td>
+          <td>91.2</td>
+          <td>93.4</td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 class="relative group">5.2. Zero-Shot Anomaly Detection
+    <div id="52-zero-shot-anomaly-detection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#52-zero-shot-anomaly-detection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>As shown in Table 2, compared with existing methods, the anomaly expert of Anomaly-OV achieves significant imagelevel AUROC improvements on most of the ZSAD benchmarks, which demonstrates that the text encoder widely applied in existing models is not necessary. The success of our model mainly originates from the extra data of WebAD (Table 1), which enables the model to learn more generic</p>
+<p>Table 2. Quantitative comparison of Image-level AUROC on different ZSAD methods (some of the results are borrowed from [6 , 110 , 114]). The best and the second-best results are bolded and underlined, respectively. Please refer to the supplementary for more detailed results.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Model</th>
+          <th>Industrial Defects</th>
+          <th>Industrial Defects</th>
+          <th>Industrial Defects</th>
+          <th>Industrial Defects</th>
+          <th>Industrial Defects</th>
+          <th>Industrial Defects</th>
+          <th>Medical Anomalies</th>
+          <th>Medical Anomalies</th>
+          <th>Medical Anomalies</th>
+          <th>Average</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td>MVTec AD</td>
+          <td>VisA</td>
+          <td>AITEX</td>
+          <td>ELPV</td>
+          <td>BTAD</td>
+          <td>MPDD</td>
+          <td>BrainMRI</td>
+          <td>HeadCT</td>
+          <td>Br35H</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>CLIP [73]</td>
+          <td>74.1</td>
+          <td>66.4</td>
+          <td>71.0</td>
+          <td>59.2</td>
+          <td>34.5</td>
+          <td>54.3</td>
+          <td>73.9</td>
+          <td>56.5</td>
+          <td>78.4</td>
+          <td>63.1</td>
+      </tr>
+      <tr>
+          <td>CoOp [108]</td>
+          <td>88.8</td>
+          <td>62.8</td>
+          <td>66.2</td>
+          <td>73.0</td>
+          <td>66.8</td>
+          <td>55.1</td>
+          <td>61.3</td>
+          <td>78.4</td>
+          <td>86.0</td>
+          <td>70.9</td>
+      </tr>
+      <tr>
+          <td>WinCLIP [38]</td>
+          <td>91.8</td>
+          <td>78.8</td>
+          <td>73.0</td>
+          <td>74.0</td>
+          <td>68.2</td>
+          <td>63.6</td>
+          <td>92.6</td>
+          <td>90.0</td>
+          <td>80.5</td>
+          <td>79.2</td>
+      </tr>
+      <tr>
+          <td>APRIL-GAN [11]</td>
+          <td>86.2</td>
+          <td>78.0</td>
+          <td>57.6</td>
+          <td>65.5</td>
+          <td>73.6</td>
+          <td>73.0</td>
+          <td>89.3</td>
+          <td>89.1</td>
+          <td>93.1</td>
+          <td>78.4</td>
+      </tr>
+      <tr>
+          <td>AnoVL [19]</td>
+          <td>92.5</td>
+          <td>79.2</td>
+          <td>72.5</td>
+          <td>70.6</td>
+          <td>80.3</td>
+          <td>68.9</td>
+          <td>88.7</td>
+          <td>81.6</td>
+          <td>88.4</td>
+          <td>80.3</td>
+      </tr>
+      <tr>
+          <td>AnomalyCLIP [110]</td>
+          <td>91.5</td>
+          <td>82.1</td>
+          <td>62.2</td>
+          <td>81.5</td>
+          <td>88.3</td>
+          <td>77.0</td>
+          <td>90.3</td>
+          <td>93.4</td>
+          <td>94.6</td>
+          <td>84.5</td>
+      </tr>
+      <tr>
+          <td>AdaCLIP [6]</td>
+          <td>89.2</td>
+          <td>85.8</td>
+          <td>64.5</td>
+          <td>79.7</td>
+          <td>88.6</td>
+          <td>76.0</td>
+          <td>94.8</td>
+          <td>91.4</td>
+          <td>97.7</td>
+          <td>85.3</td>
+      </tr>
+      <tr>
+          <td>Ours</td>
+          <td>94.0</td>
+          <td>91.1</td>
+          <td>72.0</td>
+          <td>83.0</td>
+          <td>89.0</td>
+          <td>81.7</td>
+          <td>93.9</td>
+          <td>97.6</td>
+          <td>95.5</td>
+          <td>88.6</td>
+      </tr>
+  </tbody>
+</table>
+<p>semantics for normality and abnormality from the data distribution in the absence of the text encoder. This observation also reveals that large-scale in-the-wild online data can benefit zero-shot performance in anomaly detection.</p>
+<p>While the Q-Former reduces the model performance on BrainMRI, it shows effectiveness on most benchmarks, indicating the importance of token aggregation. Similarly, the look-back information and two learnable embeddings are required for describing class-awareness abnormality and distinguishing positive and negative features, respectively. As previously discussed, the anomaly expert is responsible for selecting suspicious visual tokens for the LLM, and the significance maps shown in Figure 7 demonstrate the interpretable token selection mechanism. The high intensities are automatically distributed around the anomalous areas even without any supervision of the anomaly masks.</p>
+<p>Figure 7. Visualization of the significance map on VisA samples.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000006_2b013e966b247e339aa9d80bb7a1490fc1ce29e9dc41657be42f4c6c2ece3d95.png"
+    ></figure>
+
+<h2 class="relative group">5.3. Anomaly Detection &amp; Reasoning
+    <div id="53-anomaly-detection--reasoning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#53-anomaly-detection--reasoning" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>With the strong capabilities of the anomaly expert for zeroshot detection and suspicious token selection, Anomaly-OV accomplishes significant improvement in text-based anomaly detection and reasoning over other open-sourced generalist MLLMs, as shown in Table 4. Here are a few observations: i) While a larger language model cannot guarantee better detection performance, it always provides greater reasoning ability; ii) Most of the existing MLLMs present much lower recall than precision, indicating their insensitivity to visual anomalies; iii) GPT-4o shows stronger reasoning ability</p>
+<p>Table 3. Anomaly-OV presents more accurate anomaly detection.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000007_0cc55ba35c13e56edebf3d62ebf39322a60c28d3187494022c4647f84ebe22a6.png"
+    ></figure>
+<table>
+  <thead>
+      <tr>
+          <th>User</th>
+          <th>Are there any anomalies visible in the image</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>GPT-4o</td>
+          <td>The image shows an HC-SR04 ultrasonic sensor There don’t appear to be any visible anomalies with the sensor itself. The components and pins seem intact and properly aligned.</td>
+      </tr>
+      <tr>
+          <td>LLaVA-OV</td>
+          <td>The image shows an ultrasonic sensor module, specifi cally the HC-SR04 model. There are no visible anoma lies in the image; it appears to be a standard represen tation of this type of sensor module.</td>
+      </tr>
+      <tr>
+          <td>Ours</td>
+          <td>Yes, there is a noticeable anomaly in the image: a short circuit on the PCB, indicated by a white, crusty residue near the ’Echo’ pin.</td>
+      </tr>
+  </tbody>
+</table>
+<p>compared to other open-sourced models. Table 3 and Table 5 provide the qualitative comparison of our Anomaly-OV with its base model LLaVA-OV-7B [44] and GPT-4o [72]. Both GPT-4o and LLaVA-OV show insensitivity to anomalous features and cannot accurately detect the anomaly in the image. Sometimes, GPT-4o knows the image is anomalous but fails to describe the anomalies precisely.</p>
+<p>We provide the fine-tuned version of the base model LLaVA-OV-0.5B on Anomaly-Instruct-125k, which presents much higher accuracy and more balanced precision and recall than its original version. This demonstrates the effectiveness of our instruction-tuning dataset. By integrating the anomaly expert with the base model, our Anomaly-OV-0.5B achieves 0 . 08 accuracy and 0 . 06 F1-score improvements in text-based anomaly detection and better reasoning capability in low-level and complex settings. Equipped with a larger language model, Anomaly-OV-7B provides the best detection performance among all the existing MLLMs and shows comparable reasoning ability with GPT-4o. Notably, we observe that the anomaly expert restricts the detection perfor-</p>
+<p>Table 4. Quantitative comparison of text-based anomaly detection and reasoning for MLLMs. Notably, the Accuracy and F1-score for the anomaly expert of Anomaly-OV can be calculated as {0 . 78 , 0 . 77} with threshold 0 . 5. * indicates the model is fine-tuned on our dataset.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Model</th>
+          <th>Anomaly Detection</th>
+          <th>Anomaly Detection</th>
+          <th>Anomaly Detection</th>
+          <th>Anomaly Detection</th>
+          <th>Low-level Reasoning</th>
+          <th>Low-level Reasoning</th>
+          <th>Low-level Reasoning</th>
+          <th>Complex Reasoning</th>
+          <th>Complex Reasoning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td>Accuracy</td>
+          <td>Precision</td>
+          <td>Recall</td>
+          <td>F1-score</td>
+          <td>ROUGE-L</td>
+          <td>SBERT</td>
+          <td>GPT-Score</td>
+          <td>SBERT</td>
+          <td>GPT-Score</td>
+      </tr>
+      <tr>
+          <td>GPT-4V [71]</td>
+          <td>0.68</td>
+          <td>0.90</td>
+          <td>0.49</td>
+          <td>0.55</td>
+          <td>0.16</td>
+          <td>0.65</td>
+          <td>3.31</td>
+          <td>0.77</td>
+          <td>5.64</td>
+      </tr>
+      <tr>
+          <td>GPT-4o [72]</td>
+          <td>0.70</td>
+          <td>0.83</td>
+          <td>0.71</td>
+          <td>0.68</td>
+          <td>0.24</td>
+          <td>0.71</td>
+          <td>4.84</td>
+          <td>0.81</td>
+          <td>6.89</td>
+      </tr>
+      <tr>
+          <td>Qwen2-VL-2B [87]</td>
+          <td>0.65</td>
+          <td>0.87</td>
+          <td>0.55</td>
+          <td>0.59</td>
+          <td>0.22</td>
+          <td>0.55</td>
+          <td>1.94</td>
+          <td>0.74</td>
+          <td>4.26</td>
+      </tr>
+      <tr>
+          <td>Qwen2-VL-7B [87]</td>
+          <td>0.76</td>
+          <td>0.91</td>
+          <td>0.69</td>
+          <td>0.75</td>
+          <td>0.25</td>
+          <td>0.61</td>
+          <td>3.09</td>
+          <td>0.68</td>
+          <td>4.62</td>
+      </tr>
+      <tr>
+          <td>InternVL-2-8B [13]</td>
+          <td>0.74</td>
+          <td>0.78</td>
+          <td>0.81</td>
+          <td>0.76</td>
+          <td>0.23</td>
+          <td>0.73</td>
+          <td>3.69</td>
+          <td>0.80</td>
+          <td>5.08</td>
+      </tr>
+      <tr>
+          <td>InternVL-2-26B [13]</td>
+          <td>0.73</td>
+          <td>0.86</td>
+          <td>0.66</td>
+          <td>0.68</td>
+          <td>0.21</td>
+          <td>0.74</td>
+          <td>4.13</td>
+          <td>0.80</td>
+          <td>5.49</td>
+      </tr>
+      <tr>
+          <td>IXC-2.5-7B [101]</td>
+          <td>0.72</td>
+          <td>0.88</td>
+          <td>0.63</td>
+          <td>0.67</td>
+          <td>0.21</td>
+          <td>0.58</td>
+          <td>2.45</td>
+          <td>0.77</td>
+          <td>5.14</td>
+      </tr>
+      <tr>
+          <td>LLaVA-OV-0.5B [44]</td>
+          <td>0.54</td>
+          <td>0.70</td>
+          <td>0.19</td>
+          <td>0.28</td>
+          <td>0.20</td>
+          <td>0.63</td>
+          <td>2.54</td>
+          <td>0.81</td>
+          <td>4.34</td>
+      </tr>
+      <tr>
+          <td>LLaVA-OV-7B [44]</td>
+          <td>0.71</td>
+          <td>0.95</td>
+          <td>0.56</td>
+          <td>0.63</td>
+          <td>0.24</td>
+          <td>0.66</td>
+          <td>3.57</td>
+          <td>0.79</td>
+          <td>5.44</td>
+      </tr>
+      <tr>
+          <td>LLaVA-OV-0.5B*</td>
+          <td>0.71</td>
+          <td>0.77</td>
+          <td>0.84</td>
+          <td>0.76</td>
+          <td>0.31</td>
+          <td>0.70</td>
+          <td>3.69</td>
+          <td>0.82</td>
+          <td>5.31</td>
+      </tr>
+      <tr>
+          <td>Anomaly-OV-0.5B</td>
+          <td>0.79</td>
+          <td>0.86</td>
+          <td>0.83</td>
+          <td>0.82</td>
+          <td>0.33</td>
+          <td>0.72</td>
+          <td>3.87</td>
+          <td>0.83</td>
+          <td>5.67</td>
+      </tr>
+      <tr>
+          <td>Anomaly-OV-7B</td>
+          <td>0.79</td>
+          <td>0.83</td>
+          <td>0.86</td>
+          <td>0.83</td>
+          <td>0.34</td>
+          <td>0.73</td>
+          <td>4.26</td>
+          <td>0.84</td>
+          <td>6.34</td>
+      </tr>
+  </tbody>
+</table>
+<p>mance of Anomaly-OV. Therefore, the design of a stronger anomaly expert is suggested for future works.</p>
+<p>Table 5. Anomaly-OV presents more precise anomaly reasoning.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000008_a65d3a11ff5142b1e0e21344188cf40cae5f957bcbab461f1b9b0b53df3e4283.png"
+    ></figure>
+<table>
+  <thead>
+      <tr>
+          <th>Macaroni Example: Yellowish Spot</th>
+          <th>Macaroni Example: Yellowish Spot</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>User</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>GPT-4o</td>
+          <td>The image shows four pieces of elbow macaroni on a green background. The anomaly is that the macaroni pieces are not whole; they are cut in half</td>
+      </tr>
+      <tr>
+          <td>LLaVA-OV</td>
+          <td>The image shows four pieces of pasta, specifically macaroni shells, arranged on a green textured surface The pasta appears to be uniformly colored and shaped with no visible defects or anomalies.</td>
+      </tr>
+      <tr>
+          <td>Ours</td>
+          <td>Yes, there is an anomaly in the image. The bottom right pasta piece has a noticeable yellowish discoloration on its surface.</td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 class="relative group">5.4. Extension
+    <div id="54-extension" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#54-extension" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>With the generalization and multi-image processing capabilities of MLLMs, it is possible to build a unified assistant for visual inspection. Table 6 demonstrates the comprehensive knowledge of Anomaly-OV (without using AnomalyShapeNet [50] for training) on 3D and medical (testing set of BMAD [1]) AD &amp; reasoning. More data, benchmarks, and investigation on a unified model are meaningful.</p>
+
+<h2 class="relative group">6. Conclusion
+    <div id="6-conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this paper, we establish the first large-scale visual instruction tuning dataset, Anomaly-Instruct-125k, and the corresponding benchmark, VisA-D&amp;R, to address the data scarcity issue for visual anomaly detection and reasoning.</p>
+<p>Table 6. Extension to 3D and medical AD &amp; reasoning.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000009_0e752fc2b20f68a0ad92878bd8af7a41fe17bf278685912334955e86a8ce30fe.png"
+    ></figure>
+<p>Then, a specialist MLLM, Anomaly-OV, targeting visual inspection is introduced to serve as the baseline in this domain. Anomaly-OV leverages an anomaly expert to assist the LLM with suspicious visual token selection and presents significant improvements on both traditional ZSAD and text-based anomaly detection and reasoning tasks over existing methods. Extension to 3D and medical domains is demonstrated.</p>
+
+<h2 class="relative group">References
+    <div id="references" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#references" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>[1] Jinan Bao, Hanshi Sun, Hanqiu Deng, Yinsheng He, Zhaoxiang Zhang, and Xingyu Li. Bmad: Benchmarks for medical anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 4042–4053, 2024. 1 , 5 , 6 , 8 , 14</li>
+<li>[2] Paul Bergmann, Michael Fauser, David Sattlegger, and Carsten Steger. Mvtec ad–a comprehensive real-world dataset for unsupervised anomaly detection. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 9592–9600, 2019. 1 , 5 , 6 , 14 , 15</li>
+<li>[3] Paul Bergmann, Michael Fauser, David Sattlegger, and Carsten Steger. Uninformed students: Student-teacher anomaly detection with discriminative latent embeddings. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 4183–4192, 2020. 1</li>
+<li>[4] Paul Bergmann, Xin Jin, David Sattlegger, and Carsten Steger. The mvtec 3d-ad dataset for unsupervised 3d anomaly detection and localization. In Proceedings of the 17th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications. SCITEPRESS - Science and Technology Publications, 2022. 6</li>
+<li>[5] Tri Cao, Jiawen Zhu, and Guansong Pang. Anomaly detection under distribution shift. In Proceedings of the IEEE/CVF International Conference on Computer Vision , pages 6511–6523, 2023. 1</li>
+<li>[6] Yunkang Cao, Jiangning Zhang, Luca Frittoli, Yuqi Cheng, Weiming Shen, and Giacomo Boracchi. Adaclip: Adapting clip with hybrid learnable prompts for zero-shot anomaly detection. In European Conference on Computer Vision , pages 55–72. Springer, 2025. 1 , 2 , 3 , 6 , 7</li>
+<li>[7] Boyuan Chen, Zhuo Xu, Sean Kirmani, Brain Ichter, Dorsa Sadigh, Leonidas Guibas, and Fei Xia. Spatialvlm: Endowing vision-language models with spatial reasoning capabilities. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 14455–14465, 2024. 1</li>
+<li>[8] Lin Chen, Jinsong Li, Xiaoyi Dong, Pan Zhang, Conghui He, Jiaqi Wang, Feng Zhao, and Dahua Lin. Sharegpt4v: Improving large multi-modal models with better captions, 2023. 5 , 14</li>
+<li>[9] Qiyu Chen, Huiyuan Luo, Chengkan Lv, and Zhengtao Zhang. A unified anomaly synthesis strategy with gradient ascent for industrial anomaly detection and localization. arXiv preprint arXiv:2407.09359, 2024. 1</li>
+<li>[10] Runnan Chen, Youquan Liu, Lingdong Kong, Xinge Zhu, Yuexin Ma, Yikang Li, Yuenan Hou, Yu Qiao, and Wenping Wang. Clip2scene: Towards label-efficient 3d scene understanding by clip. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 7020–7030, 2023. 2</li>
+<li>[11] Xuhai Chen, Yue Han, and Jiangning Zhang. April-gan: A zero-/few-shot anomaly classification and segmentation method for cvpr 2023 vand workshop challenge tracks 1&amp;2: 1st place on zero-shot ad and 4th place on few-shot ad, 2023. 2 , 7</li>
+<li>[12] Yuanhong Chen, Yu Tian, Guansong Pang, and Gustavo Carneiro. Deep one-class classification via interpolated gaussian descriptor. In Proceedings of the AAAI Conference on Artificial Intelligence, pages 383–392, 2022. 1</li>
+<li>[13] Zhe Chen, Weiyun Wang, Hao Tian, Shenglong Ye, Zhangwei Gao, Erfei Cui, Wenwen Tong, Kongzhi Hu, Jiapeng Luo, Zheng Ma, Ji Ma, Jiaqi Wang, Xiaoyi Dong, Hang Yan, Hewei Guo, Conghui He, Botian Shi, Zhenjiang Jin, Chao Xu, Bin Wang, Xingjian Wei, Wei Li, Wenjian Zhang, Bo Zhang, Pinlong Cai, Licheng Wen, Xiangchao Yan, Min Dou, Lewei Lu, Xizhou Zhu, Tong Lu, Dahua Lin, Yu Qiao, Jifeng Dai, and Wenhai Wang. How far are we to gpt-4v? closing the gap to commercial multimodal models with opensource suites, 2024. 8</li>
+<li>[14] Zebang Cheng, Zhi-Qi Cheng, Jun-Yan He, Jingdong Sun, Kai Wang, Yuxiang Lin, Zheng Lian, Xiaojiang Peng, and Alexander Hauptmann. Emotion-llama: Multimodal emotion recognition and reasoning with instruction tuning. In Conference on Neural Information Processing Systems , 2024. 1 , 2</li>
+<li>[15] Wenliang Dai, Junnan Li, Dongxu Li, Anthony Tiong, Junqi Zhao, Weisheng Wang, Boyang Li, Pascale Fung, and Steven Hoi. InstructBLIP: Towards general-purpose vision-language models with instruction tuning. In Thirtyseventh Conference on Neural Information Processing Systems, 2023. 1 , 2</li>
+<li>[16] Sergiu Deitsch, Vincent Christlein, Stephan Berger, Claudia Buerhop-Lutz, Andreas Maier, Florian Gallwitz, and Christian Riess. Automatic classification of defective photovoltaic module cells in electroluminescence images. Solar Energy , 185:455–468, 2019. 6</li>
+<li>[17] Chenghao Deng, Haote Xu, Xiaolu Chen, Haodi Xu, Xiaotong Tu, Xinghao Ding, and Yue Huang. Simclip: Refining image-text alignment with simple prompts for zero-/fewshot anomaly detection. In Proceedings of the 32nd ACM International Conference on Multimedia, pages 1761–1770, 2024. 1</li>
+<li>[18] Hanqiu Deng and Xingyu Li. Anomaly detection via reverse distillation from one-class embedding. In IEEE/CVF conference on computer vision and pattern recognition, 2022. 2</li>
+<li>[19] Hanqiu Deng, Zhaoxiang Zhang, Jinan Bao, and Xingyu Li. Anovl: Adapting vision-language models for unified zeroshot anomaly localization. arXiv preprint arXiv:2308.15939 , 2023. 1 , 2 , 7</li>
+<li>[20] Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. Bert: Pre-training of deep bidirectional transformers for language understanding, 2019. 2</li>
+<li>[21] Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, and Neil Houlsby. An image is worth 16x16 words: Transformers for image recognition at scale. In International Conference on Learning Representations, 2021. 3</li>
+<li>[22] Zheng Fang, Xiaoyang Wang, Haocheng Li, Jiejie Liu, Qiugui Hu, and Jimin Xiao. Fastrecon: Few-shot industrial</li>
+</ul>
+<p>anomaly detection via fast feature reconstruction. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 17481–17490, 2023. 2</p>
+<ul>
+<li>[23] Yao Feng, Jing Lin, Sai Kumar Dwivedi, Yu Sun, Priyanka Patel, and Michael J Black. Chatpose: Chatting about 3d human pose. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 2093– 2103, 2024. 3</li>
+<li>[24] Tharindu Fernando, Harshala Gammulle, Simon Denman, Sridha Sridharan, and Clinton Fookes. Deep learning for medical anomaly detection–a survey. ACM Computing Surveys (CSUR), 54(7):1–37, 2021. 1</li>
+<li>[25] Matic Fucka, Vitjan Zavrtanik, and Danijel Sko ˇ ˇ caj. ˇ ˇ Transfusion–a transparency-based diffusion model for anomaly detection. In European conference on computer vision, pages 91–108. Springer, 2025. 1</li>
+<li>[26] Google. Google-images-search 1.4.7, 2024. https:// pypi.org/project/Google-Images-Search . 6 , 14</li>
+<li>[27] Zhaopeng Gu, Bingke Zhu, Guibo Zhu, Yingying Chen, Hao Li, Ming Tang, and Jinqiao Wang. Filo: Zero-shot anomaly detection by fine-grained description and high-quality localization. In Proceedings of the 32nd ACM International Conference on Multimedia, pages 2041–2049, 2024. 1</li>
+<li>[28] Zhaopeng Gu, Bingke Zhu, Guibo Zhu, Yingying Chen, Ming Tang, and Jinqiao Wang. Anomalygpt: Detecting industrial anomalies using large vision-language models. In Proceedings of the AAAI Conference on Artificial Intelligence, pages 1932–1940, 2024. 1 , 2 , 3 , 5</li>
+<li>[29] Yuxiang Guo, Faizan Siddiqui, Yang Zhao, Rama Chellappa, and Shao-Yuan Lo. Stimuvar: Spatiotemporal stimuli-aware video affective reasoning with multimodal large language models. arXiv preprint arXiv:2409.00304, 2024. 1 , 2</li>
+<li>[30] Ahmed Hamada. Br35h: Brain tumor detection 2020, 2020. 6</li>
+<li>[31] Changhee Han, Leonardo Rundo, Kohei Murao, Tomoyuki Noguchi, Yuki Shimahara, Zoltan´ ´ Ad ´ am Milacski, Saori ´ ´ Koshino, Evis Sala, Hideki Nakayama, and Shin&rsquo;ichi Satoh. Madgan: Unsupervised medical anomaly detection gan using multiple adjacent brain mri slice reconstruction. BMC bioinformatics, 22:1–20, 2021. 1</li>
+<li>[32] Liren He, Zhengkai Jiang, Jinlong Peng, Liang Liu, Qiangang Du, Xiaobin Hu, Wenbing Zhu, Mingmin Chi, Yabiao Wang, and Chengjie Wang. Learning unified reference representation for unsupervised multi-class anomaly detection. arXiv preprint arXiv:2403.11561, 2024. 1</li>
+<li>[33] Chih-Hui Ho, Kuan-Chuan Peng, and Nuno Vasconcelos. Long-tailed anomaly detection with learnable class names. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 12435–12446, 2024.</li>
+<li>[34] Jinlei Hou, Yingying Zhang, Qiaoyong Zhong, Di Xie, Shiliang Pu, and Hong Zhou. Divide-and-assemble: Learning block-wise memory for unsupervised anomaly detection. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 8791–8800, 2021. 1</li>
+<li>[35] Chaoqin Huang, Haoyan Guan, Aofan Jiang, Ya Zhang, Michael Spratling, and Yan-Feng Wang. Registration based</li>
+</ul>
+<ol start="14">
+<li>few-shot anomaly detection. In European Conference on Computer Vision, pages 303–319. Springer, 2022. 1 , 2</li>
+</ol>
+<ul>
+<li>
+<p>[36] Chaoqin Huang, Aofan Jiang, Jinghao Feng, Ya Zhang, Xinchao Wang, and Yanfeng Wang. Adapting visual-language models for generalizable anomaly detection in medical images. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 11375–11385, 2024. 1 , 2</p>
+</li>
+<li>
+<p>[37] Brian KS Isaac-Medina, Yona Falinie A Gaus, Neelanjan Bhowmik, and Toby P Breckon. Towards open-world objectbased anomaly detection via self-supervised outlier synthesis. In European Conference on Computer Vision (ECCV) , 2024. 1</p>
+</li>
+<li>
+<p>[38] Jongheon Jeong, Yang Zou, Taewan Kim, Dongqing Zhang, Avinash Ravichandran, and Onkar Dabeer. Winclip: Zero/few-shot anomaly classification and segmentation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 19606–19616, 2023. 1 , 2 , 7</p>
+</li>
+<li>
+<p>[39] Stepan Jezek, Martin Jonak, Radim Burget, Pavel Dvorak, and Milos Skotak. Deep learning-based defect detection of metal parts: evaluating current methods in complex conditions. In 2021 13th International congress on ultra modern telecommunications and control systems and workshops (ICUMT), pages 66–71. IEEE, 2021. 6</p>
+</li>
+<li>
+<p>[40] Pranita Balaji Kanade and PP Gumaste. Brain tumor detection using mri images. Brain, 3(2):146–150, 2015. 6</p>
+</li>
+<li>
+<p>[41] Felipe Campos Kitamura. Head ct - hemorrhage, 2018. 6</p>
+</li>
+<li>
+<p>[42] Mingyu Lee and Jongwon Choi. Text-guided variational image generation for industrial anomaly detection and segmentation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 26519– 26528, 2024. 1</p>
+</li>
+<li>
+<p>[43] Aodong Li, Chen Qiu, Marius Kloft, Padhraic Smyth, Maja Rudolph, and Stephan Mandt. Zero-shot anomaly detection via batch normalization. Advances in Neural Information Processing Systems, 36, 2024. 1</p>
+</li>
+<li>
+<p>[44] Bo Li, Yuanhan Zhang, Dong Guo, Renrui Zhang, Feng Li, Hao Zhang, Kaichen Zhang, Peiyuan Zhang, Yanwei Li, Ziwei Liu, and Chunyuan Li. Llava-onevision: Easy visual task transfer, 2024. 1 , 3 , 7 , 8 , 15</p>
+</li>
+<li>
+<p>[45] Chunyuan Li, Cliff Wong, Sheng Zhang, Naoto Usuyama, Haotian Liu, Jianwei Yang, Tristan Naumann, Hoifung Poon, and Jianfeng Gao. LLaVA-med: Training a large languageand-vision assistant for biomedicine in one day. In Thirtyseventh Conference on Neural Information Processing Systems Datasets and Benchmarks Track, 2023. 1 , 15</p>
+</li>
+<li>
+<p>[46] Chun-Liang Li, Kihyuk Sohn, Jinsung Yoon, and Tomas Pfister. Cutpaste: Self-supervised learning for anomaly detection and localization. In IEEE/CVF conference on computer vision and pattern recognition, 2021. 2</p>
+</li>
+<li>
+<p>[47] Feng Li, Renrui Zhang, Hao Zhang, Yuanhan Zhang, Bo Li, Wei Li, Zejun Ma, and Chunyuan Li. Llava-next-interleave: Tackling multi-image, video, and 3d in large multimodal models. arXiv preprint arXiv:2407.07895, 2024. 1 , 3</p>
+</li>
+<li>
+<p>[48] Junnan Li, Dongxu Li, Caiming Xiong, and Steven Hoi. Blip: Bootstrapping language-image pre-training for unified vision-language understanding and generation. In Interna-</p>
+</li>
+<li>
+<p>tional conference on machine learning, pages 12888–12900. PMLR, 2022. 1 , 2</p>
+</li>
+<li>
+<p>[49] Junnan Li, Dongxu Li, Silvio Savarese, and Steven Hoi. Blip2: Bootstrapping language-image pre-training with frozen image encoders and large language models. In International conference on machine learning, pages 19730–19742. PMLR, 2023. 2 , 4</p>
+</li>
+<li>
+<p>[50] Wenqiao Li, Xiaohao Xu, Yao Gu, Bozhong Zheng, Shenghua Gao, and Yingna Wu. Towards scalable 3d anomaly detection and localization: A benchmark via 3d anomaly synthesis and a self-supervised learning network. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 22207–22216, 2024. 6 , 8</p>
+</li>
+<li>
+<p>[51] Xiaofan Li, Zhizhong Zhang, Xin Tan, Chengwei Chen, Yanyun Qu, Yuan Xie, and Lizhuang Ma. Promptad: Learning prompts with only normal samples for few-shot anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 16838– 16848, 2024. 1 , 2</p>
+</li>
+<li>
+<p>[52] Yiting Li, Adam Goodge, Fayao Liu, and Chuan-Sheng Foo. Promptad: Zero-shot anomaly detection using text prompts. In Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision, pages 1093–1102, 2024. 1</p>
+</li>
+<li>
+<p>[53] Feng Liang, Bichen Wu, Xiaoliang Dai, Kunpeng Li, Yinan Zhao, Hang Zhang, Peizhao Zhang, Peter Vajda, and Diana Marculescu. Open-vocabulary semantic segmentation with mask-adapted clip. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 7061–7070, 2023. 2</p>
+</li>
+<li>
+<p>[54] Chin-Yew Lin. Rouge: A package for automatic evaluation of summaries. In Text summarization branches out, pages 74–81, 2004. 6</p>
+</li>
+<li>
+<p>[55] Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva Ramanan, Piotr Dollar, and C Lawrence ´ ´ Zitnick. Microsoft coco: Common objects in context. In Computer Vision–ECCV 2014: 13th European Conference, Zurich, Switzerland, September 6-12, 2014, Proceedings, Part V 13, pages 740–755. Springer, 2014. 5</p>
+</li>
+<li>
+<p>[56] Yuqi Lin, Minghao Chen, Wenxiao Wang, Boxi Wu, Ke Li, Binbin Lin, Haifeng Liu, and Xiaofei He. Clip is also an efficient segmenter: A text-driven approach for weakly supervised semantic segmentation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 15305–15314, 2023. 2</p>
+</li>
+<li>
+<p>[57] Haotian Liu, Chunyuan Li, Qingyang Wu, and Yong Jae Lee. Visual instruction tuning. In Thirty-seventh Conference on Neural Information Processing Systems, 2023. 1 , 2 , 3 , 5 , 6 , 16</p>
+</li>
+<li>
+<p>[58] Haotian Liu, Chunyuan Li, Yuheng Li, and Yong Jae Lee. Improved baselines with visual instruction tuning. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 26296–26306, 2024. 1</p>
+</li>
+<li>
+<p>[59] Haotian Liu, Chunyuan Li, Yuheng Li, Bo Li, Yuanhan Zhang, Sheng Shen, and Yong Jae Lee. Llava-next: Improved reasoning, ocr, and world knowledge, 2024. 3</p>
+</li>
+<li>
+<p>[60] Jiaqi Liu, Guoyang Xie, ruitao chen, Xinpeng Li, Jinbao Wang, Yong Liu, Chengjie Wang, and Feng Zheng. Real3d-</p>
+</li>
+<li>
+<p>AD: A dataset of point cloud anomaly detection. In Thirtyseventh Conference on Neural Information Processing Systems Datasets and Benchmarks Track, 2023. 6</p>
+</li>
+<li>
+<p>[61] Jie Liu, Yixiao Zhang, Jie-Neng Chen, Junfei Xiao, Yongyi Lu, Bennett A Landman, Yixuan Yuan, Alan Yuille, Yucheng Tang, and Zongwei Zhou. Clip-driven universal model for organ segmentation and tumor detection. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 21152–21164, 2023. 2</p>
+</li>
+<li>
+<p>[62] Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke Zettlemoyer, and Veselin Stoyanov. Roberta: A robustly optimized bert pretraining approach, 2019. 2</p>
+</li>
+<li>
+<p>[63] Shao-Yuan Lo, Poojan Oza, and Vishal M Patel. Adversarially robust one-class novelty detection. In IEEE Transactions on Pattern Analysis and Machine Intelligence, 2022. 2</p>
+</li>
+<li>
+<p>[64] Ilya Loshchilov and Frank Hutter. SGDR: Stochastic gradient descent with warm restarts. In International Conference on Learning Representations, 2017. 15</p>
+</li>
+<li>
+<p>[65] Ilya Loshchilov and Frank Hutter. Decoupled weight decay regularization. In International Conference on Learning Representations, 2019. 15</p>
+</li>
+<li>
+<p>[66] Pan Lu, Swaroop Mishra, Tanglin Xia, Liang Qiu, Kai-Wei Chang, Song-Chun Zhu, Oyvind Tafjord, Peter Clark, and Ashwin Kalyan. Learn to explain: Multimodal reasoning via thought chains for science question answering. Advances in Neural Information Processing Systems, 35:2507–2521, 2022. 2</p>
+</li>
+<li>
+<p>[67] Hui Lv and Qianru Sun. Video anomaly detection and explanation via large language models. arXiv preprint arXiv:2401.05702, 2024. 1 , 2</p>
+</li>
+<li>
+<p>[68] Pankaj Mishra, Riccardo Verk, Daniele Fornasier, Claudio Piciarelli, and Gian Luca Foresti. Vt-adl: A vision transformer network for image anomaly detection and localization. In 2021 IEEE 30th International Symposium on Industrial Electronics (ISIE), pages 01–06. IEEE, 2021. 6</p>
+</li>
+<li>
+<p>[69] Shancong Mou, Xiaoyi Gu, Meng Cao, Haoping Bai, Ping Huang, Jiulong Shan, and Jianjun Shi. RGI: robust GANinversion for mask-free image inpainting and unsupervised pixel-wise anomaly detection. In The Eleventh International Conference on Learning Representations, 2023. 1 , 2</p>
+</li>
+<li>
+<p>[70] Ming Nie, Renyuan Peng, Chunwei Wang, Xinyue Cai, Jianhua Han, Hang Xu, and Li Zhang. Reason2drive: Towards interpretable and chain-based reasoning for autonomous driving. In European Conference on Computer Vision, pages 292–308. Springer, 2025. 1</p>
+</li>
+<li>
+<p>[71] OpenAI. Gpt-4v(ision) system card, 2023. https:// openai.com/index/gpt-4v-system-card . 5 , 8</p>
+</li>
+<li>
+<p>[72] OpenAI. Gpt-4o system card, 2024. https://openai. com/index/gpt-4o-system-card . 2 , 5 , 6 , 7 , 8 , 14 , 15</p>
+</li>
+<li>
+<p>[73] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, et al. Learning transferable visual models from natural language supervision. In International conference on machine learning , pages 8748–8763. PMLR, 2021. 2 , 3 , 7 , 14</p>
+</li>
+<li>
+<p>[74] Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael Matena, Yanqi Zhou, Wei Li, and Peter J. Liu. Exploring the limits of transfer learning with a unified text-to-text transformer, 2023. 2</p>
+</li>
+<li>
+<p>[75] Nils Reimers and Iryna Gurevych. Sentence-bert: Sentence embeddings using siamese bert-networks, 2019. 6</p>
+</li>
+<li>
+<p>[76] Tal Reiss and Yedid Hoshen. Mean-shifted contrastive loss for anomaly detection. In Proceedings of the AAAI Conference on Artificial Intelligence, pages 2155–2162, 2023. 1</p>
+</li>
+<li>
+<p>[77] Karsten Roth, Latha Pemula, Joaquin Zepeda, Bernhard Scholkopf, Thomas Brox, and Peter Gehler. Towards total ¨ ¨ recall in industrial anomaly detection. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 14318–14328, 2022. 1 , 2</p>
+</li>
+<li>
+<p>[78] Fumiaki Sato, Ryo Hachiuma, and Taiki Sekii. Promptguided zero-shot anomaly action recognition using pretrained deep skeleton features. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 6471–6480, 2023. 1</p>
+</li>
+<li>
+<p>[79] Eli Schwartz, Assaf Arbelle, Leonid Karlinsky, Sivan Harary, Florian Scheidegger, Sivan Doveh, and Raja Giryes. Maeday: Mae for few-and zero-shot anomaly-detection. Computer Vision and Image Understanding, 241:103958, 2024. 1</p>
+</li>
+<li>
+<p>[80] Pierre Sermanet, Tianli Ding, Jeffrey Zhao, Fei Xia, Debidatta Dwibedi, Keerthana Gopalakrishnan, Christine Chan, Gabriel Dulac-Arnold, Sharath Maddineni, Nikhil J Joshi, et al. Robovqa: Multimodal long-horizon reasoning for robotics. In 2024 IEEE International Conference on Robotics and Automation (ICRA), pages 645–652. IEEE, 2024. 1</p>
+</li>
+<li>
+<p>[81] Javier Silvestre-Blanes, Teresa Albero-Albero, Ignacio Miralles, Ruben P ´ ´ erez-Llorens, and Jorge Moreno. A public ´ ´ fabric database for defect detection methods and results. Autex Research Journal, 19(4):363–374, 2019. 6</p>
+</li>
+<li>
+<p>[82] Luc PJ Strater, Mohammadreza Salehi, Efstratios Gavves, ¨ ¨ Cees GM Snoek, and Yuki M Asano. Generalad: Anomaly detection across domains by attending to distorted features. arXiv preprint arXiv:2407.12427, 2024. 1</p>
+</li>
+<li>
+<p>[83] Haomiao Sun, Mingjie He, Tianheng Lian, Hu Han, and Shiguang Shan. Face-mllm: A large face perception model, 2024. 3</p>
+</li>
+<li>
+<p>[84] Jiaqi Tang, Hao Lu, Xiaogang Xu, Ruizheng Wu, Sixing Hu, Tong Zhang, Tsz Wa Cheng, Ming Ge, Ying-Cong Chen, and Fugee Tsung. An incremental unified framework for small defect inspection. In European Conference on Computer Vision, pages 307–324. Springer, 2025. 1</p>
+</li>
+<li>
+<p>[85] Tran Dinh Tien, Anh Tuan Nguyen, Nguyen Hoang Tran, Ta Duc Huy, Soan Duong, Chanh D Tr Nguyen, and Steven QH Truong. Revisiting reverse distillation for anomaly detection. In IEEE/CVF conference on computer vision and pattern recognition, 2023. 2</p>
+</li>
+<li>
+<p>[86] Hualiang Wang, Yi Li, Huifeng Yao, and Xiaomeng Li. Clipn for zero-shot ood detection: Teaching clip to say no. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 1802–1812, 2023. 2</p>
+</li>
+<li>
+<p>[87] Peng Wang, Shuai Bai, Sinan Tan, Shijie Wang, Zhihao Fan, Jinze Bai, Keqin Chen, Xuejing Liu, Jialin Wang, Wenbin Ge, Yang Fan, Kai Dang, Mengfei Du, Xuancheng Ren, Rui Men, Dayiheng Liu, Chang Zhou, Jingren Zhou, and Junyang Lin. Qwen2-vl: Enhancing vision-language model&rsquo;s perception of the world at any resolution, 2024. 8</p>
+</li>
+<li>
+<p>[88] Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Fei Xia, Ed Chi, Quoc V Le, Denny Zhou, et al. Chain-of-thought prompting elicits reasoning in large language models. In Conference on Neural Information Processing Systems, 2022. 2</p>
+</li>
+<li>
+<p>[89] Qi Wei, Yinhao Ren, Rui Hou, Bibo Shi, Joseph Y Lo, and Lawrence Carin. Anomaly detection for medical images based on a one-class classification. In Medical Imaging 2018: Computer-Aided Diagnosis, pages 375–380. SPIE, 2018. 1</p>
+</li>
+<li>
+<p>[90] Julia Wolleb, Florentin Bieder, Robin Sandkuhler, and ¨ ¨ Philippe C Cattin. Diffusion models for medical anomaly detection. In International Conference on Medical image computing and computer-assisted intervention, pages 35–45. Springer, 2022. 1</p>
+</li>
+<li>
+<p>[91] Binzhu Xie, Sicheng Zhang, Zitang Zhou, Bo Li, Yuanhan Zhang, Jack Hessel, Jingkang Yang, and Ziwei Liu. Funqa: Towards surprising video comprehension. In European Conference on Computer Vision, pages 39–57. Springer, 2025. 1</p>
+</li>
+<li>
+<p>[92] Guoyang Xie, Jinbao Wang, Jiaqi Liu, Yaochu Jin, and Feng Zheng. Pushing the limits of fewshot anomaly detection in industry vision: Graphcore. In The Eleventh International Conference on Learning Representations, 2023. 1</p>
+</li>
+<li>
+<p>[93] Hongxia Xie, Chu-Jun Peng, Yu-Wen Tseng, Hung-Jen Chen, Chan-Feng Hsu, Hong-Han Shuai, and Wen-Huang Cheng. Emovit: Revolutionizing emotion insights with visual instruction tuning. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 26596–26605, 2024. 3</p>
+</li>
+<li>
+<p>[94] Yuchen Yang, Kwonjoon Lee, Behzad Dariush, Yinzhi Cao, and Shao-Yuan Lo. Follow the rules: reasoning for video anomaly detection with large language models. arXiv preprint arXiv:2407.10299, 2024. 1 , 2</p>
+</li>
+<li>
+<p>[95] Hang Yao, Ming Liu, Haolin Wang, Zhicun Yin, Zifei Yan, Xiaopeng Hong, and Wangmeng Zuo. Glad: Towards better reconstruction with global and local adaptive diffusion models for unsupervised anomaly detection. arXiv preprint arXiv:2406.07487, 2024. 1</p>
+</li>
+<li>
+<p>[96] Huanjin Yao, Wenhao Wu, Taojiannan Yang, YuXin Song, Mengxi Zhang, Haocheng Feng, Yifan Sun, Zhiheng Li, Wanli Ouyang, and Jingdong Wang. Dense connector for mllms, 2024. 17</p>
+</li>
+<li>
+<p>[97] Xincheng Yao, Ruoqi Li, Zefeng Qian, Lu Wang, and Chongyang Zhang. Hierarchical gaussian mixture normalizing flow modeling for unified anomaly detection. arXiv preprint arXiv:2403.13349, 2024. 1</p>
+</li>
+<li>
+<p>[98] Zhiyuan You, Lei Cui, Yujun Shen, Kai Yang, Xin Lu, Yu Zheng, and Xinyi Le. A unified model for multi-class anomaly detection. In Advances in Neural Information Processing Systems, 2022. 1</p>
+</li>
+<li>
+<p>[99] Vitjan Zavrtanik, Matej Kristan, and Danijel Skocaj. Draem- ˇ ˇ a discriminatively trained reconstruction embedding for surface anomaly detection. In IEEE/CVF international conference on computer vision, 2021. 2</p>
+</li>
+<li>
+<p>[100] Xiaohua Zhai, Basil Mustafa, Alexander Kolesnikov, and Lucas Beyer. Sigmoid loss for language image pre-training. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 11975–11986, 2023. 3</p>
+</li>
+<li>
+<p>[101] Pan Zhang, Xiaoyi Dong, Yuhang Zang, Yuhang Cao, Rui Qian, Lin Chen, Qipeng Guo, Haodong Duan, Bin Wang, Linke Ouyang, Songyang Zhang, Wenwei Zhang, Yining Li, Yang Gao, Peng Sun, Xinyue Zhang, Wei Li, Jingwen Li, Wenhai Wang, Hang Yan, Conghui He, Xingcheng Zhang, Kai Chen, Jifeng Dai, Yu Qiao, Dahua Lin, and Jiaqi Wang. Internlm-xcomposer-2.5: A versatile large vision language model supporting long-contextual input and output, 2024. 8</p>
+</li>
+<li>
+<p>[102] Xuan Zhang, Shiyu Li, Xi Li, Ping Huang, Jiulong Shan, and Ting Chen. Destseg: Segmentation guided denoising studentteacher for anomaly detection. In IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2023. 2</p>
+</li>
+<li>
+<p>[103] Ximiao Zhang, Min Xu, Dehui Qiu, Ruixin Yan, Ning Lang, and Xiuzhuang Zhou. Mediclip: Adapting clip for fewshot medical image anomaly detection. In International Conference on Medical Image Computing and ComputerAssisted Intervention, pages 458–468. Springer, 2024. 1</p>
+</li>
+<li>
+<p>[104] Ximiao Zhang, Min Xu, and Xiuzhuang Zhou. Realnet: A feature selection network with realistic synthetic anomaly for anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 16699–16708, 2024. 1</p>
+</li>
+<li>
+<p>[105] Zhuosheng Zhang, Aston Zhang, Mu Li, hai zhao, George Karypis, and Alex Smola. Multimodal chain-of-thought reasoning in language models. Transactions on Machine Learning Research, 2024. 2</p>
+</li>
+<li>
+<p>[106] He Zhao, Yuexiang Li, Nanjun He, Kai Ma, Leyuan Fang, Huiqi Li, and Yefeng Zheng. Anomaly detection for medical images using self-supervised and translation-consistent features. IEEE Transactions on Medical Imaging, 40(12): 3641–3651, 2021. 1</p>
+</li>
+<li>
+<p>[107] Gengze Zhou, Yicong Hong, and Qi Wu. Navgpt: Explicit reasoning in vision-and-language navigation with large language models. In Proceedings of the AAAI Conference on Artificial Intelligence, pages 7641–7649, 2024. 1</p>
+</li>
+<li>
+<p>[108] Kaiyang Zhou, Jingkang Yang, Chen Change Loy, and Ziwei Liu. Learning to prompt for vision-language models. International Journal of Computer Vision, 130(9):2337–2348, 2022. 7</p>
+</li>
+<li>
+<p>[109] Kaiwen Zhou, Kwonjoon Lee, Teruhisa Misu, and Xin Eric Wang. Vicor: Bridging visual understanding and commonsense reasoning with large language models. In Findings of the Association for Computational Linguistics, 202&rsquo;. 1 , 2</p>
+</li>
+<li>
+<p>[110] Qihang Zhou, Guansong Pang, Yu Tian, Shibo He, and Jiming Chen. AnomalyCLIP: Object-agnostic prompt learning for zero-shot anomaly detection. In The Twelfth International Conference on Learning Representations, 2024. 1 , 2 , 3 , 6 , 7</p>
+</li>
+<li>
+<p>[111] Deyao Zhu, Jun Chen, Xiaoqian Shen, Xiang Li, and Mohamed Elhoseiny. MiniGPT-4: Enhancing vision-language</p>
+</li>
+</ul>
+<p>understanding with advanced large language models. In The Twelfth International Conference on Learning Representations, 2024. 1 , 2</p>
+<ul>
+<li>[112] Jiawen Zhu and Guansong Pang. Toward generalist anomaly detection via in-context residual learning with few-shot sample prompts. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 17826– 17836, 2024. 1 , 2</li>
+<li>[113] Jiaqi Zhu, Shaofeng Cai, Fang Deng, Beng Chin Ooi, and Junran Wu. Do llms understand visual anomalies? uncovering llm&rsquo;s capabilities in zero-shot anomaly detection. In Proceedings of the 32nd ACM International Conference on Multimedia, pages 48–57, 2024. 1</li>
+<li>[114] Jiawen Zhu, Yew-Soon Ong, Chunhua Shen, and Guansong Pang. Fine-grained abnormality prompt learning for zeroshot anomaly detection, 2024. 7</li>
+<li>[115] Yang Zou, Jongheon Jeong, Latha Pemula, Dongqing Zhang, and Onkar Dabeer. Spot-the-difference self-supervised pretraining for anomaly detection and segmentation. In European Conference on Computer Vision, pages 392–408. Springer, 2022. 6 , 15</li>
+</ul>
+
+<h2 class="relative group">A1. Dataset Establishment
+    <div id="a1-dataset-establishment" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a1-dataset-establishment" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">A1.1. How to highlight the anomaly?
+    <div id="a11-how-to-highlight-the-anomaly" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a11-how-to-highlight-the-anomaly" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">Prompt Example: Bubble Inside the Capsule
+    <div id="prompt-example-bubble-inside-the-capsule" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#prompt-example-bubble-inside-the-capsule" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000010_67f71dfb06ee557fbe98d3c30d5850fca21d314db1038ba70174f6a9dec78eae.png"
+    ></figure>
+<p>User Do you observe any anomalies in the image?</p>
+<p>GPT-4o The image shows green gel capsules that appear uniform in size, shape, and color. Upon inspection, no obvious anomalies such as broken capsules, irregular shapes, or unexpected colors are visible.</p>
+<p>Let’s draw a bounding box around the anomaly!</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000011_295672040541abe8e786589b700a29fe43d3fe791229b7e24accee8cedc92e58.png"
+    ></figure>
+<p>User Do you observe any anomalies in the image?</p>
+<p>GPT-4o</p>
+<p>Yes, there appears to be an anomaly in the image. One of the capsules, marked with a red box, has a noticeable defect. It seems to have a bubble or an air pocket inside, which is not observed in the other capsules.</p>
+<p>This could indicate a manufacturing defect or inconsistency in the capsule filling process.</p>
+<p>If there is no bounding box, let’s give a short hint to GPT-4o!</p>
+<p>User</p>
+<p>Do you observe any anomalies in the image? (hint: a bubble in the capsule)</p>
+<p>GPT-4o The anomaly in the image is the presence of a visible air bubble inside one of the green gel capsules. While most capsules appear uniformly filled with liquid, the capsule located near the top center of the image has a small, clear air pocket within it. This could be a result of incomplete filling during the manufacturing process or an issue with the capsule sealing.</p>
+<p>Table 7. Comparison of the GPT-4o [72] outputs with and without visual and textual hints for the anomaly.</p>
+<p>As shown in Table 7, recent advanced MLLMs like GPT4o fail to detect the anomalies in the image, so building the instruction tuning dataset using previous methods [8] is impractical. However, we observe that when the GPT-4o is provided some &ldquo;hints&rdquo;, it presents impressive performance on anomaly reasoning or description. For example, a red bounding box drawn around the anomalous area enables GPT-4o to detect the tiny bubble inside the small capsule. This observation indicates that the anomaly information is already contained in the visual tokens, and the failure of existing MLLMs is because the language model cannot effectively pick out the related tokens, which is the major inspiration of our token-picking mechanism.</p>
+<p>Most of the existing AD datasets, such as MVTec AD [2], contain anomaly masks for anomaly localization. Therefore, we leverage these masks to generate the bounding boxes on the images. Specifically, the masks for an anomalous image are dilated and merged (if two masks are too close) before calculating the coordinates of the bounding boxes. Similarly, the image with bounding boxes drawn on it will serve as the visual prompt for GPT-4o. We also tried many other ways to utilize the anomaly masks, such as highlighting the mask area with different colors, consecutively providing the image and mask, and converting the normalized coordinates of the bounding box into a text prompt. None of them can as effectively guide the GPT-4o in finding anomalous features as drawing bounding boxes on the image.</p>
+
+<h2 class="relative group">A1.2. WebAD – The largest AD dataset
+    <div id="a12-webad--the-largest-ad-dataset" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a12-webad--the-largest-ad-dataset" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Existing industrial or medical anomaly detection datasets, such as MVTec AD [2] and BMAD [1], only contain a limited number of classes (&lt; 20) and several different anomaly types for each class (most of the anomaly types are similar) due to the collection of these kinds of anomaly images involves extensive human involvements. This limitation hinders the ZSAD model from learning a generic description of anomaly and normal patterns. Also, the MLLMs cannot obtain enough knowledge of visual anomaly descriptions for unseen anomaly types. Therefore, more diverse data is required for a robust ZSAD &amp; reasoning model. Many recent dataset works collect and annotate online images to enrich existing datasets and demonstrate their effectiveness in the training of current data-hungry deep learning models.</p>
+<p>To collect the online images that can be utilized for anomaly detection, we design an automatic data collection pipeline by combining GPT-4o [72] and Google Image Search [26]. As shown in Figure 8, we first employ GPT-4o to list 400 class names commonly seen in our daily life. Then, for each class, the GPT-4o is asked to generate 10 corresponding anomalous and normal phrases based on the class name. The abnormality or normality descriptions indicated by these phrases are specifically suitable for the class name. These phrases will serve as the search prompts to query the image links in Google Image Search. However, the downloaded images are very &ldquo;dirty&rdquo; and contain many noise samples and duplications. For example, the collected anomaly set contains lots of normal images, and vice versa. A data-cleaning step is applied after the image collection.</p>
+<p>Since the duplications mainly occur within a specific class, we extract the CLIP [73] features for all the images in the class and compare the cosine similarity of these features. If the similarity value is larger than 0 . 99, then one of the images will be removed. To deal with the problematic grouping of anomaly and normal images, we combine the image and its corresponding search prompt and give them to GPT-4o for normal and anomaly classification. In the system prompt, we explicitly tell the GPT-4o that the search prompt is just a hint and not always correct and ask GPT-4o</p>
+<p>Figure 8. Automatic data collection pipeline for WebAD. The entire pipeline is fully automatic at an affordable cost (API usage). Other advanced open-sourced MLLMs can applied to replace GPT-4o for further reduction of cost.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000012_fe970e10b473592088e859e24dd5ccbec0f813bf28df24f8ba909f355da6cca6.png"
+    ></figure>
+<p>to determine the normality and abnormality by itself. This step will remove the images with incorrect labels and the artificial images, such as cartons or art. Some samples in the collected WebAD dataset are shown in Figure 9. In total, WebAD contains around 72k images from 380 classes and more than 5 anomaly types for each class.</p>
+
+<h2 class="relative group">A1.3. Instruction Data Generation
+    <div id="a13-instruction-data-generation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a13-instruction-data-generation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>For existing datasets, we manually combine the anomaly type and the class name to create the short anomaly prompt (hint). Then, the image with or without the bounding boxes and the corresponding short prompt are utilized to prompt GPT-4o for the generation of detailed descriptions of the image and the anomalies. These descriptions contain all the information required for instruction-following data. The in-context learning strategy is implemented to generate the multi-round conversation data (see Figure 10). Questions designed to elicit a one-word answer are utilized to balance the distribution of the normal and anomaly samples.</p>
+
+<h2 class="relative group">A2. Training Details
+    <div id="a2-training-details" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a2-training-details" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In the professional training stage, we leverage AdamW [65] to be the optimizer and CosineAnnealingWarmRestarts [64] as the learning rate scheduler. The initial learning rate is set to be 1e − 4, and the restart iteration is half of the single epoch. The anomaly expert is trained on 8 H100 GPUs for 2 epochs (2 hours), and the total batch size is 128. In the instruction tuning stage, we follow the default training setting of LLaVA-OneVision [44] (reduce the batch size to 128), and the total training time for 0.5B and 7B models are 7 hours and 50 hours on 8 H100, respectively. When sampling the instruction data from the original recipe of LLaVA-OneVision , we put more emphasis on low-level image understanding and 3D multi-view Q&amp;A, considering that anomaly detection originates from the low-level feature differences and the</p>
+<p>3D anomaly detection requires multi-image understanding. Besides, for more knowledge in the medical domain, the model is also fed with the data from LLaVA-Med [45].</p>
+
+<h2 class="relative group">A3. Experimental Results
+    <div id="a3-experimental-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a3-experimental-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">A3.1. Anomaly Detection
+    <div id="a31-anomaly-detection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a31-anomaly-detection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Similar to previous ZSAD works, the detailed image-level AUROC results for the anomaly expert of Anomaly-OV on VisA [115] and MVTec AD [2] are provided in Table 8 .</p>
+
+<h2 class="relative group">A3.2. Anomaly Reasoning
+    <div id="a32-anomaly-reasoning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a32-anomaly-reasoning" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Table 9 to 13 presents more comparison results of GPT-4o [72], LLaVA-OneVision [44], and Anomaly-OV on AD &amp; reasoning. Anomaly-OV shows better performance in the detection and description of the visual anomalies in the images. Table 14 demonstrates the low-level and complex reasoning capability of Anomaly-OV for an in-the-wild image, indicating a comprehensive understanding of the anomaly.</p>
+
+<h2 class="relative group">A4. Limitation and Future Work
+    <div id="a4-limitation-and-future-work" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a4-limitation-and-future-work" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Limitation. As shown in Table 15, sometimes, AnomalyOV fails to provide an accurate classification of the target object, describes the anomaly by a general word (wax missing is described by &ldquo;crack&rdquo;), or presents wrong reasoning with hallucination. Also, there is still a large space for improvement in the detection performance of Anomaly-OV. Besides, the images contained in VisA-D&amp;R are from the industrial domain, so more benchmarks in other domains, such as 3D and medical anomaly detection, are required to evaluate a unified AD &amp; reasoning model.</p>
+<p>Future Work. The detection performance of Anomaly-OV is highly determined by the anomaly expert (see Table 4), so a more advanced design of the expert model is recommended</p>
+<p>Figure 9. Overview of the gallery for in-the-wild image samples in WebAD. The images on the left side are anomalous, while the right side is for normal images. The links to download these images will be released to avoid copyright issues.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000013_cf284e92dcd28754146a8393d06de0c82efa1b8996aeac2e1c225288abd6ca5b.png"
+    ></figure>
+<p>Figure 10. Prompt template for generating multi-round conversation in Anomaly-Instruct-125k (modified from the template of LLaVA [57]).</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000014_3f75231d54ec56f58cd59ee53c65bc8637847fb296e6bce62373e80cf8ea9e10.png"
+    ></figure>
+<p>in future research. One can change the base model to other open-sourced MLLMs to resolve the wrong classification issue. Also, we found that the diversity of the anomaly type is very limited in existing industrial anomaly datasets (mainly &lsquo;crack&rsquo; or &lsquo;broken&rsquo;), causing the assistant to fail to provide fine-grained anomaly reasoning or description for unseen anomaly features. Therefore, a more diverse industrial anomaly detection dataset is urgently required. Similar to other traditional MLLMs, Anomaly-OV only utilizes the output visual tokens from the last layer of the visual encoder as the input for LLM. However, anomaly detection is highly dependent on low-level visual clues. Hence, forwarding</p>
+<p>Table 8. Per-class image-level AUROC of the anomaly expert of Anomaly-OV on VisA and MVTec AD.</p>
+<table>
+  <thead>
+      <tr>
+          <th>VisA</th>
+          <th>capsules</th>
+          <th>fryum</th>
+          <th>cashew</th>
+          <th>macaroni1</th>
+          <th>macaroni2</th>
+          <th>candle</th>
+          <th>pipe fryum</th>
+          <th>chewinggum</th>
+          <th>pcb1</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>AUROC</td>
+          <td>98.6</td>
+          <td>93.4</td>
+          <td>93.9</td>
+          <td>91.1</td>
+          <td>70.3</td>
+          <td>96.5</td>
+          <td>99.0</td>
+          <td>96.4</td>
+          <td>90.3</td>
+      </tr>
+      <tr>
+          <td>AUROC</td>
+          <td>pcb2</td>
+          <td>pcb3</td>
+          <td>pcb4</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>AUROC</td>
+          <td>87.7</td>
+          <td>86.6</td>
+          <td>90.0</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>MVTec AD</td>
+          <td>bottle</td>
+          <td>cable</td>
+          <td>grid</td>
+          <td>apsule</td>
+          <td>tile</td>
+          <td>pill</td>
+          <td>screw</td>
+          <td>transistor</td>
+          <td>hazelnu</td>
+      </tr>
+      <tr>
+          <td>AUROC</td>
+          <td>95.6</td>
+          <td>88.8</td>
+          <td>99.2</td>
+          <td>92.2</td>
+          <td>95.5</td>
+          <td>92.3</td>
+          <td>98.0</td>
+          <td>88.0</td>
+          <td>91.2</td>
+      </tr>
+      <tr>
+          <td>AUROC</td>
+          <td>carpet</td>
+          <td>metal nut</td>
+          <td>wood</td>
+          <td>zipper</td>
+          <td>leather</td>
+          <td>toothbrush</td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>AUROC</td>
+          <td>98.9</td>
+          <td>77.7</td>
+          <td>100.0</td>
+          <td>99.6</td>
+          <td>100.0</td>
+          <td>94.2</td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 class="relative group">PCB Example: Bent Transparent LED
+    <div id="pcb-example-bent-transparent-led" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pcb-example-bent-transparent-led" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000015_33457d0e2fe84e2f7b8a38be2d565da09a1b50c26c8c6e73b5d6b8be3165cb50.png"
+    ></figure>
+<p>Table 9. Additional results on VisA-D&amp;R (PCB).</p>
+<table>
+  <thead>
+      <tr>
+          <th>User</th>
+          <th>Is there an anomaly in the image?</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>GPT-4o</td>
+          <td>The image shows an infrared sensor module, which appears to be intact and properly assembled. There doesn’t seem to be any visible anomaly or damage to the components.</td>
+      </tr>
+      <tr>
+          <td>LLaVA-OV</td>
+          <td>The image shows an electronic circuit board with various components, including a red LED that is not illuminated. There doesn’t appear to be anything obviously anomalous in the image.</td>
+      </tr>
+      <tr>
+          <td>Ours</td>
+          <td>Yes, the anomaly in the image is the bent LED on the circuit board, which is not aligned properly with the board’s surface.</td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 class="relative group">Candle Example: Pink Discoloration
+    <div id="candle-example-pink-discoloration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#candle-example-pink-discoloration" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000016_7d6c15bcaa61f7fb3721fe1cb7da3cb49c78cfe9465c68360bc6af891576a4ee.png"
+    ></figure>
+<p>User</p>
+<p>GPT-4o</p>
+<p>LLaVA-OV</p>
+<p>Ours</p>
+<p>Is there an anomaly in the image I should know about?</p>
+<p>Yes, there is an anomaly in the image. The candle in the top left corner has its wick facing the opposite direction compared to the other three candles.</p>
+<p>Based on the image, there is no apparent anomaly among the candles. They are all similar in size and shape, with a consistent hole in the center for the wick. The coloration appears uniform across the candles, and there are no visible signs of melting or irregularities that would suggest an anomaly.</p>
+<p>Yes, the anomaly is the presence of a small red spot on the bottom right candle, which contrasts with the otherwise uniform white color.</p>
+<p>Table 10. Additional results on VisA-D&amp;R (Candle).</p>
+<p>multi-level features from different layers to the LLM (as</p>
+
+<h2 class="relative group">Capsule Example: Dark Spot
+    <div id="capsule-example-dark-spot" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#capsule-example-dark-spot" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000017_c6a241130748fb0e419d39dde1a6b60f7b1fad75e2916e7f9f202a1345e142ab.png"
+    ></figure>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000018_b2e8645b2cea5d0965bfc63ebe0687feb6517bd7065db7c7ed5ec7c010240486.png"
+    ></figure>
+<p>User Is there an anomaly present in the image?</p>
+<p>GPT-4o</p>
+<p>Yes, there is an anomaly in the image. One of the capsules is a different color; it is brown instead of green.</p>
+<p>LLaVA-OV</p>
+<p>Based on the image alone, there is no clear indication of an anomaly. The pills appear to be uniformly shaped and colored, with no visible defects or irregularities. However, without additional context or a point of ref- erence for size, it’s difficult to determine if there are any anomalies that might not be immediately apparent from the image.</p>
+<p>Ours</p>
+<p>Yes, there is an anomaly present in the image. One of the capsules has a darker spot on its surface, which contrasts with the otherwise uniform green color.</p>
+<p>Table 11. Additional results on VisA-D&amp;R (Capsules).</p>
+<p>recent paper: &ldquo;Dense Connector for MLLMs&rdquo; [96] ) should be a possible solution for performance improvement.</p>
+
+<h2 class="relative group">Fryum Example: Break Edge
+    <div id="fryum-example-break-edge" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#fryum-example-break-edge" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000019_e07cf163a0c0a5504527ff9f0b8e7e5c65a02cdd589ea513a741e6948df25945.png"
+    ></figure>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000020_0db612434a59d598ee854cea5578f6665a1f06d1bcc64b96d1af9f37a362fc60.png"
+    ></figure>
+<p>User Is there any anomaly in the image?</p>
+<p>GPT-4o</p>
+<p>The image shows a wheel-shaped snack on a green surface. There doesn&rsquo;t appear to be any obvious anomaly.</p>
+<p>LLaVA-OV</p>
+<p>Ours</p>
+<p>The image shows a circular object with a pattern that resembles a wheel or a gear, placed on a green textured surface. There doesn&rsquo;t appear to be any obvious anomaly in the image; it seems to be a simple photograph of an object against a background. If there is something specific you are referring to as an anomaly, please provide more details or clarify what aspect you are questioning.</p>
+<p>Yes, there is an anomaly in the image. The pasta wheel has a noticeable crack on its lower right side, disrupting its otherwise smooth and continuous surface.</p>
+<p>Table 12. Additional results on VisA-D&amp;R (Fryum).</p>
+
+<h2 class="relative group">Cashew Example: Brown Spot
+    <div id="cashew-example-brown-spot" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#cashew-example-brown-spot" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000021_9f4714a066ef68cb0d9cd0a5b42131afd9669923efc0b7cd89c42603e0965849.png"
+    ></figure>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000022_1faeb5b8d00998926cd3d9c53044019ebb2fd402c245c05c4c6b2d0658798a7c.png"
+    ></figure>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000023_f46d23ba25448bef24ef65a4629ce5bbbdf7f7a8d15ce85e04fccb529978fde2.png"
+    ></figure>
+<p>User Does the image contain any anomaly?</p>
+<p>GPT-4o</p>
+<p>The image shows a cashew nut on a textured black surface. There are no visible anomalies; the cashew appears normal.</p>
+<p>LLaVA-OV</p>
+<p>Ours</p>
+<p>Based on the image provided, there are no visible anomalies. The object appears to be a single, intact cashew nut with a smooth surface and a natural brown coloration that is typical for cashews. There are no signs of damage, such as cracks or holes, and the background does not show any irregularities that would suggest an anomaly in the context of the image.</p>
+<p>Yes, there is a noticeable anomaly on the cashew nut:</p>
+<p>a small brown spot located near the center of the nut.</p>
+<p>Table 13. Additional results on VisA-D&amp;R (Cashew).</p>
+
+<h2 class="relative group">In-the-Wild Example: Graffitied Road Sign
+    <div id="in-the-wild-example-graffitied-road-sign" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#in-the-wild-example-graffitied-road-sign" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000024_7beb292b9a2723cba2c107cfd121479182a2ad0ce583b01f9b8633b9afb3e77d.png"
+    ></figure>
+<table>
+  <thead>
+      <tr>
+          <th>User</th>
+          <th>Describe the anomaly in the image.</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Anomaly-OV</td>
+          <td>The anomaly in the image is the graffiti on the high way sign, which includes black spray paint marks and scribbles over the word ’Seattle’ and other parts of th sign.</td>
+      </tr>
+      <tr>
+          <td>User</td>
+          <td>What is the reason for the anomaly?</td>
+      </tr>
+      <tr>
+          <td>Anomaly-OV</td>
+          <td>The graffiti is likely the result of vandalism, where indi viduals have used spray paint to deface public property for personal expression or as a form of protest.</td>
+      </tr>
+      <tr>
+          <td>User</td>
+          <td>How does the anomaly affect the functionality of the object?</td>
+      </tr>
+      <tr>
+          <td>Anomaly-OV</td>
+          <td>The graffiti affects the sign’s functionality by poten tially obstructing the visibility of important informa tion, such as the word ’Seattle,’ which could confuse drivers and lead to navigational errors.</td>
+      </tr>
+      <tr>
+          <td>User</td>
+          <td>How to avoid the anomaly in the future?</td>
+      </tr>
+      <tr>
+          <td>Anomaly-OV</td>
+          <td>To avoid such anomalies, regular maintenance and cleaning of signs should be implemented. Addition ally, community awareness programs can help reduce vandalism by promoting respect for public property.</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table 14. In-the-wild results for an unseen object (Road Sign).</p>
+
+<h2 class="relative group">Failure Example 1: Wrong Classification
+    <div id="failure-example-1-wrong-classification" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#failure-example-1-wrong-classification" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000025_76894a0d160f3affddea28c1f7b3c05422c127130f6ab097d3a794774dfe8109.png"
+    ></figure>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000026_9a4cf61eb2ba9b9efcbc2b1975a2dc9b813d1a0d2fa1e71b1e3adcea9c682630.png"
+    ></figure>
+<p>User Is there any anomaly visible in the image?</p>
+<p>Anomaly-OV</p>
+<p>Yes, there is a noticeable anomaly on the soap bar: a hole with jagged edges located towards the left side.</p>
+
+<h2 class="relative group">Failure Example 2: General Description
+    <div id="failure-example-2-general-description" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#failure-example-2-general-description" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000027_8a6829d407fee01f798fa52c29c926f66a3841ae7ee2a4e666edd40f830bf2e5.png"
+    ></figure>
+<p>User</p>
+<p>Are there any anomalies present in the image with the set of candles?</p>
+<p>Anomaly-OV</p>
+<p>Yes, there is an anomaly present in the top right candle. It has a noticeable crack on its surface, which is not typical for a smooth, intact candle.</p>
+
+<h2 class="relative group">Failure Example 3: Wrong Reasoning
+    <div id="failure-example-3-wrong-reasoning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#failure-example-3-wrong-reasoning" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000028_8d396dd33c05b33727f03757409946fa4d9bd5d787c931809aab22edc8d55d81.png"
+    ></figure>
+<p>User Are there any anomalies in the image?</p>
+<p>Anomaly-OV</p>
+<p>Yes, the anomaly in the image is the absence of a crystal oscillator on the HC-SR04 ultrasonic sensor module.</p>
+<p>Table 15. Failure results of Anomaly-OV on VisA-D&amp;R.</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_papers/Towards Zero-Shot Anomaly Detection and Reasoning.md"
+          data-oid-likes="likes_papers/Towards Zero-Shot Anomaly Detection and Reasoning.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/transanomaly_video_anomaly_detection_using_video_vision_transformer/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/towards-generic-anomaly-detection-and-understanding/">
+              <span class="leading-6">
+                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-24 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+      
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 overflow-x-auto py-2">
+        <ul class="flex list-none flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 me-4">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

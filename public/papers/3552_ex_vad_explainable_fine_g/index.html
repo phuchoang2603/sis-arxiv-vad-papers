@@ -1,0 +1,1855 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title> &middot; Blowfish</title>
+    <meta name="title" content=" &middot; Blowfish">
+  
+
+  
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/papers/3552_ex_vad_explainable_fine_g/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/papers/3552_ex_vad_explainable_fine_g/">
+  <meta property="og:site_name" content="Blowfish">
+  <meta property="og:title" content="Blowfish">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blowfish">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.7946532fa78157bafb1b4340d4074792811f18177af35790b3a0cb90566ce1cda3edd782eb92e134849964d14b6d9185c9d4ded2a12dcf5b706cb6a275c0cce0.css"
+    integrity="sha512-eUZTL6eBV7r7G0NA1AdHkoEfGBd681eQs6DLkFZs4c2j7deC65LhNISZZNFLbZGFydTe0qEtz1twbLaidcDM4A==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.9df4fc14d50efcc9aa4cfc2b6f348e365f421f5ad491278f8f48c0360cf2f93f08882fda6da162d7ace8e5add57c2df4ac46bd3861306b1d4c452cd31f448d64.js"
+      integrity="sha512-nfT8FNUO/MmqTPwrbzSONl9CH1rUkSePj0jANgzy&#43;T8IiC/abaFi16zo5a3VfC30rEa9OGEwax1MRSzTH0SNZA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Papers",
+    "name": "",
+    "headline": "",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/papers\/3552_ex_vad_explainable_fine_g\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "6657"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          Blowfish
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/papers/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="papers"
+  title="Papers">
+  
+  
+    <p class="text-base font-medium">
+      papers
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/test/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="test"
+  title="Tests">
+  
+  
+    <p class="text-base font-medium">
+      test
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href=""
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  
+  title="">
+  
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/papers/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="papers"
+    title="Papers">
+    
+    
+      <p class="text-bg font-bg">
+        papers
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/test/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="test"
+    title="Tests">
+    
+    
+      <p class="text-bg font-bg">
+        test
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    
+    title="">
+    
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>6657 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">32 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Ex-VAD: Explainable Fine-grained Video Anomaly Detection Based on Visual-Language Models
+    <div id="ex-vad-explainable-fine-grained-video-anomaly-detection-based-on-visual-language-models" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ex-vad-explainable-fine-grained-video-anomaly-detection-based-on-visual-language-models" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Chao Huang 1 Yushu Shi 1 Jie Wen 2 Wei Wang 1 Yong Xu 2 Xiaochun Cao 1 *</p>
+
+<h2 class="relative group">Abstract
+    <div id="abstract" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abstract" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>With advancements in visual language models (VLMs) and large language models (LLMs), video anomaly detection (VAD) has progressed beyond binary classification to fine-grained categorization and multidimensional analysis. However, existing methods focus mainly on coarsegrained detection, lacking anomaly explanations. To address these challenges, we propose Ex-VAD , an Explainable Fine-grained Video Anomaly Detection approach that combines fine-grained classification with detailed explanations of anomalies. First, we use a VLM to extract frame-level captions, and an LLM converts them to videolevel explanations, enhancing the model&rsquo;s explainability. Second, integrating textual explanations of anomalies with visual information greatly enhances the model&rsquo;s anomaly detection capability. Finally, we apply label-enhanced alignment to optimize feature fusion, enabling precise finegrained detection. Extensive experimental results on the UCF-Crime and XD-Violence datasets demonstrate that Ex-VAD significantly outperforms existing State-of-The-Art methods.</p>
+
+<h2 class="relative group">1. Introduction
+    <div id="1-introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video Anomaly Detection (VAD) is an important technology with a wide range of applications that cover areas such as security surveillance, healthcare, autonomous driving, and content auditing (Zhao et al. , 2017; Wang et al. , 2019; Samaila et al. , 2024). It aims to improve the safety and efficiency of systems by automatically identifying anomalous events or behaviors through the analysis of video data (Ren</p>
+<p>1 Shenzhen Campus of Sun Yat-Sen University, School of Cyber Science and Technology, Shenzhen, China 2 Harbin Institute of Technology, School of Computer Science and Technology, Shenzhen, China. Correspondence to: Xiaochun Cao &lt;caoxiaochun@mail.sysu.edu.cn&gt; .</p>
+<p>Proceedings of the 42 st International Conference on Machine Learning, Vancouver, Canada. PMLR 267, 2025. Copyright 2025 by the author(s).</p>
+<p>Figure 1. Recent research in VAD can be categorized into three types: a) Traditional binary classification VAD, b) Multiclassification VAD, and c) Training-free VAD. Building on the optimization of these approaches, our Ex-VAD is presented as: d) Explainable VAD based on VLMs and LLMs.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000000_b7385d73d2345070d55609dfadb2a0c36c95e4d3bf5a875c7c64d79bfa9b923a.png"
+    ></figure>
+<p>et al. , 2021; Nawaratne et al. , 2020). For example, rapid detection of dangerous behaviors for timely intervention in surveillance, detection of abnormal road conditions to avoid accidents in autonomous driving, and identification of abnormal vital signs to provide timely assistance in healthcare monitoring.</p>
+<p>Traditional VADs (Huang et al. , 2024; Wang et al. , 2025; Huang et al. , 2023; 2022; Ramachandra et al. , 2022; Liu et al. , 2024; Zaigham Zaheer et al. , 2020; Yan et al. , 2023) typically coarse-grained analyze videos, determining only whether a video contains abnormal behavior and categorizing it as normal or anomalous. However, such approaches (Nguyen &amp; Meunier , 2019) face significant limitations in practical applications. First, coarse-grained detection fails to provide detailed descriptions of specific types of abnormal behavior, which is inadequate in scenarios that require tailored responses to distinct anomalies, for example, addressing varying security threats in surveillance systems or diagnosing multiple abnormal conditions in medical monitoring. Second, coarse-grained methods are easily influenced by the complexity of video backgrounds and the diversity of scenes, making it challenging to pinpoint the time and type of anomalies accurately. This deficiency com-</p>
+<p>promises both the detection accuracy of the system and its response efficiency.</p>
+<p>Fine-grained video anomaly detection becomes particularly important to distinguish different types of anomalous behavior further and provide more targeted and interpretative detection results. In recent years, visual-language pre-training (VLP) models such as CLIP (Radford et al. , 2021) have significantly improved the semantic representation of images and text through contrast learning, driving advances in visual representation. CLIP-based task-specific models have excelled in various visual tasks, achieving unprecedented performance breakthroughs. In VAD, some researchers (Wu et al. , 2024c;a) have used CLIP&rsquo;s image-text alignment to achieve fine-grained anomaly detection.</p>
+<p>Despite advances, existing methods still struggle to explain anomalous behavior effectively. Even when anomalous events are successfully detected, models often fail to provide clear explanations for the causes of the anomalies, posing significant challenges to decision-makers. For example, in security monitoring, the detection of abnormal behavior in a specific area without a clear explanation can complicate subsequent response efforts, leading to inefficiency and delays. Consequently, enhancing the interpretability of VAD has become a crucial focus in the field&rsquo;s development. Recently, the rapid progress in LLMs has introduced new possibilities for VAD. Some researchers (Zanella et al. , 2024; Ye et al. , 2024) have proposed training-free anomaly detection methods by generating descriptive text explanations of anomalies using VLMs and LLMs. However, these methods primarily rely on the generated text for anomaly detection, often neglecting the full potential of the visual modality. Other researchers (Lv &amp; Sun , 2024; Kim et al. , 2023a; Tang et al. , 2024b) have achieved interpretable anomaly detection by fine-tuning large models. While effective, these approaches often result in complex models that may be challenging to deploy and maintain.</p>
+<p>To address these challenges, we propose a novel method called Ex-VAD, which is designed to overcome the limitations of traditional VAD methods, particularly in finegrained classification and anomaly explanation. Specifically, we first propose an Anomaly Explanation Generation Module (AEGM), which extracts frame-level captions from videos using VLMs, followed by a cleaning step to refine the captions. The cleaned captions are then integrated by an LLM to generate video-level anomaly explanations through specific prompts, which enable the model to detect abnormal behavior in the video and analyze its cause. Second, we develop a Multimodal Anomaly Detection Module (MADM), which encodes the text from AEGM and extracts both temporal and spatial features between video frames. These features are then fed into a coarse-grained anomaly classifier to determine whether the video contains anoma- lies. Finally, we employ a Label Augment and Alignment Module (LAAM), which uses an LLM to expand anomaly category labels into phrases, selects the top-k phrases semantically most similar to the original labels, and aligns them with the fused multimodal features to obtain fine-grained anomaly categories. In summary, Ex-VAD effectively integrates multimodal features, fine-grained classification, and anomaly explanations, providing a comprehensive solution to video anomaly detection with enhanced interpretability and accuracy.</p>
+<p>Our main contributions are summarized as follows.</p>
+<ul>
+<li>We develop an Anomaly Explanation Generation Module (AEGM), which utilizes a VLM and an LLM to generate explanations for video anomalies, allowing the model to detect abnormal behavior and analyze its cause, thereby enhancing its semantic interpretation.</li>
+<li>We propose a Label Augment and Alignment Module (LAAM) that enhances label semantics, enabling the model to better align videos with anomaly categories, thereby improving fine-grained anomaly classification, particularly for complex categories.</li>
+<li>Extensive experimental results show that our method outperforms existing approaches in both coarsegrained and fine-grained accuracy, improving overall anomaly detection and classification precision.</li>
+</ul>
+
+<h2 class="relative group">2. Related Work
+    <div id="2-related-work" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-related-work" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">2.1. Video Anomaly Detection
+    <div id="21-video-anomaly-detection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#21-video-anomaly-detection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>According to the output of existing VAD, it can be divided into binary-classification VAD (Ramachandra et al. , 2022; Liu et al. , 2024), multi-classification VAD (Sultani et al. , 2019; Wu et al. , 2024a;c), and interpretable VAD (Lv &amp; Sun , 2024). Traditional VAD methods classify videos as normal or abnormal. They typically adopt a classification paradigm. Firstly, pre-trained visual models are used to extract frame-level features. Then, these features are fed into a binary classifier based on Multiple Instance Learning (MIL) for training. Finally, abnormal events are detected based on the predicted anomaly confidences.</p>
+<p>With the development of the CLIP model, some methods have attempted to make improvements. VadCLIP (Wu et al. , 2024c) proposed a fine-grained Weakly Supervised Video Anomaly Detection (WSVAD) method that can distinguish different types of abnormal frames. VadCLIP encodes text labels into class embeddings and calculates the matching similarities between class embeddings and frame-level visual features to obtain an alignment map. Each input text label represents a class of abnormal events, thus achieving fine-grained WSVAD.</p>
+<p>Interpretability is of utmost importance in VAD, especially in sensitive or high-stake applications. Early methods often relied on black-box models, and their prediction results were difficult to trust. Recently, some methods have utilized Large Language Models (LLMs) and Vision-Language Models (VLMs) to generate understandable reasoning through semantic insights and textual explanations. For example, VADor (Lv &amp; Sun , 2024) fine-tunes the projection layer of VideoLLaMA to integrate anomaly detection with semantic reasoning. HAWK (Tang et al. , 2024a)enhances interpretability by integrating motion-based reasoning through interactive VLMs. However, there are still challenges in balancing the granularity of explanations and computational efficiency.</p>
+
+<h2 class="relative group">2.2. Visual Language Model in VAD
+    <div id="22-visual-language-model-in-vad" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#22-visual-language-model-in-vad" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Vision language models (VLMs) offer a new perspective for detecting anomalies in video anomaly detection (VAD), especially in fine-grained classification and explanation of anomalous behaviors. Traditional VAD methods (Tian et al. , 2021a; Li et al. , 2022b;a) mainly focus on identifying anomalous behaviors in videos but lack detailed classification of these behaviors. (Wu et al. , 2024c) leverages the pre-trained CLIP model to align video frames with labels in VAD, enabling fine-grained anomaly classification. Meanwhile, the use of LLMs in VAD is still in its infancy(Kim et al. , 2023b) and LAVAD (Zanella et al. , 2024) implemented training-free VAD using pre-trained LLMs and VLMs. This method efficiently transforms LLMs into video anomaly detectors by generating textual descriptions of each frame in the test video, which is combined with prompting to activate LLMs for time series aggregation and anomaly score estimation. Additionally, by referring to VLMs, we establish a strong complementary relationship between visual and textual modalities. This approach not only enables the detection of anomalous behaviors but also provides clear explanations for each behavior, enhancing the explanation of anomaly detection.</p>
+
+<h2 class="relative group">2.3. Prompt Learning
+    <div id="23-prompt-learning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#23-prompt-learning" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Prompt learning, a technique for adapting prompt words to fit a specific task, was initially applied mainly in the field of Natural Language Processing (NLP) and has gradually been extended to the visual domain. CLIP (Radford et al. , 2021) relys on fixed hand-designed cues (e.g., a photo of a class), which are suitable for open domains but not flexible enough. CLIP-COOP (Zhou et al. , 2022a) introduces learnable context vectors, enhancing performance with limited samples but struggling with generalization. These advances refine prompt adaptation, improving vision-language models across diverse tasks. In VAD, VADCLIP leverages trainable textual templates to generate precise anomaly descriptions. However, manually designing prompts remains time-consuming and highly sensitive to template content. To address this challenge and reduce the dependence on hand-crafted language designs, PEL4VAD (Pu et al. , 2024) used ConceptNet definitions to create prompt templates and expanded class labels through a conceptual dictionary, significantly improving open-vocabulary object detection. Based on this approach, this paper uses GPT4 (OpenAI &amp; etc , 2024) to generate rich semantics for simple labels, and uses CLIP image-text alignment to allow the VAD model to achieve better performance in fine-grained anomaly classification.</p>
+
+<h2 class="relative group">3. Approach
+    <div id="3-approach" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-approach" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">3.1. Architecture
+    <div id="31-architecture" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#31-architecture" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>As shown in Figure 2, the proposed Ex-VAD consists of three components: an Anomaly Explanation Generation Module (AEGM), a Multimodal Anomaly Detection Module (MADM), and a Label Augment and Alignment Module (LAAM). Ex-VAD processes input videos V by first utilizing the AEGM to generate anomaly explanation text E. This text serves two purposes: providing interpretative explanations for video anomalies and acting as the text modality input for the MADM, where it is fused with visual features for coarse-grained anomaly detection. Finally, the LAAM refines the detection by expanding and aligning labels to achieve fine-grained anomaly classification, ensuring both interpretability and accuracy in video anomaly detection. The implementation details are introduced as follows.</p>
+
+<h2 class="relative group">3.2. Anomaly Explanation Generation Module
+    <div id="32-anomaly-explanation-generation-module" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#32-anomaly-explanation-generation-module" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>LAVAD (Zanella et al. , 2024) demonstrated the feasibility of achieving anomaly detection by prompting VLMs and LLMs to generate text descriptions. Inspired by this approach, our AEGM improves the prompting mechanism to guide LLMs in time series aggregation and the generation of anomaly explanations. This not only helps the visual module enhance the performance of VAD but also serves as an explanation for the causes of anomalies, further enhancing the interpretability of detection. As shown in Figure 3 , AEGM consists of two sub-modules: the Caption Extraction and Cleaning Module, and the Explainable Modules Based on LLM.</p>
+<p>Caption Extraction and Cleaning Module. With the rapid development of VLMs, the ability to generate captions from videos has become increasingly powerful. First, uniformly sample n frames from the video V . For each frame Ii ∈ V , we use the SOTA captioning model ΦC i.e. BLIP-2 (Li et al. , 2023) and set appropriate prompts PC to generate frame-level text descriptions:</p>
+<!-- formula-not-decoded -->
+<p>Figure 2. Our Ex-VAD includes three components: an Anomaly Explanation Generation Module using VLM and LLM to generate anomaly explanation text, a Multimodal Anomaly Detection Module combining enriched visual and textual features for coarse anomaly classification, and a Label Augment and Alignment Module that refines the detection by expanding and aligning labels to achieve fine-grained anomaly classification.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000001_5aacb409ed60367b23821dd1d2c1d7498a0b910e5940dd33b029bf3946acb761.png"
+    ></figure>
+<p>Due to the randomness of VLMs, some irrelevant captions may be generated, which may harm training. Since the scenes in the video are captured by a static camera at a high frame rate, the semantic content between frames overlaps to some extent. From this perspective, we alleviate the above problems by designing an image-text alignment mechanism. Specifically, we use a vision-language encoder to encode the captions of each frame. For each frame Ii ∈ V , we calculate its closest caption:</p>
+<!-- formula-not-decoded -->
+<p>where {· , ·} is the cosine similarity, EI is the image encoder of the VLM, ET is the text encoder and T = {T1, &hellip;, TN } . This module allows us to generate fairly accurate text descriptions for each video frame.</p>
+<p>Explainable Modules Based on LLM. The cleaned captions can describe frame information more accurately than the initial captions, but they are only simple descriptions and cannot describe abnormal phenomena in detail. Therefore, we prompt LLM i.e. LLAMA-3 (Touvron et al. , 2023)to generate the required anomaly explanations. Specifically, we input the collection T ˆ of cleaned frame captions and the prompt PS into the advanced LLM ΦLLM to obtain the explanation E for video V :</p>
+<!-- formula-not-decoded -->
+<p>where T ˆ = {T
+1 ˆ T
+1, T
+2 ˆ T
+2, &hellip;, T
+N ˆ T
+N } . Through the above methods, we can obtain an anomaly description E that is more accurate semantically and temporally than the captions T ˆ .</p>
+
+<h2 class="relative group">3.3. Multi-Modal Feature Fusion
+    <div id="33-multi-modal-feature-fusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#33-multi-modal-feature-fusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This component primarily performs coarse-grained anomaly detection by entering the fused visual and text features into an anomaly classifier. For visual features, we follow prior work (Wu et al. , 2024c) to uniformly sample dense video frames from the input video at 16-frame intervals, obtaining a video frame sequence V . The video frames are then encoded by the frozen visual encoder EI in CLIP to produce frame features FI FI . To bridge the gap between the image and video domains in CLIP, we adopt the approach from (Wu et al. , 2024c), modeling the temporal dependencies of the video frame sequence using the Local and Global Temporal Adapter (LGT-Adapter):</p>
+<!-- formula-not-decoded -->
+<p>Figure 3. The Anomaly Explanation model first generates video frame captions via VLM, then cleans up the frame captions using the image-text module, and finally generates a detailed video interpretation using LLM. This interpretation is later used as a textual modality to enhance the performance of anomaly detection in conjunction with the visual modality, in addition to being used as an anomaly interpretation for the video.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000002_14063bc3ba32916dddab7b5b389c7b63735ddc0d8ac24a214e8fd1f357a71624.png"
+    ></figure>
+<p>We use the exception of explanation E generated from AEGM as textual information. These textual information are encoded by the frozen textual encoder ET in CLIP to produce textual features FT = ET (E). Subsequently, the textual features and visual features are fused into FF FF = FV FV + FT , which is then input into a binary classifier that contains a feed-forward network (FFN) layer, an FC layer, and a Sigmoid activation to obtain the anomaly scores s ∈ R n∗1 :</p>
+<!-- formula-not-decoded -->
+
+<h2 class="relative group">3.4. Label Augment and Alignment Module
+    <div id="34-label-augment-and-alignment-module" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#34-label-augment-and-alignment-module" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This part mainly includes the following two steps: label augmentation set construction and fine-grained classification.</p>
+<p>Label Augmentation Set Construction. We utilize a pretrained LLM (OpenAI &amp; etc , 2024) to generate m descriptive sentences related to each category label. To filter the sentences that are most semantically related to the category labels, we calculate the semantic similarity between the category labels and the generated sentences by using cosine similarity. Specifically, first, the category labels L and the related descriptive sentences {S1, &hellip;, S m } generated by the LLM are encoded into vectors. Then, the cosine similarity between the label vector and the sentence vector is calculated as:</p>
+<!-- formula-not-decoded -->
+<p>where v L and vS i represent the embedding vectors of the category label and the generated sentence, respectively. Ac- cording to the similarity score, the top-k sentences with the highest similarity are selected from the generated sentences. The features of the screened sentences are integrated with the original label embeddings to form the final enhanced label embeddings FL .</p>
+<p>Fine-grained Classification. Calculate the matching similarity between these category embeddings FL and Fusion features FF FF to obtain an alignment map M ∈ R n∗m , where m is the number of text labels. In this alignment map, each input text label represents a class of abnormal events. By analyzing the similarity between the video and different category labels, a more detailed classification of abnormal events is achieved, naturally achieving the goal of fine-grained classification.</p>
+
+<h2 class="relative group">3.5. Loss Function
+    <div id="35-loss-function" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#35-loss-function" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Binary Classification Loss. We follow previous work (Wu et al. , 2020) and use the Top-k mechanism to select K highest anomaly confidence levels among anomalous and normal videos as video-level predictions. The classification loss LBCE is then computed using the binary cross-entropy between video-level prediction and ground truth:</p>
+<!-- formula-not-decoded -->
+<p>where s denotes the predicted score and y is the true label (usually 0 represents normal, and 1 represents abnormal).</p>
+<p>Multiple Class Loss. For multi-classification tasks, we propose the MIL-Align mechanism to align the frame-level fusion feature FF FF and all label embeddings FL. Specifically, for each video, we select the top-k similarity values and compute the average to measure how well this video is aligned with the current class. Then, we can obtain a vector V = {v1, . . . , v m } that represents the similarity between this video and all classes. We hope the video and its paired textual label emit the highest similarity score among others. To achieve this, the multi-class prediction is first computed as follows:</p>
+<!-- formula-not-decoded -->
+<p>where piis the prediction with respect to the ith class, and τ refers to the temperature hyper-parameter for scaling. Finally, the alignment loss LMCE can be computed by the cross-entropy:</p>
+<!-- formula-not-decoded -->
+<p>where yiis the ground truth label and m is the total number of classes.</p>
+<p>Contrastive Loss. To pull apart the normal class embeddings from the anomaly class embeddings, we introduce</p>
+<p>Ex-VAD: Explainable Fine-grained Video Anomaly Detection Based on Visual-Language Models</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>mAP@IOU(%)</th>
+          <th>mAP@IOU(%)</th>
+          <th>mAP@IOU(%)</th>
+          <th>mAP@IOU(%)</th>
+          <th>mAP@IOU(%)</th>
+          <th>mAP@IOU(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td>0.1</td>
+          <td>0.2</td>
+          <td>0.3</td>
+          <td>0.4</td>
+          <td>0.5</td>
+          <td>AVG</td>
+      </tr>
+      <tr>
+          <td>Random Baseline</td>
+          <td>0.21</td>
+          <td>0.14</td>
+          <td>0.04</td>
+          <td>0.02</td>
+          <td>0.01</td>
+          <td>0.08</td>
+      </tr>
+      <tr>
+          <td>RealAD (2018)</td>
+          <td>5.73</td>
+          <td>4.41</td>
+          <td>2.69</td>
+          <td>1.93</td>
+          <td>1.44</td>
+          <td>3.24</td>
+      </tr>
+      <tr>
+          <td>RTFM (2021)</td>
+          <td>12.59</td>
+          <td>7.54</td>
+          <td>6.44</td>
+          <td>5.42</td>
+          <td>1.54</td>
+          <td>6.71</td>
+      </tr>
+      <tr>
+          <td>AVVD (2022)</td>
+          <td>10.27</td>
+          <td>7.01</td>
+          <td>6.25</td>
+          <td>3.42</td>
+          <td>3.29</td>
+          <td>6.05</td>
+      </tr>
+      <tr>
+          <td>DMU(2023)</td>
+          <td>11.32</td>
+          <td>7.62</td>
+          <td>5.97</td>
+          <td>4.33</td>
+          <td>2.36</td>
+          <td>6.32</td>
+      </tr>
+      <tr>
+          <td>CLIP-TSA(2023)</td>
+          <td>12.62</td>
+          <td>8.13</td>
+          <td>6.66</td>
+          <td>4.28</td>
+          <td>1.91</td>
+          <td>6.72</td>
+      </tr>
+      <tr>
+          <td>UMIL(2024)</td>
+          <td>11.84</td>
+          <td>7.85</td>
+          <td>6.52</td>
+          <td>3.97</td>
+          <td>2.84</td>
+          <td>6.60</td>
+      </tr>
+      <tr>
+          <td>VadCLIP(2024)</td>
+          <td>11.72</td>
+          <td>7.83</td>
+          <td>6.4</td>
+          <td>4.53</td>
+          <td>2.93</td>
+          <td>6.68</td>
+      </tr>
+      <tr>
+          <td>STPrompt(2024)</td>
+          <td>11.56</td>
+          <td>7.49</td>
+          <td>6.13</td>
+          <td>5.11</td>
+          <td>2.11</td>
+          <td>6.48</td>
+      </tr>
+      <tr>
+          <td>Ex-VAD (Ours)</td>
+          <td>16.51</td>
+          <td>12.35</td>
+          <td>9.41</td>
+          <td>7.82</td>
+          <td>4.65</td>
+          <td>10.15</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table 1. Fine-grained comparisons on UCF-Crime.</p>
+<p>the contrast loss. Specifically, we first calculate the cosine similarity between the normal class embedding and other abnormal class embeddings, and then compute the contrastive loss L cts as follows:</p>
+<!-- formula-not-decoded -->
+<p>where L N is the normal class embedding, and LA j is the abnormal class embedding.</p>
+<p>Overall, the final total objective of Ex-VAD is given by:</p>
+<!-- formula-not-decoded -->
+
+<h2 class="relative group">3.6. Inference
+    <div id="36-inference" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#36-inference" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>ExVAD contains three branches that enable it to handle fine-grained and coarse-grained WSVAD tasks and anomaly interpretation. Regarding fine-grained WSVAD, we follow previous work (Wu et al. , 2023) and use a thresholding strategy on the alignment graph M to predict anomalous events. For coarse-grained WSVAD, we follow previous work (Wu et al. , 2024c) in employing two methods to compute the frame-level anomaly degree. The first method directly uses the anomaly scores from the coarse-grained classification, while the second method uses the alignment map from the fine-grained classification, i.e., the similarity between the video and the normal class minus 1 is the anomaly degree. Finally, we choose the best of these two methods to compute the frame-level anomaly degree.</p>
+
+<h2 class="relative group">4. Experiments
+    <div id="4-experiments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-experiments" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this section, we perform experiments on the UCFCrime (Sultani et al. , 2019) and XD-Violence (Wu et al. , 2020) datasets. Ex-VAD focuses on fine-grained anomaly detection and explainability. We compare it with other methods designed for fine-grained anomaly detection and explore novel approaches for explainable coarse-grained anomaly detection using LLMs and VLMs. Furthermore, we conduct</p>
+<p>Table 2. Fine-grained comparisons on XD-Violence.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>mAP@IOU(%)</th>
+          <th>mAP@IOU(%)</th>
+          <th>mAP@IOU(%)</th>
+          <th>mAP@IOU(%)</th>
+          <th>mAP@IOU(%)</th>
+          <th>mAP@IOU(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td>0.1</td>
+          <td>0.2</td>
+          <td>0.3</td>
+          <td>0.4</td>
+          <td>0.5</td>
+          <td>AVG</td>
+      </tr>
+      <tr>
+          <td>Random Baseline</td>
+          <td>1.82</td>
+          <td>0.92</td>
+          <td>0.48</td>
+          <td>0.23</td>
+          <td>0.09</td>
+          <td>0.71</td>
+      </tr>
+      <tr>
+          <td>RealAD (2018)</td>
+          <td>22.72</td>
+          <td>15.57</td>
+          <td>9.98</td>
+          <td>6.2</td>
+          <td>3.78</td>
+          <td>11.65</td>
+      </tr>
+      <tr>
+          <td>RTFM (2021)</td>
+          <td>31.25</td>
+          <td>26.85</td>
+          <td>21.94</td>
+          <td>13.56</td>
+          <td>12.54</td>
+          <td>21.23</td>
+      </tr>
+      <tr>
+          <td>AVVD (2022)</td>
+          <td>30.51</td>
+          <td>25.75</td>
+          <td>20.18</td>
+          <td>14.83</td>
+          <td>9.79</td>
+          <td>20.21</td>
+      </tr>
+      <tr>
+          <td>DMU(2023)</td>
+          <td>32.33</td>
+          <td>28.88</td>
+          <td>22.57</td>
+          <td>14.33</td>
+          <td>13.68</td>
+          <td>22.36</td>
+      </tr>
+      <tr>
+          <td>CLIP-TSA(2023)</td>
+          <td>34.53</td>
+          <td>32.88</td>
+          <td>28.11</td>
+          <td>13.65</td>
+          <td>10.01</td>
+          <td>23.84</td>
+      </tr>
+      <tr>
+          <td>UMIL(2024)</td>
+          <td>34.44</td>
+          <td>27.13</td>
+          <td>22.63</td>
+          <td>19.85</td>
+          <td>13.24</td>
+          <td>23.46</td>
+      </tr>
+      <tr>
+          <td>VadCLIP(2024)</td>
+          <td>37.03</td>
+          <td>30.84</td>
+          <td>23.38</td>
+          <td>17.09</td>
+          <td>14.31</td>
+          <td>24.70</td>
+      </tr>
+      <tr>
+          <td>STPrompt(2024)</td>
+          <td>38.21</td>
+          <td>25.63</td>
+          <td>28.66</td>
+          <td>13.11</td>
+          <td>11.63</td>
+          <td>23.44</td>
+      </tr>
+      <tr>
+          <td>Ex-VAD (Ours)</td>
+          <td>40.14</td>
+          <td>32.75</td>
+          <td>28.78</td>
+          <td>20.15</td>
+          <td>18.35</td>
+          <td>28.23</td>
+      </tr>
+  </tbody>
+</table>
+<p>comprehensive ablation studies to validate the effectiveness of each module in the proposed model.</p>
+
+<h2 class="relative group">4.1. Experimental Setups
+    <div id="41-experimental-setups" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#41-experimental-setups" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Datasets. We perform experiments on the UCF-Crime and XD-Violence datasets. UCF-Crime consists of 1,900 untrimmed surveillance videos with a total duration of 128 hours, covering 13 real-world anomalies (e.g., abuse, robbery, explosion) and normal activities. In the WSVAD, 1,610 videos are used for training with video-level annotations, while 290 videos are used for testing with frame-level annotations. XD-Violence contains 4,754 untrimmed videos totaling 217 hours, making it one of the largest multimodal violence detection datasets. It includes six types of violence (e.g., abuse, car accidents, explosions) across diverse sources such as surveillance, films, and games. The dataset is divided into 3,954 training videos and 800 testing videos, with video-level labels.</p>
+<p>Evaluation Metrics. For coarse-grained WSVAD, the evaluation uses frame-level Average Precision (AP) and framelevel AUC for XD-Violence, and only frame-level AUC for UCF-Crime. For fine-grained WSVAD, mean Average Precision (mAP) values are calculated under different Intersection over Union (IoU) thresholds (ranging from 0.1 to 0.5 with a stride of 0.1). The average mAP (AVG) is also reported, and mAP is computed only for abnormal videos in the test set.</p>
+<p>Implementation Details. All experiments are conducted on a single NVIDIA RTX A100 GPU using PyTorch. The network employs frozen image and text encoders from pretrained CLIP (ViT-B/16) with a Transformer-based FFN layer and GELU activation. BLIP-2 is used for caption generation, while Llama-3.1 generates anomaly explanations. Visual and text features are fused via concatenation. Key hyperparameters include: σ = 1 , τ = 0 . 07, context length l = 20, window length in LGT-Adapter (64 for XD-Violence, 8 for UCF-Crime), and λ (1 × 10 − 4 for XDViolence, 1 for UCF-Crime).</p>
+<p>Ex-VAD: Explainable Fine-grained Video Anomaly Detection Based on Visual-Language Models</p>
+<table>
+  <thead>
+      <tr>
+          <th>Category</th>
+          <th>Method</th>
+          <th>Fine-grained</th>
+          <th>Explainability</th>
+          <th>XD-Violence(AP)</th>
+          <th>UCF-Crime(AUC)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Training-Free</td>
+          <td>LAVAD(Zanella et al., 2024)</td>
+          <td>×</td>
+          <td>✓</td>
+          <td>62.01</td>
+          <td>80.28</td>
+      </tr>
+      <tr>
+          <td>Training-Free</td>
+          <td>VERA(Ye et al., 2024)</td>
+          <td>×</td>
+          <td>✓</td>
+          <td>88.2</td>
+          <td>86.6</td>
+      </tr>
+      <tr>
+          <td>Fine-tuning LLMs</td>
+          <td>VADOr(Lv &amp; Sun, 2024)</td>
+          <td>×</td>
+          <td>✓</td>
+          <td>-</td>
+          <td>88.1</td>
+      </tr>
+      <tr>
+          <td>kl</td>
+          <td>RealAD(Sultani et al., 2019)</td>
+          <td>✓</td>
+          <td>×</td>
+          <td>75.18</td>
+          <td>84.14</td>
+      </tr>
+      <tr>
+          <td>kl</td>
+          <td>RTFM (Tian et al., 2021b)</td>
+          <td>✓</td>
+          <td>×</td>
+          <td>78.27</td>
+          <td>85.66</td>
+      </tr>
+      <tr>
+          <td>kl</td>
+          <td>AVVD(Zhou et al., 2022b)</td>
+          <td>✓</td>
+          <td>×</td>
+          <td>78.10</td>
+          <td>84.57</td>
+      </tr>
+      <tr>
+          <td>kl</td>
+          <td>TEVAD(Chen et al., 2023)</td>
+          <td>×</td>
+          <td>×</td>
+          <td>79.80</td>
+          <td>84.9</td>
+      </tr>
+      <tr>
+          <td>kl</td>
+          <td>DMU(Zhou et al., 2023)</td>
+          <td>✓</td>
+          <td>×</td>
+          <td>82.41</td>
+          <td>86.75</td>
+      </tr>
+      <tr>
+          <td>kl</td>
+          <td>CLIP-TSA(Joo et al., 2023)</td>
+          <td>✓</td>
+          <td>×</td>
+          <td>82.17</td>
+          <td>87.58</td>
+      </tr>
+      <tr>
+          <td>kl</td>
+          <td>UMIL(Sanchez-Maci ´ an et al. ´ , 2024)</td>
+          <td>✓</td>
+          <td>×</td>
+          <td>-</td>
+          <td>86.75</td>
+      </tr>
+      <tr>
+          <td>kl</td>
+          <td>VADCLIP(Wu et al., 2024c)</td>
+          <td>✓</td>
+          <td>×</td>
+          <td>84.51</td>
+          <td>88.02</td>
+      </tr>
+      <tr>
+          <td>kl</td>
+          <td>STPrompt(Wu et al., 2024b)</td>
+          <td>✓</td>
+          <td>×</td>
+          <td>83.97</td>
+          <td>88.08</td>
+      </tr>
+      <tr>
+          <td>kl</td>
+          <td>Ex-VAD (Ours)</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td>86.52</td>
+          <td>88.29</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table 3. Coarse-grained comparisons of methods on XD-Violence and UCF-Crime datasets.</p>
+<p>Table 4. Effectiveness of each module for Coarse-grained anomaly detection.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Visual</th>
+          <th>AEGM</th>
+          <th>AEGM</th>
+          <th>LAAM</th>
+          <th>AUC (%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td>Captionl</td>
+          <td>Explainable text</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>✓</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td></td>
+          <td>86.76</td>
+      </tr>
+      <tr>
+          <td>✓</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td></td>
+          <td>86.33</td>
+      </tr>
+      <tr>
+          <td>✓</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td></td>
+          <td>87.86</td>
+      </tr>
+      <tr>
+          <td>✓</td>
+          <td>✓</td>
+          <td>✓</td>
+          <td></td>
+          <td>88.29</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table 5. Effectiveness of the Anomaly Explainable Generation Module for fine-grained anomaly detection.</p>
+<table>
+  <thead>
+      <tr>
+          <th>AEGM</th>
+          <th>0.1</th>
+          <th>0.2</th>
+          <th>0.3</th>
+          <th>0.4</th>
+          <th>0.5</th>
+          <th>AVG</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Captions</td>
+          <td>17.74</td>
+          <td>13.27</td>
+          <td>10.25</td>
+          <td>7.01</td>
+          <td>6.1</td>
+          <td>10.88</td>
+      </tr>
+      <tr>
+          <td>Explainable Text</td>
+          <td>16.51</td>
+          <td>12.35</td>
+          <td>9.41</td>
+          <td>7.82</td>
+          <td>4.65</td>
+          <td>10.15</td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 class="relative group">4.2. Comparison Results
+    <div id="42-comparison-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#42-comparison-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Fine-grained WSVAD Results. The fine-grained detection task is more challenging as it involves detecting the presence of anomalous events while also accurately identifying their specific categories. To demonstrate the superiority of our proposed Ex-VAD, we conduct comparisons with several VAD methods, including RealAD (Sultani et al. , 2019), RTFM (Tian et al. , 2021b), AVVD (Zhou et al. , 2022b), DMU (Zhou et al. , 2023), CLIP-TSA (Joo et al. , 2023), UMIL (Sanchez-Maci ´ ´ an et al. ´ ´ , 2024), VADCLIP (Wu et al. , 2024c), and STPrompt (Wu et al. , 2024b). For fairness, CLIP (ViT-B/16) is used for all feature extractors.</p>
+<p>Tables 1 and 2 present the fine-grained detection results on UCF-Crime and XD-Violence datasets, evaluated using mean average precision (mAP) and average accuracy (AVG) across IOU thresholds (0.1–0.5). Our Ex-VAD consistently achieves the best results, highlighting its superior performance. Specifically, Ex-VAD achieves an AVG of 9.00</p>
+<p>Table 6. Effectiveness of the Label Augment Alignment Module for fine-grained anomaly detection.</p>
+<table>
+  <thead>
+      <tr>
+          <th>LAAM</th>
+          <th>0.1</th>
+          <th>0.2</th>
+          <th>0.3</th>
+          <th>0.4</th>
+          <th>0.5</th>
+          <th>AVG</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>[CLS]</td>
+          <td>14.38</td>
+          <td>10.54</td>
+          <td>6.92</td>
+          <td>5.03</td>
+          <td>2.51</td>
+          <td>7.87</td>
+      </tr>
+      <tr>
+          <td>a video of [CLS]</td>
+          <td>14.77</td>
+          <td>10.68</td>
+          <td>6.69</td>
+          <td>4.78</td>
+          <td>3.73</td>
+          <td>8.13</td>
+      </tr>
+      <tr>
+          <td>Learnable-Prompt</td>
+          <td>15.18</td>
+          <td>12.03</td>
+          <td>6.65</td>
+          <td>4.96</td>
+          <td>3.2</td>
+          <td>8.4</td>
+      </tr>
+      <tr>
+          <td>Label-Augment Prompt</td>
+          <td>16.51</td>
+          <td>12.35</td>
+          <td>9.41</td>
+          <td>7.82</td>
+          <td>4.65</td>
+          <td>10.15</td>
+      </tr>
+  </tbody>
+</table>
+<p>on UCF-Crime, outperforming VADCLIP, STPrompt, and TCVADS by 1.32, 1.52, and 7.24, respectively. On XDViolence, Ex-VAD achieves 28.23 AVG, exceeding these methods by 3.53, 4.79, and 11.28, respectively. Unlike methods like VADCLIP, STPrompt, and TCVADS which align visual features with text embeddings from CLIP or LLMs, Ex-VAD introduces a novel approach. Using AEGM, it prompts VLMs and LLMs to generate textual information, fuses this with visual features, and aligns the representation with labels. This generated textual information enriches semantics and enhances detection performance. Additionally, LAAM expands label semantics by converting single labels (e.g., &ldquo;Abuse&rdquo;) into descriptive phrases (e.g., &ldquo;Someone is being mistreated&rdquo;), better aligning with visual-text features.</p>
+<p>Coarse-grained WSVAD Results. Additionally, we compare the results of the state-of-the-art methods for coarsegrained anomaly detection, including the training-free methods LAVAD (Zanella et al. , 2024) and VERA (Ye et al. , 2024); fine-tuned models to achieve interpretable VADor (Lv &amp; Sun , 2024), and the above for fine-grained anomaly detection methods.</p>
+<p>Table 3 shows that while LAVAD and VERA are simple and interpretable due to their lack of training, they do not support fine-grained detection. Our method, Ex-VAD, performs best on the UCF dataset and second best on the XD dataset. VADOr achieves explainability through fine-tuning but lacks fine-grained detection support. For methods supporting fine-</p>
+<p>grained detection, older approaches like RealAD underperform (75.18 AP on XD-Violence), while recent methods, including AVVD, DMU, and STPrompt, show consistent improvement. VADCLIP and TCVADS push the state of the art, with TCVADS achieving 85.58 AP on XD-Violence and 88.58 AUC on UCF-Crime. Ex-VAD uniquely combines fine-grained detection and interpretability, excelling in both. Although its performance on UCF-Crime (88.29 AUC) is marginally below TCVADS (88.58), it leads to XDViolence, highlighting its versatility. This dual capability makes Ex-VAD an optimal choice for practical applications requiring precision and insights into detection results.</p>
+
+<h2 class="relative group">4.3. Model Analysis
+    <div id="43-model-analysis" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#43-model-analysis" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Ablation Study. To evaluate the impact of the two key components, AEGM and LAAM, we conducted ablation experiments on the UCF-Crime dataset by removing one or both components from Ex-VAD, with results summarized in Table 4. The findings reveal that generating captions solely for videos degrades performance, whereas cleaning these captions and generating anomaly explanations significantly enhances it. This highlights the negative impact of low-quality captions, which often contain redundant or erroneous information, and the complementary role of highquality anomaly explanations in improving visual performance. While AEGM is primarily designed for fine-grained anomaly detection, it also contributes to coarse-grained detection improvements.</p>
+<p>Effectiveness of the AEGM. We evaluate the effectiveness of fine-grained anomaly detection for AEGM, with results shown in Table 5. The analysis shows that Captions alone outperform Explainable Text in fine-grained anomaly detection, as Captions provide frame-level semantic details, while Explainable Text offers a concise video-level summary. However, Explainable Text enhances fine-grained anomaly detection while also providing transparent, summarized explanations of anomalies at the video level. Therefore, we choose Explainable Text for the final model to balance performance and interpretability.</p>
+<p>Effectiveness of LAAM. We evaluate the effectiveness of LAAM in fine-grained VAD, as summarized in Table 6. The results demonstrate that LLAM-augmented labels significantly enhance detection accuracy compared to manually defined cue words and learnable prompt-based approaches. This improvement highlights the value of leveraging LLAM to generate semantically rich and contextually relevant labels that align more effectively with the visual and textual features used for fine-grained anomaly detection.</p>
+<p>Effectiveness of Top-k. Figure 4 presents the impact of different top-k values in the LAAM module on coarse-grained and fine-grained detection results, respectively. The trend graphs reveal that selecting the top 4 phrases (k = 4) with</p>
+<p>Figure 4. Sensitivity analysis of a different number of templates K to generalization of (a) coarse-grained detection and (b) finegrained detection.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000003_56c880f2a2482d17ad1349445168b254ac077a50d33e6a113c866417b117412c.png"
+    ></figure>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000004_eba228fcca4c8a968afc866ad395e0e29d3967233b33ccc76502e80ac89e8bd5.png"
+    ></figure>
+<p>Table 7. Comparison of Trainable Parameters, Inference Time, and Multiply-Add Operations (MACs). The best and second-best values are highlighted with bold text and underlined text, respectively.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>Trainable Params</th>
+          <th>Inference Time</th>
+          <th>MACs</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>RTFM</td>
+          <td>24.72M</td>
+          <td>8.28ms</td>
+          <td>126.59G</td>
+      </tr>
+      <tr>
+          <td>DMU</td>
+          <td>6.49M</td>
+          <td>16.60ms</td>
+          <td>21.00G</td>
+      </tr>
+      <tr>
+          <td>CLIP-TSA</td>
+          <td>16.41M</td>
+          <td>18.33ms</td>
+          <td>102.63G</td>
+      </tr>
+      <tr>
+          <td>VADCLIP</td>
+          <td>35.17M</td>
+          <td>22.30ms</td>
+          <td>29.17G</td>
+      </tr>
+      <tr>
+          <td>ExVAD</td>
+          <td>9.97M</td>
+          <td>15.37ms</td>
+          <td>12.04G</td>
+      </tr>
+  </tbody>
+</table>
+<p>the highest similarity to the original labels achieves optimal label enhancement for video anomaly detection. In this setting, the AUC for coarse-grained detection peaks at 88.28%, while the average mAP@IOU for fine-grained detection reaches its highest value of 10.15%, demonstrating the best detection performance. However, excessive enhancement (k &gt; 5) may introduce noise, resulting in performance degradation. These results highlight that moderate label enhancement significantly enhances the model&rsquo;s overall detection capability and anomaly localization accuracy.</p>
+<p>Analysis of Computational Efficiency. We evaluate the number of trainable parameters (Trainable Params), inference time of a frame (Inference Time), and multiply-add operations (MACs). Table 7 demonstrates that our method, ExVAD, achieves a well-balanced trade-off between model complexity and size, optimizing both performance and resource usage effectively.</p>
+
+<h2 class="relative group">5. Conclusion
+    <div id="5-conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this paper, we propose Ex-VAD, an explainable approach for fine-grained video anomaly detection. First, the Anomaly Explanation Generation Module (AEGM) extracts and refines frame-level captions using VLMs, and then generates video-level anomaly explanations with an LLM. Second, the Multimodal Anomaly Detection Module (MADM) encodes the text and extracts temporal and spatial</p>
+<p>features to detect coarse-grained anomalies. Finally, the Label Augment and Alignment Module (LAAM) expands and aligns anomaly category labels with multimodal features to achieve fine-grained anomaly detection. Experiments show that Ex-VAD outperforms existing methods in fineand coarse-grained anomaly detection, providing a more transparent and effective solution.</p>
+
+<h2 class="relative group">Acknowledgements
+    <div id="acknowledgements" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#acknowledgements" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This work was supported in part by the National Natural Science Foundation of China (No.62301621), in part by Shenzhen Science and Technology Program (No. 20231121172359002, No. KQTD20221101093559018), in part by Shenzhen General Research Project (No. JCYJ20241202125904007), in part by Guangdong Basic and Applied Basic Research Foundation (No. 2025A1515011398, No.2023B0303000010), in part by the CIE-Smartchip research fund (No.2024-08), in part by the Fundamental Research Funds for the Central Universities, Sun Yat-sen University under Grants No. 23xkjc010.</p>
+
+<h2 class="relative group">Impact Statement
+    <div id="impact-statement" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#impact-statement" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This paper presents work whose goal is to advance the field of Computer Vision. There are many potential societal consequences of our work, none of which we feel must be specifically highlighted here.</p>
+
+<h2 class="relative group">References
+    <div id="references" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#references" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>
+<p>Chen, W., Ma, K. T., Jian Yew, Z., Hur, M., and Khoo, D. A.-A. Tevad: Improved video anomaly detection with captions. In 2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW), pp. 5549–5559, 2023.</p>
+</li>
+<li>
+<p>Huang, C., Yang, Z., Wen, J., Xu, Y., Jiang, Q., Yang, J., and Wang, Y. Self-supervision-augmented deep autoencoder for unsupervised visual anomaly detection. IEEE Transactions on Cybernetics, 52(12):13834–13847, 2022.</p>
+</li>
+<li>
+<p>Huang, C., Wen, J., Xu, Y., Jiang, Q., Yang, J., Wang, Y., and Zhang, D. Self-supervised attentive generative adversarial networks for video anomaly detection. IEEE Transactions on Neural Networks and Learning Systems , 34(11):9389–9403, 2023.</p>
+</li>
+<li>
+<p>Huang, C., Wen, J., Liu, C., and Liu, Y. Long short-term dynamic prototype alignment learning for video anomaly detection. In Larson, K. (ed.), Proceedings of the ThirtyThird International Joint Conference on Artificial Intelligence, IJCAI-24, pp. 866–874. International Joint Conferences on Artificial Intelligence Organization, 8 2024. doi: 10.24963/ijcai.2024/96. Main Track.</p>
+</li>
+<li>
+<p>Joo, H. K., Vo, K., Yamazaki, K., and Le, N. Clip-tsa: Clipassisted temporal self-attention for weakly-supervised video anomaly detection. In 2023 IEEE International Conference on Image Processing (ICIP), pp. 3230–3234. IEEE, 2023.</p>
+</li>
+<li>
+<p>Kim, J., Yoon, S., Choi, T., and Sull, S. Unsupervised video anomaly detection based on similarity with predefined text descriptions. Sensors (Basel, Switzerland), 23, 2023a.</p>
+</li>
+<li>
+<p>Kim, J., Yoon, S., Choi, T., and Sull, S. Unsupervised video anomaly detection based on similarity with predefined text descriptions. Sensors, 23(14):6256, 2023b.</p>
+</li>
+<li>
+<p>Li, G., Cai, G., Zeng, X., and Zhao, R. Scale-aware spatiotemporal relation learning for video anomaly detection. In European Conference on Computer Vision, pp. 333–350. Springer, 2022a.</p>
+</li>
+<li>
+<p>Li, J., Li, D., Savarese, S., and Hoi, S. Blip-2: bootstrapping language-image pre-training with frozen image encoders and large language models. In Proceedings of the 40th International Conference on Machine Learning, ICML'23. JMLR.org, 2023.</p>
+</li>
+<li>
+<p>Li, S., Liu, F., and Jiao, L. Self-training multi-sequence learning with transformer for weakly supervised video anomaly detection. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 36, pp. 1395–1403, 2022b.</p>
+</li>
+<li>
+<p>Liu, Y., Yang, D., Wang, Y., Liu, J., Liu, J., Boukerche, A., Sun, P., and Song, L. Generalized video anomaly event detection: Systematic taxonomy and comparison of deep models. 56(7), 2024. ISSN 0360-0300.</p>
+</li>
+<li>
+<p>Lv, H. and Sun, Q. Video anomaly detection and explanation via large language models, 2024.</p>
+</li>
+<li>
+<p>Nawaratne, R., Alahakoon, D., De Silva, D., and Yu, X. Spatiotemporal anomaly detection using deep learning for real-time video surveillance. IEEE Transactions on Industrial Informatics, 16(1):393–402, 2020.</p>
+</li>
+<li>
+<p>Nguyen, T. N. and Meunier, J. Anomaly detection in video sequence with appearance-motion correspondence. In 2019 IEEE/CVF International Conference on Computer Vision (ICCV), pp. 1273–1283, 2019.</p>
+</li>
+<li>
+<p>OpenAI and etc. Gpt-4 technical report, 2024. URL https: //arxiv.org/abs/2303.08774 .</p>
+</li>
+<li>
+<p>Pu, Y., Wu, X., Yang, L., and Wang, S. Learning promptenhanced context features for weakly-supervised video anomaly detection. IEEE Transactions on Image Processing, 33:4923–4936, 2024.</p>
+</li>
+<li>
+<p>Radford, A., Kim, J. W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J., et al. Learning transferable visual models from natural language supervision. In International conference on machine learning, pp. 8748–8763. PMLR, 2021.</p>
+</li>
+<li>
+<p>Ramachandra, B., Jones, M. J., and Vatsavai, R. R. A survey of single-scene video anomaly detection. IEEE Transactions on Pattern Analysis and Machine Intelligence, 44(5): 2293–2312, 2022. doi: 10.1109/TPAMI.2020.3040591.</p>
+</li>
+<li>
+<p>Ren, J., Xia, F., Liu, Y., and Lee, I. Deep video anomaly detection: Opportunities and challenges. In 2021 International Conference on Data Mining Workshops (ICDMW) , pp. 959–966, 2021.</p>
+</li>
+<li>
+<p>Samaila, Y. A., Sebastian, P., Singh, N. S. S., Shuaibu, A. N., Ali, S. S. A., Amosa, T. I., Mustafa Abro, G. E., and Shuaibu, I. Video anomaly detection: A systematic review of issues and prospects. Neurocomputing, 591: 127726, 2024. ISSN 0925-2312.</p>
+</li>
+<li>
+<p>Sanchez-Maci ´ ´ an, A., Mart ´ ´ ´ ´ınez, J., Reviriego, P., Liu, S., and Lombardi, F. On the privacy of the count-min sketch: Extracting the top-k elements. IEEE Transactions on Emerging Topics in Computing, 2024.</p>
+</li>
+<li>
+<p>Sultani, W., Chen, C., and Shah, M. Real-world anomaly detection in surveillance videos, 2019.</p>
+</li>
+<li>
+<p>Tang, J., Lu, H., Wu, R., Xu, X., Ma, K., Fang, C., Guo, B., Lu, J., Chen, Q., and Chen, Y.-C. Hawk: Learning to understand open-world video anomalies, 2024a.</p>
+</li>
+<li>
+<p>Tang, Y., Guo, J., Hua, H., Liang, S., Feng, M., Li, X., Mao, R., Huang, C., Bi, J., Zhang, Z., Fazli, P., and Xu, C. Vidcomposition: Can mllms analyze compositions in compiled videos? arXiv preprint arXiv:2411.10979 , 2024b.</p>
+</li>
+<li>
+<p>Tian, Y., Pang, G., Chen, Y., Singh, R., Verjans, J. W., and Carneiro, G. Weakly-supervised video anomaly detection with robust temporal feature magnitude learning. In Proceedings of the IEEE/CVF international conference on computer vision, pp. 4975–4986, 2021a.</p>
+</li>
+<li>
+<p>Tian, Y., Pang, G., Chen, Y., Singh, R., Verjans, J. W., and Carneiro, G. Weakly-supervised video anomaly detection with robust temporal feature magnitude learning. In Proceedings of the IEEE/CVF international conference on computer vision, pp. 4975–4986, 2021b.</p>
+</li>
+<li>
+<p>Touvron, H., Lavril, T., Izacard, G., Martinet, X., Lachaux, M.-A., Lacroix, T., Roziere, B., Goyal, N., Hambro, E., <code> </code> Azhar, F., Rodriguez, A., Joulin, A., Grave, E., and Lample, G. Llama: Open and efficient foundation language models. ArXiv, abs/2302.13971, 2023.</p>
+</li>
+<li>
+<p>Wang, B., Huang, C., Wen, J., Wang, W., Liu, Y., and Xu, Y. Federated weakly supervised video anomaly detection with multimodal prompt. Proceedings of the AAAI Conference on Artificial Intelligence, 39(20):21017–21025, Apr. 2025.</p>
+</li>
+<li>
+<p>Wang, L., Huynh, D. Q., and Mansour, M. R. Loss switching fusion with similarity search for video classification. In 2019 IEEE International Conference on Image Processing (ICIP), 2019.</p>
+</li>
+<li>
+<p>Wu, P., Liu, J., Shi, Y., Sun, Y., Shao, F., Wu, Z., and Yang, Z. Not only look, but also listen: Learning multimodal violence detection under weak supervision. In Computer Vision–ECCV 2020: 16th European Conference, Glasgow, UK, August 23–28, 2020, Proceedings, Part XXX 16, pp. 322–339. Springer, 2020.</p>
+</li>
+<li>
+<p>Wu, P., Liu, X., and Liu, J. Weakly supervised audio-visual violence detection. IEEE Transactions on Multimedia , 25:1674–1685, 2023.</p>
+</li>
+<li>
+<p>Wu, P., Liu, J., He, X., Peng, Y., Wang, P., and Zhang, Y. Toward video anomaly retrieval from video anomaly detection: New benchmarks and model. IEEE Transactions on Image Processing, 33:2213–2225, 2024a.</p>
+</li>
+<li>
+<p>Wu, P., Zhou, X., Pang, G., Yang, Z., Yan, Q., Wang, P., and Zhang, Y. Weakly supervised video anomaly detection and localization with spatio-temporal prompts. MM &lsquo;24, New York, NY, USA, 2024b. Association for Computing Machinery. ISBN 9798400706868. doi: 10.1145/3664647.3681442.</p>
+</li>
+<li>
+<p>Wu, P., Zhou, X., Pang, G., Zhou, L., Yan, Q., Wang, P., and Zhang, Y. Vadclip: Adapting vision-language models for weakly supervised video anomaly detection. In Proceedings of the AAAI Conference on Artificial Intelligence , volume 38, pp. 6074–6082, 2024c.</p>
+</li>
+<li>
+<p>Yan, C., Zhang, S., Liu, Y., Pang, G., and Wang, W. Feature prediction diffusion model for video anomaly detection. In 2023 IEEE/CVF International Conference on Computer Vision (ICCV), pp. 5504–5514, 2023.</p>
+</li>
+<li>
+<p>Ye, M., Liu, W., and He, P. Vera: Explainable video anomaly detection via verbalized learning of vision-language models. arXiv preprint arXiv:2412.01095, 2024.</p>
+</li>
+<li>
+<p>Zaigham Zaheer, M., Lee, J.-H., Astrid, M., and Lee, S.-I. Old is gold: Redefining the adversarially learned oneclass classifier training paradigm. In 2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp. 14171–14181, 2020.</p>
+</li>
+<li>
+<p>Zanella, L., Menapace, W., Mancini, M., Wang, Y., and Ricci, E. Harnessing large language models for trainingfree video anomaly detection. In Proceedings of the</p>
+</li>
+</ul>
+<p>IEEE/CVF Conference on Computer Vision and Pattern Recognition, pp. 18527–18536, 2024.</p>
+<ul>
+<li>Zhao, Y., Deng, B., Shen, C., Liu, Y., Lu, H., and Hua, X.-S. Spatio-temporal autoencoder for video anomaly detection. In Proceedings of the 25th ACM International Conference on Multimedia, pp. 1933–1941, 2017.</li>
+<li>Zhou, H., Yu, J., and Yang, W. Dual memory units with uncertainty regulation for weakly supervised video anomaly detection. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 37, pp. 3769–3777, 2023.</li>
+<li>Zhou, K., Yang, J., Loy, C. C., and Liu, Z. Learning to prompt for vision-language models. International Journal of Computer Vision, 130(9), 2022a. ISSN 1573-1405. doi: 10.1007/s11263-022-01653-1.</li>
+<li>Zhou, X., Girdhar, R., Joulin, A., Krahenb ¨ ¨ uhl, P., and Misra, ¨ ¨ I. Detecting twenty-thousand classes using image-level supervision. In ECCV, 2022b.</li>
+</ul>
+
+<h2 class="relative group">A. appendix.
+    <div id="a-appendix" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-appendix" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Figure 5. Confidence visualization on the UCF-Crime dataset.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000005_494ceeea5c3bbfb18ed10b798ba602111dccfd20436a65a4da95eaaff56bf86a.png"
+    ></figure>
+<p>Qualitative Analyses. Figure 5 illustrates the qualitative visualization of Ex-VAD. The blue curve represents the anomaly prediction score, while the grey area highlights the ground truth anomaly time positions. The figure also showcases fine-grained anomaly categories and anomaly explanations, which are generated by querying the LLM. As shown, Ex-VAD effectively detects unused anomaly categories, describes anomalous phenomena, and accurately differentiates between normal and abnormal clips in anomalous videos.</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_papers/3552_Ex_VAD_Explainable_Fine_g.md"
+          data-oid-likes="likes_papers/3552_Ex_VAD_Explainable_Fine_g.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/a-vlm-based-method-for-visual-anomaly-detection-in-robotic-scientific-laboratories/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-24 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+      
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 overflow-x-auto py-2">
+        <ul class="flex list-none flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 me-4">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

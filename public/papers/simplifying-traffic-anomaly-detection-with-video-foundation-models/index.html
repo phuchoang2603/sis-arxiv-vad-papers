@@ -1,0 +1,1675 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title> &middot; Blowfish</title>
+    <meta name="title" content=" &middot; Blowfish">
+  
+
+  
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/papers/simplifying-traffic-anomaly-detection-with-video-foundation-models/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/papers/simplifying-traffic-anomaly-detection-with-video-foundation-models/">
+  <meta property="og:site_name" content="Blowfish">
+  <meta property="og:title" content="Blowfish">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blowfish">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.7946532fa78157bafb1b4340d4074792811f18177af35790b3a0cb90566ce1cda3edd782eb92e134849964d14b6d9185c9d4ded2a12dcf5b706cb6a275c0cce0.css"
+    integrity="sha512-eUZTL6eBV7r7G0NA1AdHkoEfGBd681eQs6DLkFZs4c2j7deC65LhNISZZNFLbZGFydTe0qEtz1twbLaidcDM4A==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.9df4fc14d50efcc9aa4cfc2b6f348e365f421f5ad491278f8f48c0360cf2f93f08882fda6da162d7ace8e5add57c2df4ac46bd3861306b1d4c452cd31f448d64.js"
+      integrity="sha512-nfT8FNUO/MmqTPwrbzSONl9CH1rUkSePj0jANgzy&#43;T8IiC/abaFi16zo5a3VfC30rEa9OGEwax1MRSzTH0SNZA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Papers",
+    "name": "",
+    "headline": "",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/papers\/simplifying-traffic-anomaly-detection-with-video-foundation-models\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "7027"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          Blowfish
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/papers/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="papers"
+  title="Papers">
+  
+  
+    <p class="text-base font-medium">
+      papers
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/test/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="test"
+  title="Tests">
+  
+  
+    <p class="text-base font-medium">
+      test
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href=""
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  
+  title="">
+  
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/papers/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="papers"
+    title="Papers">
+    
+    
+      <p class="text-bg font-bg">
+        papers
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/test/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="test"
+    title="Tests">
+    
+    
+      <p class="text-bg font-bg">
+        test
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    
+    title="">
+    
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>7027 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">33 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Simplifying Traffic Anomaly Detection with Video Foundation Models
+    <div id="simplifying-traffic-anomaly-detection-with-video-foundation-models" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#simplifying-traffic-anomaly-detection-with-video-foundation-models" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Svetlana Orlova, Tommie Kerssies, Bruno B. Englert, Gijs Dubbelman ´ ´ Eindhoven University of Technology</p>
+<p>{s.orlova, t.kerssies, b.b.englert, <a
+  href="mailto:g.dubbelman%7d@tue.nl">g.dubbelman}@tue.nl</a></p>
+
+<h2 class="relative group">Abstract
+    <div id="abstract" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abstract" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Recent methods for ego-centric Traffic Anomaly Detection (TAD) often rely on complex multi-stage or multirepresentation fusion architectures, yet it remains unclear whether such complexity is necessary. Recent findings in visual perception suggest that foundation models, enabled by advanced pre-training, allow simple yet flexible architectures to outperform specialized designs. Therefore, in this work, we investigate an architecturally simple encoder-only approach using plain Video Vision Transformers (Video ViTs) and study how pre-training enables strong TAD performance. We find that: (i) strong pretraining enables simple encoder-only models to match or even surpass the performance of specialized state-of-the-art TAD methods, while also being significantly more efficient; (ii) although weakly- and fully-supervised pre-training are advantageous on standard benchmarks, we find them less effective for TAD. Instead, self-supervised Masked Video Modeling (MVM) provides the strongest signal; and (iii) Domain-Adaptive Pre-Training (DAPT) on unlabeled driving videos further improves downstream performance, without requiring anomalous examples. Our findings highlight the importance of pre-training and show that effective, efficient, and scalable TAD models can be built with minimal architectural complexity. We release our code, domainadapted encoders, and fine-tuned models to support future work: <a
+  href="https://github.com/tue-mps/simple-tad"
+    target="_blank"
+  >https://github.com/tue-mps/simple-tad</a> .</p>
+
+<h2 class="relative group">1. Introduction
+    <div id="1-introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Traffic risk estimation is fundamental to safe driving, as failures to anticipate danger can lead to life-threatening consequences. Autonomous vehicles must therefore assess potential hazards in real time, even under uncertain, dynamic, and unfamiliar conditions. A common formulation for this problem is the ego-centric traffic anomaly detection (TAD) task [13 , 48], which aims to identify abnormal or dangerous events in a video stream captured by a vehiclemounted camera. Analyzing the top-performing TAD methods [24 , 25 , 32 , 51], we find that they rely on specialized,</p>
+<p>Figure 1. Traffic Anomaly Detection (TAD) performance on DADA-2000 [13]. Simple encoder-only models with strong pretraining (blue) are faster and more accurate than recent multicomponent architectures (orange and red), see Tabs. 2 and 3 .</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000000_b0a65751b124eb639fcb950d8cac802cf32c8d764364b1c300fd354cb70d830b.png"
+    ></figure>
+<p>complex architectures illustrated in Fig. 2(b) and (c): twostage approaches [10 , 34 , 51], which combine a vision encoder with a temporal component, and multi-representation fusion approaches [24 , 25 , 32], which fuse additional representations, often generated by separate deep neural networks or model-based algorithms. While these complex designs have improved performance, their impact on efficiency has not been evaluated, even though this is crucial for TAD, where rapid detection is needed to enable timely action and prevent accidents.</p>
+<p>Considering that TAD is, in essence, a binary classification task on video, we turn to recent methods for general video classification. On standard video classification benchmarks [8 , 15 , 19 , 36], Video Foundation Models (ViFMs) achieve state-of-the-art performance, predominantly Video Vision Transformers (ViTs) [1 , 11], which rely on largescale self- and weakly-supervised pre-training to learn ex-</p>
+<p>Figure 2. Types of model architectures for TAD: simple encoderonly model (a), two-stage design (b), and multi-representation fusion architecture (c).</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000001_b608b7ece2c8147c9f26f0c7227599e62beacade7499119e6630ca5a355da205.png"
+    ></figure>
+<p>pressive and transferable spatiotemporal representations, rather than on architectural inductive biases. Indeed, recent work in related visual perception tasks shows that strong pre-training reduces the need for downstream task-specific components [20 , 21 , 41]. We hypothesize that the same applies to TAD, such that a simple ViT-based ViFM can be effectively applied to this task and match or even outperform complex architectures. Since TAD depends on motion understanding, we investigate whether pre-training strategies that capture spatio-temporal structure are particularly effective.</p>
+<p>To test our hypotheses, we evaluate multiple ViT-based ViFMs, sharing the same plain video ViT architecture but different pre-training, on two TAD datasets, DoTA [48] and DADA-2000 [13]. We adopt an encoder-only design, with a single linear layer on top of the Video ViT model, as illustrated in Fig. 2(a). While prior work has attempted the encoder-only design [10], it was found to be inferior [24 , 32 , 34]. We revisit this design using stronger pre-training. Similar to prior work, we assess in-domain and out-of-domain generalization, and unlike prior work, we also assess computational efficiency of the models, and compare to the best-performing specialized TAD methods.</p>
+<p>We confirm our hypothesis by showing that strong pretraining enables a plain video ViT, used as an encoder-only model for TAD, to match and even surpass state-of-the-art methods while also being significantly more efficient, as shown in Fig. 1 and Tab. 2. Interestingly, performance on standard video classification benchmarks does not correlate with TAD. Our comparison of pre-trained models shows that weak supervision from language and full supervision from class labels are effective on standard benchmarks but less so for TAD, likely because they promote appearancefocused features that generalize poorly to anomalous mo- tion [45]. In contrast, self-supervised learning with Masked Video Modeling (MVM), which trains the model to reconstruct missing spatio-temporal regions using both spatial structure and temporal continuity, proves most effective for TAD. Models pre-trained with this objective achieve stateof-the-art performance at their respective model size, as shown in Tab. 3 .</p>
+<p>Next, motivated by the scarcity of labeled data for TAD and the abundance of unlabeled driving videos, we explore whether we can leverage self-supervised learning to better adapt an off-the-shelf ViFM to the downstream domain. Specifically, we apply Domain-Adaptive PreTraining (DAPT) [16] using the Video Masked Autoencoding (MAE) [38] approach. We find that MAE-based DAPT, even when applied at relatively small scale compared to the preceding generic pre-training, significantly boosts the performance even further, particularly for smaller models, as shown in Fig. 3. Importantly, we find that including abnormal driving examples for DAPT is not necessary, as shown in Tab. 4, which is valuable given the difficulty of collecting them at scale.</p>
+<p>We summarize our main contributions as follows:</p>
+<ol>
+<li>We show that a plain encoder-only Video ViT, when equipped with strong pre-training, outperforms all prior specialized architectures for TAD, while also being significantly more efficient.</li>
+<li>We compare pre-training strategies and find that selfsupervised learning with a Masked Video Modeling (MVM) objective is most effective, outperforming both weakly- and fully-supervised alternatives.</li>
+<li>We demonstrate that Domain-Adaptive Pre-training with MVM leads to measurable performance gains on TAD, even when applied at a small scale to domain-relevant but anomaly-free data.</li>
+</ol>
+<p>Moreover, since every TAD pipeline relies on its visual encoder, our results offer clear guidance for selecting effective pre-training strategies, enabling future methods to detect traffic anomalies more accurately and robustly.</p>
+
+<h2 class="relative group">2. Related work
+    <div id="2-related-work" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-related-work" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">2.1. Traffic Anomaly Detection
+    <div id="21-traffic-anomaly-detection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#21-traffic-anomaly-detection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Traffic Anomaly Detection (TAD) is typically framed as a binary video classification task, where the goal is to detect potentially dangerous or abnormal events in traffic scenarios from the egocentric viewpoint of a vehicle-mounted camera. While related to the broader field of Video Anomaly Detection (VAD), which commonly targets static-camera surveillance settings, TAD poses unique challenges due to ego-motion, frequent occlusions, and the dynamic interaction of agents in complex driving environments.</p>
+<p>Before the availability of annotated datasets for TAD, earlier approaches often relied on unsupervised reconstruc- tion or prediction of video frames to flag anomalies using temporal autoencoders [29 , 43], future frame prediction with spatial, temporal, and adversarial losses [26], or spatiotemporal tubelet modeling with ensemble scoring [48]. Some works also explored the use of synthetic data for training [22 , 35].</p>
+<p>The introduction of large-scale driving anomaly datasets [13 , 48] with comprehensive annotations has enabled more active development of fully-supervised methods and led to substantial improvements in detection performance. As shown in Fig. 2, we categorize TAD methods into three classes based on their architectural complexity, which we detail below.</p>
+<p>Encoder-only design, (Fig. 2, a). Since TAD is a binary classification task, a minimal solution consists of a feature encoder followed by a linear classifier, without additional task-specific modules. Prior work [10] shows that such designs can be effective in related tasks, where R(2+1)D [39] and ViViT [1] demonstrate considerably strong performance. However, several recent studies report underwhelming results for encoder-only ablation variants of their methods [24 , 32]. Our evaluation of R(2+1)D and ViViT models on standard TAD benchmarks (see Tab. 2) reveals a substantial performance gap between these encoderonly models and current state-of-the-art methods.</p>
+<p>Two-stage design, (Fig. 2, b). Two-stage methods combine a visual encoder with a separate temporal module. VidNeXt [10] pairs a ConvNeXt [27] backbone with a nonstationary transformer (NST) to model both stable and dynamic temporal patterns, evaluating and introducing a new dataset CycleCrash [10] for the related task of collision prediction. Its ablations, ConvNeXt+VT and ResNet+NST, also yield strong results. MOVAD [34] uses a VideoSwin Transformer [28] as a short-term memory encoder over several frames, followed by an LSTM-based long-term module, achieving state-of-the-art performance for TAD.</p>
+<p>Multi-representation fusion design, (Fig. 2, c). Fusion-based models, which currently report state-of-theart performance in TAD, explicitly combine multiple information sources. TTHF [24] augments the CLIP [33] framework with a high-frequency motion encoder and a cross-modal fusion module to align motion features with textual prompts. PromptTAD [32] extends MOVAD [34] by incorporating bounding box prompts via instance- and relation-level attention, enhancing object-centric anomaly localization. ISCRTAD [25] integrates agent features (e.g., appearance, trajectory, depth) using graph-based modeling and fuses them with scene context through contrastive multimodal alignment for robust anomaly detection.</p>
+<p>In this work, we follow the simple encoder-only design and explore whether strong pre-training can compensate for the lack of task-specific architectural inductive biases. We demonstrate that, when equipped with rich priors from large-scale self-supervised pre-training, such models can achieve state-of-the-art performance, while remaining architecturally simple and highly efficient.</p>
+
+<h2 class="relative group">2.2. Video Foundation Models
+    <div id="22-video-foundation-models" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#22-video-foundation-models" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>While early 3D CNN-based architectures can be referred to as foundation models [30], the term foundation model today commonly refers to Transformer-based [40] models that leverage large-scale pre-training. For vision, these models typically adopt the Vision Transformer [11] (ViT) architecture.</p>
+<p>Unlike the convolutional architecture, which embeds strong spatial and temporal inductive biases, ViTs rely on learning such priors directly from data during pretraining [11]. The quality and scale of this pretraining directly influence their effectiveness in downstream tasks [50]. Pre-training methods vary in supervision type and scalability. Fully-supervised approaches rely on manually annotated labels, providing precise semantic guidance but limited scalability. Weakly-supervised methods, such as CLIP [33], use natural language or metadata as training signals. Though less curated, they offer rich semantic structure and broader concept coverage from web-scale data. Selfsupervised learning (SSL) methods, including masked modeling [17 , 38], learn from the data itself without any annotations, enabling large-scale pre-training and highly transferable representations. Unlike weak supervision, which relies on sparse and often noisy text labels [33], SSL provides denser and more unbiased training signals [6 , 17].</p>
+<p>First Video ViTs exploited supervised classification as their pre-training method. ViViT [1] adopted the ViT architecture to video by introducing spatiotemporal 3D cubes called tubelets instead of 2D patches used for images. While this demonstrated that attention-based models can handle video inputs, the method struggled to balance accuracy and efficiency. Subsequent models like TimeSformer [4], MViT [12], and VideoSwin [28] focused on improving efficiency.</p>
+<p>VideoMAE [38] adopted masked autoencoding (MAE), a type of Masked Video Modeling (MVM), as an effective and efficient self-supervised pre-training strategy for plain video ViTs. Its tube masking, when applied to a large fraction of input patches, forces the model to infer spatiotemporal structure from limited visible content. This approach yielded strong results while maintaining architectural simplicity and has since inspired a series of ViT-based Video Foundation Models (ViFMs) that employ self-supervised pre-training [44–46].</p>
+<p>While other architectures such as recurrent, hybrid, and state-space models are active research areas [23 , 31 , 47], at the moment, ViT-based ViFMs are arguably the dominant paradigm due to their strong performance, scalability, versatile pre-training strategies, and widespread opti-</p>
+<p>Table 1. Overview of ViFMs. For models trained via distillation, we denote the supervision type(s) used for the teacher. FSL: fullysupervised, WSL: weakly-supervised, SSL: self-supervised learning.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Year</th>
+          <th>Model</th>
+          <th>Stage</th>
+          <th>Type</th>
+          <th>Objective</th>
+          <th>Supervision</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>2021</td>
+          <td>ViViT [1]</td>
+          <td>Stage 1</td>
+          <td>FSL</td>
+          <td>Classification</td>
+          <td>Class labels</td>
+      </tr>
+      <tr>
+          <td>2022</td>
+          <td>VideoMAE [38]</td>
+          <td>Stage 1</td>
+          <td>SSL</td>
+          <td>Masked Autoencoder</td>
+          <td>Video frame pixels</td>
+      </tr>
+      <tr>
+          <td>2023</td>
+          <td>MVD [45]</td>
+          <td>Stage 1</td>
+          <td>SSL</td>
+          <td>Masked feature distillation</td>
+          <td>High-level features of VideoMAE and ImageMAE teache</td>
+      </tr>
+      <tr>
+          <td>2023</td>
+          <td>VideoMAE2 [44]</td>
+          <td>Stage 1  Stage 2  S3</td>
+          <td>SSL  FSL  FSL</td>
+          <td>Dual MAE  Classification  Logit distillation</td>
+          <td>Video frame pixels Class labels Logits of larger VideoMAE2 after stage 2</td>
+      </tr>
+      <tr>
+          <td>2024</td>
+          <td>InternVideo2 [46]</td>
+          <td>Stage 1  Stage 2  Stage 3</td>
+          <td>WSL+SSL  WSL  WSL+SSL</td>
+          <td>Unmasked feature distillation  Feature distillation + Contrastiv Feature distillation</td>
+          <td>Features of VideoMAE2 and a vision-language encoder Features of audio and text encoders + video, text, audio Features of InternVideo2 after stage 2 across multiple dept</td>
+      </tr>
+  </tbody>
+</table>
+<p>mization support (e.g., FlashAttention [9], optimized libraries, hardware acceleration) designed around the plain Transformer [11] architecture. These qualities, along with the growing availability of pre-trained Video ViTs, make them particularly promising for tasks like traffic anomaly detection (TAD), where generalization, robustness, and efficiency are critical.</p>
+<p>To our knowledge, we are the first to research which type of video pre-training is most effective for the TAD task, and hypothesize that MVM, with its emphasis on learning patch-dense and temporally-aware representations, is particularly well-suited for this task.</p>
+
+<h2 class="relative group">3. Methodology
+    <div id="3-methodology" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-methodology" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We fine-tune multiple ViT-based Video Foundation Models (ViFMs) for TAD and evaluate their performance against recent specialized TAD methods. We follow the encoder-only design and attach a single linear classification head to the output of the final encoder layer. This minimal design ensures that performance primarily reflects the effectiveness of the ViFM backbone in capturing patterns relevant for traffic anomaly detection. We investigate (i) whether a simple Video ViT model, pre-trained at scale, can achieve stateof-the-art performance on TAD, (ii) whether better general ViFMs are also better for TAD, and what type of pretraining is more effective (iii) and, finally, whether smallscale domain-adaptive pre-training (DAPT) is feasible and effective for adapting Video ViTs to the driving domain.</p>
+
+<h2 class="relative group">3.1. Task definition
+    <div id="31-task-definition" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#31-task-definition" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We formulate Traffic Anomaly Detection (TAD) as a binary classification task, specifically focusing on framelevel, ego-centric anomaly classification, where each frame captured from a moving vehicle-mounted camera is assigned an anomaly label.</p>
+<p>Let X t = {It − τ +1 , It − τ +2 , . . . , It} denote a timeordered sliding window of τ consecutive video frames captured from a vehicle-mounted camera up to time t. Each Ik represents an RGB frame at time step k, from the egocentric viewpoint of the vehicle.</p>
+<p>The task is to learn a function fθ that maps an input window X t to a prediction At at each timestep t:</p>
+<!-- formula-not-decoded -->
+<p>where A t ∈ {0 , 1} is a binary label that indicates whether an anomaly is observed at time t .</p>
+<p>In the general case, τ can be 1 and fθ may also maintain an internal hidden state or operate in an autoregressive manner, explicitly conditioning on previously predicted outputs.</p>
+
+<h2 class="relative group">3.2. Evaluation Procedure
+    <div id="32-evaluation-procedure" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#32-evaluation-procedure" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Prior work typically reports the Area Under the Receiver Operating Characteristic Curve (AUCROC) as the primary evaluation metric for TAD [24 , 25 , 32 , 48 , 51], and we adopt this metric when comparing to previous methods. However, handling data imbalance is especially important in TAD, so in our evaluations we use the Matthews Correlation Coefficient (MCC), which has been used in related work [18 , 37 , 42]. MCC takes into account all entries of the confusion matrix, including true negatives, and better reflects overall performance under class imbalance [7]. MCC at a given threshold is defined as:</p>
+<!-- formula-not-decoded -->
+<p>where TP, TN, FP, and FN denote true positives, true negatives, false positives, and false negatives, respectively. Note that MCC ranges from −1 (inverse prediction) to 1 (perfect prediction), with 0 indicating random performance, but we show it in the range -100, 100 to improve readability.</p>
+<p>To assess discriminative ability independently of the decision threshold, we compute MCC across thresholds in the range [0 , 1] and report the area under this curve, referred to as the Area Under the MCC Curve (AUCMCC). We also report MCC at a fixed threshold of 0.5 (<a
+  href="mailto:MCC@0.5">MCC@0.5</a>).</p>
+<p>Beyond metric design, we implement a broader protocol focused on generalization and efficiency. We evaluate in-domain performance, out-of-domain performance, and computational cost.</p>
+
+<h2 class="relative group">3.3. Pre-trained Encoders
+    <div id="33-pre-trained-encoders" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#33-pre-trained-encoders" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We select a range of recent ViFMs that represent various pre-training strategies, and apply them to the TAD task; see Tab. 1 for an overview of their pre-training strategies. When possible, we select variants pre-trained on Kinetics-400 [19] for consistency.</p>
+<p>We include ViViT [1] as a baseline to represent fullysupervised pre-training. VideoMAE [38], MVD [45], and VideoMAE2 [44] are selected to evaluate progressively stronger variants of self-supervised pre-training from videos. We also assess InternVideo2 [46], which combines self-supervised learning from videos and weaklysupervised learning from multiple modalities, and is one of the leading models across numerous video benchmarks. Together, these ViT-based models cover a diverse range of pre-training strategies.</p>
+<p>For completeness, we also include the fullyconvolutional R(2+1)D model, pretrained in a fullysupervised manner, motivated by recent studies showing its competitive performance in the related task of collision anticipation [10].</p>
+
+<h2 class="relative group">3.4. Domain-Adaptive Pre-Training
+    <div id="34-domain-adaptive-pre-training" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#34-domain-adaptive-pre-training" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>To better align the Video ViT encoder with the driving domain, we adopt the Domain-Adaptive Pre-Training (DAPT) strategy, a simple method originally proposed in the field of natural language processing [16]. DAPT introduces an additional pre-training stage between generic pre-training and downstream fine-tuning, using unlabeled data from the target domain.</p>
+<p>We apply VideoMAE-based [38] DAPT as follows:</p>
+<ul>
+<li>Step 1: Generic pre-training. As before, we initialize the encoder with an off-the-shelf VideoMAE model pre-trained on large-scale generic video data, mostly unrelated to the driving domain.</li>
+<li>Step 2: Domain-Adaptive Pre-training (DAPT). We continue pre-training the same model on a medium-sized dataset of unlabeled driving videos using the exact same VideoMAE reconstruction objective:</li>
+</ul>
+<!-- formula-not-decoded -->
+<p>where x is the input video, xmasked is the masked input, fθ is the encoder-decoder VideoMAE model, M is the binary mask, and ⊙ is element-wise multiplication.</p>
+<ul>
+<li>Step 3: Fine-tuning on TAD. As before, we fine-tune the encoder-only model on TAD datasets using the same configuration with a simple linear classification head.</li>
+</ul>
+<p>The intermediate DAPT step (Step 2) specializes the model towards the driving domain without requiring any labels. It introduces no additional parameters, preserves model efficiency, and remains fully compatible with standard VideoMAE pipelines.</p>
+
+<h2 class="relative group">4. Experiments
+    <div id="4-experiments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-experiments" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">4.1. Experimental setup
+    <div id="41-experimental-setup" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#41-experimental-setup" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Datasets. We evaluate on DoTA [48] and DADA2000 [13], two large-scale real-world driving anomaly datasets with temporal and frame-level annotations. DAPT uses Kinetics-700 [5], BDD100K [49], and CAPDATA [14], described in detail in the Supplementary.</p>
+<p>Model input. All Video ViTs and R(2+1)D are trained on sliding windows of size 224×224×16 at 10 FPS (1.5s temporal context) by default. For InternVideo2, which uses tubelets of size 1, we use 224×224×8 at 5 FPS to match the same duration. MOVAD processes videos frame-byframe at resolution 640×480.</p>
+<p>Fine-tuning. With all Video ViTs and R(2+1)D, we closely follow the VideoMAE fine-tuning recipe for HMDB51. We train for 50 epochs (5 warmup), with 50K randomly sampled examples per epoch and a batch size of 56. For VidNeXt variants, and MOVAD, we follow the original training settings.</p>
+<p>Domain-adaptive pre-training (DAPT). We apply the VideoMAE pre-training strategy [38], masking 75% of tokens, using MSE loss on masked tokens only. Training uses a batch size of 800 and 1M samples per epoch, with 12 epochs. We explore DAPT on three domains: (a) Kinetics700, (b) BDD100K (normal driving), and (c) BDD100K + CAP-DATA (abnormal driving), with dataset mixing ratios detailed in the Supplementary.</p>
+
+<h2 class="relative group">4.2. Can an encoder-only model outperform specialized TAD methods?
+    <div id="42-can-an-encoder-only-model-outperform-specialized-tad-methods" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#42-can-an-encoder-only-model-outperform-specialized-tad-methods" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>To answer this question, we evaluate models along three critical axes: classification performance, generalization, and efficiency, as shown in Tab. 2. We select a range of recent top-performing methods proposed for the TAD task. Among encoder-only models, we apply the R(2+1)D [39] model and different sizes of VideoMAE pre-trained Video ViTs (with DAPT, see Sec. 4.4). The results show that these Video ViTs consistently strike a strong balance, demonstrating a good combination of predictive accuracy, generalization across domains, and computational efficiency. Notably, strongly pre-trained Video ViTs achieve the highest AUC ROC scores across both DoTA and DADA-2000 datasets, both in-domain and in cross-dataset evaluation, while being highly efficient with a low memory footprint. In contrast, specialized TAD-specific models not only demonstrate lower classification performance but also incur sub-</p>
+<p>Table 2. Traffic Anomaly Detection (TAD) performance and efficiency. Video ViT-based encoder-only models set a new state of the art on both datasets, while being significantly more efficient than top-performing specialized methods. FPS measured using NVIDIA A100 MIG, 1 2 GPU. †From prior work. ‡Optimistic estimates using publicly available components of the model. &ldquo;A→B&rdquo;: trained on A, tested on B; D2K: DADA-2000.</p>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th>DoTA AUCROC, %</th>
+          <th>DoTA AUCROC, %</th>
+          <th>D2K AUCROC, %</th>
+          <th>D2K AUCROC, %</th>
+          <th></th>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Method</td>
+          <td>DoTA→DoTA</td>
+          <td>D2K→DoTA</td>
+          <td>D2K→D2K</td>
+          <td>DoTA→D2K</td>
+          <td># Param</td>
+          <td>Peak GPU</td>
+          <td>FPS</td>
+      </tr>
+      <tr>
+          <td>Two-stage TAD methods</td>
+          <td>Two-stage TAD methods</td>
+          <td>Two-stage TAD methods</td>
+          <td>Two-stage TAD methods</td>
+          <td>Two-stage TAD methods</td>
+          <td>Two-stage TAD methods</td>
+          <td>Two-stage TAD methods</td>
+          <td>Two-stage TAD methods</td>
+      </tr>
+      <tr>
+          <td>VidNeXt [10]</td>
+          <td>73.9</td>
+          <td>69.3</td>
+          <td>70.1</td>
+          <td>72.4</td>
+          <td>125 M</td>
+          <td>0.78 GB</td>
+          <td>27</td>
+      </tr>
+      <tr>
+          <td>ConvNeXt+VT [10]</td>
+          <td>73.1</td>
+          <td>61.2</td>
+          <td>66.8</td>
+          <td>67.3</td>
+          <td>125 M</td>
+          <td>0.77 GB</td>
+          <td>27</td>
+      </tr>
+      <tr>
+          <td>ResNet+NST [10]</td>
+          <td>74.0</td>
+          <td>70.1</td>
+          <td>71.2</td>
+          <td>72.3</td>
+          <td>24 M</td>
+          <td>0.19 GB</td>
+          <td>124</td>
+      </tr>
+      <tr>
+          <td>MOVAD [34]</td>
+          <td>82.2</td>
+          <td>77.6</td>
+          <td>77.0</td>
+          <td>75.2</td>
+          <td>153 M</td>
+          <td>1.10 GB</td>
+          <td>26</td>
+      </tr>
+      <tr>
+          <td>Multi-representation fusion TAD methods</td>
+          <td>Multi-representation fusion TAD methods</td>
+          <td>Multi-representation fusion TAD methods</td>
+          <td>Multi-representation fusion TAD methods</td>
+          <td>Multi-representation fusion TAD methods</td>
+          <td>Multi-representation fusion TAD methods</td>
+          <td>Multi-representation fusion TAD methods</td>
+          <td>Multi-representation fusion TAD methods</td>
+      </tr>
+      <tr>
+          <td>TTHF [24]</td>
+          <td>84.7†</td>
+          <td>–</td>
+          <td>–</td>
+          <td>71.7†</td>
+          <td>140 M</td>
+          <td>0.80 GB</td>
+          <td>26</td>
+      </tr>
+      <tr>
+          <td>PromptTAD [32]</td>
+          <td>83.9†</td>
+          <td>–</td>
+          <td>–</td>
+          <td>74.6†</td>
+          <td>106 M</td>
+          <td>1.88 GB</td>
+          <td>18</td>
+      </tr>
+      <tr>
+          <td>ISCRTAD [25]</td>
+          <td>86.2†</td>
+          <td>–</td>
+          <td>–</td>
+          <td>82.7†</td>
+          <td>359 M‡</td>
+          <td>1.51 GB‡</td>
+          <td>33‡</td>
+      </tr>
+      <tr>
+          <td>Encoder-only models</td>
+          <td>Encoder-only models</td>
+          <td>Encoder-only models</td>
+          <td>Encoder-only models</td>
+          <td>Encoder-only models</td>
+          <td>Encoder-only models</td>
+          <td>Encoder-only models</td>
+          <td>Encoder-only models</td>
+      </tr>
+      <tr>
+          <td>R(2+1)D [39]</td>
+          <td>81.5</td>
+          <td>76.4</td>
+          <td>78.8</td>
+          <td>78.4</td>
+          <td>27 M</td>
+          <td>0.27 GB</td>
+          <td>104</td>
+      </tr>
+      <tr>
+          <td>DAPT-VideoMAE-S (ours)</td>
+          <td>86.4</td>
+          <td>81.7</td>
+          <td>85.6</td>
+          <td>84.3</td>
+          <td>22 M</td>
+          <td>0.16 GB</td>
+          <td>95</td>
+      </tr>
+      <tr>
+          <td>DAPT-VideoMAE-B (ours)</td>
+          <td>87.9</td>
+          <td>83.5</td>
+          <td>87.6</td>
+          <td>85.8</td>
+          <td>86 M</td>
+          <td>0.54 GB</td>
+          <td>94</td>
+      </tr>
+      <tr>
+          <td>DAPT-VideoMAE-L (ours)</td>
+          <td>88.4</td>
+          <td>84.2</td>
+          <td>88.5</td>
+          <td>86.6</td>
+          <td>304 M</td>
+          <td>1.80 GB</td>
+          <td>34</td>
+      </tr>
+  </tbody>
+</table>
+<p>stantially higher computational costs and latency. R(2+1)D and ResNet+NST, while being highly efficient, fall short in predictive quality. This confirms that we can outperform specialized, multi-component TAD methods with a simple encoder-only model by applying a Video ViT with strong pre-training.</p>
+
+<h2 class="relative group">4.3. What pre-training is better for TAD?
+    <div id="43-what-pre-training-is-better-for-tad" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#43-what-pre-training-is-better-for-tad" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We investigate how general video recognition performance and pre-training strategies relate to downstream performance on TAD. We evaluate a range of publicly available Video ViT models of several sizes, using their Top-1 accuracy on Kinetics-400 [19] and SomethingSomethingV2 [15] alongside AUCMCC on DoTA[48] and DADA-2000 [13].</p>
+<p>Results are summarized in Tab. 3, from which we observe two key trends. First, we find that for TAD the MAE pre-training objective dominates: MAE-pre-trained models (VideoMAE) and their distilled variants (VideoMAE2, MVD) achieve the highest AUCMCC within each size tier, even when they do not have the highest classification accuracy on general benchmarks. Second, classification accuracy on general benchmarks is not representative of TAD performance: ViViT-B, despite matching VideoMAE on Kinetics-400, demonstrates significantly lower AUCMCC , and InternVideo2, state-of-the-art on general benchmarks, also underperforms on TAD. These findings suggest that the representations which are beneficial for general video classification may not align well with those needed for TAD. In particular, TAD appears to benefit more from dense representations that emphasize fine-grained temporal irregularities rather than the coarse semantic categories typically targeted by general video recognition models.</p>
+<p>The overall top-ranking model on TAD is VideoMAE2, which incorporates dual masking, an additional pre-training step with distillation from a larger model, and ∼6 times larger-scale pre-training datasets, compared to other MVM pre-trained models. This confirms that both the scale of pretraining and the choice of objectives significantly impact the transferability of ViFMs to TAD.</p>
+
+<h2 class="relative group">4.4. Domain-Adaptive Pre-Training (DAPT)
+    <div id="44-domain-adaptive-pre-training-dapt" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#44-domain-adaptive-pre-training-dapt" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Larger ViFMs can be pre-trained on a larger scale and, as a result, exhibit better out-of-the-box generalization across domains, while smaller models have shown to benefit less from longer pre-training due to their limited capacity and faster saturation [50]. Therefore, we expect that domain adaptation can help better utilize the capacity of the smaller but at the same time more efficient and faster models. Given that MAE pre-training proves especially effective for TAD, and unlabeled driving data is available in abundance, we investigate whether small-scale self-supervised DAPT with MAE can be an effective and efficient way to scale the performance of smaller models. We initialize a ViT model with</p>
+<p>Table 3. Comparing Video ViT pre-trainings. In contrast to general video classification benchmarks (K400, SthSthV2), fully- and weakly-supervised pre-training are less effective for TAD benchmarks. Self-supervised pre-training performs best for TAD (DoTA, D2K). FSL: fully-supervised; WSL: weakly-supervised; SSL: self-supervised learning; K400: Kinetics-400 [19]; SthSthV2: SomethingSomethingV2 [15]; D2K: DADA-2000 [13].</p>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th>Top-1 accuracy</th>
+          <th>Top-1 accuracy</th>
+          <th><a
+  href="mailto:MCC@0.5">MCC@0.5</a></th>
+          <th><a
+  href="mailto:MCC@0.5">MCC@0.5</a></th>
+          <th>AUCMCC</th>
+          <th>AUCMCC</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Model</td>
+          <td>Variant</td>
+          <td>Type</td>
+          <td>K400</td>
+          <td>SthSthV2</td>
+          <td>DoTA</td>
+          <td>D2K</td>
+          <td>DoTA</td>
+          <td>D2K</td>
+      </tr>
+      <tr>
+          <td>VideoMAE1600 [38]</td>
+          <td>Small</td>
+          <td>SSL</td>
+          <td>79.0</td>
+          <td>66.8</td>
+          <td>55.5</td>
+          <td>49.5</td>
+          <td>52.1</td>
+          <td>48.1</td>
+      </tr>
+      <tr>
+          <td>MVDfromB [45]</td>
+          <td>Small</td>
+          <td>SSL</td>
+          <td>80.6</td>
+          <td>70.7</td>
+          <td>56.2</td>
+          <td>49.8</td>
+          <td>50.0</td>
+          <td>48.1</td>
+      </tr>
+      <tr>
+          <td>MVDfromL [45]</td>
+          <td>Small</td>
+          <td>SSL</td>
+          <td>81.0</td>
+          <td>70.9</td>
+          <td>56.5</td>
+          <td>51.1</td>
+          <td>50.2</td>
+          <td>49.1</td>
+      </tr>
+      <tr>
+          <td>VideoMAE2 [44]</td>
+          <td>Small</td>
+          <td>SSL+FSL</td>
+          <td>83.7</td>
+          <td>–</td>
+          <td>56.8</td>
+          <td>51.6</td>
+          <td>55.2</td>
+          <td>50.3</td>
+      </tr>
+      <tr>
+          <td>InternVideo2 [46]</td>
+          <td>Small</td>
+          <td>WSL+SSL</td>
+          <td>85.4</td>
+          <td>71.6</td>
+          <td>51.6</td>
+          <td>44.5</td>
+          <td>49.7</td>
+          <td>43.7</td>
+      </tr>
+      <tr>
+          <td>ViViT [1]</td>
+          <td>Base</td>
+          <td>FSL</td>
+          <td>79.9</td>
+          <td>–</td>
+          <td>30.7</td>
+          <td>27.6</td>
+          <td>28.9</td>
+          <td>26.7</td>
+      </tr>
+      <tr>
+          <td>VideoMAE800 [38]</td>
+          <td>Base</td>
+          <td>SSL</td>
+          <td>80.0</td>
+          <td>–</td>
+          <td>58.0</td>
+          <td>52.0</td>
+          <td>54.5</td>
+          <td>51.2</td>
+      </tr>
+      <tr>
+          <td>VideoMAE1600 [38]</td>
+          <td>Base</td>
+          <td>SSL</td>
+          <td>81.0</td>
+          <td>69.7</td>
+          <td>58.7</td>
+          <td>52.6</td>
+          <td>56.0</td>
+          <td>52.2</td>
+      </tr>
+      <tr>
+          <td>MVDfromB [45]</td>
+          <td>Base</td>
+          <td>SSL</td>
+          <td>82.7</td>
+          <td>72.5</td>
+          <td>57.8</td>
+          <td>51.6</td>
+          <td>56.0</td>
+          <td>50.9</td>
+      </tr>
+      <tr>
+          <td>MVDfromL [45]</td>
+          <td>Base</td>
+          <td>SSL</td>
+          <td>83.4</td>
+          <td>73.7</td>
+          <td>59.2</td>
+          <td>52.1</td>
+          <td>57.0</td>
+          <td>51.0</td>
+      </tr>
+      <tr>
+          <td>VideoMAE2 [44]</td>
+          <td>Base</td>
+          <td>SSL+FSL</td>
+          <td>86.6</td>
+          <td>75.0</td>
+          <td>58.4</td>
+          <td>54.8</td>
+          <td>56.5</td>
+          <td>53.4</td>
+      </tr>
+      <tr>
+          <td>InternVideo2 [46]</td>
+          <td>Base</td>
+          <td>WSL+SSL</td>
+          <td>88.4</td>
+          <td>73.5</td>
+          <td>52.2</td>
+          <td>44.2</td>
+          <td>50.0</td>
+          <td>43.1</td>
+      </tr>
+      <tr>
+          <td>VideoMAE1600 [38]</td>
+          <td>Large</td>
+          <td>SSL</td>
+          <td>85.2</td>
+          <td>74.3</td>
+          <td>61.6</td>
+          <td>56.9</td>
+          <td>59.7</td>
+          <td>55.36</td>
+      </tr>
+      <tr>
+          <td>MVDfromL [45]</td>
+          <td>Large</td>
+          <td>SSL</td>
+          <td>86.0</td>
+          <td>76.1</td>
+          <td>60.5</td>
+          <td>54.6</td>
+          <td>59.0</td>
+          <td>53.7</td>
+      </tr>
+  </tbody>
+</table>
+<p>Figure 3. DAPT scaling across different model sizes. Smaller models benefit more. S: small, B: base, L: large variant of the Video ViT.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000002_6c3e80672ab0b95748560ec036b4cb566cc06bd1193808214cbb80ff505e1fd5.png"
+    ></figure>
+<p>VideoMAE pre-trained weights and perform several epochs of additional pre-training with the VideoMAE objective on in-domain data. Compared to the original ∼192K training steps with batch size 2048, we use only 15K steps with batch size 800.</p>
+<p>As shown in Fig. 3, DAPT via MAE brings clear improvements for small and base VideoMAE pre-trained models. As expected, given our small-scale DAPT protocol, the large model sees less improvement.</p>
+<p>To disentangle the impact of domain relevance from that of additional pre-training, we conduct an ablation study on the data used for DAPT. Specifically, we adapt a model, pre-trained on a general human activity dataset, using three types of unlabeled video data: (1) the original, general pretraining domain used by VideoMAE, which is not related to the TAD task, (2) normal ego-centric driving, and (3) egocentric driving mixed with anomalies. This setup allows</p>
+<p>Table 4. DAPT ablation. Comparing generic (Kinetics700 [19]), driving (BDD100K [49]), and driving + anomaly (CAPDATA [14]) domains shows that driving videos improve performance without requiring anomalies. Using Video ViT-Small. &quot; A→B&quot;: trained on A, tested on B; D: DoTA; D2K: DADA-2000.</p>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th>DoTA AUCMCC,</th>
+          <th>DoTA AUCMCC,</th>
+          <th>D2K AUCMCC</th>
+          <th>D2K AUCMCC</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Method</td>
+          <td>D→D</td>
+          <td>D2K→D</td>
+          <td>D2K→D2K</td>
+          <td>D→D2K</td>
+      </tr>
+      <tr>
+          <td>w/o DAPT</td>
+          <td>52.1</td>
+          <td>43.8</td>
+          <td>48.1</td>
+          <td>46.6</td>
+      </tr>
+      <tr>
+          <td>Generic DAPT</td>
+          <td>51.6 -0.5</td>
+          <td>43.8</td>
+          <td>48.5 +0.4</td>
+          <td>46.2 -0.4</td>
+      </tr>
+      <tr>
+          <td>Driving DAPT</td>
+          <td>54.8 +2.7</td>
+          <td>46.8 +3.0</td>
+          <td>52.0 +3.9</td>
+          <td>49.7 +3.1</td>
+      </tr>
+      <tr>
+          <td>+ anomalies</td>
+          <td>54.9 +2.8</td>
+          <td>46.9 +3.1</td>
+          <td>51.9 +3.8</td>
+          <td>49.7 +3.1</td>
+      </tr>
+  </tbody>
+</table>
+<p>us to evaluate whether the observed improvements stem from domain alignment or from simply continuing generic pre-training. As shown in Tab. 4, adaptation with domainrelevant data (both normal and abnormal driving) consistently improves generalization and data efficiency, while additional pre-training on the original, generic domain yields no notable gains. Interestingly, pre-training on normal driving videos is sufficient, and mixing in data with driving anomalies does not provide further improvements. We conclude that small-scale self-supervised DAPT is a simple and effective way to improve the performance and generalization of smaller Video ViTs for TAD, which does not necessarily requires rare anomaly data.</p>
+<p>Finally, in Fig. 4 we also include some qualitative examples which clearly demonstrate the positive effect of DAPT.</p>
+<p>Figure 4. Qualitative examples for the effect of DAPT. Predicted anomaly-scores of VideoMAE (top: S, bottom: B) w/ and w/o DAPT.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000003_b788041f9a038cb2d797c6b3b493bebd758faf6e98466f3cbbdc5dc15e759718.png"
+    ></figure>
+
+<h2 class="relative group">5. Discussion
+    <div id="5-discussion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-discussion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this work, we show that with stronger pre-training, an encoder-only Video Vision Transformer outperforms all prior Traffic Anomaly Detection models while also being significantly more efficient. However, it remains an open question whether the additional components introduced in earlier work become redundant as pre-training scales, as shown in related perception tasks [21], or whether they still provide complementary benefits.</p>
+<p>We use Video Masked Autoencoders [38 , 44] as a simple and effective form of masked video modeling (MVM). Approaches that predict in latent space, such as V-JEPA [2 , 3], may offer further gains by avoiding the limitations of noisy pixel-level reconstruction.</p>
+
+<h2 class="relative group">6. Conclusion
+    <div id="6-conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Ego-centric Traffic Anomaly Detection (TAD) is a challenging task that requires modeling motion dynamics and agent interactions. While most recent methods for TAD rely on complex, multi-component architectures, we show that a simple encoder-only design using a plain Video Vision Transformer (ViT) with strong self-supervised pre-training is not only more efficient, but also more effective and generalizable. Building on this, Domain-Adaptive Pre-Training (DAPT) offers a label-free and data-efficient way to further boost performance, particularly for smaller models. These findings highlight the strength of learned inductive biases from large-scale pre-training as an alternative to manually crafted architectural complexity, a principle to which TAD is no exception.</p>
+<p>Our experiments further demonstrate that Masked Video Modeling (MVM) is the most effective pre-training strategy for TAD, in contrast to standard video classification tasks. This suggests that different video tasks may benefit from pre-training objectives tailored to their downstream requirements. While TAD is a crucial task in autonomous driving (AD), other AD tasks may align more closely with conventional action recognition. This motivates further research into a universally effective video pre-training strategy, evaluated by its generalization across diverse AD tasks. We hope our findings provide a foundation for future work in this direction.</p>
+<p>Acknowledgements This work was funded by the Horizon Europe programme of the European Union, under grant agreement 101076754 (project AITHENA). Views and opinions expressed here are however those of the author(s) only and do not necessarily reflect those of the European Union or CINEA. Neither the European Union nor the granting authority can be held responsible for them. We also acknowledge the Dutch national e-infrastructure with the support of the SURF Cooperative, grant agreement no. EINF-10314, financed by the Dutch Research Council (NWO), for the availability of high-performance computing resources and support.</p>
+
+<h2 class="relative group">References
+    <div id="references" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#references" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>[1] Anurag Arnab, Mostafa Dehghani, Georg Heigold, Chen Sun, Mario Luciˇ ˇ c, and Cordelia Schmid. Vivit: A video ´ ´ vision transformer. In Proceedings of the IEEE/CVF international conference on computer vision, pages 6836–6846, 2021. 1 , 3 , 4 , 5 , 7</li>
+<li>[2] Mido Assran, Adrien Bardes, David Fan, Quentin Garrido, Russell Howes, Mojtaba Komeili, Matthew Muckley, Ammar Rizvi, Claire Roberts, Koustuv Sinha, Artem Zholus, Sergio Arnaud, Abha Gejji, Ada Martin, Francois Robert Hogan, Daniel Dugas, Piotr Bojanowski, Vasil Khalidov, Patrick Labatut, Francisco Massa, Marc Szafraniec, Kapil Krishnakumar, Yong Li, Xiaodong Ma, Sarath Chandar, Franziska Meier, Yann LeCun, Michael Rabbat, and Nicolas Ballas. V-jepa 2: Self-supervised video models enable understanding, prediction and planning. arXiv preprint arXiv:2506.09985, 2025. 8</li>
+<li>[3] Adrien Bardes, Quentin Garrido, Jean Ponce, Xinlei Chen, Michael Rabbat, Yann LeCun, Mahmoud Assran, and Nicolas Ballas. Revisiting feature prediction for learning visual representations from video. arXiv preprint arXiv:2404.08471, 2024. 8</li>
+<li>[4] Gedas Bertasius, Heng Wang, and Lorenzo Torresani. Is space-time attention all you need for video understanding? In ICML, page 4, 2021. 3</li>
+<li>[5] Joao Carreira, Eric Noland, Chloe Hillier, and Andrew Zisserman. A short note on the kinetics-700 human action dataset. arXiv preprint arXiv:1907.06987, 2019. 5</li>
+<li>[6] Ting Chen, Simon Kornblith, Mohammad Norouzi, and Geoffrey Hinton. A simple framework for contrastive learning of visual representations. In International conference on machine learning, pages 1597–1607. PmLR, 2020. 3</li>
+<li>[7] Davide Chicco and Giuseppe Jurman. The matthews correlation coefficient (mcc) should replace the roc auc as the standard metric for assessing binary classification. BioData Mining, 16(1):4, 2023. 4</li>
+<li>[8] Dima Damen, Hazel Doughty, Giovanni Maria Farinella, Sanja Fidler, Antonino Furnari, Evangelos Kazakos, Davide Moltisanti, Jonathan Munro, Toby Perrett, Will Price, et al. Scaling egocentric vision: The epic-kitchens dataset. In Proceedings of the European conference on computer vision (ECCV), pages 720–736, 2018. 1</li>
+<li>[9] Tri Dao, Dan Fu, Stefano Ermon, Atri Rudra, and Christopher Re. Flashattention: Fast and memory-efficient exact ´ ´ attention with io-awareness. Advances in neural information processing systems, 35:16344–16359, 2022. 4</li>
+<li>[10] Nishq Poorav Desai, Ali Etemad, and Michael Greenspan. Cyclecrash: A dataset of bicycle collision videos for collision prediction and analysis. In Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision, 2025. 1 , 2 , 3 , 5 , 6</li>
+<li>[11] Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, et al. An image is worth 16x16 words: Transformers for image recognition at scale. arXiv preprint arXiv:2010.11929, 2020. 1 , 3 , 4</li>
+<li>[12] Haoqi Fan, Bo Xiong, Karttikeya Mangalam, Yanghao Li, Zhicheng Yan, Jitendra Malik, and Christoph Feichtenhofer. Multiscale vision transformers. In Proceedings of the IEEE/CVF international conference on computer vision , pages 6824–6835, 2021. 3</li>
+<li>[13] Jianwu Fang, Dingxin Yan, Jiahuan Qiao, Jianru Xue, and Hongkai Yu. Dada: Driver attention prediction in driving accident scenarios. IEEE transactions on intelligent transportation systems, 23(6):4959–4971, 2021. 1 , 2 , 3 , 5 , 6 , 7</li>
+<li>[14] Jianwu Fang, Lei-Lei Li, Kuan Yang, Zhedong Zheng, Jianru Xue, and Tat-Seng Chua. Cognitive accident prediction in driving scenes: A multimodality benchmark. CoRR , abs/2212.09381, 2022. 5 , 7</li>
+<li>[15] Raghav Goyal, Samira Ebrahimi Kahou, Vincent Michalski, Joanna Materzynska, Susanne Westphal, Heuna Kim, Valentin Haenel, Ingo Fruend, Peter Yianilos, Moritz Mueller-Freitag, et al. The&quot; something something&quot; video database for learning and evaluating visual common sense. In Proceedings of the IEEE international conference on computer vision, pages 5842–5850, 2017. 1 , 6 , 7</li>
+<li>[16] Suchin Gururangan, Ana Marasovic, Swabha Swayamdipta, ´ ´ Kyle Lo, Iz Beltagy, Doug Downey, and Noah A Smith. Don&rsquo;t stop pretraining: Adapt language models to domains and tasks. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics. Association for Computational Linguistics, 2020. 2 , 5</li>
+<li>[17] Kaiming He, Xinlei Chen, Saining Xie, Yanghao Li, Piotr Dollar, and Ross Girshick. Masked autoencoders are scalable ´ ´ vision learners. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 16000– 16009, 2022. 3</li>
+<li>[18] P Rajesh Kanna, S Vanithamani, P Karunakaran, P Pandiaraja, N Tamilarasi, and P Nithin. An enhanced traffic incident detection using factor analysis and weighted random forest algorithm. In 2024 International Conference on IoT Based Control Networks and Intelligent Systems (ICICNIS) , pages 1355–1361. IEEE, 2024. 4</li>
+<li>[19] Will Kay, Joao Carreira, Karen Simonyan, Brian Zhang, Chloe Hillier, Sudheendra Vijayanarasimhan, Fabio Viola, Tim Green, Trevor Back, Paul Natsev, et al. The kinetics human action video dataset. arXiv preprint arXiv:1705.06950 , 2017. 1 , 5 , 6 , 7</li>
+<li>[20] Tommie Kerssies, Daan de Geus, and Gijs Dubbelman. First Place Solution to the ECCV 2024 BRAVO Challenge: Evaluating Robustness of Vision Foundation Models for Semantic Segmentation. arXiv preprint arXiv:2409.17208, 2024. 2</li>
+<li>[21] Tommie Kerssies, Niccolo Cavagnero, Alexander Hermans, Narges Norouzi, Giuseppe Averta, Bastian Leibe, Gijs Dubbelman, and Daan de Geus. Your vit is secretly an image segmentation model. In Proceedings of the Computer Vision and Pattern Recognition Conference, pages 25303–25313, 2025. 2 , 8</li>
+<li>[22] Hoon Kim, Kangwook Lee, Gyeongjo Hwang, and Changho Suh. Crash to not crash: Learn to identify dangerous vehicles using a simulator. In Proceedings of the AAAI Conference on Artificial Intelligence, pages 978–985, 2019. 3</li>
+<li>[23] Kunchang Li, Xinhao Li, Yi Wang, Yinan He, Yali Wang, Limin Wang, and Yu Qiao. Videomamba: State space model for efficient video understanding. In European Conference on Computer Vision, pages 237–255. Springer, 2024. 3</li>
+<li>[24] Rongqin Liang, Yuanman Li, Jiantao Zhou, and Xia Li. Text-driven traffic anomaly detection with temporal highfrequency modeling in driving videos. IEEE Transactions on Circuits and Systems for Video Technology, 2024. 1 , 2 , 3 , 4 , 6</li>
+<li>[25] Rongqin Liang, Yuanman Li, Zhenyu Wu, and Xia Li. An interaction-scene collaborative representation framework for detecting traffic anomalies in driving videos. IEEE Transactions on Intelligent Transportation Systems, 2025. 1 , 3 , 4 , 6</li>
+<li>[26] Wen Liu, Weixin Luo, Dongze Lian, and Shenghua Gao. Future frame prediction for anomaly detection–a new baseline. In Proceedings of the IEEE conference on computer vision and pattern recognition, pages 6536–6545, 2018. 3</li>
+<li>[27] Zhuang Liu, Hanzi Mao, Chao-Yuan Wu, Christoph Feichtenhofer, Trevor Darrell, and Saining Xie. A convnet for the 2020s. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 11976–11986, 2022. 3</li>
+<li>[28] Ze Liu, Jia Ning, Yue Cao, Yixuan Wei, Zheng Zhang, Stephen Lin, and Han Hu. Video swin transformer. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 3202–3211, 2022. 3</li>
+<li>[29] Weixin Luo, Wen Liu, and Shenghua Gao. Remembering history with convolutional lstm for anomaly detection. In 2017 IEEE International conference on multimedia and expo (ICME), pages 439–444. IEEE, 2017. 3</li>
+<li>[30] Neelu Madan, Andreas Møgelmose, Rajat Modi, Yogesh S Rawat, and Thomas B Moeslund. Foundation models for video understanding: A survey. Authorea Preprints, 2024. 3</li>
+<li>[31] Viorica Patr ˘ ˘ aucean, Xu Owen He, Joseph Heyward, Chuhan ˘ ˘ Zhang, Mehdi S. M. Sajjadi, George-Cristian Muraru, Artem Zholus, Mahdi Karami, Ross Goroshin, Yutian Chen, Simon Osindero, Joao Carreira, and Razvan Pascanu. Trecvit: A re- ˜ ˜ current video transformer. arXiv preprint arXiv:2412.14294 , 2024. 3</li>
+<li>[32] Hao Qiu, Xiaobo Yang, and Xiaojin Gong. Prompttad: Object-prompt enhanced traffic anomaly detection. IEEE Robotics and Automation Letters, 2025. 1 , 2 , 3 , 4 , 6</li>
+<li>[33] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, et al. Learning transferable visual models from natural language supervision. In International conference on machine learning, pages 8748–8763. PmLR, 2021. 3</li>
+<li>[34] Leonardo Rossi, Vittorio Bernuzzi, Tomaso Fontanini, Massimo Bertozzi, and Andrea Prati. Memory-augmented online video anomaly detection. In ICASSP 2024-2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pages 6590–6594. IEEE, 2024. 1 , 2 , 3 , 6</li>
+<li>[35] Tim J Schoonbeek, Fabrizio J Piva, Hamid R Abdolhay, and Gijs Dubbelman. Learning to predict collision risk from sim-</li>
+</ul>
+<ol start="36">
+<li>ulated video data. In 2022 IEEE Intelligent Vehicles Symposium (IV), pages 943–951. IEEE, 2022. 3</li>
+</ol>
+<ul>
+<li>[36] Khurram Soomro, Amir Roshan Zamir, and Mubarak Shah. Ucf101: A dataset of 101 human actions classes from videos in the wild. arXiv preprint arXiv:1212.0402, 2012. 1</li>
+<li>[37] Tiago Tamagusko, Matheus Gomes Correia, Minh Anh Huynh, and Adelino Ferreira. Deep learning applied to road accident detection with transfer learning and synthetic images. Transportation research procedia, 64:90–97, 2022. 4</li>
+<li>[38] Zhan Tong, Yibing Song, Jue Wang, and Limin Wang. Videomae: Masked autoencoders are data-efficient learners for self-supervised video pre-training. Advances in neural information processing systems, 35:10078–10093, 2022. 2 , 3 , 4 , 5 , 7 , 8</li>
+<li>[39] Du Tran, Heng Wang, Lorenzo Torresani, Jamie Ray, Yann LeCun, and Manohar Paluri. A closer look at spatiotemporal convolutions for action recognition. In Proceedings of the IEEE conference on Computer Vision and Pattern Recognition, pages 6450–6459, 2018. 3 , 5 , 6</li>
+<li>[40] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin. Attention is all you need. Advances in neural information processing systems, 30, 2017. 3</li>
+<li>[41] Tuan-Hung Vu, Eduardo Valle, Andrei Bursuc, Tommie Kerssies, Daan de Geus, Gijs Dubbelman, Long Qian, Bingke Zhu, Yingying Chen, Ming Tang, Jinqiao Wang, Toma´ ´ s Voj ˇ ˇ ´ˇ ı ´ˇ ´ˇr, Jan Sochman, Ji ˇ ˇ r ´ ´ı Matas, Michael Smith, Frank Ferrie, Shamik Basu, Christos Sakaridis, and Luc Van Gool. The BRAVO Semantic Segmentation Challenge Results in UNCV2024. 2024. 2</li>
+<li>[42] Junyao Wang, Arnav Vaibhav Malawade, Junhong Zhou, Shih-Yuan Yu, and Mohammad Abdullah Al Faruque. Rs2g: Data-driven scene-graph extraction and embedding for robust autonomous perception and scenario understanding. In Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision, pages 7493–7502, 2024. 4</li>
+<li>[43] Lin Wang, Fuqiang Zhou, Zuoxin Li, Wangxia Zuo, and Haishu Tan. Abnormal event detection in videos using hybrid spatio-temporal autoencoder. In 2018 25th IEEE International Conference on Image Processing (ICIP), pages 2276–2280. IEEE, 2018. 3</li>
+<li>[44] Limin Wang, Bingkun Huang, Zhiyu Zhao, Zhan Tong, Yinan He, Yi Wang, Yali Wang, and Yu Qiao. Videomae v2: Scaling video masked autoencoders with dual masking. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 14549–14560, 2023. 3 , 4 , 5 , 7 , 8</li>
+<li>[45] Rui Wang, Dongdong Chen, Zuxuan Wu, Yinpeng Chen, Xiyang Dai, Mengchen Liu, Lu Yuan, and Yu-Gang Jiang. Masked video distillation: Rethinking masked feature modeling for self-supervised video representation learning. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 6312–6322, 2023. 2 , 4 , 5 , 7</li>
+<li>[46] Yi Wang, Kunchang Li, Xinhao Li, Jiashuo Yu, Yinan He, Guo Chen, Baoqi Pei, Rongkun Zheng, Zun Wang, Yansong Shi, et al. Internvideo2: Scaling foundation models for mul-</li>
+</ul>
+<p>timodal video understanding. In European Conference on Computer Vision, pages 396–416. Springer, 2024. 3 , 4 , 5 , 7</p>
+<ul>
+<li>[47] Jiewen Yang, Xingbo Dong, Liujun Liu, Chao Zhang, Jiajun Shen, and Dahai Yu. Recurring the transformer for video action recognition. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 14063–14073, 2022. 3</li>
+<li>[48] Yu Yao, Xizi Wang, Mingze Xu, Zelin Pu, Yuchen Wang, Ella Atkins, and David Crandall. Dota: unsupervised detection of traffic anomaly in driving videos. IEEE transactions on pattern analysis and machine intelligence, 2022. 1 , 2 , 3 , 4 , 5 , 6</li>
+<li>[49] Fisher Yu, Haofeng Chen, Xin Wang, Wenqi Xian, Yingying Chen, Fangchen Liu, Vashisht Madhavan, and Trevor Darrell. Bdd100k: A diverse driving dataset for heterogeneous multitask learning. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 2636–2645, 2020. 5 , 7</li>
+<li>[50] Xiaohua Zhai, Alexander Kolesnikov, Neil Houlsby, and Lucas Beyer. Scaling vision transformers. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 12104–12113, 2022. 3 , 6</li>
+<li>[51] Zhili Zhou, Xiaohua Dong, Zhetao Li, Keping Yu, Chun Ding, and Yimin Yang. Spatio-temporal feature encoding for traffic accident detection in vanet environment. IEEE Transactions on Intelligent Transportation Systems, 23(10): 19772–19781, 2022. 1 , 4</li>
+</ul>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_papers/Simplifying Traffic Anomaly Detection with Video Foundation Models.md"
+          data-oid-likes="likes_papers/Simplifying Traffic Anomaly Detection with Video Foundation Models.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/slowfastvad-video-anomaly-detection-via-integrating-simpledetector-and-rag-enhanced-vision-language-model/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/sherlock-towards-multi-scene-video-abnormal-event-extraction-and-localization-via-a-global-local-spatial-sensitive-llm/">
+              <span class="leading-6">
+                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-24 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+      
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 overflow-x-auto py-2">
+        <ul class="flex list-none flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 me-4">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

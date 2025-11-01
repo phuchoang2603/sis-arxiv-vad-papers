@@ -1,0 +1,1938 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title> &middot; Blowfish</title>
+    <meta name="title" content=" &middot; Blowfish">
+  
+
+  
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/papers/liu_generating_anomalies_for_video_anomaly_detection_with_prompt-based_feature_mapping_cvpr_2023_paper/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/papers/liu_generating_anomalies_for_video_anomaly_detection_with_prompt-based_feature_mapping_cvpr_2023_paper/">
+  <meta property="og:site_name" content="Blowfish">
+  <meta property="og:title" content="Blowfish">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blowfish">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.7946532fa78157bafb1b4340d4074792811f18177af35790b3a0cb90566ce1cda3edd782eb92e134849964d14b6d9185c9d4ded2a12dcf5b706cb6a275c0cce0.css"
+    integrity="sha512-eUZTL6eBV7r7G0NA1AdHkoEfGBd681eQs6DLkFZs4c2j7deC65LhNISZZNFLbZGFydTe0qEtz1twbLaidcDM4A==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.9df4fc14d50efcc9aa4cfc2b6f348e365f421f5ad491278f8f48c0360cf2f93f08882fda6da162d7ace8e5add57c2df4ac46bd3861306b1d4c452cd31f448d64.js"
+      integrity="sha512-nfT8FNUO/MmqTPwrbzSONl9CH1rUkSePj0jANgzy&#43;T8IiC/abaFi16zo5a3VfC30rEa9OGEwax1MRSzTH0SNZA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Papers",
+    "name": "",
+    "headline": "",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/papers\/liu_generating_anomalies_for_video_anomaly_detection_with_prompt-based_feature_mapping_cvpr_2023_paper\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "8022"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          Blowfish
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/papers/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="papers"
+  title="Papers">
+  
+  
+    <p class="text-base font-medium">
+      papers
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/test/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="test"
+  title="Tests">
+  
+  
+    <p class="text-base font-medium">
+      test
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href=""
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  
+  title="">
+  
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/papers/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="papers"
+    title="Papers">
+    
+    
+      <p class="text-bg font-bg">
+        papers
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/test/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="test"
+    title="Tests">
+    
+    
+      <p class="text-bg font-bg">
+        test
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    
+    title="">
+    
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>8022 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">38 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000000_24d81ca33093999769345617c68fc21afd0e0919b831bee91ba17f3a67f121b2.png"
+    ></figure>
+<p>This CVPR paper is the Open Access version, provided by the Computer Vision Foundation.</p>
+<p>Except for this watermark, it is identical to the accepted version;</p>
+<p>the final published version of the proceedings is available on IEEE Xplore.</p>
+
+<h2 class="relative group">Generating Anomalies for Video Anomaly Detection with Prompt-based Feature Mapping
+    <div id="generating-anomalies-for-video-anomaly-detection-with-prompt-based-feature-mapping" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#generating-anomalies-for-video-anomaly-detection-with-prompt-based-feature-mapping" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Zuhao Liu, Xiao-Ming Wu, Dian Zheng, Kun-Yu Lin, Wei-Shi Zheng * School of Computer Science and Engineering, Sun Yat-sen University, China Key Laboratory of Machine Intelligence and Advanced Computing, Ministry of Education, China</p>
+<p>{liuzh327, wuxm65, zhengd35, <a
+  href="mailto:linky5%7d@mail2.sysu.edu.cn">linky5}@mail2.sysu.edu.cn</a>, <a
+  href="mailto:wszheng@ieee.org">wszheng@ieee.org</a></p>
+
+<h2 class="relative group">Abstract
+    <div id="abstract" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abstract" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Anomaly detection in surveillance videos is a challenging computer vision task where only normal videos are available during training. Recent work released the first virtual anomaly detection dataset to assist real-world detection. However, an anomaly gap exists because the anomalies are bounded in the virtual dataset but unbounded in the real world, so it reduces the generalization ability of the virtual dataset. There also exists a scene gap between virtual and real scenarios, including scene-specific anomalies (events that are abnormal in one scene but normal in another) and scene-specific attributes, such as the viewpoint of the surveillance camera. In this paper, we aim to solve the problem of the anomaly gap and scene gap by proposing a prompt-based feature mapping framework (PFMF). The PFMF contains a mapping network guided by an anomaly prompt to generate unseen anomalies with unbounded types in the real scenario, and a mapping adaptation branch to narrow the scene gap by applying domain classifier and anomaly classifier. The proposed framework outperforms the state-of-the-art on three benchmark datasets. Extensive ablation experiments also show the effectiveness of our framework design.</p>
+
+<h2 class="relative group">1. Introduction
+    <div id="1-introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video anomaly detection (VAD) aims to identify abnormal scenarios in surveillance videos with broad applications in public security. However, due to the small probability of occurrence, abnormal events are difficult to be observed in real-life surveillance. The challenge increases because of the unconstrained nature of abnormal events. Given a specific scenario, the event different from normal events can all be regarded as anomalies, so the anomaly type is unbounded.</p>
+<ul>
+<li>Corresponding author</li>
+</ul>
+<p>Most VAD approaches address this challenge by learning the distribution of normal events in the training stage and detecting the out-of-distribution events in the testing stage. These methods are categorized into reconstructionbased methods [1 , 14 , 31] to reconstruct the current frame and prediction-based methods [26 , 27 , 27 , 30 , 34] to predict the upcoming frame. Significant reconstruction or prediction error is regarded as an anomaly. However, due to the strong generalization ability of the deep networks and the similarity between normal and abnormal events, the anomalies do not always lead to enough error to be detected. Without prior knowledge of abnormal distribution, it is difficult for the network to detect unseen anomalies.</p>
+<p>Therefore, instead of calculating error with the distribution of normal behaviors, some methods [11 , 12 , 53 , 54] try to generate pseudo anomalies to simulate the distribution of abnormal behaviors. For example, Georgescu et al. [12] collect a large number of images from Tiny ImageNet unrelated to the detection scenario as pseudo anomalous samples. Their other work [11] tries to generate temporal anomalies by reversing the action order or motion irregularity by extracting intermittent frames. The network can get a glimpse of the feature distribution different from normal events by manually applying pseudo anomalies. However, the main drawback of these methods is the unavoidable gap between pseudo and natural anomalies.</p>
+<p>To solve the problem of pseudo anomalies, Acsintoae et al. [2] released a virtual VAD dataset named Ubnormal using 3D animations and 2D background images. It contains 22 types of anomaly, such as fighting, stealing, laying down, etc. The distribution of real anomalies can be well evaluated by applying the virtual dataset. However, applying virtual anomalies to real scenarios is a great challenge due to the large domain gap. Acsintoae et al. [2] train a CycleGAN [60] to achieve video-level style transfer from virtual to the real domain to address the challenge.</p>
+<p>However, existing methods fail to address two key challenges. Firstly, the anomalies are bounded in the virtual dataset but unbounded in the real world, and we define</p>
+<p>Figure 1. An overview of prompt-based feature mapping framework (PFMF). The PFMF totally contains three parts, i.e., feature extractor, prompt-based feature mapping network, and mapping adaptation branch. The feature extractor is used to transform the input instances into corresponding features, so the mapping process can be completed at the feature level. The prompt-based feature mapping network aims to map normal features into abnormal feature space under the same domain guided by an anomaly prompt, so the unseen anomalies in the real domain can be generated from normal features. The mapping adaptation branch is added to make the generated anomalies scene-specific and solve the problem of scene-specific attributes.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000001_c4d54ad806948751f7ee8635af599674c6c2d93922b5f961c5525a22e4c53ad9.png"
+    ></figure>
+<p>this difference as anomaly gap. Secondly, different scenarios have scene-specific anomalies (events that are abnormal in one scene but normal in another) and scene-specific attributes (such as the viewpoint of the surveillance camera), and we define this difference as scene gap .</p>
+<p>Our work is motivated by the above two key challenges. To solve the problem of anomaly gap and scene gap, we propose a novel framework named prompt-based feature mapping framework (PFMF), as shown in Fig. 1. In terms of narrowing the anomaly gap, the PFMF employs a promptguided mapping network to generate unbounded anomalies through a divergent mapping process. The prompts are sampled from distribution learned by a variational auto-encoder (VAE) [17]. As for the scene gap, we introduce a mapping adaptation branch to solve it. In detail, the branch consists of an anomaly classifier to make the generated anomalies scene-specific, and two domain classifiers to reduce the inconsistency caused by scene-specific attributes.</p>
+<p>In summary, this paper makes the following contributions:</p>
+<ul>
+<li>(1) Proposing a novel prompt-based feature mapping framework (PFMF) for video anomaly detection. This framework addresses the challenge of applying virtual VAD datasets with limited anomalies to the real scenario by generating unseen anomalies with unbounded types.</li>
+<li>(2) Proposing a mapping adaptation branch to ensure the anomalies generated by PFMF are scene-specific and solve the problem of scene-specific attributes.</li>
+<li>(3) Showing the effectiveness of the proposed framework on three public VAD datasets, ShanghaiTech, Avenue, and UCF-Crime. Extensive experiments show that the proposed framework performs the best compared with the state-of-</li>
+</ul>
+<p>the-art.</p>
+
+<h2 class="relative group">2. Related Work
+    <div id="2-related-work" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-related-work" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">2.1. Video Anomaly Detection
+    <div id="21-video-anomaly-detection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#21-video-anomaly-detection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The goal of the VAD task is to detect anomaly events in videos. In recent years, many works try to learn the distribution of normal events and detect out-of-distribution events in the testing stage [1 , 13 , 14 , 26 , 27 , 30 , 31 , 34]. These methods are categorized into reconstruction-based or prediction-based. Some of the reconstruction-based methods use generative models [14], sparse coding [31], or deep auto-encoder [1] to reconstruct the current frame based on several adjacent frames. Prediction-based methods always predict the future frame using techniques such as motion feature extraction [27 , 34], deep auto-encoder [13 , 30] or ConvLSTM [26]. The occurrence of an anomaly will lead to significant reconstruction or prediction error. However, these methods lie in the &lsquo;over-generalizing&rsquo; dilemma where both normal and abnormal frames can be predicted or reconstructed well because of the strong representation ability of deep network [32]. Recently, some methods try to solve this problem by adding pseudo anomalies in the training process [11 , 12 , 53 , 54]. The pseudo anomalies are collected from unrelated datasets [12] or generated from normal events [11 , 54]. However, these methods face the problem of the large gap between pseudo and natural anomalies.</p>
+
+<h2 class="relative group">2.2. Datasets under Virtual Environment
+    <div id="22-datasets-under-virtual-environment" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#22-datasets-under-virtual-environment" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Due to the enormous cost and privacy sensitivity of collecting real-world datasets, generating a virtual dataset has become a viable alternative in many fields, including per-</p>
+<p>son re-identification [47], semantic segmentation [40], action recognition [37], etc. Due to the lack of anomalies in real-world datasets, instead of generating pseudo anomalies, Acsintoae et al. [2] introduce the first virtual VAD dataset named Ubnormal with a large number of videos containing anomalies such as falling, fighting, stealing, etc.</p>
+
+<h2 class="relative group">2.3. Feature Mapping
+    <div id="23-feature-mapping" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#23-feature-mapping" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Our proposed framework shares underlying similarities with feature mapping techniques in domain adaptation [6 , 18 , 41 , 57 , 61]. To address the problem of heterogeneous feature spaces in different domains, feature mapping is used to map data from one domain to another. Two mapping paradigms, i.e., common space mapping [41 , 61] and asymmetric mapping [6 , 18 , 57] are used. However, the gap between the real and virtual domains is large. Therefore, instead of mapping features from one domain to another, the proposed PFMF applies mapping from normal features to abnormal features under the same domain.</p>
+
+<h2 class="relative group">2.4. Prompting Methods
+    <div id="24-prompting-methods" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#24-prompting-methods" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Recently, prompt-based learning has been a popular method in both natural language processing [4 , 25 , 36 , 36 , 49 , 51] and computer vision [8 , 16 , 22 , 58 , 59]. Usually, prompt in textual form is used to adapt language model pre-trained on the large dataset to downstream tasks [4 , 25 , 36 , 36 , 49 , 51]. Textual prompts are also used in the vision-language model [8 , 22 , 58 , 59] to complete computer vision tasks. In addition to applying textual prompts, visual prompts in the form of the learnable vector are proposed to fine-turn the Vision Transformer (ViT) [7]. In this work, instead of applying a pre-trained model to downstream tasks, the proposed anomaly prompt is used to guide the mapping network to achieve divergent mapping.</p>
+
+<h2 class="relative group">3. Method
+    <div id="3-method" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-method" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this section, we elaborate on the framework and the training process of our method. An overview of the proposed PFMP is provided in Section 3.1. Then, the training data organization is explained in Section 3.2. In Section 3.3 , the proposed PFMP is illustrated in detail by describing the feature mapping procedure (Section 3.3.1), anomaly prompt (Section 3.3.2), and mapping adaptation branch (Section 3.3.3), respectively. Finally, the optimization process is elaborated in Section 3.4 .</p>
+
+<h2 class="relative group">3.1. Overview
+    <div id="31-overview" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#31-overview" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The overall framework of our proposed method is shown in Fig. 1. Here, we call the real-world dataset (ShanghaiTech, Avenue, or UCF-Crime) as the real domain and the Ubnormal dataset as the virtual domain. The framework takes three inputs, i.e., real domain normal instance S r nor, virtual domain normal instance S v nor , and virtual domain abnormal instance S v abn . We first use a feature extractor to obtain the features of three inputs. To solve the problem of anomaly gap, a feature mapping network assisted by an anomaly prompt is used to map normal features to abnormal features. The anomaly prompt is the key factor to generate unbounded types of anomalies to narrow the anomaly gap. Then we can generate anomalies in the real domain by the feature mapping network and a sampled anomaly prompt. We also propose a mapping adaptation branch to make the generated anomalies scene-specific and solve the problem of scene-specific attributes, which greatly narrows the scene gap. The detail of the proposed PFMF is illustrated in the following parts.</p>
+
+<h2 class="relative group">3.2. Training Data Organization
+    <div id="32-training-data-organization" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#32-training-data-organization" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The virtual VAD dataset provides rich instance-level anomaly annotations. The dataset annotates whether the behaviors are abnormal or not, and the outline of each person is also provided. However, the real-world VAD dataset only contains raw videos without annotations, and abnormal behavior is absent. Therefore, as shown in the left part of Fig. 2, our framework takes three types of inputs, i.e., real domain normal instance S r nor , virtual domain normal instance S v nor , and virtual domain abnormal instance S v abn . Both S v nor and S v abn are cropped from virtual video based on outline annotations of each person. Considering the absence of bounding box annotations in the real domain dataset, we apply a YOLOv3 object detector [38] pre-trained on the MS COCO dataset [24] to extract the bounding box of each person.</p>
+
+<h2 class="relative group">3.3. Prompt-based Feature Mapping
+    <div id="33-prompt-based-feature-mapping" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#33-prompt-based-feature-mapping" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>After obtaining the instance-level inputs, a feature extractor is used to extract high-dimensional features, as shown in Fig. 2. Then, a feature mapping network is applied to build a bridge between normal and abnormal features in the virtual domain by asymmetric mapping. The mapping process is guided by an anomaly prompt to generate unbounded types of anomaly. The prompt generation process is shown in Fig. 3. Finally, all features are fed into the mapping adaptation branch to further narrow the scene gap, as shown in Fig. 4 .</p>
+
+<h2 class="relative group">3.3.1 Feature Mapping Network
+    <div id="331-feature-mapping-network" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#331-feature-mapping-network" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The feature mapping network aims to map normal features into abnormal feature space under the same domain. Denote the feature extractor output as X ∈ R C×T ×H×W , where C , T , H , W represent channel number, temporal length, height, and width, respectively. The normal feature in the real domain is represented as X r nor , and the normal and abnormal features in the virtual domain are represented</p>
+<p>Figure 2. Process of training data organization and feature mapping. For virtual domain, the mapping network ε maps normal feature X v nor to abnormal feature X v abn . Then MAE Loss is used to minimize the gap between mapped feature X v map and abnormal feature X v abn . For the real domain, the mapping network learned in the virtual domain is used to generate unseen anomalies X r abn.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000002_9fd7804047958ff256c45f50fce7fc7702bd1f8eceef831c205017c107da725e.png"
+    ></figure>
+<p>as X v nor and X v abn , respectively. The mapping network de-
+Prompt
+Global
+AvgPool noted by ε( . ) contains an encoder ε
+p
+g e ( . ) to extract high-level information and a decoder εd( . ) to up-sample the encoded features. ectivel
+Prompt The
+Global y. The m
+()
+AvgPool</p>
+<p>Since we want to generate unbounded types of anomaly, we design a divergent mapping process (one normal feature can be mapped to many types of abnormal features). Moreover, we apply an anomaly prompt p to indicate the mapping direction. In virtual domain, the mapped feature X v map is generated as</p>
+<!-- formula-not-decoded -->
+<p>where p v is anomaly prompt for feature in virtual domain, and [ . ] means concatenating feature maps along channel dimension.</p>
+<p>By training the mapping network ε, we aim to minimize the mean absolute error (MAE) between the mapped abnormal feature and true abnormal feature in the virtual domain, as</p>
+<!-- formula-not-decoded -->
+<p>Through the optimization process of Eq. 2, the normal feature can be transformed into abnormal feature space.</p>
+<p>In the real domain, there are no abnormal samples in the training set, so the network does not have a perception of the abnormal feature distribution. To simulate the abnormal feature distribution in the real domain, we generate abnormal features by using the mapping network learned in the virtual domain. The formula is defined as:</p>
+<!-- formula-not-decoded -->
+<p>where X r abn is generated anomaly and p r is the real domain prompt generated by sampling from a learned distribution.</p>
+
+<h2 class="relative group">3.3.2 Anomaly Prompt
+    <div id="332-anomaly-prompt" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#332-anomaly-prompt" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>To generate unbounded types of anomaly through divergent feature mapping, we create an anomaly prompt as extra input of the mapping network. Since we can assign different</p>
+<p>Figure 3. Generation process of anomaly prompt for feature mapping network. It is obtained by concatenating the anomaly vector (a r or a v ) and scene vector (s r or s v ). The scene vector is generated from a ResNet18 network pre-trained in the Places365 dataset. The anomaly vector is sampled from the Gaussian distribution in VAE. The VAE is trained by reconstructing abnormal features in the virtual domain.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000003_a8d55bb7296e655bfb6e57eb192ce324e35fd75de4087186559e3f3575752173.png"
+    ></figure>
+<p>generated directions by different anomaly prompts, the produced anomalies tend to be unbounded. The anomaly vector is obtained by concatenating the scene vector and anomaly vector, as shown in Fig. 3 ,</p>
+<p>Scene Vector
+an squ Anomaly vector contains information about anomaly type. As shown in Fig. 3 (a), the anomaly vector in the virtual domain a v is obtained by squeezing the spatial dimension of abnormal features through a global average pooling. Then, a v S
+is fed into a VAE f to generate reconstruction vector a ∗ v . Scene
+Vector
+The VAE is trained by minimizing the mean square error (MSE) between the anomaly and reconstruction vector, as</p>
+<!-- formula-not-decoded -->
+<p>Concat
+z from VAE
+on o Anomaly
+,
+nment is Vector
+ment i Concat
+In real domain, we sample a latent variable z from VAE
+the posterior distribution of VAE and decode z to obtain anomaly vector a r , as shown in Fig. 3 (b). Since the VAE Al
+is learned from aligned abnormal features, it can simulate Anomaly
+Vector
+the distribution of the anomalies. The alignment is done by the mapping adaptation branch and we will discuss it later. Then, through sampling latent variables that obey the Gaussian distribution, we can get more types of anomaly vectors. Scene vector. We aim to make the generated anomaly features scene-independent (applicable to any input scene) to narrow the scene gap. Therefore, additional scene information is added by generating scene vector s r . As shown in Fig. 3 (b), we fed the scene image (without detection of YOLOv3) to a ResNet-18 pre-trained on Places365 dataset [56] to identify scene information. We apply the features before the softmax in ResNet-18 as the scene vector.</p>
+<p>Anomaly Pr</p>
+<p>Training data Organization</p>
+<p>S</p>
+<p>YOLO</p>
+<p>v3</p>
+<p>S</p>
+<p>S</p>
+<p>r</p>
+<p>nor</p>
+<p>v</p>
+<p>nor</p>
+<p>v</p>
+<p>abn</p>
+<p>Figure 4. The mapping adaptation branch in our PFMF contains one anomaly classifier and two domain classifiers.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000004_e76b30dd13f60210c3bce95239cb11701948117c607bc86ffe2af49d040b5dd7.png"
+    ></figure>
+<p>Feature Mapping
+a input of mappi
+i r X
+nt r X Anomaly prompt. After obtaining both the anomaly vector and scene vector, the anomaly prompt is generated by concatenating these two vectors to fuse input scene and anomaly type information. Then, as shown in Fig. 1, we Feature Mapping
+use anomaly prompt as an extra input of mapping network eatue
+r
+X
+to achieve divergent feature mapping.</p>
+<p>nor abn</p>
+
+<h2 class="relative group">3.3.3 Mapping Adaptation Branch
+    <div id="333-mapping-adaptation-branch" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#333-mapping-adaptation-branch" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>anomaly</p>
+<p>Feature
+ch is al Extractor
+wn in F MAE
+y prompt v
+n nor
+ed X
+lie v
+e abn
+fic X
+lv
+i v
+n map
+g X
+pin prompt
+v
+X
+v
+map
+X
+In addition to the anomaly prompt, the mapping adaptation Feature
+nor X
+p
+branch is also applied in PFMF to narrow the scene gap. As Extractor
+shown in Fig. 4, our mapping adaptation branch contains one anomaly classifier and two domain classifiers, which v
+X
+are designed to solve the problem of scene-specific anomaM
+L
+abn X
+lies and scene-specific attributes, respectively.</p>
+<p></p>
+<p>Loss
+y
+t Loss
+Anomaly classifier is used to distinguish between normal and abnormal features for each input scene to explicitly make the generated anomalies scene-specific, as shown in Fig. 4. For each scene, events that are not normal are all treated as anomalies. Thus, maximizing the accuracy of the anomaly classifier can deviate mapped abnormal features from normal features in the same scene. Therefore, the generated anomalies will have different feature distribution from the normal events in the same scene, so they are regarded to be scene-specific.</p>
+<p>Domain classifier. In addition, the scene-specific attributes are also a great challenge when applying virtual datasets to real scenarios. The CycleGAN applied in previous work [2] can partly reduce some scene-specific attributes like dressing and background. However, scene-specific attributes still exist, such as the viewpoint of the surveillance camera. We solve this problem by aligning the feature space between the virtual and real domain. The alignment can extract common attributes of two domains and reduces the inconsistency caused by scene-specific attributes.</p>
+<p>Inspired by literature [10], we apply two domain classifiers and use gradient reversal layer (GRL) to train the feature extractor. The domain classifier is dedicated to recognizing which domain the input feature belongs to. The preceding feature extractor tries to puzzle the domain classifier to shrink the domain gap. The GRL acts as an identity function during forward-propagation as</p>
+<!-- formula-not-decoded -->
+<p>where R( . ) and X represent GRL and input feature, respectively. During backward propagation, GRL reverses the gradient of the preceding feature extractor by multiplying −λ , as</p>
+<!-- formula-not-decoded -->
+<p>where I is the identity matrix, and λ is the adaptation factor, which is set as 1. We aim to extract common attributes between real and virtual domain rather than the characteristics between normal and abnormal feature. Therefore, we design two independent domain classifiers. These two classifiers separately act on normal or abnormal features in both domains, so the features with the same label but the different domain will have a similar distribution.</p>
+
+<h2 class="relative group">3.4. Training and Inference
+    <div id="34-training-and-inference" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#34-training-and-inference" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Loss function. The proposed PFMF is trained in a unified way. Total loss contains four terms, feature mapping loss L m , anomaly classification loss L a , domain classification loss L d , and VAE reconstruction loss L v . We employ MAE loss for L m to minimize the error between mapped and true abnormal features. We also employ MSE loss for L v to minimize the error between the input anomaly vector and the reconstruction vector of VAE. For L a and L d , the cross-entropy loss is applied to achieve anomaly or domain classification. The entire loss L all is the weighted sum of three terms, as</p>
+<!-- formula-not-decoded -->
+<p>We empirically find the choice of domain loss weight λd impacts the network training.</p>
+<p>Inference. The generated anomalies allow the network to be trained in a fully-supervised way. Given an unseen instance S unseen , it is first fed into the feature extractor θ , then through the anomaly classifier σ. The classification result in the anomaly classifier is regarded as the instancelevel anomaly score, as</p>
+<!-- formula-not-decoded -->
+<p>Following the operation in literature [11], the instancelevel anomaly scores are assembled into an anomaly map with the same shape as the input frame. The frame-level anomaly score is obtained by taking the maximum value in each frame of the anomaly map.</p>
+
+<h2 class="relative group">4. Experiments
+    <div id="4-experiments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-experiments" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">4.1. Datasets and Metrics
+    <div id="41-datasets-and-metrics" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#41-datasets-and-metrics" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In addition to the Ubnormal dataset described in Section 2.2 and Section 3.2, we evaluate the proposed PFMF in three real-world VAD datasets, ShanghaiTech [31], Avenue [29], and UCF-Crime [42].</p>
+<p>ShanghaiTech is a large-scale VAD dataset containing 437 videos captured in 13 locations. The dataset is organized for unsupervised learning by dividing it into a training set with 330 videos containing only normal events and a testing set with 107 videos containing both normal and abnormal events. The anomalies include fighting, robbing, riding bikes on the sidewalk, etc. Each video in the dataset has a resolution of 480×856.</p>
+<p>Avenue dataset contains 16 videos for training and 21 videos for testing with 15324 frames. Similar to ShanghaiTech, only the testing set contains abnormal events. Each video in the dataset has a resolution of 480×856. The anomalies include throwing objects, running, loitering, etc. UCF-Crime dataset contains 13 anomaly types, and the total video length is 128 hours. We use normal videos from the training set for our model training, and abnormal videos of human-related anomalies (except classes of explosions, car accidents, and normal) from the testing set for model evaluation.</p>
+<p>Evaluation Metrics In Section 4.3, we use the accuracy (Acc) of Ubnormal instance inputs and feature mapping error (Err) to evaluate the feature mapping effect. The lower error means a better feature mapping effect. The feature mapping error is MAE between the mapped and true abnormal features. In Section 4.4 and 4.5, We use commonly used metric, i.e., area under ROC curve (AUC), to evaluate the frame-level anomaly detection performance of our framework [9 , 30 , 54]. A Higher AUC value means better anomaly detection ability. Following literature [12], we evaluate both the Micro and Macro versions of AUC.</p>
+
+<h2 class="relative group">4.2. Implementation Details
+    <div id="42-implementation-details" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#42-implementation-details" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Based on trials of preliminary study (Section 4.3), we set the layer number of the mapping network to 4 and loss function to MAE loss for subsequent experiments. Each layer of the mapping network contains one convolution followed by an instance normalization and a ReLU activation. As described in Section 3.4, the choice of Ld influences on the network training, and it is set to 0.2. Adam optimizer is used with learning rate of 0.001. The confidence threshold for the YOLOv3 detector is set to 0.5 for ShanghaiTech and UCF-Crime, and 0.95 for Avenue. The temporal length for each input video clip is set to 7. For the feature extractor, 3D CNN with a total of six convolution layers is applied.</p>
+<p>Since the inputs of the proposed framework are from two domains, we empirically found that batch normaliza-</p>
+<p>Table 1. Preliminary study to obtain the optimal structure and loss function for mapping network. Accuracy (Acc) of Ubnormal instance inputs and feature mapping error (Err) are used to evaluate the feature mapping effect.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Loss Type</th>
+          <th>Layer Num</th>
+          <th>Acc(%)</th>
+          <th>Err(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td>0</td>
+          <td>80.3</td>
+          <td>0.98</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>1</td>
+          <td>83.4</td>
+          <td>1.01</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>2</td>
+          <td>84</td>
+          <td>1.2</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>3</td>
+          <td>84.1</td>
+          <td>1.82</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>4</td>
+          <td>85.3</td>
+          <td>0.81</td>
+      </tr>
+      <tr>
+          <td>MSE</td>
+          <td>0</td>
+          <td>86.9</td>
+          <td>4.29</td>
+      </tr>
+      <tr>
+          <td>MSE</td>
+          <td>1</td>
+          <td>87.2</td>
+          <td>6.79</td>
+      </tr>
+      <tr>
+          <td>MSE</td>
+          <td>2</td>
+          <td>84.9</td>
+          <td>5.33</td>
+      </tr>
+      <tr>
+          <td>MSE</td>
+          <td>3</td>
+          <td>84.1</td>
+          <td>7.02</td>
+      </tr>
+      <tr>
+          <td>MSE</td>
+          <td>4</td>
+          <td>85.8</td>
+          <td>6.7</td>
+      </tr>
+  </tbody>
+</table>
+<p>tion will lead to optimization failure due to inaccurate running mean and variance. Therefore, instance normalization is used in our framework to replace batch normalization.</p>
+
+<h2 class="relative group">4.3. Preliminary Study
+    <div id="43-preliminary-study" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#43-preliminary-study" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this section, we explore the optimal structure and loss function for the mapping network. Only S v nor and S v abn are fed to our PFMF in this section because the mapping results in the real domain cannot be evaluated by reconstruction error and instance-level accuracy (we do not have abnormal instances in the real domain). After obtaining virtual domain instances described in Section 3.2, we split the 70% of instances for training and 30% for testing. We design different structures by changing the down-sampling number of the mapping network. Setting the layer number to 0 means no down-sampling layer exists in the mapping network. We also evaluate the effect of different feature mapping loss L m , i.e., MAE loss and MSE loss. Results are shown in Table 1. From the table, we find the MAE loss can significantly reduce the feature mapping error. When using MAE loss, deeper layers result in higher accuracy. The structure with layer number 4 and MAE loss achieves the lowest feature mapping error with 0.81%. The structure with layer number 2 and MSE loss obtains the highest accuracy, but its feature mapping error is too large (6.79%). In summary, we apply a mapping network with layer number 4 and MAE loss to our PFMF.</p>
+
+<h2 class="relative group">4.4. Comparisons with State-of-the-art
+    <div id="44-comparisons-with-state-of-the-art" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#44-comparisons-with-state-of-the-art" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this section, we compare the performance of the proposed PFMF with state-of-the-art methods in Micro and Macro AUC(%). Noticing that current advanced methods [39] and [2] apply multi-task framework ( [11] and [12] respectively) provided by Georgescu et al. as the backbone. Therefore, we evaluate our PFMF with or without the multitask backbone [11] in Avenue and ShanghaiTech dataset.</p>
+<p>Table 2. Quantitative comparisons between our proposed PFMF and state-of-the-arts [2 , 3 , 5 , 11 – 13 , 15 , 19 – 21 , 23 , 27 , 28 , 30 , 33 – 35 , 39 , 42 – 44 , 46 , 48 , 50 , 52 – 55] in Micro and Macro AUC (%). Bold font indicates the best results.</p>
+<table>
+  <thead>
+      <tr>
+          <th>year</th>
+          <th>Method</th>
+          <th>Avenue  AUC  MiM</th>
+          <th>Avenue  AUC  MiM</th>
+          <th>ShanghaiTech AUC</th>
+          <th>ShanghaiTech AUC</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>y</td>
+          <td></td>
+          <td>Micro</td>
+          <td>Macro</td>
+          <td>Micro</td>
+          <td>Macro</td>
+      </tr>
+      <tr>
+          <td>8</td>
+          <td>Liu et al. [27]</td>
+          <td>85.1</td>
+          <td>-</td>
+          <td>72.8</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>201</td>
+          <td>Lee et al. [19]</td>
+          <td>87.2</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>201</td>
+          <td>Sultani et al. [42]</td>
+          <td>-</td>
+          <td>-</td>
+          <td>76.5</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2019</td>
+          <td>Lee et al. [20]</td>
+          <td>90.0</td>
+          <td>-</td>
+          <td>76.2</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2019</td>
+          <td>Ionescu et al. [15]</td>
+          <td>87.4</td>
+          <td>90.4</td>
+          <td>78.7</td>
+          <td>84.9</td>
+      </tr>
+      <tr>
+          <td>2019</td>
+          <td>Gong et al. [13]</td>
+          <td>90.4</td>
+          <td>-</td>
+          <td>84.9</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2019</td>
+          <td>g  Nguyen et al. [34]</td>
+          <td>86.9</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2019</td>
+          <td>Wu et al. [50]</td>
+          <td>86.6</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2020</td>
+          <td>Park et al. [35]</td>
+          <td>88.5</td>
+          <td>-</td>
+          <td>70.5</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2020</td>
+          <td>Sun et al. [43]</td>
+          <td>89.6</td>
+          <td>-</td>
+          <td>74.7</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2020</td>
+          <td>Lu et al. [30]</td>
+          <td>85.8</td>
+          <td>-</td>
+          <td>77.9</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2020</td>
+          <td>Wang et al. [48]</td>
+          <td>87.0</td>
+          <td>-</td>
+          <td>79.3</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2020</td>
+          <td>Yu et al. [52]</td>
+          <td>89.6</td>
+          <td>-</td>
+          <td>74.8</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2020</td>
+          <td>Tang et al. [44]</td>
+          <td>85.1</td>
+          <td>-</td>
+          <td>73.0</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2021</td>
+          <td>Wang et al. [46</td>
+          <td>88.3</td>
+          <td>-</td>
+          <td>76.6</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2021</td>
+          <td>Astrid et al. [3]</td>
+          <td>87.1</td>
+          <td>-</td>
+          <td>73.7</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2021</td>
+          <td>Liu et al. [28]</td>
+          <td>91.1</td>
+          <td>-</td>
+          <td>76.2</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2021</td>
+          <td>Madan et al. [33]</td>
+          <td>88.6</td>
+          <td>-</td>
+          <td>74.6</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2021</td>
+          <td>Li et al. [21]</td>
+          <td>88.8</td>
+          <td>-</td>
+          <td>73.9</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2021</td>
+          <td>Georgescu et al. [11]</td>
+          <td>91.5</td>
+          <td>91.9</td>
+          <td>82.4</td>
+          <td>89.3</td>
+      </tr>
+      <tr>
+          <td>2021</td>
+          <td>Georgescu et al. [12]</td>
+          <td>92.3</td>
+          <td>90.4</td>
+          <td>82.7</td>
+          <td>89.3</td>
+      </tr>
+      <tr>
+          <td>2022</td>
+          <td>Zaheer et al. [54]</td>
+          <td>74.2</td>
+          <td>-</td>
+          <td>79.6</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2022</td>
+          <td>[ Li et al. [23]</td>
+          <td>82.0</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2022</td>
+          <td>Zaheer et al. [53]</td>
+          <td>-</td>
+          <td>-</td>
+          <td>69.9</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2022</td>
+          <td>Cho et al. [5]</td>
+          <td>88.0</td>
+          <td>-</td>
+          <td>76.3</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2022</td>
+          <td>[]  Zhong et al. [55]</td>
+          <td>89.0</td>
+          <td>-</td>
+          <td>74.5</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>2022</td>
+          <td>Ristea et al. [39] ∗</td>
+          <td>92.9</td>
+          <td>91.9</td>
+          <td>83.6</td>
+          <td>89.5</td>
+      </tr>
+      <tr>
+          <td>2022</td>
+          <td>Acsintoae et al. [2] ▽∗</td>
+          <td>93.0</td>
+          <td>93.2</td>
+          <td>83.7</td>
+          <td>90.5</td>
+      </tr>
+      <tr>
+          <td>2022</td>
+          <td>PFMF (ours)▽</td>
+          <td>91.8</td>
+          <td>92.3</td>
+          <td>83.8</td>
+          <td>87.8</td>
+      </tr>
+      <tr>
+          <td>2022</td>
+          <td>PFMF (ours)▽∗</td>
+          <td>93.6</td>
+          <td>93.9</td>
+          <td>85.0</td>
+          <td>91.4</td>
+      </tr>
+  </tbody>
+</table>
+<ul>
+<li>▽ These methods apply virtual dataset for training.</li>
+</ul>
+<p>∗ These methods use multi-task model ( [11] or [12]) as backbone.</p>
+<p>Table 3. Results in human-related anomalies of UCF-Crime dataset.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>Micro AUC</th>
+          <th>Macro AUC</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>l. [35]</td>
+          <td>55.5</td>
+          <td>Park et al. [35]</td>
+      </tr>
+      <tr>
+          <td>Ristca et al. [39]</td>
+          <td>60.6</td>
+          <td>64.2</td>
+      </tr>
+      <tr>
+          <td>Georgescu et al. [11]</td>
+          <td>62.3</td>
+          <td>65.5</td>
+      </tr>
+      <tr>
+          <td>PFMF (ours)</td>
+          <td>67.9</td>
+          <td>74.0</td>
+      </tr>
+  </tbody>
+</table>
+<p>For UCF-Crime, we did not use the multi-task backbone.</p>
+<p>Avenue. The proposed PFMF achieves the best in the Avenue dataset compared with state-of-the-art [2 , 3 , 5 , 11 – 13 ,</p>
+<p>Table 4. Ablation study of the proposed PFMF. Total five groups of experiments are conducted in the ShanghaiTech dataset to evaluate the effect of each network component.</p>
+<table>
+  <thead>
+      <tr>
+          <th>feature</th>
+          <th>anomaly</th>
+          <th>mapping</th>
+          <th>AUC M</th>
+          <th>AUC M</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>mapping</td>
+          <td>prompt</td>
+          <td>adaptation</td>
+          <td>Micro</td>
+          <td>Macro</td>
+      </tr>
+      <tr>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>73.6</td>
+          <td>74.5</td>
+      </tr>
+      <tr>
+          <td>✔</td>
+          <td>-</td>
+          <td>-</td>
+          <td>78.9</td>
+          <td>84.2</td>
+      </tr>
+      <tr>
+          <td>✔</td>
+          <td>-</td>
+          <td>✔</td>
+          <td>80.9</td>
+          <td>86.5</td>
+      </tr>
+      <tr>
+          <td>✔</td>
+          <td>✔</td>
+          <td>-</td>
+          <td>80.0</td>
+          <td>85.3</td>
+      </tr>
+      <tr>
+          <td>✔</td>
+          <td>✔</td>
+          <td>✔</td>
+          <td>83.8</td>
+          <td>87.8</td>
+      </tr>
+  </tbody>
+</table>
+<p>Figure 5. Distributions of features generated by our PFMF and the method of Georgescu et al. [11] visualized by t-SNE [45]. The blue points denote the extracted features of normal videos in ShanghaiTech [31] and Avenue [29] datasets. The red points indicate the abnormal features generated by our PFMF or [11]. The features of normal and abnormal events are tangled together for [11], but our proposed PFMF shows better performance with Nebula-like feature distribution. The pattern of concentrated normal features and dispersed abnormal features is consistent with our perception of anomalies that most normal behaviors are similar, while abnormal behaviors are a highly variable open set. The figure indicates that the generated features are close to the distribution of real anomalies.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000005_5a5215f4d39481c0808ee6fe35ada73668767f96b5353d9d84a0ed8f66b1b09a.png"
+    ></figure>
+<p>15 , 19 – 21 , 23 , 27 , 28 , 30 , 33 – 35 , 39 , 43 , 44 , 46 , 48 , 50 , 52 , 54 , 55] with micro AUC 93.6% and macro AUC 93.9%, which are 0.6% and 0.7% higher than the second best model [2]. Without the multi-task backbone [11], our PFMF can still obtain the best macro AUC of 92.3%.</p>
+<p>ShanghaiTech. From Table 2, the proposed PFMF also outperforms state-of-the-art [2 , 3 , 5 , 11 – 13 , 15 , 20 , 21 , 27 , 28 , 30 , 33 , 35 , 39 , 42 – 44 , 46 , 48 , 52 – 55] with micro AUC 85.0% and macro AUC 91.4%. The PFMF outperforms the second best [2] by 1.3% and 0.9%, respectively. Without the effect</p>
+<p>Figure 6. Visualization of anomaly score prediction results for test video 07 in Avenue dataset. The green line denotes the anomaly prediction of the proposed PFMF. The red area denotes the abnormal interval.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000006_34e43962469b1d7d42c5e57f094cfb52945c13d523320f7ad12c97fc2f30e06b.png"
+    ></figure>
+<p>of multi-task backbone [11], the proposed PFMF can also achieve the best micro AUC of 83.8%, even higher than [2] with backbone [11].</p>
+<p>UCF-Crime. Due to the lack of published results on human-related anomalies on the UCF-Crime dataset, we implement the code of literature [11 , 35 , 39], where [39] takes [35] as the backbone. As shown in Table 3, the proposed PFMF shows a great advantage with a 5.6% increase in Micro AUC and an 8.5% increase in Macro AUC than the second best.</p>
+
+<h2 class="relative group">4.5. Ablation Study
+    <div id="45-ablation-study" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#45-ablation-study" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We analyze the role played by each part of the proposed PFMF. A total of five groups of experiments are conducted in the ShanghaiTech dataset, as shown in Table 4. When removing the feature mapping part, the performance drops significantly with Micro AUC 73.6% and Macro AUC 74.5%. By adding feature mapping, the Micro and Macro AUC increase by 5.3% and 9.7%, respectively, which indicating that the significance of feature mapping to align the normal and abnormal features. In addition, the mapping adaptation branch also plays an important role in PFMF by narrowing the scene gap. Furthermore, the anomaly prompt improves model performance by generating unbounded types of anomalies. With all components, the final PFMF achieves the best performance with Micro AUC of 83.8% and Macro AUC of 87.8%.</p>
+
+<h2 class="relative group">4.6. Visualization
+    <div id="46-visualization" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#46-visualization" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>To validate that we can generate unbounded anomalies, we visualize the distribution of normal and abnormal features generated by PFMF via t-SNE [45], which is shown in Fig. 5. For comparison, we also visualized the distribution of normal and abnormal features generated by [11], where the abnormal features are generated by reversing the action order and extracting intermittent frame, as also shown in</p>
+<p>Figure 7. Visualization of anomaly score prediction results for test video 05 0018 in ShanghaiTech dataset. The green line denotes the anomaly prediction of the proposed PFMF. The red area denotes the abnormal interval.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000007_907d959fdf37bd50f963a6f0a7e05cdc0e37d4579a246f5d060d7fbeaf9e74ed.png"
+    ></figure>
+<p>Fig. 5. From the figures, we can obverse that for PFMF, the normal features extracted from ShanghaiTech and Avenue concentrate at the center, and the abnormal features are scattered around in a divergent state. However, for [11], the features of normal and abnormal instances are tangled together. From the comparison, we can see that the results of our method are consistent with our perception of anomalies that most normal behaviors are similar and the abnormal behaviors are a highly variable open set. This indicates that the generated features are close to the distribution of real unbounded anomalies, which on the other hand validates the effectiveness of our anomaly prompt.</p>
+<p>To further show what we learn in PFMF, we visualized the anomaly score prediction of test video 07 in Avenue and test video 05 0018 in ShanghaiTech, which are demonstrated in Fig. 6 and Fig. 7. From the figure, the proposed PFMF can correctly detect the anomalies in both samples.</p>
+
+<h2 class="relative group">5. Conclusion
+    <div id="5-conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this paper, we solve the problem of anomaly gap and scene gap between virtual and real scenarios by proposing a novel PFMF. The proposed framework includes a promptguided mapping network to generate unseen anomalies with unbounded types, and a mapping adaptation branch to narrow the scene gap by applying anomaly classifier and domain classifier. Our approach provides a new paradigm for leveraging virtual datasets to avoid cumbersome anomaly collection in the real scenario. The proposed PFMF performs state-of-the-art on three benchmark datasets, and the ablation study shows the effectiveness of each component of our model design. In the future, we aim to extend the proposed paradigm of utilizing virtual datasets to more areas.</p>
+<p>Acknowledgments: This work was supported partially by the NSFC(U21A20471,U1911401,U1811461), Guangdong NSF Project (No. 2023B1515040025, 2020B1515120085).</p>
+
+<h2 class="relative group">References
+    <div id="references" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#references" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>[1] Davide Abati, Angelo Porrello, Simone Calderara, and Rita Cucchiara. Latent space autoregression for novelty detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 481–490, 2019. 1 , 2</li>
+<li>[2] Andra Acsintoae, Andrei Florescu, Mariana-Iuliana Georgescu, Tudor Mare, Paul Sumedrea, Radu Tudor Ionescu, Fahad Shahbaz Khan, and Mubarak Shah. Ubnormal: New benchmark for supervised open-set video anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 20143–20153, 2022. 1 , 3 , 5 , 6 , 7 , 8</li>
+<li>[3] Marcella Astrid, Muhammad Zaigham Zaheer, and Seung-Ik Lee. Synthetic temporal anomaly guided end-to-end video anomaly detection. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 207–214, 2021. 7</li>
+</ul>
+<p>¨</p>
+<ul>
+<li>[4] Fredrik Carlsson, Joey Ohman, Fangyu Liu, Severine Verlinden, Joakim Nivre, and Magnus Sahlgren. Fine-grained controllable text generation using non-residual prompting. In Proceedings of the Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pages 6837–6857, 2022. 3</li>
+<li>[5] MyeongAh Cho, Taeoh Kim, Woo Jin Kim, Suhwan Cho, and Sangyoun Lee. Unsupervised video anomaly detection via normalizing flows with implicit latent features. Pattern Recognition, 129:108703, 2022. 7</li>
+<li>[6] Wenyuan Dai, Yuqiang Chen, Gui-Rong Xue, Qiang Yang, and Yong Yu. Translated learning: Transfer learning across different feature spaces. Proceedings of the Advances in Neural Information Processing Systems, 21, 2008. 3</li>
+<li>[7] Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, et al. An image is worth 16x16 words: Transformers for image recognition at scale. arXiv preprint arXiv:2010.11929, 2020. 3</li>
+<li>[8] Yu Du, Fangyun Wei, Zihe Zhang, Miaojing Shi, Yue Gao, and Guoqi Li. Learning to prompt for open-vocabulary object detection with vision-language model. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 14084–14093, 2022. 3</li>
+<li>[9] Jia-Chang Feng, Fa-Ting Hong, and Wei-Shi Zheng. Mist: Multiple instance self-training framework for video anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 14009– 14018, 2021. 6</li>
+<li>[10] Yaroslav Ganin and Victor Lempitsky. Unsupervised domain adaptation by backpropagation. In Proceedings of the International Conference on Machine Learning, pages 1180– 1189. PMLR, 2015. 5</li>
+<li>[11] Mariana-Iuliana Georgescu, Antonio Barbalau, Radu Tudor Ionescu, Fahad Shahbaz Khan, Marius Popescu, and Mubarak Shah. Anomaly detection in video via selfsupervised and multi-task learning. In Proceedings of the</li>
+</ul>
+<ol start="9">
+<li>IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 12742–12752, 2021. 1 , 2 , 5 , 6 , 7 , 8</li>
+</ol>
+<ul>
+<li>
+<p>[12] Mariana Iuliana Georgescu, Radu Tudor Ionescu, Fahad Shahbaz Khan, Marius Popescu, and Mubarak Shah. A background-agnostic framework with adversarial training for abnormal event detection in video. IEEE Transactions on Pattern Analysis and Machine Intelligence, 44(9):4505– 4523, 2021. 1 , 2 , 6 , 7</p>
+</li>
+<li>
+<p>[13] Dong Gong, Lingqiao Liu, Vuong Le, Budhaditya Saha, Moussa Reda Mansour, Svetha Venkatesh, and Anton van den Hengel. Memorizing normality to detect anomaly: Memory-augmented deep autoencoder for unsupervised anomaly detection. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 1705–1714, 2019. 2 , 7</p>
+</li>
+<li>
+<p>[14] Mahmudul Hasan, Jonghyun Choi, Jan Neumann, Amit K Roy-Chowdhury, and Larry S Davis. Learning temporal regularity in video sequences. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 733–742, 2016. 1 , 2</p>
+</li>
+<li>
+<p>[15] Radu Tudor Ionescu, Fahad Shahbaz Khan, Mariana-Iuliana Georgescu, and Ling Shao. Object-centric auto-encoders and dummy anomalies for abnormal event detection in video. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 7842–7851, 2019. 7</p>
+</li>
+<li>
+<p>[16] Menglin Jia, Luming Tang, Bor-Chun Chen, Claire Cardie, Serge Belongie, Bharath Hariharan, and Ser-Nam Lim. Visual prompt tuning. arXiv preprint arXiv:2203.12119, 2022. 3</p>
+</li>
+<li>
+<p>[17] Diederik P Kingma and Max Welling. Auto-encoding variational bayes. arXiv preprint arXiv:1312.6114, 2013. 2</p>
+</li>
+<li>
+<p>[18] Brian Kulis, Kate Saenko, and Trevor Darrell. What you saw is not what you get: Domain adaptation using asymmetric kernel transforms. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 1785–1792. IEEE, 2011. 3</p>
+</li>
+<li>
+<p>[19] Sangmin Lee, Hak Gu Kim, and Yong Man Ro. Stan: Spatiotemporal adversarial networks for abnormal event detection. In Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing, pages 1323–1327. IEEE, 2018. 7</p>
+</li>
+<li>
+<p>[20] Sangmin Lee, Hak Gu Kim, and Yong Man Ro. Bman: bidirectional multi-scale aggregation networks for abnormal event detection. IEEE Transactions on Image Processing , 29:2395–2408, 2019. 7</p>
+</li>
+<li>
+<p>[21] Bo Li, Sam Leroux, and Pieter Simoens. Decoupled appearance and motion learning for efficient anomaly detection in surveillance video. Computer Vision and Image Understanding, 210:103249, 2021. 7</p>
+</li>
+<li>
+<p>[22] Muheng Li, Lei Chen, Yueqi Duan, Zhilan Hu, Jianjiang Feng, Jie Zhou, and Jiwen Lu. Bridge-prompt: Towards ordinal action understanding in instructional videos. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 19880–19889, 2022. 3</p>
+</li>
+<li>
+<p>[23] Nanjun Li, Faliang Chang, and Chunsheng Liu. A selftrained spatial graph convolutional network for unsupervised human-related anomalous event detection in complex scenes.</p>
+</li>
+<li>
+<p>IEEE Transactions on Cognitive and Developmental Systems, 2022. 7</p>
+</li>
+<li>
+<p>[24] Weixin Li, Vijay Mahadevan, and Nuno Vasconcelos. Anomaly detection and localization in crowded scenes. IEEE Transactions on Pattern Analysis and Machine Intelligence , 36(1):18–32, 2013. 3</p>
+</li>
+<li>
+<p>[25] Pengfei Liu, Weizhe Yuan, Jinlan Fu, Zhengbao Jiang, Hiroaki Hayashi, and Graham Neubig. Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing. arXiv preprint arXiv:2107.13586 , 2021. 3</p>
+</li>
+<li>
+<p>[26] Wen Liu, Weixin Luo, Zhengxin Li, Peilin Zhao, Shenghua Gao, et al. Margin learning embedded prediction for video anomaly detection with a few anomalies. In Proceedings of the International Joint Conferences on Artificial Intelligence , pages 3023–3030, 2019. 1 , 2</p>
+</li>
+<li>
+<p>[27] Wen Liu, Weixin Luo, Dongze Lian, and Shenghua Gao. Future frame prediction for anomaly detection–a new baseline. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 6536–6545, 2018. 1 , 2 , 7</p>
+</li>
+<li>
+<p>[28] Zhian Liu, Yongwei Nie, Chengjiang Long, Qing Zhang, and Guiqing Li. A hybrid video anomaly detection framework via memory-augmented flow reconstruction and flow-guided frame prediction. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 13588–13597, 2021. 7</p>
+</li>
+<li>
+<p>[29] Cewu Lu, Jianping Shi, and Jiaya Jia. Abnormal event detection at 150 fps in matlab. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 2720– 2727, 2013. 6 , 7</p>
+</li>
+<li>
+<p>[30] Yiwei Lu, Frank Yu, Mahesh Kumar Krishna Reddy, and Yang Wang. Few-shot scene-adaptive anomaly detection. In Proceedings of the European Conference on Computer Vision, pages 125–141. Springer, 2020. 1 , 2 , 6 , 7</p>
+</li>
+<li>
+<p>[31] Weixin Luo, Wen Liu, and Shenghua Gao. A revisit of sparse coding based anomaly detection in stacked rnn framework. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 341–349, 2017. 1 , 2 , 6 , 7</p>
+</li>
+<li>
+<p>[32] Hui Lv, Chen Chen, Zhen Cui, Chunyan Xu, Yong Li, and Jian Yang. Learning normal dynamics in videos with meta prototype network. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 15425–15434, 2021. 2</p>
+</li>
+<li>
+<p>[33] Neelu Madan, Arya Farkhondeh, Kamal Nasrollahi, Sergio Escalera, and Thomas B Moeslund. Temporal cues from socially unacceptable trajectories for anomaly detection. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 2150–2158, 2021. 7</p>
+</li>
+<li>
+<p>[34] Trong-Nguyen Nguyen and Jean Meunier. Anomaly detection in video sequence with appearance-motion correspondence. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 1273–1283, 2019. 1 , 2 , 7</p>
+</li>
+<li>
+<p>[35] Hyunjong Park, Jongyoun Noh, and Bumsub Ham. Learning memory-guided normality for anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 14372–14381, 2020. 7 , 8</p>
+</li>
+<li>
+<p>[36] Kunxun Qi, Hai Wan, Jianfeng Du, and Haolan Chen. Enhancing cross-lingual natural language inference by promptlearning from cross-lingual templates. In Proceedings of the Annual Meeting of the Association for Computational Linguistics, pages 1910–1923, 2022. 3</p>
+</li>
+<li>
+<p>[37] Hossein Ragheb, Sergio Velastin, Paolo Remagnino, and Tim Ellis. Vihasi: virtual human action silhouette data for the performance evaluation of silhouette-based action recognition methods. In Proceedings of the ACM/IEEE International Conference on Distributed Smart Cameras, pages 1– 10. IEEE, 2008. 3</p>
+</li>
+<li>
+<p>[38] Joseph Redmon and Ali Farhadi. Yolov3: An incremental improvement. arXiv preprint arXiv:1804.02767, 2018. 3</p>
+</li>
+<li>
+<p>[39] Nicolae-Cat˘ ˘ alin Ristea, Neelu Madan, Radu Tudor Ionescu, ˘ ˘ Kamal Nasrollahi, Fahad Shahbaz Khan, Thomas B Moeslund, and Mubarak Shah. Self-supervised predictive convolutional attentive block for anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 13576–13586, 2022. 6 , 7 , 8</p>
+</li>
+<li>
+<p>[40] German Ros, Laura Sellart, Joanna Materzynska, David Vazquez, and Antonio M Lopez. The synthia dataset: A large collection of synthetic images for semantic segmentation of urban scenes. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 3234– 3243, 2016. 3</p>
+</li>
+<li>
+<p>[41] Xiaoxiao Shi, Qi Liu, Wei Fan, S Yu Philip, and Ruixin Zhu. Transfer learning on heterogenous feature spaces via spectral transformation. In Proceedings of the IEEE International Conference on Data Mining, pages 1049–1054. IEEE, 2010. 3</p>
+</li>
+<li>
+<p>[42] Waqas Sultani, Chen Chen, and Mubarak Shah. Real-world anomaly detection in surveillance videos. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 6479–6488, 2018. 6 , 7</p>
+</li>
+<li>
+<p>[43] Che Sun, Yunde Jia, Yao Hu, and Yuwei Wu. Scene-aware context reasoning for unsupervised abnormal event detection in videos. In Proceedings of the ACM International Conference on Multimedia, pages 184–192, 2020. 7</p>
+</li>
+<li>
+<p>[44] Yao Tang, Lin Zhao, Shanshan Zhang, Chen Gong, Guangyu Li, and Jian Yang. Integrating prediction and reconstruction for anomaly detection. Pattern Recognition Letters , 129:123–130, 2020. 7</p>
+</li>
+<li>
+<p>[45] Laurens Van der Maaten and Geoffrey Hinton. Visualizing data using t-sne. Journal of Machine Learning Research , 9(11), 2008. 7 , 8</p>
+</li>
+<li>
+<p>[46] Xuanzhao Wang, Zhengping Che, Bo Jiang, Ning Xiao, Ke Yang, Jian Tang, Jieping Ye, Jingyu Wang, and Qi Qi. Robust unsupervised video anomaly detection by multipath frame prediction. IEEE Transactions on Neural Networks and Learning Systems, 2021. 7</p>
+</li>
+<li>
+<p>[47] Yanan Wang, Shengcai Liao, and Ling Shao. Surpassing real-world source training data: Random 3d characters for generalizable person re-identification. In Proceedings of the ACM international conference on multimedia, pages 3422– 3430, 2020. 3</p>
+</li>
+<li>
+<p>[48] Ziming Wang, Yuexian Zou, and Zeming Zhang. Cluster attention contrast for video anomaly detection. In Proceedings</p>
+</li>
+<li>
+<p>of the ACM International Conference on Multimedia, pages 2463–2471, 2020. 7</p>
+</li>
+<li>
+<p>[49] Hui Wu and Xiaodong Shi. Adversarial soft prompt tuning for cross-domain sentiment analysis. In Proceedings of the Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pages 2438–2447, 2022. 3</p>
+</li>
+<li>
+<p>[50] Peng Wu, Jing Liu, and Fang Shen. A deep one-class neural network for anomalous event detection in complex scenes. IEEE Transactions on Neural Networks and Learning Systems, 31(7):2609–2622, 2019. 7</p>
+</li>
+<li>
+<p>[51] Hongbin Ye, Ningyu Zhang, Shumin Deng, Xiang Chen, Hui Chen, Feiyu Xiong, Xi Chen, and Huajun Chen. Ontologyenhanced prompt-tuning for few-shot learning. In Proceedings of the ACM Web Conference, pages 778–787, 2022. 3</p>
+</li>
+<li>
+<p>[52] Guang Yu, Siqi Wang, Zhiping Cai, En Zhu, Chuanfu Xu, Jianping Yin, and Marius Kloft. Cloze test helps: Effective video anomaly detection via learning to complete video events. In Proceedings of the ACM International Conference on Multimedia, pages 583–591, 2020. 7</p>
+</li>
+<li>
+<p>[53] Muhammad Zaigham Zaheer, Jin-Ha Lee, Arif Mahmood, Marcella Astrid, and Seung-Ik Lee. Stabilizing adversarially learned one-class novelty detection using pseudo anomalies. IEEE Transactions on Image Processing, 31:5963– 5975, 2022. 1 , 2 , 7</p>
+</li>
+<li>
+<p>[54] M Zaigham Zaheer, Arif Mahmood, M Haris Khan, Mattia Segu, Fisher Yu, and Seung-Ik Lee. Generative cooperative learning for unsupervised video anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 14744–14754, 2022. 1 , 2 , 6 , 7</p>
+</li>
+<li>
+<p>[55] Yuanhong Zhong, Xia Chen, Yongting Hu, Panliang Tang, and Fan Ren. Bidirectional spatio-temporal feature learning with multi-scale evaluation for video anomaly detection. IEEE Transactions on Circuits and Systems for Video Technology, 2022. 7</p>
+</li>
+<li>
+<p>[56] Bolei Zhou, Agata Lapedriza, Aditya Khosla, Aude Oliva, and Antonio Torralba. Places: A 10 million image database for scene recognition. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2017. 4</p>
+</li>
+<li>
+<p>[57] Joey Tianyi Zhou, Ivor W Tsang, Sinno Jialin Pan, and Mingkui Tan. Heterogeneous domain adaptation for multiple classes. In Artificial Intelligence and Statistics, pages 1095–1103. PMLR, 2014. 3</p>
+</li>
+<li>
+<p>[58] Kaiyang Zhou, Jingkang Yang, Chen Change Loy, and Ziwei Liu. Conditional prompt learning for vision-language models. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 16816–16825, 2022. 3</p>
+</li>
+<li>
+<p>[59] Kaiyang Zhou, Jingkang Yang, Chen Change Loy, and Ziwei Liu. Learning to prompt for vision-language models. International Journal of Computer Vision, 130(9):2337–2348, 2022. 3</p>
+</li>
+<li>
+<p>[60] Jun-Yan Zhu, Taesung Park, Phillip Isola, and Alexei A Efros. Unpaired image-to-image translation using cycleconsistent adversarial networks. In Proceedings of the IEEE/CVF International Conference on Computer Vision , pages 2223–2232, 2017. 1</p>
+</li>
+<li>
+<p>[61] Yin Zhu, Yuqiang Chen, Zhongqi Lu, Sinno Jialin Pan, GuiRong Xue, Yong Yu, and Qiang Yang. Heterogeneous transfer learning for image classification. In Proceedings of the AAAI Conference on Artificial Intelligence, 2011. 3</p>
+</li>
+</ul>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_papers/Liu_Generating_Anomalies_for_Video_Anomaly_Detection_With_Prompt-Based_Feature_Mapping_CVPR_2023_paper.md"
+          data-oid-likes="likes_papers/Liu_Generating_Anomalies_for_Video_Anomaly_Detection_With_Prompt-Based_Feature_Mapping_CVPR_2023_paper.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/multimodal_vad_visual_anomaly_detection_in_intelligent_monitoring_system_via_audio-vision-language/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/li_anomize_better_open_vocabulary_video_anomaly_detection_cvpr_2025_paper/">
+              <span class="leading-6">
+                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-24 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+      
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 overflow-x-auto py-2">
+        <ul class="flex list-none flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 me-4">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

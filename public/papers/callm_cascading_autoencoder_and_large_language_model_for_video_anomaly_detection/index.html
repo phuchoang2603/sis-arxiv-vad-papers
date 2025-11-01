@@ -1,0 +1,1279 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title> &middot; Blowfish</title>
+    <meta name="title" content=" &middot; Blowfish">
+  
+
+  
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/papers/callm_cascading_autoencoder_and_large_language_model_for_video_anomaly_detection/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/papers/callm_cascading_autoencoder_and_large_language_model_for_video_anomaly_detection/">
+  <meta property="og:site_name" content="Blowfish">
+  <meta property="og:title" content="Blowfish">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blowfish">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.7946532fa78157bafb1b4340d4074792811f18177af35790b3a0cb90566ce1cda3edd782eb92e134849964d14b6d9185c9d4ded2a12dcf5b706cb6a275c0cce0.css"
+    integrity="sha512-eUZTL6eBV7r7G0NA1AdHkoEfGBd681eQs6DLkFZs4c2j7deC65LhNISZZNFLbZGFydTe0qEtz1twbLaidcDM4A==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.9df4fc14d50efcc9aa4cfc2b6f348e365f421f5ad491278f8f48c0360cf2f93f08882fda6da162d7ace8e5add57c2df4ac46bd3861306b1d4c452cd31f448d64.js"
+      integrity="sha512-nfT8FNUO/MmqTPwrbzSONl9CH1rUkSePj0jANgzy&#43;T8IiC/abaFi16zo5a3VfC30rEa9OGEwax1MRSzTH0SNZA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Papers",
+    "name": "",
+    "headline": "",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/papers\/callm_cascading_autoencoder_and_large_language_model_for_video_anomaly_detection\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "3578"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          Blowfish
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/papers/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="papers"
+  title="Papers">
+  
+  
+    <p class="text-base font-medium">
+      papers
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/test/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="test"
+  title="Tests">
+  
+  
+    <p class="text-base font-medium">
+      test
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href=""
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  
+  title="">
+  
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/papers/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="papers"
+    title="Papers">
+    
+    
+      <p class="text-bg font-bg">
+        papers
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/test/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="test"
+    title="Tests">
+    
+    
+      <p class="text-bg font-bg">
+        test
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    
+    title="">
+    
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>3578 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">17 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">CALLM: Cascading Autoencoder and Large Language Model for Video Anomaly Detection
+    <div id="callm-cascading-autoencoder-and-large-language-model-for-video-anomaly-detection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#callm-cascading-autoencoder-and-large-language-model-for-video-anomaly-detection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>1 st Apostolos Ntelopoulos Dept. of Electronic Systems Aalborg University Aalborg, Denmark <a
+  href="mailto:ntelopoulosa@gmail.com">ntelopoulosa@gmail.com</a></p>
+<p>Abstract—This paper introduces a new approach using a 3D Deep Autoencoder and a Large Visual Language Model (LVLM) to bridge the gap between video data and multi-modal models for Video Anomaly Detection. The study explores the limitations of previous architectures, particularly their lack of expertise when encountering out-of-distribution instances. By integrating an autoencoder and an LVLM in the same pipeline, this method predicts an abnormality&rsquo;s presence and provides a detailed explanation. Moreover, this can be achieved by employing binary classification and automatically prompting a new query. Testing reveals that the inference capability of the system offers a promising solution to the shortcomings of industrial models. However, the lack of high-quality instruction-follow video data for anomaly detection necessitates a weakly supervised method. Current limitations from the LLM domain, such as object hallucination and low physics perception, are acknowledged, highlighting the need for further research to improve model design and data quality for the video anomaly detection domain.</p>
+<p>Keywords—cascade, video, anomaly, detection, autoencoder, multimodal, LLM</p>
+
+<h2 class="relative group">I. INTRODUCTION
+    <div id="i-introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#i-introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In the past few years, large vision-language models have attempted to connect multiple modalities and progressively leverage the power of existing LLMs as their semantic power in textual form. Moreover, the recent approaches in video language models such as Video-LLaMA [1], VideoBERT [2], Video-ChatGPT [3], Video-LLaVA [4] and MiniGPT4Video [5] aim to solve complex tasks including as text-tovideo retrieval, video question and answering by utilizing a pretrained visual backbone and further align it with the frozen weights of an LLM, typically through the integration of videocaption data. On the other hand, video anomaly detection is a well-researched topic which involves identifying events that deviate from what is commonly observed. Classic video anomaly detection algorithms include motion-detection [6] [7] [8], temporal-spatial feature outliers [9] [10] [11] [10] or through skeleton trajectories [12] [13] [14]. However, despite the existing performance of the previously mentioned techniques to achieve adequate accuracy and quantify uncertainty, they often falter in detecting events that lie beyond the scope</p>
+<p>979-8-3315-4184-2/24/$31.00 ©2024 IEEE</p>
+<p>2 nd Kamal Nasrollahi Visual Analysis &amp; Perception Lab Aalborg University &amp; Milestone Systems Copenhagen, Denmark <a
+  href="mailto:kn@create.aau.dk">kn@create.aau.dk</a> of their training data, resulting in out-of-distribution errors. Thus, this paper explores a new way to address this limitation by testing the possible application of video language in connection with a baseline system.</p>
+<p>The main contributions of this work are as follows:</p>
+<ul>
+<li>A novel architecture that integrates a cascade system combining a simple one-class classification (OCC) network with a Large Video-Language Model.</li>
+<li>A weak-supervised method for extracting video caption data from a pre-trained model, along with a technique for injecting pseudo-instructions to improve performance in downstream tasks.</li>
+<li>A comprehensive investigation into the capabilities of a state-of-the-art (SoTA) Video-Language Model for video anomaly detection, providing new insights and benchmarks for future research.</li>
+</ul>
+
+<h2 class="relative group">II. RELATED WORK
+    <div id="ii-related-work" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ii-related-work" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>VadCLIP: Adapting Vision-Language Models for Weakly Supervised Video Anomaly Detection</p>
+<p>Recently, a work named VadCLIP [15] investigated the application of a pre-trained language-image model CLIP [16] to make use of the fine-grained dependencies between text and images with weak-supervised learning, producing a novel mechanism for extracting video-level labels. Particularly, it outperformed other prior weak-supervised models by introducing two core modules for video anomaly detection; a local module which captures the local features using a transformer encoder layer on top of the textual features coming from the frozen image encoder CLIP on an equal-size window, overlapping over the temporal dimension; and a global module which computes the relation between video frames. The prior module extracts the local features without information aggregation over the windows, whereas the subsequent module apprehends the global information between the video frames. It consists of a lightweight Graph Convolutional Network (GCN) which calculates the frame-wise cosine similarity to build its adjacency matrix of the GCN and capture the global temporal dependencies between the frame-level video features.</p>
+<p>The frame-wise cosine similarity to calculate the adjacency matrix Hs Hsim is presented as follows:</p>
+<!-- formula-not-decoded -->
+<p>where H sim is the adjacency matrix of the GCN and Xlis the frame-level video feature obtained from a local module.</p>
+<p>Video Anomaly Detection and Explanation via Large Language Models</p>
+<p>Another research paper on Video Anomaly Detection proposed the addition of a Long-Term Context Module (LTC) along with a pre-trained LLM to enhance the performance in detecting anomalies in long videos compared to short or normal videos, while also enabling the generation of textual explanations for events [17]. The process begins by dividing the input video into m-segments, followed by clip-level feature extraction using a Video Encoder (VE) based on a foundational model i.e. BLIP-2 [18], which is trained on a diverse corpus of large images and videos. Next, a simple anomaly prediction model is co-trained with the LTC module, which includes the clip-level features with anomaly scores to build the anomaly prompt module, which generates text that is conditioned on the video content and presents accordingly the anomaly status. The LTC module collects these clip-level features from the VE and updates them online while stacking them into a concatenated list. The normal list is denoted as N = n j , whereas these with high anomaly scores as A = aj with j = 1 , 2, . . . , K representing the input clip each time. These are simultaneously updated based on each clip anomaly score and aggregated via cross-attention with the pre-trained VE feature to prevent catastrophic forgetting after the fine-tuning stage. Therefore, when a new video is introduced in the system, the VE will handle the feature extraction for the LTC to update the content of the lists immediately with the new anomaly scores. The final system will be able to describe a video and pinpoint the timestamp of the abnormal incident.</p>
+
+<h2 class="relative group">III. METHOD
+    <div id="iii-method" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#iii-method" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The cascade system aims to deploy a 3D autoencoder and empower it with video-language understanding as an auxiliary mechanism. As depicted in Figure 1, the cascade consists of two separate stages, the 3D autoencoder and the fine-tuned Video-LLaMA [19]. In this section, the overall architecture is described, as well as the training goals through the different stages.</p>
+<p>Fig. 1. The video is divided into individual frames. These frames are processed by the AE to decide whether to proceed to generate the final prediction with Video-LLaMA.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000000_549f7fb68b280becb21ecc095a7f8e94a9e5506dbc3f3c255a29af9eb0485767.png"
+    ></figure>
+
+<h2 class="relative group">A. 1st Stage. 3D Autoencoder
+    <div id="a-1st-stage-3d-autoencoder" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-1st-stage-3d-autoencoder" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>After processing an input video into individual frames, a 3D Autoencoder is implemented to classify each individual frame based on a manual selected threshold. It has been shown in various studies [20] [21] [22] [23] [24] [25] that deep autoencoders are able to comprehend the pattern from the low-dimensional space of the training data and reconstruct an approximation of a new image using the pre-trained weights. This capability is leveraged in the anomaly detection domain since evaluating the reconstruction error, makes it feasible to classify an event if it deviates from the normal. Furthermore, in the video domain, it is necessary to preserve the temporal information that is included. Thus, a 3D Autoencoder is adopted [26] [21] employing the time as the third dimension. AE is trained separately, learning the distribution of the training dataset and minimizing the Mean Squared Error (MSE) loss as follows:</p>
+<!-- formula-not-decoded -->
+<p>where N is the total number of pixels of the video frame, xi the true value for the i-th pixel and xˆ ˆ i the predicted value for the i-th pixel. Essentially, the autoencoder has a bottleneck architecture which consists of the same number of layers in the encoder and decoder respectively [27]. For the video anomaly detection task, the implemented autoencoder applies 3D convolution over the input video frame and 3D batch normalization to prevent vanishing/exploding gradient issues at the beginning of the training. To capture higher-level patterns during reconstruction, the Tanh activation function is used instead of ReLU in the last layer of the decoder module, since it is able to extract more complex patterns in the latent space.</p>
+
+<h2 class="relative group">B. 2nd Stage. Video-Language Branch
+    <div id="b-2nd-stage-video-language-branch" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b-2nd-stage-video-language-branch" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>A video language model, adapted from Video-LLaMA [1], was chosen to process instances that exceeded the anomaly score threshold from the previous stage. Since the cost of pretraining and fine-tuning an LLM is indeed in many cases prohibitive, this method utilizes the alignment of the two frozen modules namely a Visual Encoder [18] and a pre-trained LLM [28] [29]. Specifically, the Visual Encoder consists of a ViT [30] and a Query-Transformer to align the text and image domain [18]. The share of communication between the text and visual transformer that the Q-former consists of, will be able to give a new set of queries to the model and align the frozen modules, as shown in Figure 2.</p>
+<p>Fig. 2. Flow Diagram. A pre-trained Image Encoder processes an input image, whereas the Q-former bootstraps the vision-language learning by connecting the two frozen models.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000001_b6f2f12e6bc26f39601fc6975f225d3dc37f9cc62811f4107e96c21b71357ab8.png"
+    ></figure>
+<p>Fig. 3. Video-Language Branch. The video frames are processed from a frozen Visual Encoder which extracts the video frame features. Then, positional embeddings are injected to add temporal information into video frames.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000002_b662171e0007ba3a63d3d19af414e29b0408fec82c98190991425cdf192467b6.png"
+    ></figure>
+<p>Fig. 4. Following the training of linear layers for frame-level embeddings match the text embeddings&rsquo; dimension. Finally, a binary answer of yes/no is given from the frozen LLM module conditioned on the video input.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000003_11062be4f299d4859145ad0549ba0e9174ecbdac7056e906a2fb61dfcc56bcc0.png"
+    ></figure>
+
+<h2 class="relative group">IV. EXPERIMENT
+    <div id="iv-experiment" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#iv-experiment" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The performance comparison follows for each stage accordingly. A baseline is formulated as a standalone 3D autoencoder trained on each downstream dataset. The ensemble method is investigated afterwards presenting both frame-level and videolevel performance.</p>
+
+<h2 class="relative group">A. Baseline Method
+    <div id="a-baseline-method" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-baseline-method" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This approach consists of the 3D Autoencoder trained only on normal samples of datasets targeted for the video surveillance anomaly detection including CUHK Avenue Dataset [31], Ped2 [32], and ShanghaiTech [33]. The testing split of these datasets includes abnormal moving patterns and behaviour whereas CUHK Avenue is known to be harder to be correctly classified from the network due to the vague video content. The input sequence X for the autoencoder network has a shape of 16 x 1 x 256 x 256, where the number of frames, number of channels, height, and width of the video frames of the input sequence are presented. Thereafter, the decoder produces a reconstructed sequence of the same shape. The final anomaly score is derived from the Peak-Singal-toNoise-Ratio (PSNR) which measures the reconstructed frame quality compared to the true image. For training purposes, the L2 loss is calculated across all 16 frames, but only the 9th frame of the sequence is stored for the PSNR and anomaly score calculation.</p>
+<p>Fig. 5. Initial system architecture. As a baseline was selected a VAD framework that outputs the anomaly score and depending on the threshold determines an anomaly or not.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000004_31e5e9e2001079ec39e899b83121bacacc253598811eb62bbb02c2dff987a09b.png"
+    ></figure>
+<p>TABLE I 3D DEEP AUTOENCODER</p>
+<table>
+  <thead>
+      <tr>
+          <th>Dataset</th>
+          <th>Baseline</th>
+          <th>MULDE [34]</th>
+          <th>SSTML [35]</th>
+          <th>MSMA [36]</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CUHK Avenue</td>
+          <td>80.46 %</td>
+          <td>94.3 %</td>
+          <td>91.5 %</td>
+          <td>90.2 %</td>
+      </tr>
+      <tr>
+          <td>Ped2</td>
+          <td>91.19 %</td>
+          <td>99.7 %</td>
+          <td>97.5 %</td>
+          <td>99.5 %</td>
+      </tr>
+      <tr>
+          <td>ShanghaiTech</td>
+          <td>70.84 %</td>
+          <td>86.7 %</td>
+          <td>82.4 %</td>
+          <td>84.1 %</td>
+      </tr>
+  </tbody>
+</table>
+<p>a Comparative Results of the baseline on the frame-level AUCF . The best results were chosen.</p>
+
+<h2 class="relative group">B. Cascading Autoencoder and Video-LLaMA
+    <div id="b-cascading-autoencoder-and-video-llama" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b-cascading-autoencoder-and-video-llama" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>A weakly supervised method is adopted by creating captions for the video-text alignment, which are fed to the fine-tuning process. BLIP-2 was utilized to extract in a zero-shot manner the frame representation (Fig. 6), where pseudo-instructions were injected afterwards to fine-tune Video-LLaMA on the downstream task of video anomaly detection.</p>
+<p>Fig. 6. Selected examples of zero-shot caption generation with BLIP-2. The images are derived from datasets including ShangaiTech, UCSD Ped2, CUHK Avenue.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000005_4d756c2c9f360fb07a3de1b5b935dbd022e462d6012fc34dc74b1a892959c4d8.png"
+    ></figure>
+<p>Particularly, phrases for the instruction-follow alignment from the CUHK Avenue Dataset include:</p>
+<p>Caption: List of injected instruction-follow data:</p>
+<ul>
+<li>&ldquo;This is abnormal. Someone is moving strangely in the wrong direction.&rdquo;</li>
+<li>&ldquo;This is abnormal. Someone is running.&rdquo;</li>
+<li>&ldquo;This is abnormal. A cyclist should not be there.&rdquo;</li>
+</ul>
+<p>These pseudo-instructions combined only with the testing videos that are labelled as abnormal, will be finally added for the 2nd training stage along with the general-purpose datasets LLaVA [37] [38] [39], MiniGPT-4 [40] [41] and VideoChat</p>
+<p>[42] [43]. Finally, the accuracy comparison as shown in Table II, shows that adequate performance of the cascade system to classify a video without the requirement of being previously trained on the selected dataset i.e. Ped2 and ShanghaiTech. The results describe the video-level accuracy score, as VideoLLaMA samples uniformly 8 frames in a video and extract the video-level representation.</p>
+<p>TABLE II CASCADE ACCURACY COMPARISON</p>
+<table>
+  <thead>
+      <tr>
+          <th>Dataset</th>
+          <th>0-shot</th>
+          <th>1-shot</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>CUHK Avenue</td>
+          <td>9.52</td>
+          <td>33.33</td>
+      </tr>
+      <tr>
+          <td>Ped2</td>
+          <td>8.33</td>
+          <td>66.66</td>
+      </tr>
+      <tr>
+          <td>ShanghaiTech</td>
+          <td>22.43</td>
+          <td>64.86</td>
+      </tr>
+  </tbody>
+</table>
+<p>a Accuracy comparison within zero-shot and fine-tuning inference.</p>
+<p>This table describes the video-level performance.</p>
+
+<h2 class="relative group">V. DISCUSSION
+    <div id="v-discussion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#v-discussion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video-language models are a relevantly recent topic and can serve as a general-purpose tool in multiple different application areas. High-quality instruction-follow data plays a major role in reaching the capabilities of other models. It is remarkable that even in a zero-shot scenario, numerous actions observed in the testing data, such as throwing paper or navigating a university campus, can be accurately distinguished by the cascade system, but still not predict the true label correctly. Nevertheless, future research should address object hallucination in the frozen LLM and work on enhancing the model&rsquo;s physics perception by incorporating more robust datasets and refining model architectures.</p>
+
+<h2 class="relative group">VI. FUTURE WORK
+    <div id="vi-future-work" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vi-future-work" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>To address the acknowledged problems in this paper, extensive research should be done on multimodal LLMs, training in a new manner the pretrained language-visual model while also fine-tuning the application task&rsquo;s domain knowledge effectively. Utilizing keywords extracted from actions and objects could potentially enhance the efficiency of the cascade method, while objective metrics such as CHAIR [44] can objectively measure the LLM hallucination.</p>
+
+<h2 class="relative group">VII. CONCLUSION
+    <div id="vii-conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vii-conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this study, experimentation was conducted on the implementation of the cascade system alongside the recent breakthrough of Large Visual Language Models. Although the performance is currently limited within the Video Anomaly Detection domain, there is significant potential for improvement. Acquiring high-quality video-to-caption data could equip the model with the necessary knowledge to fine-tune according to the downstream task by learning the correlations between video-level representations and textual embeddings. This could not only have the potential to boost the model performance, as evidenced in related works but also to offer valuable insights to users analyzing surveillance footage.</p>
+
+<h2 class="relative group">REFERENCES
+    <div id="references" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#references" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>
+<p>[1] H. Zhang, X. Li, and L. Bing, &ldquo;Video-llama: An instruction-tuned audio-visual language model for video understanding,&rdquo; arXiv preprint arXiv:2306.02858, 2023.</p>
+</li>
+<li>
+<p>[2] C. Sun, A. Myers, C. Vondrick, K. Murphy, and C. Schmid, &ldquo;Videobert: A joint model for video and language representation learning,&rdquo; in Proceedings of the IEEE/CVF international conference on computer vision , 2019, pp. 7464–7473.</p>
+</li>
+<li>
+<p>[3] M. Maaz, H. Rasheed, S. Khan, and F. S. Khan, &ldquo;Video-chatgpt: Towards detailed video understanding via large vision and language models,&rdquo; arXiv preprint arXiv:2306.05424, 2023.</p>
+</li>
+<li>
+<p>[4] B. Lin, B. Zhu, Y. Ye, M. Ning, P. Jin, and L. Yuan, &ldquo;Video-llava: Learning united visual representation by alignment before projection,&rdquo; arXiv preprint arXiv:2311.10122, 2023.</p>
+</li>
+<li>
+<p>[5] K. Ataallah, X. Shen, E. Abdelrahman, et al. , &ldquo;Minigpt4-video: Advancing multimodal llms for video understanding with interleaved visual-textual tokens,&rdquo; arXiv preprint arXiv:2404.03413, 2024.</p>
+</li>
+<li>
+<p>[6] D. Samariya and A. Thakkar, &ldquo;A comprehensive survey of anomaly detection algorithms,&rdquo; Annals of Data Science, vol. 10, no. 3, pp. 829–850, 2023.</p>
+</li>
+<li>
+<p>[7] T.-N. Nguyen and J. Meunier, &ldquo;Anomaly detection in video sequence with appearance-motion correspondence,&rdquo; in Proceedings of the IEEE/CVF international conference on computer vision, 2019, pp. 1273–1283.</p>
+</li>
+<li>
+<p>[8] S. Wang, E. Zhu, J. Yin, and F. Porikli, &ldquo;Video anomaly detection and localization by local motion based joint video representation and ocelm,&rdquo; Neurocomputing, vol. 277, pp. 161–175, 2018.</p>
+</li>
+<li>
+<p>[9] Y. Chang, Z. Tu, W. Xie, et al., &ldquo;Video anomaly detection with spatio-temporal dissociation,&rdquo; Pattern Recognition, vol. 122, p. 108 213, 2022.</p>
+</li>
+<li>
+<p>[10] Y. Zhao, B. Deng, C. Shen, Y. Liu, H. Lu, and X.-S. Hua, &ldquo;Spatio-temporal autoencoder for video anomaly detection,&rdquo; in Proceedings of the 25th ACM international conference on Multimedia, 2017, pp. 1933–1941.</p>
+</li>
+<li>
+<p>[11] R. Tudor Ionescu, S. Smeureanu, B. Alexe, and M. Popescu, &ldquo;Unmasking the abnormal events in video,&rdquo; in Proceedings of the IEEE international conference on computer vision, 2017, pp. 2895–2903.</p>
+</li>
+<li>
+<p>[12] R. Morais, V. Le, T. Tran, B. Saha, M. Mansour, and S. Venkatesh, &ldquo;Learning regularity in skeleton trajectories for anomaly detection in videos,&rdquo; in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2019, pp. 11 996–12 004.</p>
+</li>
+<li>
+<p>[13] A. Flaborea, L. Collorone, G. M. D. Di Melendugno, S. D&rsquo;Arrigo, B. Prenkaj, and F. Galasso, &ldquo;Multimodal motion conditioned diffusion model for skeletonbased video anomaly detection,&rdquo; in Proceedings of the IEEE/CVF International Conference on Computer Vision, 2023, pp. 10 318–10 329.</p>
+</li>
+<li>
+<p>[14] A. Flaborea, G. D&rsquo;Amely, S. D&rsquo;Arrigo, M. A. Sterpa, A. Sampieri, and F. Galasso, &ldquo;Contracting skeletal kinematics for human-related video anomaly detection,&rdquo; arXiv preprint arXiv:2301.09489, 2023.</p>
+</li>
+<li>
+<p>[15] P. Wu, X. Zhou, G. Pang, et al., &ldquo;Vadclip: Adapting vision-language models for weakly supervised video anomaly detection,&rdquo; in Proceedings of the AAAI Conference on Artificial Intelligence, vol. 38, 2024, pp. 6074– 6082.</p>
+</li>
+<li>
+<p>[16] A. Radford, J. W. Kim, C. Hallacy, et al., &ldquo;Learning transferable visual models from natural language supervision,&rdquo; in International conference on machine learning, PMLR, 2021, pp. 8748–8763.</p>
+</li>
+<li>
+<p>[17] H. Lv and Q. Sun, &ldquo;Video anomaly detection and explanation via large language models,&rdquo; arXiv preprint arXiv:2401.05702, 2024.</p>
+</li>
+<li>
+<p>[18] J. Li, D. Li, S. Savarese, and S. Hoi, &ldquo;Blip-2: Bootstrapping language-image pre-training with frozen image encoders and large language models,&rdquo; in International conference on machine learning, PMLR, 2023, pp. 19 730–19 742.</p>
+</li>
+<li>
+<p>[19] H. Zhang, X. Li, and L. Bing, &ldquo;Video-llama: An instruction-tuned audio-visual language model for video understanding,&rdquo; arXiv preprint arXiv:2306.02858, 2023. [Online]. Available: <a
+  href="https://arxiv.org/abs/2306.02858"
+    target="_blank"
+  >https://arxiv.org/abs/2306.02858</a>.</p>
+</li>
+<li>
+<p>[20] E. T. Nalisnick, A. Matsukawa, Y. W. Teh, D. Gor¨ ¨ ur, and B. Lakshminarayanan, &ldquo;Do deep gener- ¨ ¨ ative models know what they don&rsquo;t know?&rdquo; ArXiv , vol. abs/1810.09136, 2018.</p>
+</li>
+<li>
+<p>[21] D. Gong, L. Liu, V. Le, et al., &ldquo;Memorizing normality to detect anomaly: Memory-augmented deep autoencoder for unsupervised anomaly detection,&rdquo; 2019 IEEE/CVF International Conference on Computer Vision (ICCV) , pp. 1705–1714, 2019.</p>
+</li>
+<li>
+<p>[22] Z. Chen, C. K. Yeo, B. S. Lee, and C. T. Lau, &ldquo;Autoencoder-based network anomaly detection,&rdquo; in 2018 Wireless telecommunications symposium (WTS) , IEEE, 2018, pp. 1–5.</p>
+</li>
+<li>
+<p>[23] J. An and S. Cho, &ldquo;Variational autoencoder based anomaly detection using reconstruction probability,&rdquo; Special lecture on IE, vol. 2, no. 1, pp. 1–18, 2015.</p>
+</li>
+<li>
+<p>[24] C. Zhou and R. C. Paffenroth, &ldquo;Anomaly detection with robust deep autoencoders,&rdquo; in Proceedings of the 23rd ACM SIGKDD international conference on knowledge discovery and data mining, 2017, pp. 665–674.</p>
+</li>
+<li>
+<p>[25] Z. Cheng, S. Wang, P. Zhang, S. Wang, X. Liu, and E. Zhu, &ldquo;Improved autoencoder for unsupervised anomaly detection,&rdquo; International Journal of Intelligent Systems , vol. 36, no. 12, pp. 7103–7125, 2021.</p>
+</li>
+<li>
+<p>[26] M. Astrid, M. Z. Zaheer, J.-Y. Lee, and S.-I. Lee, &ldquo;Learning not to reconstruct anomalies,&rdquo; in BMVC , 2021.</p>
+</li>
+<li>
+<p>[27] G. E. Hinton and R. R. Salakhutdinov, &ldquo;Reducing the dimensionality of data with neural networks,&rdquo; science , vol. 313, no. 5786, pp. 504–507, 2006.</p>
+</li>
+<li>
+<p>[28] W.-L. Chiang, Z. Li, Z. Lin, et al. , Vicuna: An opensource chatbot impressing gpt-4 with 90%* chatgpt quality, 2023.</p>
+</li>
+<li>
+<p>[29] F. Bordes, R. Y. Pang, A. Ajay, et al., &ldquo;An introduction to vision-language modeling,&rdquo; arXiv preprint arXiv:2405.17247, 2024.</p>
+</li>
+<li>
+<p>[30] Q. Sun, Y. Fang, L. Wu, X. Wang, and Y. Cao, &ldquo;Evaclip: Improved training techniques for clip at scale,&rdquo; arXiv preprint arXiv:2303.15389, 2023.</p>
+</li>
+<li>
+<p>[31] C. Lu, J. Shi, and J. Jia, &ldquo;Abnormal event detection at 150 fps in matlab,&rdquo; in Proceedings of the IEEE international conference on computer vision, 2013, pp. 2720–2727.</p>
+</li>
+<li>
+<p>[32] W. Li, V. Mahadevan, and N. Vasconcelos, &ldquo;Anomaly detection and localization in crowded scenes,&rdquo; IEEE transactions on pattern analysis and machine intelligence, vol. 36, no. 1, pp. 18–32, 2013.</p>
+</li>
+<li>
+<p>[33] W. Liu, W. Luo, D. Lian, and S. Gao, &ldquo;Future frame prediction for anomaly detection–a new baseline,&rdquo; in Proceedings of the IEEE conference on computer vision and pattern recognition, 2018, pp. 6536–6545.</p>
+</li>
+<li>
+<p>[34] J. Micorek, H. Possegger, D. Narnhofer, H. Bischof, and M. Kozinski, &ldquo;Mulde: Multiscale log-density estimation via denoising score matching for video anomaly detection,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2024, pp. 18 868–18 877.</p>
+</li>
+<li>
+<p>[35] M.-I. Georgescu, A. Barbalau, R. T. Ionescu, F. S. Khan, M. Popescu, and M. Shah, &ldquo;Anomaly detection in video via self-supervised and multi-task learning,&rdquo; in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2021, pp. 12 742–12 752.</p>
+</li>
+<li>
+<p>[36] A. Mahmood, J. Oliva, and M. Styner, &ldquo;Localizing anomalies via multiscale score matching analysis,&rdquo; arXiv preprint arXiv:2407.00148, 2024.</p>
+</li>
+<li>
+<p>[37] H. Liu, C. Li, Q. Wu, and Y. J. Lee, Visual instruction tuning, 2023.</p>
+</li>
+<li>
+<p>[38] H. Liu, C. Li, Y. Li, and Y. J. Lee, Improved baselines with visual instruction tuning, 2023.</p>
+</li>
+<li>
+<p>[39] H. Liu, C. Li, Y. Li, et al. , Llava-next: Improved reasoning, ocr, and world knowledge, 2024. [Online]. Available: <a
+  href="https://llava-vl.github.io/blog/2024-01-30llava-next/"
+    target="_blank"
+  >https://llava-vl.github.io/blog/2024-01-30llava-next/</a>.</p>
+</li>
+<li>
+<p>[40] J. Chen, D. Zhu, X. Shen, et al., &ldquo;Minigpt-v2: Large language model as a unified interface for vision-language multi-task learning,&rdquo; arXiv preprint arXiv:2310.09478 , 2023.</p>
+</li>
+<li>
+<p>[41] D. Zhu, J. Chen, X. Shen, X. Li, and M. Elhoseiny, &ldquo;Minigpt-4: Enhancing vision-language understanding with advanced large language models,&rdquo; arXiv preprint arXiv:2304.10592, 2023.</p>
+</li>
+<li>
+<p>[42] K. Li, Y. He, Y. Wang, et al., &ldquo;Videochat: Chat-centric video understanding,&rdquo; arXiv preprint arXiv:2305.06355 , 2023.</p>
+</li>
+<li>
+<p>[43] Y. Wang, K. Li, Y. Li, et al., &ldquo;Internvideo: General video foundation models via generative and discriminative learning,&rdquo; arXiv preprint arXiv:2212.03191, 2022.</p>
+</li>
+<li>
+<p>[44] P. Kaul, Z. Li, H. Yang, et al., &ldquo;Throne: An object-based hallucination benchmark for the free-form generations of large vision-language models,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2024, pp. 27 228–27 238.</p>
+</li>
+</ul>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_papers/CALLM_Cascading_Autoencoder_and_Large_Language_Model_for_Video_Anomaly_Detection.md"
+          data-oid-likes="likes_papers/CALLM_Cascading_Autoencoder_and_Large_Language_Model_for_Video_Anomaly_Detection.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/chen_tevad_improved_video_anomaly_detection_with_captions_cvprw_2023_paper/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/avadclip-audio-visual-collaboration-for-robust-video-anomaly-detection/">
+              <span class="leading-6">
+                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-24 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+      
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 overflow-x-auto py-2">
+        <ul class="flex list-none flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 me-4">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

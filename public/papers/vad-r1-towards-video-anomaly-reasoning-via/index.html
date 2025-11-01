@@ -1,0 +1,3101 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title> &middot; Blowfish</title>
+    <meta name="title" content=" &middot; Blowfish">
+  
+
+  
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/papers/vad-r1-towards-video-anomaly-reasoning-via/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/papers/vad-r1-towards-video-anomaly-reasoning-via/">
+  <meta property="og:site_name" content="Blowfish">
+  <meta property="og:title" content="Blowfish">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blowfish">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.7946532fa78157bafb1b4340d4074792811f18177af35790b3a0cb90566ce1cda3edd782eb92e134849964d14b6d9185c9d4ded2a12dcf5b706cb6a275c0cce0.css"
+    integrity="sha512-eUZTL6eBV7r7G0NA1AdHkoEfGBd681eQs6DLkFZs4c2j7deC65LhNISZZNFLbZGFydTe0qEtz1twbLaidcDM4A==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.9df4fc14d50efcc9aa4cfc2b6f348e365f421f5ad491278f8f48c0360cf2f93f08882fda6da162d7ace8e5add57c2df4ac46bd3861306b1d4c452cd31f448d64.js"
+      integrity="sha512-nfT8FNUO/MmqTPwrbzSONl9CH1rUkSePj0jANgzy&#43;T8IiC/abaFi16zo5a3VfC30rEa9OGEwax1MRSzTH0SNZA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Papers",
+    "name": "",
+    "headline": "",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/papers\/vad-r1-towards-video-anomaly-reasoning-via\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "11159"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          Blowfish
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/papers/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="papers"
+  title="Papers">
+  
+  
+    <p class="text-base font-medium">
+      papers
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/test/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="test"
+  title="Tests">
+  
+  
+    <p class="text-base font-medium">
+      test
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href=""
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  
+  title="">
+  
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/papers/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="papers"
+    title="Papers">
+    
+    
+      <p class="text-bg font-bg">
+        papers
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/test/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="test"
+    title="Tests">
+    
+    
+      <p class="text-bg font-bg">
+        test
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    
+    title="">
+    
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>11159 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">53 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Vad-R1: Towards Video Anomaly Reasoning via Perception-to-Cognition Chain-of-Thought
+    <div id="vad-r1-towards-video-anomaly-reasoning-via-perception-to-cognition-chain-of-thought" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vad-r1-towards-video-anomaly-reasoning-via-perception-to-cognition-chain-of-thought" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Chao Huang 1 Benfeng Wang 1 Jie Wen 2 Chengliang Liu 3 Wei Wang 1 Li Shen 1 Xiaochun Cao 1</p>
+<p>1 Shenzhen Campus of Sun Yat-sen University 2 Harbin Institute of Technology, Shenzhen 3 Hong Kong Polytechnic University</p>
+<p>{huangch253, wangbf23, wangwei29, <a
+  href="mailto:caoxiaochun%7d@mail.sysu.edu.cn">caoxiaochun}@mail.sysu.edu.cn</a></p>
+<p><a
+  href="mailto:wenjie@hit.edu.cn">wenjie@hit.edu.cn</a> <a
+  href="mailto:liucl1996@163.com">liucl1996@163.com</a> <a
+  href="mailto:mathshenli@gmail.com">mathshenli@gmail.com</a></p>
+
+<h2 class="relative group">Abstract
+    <div id="abstract" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abstract" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Recent advancements in reasoning capability of Multimodal Large Language Models (MLLMs) demonstrate its effectiveness in tackling complex visual tasks. However, existing MLLM-based Video Anomaly Detection (VAD) methods remain limited to shallow anomaly descriptions without deep reasoning. In this paper, we propose a new task named Video Anomaly Reasoning (VAR), which aims to enable deep analysis and understanding of anomalies in the video by requiring MLLMs to think explicitly before answering. To this end, we propose Vad-R1, an end-to-end MLLM-based framework for VAR. Specifically, we design a Perceptionto-Cognition Chain-of-Thought (P2C-CoT) that simulates the human process of recognizing anomalies, guiding the MLLM to reason anomaly step-by-step. Based on the structured P2C-CoT, we construct Vad-Reasoning, a dedicated dataset for VAR. Furthermore, we propose an improved reinforcement learning algorithm AVAGRPO, which explicitly incentivizes the anomaly reasoning capability of MLLMs through a self-verification mechanism with limited annotations. Experimental results demonstrate that Vad-R1 achieves superior performance, outperforming both open-source and proprietary models on VAD and VAR tasks. Codes and datasets will be released at <a
+  href="https://github.com/wbfwonderful/Vad-R1"
+    target="_blank"
+  >https://github.com/wbfwonderful/Vad-R1</a> .</p>
+
+<h2 class="relative group">1 Introduction
+    <div id="1-introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video Anomaly Detection (VAD) focuses on identifying abnormal events in videos, and has been widely applied in a range of domains like surveillance systems [49] and automatic driving [37 , 75]. Traditional VAD methods typically fall into two paradigms: semi-supervised and weakly-supervised VADs. The semi-supervised VAD methods [75 , 32 , 20 , 34 , 19 , 17] aim at modeling the features of normal events, while there are only video-level annotations available for weakly-supervised VAD methods [66 , 49 , 18 , 17 , 24 , 90 , 21]. With the development of vision-language models, some studies introduce semantic information into VAD [60 , 68 , 67 , 76 , 7]. However, traditional VAD methods only remain at the level of detection, lacking understanding and explanation of anomalies.</p>
+<p>Recently, the reasoning capability of large language models has emerged as a key frontier [41 , 9 , 54]. Unlike daily dialogue, reasoning requires models to think before answering, enabling them to perform causal analysis and further understanding. In particular, DeepSeek-R1 demonstrates the effectiveness of Reinforcement Learning (RL) in stimulating reasoning capability [9]. Besides, parallel efforts have begun to extend reasoning to the multimodal domain [53 , 56].</p>
+<p>Despite the growing interest in reasoning capability, existing Multimodal Large Language Models (MLLMs) based VAD methods still fall short in this regard. Those methods can be divided into two categories based on the role of MLLMs. Some methods regard MLLMs as auxiliary modules [36 , 84 ,</p>
+<p>Preprint. Under review.</p>
+<p>Figure 1: Overview of Vad-R1. Vad-R1 is an end-to-end framework for video anomaly reasoning. A structured Perception-to-Cognition Chain-of-Thought is proposed to guide Vad-R1 in step-by-step reasoning. Based on the structured CoT, a new dataset for video anomaly reasoning is constructed, including fine-grained anomaly categories. A two-stage training pipeline is adopted to progressively enhance the reasoning capability of Vad-R1. Finally, Vad-R1 outperforms existing MLLMs-based VAD methods with a great margin on VANE benchmark.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000000_cf969c9cc4d17846a1df1027d577a3155a7af821452d59ff1a3a5b1250e48247.png"
+    ></figure>
+<p>85 , 11], where MLLMs provide supplementary explanation after the classifier predicts the anomaly confidence. In this context, anomaly understanding is a step after detection, and the output of MLLMs does not directly promote anomaly detection. Subsequently, although some methods utilize MLLMs to directly perform anomaly detection and understanding [50 , 38 , 73 , 80 , 13 , 12], MLLMs only generate anomaly descriptions or perform simple anomaly question answering based on video content, lacking thinking and analytical abilities. Thus, reasoning remains underexplored in VAD.</p>
+<p>To bridge this gap, we propose a new task: Video Anomaly Reasoning (VAR), which aims to empower MLLMs with the ability to perform structured, step-by-step reasoning about anomalous events in videos. Compared with existing video anomaly detection or understanding tasks, VAR targets a deeper level of analysis by mimicking the human cognitive process, enabling contextual understanding, behavior interpretation, and norm violation analysis. To this end, we propose Vad-R1, the first end-to-end MLLM-based framework for VAR, which explicitly performs reasoning before generating a response. However, realizing reasoning in video anomaly tasks presents two major challenges. Firstly, existing VAD datasets lack structured reasoning annotations, making them unsuitable for training and evaluating anomaly reasoning models. Secondly, how to effectively train models to acquire reasoning capability remains an open challenge. Unlike tasks with clearly defined objectives, open-ended VAR requires models to perform multi-step reasoning, making it difficult to define clear training objectives or directly guide the reasoning process.</p>
+<p>For the first challenge, we design a structured Perception-to-Cognition Chain-of-Thought (P2CCoT) for video anomaly reasoning, as shown in Figure 1(a). Inspired by the process of human understanding the anomalies in the videos, the proposed P2C-CoT first guides the model to perceive from the global environment of the video to the suspicious clips of the video. After perception, the model will make cognition based on visual clues from shallow to deep level. Finally, the model gives the analysis result as answer, including the anomaly category, the anomaly description, the temporal range of anomaly, the approximate spatial position of the anomaly and so on. Then based on the CoT, we construct Vad-Reasoning, a specially designed dataset for VAR, which includes fine-grained anomaly categories as shown in Figure 1(b). Vad-Reasoning consists of two complementary subsets. One subset contains videos with P2C-CoT annotations, which are generated by proprietary models step-by-step. The other subset contains a larger number of videos, where there are only video-level weak labels available due to high annotation costs. For the second challenge, inspired by the success of DeepSeek-R1, we propose a training pipeline with two stages as shown in Figure 1(c). In the first stage, Supervised Fine-Tuning (SFT) is performed to equip the base MLLM with fundamental</p>
+<p>anomaly reasoning capability. In the second stage, RL is employed to further incentivize the reasoning capability with the proposed Anomaly Verification Augmented Group Relative Policy Optimization (AVA-GRPO) algorithm, an extension of original GRPO [47] specifically designed for VAR. During RL training, the model first generates a group of completions. Based on these completions, the original videos are temporally trimmed and the trimmed videos are then fed back to the model to generate new completions. The two sets of completions are subsequently compared, and an additional anomaly verification reward is assigned if a predefined condition is satisfied. Finally, AVA-GRPO promotes MLLM&rsquo;s video anomaly reasoning capability through this self-verification mechanism with limited annotations. In summary, the contributions of this paper are threefold:</p>
+<ul>
+<li>We propose Vad-R1, a novel end-to-end MLLM-based framework tailored for VAR, which aims at further analysis and understanding of anomalies in the video.</li>
+<li>We design a structured Perception-to-Cognition Chain-of-Thought, and construct VadReasoning, a specially designed dataset for video anomaly reasoning with two subsets. Besides, we propose an improved reinforcement learning algorithm AVA-GRPO, which incentivizes the reasoning capability of MLLMs through a self verification way.</li>
+<li>The experimental results show that the proposed Vad-R1 achieves superior performance across multiple evaluation scenarios, surpassing both open-source and proprietary models in video anomaly detection and reasoning tasks.</li>
+</ul>
+
+<h2 class="relative group">2 Related Works
+    <div id="2-related-works" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-related-works" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video Anomaly Detection and Dataset Video anomaly detection aims at localizing the abnormal events in the videos. Based on the training data, traditional VAD methods typically fall into two paradigms, the semi-supervised VAD [75 , 32 , 20 , 34 , 19 , 17 , 45 , 72 , 79] and weakly supervised VAD [66 , 49 , 18 , 17 , 24 , 90 , 21 , 91]. Furthermore, some studies try to introduce text description to enhance detection [60 , 68 , 67 , 76 , 7 , 8]. Recently, there has been growing interest in integrating MLLMs into VAD to improve understanding and explanation [36 , 50 , 38 , 73 , 80 , 84 , 85 , 11 , 13 , 12]. However, current studies remain at shallow understanding with MLLMs, lacking in-depth exploration of reasoning capability. In this paper, we propose an end-to-end framework to explore the enhancement of reasoning capability for video anomaly tasks.</p>
+<p>Furthermore, the existing VAD datasets primarily provide coarse-grained category labels [49 , 66 , 37 , 1] or abnormal event description [13 , 12 , 50 , 78], lacking annotation of reasoning process. To address this gap, we propose a structured Perception-to-Cognition Chain-of-Thought and a dataset specially designed for video anomaly reasoning, providing step-by-step CoT annotations.</p>
+<p>Video Multimodal Large Language Model The video multimodal large models provide an interactive way to understand video content. Early works integrate visual encoders into large language models by aligning visual and textual tokens via mapping networks [25 , 30 , 39 , 83 , 87]. Compared to static images, videos contain more redundant information. Consequently, some studies explore token compression mechanism to obtain longer context [29 , 71 , 86 , 23]. In addition, recent works have explored online video stream understanding [6 , 10 , 74 , 69]. Nevertheless, these methods remain at the level of video understanding and lack exploration of reasoning capability.</p>
+<p>Multimodal Large Language Model with Reasoning Capability Enhancing the reasoning capability of MLLMs has become a major research focus. Some studies propose multi-stage reasoning frameworks and large-scale CoT datasets to enhance the reasoning capability of MLLMs [70 , 59 , 33]. Recently, DeepSeek-R1 [9] demonstrates the potential of reinforcement learning in enhancing the reasoning capability, inspiring subsequent efforts to reproduce its success in multimodal domains [22 , 81]. In the field of video, some studies also utilize RL to improve spatial reasoning [28], temporal reasoning [64] and general causal reasoning [14 , 88]. In this paper, we focus on the video anomaly reasoning task.</p>
+
+<h2 class="relative group">3 Method: Vad-R1
+    <div id="3-method-vad-r1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-method-vad-r1" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Overview In this section, we introduce Vad-R1, a novel end-to-end MLLM-based framework for VAR. The reasoning capability of Vad-R1 is derived from a two-stage training strategy: SFT with</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000001_ba861b9ae931ef3dfffd38e9c16074b57571af09e01b0355d0540c4c3203b083.png"
+    ></figure>
+<p>(b) Illustration of the answer after reasoning.</p>
+<p>(c) The arrangement of Vad-Reasoning dataset.</p>
+<p>Figure 2: Overview of the proposed Perception-to-Cognition CoT and Vad-Reasoning dataset.</p>
+<p>high quality CoT annotated videos and RL based on AVA-GRPO algorithm. We begin by introducing the proposed P2C-CoT in Section 3.1. Based on the P2C-CoT, we construct Vad-Reasoning, a new dataset as detailed in Section 3.2. Then, we introduce the improved RL algorithm AVA-GRPO in Section 3.3. Finally, we introduce the training pipeline of Vad-R1 in Section 3.4 .</p>
+
+<h2 class="relative group">3.1 Perception-to-Cognition Chain-of-Thought
+    <div id="31-perception-to-cognition-chain-of-thought" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#31-perception-to-cognition-chain-of-thought" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>When humans interpret a video, they typically first observe the events that occur in the video, and then develop a deeper understanding based on visual observation. Motivated by this, we design a structured Perception-to-Cognition Chain-of-Thought (P2C-CoT) for video anomaly reasoning, which gradually transitions from Perception to Cognition consisting of 2 stages with 4 steps as shown in Figure 2(a), and concludes with a concise answer as shown in Figure 2(b).</p>
+<p>Perception When watching a video, humans typically begin with a holistic observation of the scene and environment, and then shift attention to specific objects or events that appear abnormal. In line with this pattern, the perception stage of the proposed P2C-CoT reflects a transition from global observation to focused local observation. The model initially focuses on the whole environment, describes the scenes and recognizes the objects in the video. This step requires the model to have a comprehensive understanding of the normality in the video. Building upon this holistic understanding of the normality, the model then focuses on the events that deviate from the established normality, identifies what happens, when and where the event happens.</p>
+<p>Cognition After observing the video content, humans typically identify abnormal events based on visual cues, and then proceed to reason about the potential consequences. Similarly, the cognitive stage of the proposed P2C-CoT reflects a progression from shallow cognition to deep cognition. The model first assesses the abnormality of the event and explains why it is considered anomalous with relevant visual signals. It then engages in higher-level cognition to reason the underlying causes, the violated social expectations, and the possible consequences of the abnormal event.</p>
+<p>Answer As shown in Figure 2(b), following the reasoning process, the model is expected to provide a short summary of its judgment about the given video. The final answer consists of key points related to the anomaly, including category (Which), description of the event (What), spatio-temporal localization (When &amp; Where), the reason Why it is identified as an anomaly and the potential</p>
+<p>Figure 3: Illustration of the two-stage training pipeline for Vad-R1. Stage 1 enables the model to acquire basic reasoning capability with CoT annotated video. Stage 2 further enhances the model&rsquo;s reasoning capability through reinforcement learning.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000002_f826e7fb525ab4f3d529f0e05be53560fcc32e407948855968051bbcc1127538.png"
+    ></figure>
+<p>influence (How). Notably, for normal videos, the corresponding P2C-CoT is simplified into two steps. Please refer to Appendix B for more details.</p>
+
+<h2 class="relative group">3.2 Dataset: Vad-Reasoning
+    <div id="32-dataset-vad-reasoning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#32-dataset-vad-reasoning" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video Collection The existing VAD datasets generally lack the annotation of reasoning process. To construct a more suitable dataset for VAR, we take the following two aspects into consideration. On the one hand, we aim for the proposed dataset to cover a wide range of real-life scenarios. Similar to HAWK [50], we collect videos from current VAD datasets. The video scenarios include crimes under surveillance (UCF-Crime [49]), violent events under camera (XD-Violence [66]), traffic (TAD [37]), campus (ShanghaiTech [32]) and city (UBnormal [1]). Besides, we also collect videos from ECVA [12], a multi-scene benchmark. On the other hand, we strive to broaden the coverage of anomaly categories. To this end, we define a taxonomy of anomalies comprising three main types: Human Activity Anomaly, Environments Anomaly, and Objects Anomaly. Each type is categorized into several main categories, which are further divided into fine-grained subcategories. Then, we collect additional videos from the internet based on the existing dataset to expand the categories of anomalies. In total, the proposed Vad-Reasoning dataset contains 8203 videos for training and 438 videos for test. As shown in Figure 2(c), the training set of Vad-Reasoning is split into two subsets: Vad-Reasoning-SFT which contains 1755 videos annotated with high-quality reasoning process, and Vad-Reasoning-RL which contains 6448 videos with video-level weak labels.</p>
+<p>Annotation To construct the proposed Vad-Reasoning dataset, we design a multi-stage annotation pipeline with two proprietary models Qwen-Max [55] and Qwen-VL-Max [57]. In order to ensure that the P2C-CoT annotation covers all key information in the video, we follow the principle of high frame information density [77]. Specifically, we first prompt Qwen-VL-Max to generate dense description of video frames. These frame-level descriptions are then fed into Qwen-Max to generate the CoT step-by-step with different prompts. Please refer to Appendix B for more details.</p>
+
+<h2 class="relative group">3.3 AVA-GRPO
+    <div id="33-ava-grpo" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#33-ava-grpo" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The original GRPO shows great effectiveness in text-based reasoning tasks. However, as mentioned above, the multimodal tasks like VAR are inherently more complex. In addition, there are only video-level weak labels available for RL stage due to high annotation costs, making it difficult to</p>
+<p>evaluate output quality based solely on accuracy and format reward. To address this challenge, we propose Anomaly Verification Augmented GRPO (AVA-GRPO), which introduces an additional reward through a self-verification mechanism, as illustrated in the right part of Figure 3 .</p>
+<p>Overview of GRPO We begin by reviewing the original GRPO [47]. GRPO discards the value model and aims at maximizing the relative advantages of the answers. For a question q, the model will first generate a group of completions O = {oi} G i=0 . Subsequently, a set of rewards R = {ri} G i=0 are computed based on the predefined reward functions. The rewards are then normalized to compute the relative advantages as</p>
+<!-- formula-not-decoded -->
+<p>where A i is the advantage score of oi, which provides more effective assessment of both individual answer quality and relative comparisons within the group. What&rsquo;s more, to prevent the current policy πθ from drifting excessively from the reference one πref, GRPO introduces a KL-divergence regularization term. The final objective function of GRPO is formulated as</p>
+<!-- formula-not-decoded -->
+<p>where the ratio πθ (oi|q) πθ old (oi|q) quantifies the relative change between the current policy and the old one, and the clip (· , 1 − ϵ, 1 + ϵ) operation constrains the ratio within a range.</p>
+<p>Anomaly Verification Reward GRPO replaces the value model with group relative scores, reducing the memory usage and training time. However, simple accuracy and format rewards are insufficient to evaluate the quality of answers for video anomaly reasoning task. To address this, we propose AVA-GRPO, an extension of GRPO that incorporates a novel anomaly verification reward. As shown in the right part of Figure 3, for each completion oi, the predicted category of the video is first extracted. The video is then temporally trimmed based on the extracted prediction, and the trimmed video is fed into the model to generate a new answer. Additional anomaly verification rewards are assigned by comparing the original and regenerated answers.</p>
+<p>On the one hand, if the video is initially classified as abnormal, the predicted temporal range of the abnormal event is extracted, and the corresponding segment is discarded from the original video to create a new trimmed video containing only normal segments. Then the trimmed video is re-fed into the model. If the trimmed video is subsequently predicted as normal, it suggests that the discarded segment is indeed abnormal and the model&rsquo;s initial prediction was correct. In this situation, a positive reward will be assigned to reinforce the model&rsquo;s original prediction.</p>
+<p>On the other hand, inspired by Video-UTR [77], we consider the phenomenon of temporal hacking for video-MLLMs, where the models tend to generate predictions by relying only on a few frames, typically the beginning or ending of the video, instead of comprehensively processing the entire video sequence, which is detrimental to the recognition of anomaly events. As a consequence, if the video is initially predicted as normal, we randomly discard either the beginning or the ending segment of the video and feed the trimmed video into the model again. If the trimmed video is then predicted as abnormal, it suggests the model made its original prediction only based on insufficient visual evidence, which is not expected. Therefore, a negative reward is assigned in this case.</p>
+
+<h2 class="relative group">3.4 Training Pipeline
+    <div id="34-training-pipeline" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#34-training-pipeline" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We adopt Qwen-2.5-VL-7B [57] as base MLLM. The training of Vad-R1 consists of two stages, as shown in Figure 3. For the first stage, supervised fine-tuning is performed on the Vad-Reasoning-SFT dataset, in which videos are annotated with high-quality Chain-of-Thought (CoT) as described before.</p>
+<p>Table 1: Effectiveness of anomaly reasoning.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>Strategy</th>
+          <th>Answer</th>
+          <th>Answer</th>
+          <th>Detection</th>
+          <th>Detection</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td></td>
+          <td>BLEU-2</td>
+          <td>METEOR</td>
+          <td>Recall</td>
+          <td>F1</td>
+      </tr>
+      <tr>
+          <td>Qwen2.5-VL-7B [57]</td>
+          <td>Direct Answer</td>
+          <td>0.184</td>
+          <td>0.339</td>
+          <td>0.431</td>
+          <td>0.597</td>
+      </tr>
+      <tr>
+          <td>Qwen2.5-VL-7B [57]</td>
+          <td>Random Reasoning</td>
+          <td>0.179</td>
+          <td>0.328</td>
+          <td>0.377</td>
+          <td>0.540</td>
+      </tr>
+      <tr>
+          <td>Qwen2.5-VL-7B [57]</td>
+          <td>Structured Reasoning 0</td>
+          <td>0.198 (+0.019</td>
+          <td>) 0.352 (+0.013</td>
+          <td>0.696 (+0.265</td>
+          <td>) 0.730 (+0.133</td>
+      </tr>
+      <tr>
+          <td>Qwen3-8B [58]</td>
+          <td>Direct Answer</td>
+          <td>0.038</td>
+          <td>0.184</td>
+          <td>0.368</td>
+          <td>0.534</td>
+      </tr>
+      <tr>
+          <td>Qwen3-8B [58]</td>
+          <td>Random Reasoning</td>
+          <td>0.040</td>
+          <td>0.191</td>
+          <td>0.554</td>
+          <td>0.655</td>
+      </tr>
+      <tr>
+          <td>Qwen3-8B [58]</td>
+          <td>Structured Reasoning 0.0</td>
+          <td>0.043 (+0.005</td>
+          <td>) 0.193 (+0.009</td>
+          <td>0.681 (+0.313</td>
+          <td>) 0.686 (+0.153</td>
+      </tr>
+      <tr>
+          <td>Vad-R1</td>
+          <td>Direct Answer  td R</td>
+          <td>0.268</td>
+          <td>0.441</td>
+          <td>0.838</td>
+          <td>0.861</td>
+      </tr>
+  </tbody>
+</table>
+<p>In this stage, the model&rsquo;s capability is gradually shifted from general multimodal understanding to video anomaly understanding, and it is enabled to acquire basic anomaly reasoning capability. In the second stage, training is continued on the Vad-Reasoning-RL dataset with the proposed AVA-GRPO reinforcement learning algorithm, which evaluates the quality of model responses in a self verification manner with only video-level weak labels available. This stage aims at moving the model beyond pattern-matching tendencies from SFT, enabling it to develop more flexible, transferable anomaly reasoning capability. Please refer to Appendix C for more details.</p>
+
+<h2 class="relative group">4 Experiments
+    <div id="4-experiments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-experiments" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">4.1 Experimental Settings
+    <div id="41-experimental-settings" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#41-experimental-settings" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Implementation Details Vad-R1 is trained with two stages based on Qwen-2.5-VL-7B [57]. For the first stage, SFT is performed with Vad-Reasoning-SFT dataset for four epochs. For the second stage, RL is performed with AVA-GRPO for one epoch, where there are only video-level weak labels available for VA-Reasoning-RL dataset. All experiments are conducted with 4 NVIDIA A100 (80GB) GPUs. Please refer to Appendix C for more details.</p>
+<p>Evaluation Metrics and Baselines We first evaluate Vad-R1 on the test set of VA-Reasoning, focusing on two aspects: anomaly reasoning and anomaly detection. For anomaly reasoning, we assess the text quality of reasoning process with BLEU [43], METEOR [3] and ROUGE [31] metrics. For anomaly detection, we report accuracy, precision, recall and f1 scores for anomaly classification, along with mIoU and R@K for anomaly temporal grounding. Besides, to further explore the capabilities of Vad-R1, we also conduct experiments on VANE [15], a video anomaly benchmark for MLLMs, where the MLLMs are asked to answer single choice questions. In this case, we report the accuracy of every category. We compare Vad-R1 with general video MLLMs [25 , 30 , 39 , 83 , 87], reasoning video MLLMs [28 , 64 , 14 , 88] and some proprietary models [56 , 40 , 52 , 51]. Furthermore, we also consider MLLM-based VAD methods [50 , 85 , 84].</p>
+<p>In the following sections, we present our experimental results by addressing the following questions.</p>
+<ul>
+<li>Q1. Does reasoning improve anomaly detection?</li>
+<li>Q2. How well does Vad-R1 perform in anomaly reasoning and detection?</li>
+<li>Q3. How to acquire the capability of reasoning?</li>
+</ul>
+
+<h2 class="relative group">4.2 Main Results
+    <div id="42-main-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#42-main-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Q1: Does reasoning improve anomaly detection? Table 1 demonstrates the effectiveness of anomaly reasoning. On the one hand, we evaluate the performance of Qwen2.5-VL [57] and Qwen3 [58]. As shown in the first two rows of Table 1, compared with directly answering, prompting models to reason according to the proposed perception-to-cognition chain-of-thought will gain greater performance. In the meanwhile, we evaluate the effect of random reasoning. In this case, the performance improvement is minimal, even inferior to direct answering. Notably, Qwen3 is a</p>
+<p>Table 2: Performance comparison of anomaly reasoning and detection on Vad-Reasoning dataset.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>Params.</th>
+          <th>Anomaly Reasoning</th>
+          <th>Anomaly Reasoning</th>
+          <th>Anomaly Reasoning</th>
+          <th>Anomaly Detection F1 IU R@03 R@05</th>
+          <th>Anomaly Detection F1 IU R@03 R@05</th>
+          <th>Anomaly Detection F1 IU R@03 R@05</th>
+          <th>Anomaly Detection F1 IU R@03 R@05</th>
+          <th>Anomaly Detection F1 IU R@03 R@05</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Method</td>
+          <td>Params.</td>
+          <td>BLEU-2</td>
+          <td>METEOR</td>
+          <td>ROUGE-2</td>
+          <td>Acc</td>
+          <td>F1</td>
+          <td>mIoU</td>
+          <td><a
+  href="mailto:R@0.3">R@0.3</a></td>
+          <td><a
+  href="mailto:R@0.5">R@0.5</a></td>
+      </tr>
+      <tr>
+          <td>Open-Source video MLLMs</td>
+          <td>Open-Source video MLLMs</td>
+          <td>Open-Source video MLLMs</td>
+          <td>Open-Source video MLLMs</td>
+          <td>Open-Source video MLLMs</td>
+          <td>Open-Source video MLLMs</td>
+          <td>Open-Source video MLLMs</td>
+          <td>Open-Source video MLLMs</td>
+          <td>Open-Source video MLLMs</td>
+          <td>Open-Source video MLLMs</td>
+      </tr>
+      <tr>
+          <td>InternVideo2.5 [65]</td>
+          <td>8B</td>
+          <td>0.110</td>
+          <td>0.264</td>
+          <td>0.109</td>
+          <td>0.715</td>
+          <td>0.730</td>
+          <td>0.417</td>
+          <td>0.458</td>
+          <td>0.424</td>
+      </tr>
+      <tr>
+          <td>InternVL3 [92]</td>
+          <td>8B</td>
+          <td>0.124</td>
+          <td>0.286</td>
+          <td>0.116</td>
+          <td>0.779</td>
+          <td>0.756</td>
+          <td>0.550</td>
+          <td>0.613</td>
+          <td>0.540</td>
+      </tr>
+      <tr>
+          <td>VideoChat-Flash [27]</td>
+          <td>7B</td>
+          <td>0.012</td>
+          <td>0.084</td>
+          <td>0.047</td>
+          <td>0.683</td>
+          <td>0.487</td>
+          <td>0.536</td>
+          <td>0.538</td>
+          <td>0.358</td>
+      </tr>
+      <tr>
+          <td>VideoLLaMA3 [82]</td>
+          <td>7B</td>
+          <td>0.066</td>
+          <td>0.200</td>
+          <td>0.092</td>
+          <td>0.665</td>
+          <td>0.624</td>
+          <td>0.425</td>
+          <td>0.451</td>
+          <td>0.419</td>
+      </tr>
+      <tr>
+          <td>LLaVA-NeXT-Video [89]</td>
+          <td>7B</td>
+          <td>0.094</td>
+          <td>0.238</td>
+          <td>0.104</td>
+          <td>0.651</td>
+          <td>0.423</td>
+          <td>0.576</td>
+          <td>0.601</td>
+          <td>0.585</td>
+      </tr>
+      <tr>
+          <td>Qwen2.5-VL [57]</td>
+          <td>7B</td>
+          <td>0.113</td>
+          <td>0.264</td>
+          <td>0.116</td>
+          <td>0.761</td>
+          <td>0.730</td>
+          <td>0.567</td>
+          <td>0.610</td>
+          <td>0.563</td>
+      </tr>
+      <tr>
+          <td>Source video reasoning MLLMs</td>
+          <td>Source video reasoning MLLMs</td>
+          <td>Source video reasoning MLLMs</td>
+          <td>Source video reasoning MLLMs</td>
+          <td>Source video reasoning MLLMs</td>
+          <td>Source video reasoning MLLMs</td>
+          <td>Source video reasoning MLLMs</td>
+          <td>Source video reasoning MLLMs</td>
+          <td>Source video reasoning MLLMs</td>
+          <td>Source video reasoning MLLMs</td>
+      </tr>
+      <tr>
+          <td>Open-R1-Video [63]</td>
+          <td>7B</td>
+          <td>0.060</td>
+          <td>0.179</td>
+          <td>g  0.084</td>
+          <td>0.793</td>
+          <td>0.790</td>
+          <td>0.559</td>
+          <td>0.642</td>
+          <td>0.540</td>
+      </tr>
+      <tr>
+          <td>Video-R1 [14]</td>
+          <td>7B</td>
+          <td>0.135</td>
+          <td>0.317</td>
+          <td>0.132</td>
+          <td>0.624</td>
+          <td>0.694</td>
+          <td>0.334</td>
+          <td>0.392</td>
+          <td>0.328</td>
+      </tr>
+      <tr>
+          <td>VideoChat-R1 [28]</td>
+          <td>7B</td>
+          <td>0.128</td>
+          <td>0.287</td>
+          <td>0.123</td>
+          <td>0.793</td>
+          <td>0.790</td>
+          <td>0.559</td>
+          <td>0.642</td>
+          <td>0.540</td>
+      </tr>
+      <tr>
+          <td>LM-based VAD methods</td>
+          <td>LM-based VAD methods</td>
+          <td>LM-based VAD methods</td>
+          <td>LM-based VAD methods</td>
+          <td>LM-based VAD methods</td>
+          <td>LM-based VAD methods</td>
+          <td>LM-based VAD methods</td>
+          <td>LM-based VAD methods</td>
+          <td>LM-based VAD methods</td>
+          <td>LM-based VAD methods</td>
+      </tr>
+      <tr>
+          <td>Holmes-VAD [84]</td>
+          <td>7B</td>
+          <td>0.003</td>
+          <td>0.074</td>
+          <td>0.027</td>
+          <td>0.565</td>
+          <td>0.120</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>Holmes-VAU [85]</td>
+          <td>2B</td>
+          <td>0.077</td>
+          <td>0.182</td>
+          <td>0.075</td>
+          <td>0.490</td>
+          <td>0.371</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>HAWK [50]</td>
+          <td>7B</td>
+          <td>0.042</td>
+          <td>0.156</td>
+          <td>0.042</td>
+          <td>0.513</td>
+          <td>0.648</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>roprietary MLLMs</td>
+          <td>roprietary MLLMs</td>
+          <td>roprietary MLLMs</td>
+          <td>roprietary MLLMs</td>
+          <td>roprietary MLLMs</td>
+          <td>roprietary MLLMs</td>
+          <td>roprietary MLLMs</td>
+          <td>roprietary MLLMs</td>
+          <td>roprietary MLLMs</td>
+          <td>roprietary MLLMs</td>
+      </tr>
+      <tr>
+          <td>Claude3.5-Haiku [2]</td>
+          <td>-</td>
+          <td>0.097</td>
+          <td>y  0.253</td>
+          <td>0.098</td>
+          <td>0.580</td>
+          <td>0.354</td>
+          <td>0.518</td>
+          <td>0.543</td>
+          <td>0.524</td>
+      </tr>
+      <tr>
+          <td>GPT-4o [40]</td>
+          <td>-</td>
+          <td>0.154</td>
+          <td>0.341</td>
+          <td>0.133</td>
+          <td>0.711</td>
+          <td>0.760</td>
+          <td>0.472</td>
+          <td>0.565</td>
+          <td>0.476</td>
+      </tr>
+      <tr>
+          <td>Gemini2.5-Flash [51]</td>
+          <td>-</td>
+          <td>0.133</td>
+          <td>0.308</td>
+          <td>0.120</td>
+          <td>0.624</td>
+          <td>0.707</td>
+          <td>0.370</td>
+          <td>0.437</td>
+          <td>0.358</td>
+      </tr>
+      <tr>
+          <td>ary reasoning MLLMs</td>
+          <td>ary reasoning MLLMs</td>
+          <td>ary reasoning MLLMs</td>
+          <td>ary reasoning MLLMs</td>
+          <td>ary reasoning MLLMs</td>
+          <td>ary reasoning MLLMs</td>
+          <td>ary reasoning MLLMs</td>
+          <td>ary reasoning MLLMs</td>
+          <td>ary reasoning MLLMs</td>
+          <td>ary reasoning MLLMs</td>
+      </tr>
+      <tr>
+          <td>Gemini2.5-pro [52]</td>
+          <td>-</td>
+          <td>p 0.145</td>
+          <td>0.356</td>
+          <td>0.137</td>
+          <td>0.829</td>
+          <td>0.836</td>
+          <td>0.636</td>
+          <td>0.722</td>
+          <td>0.638</td>
+      </tr>
+      <tr>
+          <td>p QVQ-Max [56]</td>
+          <td>-</td>
+          <td>0.142</td>
+          <td>0.318</td>
+          <td>0.121</td>
+          <td>0.702</td>
+          <td>0.747</td>
+          <td>0.430</td>
+          <td>0.503</td>
+          <td>0.412</td>
+      </tr>
+      <tr>
+          <td>QQ o4-mini [42]</td>
+          <td>-</td>
+          <td>0.106</td>
+          <td>0.263</td>
+          <td>0.109</td>
+          <td>0.884</td>
+          <td>0.875</td>
+          <td>0.644</td>
+          <td>0.736</td>
+          <td>0.631</td>
+      </tr>
+      <tr>
+          <td>Vad-R1 (Ours)</td>
+          <td>7B</td>
+          <td>0.233</td>
+          <td>0.406</td>
+          <td>0.194</td>
+          <td>0.875</td>
+          <td>0.862</td>
+          <td>0.713</td>
+          <td>0.770</td>
+          <td>0.706</td>
+      </tr>
+  </tbody>
+</table>
+<p>hybrid reasoning model that supports both reasoning and non-reasoning modes for the same task. The consistent performance gap across different settings further highlights the effectiveness of the proposed P2C-CoT for anomaly reasoning and detection. On the other hand, We compare the performance of Vad-R1 trained with the full P2C-CoT versus training with only the final answer portion of the P2C-CoT as shown in the third row of Table 1. When Vad-R1 is trained with only the final answer, it exhibits a performance drop.</p>
+<p>Q2: How well does Vad-R1 perform in anomaly reasoning and detection? Table 2 shows the performance comparison of anomaly reasoning and detection tasks on the test set of VadReasoning. Vad-R1 achieves great performance on both text quality of anomaly reasoning process and the accuracy of anomaly detection. It is worth noting that Vad-R1 significantly outperforms existing proprietary reasoning MLLMs Gemini2.5-Pro, QVQ-Max and o4-mini on anomaly reasoning capability, with BLEU score improvements of 0.088, 0.091, and 0.127, respectively. Besides, compared with existing MLLM-based VAD methods, Vad-R1 also exhibits greater advantages in anomaly reasoning and detection. Table 3 demonstrates the results on VANE benchmark. Vad-R1 also outperforms all baselines including general video MLLMs and MLLM-based VAD methods.</p>
+
+<h2 class="relative group">4.3 Ablation Studies
+    <div id="43-ablation-studies" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#43-ablation-studies" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Q3: How to obtain the capability of reasoning? Table 4 shows the effectiveness of different training strategies. When directly performing RL to the base model without prior SFT, the performance improvement is limited. This suggests that, without fundamental reasoning capability, the model struggles to benefit from RL training with video-level weak labels. In contrast, applying SFT leads to a more significant performance improvement, indicating that the structured Chain-of-Thought annotations effectively equip the model with basic anomaly reasoning capability. Notably, the combination of SFT and RL gains the best performance. The results align with the conclusion of DeepSeek-R1 [9], which suggests that SFT stage provides fundamental reasoning capability for the model, while RL stage further enhances its reasoning capability.</p>
+<p>Table 3: Performance comparison on VANE.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>SORA</th>
+          <th>OpenSORA</th>
+          <th>RG2</th>
+          <th>VideoLCM</th>
+          <th>MS-T2</th>
+          <th>Avenue</th>
+          <th>Ped1</th>
+          <th>Ped2</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Open-Source MLLMs</td>
+          <td>Open-Source MLLMs</td>
+          <td>Open-Source MLLMs</td>
+          <td>Open-Source MLLMs</td>
+          <td>Open-Source MLLMs</td>
+          <td>Open-Source MLLMs</td>
+          <td>Open-Source MLLMs</td>
+          <td>Open-Source MLLMs</td>
+          <td>Open-Source MLLMs</td>
+      </tr>
+      <tr>
+          <td>Video-LLaMA [83]</td>
+          <td>11.59</td>
+          <td>18.00</td>
+          <td>16.00</td>
+          <td>10.57</td>
+          <td>10.41</td>
+          <td>30.00</td>
+          <td>16.66</td>
+          <td>5.55</td>
+      </tr>
+      <tr>
+          <td>VideoChat [25]</td>
+          <td>10.74</td>
+          <td>28.00</td>
+          <td>4.00</td>
+          <td>17.64</td>
+          <td>20.83</td>
+          <td>32.25</td>
+          <td>13.33</td>
+          <td>13.88</td>
+      </tr>
+      <tr>
+          <td>Video-ChatGPT [39]</td>
+          <td>26.47</td>
+          <td>22.00</td>
+          <td>12.00</td>
+          <td>18.26</td>
+          <td>16.66</td>
+          <td>39.39</td>
+          <td>40.00</td>
+          <td>19.44</td>
+      </tr>
+      <tr>
+          <td>Video-LLaVA [30]</td>
+          <td>10.86</td>
+          <td>18.00</td>
+          <td>16.00</td>
+          <td>19.23</td>
+          <td>16.66</td>
+          <td>3.03</td>
+          <td>2.77</td>
+          <td>6.06</td>
+      </tr>
+      <tr>
+          <td>MovieChat [48]</td>
+          <td>8.69</td>
+          <td>10.00</td>
+          <td>16.00</td>
+          <td>14.42</td>
+          <td>6.25</td>
+          <td>18.18</td>
+          <td>6.66</td>
+          <td>11.11</td>
+      </tr>
+      <tr>
+          <td>LLaMA-VID [29]</td>
+          <td>7.97</td>
+          <td>14.00</td>
+          <td>20.00</td>
+          <td>19.23</td>
+          <td>14.58</td>
+          <td>27.27</td>
+          <td>6.66</td>
+          <td>19.44</td>
+      </tr>
+      <tr>
+          <td>TimeChat [44]</td>
+          <td>21.73</td>
+          <td>26.00</td>
+          <td>28.00</td>
+          <td>22.11</td>
+          <td>20.83</td>
+          <td>24.20</td>
+          <td>27.58</td>
+          <td>11.11</td>
+      </tr>
+      <tr>
+          <td>LLM-based VAD methods</td>
+          <td>LLM-based VAD methods</td>
+          <td>LLM-based VAD methods</td>
+          <td>LLM-based VAD methods</td>
+          <td>LLM-based VAD methods</td>
+          <td>LLM-based VAD methods</td>
+          <td>LLM-based VAD methods</td>
+          <td>LLM-based VAD methods</td>
+          <td>LLM-based VAD methods</td>
+      </tr>
+      <tr>
+          <td>Holmes-VAU [85]</td>
+          <td>2.17</td>
+          <td>34.00</td>
+          <td>24.00</td>
+          <td>29.81</td>
+          <td>25.00</td>
+          <td>6.06</td>
+          <td>3.33</td>
+          <td>5.56</td>
+      </tr>
+      <tr>
+          <td>Holmes-VAD [84]</td>
+          <td>6.52</td>
+          <td>34.00</td>
+          <td>32.00</td>
+          <td>33.56</td>
+          <td>22.92</td>
+          <td>12.12</td>
+          <td>20.00</td>
+          <td>5.56</td>
+      </tr>
+      <tr>
+          <td>HAWK [50]</td>
+          <td>24.64</td>
+          <td>52.00</td>
+          <td>44.00</td>
+          <td>36.54</td>
+          <td>50.00</td>
+          <td>36.36</td>
+          <td>36.67</td>
+          <td>38.89</td>
+      </tr>
+      <tr>
+          <td>Vad-R1 (ours)</td>
+          <td>41.30</td>
+          <td>78.00</td>
+          <td>56.00</td>
+          <td>63.46</td>
+          <td>60.42</td>
+          <td>75.76</td>
+          <td>60.00</td>
+          <td>63.89</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table 4: Comparison of different training strategies for Vad-R1.</p>
+<p>Figure 4: Qualitative performance on VANE benchmark.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Strategy</th>
+          <th>Anomaly Reasoning</th>
+          <th>Anomaly Reasoning</th>
+          <th>Anomaly Reasoning</th>
+          <th>Anomaly Reasoning</th>
+          <th>Anomaly Detection</th>
+          <th>Anomaly Detection</th>
+          <th>Anomaly Detection</th>
+          <th>Anomaly Detection</th>
+          <th>Anomaly Detection</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Strategy</td>
+          <td>BLEU-2</td>
+          <td>ROUGE-1</td>
+          <td>ROUGE-2</td>
+          <td>ROUGE-L</td>
+          <td>Prec.</td>
+          <td>mIoU</td>
+          <td><a
+  href="mailto:R@0.3">R@0.3</a></td>
+          <td><a
+  href="mailto:R@0.5">R@0.5</a></td>
+          <td><a
+  href="mailto:R@0.7">R@0.7</a></td>
+      </tr>
+      <tr>
+          <td>Qwen2.5-VL</td>
+          <td>0.113</td>
+          <td>0.505</td>
+          <td>0.199</td>
+          <td>0.477</td>
+          <td>0.768</td>
+          <td>0.567</td>
+          <td>0.610</td>
+          <td>0.563</td>
+          <td>0.526</td>
+      </tr>
+      <tr>
+          <td>+SFT</td>
+          <td>0.219</td>
+          <td>0.456</td>
+          <td>0.196</td>
+          <td>0.429</td>
+          <td>0.712</td>
+          <td>0.612</td>
+          <td>0.677</td>
+          <td>0.599</td>
+          <td>0.535</td>
+      </tr>
+      <tr>
+          <td>+AVA-GRPO</td>
+          <td>0.143</td>
+          <td>0.513</td>
+          <td>0.207</td>
+          <td>0.486</td>
+          <td>0.810</td>
+          <td>0.675</td>
+          <td>0.736</td>
+          <td>0.661</td>
+          <td>0.606</td>
+      </tr>
+      <tr>
+          <td>+SFT+AVA-GRPO</td>
+          <td>0.233</td>
+          <td>0.530</td>
+          <td>0.238</td>
+          <td>0.501</td>
+          <td>0.882</td>
+          <td>0.713</td>
+          <td>0.770</td>
+          <td>0.706</td>
+          <td>0.651</td>
+      </tr>
+  </tbody>
+</table>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000003_c7f06ccd1ea340fc381a88322af4422d3be4bb41386e575dbe66fffd2f8ca824.png"
+    ></figure>
+
+<h2 class="relative group">4.4 Qualitative Analyses
+    <div id="44-qualitative-analyses" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#44-qualitative-analyses" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>As shown in Figure 3, Vad-R1 demonstrates great reasoning capability in complex environments and correctly identifies anomalies in the video. In comparison, the reasoning process of HolmesVAU is partially correct, resulting in incorrect judgment, while HolmesVAD makes correct judgment but incorrect reasoning process. Please refer to Appendix D for more qualitative results.</p>
+
+<h2 class="relative group">5 Conclusion
+    <div id="5-conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this paper, we present Vad-R1, a novel end-to-end MLLM-based framework for video anomaly reasoning which aims to enable deep analysis and understanding of anomalies in videos. Vad-R1 performs structured anomaly reasoning process through a structured Chain-of-Thought that progresses gradually from perception to cognition. The anomaly reasoning capability of Vad-R1 is derived from a two-stage training strategy, combining supervised fine-tuning on CoT-annotated videos and reinforcement learning with an anomaly verification mechanism. Experimental results demonstrate that Vad-R1 achieves superior performance on anomaly detection and reasoning tasks.</p>
+
+<h2 class="relative group">References
+    <div id="references" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#references" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>
+<p>[1] Andra Acsintoae, Andrei Florescu, Mariana-Iuliana Georgescu, Tudor Mare, Paul Sumedrea, Radu Tudor Ionescu, Fahad Shahbaz Khan, and Mubarak Shah. Ubnormal: New benchmark for supervised open-set video anomaly detection. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 20143–20153, 2022. 3 , 5 , 18</p>
+</li>
+<li>
+<p>[2] Anthropic. Claude 3.5 haiku, 2024. URL <a
+  href="https://www.anthropic.com/claude/haiku"
+    target="_blank"
+  >https://www.anthropic.com/claude/haiku</a> . 8 , 23</p>
+</li>
+<li>
+<p>[3] Satanjeev Banerjee and Alon Lavie. Meteor: An automatic metric for mt evaluation with improved correlation with human judgments. In Proceedings of the acl workshop on intrinsic and extrinsic evaluation measures for machine translation and/or summarization, pages 65–72, 2005. 7</p>
+</li>
+<li>
+<p>[4] Tim Brooks, Bill Peebles, Connor Holmes, Will DePue, Yufei Guo, Li Jing, David Schnurr, Joe Taylor, Troy Luhman, Eric Luhman, et al. Video generation models as world simulators. OpenAI Blog, 1:8, 2024. 20</p>
+</li>
+<li>
+<p>[5] Congqi Cao, Yue Lu, Peng Wang, and Yanning Zhang. A new comprehensive benchmark for semi-supervised video anomaly detection and anticipation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pages 20392–20401, June 2023. 18</p>
+</li>
+<li>
+<p>[6] Joya Chen, Zhaoyang Lv, Shiwei Wu, Kevin Qinghong Lin, Chenan Song, Difei Gao, Jia-Wei Liu, Ziteng Gao, Dongxing Mao, and Mike Zheng Shou. Videollm-online: Online video large language model for streaming video. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 18407–18418, 2024. 3</p>
+</li>
+<li>
+<p>[7] Junxi Chen, Liang Li, Li Su, Zheng-Jun Zha, and Qingming Huang. Prompt-enhanced multiple instance learning for weakly supervised video anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 18319–18329, 2024. 1 , 3</p>
+</li>
+<li>
+<p>[8] Weiling Chen, Keng Teck Ma, Zi Jian Yew, Minhoe Hur, and David Aik-Aun Khoo. Tevad: Improved video anomaly detection with captions. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 5549–5559, 2023. 3</p>
+</li>
+<li>
+<p>[9] DeepSeek-AI. DeepSeek-R1: Incentivizing reasoning capability in llms via reinforcement learning. arXiv preprint arXiv:2501.12948, 2025. 1 , 3 , 8</p>
+</li>
+<li>
+<p>[10] Shangzhe Di, Zhelun Yu, Guanghao Zhang, Haoyuan Li, Tao Zhong, Hao Cheng, Bolin Li, Wanggui He, Fangxun Shu, and Hao Jiang. Streaming video question-answering with in-context video kv-cache retrieval. arXiv preprint arXiv:2503.00540, 2025. 3</p>
+</li>
+<li>
+<p>[11] Zongcan Ding, Haodong Zhang, Peng Wu, Guansong Pang, Zhiwei Yang, Peng Wang, and Yanning Zhang. Slowfastvad: Video anomaly detection via integrating simple detector and rag-enhanced vision-language model. arXiv preprint arXiv:2504.10320, 2025. 2 , 3</p>
+</li>
+<li>
+<p>[12] Hang Du, Guoshun Nan, Jiawen Qian, Wangchenhui Wu, Wendi Deng, Hanqing Mu, Zhenyan Chen, Pengxuan Mao, Xiaofeng Tao, and Jun Liu. Exploring what why and how: A multifaceted benchmark for causation understanding of video anomaly. arXiv preprint arXiv:2412.07183 , 2024. 2 , 3 , 5 , 17 , 18</p>
+</li>
+<li>
+<p>[13] Hang Du, Sicheng Zhang, Binzhu Xie, Guoshun Nan, Jiayang Zhang, Junrui Xu, Hangyu Liu, Sicong Leng, Jiangming Liu, Hehe Fan, et al. Uncovering what why and how: A comprehensive benchmark for causation understanding of video anomaly. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 18793–18803, 2024. 2 , 3 , 17 , 18</p>
+</li>
+<li>
+<p>[14] Kaituo Feng, Kaixiong Gong, Bohao Li, Zonghao Guo, Yibing Wang, Tianshuo Peng, Benyou Wang, and Xiangyu Yue. Video-r1: Reinforcing video reasoning in mllms. arXiv preprint arXiv:2503.21776, 2025. 3 , 7 , 8 , 23</p>
+</li>
+<li>
+<p>[15] Hanan Gani, Rohit Bharadwaj, Muzammal Naseer, Fahad Shahbaz Khan, and Salman Khan. Vane-bench: Video anomaly evaluation benchmark for conversational lmms. In Findings of the Association for Computational Linguistics: NAACL 2025, pages 3123–3140, 2025. 7 , 20</p>
+</li>
+<li>
+<p>[16] HPCAI Tech. Open-sora: Democratizing efficient video production for all. https://github. com/hpcaitech/Open-Sora, 2024. 20</p>
+</li>
+<li>
+<p>[17] Chao Huang, Zhihao Wu, Jie Wen, Yong Xu, Qiuping Jiang, and Yaowei Wang. Abnormal event detection using deep contrastive learning for intelligent video surveillance system. IEEE Transactions on Industrial Informatics, 18(8):5171–5179, 2021. 1 , 3</p>
+</li>
+<li>
+<p>[18] Chao Huang, Chengliang Liu, Jie Wen, Lian Wu, Yong Xu, Qiuping Jiang, and Yaowei Wang. Weakly supervised video anomaly detection via self-guided temporal discriminative transformer. IEEE Transactions on Cybernetics, 54(5):3197–3210, 2022. 1 , 3</p>
+</li>
+<li>
+<p>[19] Chao Huang, Jie Wen, Yong Xu, Qiuping Jiang, Jian Yang, Yaowei Wang, and David Zhang. Self-supervised attentive generative adversarial networks for video anomaly detection. IEEE transactions on neural networks and learning systems, 34(11):9389–9403, 2022. 1 , 3</p>
+</li>
+<li>
+<p>[20] Chao Huang, Jie Wen, Chengliang Liu, and Yabo Liu. Long short-term dynamic prototype alignment learning for video anomaly detection. In Proceedings of the Thirty-Third International Joint Conference on Artificial Intelligence, pages 866–874, 2024. 1 , 3</p>
+</li>
+<li>
+<p>[21] Chao Huang, Weiliang Huang, Qiuping Jiang, Wei Wang, Jie Wen, and Bob Zhang. Multimodal evidential learning for open-world weakly-supervised video anomaly detection. IEEE Transactions on Multimedia, 2025. 1 , 3</p>
+</li>
+<li>
+<p>[22] Wenxuan Huang, Bohan Jia, Zijie Zhai, Shaosheng Cao, Zheyu Ye, Fei Zhao, Zhe Xu, Yao Hu, and Shaohui Lin. Vision-r1: Incentivizing reasoning capability in multimodal large language models. arXiv preprint arXiv:2503.06749, 2025. 3</p>
+</li>
+<li>
+<p>[23] Peng Jin, Ryuichi Takanobu, Wancai Zhang, Xiaochun Cao, and Li Yuan. Chat-univi: Unified visual representation empowers large language models with image and video understanding. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 13700–13710, 2024. 3</p>
+</li>
+<li>
+<p>[24] Hyekang Kevin Joo, Khoa Vo, Kashu Yamazaki, and Ngan Le. Clip-tsa: Clip-assisted temporal self-attention for weakly-supervised video anomaly detection. In 2023 IEEE International Conference on Image Processing (ICIP), pages 3230–3234. IEEE, 2023. 1 , 3</p>
+</li>
+<li>
+<p>[25] KunChang Li, Yinan He, Yi Wang, Yizhuo Li, Wenhai Wang, Ping Luo, Yali Wang, Limin Wang, and Yu Qiao. Videochat: Chat-centric video understanding. arXiv preprint arXiv:2305.06355 , 2023. 3 , 7 , 9</p>
+</li>
+<li>
+<p>[26] Weixin Li, Vijay Mahadevan, and Nuno Vasconcelos. Anomaly detection and localization in crowded scenes. IEEE transactions on pattern analysis and machine intelligence, 36(1):18–32, 2013. 18 , 20</p>
+</li>
+<li>
+<p>[27] Xinhao Li, Yi Wang, Jiashuo Yu, Xiangyu Zeng, Yuhan Zhu, Haian Huang, Jianfei Gao, Kunchang Li, Yinan He, Chenting Wang, et al. Videochat-flash: Hierarchical compression for long-context video modeling. arXiv preprint arXiv:2501.00574, 2024. 8 , 23</p>
+</li>
+<li>
+<p>[28] Xinhao Li, Ziang Yan, Desen Meng, Lu Dong, Xiangyu Zeng, Yinan He, Yali Wang, Yu Qiao, Yi Wang, and Limin Wang. Videochat-r1: Enhancing spatio-temporal perception via reinforcement fine-tuning. arXiv preprint arXiv:2504.06958, 2025. 3 , 7 , 8 , 23</p>
+</li>
+<li>
+<p>[29] Yanwei Li, Chengyao Wang, and Jiaya Jia. Llama-vid: An image is worth 2 tokens in large language models. In European Conference on Computer Vision, pages 323–340. Springer, 2024. 3 , 9</p>
+</li>
+<li>
+<p>[30] Bin Lin, Yang Ye, Bin Zhu, Jiaxi Cui, Munan Ning, Peng Jin, and Li Yuan. Video-llava: Learning united visual representation by alignment before projection. arXiv preprint arXiv:2311.10122 , 2023. 3 , 7 , 9</p>
+</li>
+<li>
+<p>[31] Chin-Yew Lin. Rouge: A package for automatic evaluation of summaries. In Text summarization branches out, pages 74–81, 2004. 7</p>
+</li>
+<li>
+<p>[32] Wen Liu, Weixin Luo, Dongze Lian, and Shenghua Gao. Future frame prediction for anomaly detection–a new baseline. In Proceedings of the IEEE conference on computer vision and pattern recognition, pages 6536–6545, 2018. 1 , 3 , 5 , 18</p>
+</li>
+<li>
+<p>[33] Ye Liu, Kevin Qinghong Lin, Chang Wen Chen, and Mike Zheng Shou. Videomind: A chain-of-lora agent for long video reasoning. arXiv preprint arXiv:2503.13444, 2025. 3</p>
+</li>
+<li>
+<p>[34] Zhian Liu, Yongwei Nie, Chengjiang Long, Qing Zhang, and Guiqing Li. A hybrid video anomaly detection framework via memory-augmented flow reconstruction and flow-guided frame prediction. In Proceedings of the IEEE/CVF international conference on computer vision , pages 13588–13597, 2021. 1 , 3</p>
+</li>
+<li>
+<p>[35] Cewu Lu, Jianping Shi, and Jiaya Jia. Abnormal event detection at 150 fps in matlab. In Proceedings of the IEEE international conference on computer vision, pages 2720–2727, 2013. 18 , 20</p>
+</li>
+<li>
+<p>[36] Hui Lv and Qianru Sun. Video anomaly detection and explanation via large language models. arXiv preprint arXiv:2401.05702, 2024. 1 , 3</p>
+</li>
+<li>
+<p>[37] Hui Lv, Chuanwei Zhou, Zhen Cui, Chunyan Xu, Yong Li, and Jian Yang. Localizing anomalies from weakly-labeled videos. IEEE transactions on image processing, 30:4505–4515, 2021. 1 , 3 , 5 , 18</p>
+</li>
+<li>
+<p>[38] Junxiao Ma, Jingjing Wang, Jiamin Luo, Peiying Yu, and Guodong Zhou. Sherlock: Towards multi-scene video abnormal event extraction and localization via a global-local spatial-sensitive llm. In Proceedings of the ACM on Web Conference 2025, pages 4004–4013, 2025. 2 , 3</p>
+</li>
+<li>
+<p>[39] Muhammad Maaz, Hanoona Rasheed, Salman Khan, and Fahad Shahbaz Khan. Video-chatgpt: Towards detailed video understanding via large vision and language models. arXiv preprint arXiv:2306.05424, 2023. 3 , 7 , 9</p>
+</li>
+<li>
+<p>[40] OpenAI. Gpt-4o system card. arXiv preprint arXiv:2410.21276, 2024. 7 , 8 , 23</p>
+</li>
+<li>
+<p>[41] OpenAI. Openai o1 system card. arXiv preprint arXiv:2412.16720, 2024. 1</p>
+</li>
+<li>
+<p>[42] OpenAI. Openai o3 and o4-mini system card, 2025. URL <a
+  href="https://openai.com/index/"
+    target="_blank"
+  >https://openai.com/index/</a> o3-o4-mini-system-card/ . 8</p>
+</li>
+<li>
+<p>[43] Kishore Papineni, Salim Roukos, Todd Ward, and Wei-Jing Zhu. Bleu: a method for automatic evaluation of machine translation. In Proceedings of the 40th annual meeting of the Association for Computational Linguistics, pages 311–318, 2002. 7</p>
+</li>
+<li>
+<p>[44] Shuhuai Ren, Linli Yao, Shicheng Li, Xu Sun, and Lu Hou. Timechat: A time-sensitive multimodal large language model for long video understanding. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 14313–14323, 2024. 9</p>
+</li>
+<li>
+<p>[45] Nicolae-C Ristea, Florinel-Alin Croitoru, Radu Tudor Ionescu, Marius Popescu, Fahad Shahbaz Khan, Mubarak Shah, et al. Self-distilled masked auto-encoders are efficient video anomaly detectors. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 15984–15995, 2024. 3</p>
+</li>
+<li>
+<p>[46] Runway Research. Gen-2: The next step forward for generative ai. https://research. runwayml.com/gen2, 2024. 20</p>
+</li>
+<li>
+<p>[47] Zhihong Shao, Peiyi Wang, Qihao Zhu, Runxin Xu, Junxiao Song, Xiao Bi, Haowei Zhang, Mingchuan Zhang, YK Li, Y Wu, et al. Deepseekmath: Pushing the limits of mathematical reasoning in open language models. arXiv preprint arXiv:2402.03300, 2024. 3 , 6</p>
+</li>
+<li>
+<p>[48] Enxin Song, Wenhao Chai, Guanhong Wang, Yucheng Zhang, Haoyang Zhou, Feiyang Wu, Haozhe Chi, Xun Guo, Tian Ye, Yanting Zhang, et al. Moviechat: From dense token to sparse memory for long video understanding. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 18221–18232, 2024. 9</p>
+</li>
+<li>
+<p>[49] Waqas Sultani, Chen Chen, and Mubarak Shah. Real-world anomaly detection in surveillance videos. In Proceedings of the IEEE conference on computer vision and pattern recognition , pages 6479–6488, 2018. 1 , 3 , 5 , 17 , 18 , 20</p>
+</li>
+<li>
+<p>[50] Jiaqi Tang, Hao Lu, Ruizheng Wu, Xiaogang Xu, Ke Ma, Cheng Fang, Bin Guo, Jiangbo Lu, Qifeng Chen, and Yingcong Chen. Hawk: Learning to understand open-world video anomalies. Advances in Neural Information Processing Systems, 37:139751–139785, 2024. 2 , 3 , 5 , 7 , 8 , 9 , 18 , 21 , 23</p>
+</li>
+<li>
+<p>[51] Gemini Team. Gemini 2.5 flash preview model card, 2025. URL https://storage. googleapis.com/model-cards/documents/gemini-2.5-flash-preview.pdf . 7 , 8</p>
+</li>
+<li>
+<p>[52] Gemini Team. Gemini 2.5 pro preview model card, 2025. URL https://storage. googleapis.com/model-cards/documents/gemini-2.5-pro-preview.pdf . 7 , 8</p>
+</li>
+<li>
+<p>[53] Kimi Team. Kimi k1.5: Scaling reinforcement learning with llms. arXiv preprint arXiv:2501.12599, 2025. 1</p>
+</li>
+<li>
+<p>[54] Qwen Team. QwQ: Reflect deeply on the boundaries of the unknown, 2024. URL https: //qwenlm.github.io/blog/qwq-32b-preview/ . 1</p>
+</li>
+<li>
+<p>[55] Qwen Team. Qwen2.5 technical report. arXiv preprint arXiv:2412.15115, 2024. 5</p>
+</li>
+<li>
+<p>[56] Qwen Team. QVQ-Max: Think with evidence, 2025. URL <a
+  href="https://qwenlm.github.io/"
+    target="_blank"
+  >https://qwenlm.github.io/</a> blog/qvq-max-preview/ . 1 , 7 , 8 , 23</p>
+</li>
+<li>
+<p>[57] Qwen Team. Qwen2.5-vl technical report. arXiv preprint arXiv:2502.13923, 2025. 5 , 6 , 7 , 8 , 23</p>
+</li>
+<li>
+<p>[58] Qwen Team. Qwen3: Think deeper, act faster, 2025. URL <a
+  href="https://qwenlm.github.io/"
+    target="_blank"
+  >https://qwenlm.github.io/</a> blog/qwen3/ . 7</p>
+</li>
+<li>
+<p>[59] Omkar Thawakar, Dinura Dissanayake, Ketan More, Ritesh Thawkar, Ahmed Heakl, Noor Ahsan, Yuhao Li, Mohammed Zumri, Jean Lahoud, Rao Muhammad Anwer, et al. Llamav-o1: Rethinking step-by-step visual reasoning in llms. arXiv preprint arXiv:2501.06186, 2025. 3</p>
+</li>
+<li>
+<p>[60] Benfeng Wang, Chao Huang, Jie Wen, Wei Wang, Yabo Liu, and Yong Xu. Federated weakly supervised video anomaly detection with multimodal prompt. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 39, pages 21017–21025, 2025. 1 , 3</p>
+</li>
+<li>
+<p>[61] Jiuniu Wang, Hangjie Yuan, Dayou Chen, Yingya Zhang, Xiang Wang, and Shiwei Zhang. Modelscope text-to-video technical report, 2023. 20</p>
+</li>
+<li>
+<p>[62] Xiang Wang, Shiwei Zhang, Han Zhang, Yu Liu, Yingya Zhang, Changxin Gao, and Nong Sang. Videolcm: Video latent consistency model, 2023. 20</p>
+</li>
+<li>
+<p>[63] Xiaodong Wang and Peixi Peng. Open-r1-video, 2025. URL <a
+  href="https://github.com/"
+    target="_blank"
+  >https://github.com/</a> Wang-Xiaodong1899/Open-R1-Video . 8 , 23</p>
+</li>
+<li>
+<p>[64] Ye Wang, Boshen Xu, Zihao Yue, Zihan Xiao, Ziheng Wang, Liang Zhang, Dingyi Yang, Wenxuan Wang, and Qin Jin. Timezero: Temporal video grounding with reasoning-guided lvlm. arXiv preprint arXiv:2503.13377, 2025. 3 , 7</p>
+</li>
+<li>
+<p>[65] Yi Wang, Xinhao Li, Ziang Yan, Yinan He, Jiashuo Yu, Xiangyu Zeng, Chenting Wang, Changlian Ma, Haian Huang, Jianfei Gao, et al. Internvideo2. 5: Empowering video mllms with long and rich context modeling. arXiv preprint arXiv:2501.12386, 2025. 8 , 23</p>
+</li>
+<li>
+<p>[66] Peng Wu, Jing Liu, Yujia Shi, Yujia Sun, Fangtao Shao, Zhaoyang Wu, and Zhiwei Yang. Not only look, but also listen: Learning multimodal violence detection under weak supervision. In Computer Vision–ECCV 2020: 16th European Conference, Glasgow, UK, August 23–28, 2020, Proceedings, Part XXX 16, pages 322–339. Springer, 2020. 1 , 3 , 5 , 17 , 18</p>
+</li>
+<li>
+<p>[67] Peng Wu, Xuerong Zhou, Guansong Pang, Yujia Sun, Jing Liu, Peng Wang, and Yanning Zhang. Open-vocabulary video anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 18297–18307, 2024. 1 , 3</p>
+</li>
+<li>
+<p>[68] Peng Wu, Xuerong Zhou, Guansong Pang, Lingru Zhou, Qingsen Yan, Peng Wang, and Yanning Zhang. Vadclip: Adapting vision-language models for weakly supervised video anomaly detection. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 38, pages 6074–6082, 2024. 1 , 3</p>
+</li>
+<li>
+<p>[69] Haomiao Xiong, Zongxin Yang, Jiazuo Yu, Yunzhi Zhuge, Lu Zhang, Jiawen Zhu, and Huchuan Lu. Streaming video understanding and multi-round interaction with memory-enhanced knowledge. arXiv preprint arXiv:2501.13468, 2025. 3</p>
+</li>
+<li>
+<p>[70] Guowei Xu, Peng Jin, Li Hao, Yibing Song, Lichao Sun, and Li Yuan. Llava-o1: Let vision language models reason step-by-step. arXiv preprint arXiv:2411.10440, 2024. 3</p>
+</li>
+<li>
+<p>[71] Lin Xu, Yilin Zhao, Daquan Zhou, Zhijie Lin, See Kiong Ng, and Jiashi Feng. Pllava: Parameter-free llava extension from images to videos for video dense captioning. arXiv preprint arXiv:2404.16994, 2024. 3</p>
+</li>
+<li>
+<p>[72] Cheng Yan, Shiyu Zhang, Yang Liu, Guansong Pang, and Wenjun Wang. Feature prediction diffusion model for video anomaly detection. In Proceedings of the IEEE/CVF international conference on computer vision, pages 5527–5537, 2023. 3</p>
+</li>
+<li>
+<p>[73] Yuchen Yang, Kwonjoon Lee, Behzad Dariush, Yinzhi Cao, and Shao-Yuan Lo. Follow the rules: reasoning for video anomaly detection with large language models. In European Conference on Computer Vision, pages 304–322. Springer, 2024. 2 , 3</p>
+</li>
+<li>
+<p>[74] Zhenyu Yang, Yuhang Hu, Zemin Du, Dizhan Xue, Shengsheng Qian, Jiahong Wu, Fan Yang, Weiming Dong, and Changsheng Xu. Svbench: A benchmark with temporal multi-turn dialogues for streaming video understanding. arXiv preprint arXiv:2502.10810, 2025. 3</p>
+</li>
+<li>
+<p>[75] Yu Yao, Xizi Wang, Mingze Xu, Zelin Pu, Yuchen Wang, Ella Atkins, and David J Crandall. Dota: Unsupervised detection of traffic anomaly in driving videos. IEEE transactions on pattern analysis and machine intelligence, 45(1):444–459, 2022. 1 , 3</p>
+</li>
+<li>
+<p>[76] Muchao Ye, Weiyang Liu, and Pan He. Vera: Explainable video anomaly detection via verbalized learning of vision-language models. arXiv preprint arXiv:2412.01095, 2024. 1 , 3</p>
+</li>
+<li>
+<p>[77] En Yu, Kangheng Lin, Liang Zhao, Yana Wei, Zining Zhu, Haoran Wei, Jianjian Sun, Zheng Ge, Xiangyu Zhang, Jingyu Wang, et al. Unhackable temporal rewarding for scalable video mllms. arXiv preprint arXiv:2502.12081, 2025. 5 , 6</p>
+</li>
+<li>
+<p>[78] Tongtong Yuan, Xuange Zhang, Kun Liu, Bo Liu, Chen Chen, Jian Jin, and Zhenzhen Jiao. Towards surveillance video-and-language understanding: New dataset baselines and challenges. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 22052–22061, 2024. 3 , 18</p>
+</li>
+<li>
+<p>[79] M Zaigham Zaheer, Arif Mahmood, M Haris Khan, Mattia Segu, Fisher Yu, and Seung-Ik Lee. Generative cooperative learning for unsupervised video anomaly detection. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 14744–14754, 2022. 3</p>
+</li>
+<li>
+<p>[80] Luca Zanella, Willi Menapace, Massimiliano Mancini, Yiming Wang, and Elisa Ricci. Harnessing large language models for training-free video anomaly detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 18527–18536, 2024. 2 , 3</p>
+</li>
+<li>
+<p>[81] Yufei Zhan, Yousong Zhu, Shurong Zheng, Hongyin Zhao, Fan Yang, Ming Tang, and Jinqiao Wang. Vision-r1: Evolving human-free alignment in large vision-language models via visionguided reinforcement learning. arXiv preprint arXiv:2503.18013, 2025. 3</p>
+</li>
+<li>
+<p>[82] Boqiang Zhang, Kehan Li, Zesen Cheng, Zhiqiang Hu, Yuqian Yuan, Guanzheng Chen, Sicong Leng, Yuming Jiang, Hang Zhang, Xin Li, et al. Videollama 3: Frontier multimodal foundation models for image and video understanding. arXiv preprint arXiv:2501.13106, 2025. 8 , 23</p>
+</li>
+<li>
+<p>[83] Hang Zhang, Xin Li, and Lidong Bing. Video-llama: An instruction-tuned audio-visual language model for video understanding. arXiv preprint arXiv:2306.02858, 2023. 3 , 7 , 9</p>
+</li>
+<li>
+<p>[84] Huaxin Zhang, Xiaohao Xu, Xiang Wang, Jialong Zuo, Chuchu Han, Xiaonan Huang, Changxin Gao, Yuehuan Wang, and Nong Sang. Holmes-vad: Towards unbiased and explainable video anomaly detection via multi-modal llm. arXiv preprint arXiv:2406.12235, 2024. 1 , 3 , 7 , 8 , 9 , 18 , 23</p>
+</li>
+<li>
+<p>[85] Huaxin Zhang, Xiaohao Xu, Xiang Wang, Jialong Zuo, Xiaonan Huang, Changxin Gao, Shanjun Zhang, Li Yu, and Nong Sang. Holmes-vau: Towards long-term video anomaly understanding at any granularity. arXiv preprint arXiv:2412.06171, 2024. 2 , 3 , 7 , 8 , 9 , 18 , 23</p>
+</li>
+<li>
+<p>[86] Peiyuan Zhang, Kaichen Zhang, Bo Li, Guangtao Zeng, Jingkang Yang, Yuanhan Zhang, Ziyue Wang, Haoran Tan, Chunyuan Li, and Ziwei Liu. Long context transfer from language to vision. arXiv preprint arXiv:2406.16852, 2024. 3</p>
+</li>
+<li>
+<p>[87] Renrui Zhang, Jiaming Han, Chris Liu, Peng Gao, Aojun Zhou, Xiangfei Hu, Shilin Yan, Pan Lu, Hongsheng Li, and Yu Qiao. Llama-adapter: Efficient fine-tuning of language models with zero-init attention. arXiv preprint arXiv:2303.16199, 2023. 3 , 7</p>
+</li>
+<li>
+<p>[88] Xingjian Zhang, Siwei Wen, Wenjun Wu, and Lei Huang. Tinyllava-video-r1: Towards smaller lmms for video reasoning. arXiv preprint arXiv:2504.09641, 2025. 3 , 7</p>
+</li>
+<li>
+<p>[89] Yuanhan Zhang, Jinming Wu, Wei Li, Bo Li, Zejun Ma, Ziwei Liu, and Chunyuan Li. Video instruction tuning with synthetic data. arXiv preprint arXiv:2410.02713, 2024. 8 , 23</p>
+</li>
+<li>
+<p>[90] Jia-Xing Zhong, Nannan Li, Weijie Kong, Shan Liu, Thomas H Li, and Ge Li. Graph convolutional label noise cleaner: Train a plug-and-play action classifier for anomaly detection. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, pages 1237–1246, 2019. 1 , 3</p>
+</li>
+<li>
+<p>[91] Hang Zhou, Junqing Yu, and Wei Yang. Dual memory units with uncertainty regulation for weakly supervised video anomaly detection. In Proceedings of the AAAI Conference on Artificial Intelligence, volume 37, pages 3769–3777, 2023. 3</p>
+</li>
+<li>
+<p>[92] Jinguo Zhu, Weiyun Wang, Zhe Chen, Zhaoyang Liu, Shenglong Ye, Lixin Gu, Yuchen Duan, Hao Tian, Weijie Su, Jie Shao, et al. Internvl3: Exploring advanced training and test-time recipes for open-source multimodal models. arXiv preprint arXiv:2504.10479, 2025. 8 , 23</p>
+</li>
+</ul>
+
+<h2 class="relative group">A Summary of Appendix
+    <div id="a-summary-of-appendix" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-summary-of-appendix" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This appendix provides supplementary information for the main paper. Firstly, we provide detailed information about the proposed Vad-Reasoning dataset, including the construction process, statistical analysis, and some examples. Then, we provide more experimental details covering prompts, settings, parameters, and computing resources. Furthermore, we provide more experimental results as well as visualizations. Finally, we discuss the potential impact and limitation.</p>
+
+<h2 class="relative group">B The proposed Vad-Reasoning Dataset
+    <div id="b-the-proposed-vad-reasoning-dataset" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b-the-proposed-vad-reasoning-dataset" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">B.1 Annotation Pipeline
+    <div id="b1-annotation-pipeline" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b1-annotation-pipeline" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The training set of Vad-Reasoning consists of two subsets: Vad-Reasoning-SFT and Vad-ReasoningRL. For Vad-Reasoning-RL, we retain the original dataset annotations and collapse them into video-level weak labels (Abnormal or Normal). For Vad-Reasoning-SFT, we design a multi-stage annotation process based on the proposed P2C-CoT, as shown in Figure 5 .</p>
+<p>Figure 5: Illustration of multi-stage annotation process of Vad-Reasoning-SFT dataset.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000004_b850e2e126b3e42dbaf0861189c7b98e9f57e295d1996420afa1b6f974b85124.png"
+    ></figure>
+<p>Frame Description Firstly, each video is tagged with (1) the approximate spatial location of anomaly, (2) temporal span of the anomaly and (3) the fine-grained anomaly category. Then, the video is decomposed into separate frames with a frame interval of 16. The extracted frames are then fed into Qwen-VL-Max to generate detailed descriptions.</p>
+<p>Global Perception All frame captions are concatenated in temporal order and passed to Qwen-Max, producing a holistic scene description covering environments, objects, and actions. Notably, there is only normal pattern described in this stage.</p>
+<p>Local perception Captions corresponding to the abnormal frames are isolated and sent to QwenMax again, yielding the description of the abnormal event. However, this stage remains at perception of event that is not inconsistent with the normal pattern, without any judgment about the abnormality.</p>
+<p>Shallow Cognition Given the descriptions of abnormal frames, the description of the abnormal event and the corresponding anomaly category, Qwen-Max is required to performs anomaly identification and short explanation in this stage.</p>
+<p>Deep Cognition Building on the output of shallow cognition, Qwen-Max performs deeper reasoning about the anomaly in the video with the description of the abnormal event and the corresponding anomaly category.</p>
+<p>Answer Finally, the outputs of the above steps are merged by Qwen-Max to generate a short summary of the anomaly with the key words enclosed by defined tags (e.g. &lt;which&gt;&lt;/which&gt; tags to enclose the predicted anomaly type, while &lt;what&gt;&lt;/what&gt; tags to enclose description of the abnormal event)</p>
+<p>Furthermore, throughout the entire annotation process, to ensure high-quality and ethically sound annotations generated by Qwen-VL-Max and Qwen-Max, we define the following annotation guidelines:</p>
+<ul>
+<li>Relevance: All responses should be directly related to the visual content of the video. Any unrelated assumptions or hallucinated contents must be strictly avoided.</li>
+<li>Objectivity: All responses must be based on observable visual evidence, avoiding speculation or subjective interpretation.</li>
+<li>Neutrality: All responses should exclude any references to geographic locations, race, gender, political views, or religious beliefs.</li>
+<li>Non-discrimination: Any form of biased, discriminatory, or offensive language is strictly prohibited.</li>
+<li>Style: Language should be clear, neutral, and general-purpose to ensure universal readability and usability.</li>
+<li>Conciseness: Each response should consist of 4 to 6 sentences to maintain clarity and focus.</li>
+</ul>
+
+<h2 class="relative group">B.2 Statistical Analysis and Comparison
+    <div id="b2-statistical-analysis-and-comparison" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b2-statistical-analysis-and-comparison" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We compare Vad-Reasoning with existing video anomaly detection and understanding datasets in Table 5 and Table 6. Vad-Reasoning consists of a total of 8641 videos, covering 34 million frames and over 360 hours of duration, making it one of the largest datasets among video anomaly understanding benchmarks. Besides, Vad-Reasoning-SFT provides fine-grained Chain-of-Thought (CoT) annotations, explicitly simulating human reasoning over abnormal events, with an average annotation length of 260 words. For the annotations, the recent video anomaly understanding datasets like CUVA [13] and ECVA [12] contain the description about the cause and effect of the anomaly. However, their corresponding annotations are isolated and disjointed, lacking a systematic structure and logical progression. In contrast, the proposed Vad-Reasoning-SFT datset provides structured and coherent anomaly reasoning annotation.</p>
+<p>Figure 6 presents a comprehensive statistical overview of the proposed Vad-Reasoning dataset. The overall distribution of video length is relatively even as shown in Figure 6(a) and (b). Most of the videos in the Vad-Reasoning dataset are collected from UCF-Crime [49] and XD-Violence [66] as shown in Figure 6(c) and (d). And we collect additional 10 percent of videos from the internet. The proportion of normal and abnormal videos in the two subsets is basically balanced as shown in Figure 6(e). Finally, the fine-grained anomaly distributions are shown in Figure 6(f)-(h).</p>
+
+<h2 class="relative group">B.3 Examples
+    <div id="b3-examples" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b3-examples" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We provide two examples of the proposed Vad-Reasoning dataset in Figure 7 and Figure 8. Notably, the CoT of normal videos will be simplified into two steps, the simple perception and cognition.</p>
+
+<h2 class="relative group">C Implementation Details
+    <div id="c-implementation-details" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c-implementation-details" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">C.1 Prompt
+    <div id="c1-prompt" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c1-prompt" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The prompt used for performing video anomaly reasoning is shown in Figure 9. The prompt is composed of three parts, Task Definition , Output Specification and Format Requirements . Firstly, the Task Definition outlines the overall goal of video anomaly reasoning and explicitly require the model to think before answering. Secondly, the Output Specification provides detailed guidelines on the reasoning process and the expected answer. Finally, the Format Requirements presents concrete output examples with explicitly defined tags (e.g., &lt;think&gt;&lt;/think&gt; and &lt;answer&gt;&lt;/answer&gt;).</p>
+<p>Table 5: Basic metadata comparison of datasets. Here &ldquo;Mixture&rdquo; indicates that the dataset is composed by integrating videos from multiple existing datasets.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Dataset</th>
+          <th>Source</th>
+          <th>Videos</th>
+          <th>Frames</th>
+          <th>Duration</th>
+          <th>Resolution</th>
+          <th>FPS</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Traditional Video Anomaly Detection Datasets</td>
+          <td>Traditional Video Anomaly Detection Datasets</td>
+          <td>Traditional Video Anomaly Detection Datasets</td>
+          <td>Traditional Video Anomaly Detection Datasets</td>
+          <td>Traditional Video Anomaly Detection Datasets</td>
+          <td>Traditional Video Anomaly Detection Datasets</td>
+          <td>Traditional Video Anomaly Detection Datasets</td>
+      </tr>
+      <tr>
+          <td>UCF-Crime [49]</td>
+          <td>Surveillance</td>
+          <td>1900</td>
+          <td>13,741,393</td>
+          <td>128h</td>
+          <td>320 × 240</td>
+          <td>Multiple</td>
+      </tr>
+      <tr>
+          <td>XD-Violence [66]</td>
+          <td>Multiple</td>
+          <td>4754</td>
+          <td>18,714,328</td>
+          <td>217h</td>
+          <td>Multiple</td>
+          <td>24</td>
+      </tr>
+      <tr>
+          <td>ShanghaiTech [32]</td>
+          <td>Campus</td>
+          <td>437</td>
+          <td>317,398</td>
+          <td>-</td>
+          <td>856 × 480</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>UCSD Ped1 [26]</td>
+          <td>Campus</td>
+          <td>70</td>
+          <td>14,000</td>
+          <td>-</td>
+          <td>238 × 158</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>UCSD Ped2 [26]</td>
+          <td>Campus</td>
+          <td>28</td>
+          <td>4,560</td>
+          <td>-</td>
+          <td>360 × 240</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>CUHK Avenue [35]</td>
+          <td>Campus</td>
+          <td>37</td>
+          <td>30,652</td>
+          <td>0.3h</td>
+          <td>640 × 360</td>
+          <td>25</td>
+      </tr>
+      <tr>
+          <td>TAD [37]</td>
+          <td>Traffic</td>
+          <td>518</td>
+          <td>540,212</td>
+          <td>-</td>
+          <td>Multiple</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>UBnormal [1]</td>
+          <td>Generation</td>
+          <td>543</td>
+          <td>236,902</td>
+          <td>2.2h</td>
+          <td>Multiple</td>
+          <td>30</td>
+      </tr>
+      <tr>
+          <td>NWPU Campus [5]</td>
+          <td>Campus</td>
+          <td>547</td>
+          <td>1,466,073</td>
+          <td>16.3h</td>
+          <td>Multiple</td>
+          <td>25</td>
+      </tr>
+      <tr>
+          <td>Video Anomaly Understanding Datasets</td>
+          <td>Video Anomaly Understanding Datasets</td>
+          <td>Video Anomaly Understanding Datasets</td>
+          <td>Video Anomaly Understanding Datasets</td>
+          <td>Video Anomaly Understanding Datasets</td>
+          <td>Video Anomaly Understanding Datasets</td>
+          <td>Video Anomaly Understanding Datasets</td>
+      </tr>
+      <tr>
+          <td>UCA [78]</td>
+          <td>Surveillance</td>
+          <td>1854</td>
+          <td>13,163,270</td>
+          <td>121.9h</td>
+          <td>320 × 240</td>
+          <td>Multiple</td>
+      </tr>
+      <tr>
+          <td>CUVA [13]</td>
+          <td>Multiple</td>
+          <td>986</td>
+          <td>3,345,097</td>
+          <td>32.5h</td>
+          <td>Multiple</td>
+          <td>Multiple</td>
+      </tr>
+      <tr>
+          <td>ECVA [12]</td>
+          <td>Multiple</td>
+          <td>2127</td>
+          <td>19,042,560</td>
+          <td>88.2h</td>
+          <td>Multiple</td>
+          <td>Multiple</td>
+      </tr>
+      <tr>
+          <td>VAD-Instruct50k [84]</td>
+          <td>Mixture</td>
+          <td>6654</td>
+          <td>32,455,721</td>
+          <td>345h</td>
+          <td>Multiple</td>
+          <td>Multiple</td>
+      </tr>
+      <tr>
+          <td>HIVAU-70k [85]</td>
+          <td>Mixture</td>
+          <td>6654</td>
+          <td>32,455,721</td>
+          <td>345h</td>
+          <td>Multiple</td>
+          <td>Multiple</td>
+      </tr>
+      <tr>
+          <td>HAWK [50]</td>
+          <td>Mixture</td>
+          <td>7898</td>
+          <td>14,878,233</td>
+          <td>142.5h</td>
+          <td>Multiple</td>
+          <td>Multiple</td>
+      </tr>
+      <tr>
+          <td>Vad-Reasoning-SFT</td>
+          <td>Mixture</td>
+          <td>2193</td>
+          <td>8,680,615</td>
+          <td>88.3h</td>
+          <td>Multiple</td>
+          <td>Multiple</td>
+      </tr>
+      <tr>
+          <td>Vad-Reasoning-RL</td>
+          <td>Mixture</td>
+          <td>6448</td>
+          <td>25,495,729</td>
+          <td>272.2h</td>
+          <td>Multiple</td>
+          <td>Multiple</td>
+      </tr>
+      <tr>
+          <td>Vad-Reasoning</td>
+          <td>Mixture</td>
+          <td>8641</td>
+          <td>34,173,344</td>
+          <td>360.5h</td>
+          <td>Multiple</td>
+          <td>Multiple</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table 6: The annotation type comparison of datasets. * denotes that the videos in Vad-Reasoning-RL are only labeled with video-level labels (Abnormal or Normal).</p>
+<table>
+  <thead>
+      <tr>
+          <th>Dataset</th>
+          <th>Anomalies</th>
+          <th>Text Annotation</th>
+          <th>Reasoning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Traditional Video Anomaly Detection Datasets</td>
+          <td>Traditional Video Anomaly Detection Datasets</td>
+          <td>Traditional Video Anomaly Detection Datasets</td>
+          <td>Traditional Video Anomaly Detection Datasets</td>
+      </tr>
+      <tr>
+          <td>UCF-Crime [49]</td>
+          <td>13</td>
+          <td>Anomaly class</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>XD-Violence [66]</td>
+          <td>6</td>
+          <td>Anomaly class</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>ShanghaiTech [32]</td>
+          <td>13</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>UCSD Ped1 [26]</td>
+          <td>5</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>UCSD Ped2 [26]</td>
+          <td>5</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>CUHK Avenue [35]</td>
+          <td>5</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>TAD [37]</td>
+          <td>7</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>UBnormal [1]</td>
+          <td>22</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>NWPU Campus [5]</td>
+          <td>28</td>
+          <td>-</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>ideo Anomaly Understanding Datasets</td>
+          <td>ideo Anomaly Understanding Datasets</td>
+          <td>ideo Anomaly Understanding Datasets</td>
+          <td>ideo Anomaly Understanding Datasets</td>
+      </tr>
+      <tr>
+          <td>UCA [78]</td>
+          <td>13</td>
+          <td>Event descriptions</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>CUVA [13]</td>
+          <td>42</td>
+          <td>Anomaly description, cause, effect</td>
+          <td>Isolated</td>
+      </tr>
+      <tr>
+          <td>ECVA [12]</td>
+          <td>100</td>
+          <td>nomaly description, cause, effect</td>
+          <td>Isolated</td>
+      </tr>
+      <tr>
+          <td>VAD-Instruct50k [84]</td>
+          <td>13</td>
+          <td>Clip caption &amp; QA</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>HIVAU-70k [85]</td>
+          <td>13</td>
+          <td>Clip/Event/Video-level Caption &amp; QA</td>
+          <td>Isolated</td>
+      </tr>
+      <tr>
+          <td>HAWK [50]</td>
+          <td>-</td>
+          <td>Anomaly description &amp; QA</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>Vad-Reasoning-SFT</td>
+          <td>37</td>
+          <td>Chain-of-Thought</td>
+          <td>Structured &amp; coheren</td>
+      </tr>
+      <tr>
+          <td>Vad-Reasoning-RL</td>
+          <td>1*</td>
+          <td>Video-level label</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>Vad-Reasoning</td>
+          <td>37</td>
+          <td>Hybrid annotation</td>
+          <td>-</td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 class="relative group">C.2 Training Process of AVA-GRPO
+    <div id="c2-training-process-of-ava-grpo" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c2-training-process-of-ava-grpo" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The core of the proposed AVA-GRPO is the additional anomaly verification reward as shown in Algorithm 1. Besides, we additionally consider a length reward. We first separately calculate the length of the reasoning text for abnormal videos and normal videos in Vad-Reasoning-SFT. During RL training, if the length of output satisfies the corresponding range, a length reward will be assigned. Notably, for each completion, the model will be only updated once. Consequently, the objective function of AVA-GRPO is simplified as</p>
+<p>Figure 6: Statistical analyses of the proposed Vad-Reasoning dataset.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000005_9f7ad71371945af907ec0eabdc2eef4b5b26491d78d2f916911cfc6265067ec6.png"
+    ></figure>
+<!-- formula-not-decoded -->
+<p>where πθ no grad is equivalent to πθ. Finally, the training process of AVA-GRPO is shown in Algorithm 2 .</p>
+
+<h2 class="relative group">C.3 More Experimental Details
+    <div id="c3-more-experimental-details" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c3-more-experimental-details" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>All experiments are conducted on 4 NVIDIA A100 (80GB) GPUs. For supervised fine-tuning stage, we train the base MLLM on Vad-Reasoning-SFT dataset for four epochs, taking approximately 6 hours. For reinforcement learning stage, we continue to train the model on the Vad-Reasoning-RL dataset for one epoch, taking about 26 hours. For efficiency, we uniformly normalize the video to 16 frames, and the maximum number of pixels per frame is limited to 128 × 28 × 28 during training. The learning rates for both stages are set to 1 × 10 − 6 . The number of completions generated in a group is set to 4. The hyperparameter β in Equation 3 is set as 0.04. AVA-GRPO includes five types of rewards. The specific values and meanings are shown in Table 7. For normal videos, the length range of reasoning process is set as [140 , 261], while it is set as [233 , 456] for abnormal videos.</p>
+<p>Step 1: Global Perception</p>
+<p>Step 2: Local Perception</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000006_8de4089f7c1816eada7db13ac9ca8c1ac8d2aad66f4848bf23328c9613dbf34e.png"
+    ></figure>
+<p>Figure 7: An abnormal example of Vad-Reasoning.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000007_eefd106f581baed438a72108e7c8a07cb718f9d13caaf5746ffff71b0b07ed5f.png"
+    ></figure>
+<p>.</p>
+<p>environment&lt;/what&gt;
+gyp</p>
+<p>This is considered normal because &lt;why&gt;the actions displayed, such as walking at a relaxed pace in everyday attire,
+pppy gpyy</p>
+<p>align with typical behaviors expected in well-maintained public spaces without any signs of disruption or unusual activity&lt;/why&gt;
+Fi8Al lf VdRi</p>
+<p>ppy gp
+Figure 8: An normal example of Vad-Reasoning.</p>
+
+<h2 class="relative group">C.4 Evaluation on VANE Benchmark
+    <div id="c4-evaluation-on-vane-benchmark" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c4-evaluation-on-vane-benchmark" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>VANE [15] is a benchmark designed for evaluate the ability of video-MLLMs to detect anomalies in the video. It consists of 325 video clips and 559 question-answer pairs, covering both real-world surveillance and AI-generated video clips, and are categorized into nine anomaly types. For realworld anomalies, VANE collect 128 videos clips from existing video anomaly detection datasets (e.g., CUHK Avenue [35], UCSD-Ped1/Ped2 [26], and UCF-Crime [49]). For AI-generated anomalies, VANE includes 197 clips videos generated with SORA [4], OpenSora [16], Runway Gen2 [46], ModelScopeT2V [61] and VideoLCM [62]. We report the performance of Vad-R1 and other MLLMbased VAD methods on different categories. Notably, since Vad-R1 is trained with the proposed</p>
+<p>.</p>
+<p>Figure 9: Prompt template for performing video anomaly reasoning.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000008_d37e981c5bfb3bd7639e67bc4fffddf3540885d4cea3058f3a05cddd5c8245c3.png"
+    ></figure>
+<p>Table 7: Reward types and the corresponding values.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Meaning</th>
+          <th>Value</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Accuracy</td>
+          <td>Evaluate classification result</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>Format</td>
+          <td>Evaluate format of outpu</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>Anomaly verification: Abnormal</td>
+          <td>Evaluate correctness of videos predicted as abnormal</td>
+          <td>0.5</td>
+      </tr>
+      <tr>
+          <td>Anomaly verification: Normal</td>
+          <td>Evaluate correctness of videos predicted as normal</td>
+          <td>-0.2</td>
+      </tr>
+      <tr>
+          <td>Length</td>
+          <td>Evaluate length of output</td>
+          <td>0.2</td>
+      </tr>
+  </tbody>
+</table>
+<p>Vad-Reasoning dataset, which incorporates videos from UCF-Crime, we exclude the corresponding UCF-Crime subset from VANE benchmark.</p>
+
+<h2 class="relative group">D More Experimental Results
+    <div id="d-more-experimental-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d-more-experimental-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">D.1 LLM-Guided Evaluation
+    <div id="d1-llm-guided-evaluation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d1-llm-guided-evaluation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The traditional evaluation metrics, such as BLEU and METEOR, focus primarily on token-level overlap between the generated answer and the reference ground truth, which are inherently limited in capturing the semantic quality of the generated answers, particularly in tasks that require causal reasoning and contextual judgment. To address these limitations, we additionally adopt proprietary LLM to evaluate the quality of the generated answer. Following HAWK [50], we consider the following aspects:</p>
+<ul>
+<li>Reasonability assesses whether the generated response presents a coherent and logically valid causal reasoning of the anomaly.</li>
+</ul>
+
+<h2 class="relative group">Algorithm 1 Anomaly verification reward
+    <div id="algorithm-1-anomaly-verification-reward" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#algorithm-1-anomaly-verification-reward" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<pre tabindex="0"><code>Input: Prompt template p, current video v, policy model πθ, generated completions O = {oi} G i=1 . Output: Anomaly verification reward R ano . 1: Init anomaly verification reward: R ano = {ri} G i=1, where r i = 0 2: for each o i ∈ O do 3: Extract prediction p of v from completion oi 4: if p == Normal then 5: Randomly discard either the beginning or the ending segment of v 6: else 7: Discard the predicted abnormal segment of v 8: end if 9: Obtain a trimmed video v˜ ˜ 10: Generate a new completion o˜ ˜ ∼ πθ (· | p, v˜ ˜ ) 11: Extract new prediction p˜ ˜ of v˜ ˜ from new completion o˜ ˜ 12: if p == Abnormal and p˜ ˜ == Normal then 13: Assign positive reward ri ← 0 . 5 14: else if p == Normal and p˜ ˜ == Abnormal then 15: Assign negative reward ri ← −0 . 2 16: end if 17: end for 18: return R ano = {ri} G i=1
+</code></pre>
+<h2 class="relative group">Algorithm 2 AVA-GRPO
+    <div id="algorithm-2-ava-grpo" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#algorithm-2-ava-grpo" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Input: Prompt template p, Vad-Reasoning-RL dataset D = {(vj , Yj )} j=1 , initial policy model πθ init . Output: Updated policy model πθ .</p>
+<pre tabindex="0"><code>N 1: Init policy model: πθ ← πθ init 2: Init reference model: π ref ← πθ 3: for e ∈ {1, ..., E} do 4: for (vj , Yj ) ∈ D do 5: Generate a group of completions O = {oi} G i=1 ∼ πθ (· | p, vj ) 6: Compute accuracy reward R acc = {ri} G i=1 7: Compute format reward Rf = {ri} G i=1 8: Compute anomaly verification reward R ano ← Algorithm 1 9: Compute length reward Rlen = {ri} G i=1 10: Compute sum R = R acc + Rf + R ano + Rlen 11: Compute advantages A = R − mean (R) std(R) 12: Update πθ with Equation 3 13: end for 14: end for 15: return πθ
+</code></pre><ul>
+<li>Detail evaluates the level of specificity and informativeness in the model&rsquo;s output. A high-quality response is expected to cover essential contextual elements.</li>
+<li>Consistency focuses on the factual alignment between the generated answer and the groundtruth metadata, including the event description, potential consequence and so on.</li>
+</ul>
+<p>Each aspect is scored in the range of [0 , 1], with 1 indicating the highest level of semantic alignment and reasoning quality. The comparisons on the test set of Vad-Reasoning are shown in Table 8. We observe that Vad-R1 achieves the best performance among all open-source methods. Compared with proprietary MLLMs, Vad-R1 demonstrates superior performance, particularly in terms of Reasonability and Consistency, outperforming even GPT-4o.</p>
+<p>Table 8: Comparison of anomaly reasoning quality evaluated by LLM-Guided metrics.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>Params.</th>
+          <th>Reasonability</th>
+          <th>Detail</th>
+          <th>Consistency</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Open-Source video MLLMs</td>
+          <td>Open-Source video MLLMs</td>
+          <td>Open-Source video MLLMs</td>
+          <td>Open-Source video MLLMs</td>
+          <td>Open-Source video MLLMs</td>
+      </tr>
+      <tr>
+          <td>InternVideo2.5 [65]</td>
+          <td>8B</td>
+          <td>0.580</td>
+          <td>0.517</td>
+          <td>0.487</td>
+      </tr>
+      <tr>
+          <td>InternVL3 [92]</td>
+          <td>8B</td>
+          <td>0.692</td>
+          <td>0.608</td>
+          <td>0.586</td>
+      </tr>
+      <tr>
+          <td>VideoChat-Flash [27]</td>
+          <td>7B</td>
+          <td>0.367</td>
+          <td>0.292</td>
+          <td>0.356</td>
+      </tr>
+      <tr>
+          <td>VideoLLaMA3 [82]</td>
+          <td>7B</td>
+          <td>0.549</td>
+          <td>0.449</td>
+          <td>0.497</td>
+      </tr>
+      <tr>
+          <td>LLaVA-NeXT-Video [89]</td>
+          <td>7B</td>
+          <td>0.541</td>
+          <td>0.452</td>
+          <td>0.491</td>
+      </tr>
+      <tr>
+          <td>Qwen2.5-VL [57]</td>
+          <td>7B</td>
+          <td>0.638</td>
+          <td>0.555</td>
+          <td>0.542</td>
+      </tr>
+      <tr>
+          <td>Source video reasoning MLLMs</td>
+          <td>Source video reasoning MLLMs</td>
+          <td>Source video reasoning MLLMs</td>
+          <td>Source video reasoning MLLMs</td>
+          <td>Source video reasoning MLLMs</td>
+      </tr>
+      <tr>
+          <td>Open-R1-Video [63]</td>
+          <td>7B</td>
+          <td>0.411</td>
+          <td>0.307</td>
+          <td>0.338</td>
+      </tr>
+      <tr>
+          <td>Video-R1 [14]</td>
+          <td>7B</td>
+          <td>0.390</td>
+          <td>0.414</td>
+          <td>0.243</td>
+      </tr>
+      <tr>
+          <td>VideoChat-R1 [28]</td>
+          <td>7B</td>
+          <td>0.634</td>
+          <td>0.559</td>
+          <td>0.528</td>
+      </tr>
+      <tr>
+          <td>LM-based VAD methods</td>
+          <td>LM-based VAD methods</td>
+          <td>LM-based VAD methods</td>
+          <td>LM-based VAD methods</td>
+          <td>LM-based VAD methods</td>
+      </tr>
+      <tr>
+          <td>Holmes-VAD [84]</td>
+          <td>7B</td>
+          <td>0.388</td>
+          <td>0.275</td>
+          <td>0.343</td>
+      </tr>
+      <tr>
+          <td>Holmes-VAU [85]</td>
+          <td>2B</td>
+          <td>0.385</td>
+          <td>0.301</td>
+          <td>0.375</td>
+      </tr>
+      <tr>
+          <td>HAWK [50]</td>
+          <td>7B</td>
+          <td>0.218</td>
+          <td>0.185</td>
+          <td>0.115</td>
+      </tr>
+      <tr>
+          <td>Proprietary MLLMs</td>
+          <td>Proprietary MLLMs</td>
+          <td>Proprietary MLLMs</td>
+          <td>Proprietary MLLMs</td>
+          <td>Proprietary MLLMs</td>
+      </tr>
+      <tr>
+          <td>Claude3.5-Haiku [2]</td>
+          <td>-</td>
+          <td>0.711</td>
+          <td>0.637</td>
+          <td>0.611</td>
+      </tr>
+      <tr>
+          <td>QVQ-Max [56]</td>
+          <td>-</td>
+          <td>0.690</td>
+          <td>0.639</td>
+          <td>0.521</td>
+      </tr>
+      <tr>
+          <td>GPT-4o [40]</td>
+          <td>-</td>
+          <td>0.724</td>
+          <td>0.679</td>
+          <td>0.542</td>
+      </tr>
+      <tr>
+          <td>Vad-R1 (Ours)</td>
+          <td>7B</td>
+          <td>0.734</td>
+          <td>0.659</td>
+          <td>0.662</td>
+      </tr>
+  </tbody>
+</table>
+<p>Table 9: Performance comparison of different numbers of input frames and spatial resolutions.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Frames</th>
+          <th>Max Pixels</th>
+          <th>Anomaly Reasoning</th>
+          <th>Anomaly Reasoning</th>
+          <th>Anomaly Reasoning</th>
+          <th>Anomaly Detection</th>
+          <th>Anomaly Detection</th>
+          <th>Anomaly Detection</th>
+          <th>Anomaly Detection</th>
+          <th>Anomaly Detection</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Frames</td>
+          <td>Max Pixels</td>
+          <td>BLEU-2</td>
+          <td>METEOR</td>
+          <td>ROUGE-2</td>
+          <td>Acc</td>
+          <td>F1</td>
+          <td>mIoU</td>
+          <td><a
+  href="mailto:R@0.3">R@0.3</a></td>
+          <td><a
+  href="mailto:R@0.5">R@0.5</a></td>
+      </tr>
+      <tr>
+          <td>16</td>
+          <td>128 × 28 × 28</td>
+          <td>0.233</td>
+          <td>0.406</td>
+          <td>0.194</td>
+          <td>0.875</td>
+          <td>0.862</td>
+          <td>0.713</td>
+          <td>0.770</td>
+          <td>0.706</td>
+      </tr>
+      <tr>
+          <td>16</td>
+          <td>256 × 28 × 28</td>
+          <td>0.238</td>
+          <td>0.412</td>
+          <td>0.198</td>
+          <td>0.886</td>
+          <td>0.878</td>
+          <td>0.713</td>
+          <td>0.772</td>
+          <td>0.702</td>
+      </tr>
+      <tr>
+          <td>32</td>
+          <td>128 × 28 × 28</td>
+          <td>0.242</td>
+          <td>0.416</td>
+          <td>0.201</td>
+          <td>0.900</td>
+          <td>0.891</td>
+          <td>0.726</td>
+          <td>0.786</td>
+          <td>0.715</td>
+      </tr>
+      <tr>
+          <td>32</td>
+          <td>256 × 28 × 28</td>
+          <td>0.238</td>
+          <td>0.413</td>
+          <td>0.198</td>
+          <td>0.888</td>
+          <td>0.883</td>
+          <td>0.708</td>
+          <td>0.772</td>
+          <td>0.695</td>
+      </tr>
+      <tr>
+          <td>64</td>
+          <td>128 × 28 × 28</td>
+          <td>0.244</td>
+          <td>0.420</td>
+          <td>0.203</td>
+          <td>0.895</td>
+          <td>0.892</td>
+          <td>0.709</td>
+          <td>0.777</td>
+          <td>0.695</td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 class="relative group">D.2 Experiments on More Input Tokens
+    <div id="d2-experiments-on-more-input-tokens" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d2-experiments-on-more-input-tokens" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>During both training and inference, the video is uniformly sampled into 16 frames as input, with a maximum pixel count of 128 × 28 × 28 per frame. In this section, we increase the number of frames to 32 and 64 per video, and the maximum pixel to 256 × 28 × 28 per frame. The results are shown in Table 9. On the one hand, We observe that increasing the number of frame from 16 to 64 yields improvement across both anomaly reasoning and detection, showing that the extra frames provide more useful visual evidence. On the other hand, the benefit of a higher resolution depends on the number of input frames. When increasing the max number of pixels to 256 × 28 × 28 with 16 frames, the model gains small but consistent performance improvement, suggesting that high resolution details compensate for the short clip. In contrast, the performance will drop if we increase the max pixels for 32 frames, possibly due to token redundancy. Consequently, increasing frames is more useful, whereas higher resolution might lead to information overload.</p>
+
+<h2 class="relative group">D.3 More Ablation studies
+    <div id="d3-more-ablation-studies" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d3-more-ablation-studies" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this section, we evaluate the effectiveness of the proposed AVA-GRPO. Compared with original GRPO, AVA-GRPO has an additional anomaly verification reward, which incentivizes the anomaly reasoning capability of MLLM with only video-level weak labels. In addition, we add a length reward to control the length of output. The effectiveness of the two additional rewards is shown in Table 10. For both 16-frame and 32-frame settings, AVA-GRPO outperforms the original GRPO across video reasoning and detection tasks. In contrast, using only one reward leads to limited or</p>
+<p>Table 10: Ablation results of different reward strategies.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Frames</th>
+          <th>Strategy</th>
+          <th>Reasoning</th>
+          <th>Reasoning</th>
+          <th>Detection</th>
+          <th>Detection</th>
+          <th>Detection</th>
+          <th>Detection</th>
+          <th>Detection</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Frames</td>
+          <td>Strategy</td>
+          <td>ROUGE-L</td>
+          <td>ROUGE-2</td>
+          <td>Precision</td>
+          <td>mIoU</td>
+          <td><a
+  href="mailto:R@0.3">R@0.3</a></td>
+          <td><a
+  href="mailto:R@0.5">R@0.5</a></td>
+          <td><a
+  href="mailto:R@0.7">R@0.7</a></td>
+      </tr>
+      <tr>
+          <td>16</td>
+          <td>GRPO</td>
+          <td>0.502</td>
+          <td>0.475</td>
+          <td>0.861</td>
+          <td>0.712</td>
+          <td>0.770</td>
+          <td>0.699</td>
+          <td>0.640</td>
+      </tr>
+      <tr>
+          <td>16</td>
+          <td>GRPO+len_reward</td>
+          <td>0.529</td>
+          <td>0.501</td>
+          <td>0.856</td>
+          <td>0.710</td>
+          <td>0.770</td>
+          <td>0.697</td>
+          <td>0.642</td>
+      </tr>
+      <tr>
+          <td>16</td>
+          <td>GRPO+ano_reward</td>
+          <td>0.496</td>
+          <td>0.467</td>
+          <td>0.866</td>
+          <td>0.707</td>
+          <td>0.765</td>
+          <td>0.695</td>
+          <td>0.638</td>
+      </tr>
+      <tr>
+          <td>16</td>
+          <td>AVA-GRP</td>
+          <td>0.530</td>
+          <td>0.501</td>
+          <td>0.882</td>
+          <td>0.713</td>
+          <td>0.770</td>
+          <td>0.706</td>
+          <td>0.651</td>
+      </tr>
+      <tr>
+          <td>32</td>
+          <td>GRPO</td>
+          <td>0.495</td>
+          <td>0.468</td>
+          <td>0.831</td>
+          <td>0.695</td>
+          <td>0.761</td>
+          <td>0.692</td>
+          <td>0.624</td>
+      </tr>
+      <tr>
+          <td>32</td>
+          <td>GRPO+len_reward  GRPOd</td>
+          <td>0.528</td>
+          <td>0.499</td>
+          <td>0.849</td>
+          <td>0.701</td>
+          <td>0.770</td>
+          <td>0.695</td>
+          <td>0.631</td>
+      </tr>
+      <tr>
+          <td>32</td>
+          <td>GRPO+ano_reward</td>
+          <td>0.494</td>
+          <td>0.467</td>
+          <td>0.842</td>
+          <td>0.699</td>
+          <td>0.763</td>
+          <td>0.686</td>
+          <td>0.629</td>
+      </tr>
+      <tr>
+          <td>32</td>
+          <td>AVA-GRP</td>
+          <td>0.533</td>
+          <td>0.504</td>
+          <td>0.900</td>
+          <td>0.726</td>
+          <td>0.786</td>
+          <td>0.715</td>
+          <td>0.661</td>
+      </tr>
+  </tbody>
+</table>
+<p>Figure 10: RL training curves of Vad-R1.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000009_fa0a140743888619865de5082ad2ce840287beb3cff564d53376cf2c7bc9e87f.png"
+    ></figure>
+<p>unstable improvement. These results demonstrate that the combination of length and anomaly rewards is essential for improving the overall reasoning and detection performance.</p>
+
+<h2 class="relative group">D.4 Training Curves
+    <div id="d4-training-curves" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d4-training-curves" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Figure 10 demonstrates the key training curves of Vad-R1 during RL stage. Figure 10(a) shows the total reward of AVA-GRPO, which increases steadily and converges after approximately 1000 steps, indicating consistent improvement in the degree of matching policy for the output of Vad-R1. Figure 10(b) illustrates the standard deviation of total reward, which decreases rapidly in the early stage and stabilizes below 0.1, suggesting that the output quality of Vad-R1 gradually improves as the training progresses. Figure 10(c) reports the completion length, which increases in the early steps and then drops to a stable value. This may imply that the model achieves more concise and efficient completions while maintaining high rewards.</p>
+
+<h2 class="relative group">D.5 More Qualitative Results
+    <div id="d5-more-qualitative-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d5-more-qualitative-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We provide two qualitative results in Figure 11 and Figure 12. Compared with some proprietary models, Vad-R1 demonstrates stable anomaly reasoning and detection capabilities. For example, in Figure 11, Vad-R1 correctly performs anomaly reasoning and identifies the white plastic bag as an anomaly. In contrast, although Claude identifies the plastic bag as abnormal, it defines the cause of the abnormality as moving plastic bag, rather than the plastic bag acting as an obstacle. Besides, QVQ-Max and o4-mini also identify the white plastic bag, they do not treat it as an anomaly.</p>
+
+<h2 class="relative group">E Impact and Limitation
+    <div id="e-impact-and-limitation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#e-impact-and-limitation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this paper, we propose a new task: Video Anomaly Reasoning, which enables MLLM to perform deep analysis and further understanding of the anomalies in the video. We hope our work can contribute to the video anomaly researches.</p>
+<p>However, the inference speed of Vad-R1 remains a limitation, as the multi-step reasoning process introduces additional computational overhead.</p>
+<p>3wefcdsghfx</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000010_074ac4a88ead298de4320e4b0cd8e730692560868c763880649184f3f7d89a3f.png"
+    ></figure>
+<p>3wefcdsghfx</p>
+<p>Figure 11: Qualitative result for an abnormal video.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000011_27a076865488765a216a838d1a657df4161dbe27d5f433e97fc0d79581e7865e.png"
+    ></figure>
+<p>Figure 12: Qualitative result for a normal video.</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_papers/Vad-R1 Towards Video Anomaly Reasoning via.md"
+          data-oid-likes="likes_papers/Vad-R1 Towards Video Anomaly Reasoning via.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/vadclip-adapting-vision-language-models-for-weakly-supervised-video-anomaly-detection/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/typicality-and-context-uniqueness-for/">
+              <span class="leading-6">
+                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-24 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+      
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 overflow-x-auto py-2">
+        <ul class="flex list-none flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 me-4">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

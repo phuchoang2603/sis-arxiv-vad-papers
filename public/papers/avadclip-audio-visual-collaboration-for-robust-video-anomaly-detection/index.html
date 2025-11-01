@@ -1,0 +1,1966 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title> &middot; Blowfish</title>
+    <meta name="title" content=" &middot; Blowfish">
+  
+
+  
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/papers/avadclip-audio-visual-collaboration-for-robust-video-anomaly-detection/">
+  
+
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/papers/avadclip-audio-visual-collaboration-for-robust-video-anomaly-detection/">
+  <meta property="og:site_name" content="Blowfish">
+  <meta property="og:title" content="Blowfish">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="papers">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blowfish">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.7946532fa78157bafb1b4340d4074792811f18177af35790b3a0cb90566ce1cda3edd782eb92e134849964d14b6d9185c9d4ded2a12dcf5b706cb6a275c0cce0.css"
+    integrity="sha512-eUZTL6eBV7r7G0NA1AdHkoEfGBd681eQs6DLkFZs4c2j7deC65LhNISZZNFLbZGFydTe0qEtz1twbLaidcDM4A==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.9df4fc14d50efcc9aa4cfc2b6f348e365f421f5ad491278f8f48c0360cf2f93f08882fda6da162d7ace8e5add57c2df4ac46bd3861306b1d4c452cd31f448d64.js"
+      integrity="sha512-nfT8FNUO/MmqTPwrbzSONl9CH1rUkSePj0jANgzy&#43;T8IiC/abaFi16zo5a3VfC30rEa9OGEwax1MRSzTH0SNZA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Papers",
+    "name": "",
+    "headline": "",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/papers\/avadclip-audio-visual-collaboration-for-robust-video-anomaly-detection\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "8730"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium">
+          Blowfish
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/papers/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="papers"
+  title="Papers">
+  
+  
+    <p class="text-base font-medium">
+      papers
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/test/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="test"
+  title="Tests">
+  
+  
+    <p class="text-base font-medium">
+      test
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href=""
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  
+  title="">
+  
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/papers/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="papers"
+    title="Papers">
+    
+    
+      <p class="text-bg font-bg">
+        papers
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/test/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="test"
+    title="Tests">
+    
+    
+      <p class="text-bg font-bg">
+        test
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href=""
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    
+    title="">
+    
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>8730 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">41 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">AVadCLIP: Audio-Visual Collaboration for Robust Video Anomaly Detection
+    <div id="avadclip-audio-visual-collaboration-for-robust-video-anomaly-detection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#avadclip-audio-visual-collaboration-for-robust-video-anomaly-detection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Peng Wu, Wanshun Su, Guansong Pang Member, IEEE, Yujia Sun, Qingsen Yan Member, IEEE , Peng Wang Member, IEEE and Yanning Zhang Fellow, IEEE</p>
+<p>Abstract—With the increasing adoption of video anomaly detection in intelligent surveillance domains, conventional visualonly detection approaches often struggle with information insufficiency and high false-positive rates in complex environments. To address these limitations, we present a novel weakly supervised framework that leverages audio-visual collaboration for robust video anomaly detection. Capitalizing on the exceptional cross-modal representation learning capabilities of Contrastive Language-Image Pretraining (CLIP) across visual, audio, and textual domains, our framework introduces two major innovations: an efficient audio-visual fusion that enables adaptive crossmodal integration through lightweight parametric adaptation while maintaining the frozen CLIP backbone, and a novel audiovisual prompt that dynamically enhances text embeddings with key multimodal information based on the semantic correlation between audio-visual features and textual labels, significantly improving CLIP&rsquo;s generalization for the video anomaly detection task. Moreover, to enhance robustness against modality deficiency during inference, we further develop an uncertaintydriven feature distillation module that synthesizes audio-visual representations from visual-only inputs. This module employs uncertainty modeling based on the diversity of audio-visual features to dynamically emphasize challenging features during the distillation process. Our framework demonstrates superior performance across multiple benchmarks, with audio integration significantly boosting anomaly detection accuracy in various scenarios. Notably, with unimodal data enhanced by uncertaintydriven distillation, our approach consistently outperforms current unimodal VAD methods.</p>
+<p>Index Terms—video anomaly detection, audio-visual collaboration, weakly supervised learning.</p>
+
+<h2 class="relative group">I. INTRODUCTION
+    <div id="i-introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#i-introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>V IDEO anomaly detection (VAD), as a pivotal technology in intelligent surveillance systems, focuses on identifying anomalous events within videos and has attracted substantial research interest in recent years [1]–[11]. Due to the rarity of anomalies and the high cost of manual annotation, fully supervised frameworks are impractical for large-scale deployment. As a solution, weakly supervised video anomaly detection (WSVAD) methods [12]–[15] have gained traction, aiming to discover latent anomalies under coarse supervision. Current WSVAD methods primarily rely on the multiple</p>
+<p>Peng Wu, Wanshun Su, Qingsen Yan, Peng Wang, and Yanning Zhang are with the School of Computer Science, Northwestern Polytechnical University, China. E-mail:{xdwupeng, suws0616, <a
+  href="mailto:qingsenyan%7d@gmail.com">qingsenyan}@gmail.com</a>; {peng.wang, <a
+  href="mailto:ynzhang%7d@nwpu.edu.cn">ynzhang}@nwpu.edu.cn</a>.</p>
+<p>Guansong Pang is with the School of Computing and Information Systems, Singapore Management University, Singapore. E-mail: <a
+  href="mailto:pangguansong@gamil.com">pangguansong@gamil.com</a>.</p>
+<p>Yujia Sun is with the School of Artifical Intelligence, Xidian University, China. E-mail: <a
+  href="mailto:yjsun@stu.xidian.edu.cn">yjsun@stu.xidian.edu.cn</a>.</p>
+<p>Manuscript received April 19, 2021; revised August 16, 2021.</p>
+<p>Fig. 1. Left: Illustration of audio-visual collaboration effects; Right: Illustration of our proposed distillation (UKD) effects.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000000_e9764a03f6873fc9ea7586f2dc6faa2fccd69b228e938f53e7d376bfa27fc58e.png"
+    ></figure>
+<p>instance learning (MIL) framework, using video-level labels for model training [12], [16]. Specifically, these approaches treat videos as bags of segments (instances) and distinguish anomalous patterns through the hard attention mechanism (a.k.a Top-K) [17]. With the rapid advancement of foundation models, Contrastive Language-Image Pretraining (CLIP) [18] has shown remarkable potential in various downstream tasks, including video understanding [19], [20]. Building on the remarkable success of CLIP, recent methods like VadCLIP [21] and TPWNG [15] have advanced WSVAD by leveraging CLIP&rsquo;s semantic alignment capabilities.</p>
+<p>However, these methods, whether CLIP-based or conventional, predominantly rely on unimodal visual information, which often leads to significant detection limitations in complex real-world scenarios. Visual occlusion, extreme lighting variations, and environmental noise can render visual features unreliable or ambiguous [22]–[24]. In these challenging conditions, multimodal information, particularly audio, offers indispensable contextual cues that can complement and enhance visual-based detection. For instance, audio remains robust when visual data is compromised, allowing detection of off-camera events. In acoustically rich environments, certain anomalies like explosion, scream, or gunshot exhibit distinct acoustic signatures, making them more discriminative in the audio domain. Similarly, in low-light conditions where visual features degrade, audio serves as a critical supplementary modality. These observations underscore the importance of integrating audio and video modalities, as their complementary nature can significantly enhance the accuracy and robustness of anomaly detection systems in diverse and challenging environments. We illustrate the impact of audio-visual integration for WSVAD in Figure 1.</p>
+<p>Existing attempts [22], [25], [26] to incorporate audio into video anomaly detection typically adopt traditional feature concatenation methods, such as fusing visual features extracted by I3D [27] or C3D [28] with audio features extracted by VG-</p>
+<p>Gish [29]. These approaches fail to fully exploit the potential of multimodal learning, resulting in suboptimal cross-modal integration. Moreover, they overlook the inherent semantic alignment between visual and auditory modalities, which are essential for enhancing anomaly detection performance.</p>
+<p>To address these limitations, we propose AVadCLIP, a WSVAD framework that leverages audio-visual collaborative learning to drive audio-visual anomaly detection by CLIPpowered cross-modal alignment. AVadCLIP fully exploits CLIP&rsquo;s intrinsic capability to establish semantic consistency across vision, text, and audio, ensuring that video anomaly detection is performed within a unified multimodal semantic space rather than merely fusing raw features. Our framework introduces three significant innovations: an efficient audiovisual feature fusion mechanism that is different from the naive feature concatenation and achieves adaptive cross-modal integration through lightweight parametric adaptation while keeping the CLIP backbone frozen; a novel audio-visual prompt mechanism dynamically enriches text label embeddings with key multimodal information, enhancing contextual understanding of videos and enabling more precise identification of different categories; and an uncertainty-driven feature distillation (UKD) module that generates audio-visual-like enhanced features in audio-missing scenarios, ensuring robust anomaly detection performance (as illustrated in Figure 1). Overall, our AVadCLIP relies on only a small set of trainable parameters, effectively transferring CLIP&rsquo;s pretrained knowledge to the weakly supervised audio-visual anomaly detection task. Furthermore, by employing a distillation strategy based on data uncertainty modeling, we further transfer the learned knowledge from our audio-visual anomaly detector to a unimodal detector, enabling robust anomaly detection in scenarios with incomplete modalities.</p>
+<p>In summary, our main contributions are as follows:</p>
+<ul>
+<li>We propose a WSVAD framework that harnesses audio-visual collaborative learning, leveraging CLIP&rsquo;s multimodal alignment capabilities. By incorporating a lightweight adaptive audio-visual fusion mechanism and integrating audio-visual information through promptbased learning, our approach effectively achieves CLIPdriven robust anomaly detection in multimodal settings.</li>
+<li>We design an uncertainty-driven feature distillation module, which transforms deterministic estimation into probabilistic uncertainty estimation. This enables the model to capture feature distribution variance, ensuring robust anomaly detection performance even with unimodal data.</li>
+<li>Extensive experiments on two WSVAD datasets demonstrate that our method achieves superior performance in audio-visual scenarios, while maintaining robust anomaly detection results even in audio-absent conditions.</li>
+</ul>
+
+<h2 class="relative group">II. RELATED WORK
+    <div id="ii-related-work" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ii-related-work" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">A. Video Anomaly Detection
+    <div id="a-video-anomaly-detection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-video-anomaly-detection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video anomaly detection has been extensively studied in recent years, with existing approaches broadly categorized into semi-supervised and weakly supervised methods. Among them, semi-supervised methods primarily rely on normal video clips for training and identify anomalies by detecting deviations from learned normal patterns during inference. These methods commonly adopt self-supervised learning techniques [30]–[32], such as reconstruction [33], [34] or prediction [35], [36]. Reconstruction-based methods assume that the model can effectively reconstruct normal videos, whereas abnormal videos, due to distributional discrepancies, result in significant reconstruction errors. Autoencoders [37], [38] are widely employed to capture normal pattern features, with reconstruction error serving as an anomaly indicator. Predictionbased methods [39] utilize models to forecast future frames, detecting anomalies based on prediction errors. However, a key limitation of semi-supervised methods is their tendency to overfit normal patterns, leading to poor generalization to unseen anomalies.</p>
+<p>Weakly supervised methods, in contrast, typically adopt the MIL framework, requiring only video-level anomaly labels and significantly reducing annotation costs. The classic work, DeepMIL [12], which employs a ranking loss to distinguish normal from anomalous instances. Furthermore, two-stage self-training strategy has been proposed to further enhance detection, where high-confidence anomalous regions identified during MIL training serve as pseudo-labels for a secondary refinement phase [40]–[42]. With the rise of Vision-Language Models (VLMs) [43], CLIP has shown remarkable crossmodal capabilities and is increasingly applied to WSVAD. VadCLIP [21], the first CLIP-based WSVAD method, integrates textual priors via text and visual prompts, enhancing anomaly detection. Building on this, TPWNG [15] refines feature learning through a two-stage approach. Recent research trends focus on large model driven strategies, e.g., training-free frameworks [44], [45], spatiotemporal anomaly detection [46], and open-scene anomaly detection [47]. Recent advances in multi-modal fusion [48] introduce powerful frameworks combining diverse modalities such as visual and audio features. For instance, AVCL [49] and DSRL [50] have shown significant promise in improving anomaly detection by leveraging both visual and audio cues.</p>
+
+<h2 class="relative group">B. Audio-Visual Learning
+    <div id="b-audio-visual-learning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b-audio-visual-learning" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The integration of audio and visual information has emerged as a critical research direction in multimodal learning, as it not only enhances model performance but also facilitates a deeper understanding of complex scenes. Significant progress has been achieved in various aspects of audio-visual fusion [51], [52]. In audio-visual segmentation, researchers aim to accurately segment sound-producing objects based on audio-visual cues. Chen et al. [53] proposed a novel informative sample mining method for audio-visual supervised contrastive learning. Ma et al. [54] introduced a two-stage training strategy to address the audio-visual semantic segmentation (AVSS) task. Building on these works, Guo et al. [55] introduced a new task: Open-Vocabulary AVSS (OV-AVSS), which extends AVSS to open-world scenarios beyond predefined annotation labels. Audio-visual event localization aims to identify the spatial and temporal locations of both visual and auditory events, with attention mechanisms widely used for modality fusion. For</p>
+<p>instance, He et al. [56] proposed an audio-visual co-guided attention mechanism, while Xu et al. [57] introduced an audioguided spatial-channel attention mechanism. Related tasks include audio-visual video parsing [58], [59] and audio-visual action recognition [60]. Audio-visual anomaly detection [25], [61] has also become a growing research hot. For example, Yu et al. [62] applied a self-distillation module to transfer singlemodal visual knowledge to an audio-visual model, reducing noise and bridging the semantic gap between single-modal and multimodal features. Similarly, Pang et al. [63] proposed a weighted feature generation approach, leveraging mutual guidance between visual and auditory information, followed by bilinear pooling for effective feature integration.</p>
+
+<h2 class="relative group">C. Large Models in Video Understanding
+    <div id="c-large-models-in-video-understanding" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c-large-models-in-video-understanding" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In recent years, large models have exhibited exceptional capabilities in perception and reasoning for video understanding tasks, significantly accelerating the shift from purely visual models to multimodal video understanding frameworks. Representative visual models, such as VideoMAE [64], employ masked self-supervised learning to effectively model spatiotemporal dynamics in videos, facilitating their widespread application in video classification, action recognition, and anomaly detection. With the success of VLMs like CLIP [18] and ALIGN [65], integrating language priors into video understanding has emerged as a prominent research trend. These models perform cross-modal semantic alignment through joint image-text encoding and have been widely adopted in tasks such as zero-shot action recognition, video retrieval, and openvocabulary scene understanding. Further advances, including X-CLIP [66] and VideoCLIP [20], introduce temporal modeling into VLM architectures, significantly improving semantic comprehension of long-form video content. Meanwhile, VLMbased video reasoning tasks are gaining increasing attention. Models such as VL-T5 [67] and VideoChat [68] leverage language-guided mechanisms to enable video question answering, event interpretation, and causal reasoning, thereby substantially broadening the scope of video understanding.</p>
+
+<h2 class="relative group">III. METHODOLOGY
+    <div id="iii-methodology" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#iii-methodology" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">A. Problem Statement
+    <div id="a-problem-statement" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-problem-statement" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Given a training set of videos {Vi}, where each video V contains both visual and corresponding audio information, along with a video-level label y ∈ R C . Here, C indicates that the number of categories (including the normal class and various anomaly classes). To facilitate model processing, we employ a video encoder and an audio encoder to extract highlevel features X v ∈ R N×d and X a ∈ R N×d , respectively, where N represents the temporal length of the video (i.e., the number of frames or snippets) and d denotes the feature dimensionality. The objective of WSVAD task is to train a detector using all available X v, X a , and their corresponding labels from the training set, enabling the model to accurately determine whether each frame in a test sample is anomalous and to identify the specific anomaly category.</p>
+<p>The overall pipeline of our method as shown in Figure 2, starts with extracting features from video and audio using dedicated encoders, then adaptively fuses them for multimodal correspondence learning. We combine a classification branch with a CLIP-based alignment approach, using a audio-visual prompt to inject fine-grained multimodal information into text embeddings. Additionally, an uncertainty-driven distillation is employed to improve anomaly detection robustness in scenarios with incomplete modalities.</p>
+
+<h2 class="relative group">B. Video and Audio Encoders
+    <div id="b-video-and-audio-encoders" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b-video-and-audio-encoders" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Video encoder. Leveraging CLIP&rsquo;s robust cross-modal representation, we use its image encoder (ViT-B/16) as a video encoder, in contrast to traditional models like C3D and I3D, which are less effective in capturing semantic relationships. We extract features from sampled video frames using CLIP, but to address CLIP&rsquo;s lack of temporal modeling, we incorporate a lightweight temporal model, such as Graph Convolution Network (GCN) [16] and Temporal Transformer [21], to capture temporal dependencies. This approach ensures efficient transfer of CLIP&rsquo;s pre-trained knowledge to the WSVAD task. Audio encoder. For audio feature extraction, we use Wav2CLIP [69], a CLIP-based model that maps audio signals into the same semantic space as images and text. The audio is first converted into spectrograms, then sampled to match the number of video frames. These audio segments are processed by Wav2CLIP to extract features. To capture contextual relationships, we apply a temporal convolution layer [70], which models local temporal dependencies, preserving key dynamics within the audio modality.</p>
+
+<h2 class="relative group">C. Audio-Visual Adaptive Fusion
+    <div id="c-audio-visual-adaptive-fusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c-audio-visual-adaptive-fusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In multimodal feature fusion, while both video and audio contain valuable semantic information, their importance often varies depending on the specific task. Inspired by human perception mechanisms [71], our approach follows a visioncentric, audio-assisted paradigm, where video features serve as the primary modality, and audio features complement and enhance visual information. To preserve the generalization capability of the original CLIP model in downstream tasks while avoiding the introduction of excessive trainable parameters, we design a lightweight adaptive fusion that integrates audio features without significantly increasing computational overhead. We present the structure of this fusion in Figure 3.</p>
+<p>Specifically, given the video feature X v and audio feature X a , we first concatenate them to obtain a joint representation X a+v ∈ R N×2d , which is then processed by two projection networks to generate the adaptive weight and residual feature. The first projection network computes adaptive fusion weights W, which determine the contribution of audio at each time step [72]. This is achieved through a linear transformation followed by a sigmoid activation:</p>
+<!-- formula-not-decoded -->
+<p>The second projection network is responsible for residual mapping, which transforms X a+v into a residual feature Xr Xres that encodes the fused information from both modalities:</p>
+<!-- formula-not-decoded -->
+<p>Fig. 2. The pipeline of our proposed AVadCLIP. Our method supports both multimodal inputs and visual-only inputs via distillation, enabling robust video anomaly detection through the proposed UKD strategy. Throughout the entire framework, the pre-trained CLIP backbone remains fully frozen, with only a few modules being trainable. This design allows for efficient and lightweight adaptation of CLIP&rsquo;s knowledge to the specific task of audio-visual anomaly detection.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000001_6c781f39ea7450bb1493fad6c37a5c023ae5220ce298d98266cfda2f996d0250.png"
+    ></figure>
+<p>Fig. 3. The pipeline of our proposed adaptive fusion module, binary classifier, visual enhancement network, and uncertainly modeling network.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000002_261617b5586394102fcc581ebd0613184571c6924a878a2180948488d2b897c7.png"
+    ></figure>
+<p>Finally, the fused representation X av is obtained by adaptively incorporating the residual feature into the original video feature:</p>
+<!-- formula-not-decoded -->
+<p>where ⊙ denotes element-wise multiplication. The adaptive weight W dynamically adjusts the degree of audio integration, ensuring that video features remain dominant while audio features provide auxiliary information. Additionally, the residual mapping enhances the expressiveness of the fused representation by capturing nonlinear transformations. By introducing an adaptive fusion mechanism and maintaining a lightweight design, our fusion approach effectively balances efficiency and expressiveness, leveraging the complementarity of visual and audio modalities while minimizing computational overhead.</p>
+
+<h2 class="relative group">D. Dual Branch Framework with Prompts
+    <div id="d-dual-branch-framework-with-prompts" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d-dual-branch-framework-with-prompts" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We leverage a dual-branch framework [21] for the WSVAD task, consisting of a classification branch and an alignment branch, which effectively leverage audio-visual information to improve detection accuracy. Classification branch consists of a lightweight binary classifier (as shown in Figure 3), which takes X av as input and directly predicts the framelevel anomaly confidence A. Alignment branch leverages the cross-modal semantic alignment mechanism, which computes the similarity between frame-level features and class label features. To obtain class label representations, we leverage the CLIP text encoder combined with the learnable textual prompt [73] and audio-visual prompt to extract class embeddings, ensuring unified semantic alignment between visual and textual modalities. Given a set of predefined class labels (e.g.,</p>
+<p>&ldquo;normal&rdquo;, &ldquo;fighting&rdquo;), we first introduce a learnable textual prompt, then we concatenate the textual prompt with class labels and feed them into CLIP text encoder to obtain the class representation X c . Compared to the manually defined prompt, the learnable prompt allows the model to dynamically adjust textual representations during training, making them more suitable for the specific requirements of WSVAD. Furthermore, we incorporate an audio-visual prompt into the class label features to enrich the class representations with additional multimodal information.</p>
+<p>The proposed audio-visual prompt mechanism aims to dynamically inject instance-level key audio-visual information into text labels to enhance the representation. Specifically, we leverage the anomaly confidence A from the classification branch and audio-visual features X av to generate a video-level global representation:</p>
+<!-- formula-not-decoded -->
+<p>where Norm represents the normalization operation. Next, we calculate the similarity matrix Sp Sp between the class representation X c and the global representation Xp Xp to measure the alignment between class labels and videos:</p>
+<!-- formula-not-decoded -->
+<p>based on Sp Sp , we generate the enhanced instance-level audiovisual prompt X mp :</p>
+<!-- formula-not-decoded -->
+<p>This operation dynamically adjusts the class representation&rsquo;s focus on different video instances by calculating the similarity between global audio-visual features and class labels, thereby enhancing cross-modal alignment.</p>
+<p>Then, we add X mp and the class representation X c , followed by a feed-forward network (FFN) transformation and a skip connection to obtain the final instance-specific class embedding X cp :</p>
+<!-- formula-not-decoded -->
+<p>where ADD represents element-wise addition.</p>
+<p>This dual-branch framework provides anomaly confidence through the classification branch and refines category identification with class information via the alignment branch, improving robustness and enabling fine-grained anomaly detection.</p>
+
+<h2 class="relative group">E. Optimization of Audio-Visual Model
+    <div id="e-optimization-of-audio-visual-model" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#e-optimization-of-audio-visual-model" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>For the classification branch, we adopt the Top-K mechanism, as proposed in previous work [25], to select the top K anomaly confidence values from both normal and abnormal videos, which are averaged as the video-level prediction. The classification loss LBCE is then computed using binary crossentropy between the prediction and groundtruth class.</p>
+<p>In the case of the alignment branch, the MIL-Align mechanism [21] is applied. We compute an alignment map M , reflecting the similarity between frame-level features X av and all category embeddings X cp . For each row in M, the top K similarities are selected and their average is used to quantify the alignment between the video and the current class. This results in a vector S = {s1, . . . , s m } representing the similarity between the video and all possible classes. Then the multi-class prediction is then calculated as:</p>
+<!-- formula-not-decoded -->
+<p>where pi represents the prediction for the i th class, and τ is the temperature scaling parameter. Then, we compute LNCE based on cross-entropy. Besides, to address the class imbalance in WSVAD , where normal samples dominate and anomaly instances are sparse, we employ the focal loss [74]. Finally, the overall loss LALIGN for alignment branch is the average of LNCE and LF OCAL .</p>
+
+<h2 class="relative group">F. Uncertainty-Driven Distillation
+    <div id="f-uncertainty-driven-distillation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#f-uncertainty-driven-distillation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In the WSVAD task, audio serves as a complementary modality to video, enhancing detection accuracy. However, audio may be unavailable in practical scenarios, leading to performance degradation. To address this, we apply knowledge distillation by using a pre-trained multi-modal (video+audio) teacher model to guide a unimodal (video-only) student model, ensuring robust anomaly detection even without audio. Traditional knowledge distillation methods typically assume a deterministic transfer of knowledge, employing mean square error (MSE) loss to align the student model with the teacher&rsquo;s feature representations. However, this approach fails to account for the inherent uncertainty in audio-visual feature fusion. In real-world scenarios, factors such as noisy audio or occluded visual content can introduce distortions in the fused features, leading to inaccurate feature representations and diminished generalization capability.</p>
+<p>To overcome this, we propose a probabilistic uncertainty distillation strategy [75], [76], which models data uncertainty during distillation, improving the student model&rsquo;s robustness across diverse scenarios. Specifically, assume Xav,i = Xvs,i+ ϵσi, where ϵ ∼ N (0 , I) , X vs represents enhanced visual features generated from the student model, and it is derived from X v after passing through a visual enhancement network, which is illustrated in Figure 3. Besides, σi refers to the inherent uncertainty between the i th pair of features. Then we model the observation as a Gaussian likelihood function to more accurately quantify data uncertainty in the feature distillation. The relationship between the audio-visual fusion feature X av,i and the unimodal feature X vs,i is formulated as:</p>
+<!-- formula-not-decoded -->
+<p>where θ is the parameter of models, to maximize the likelihood for each pair of features Xav,i and Xvs,i, we adopt the loglikelihood form:</p>
+<!-- formula-not-decoded -->
+<p>In practice, we design a network branch (a simple threelayer convolutional neural network, which is shown in Figure 3) to predict the variance σ 2 i and reformulate the likelihood</p>
+<p>maximization problem as the minimization of a loss function. Specifically, we employ an uncertainty-weighted MSE loss:</p>
+<!-- formula-not-decoded -->
+<p>where L represents the number of feature pairs, and the constant term is omitted for clarity.</p>
+<p>During the distillation process, the student model not only learns the unimodal feature X vs,i from the teacher model but also considers the feature uncertainty σ 2 i to optimize its learning strategy. Specifically, the first term of the loss function represents the feature similarity between the student and teacher models, normalized by σ 2 i . This assigns smaller weights to features with higher uncertainty, thereby avoiding overfitting to hard-to-learn information. The second term acts as a regularization term to prevent σ 2 i from becoming too small, ensuring effective distillation.</p>
+<p>Ultimately, during the inference phase, we only input video and perform anomaly detection through the unimodal student model for audio-missing scenarios.</p>
+
+<h2 class="relative group">IV. EXPERIMENTS
+    <div id="iv-experiments" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#iv-experiments" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h2 class="relative group">A. Datasets and Evaluation Metrics
+    <div id="a-datasets-and-evaluation-metrics" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-datasets-and-evaluation-metrics" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ol>
+<li>Datasets: We conduct extensive experiments on two audio-visual benchmarks: XD-Violence [25] and CCTVFightssub [49], both of which contain synchronized audio and visual modalities. Unlike traditional unimodal datasets, these benchmarks enable a more comprehensive evaluation of our framework&rsquo;s robustness under multimodal settings. XDViolence. As the largest publicly available audio-visual WSVAD dataset, XD-Violence [25] significantly surpasses existing datasets in scale and diversity. It comprises 3,954 training videos and 800 test videos, with the test set containing 500 violent and 300 non-violent videos. The dataset covers six distinct categories of violent events, including abuse, car accident, explosion, fighting, riot, and shooting, which occur at various temporal locations within videos.</li>
+</ol>
+<p>CCTV-Fightssub . Derived from CCTV-Fights [77], CCTVFightssub [49] is a carefully curated subset designed to address audio-visual anomaly detection. The subset retains 644 highquality videos depicting real-world fight scenarios, each with meaningful audio content, making it a valuable resource for evaluating audio-visual anomaly detection methods in realworld surveillance contexts.</p>
+<ol start="2">
+<li>Evaluation Metrics: For performance evaluation, we adopt distinct metrics tailored to different granularities of WSVAD tasks. For coarse-grained WSVAD, we employ framelevel Average Precision (AP), which provides a comprehensive measure of detection accuracy across varying confidence thresholds. For fine-grained anomaly detection, we utilize mean Average Precision (mAP) [22] computed across multiple intersection over union (IoU) thresholds and the average mAP (AVG) across different thresholds. Specifically, we evaluate mAP at IoU thresholds ranging from 0.1 to 0.5 with an interval of 0.1, followed by reporting AVG across these thresholds.</li>
+</ol>
+<p>TABLE I COARSE -GRAINED COMPARISONS ON XD-VIOLENCE .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>Reference</th>
+          <th>Modality</th>
+          <th>AP(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>DeepMIL [12]</td>
+          <td>CVPR 2018</td>
+          <td>RGB(ViT)</td>
+          <td>75.18</td>
+      </tr>
+      <tr>
+          <td>Wu et al. [25]</td>
+          <td>ECCV 2020</td>
+          <td>RGB(ViT)</td>
+          <td>80</td>
+      </tr>
+      <tr>
+          <td>RTFM [78]</td>
+          <td>ICCV 2021</td>
+          <td>RGB(ViT)</td>
+          <td>78.27</td>
+      </tr>
+      <tr>
+          <td>AVVD [22]</td>
+          <td>TMM 2022</td>
+          <td>RGB(ViT)</td>
+          <td>78.1</td>
+      </tr>
+      <tr>
+          <td>Ju et al. [19]</td>
+          <td>ECCV 2022</td>
+          <td>RGB(ViT)</td>
+          <td>76.57</td>
+      </tr>
+      <tr>
+          <td>DMU [26]</td>
+          <td>AAAI 2023</td>
+          <td>RGB(ViT)</td>
+          <td>82.41</td>
+      </tr>
+      <tr>
+          <td>CLIP-TSA [79]</td>
+          <td>ICIP 2023</td>
+          <td>RGB(ViT)</td>
+          <td>82.17</td>
+      </tr>
+      <tr>
+          <td>AnomalyCLIP [80]</td>
+          <td>CVIU 2024</td>
+          <td>RGB(ViT)</td>
+          <td>78.51</td>
+      </tr>
+      <tr>
+          <td>TPWNG [15]</td>
+          <td>CVPR 2024</td>
+          <td>RGB(ViT)</td>
+          <td>83.68</td>
+      </tr>
+      <tr>
+          <td>VadCLIP [21]</td>
+          <td>AAAI 2024</td>
+          <td>RGB(ViT)</td>
+          <td>84.51</td>
+      </tr>
+      <tr>
+          <td>AVadCLIP∗</td>
+          <td>this work</td>
+          <td>RGB(ViT)</td>
+          <td>85.53</td>
+      </tr>
+      <tr>
+          <td>FVAI [63]</td>
+          <td>ICASSP 202</td>
+          <td>RGB(I3D)+Audio</td>
+          <td>81.69</td>
+      </tr>
+      <tr>
+          <td>MACIL-SD [62]</td>
+          <td>ACMMM 20</td>
+          <td>RGB(I3D)+Audio</td>
+          <td>81.21</td>
+      </tr>
+      <tr>
+          <td>CUPL [81]</td>
+          <td>CVPR 2</td>
+          <td>RGB(I3D)+Audio</td>
+          <td>81.43</td>
+      </tr>
+      <tr>
+          <td>AVCL [49]</td>
+          <td>TMM 202</td>
+          <td>RGB(I3D)+Audio</td>
+          <td>81.11</td>
+      </tr>
+      <tr>
+          <td>AVadCLIP</td>
+          <td>this wor</td>
+          <td>RGB(ViT)+Audio</td>
+          <td>86.04</td>
+      </tr>
+  </tbody>
+</table>
+<p>TABLE II COARSE -GRAINED COMPARISONS ON CCTV-FIGHTSsub .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>Reference</th>
+          <th>Modality</th>
+          <th>AP(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>VadCLIP [21]</td>
+          <td>AAAI 2024</td>
+          <td>RGB(ViT)</td>
+          <td>72.78</td>
+      </tr>
+      <tr>
+          <td>AVadCLIP∗</td>
+          <td>this work</td>
+          <td>RGB(ViT)</td>
+          <td>73.36</td>
+      </tr>
+      <tr>
+          <td>MACIL-SD [62]</td>
+          <td>ACMMM20</td>
+          <td>RGB(I3D)+Audio</td>
+          <td>72.92</td>
+      </tr>
+      <tr>
+          <td>DMU [26]</td>
+          <td>CVPR202</td>
+          <td>RGB(I3D)+Audio</td>
+          <td>72.97</td>
+      </tr>
+      <tr>
+          <td>AVCL [49]</td>
+          <td>TMM 202</td>
+          <td>RGB(I3D)+Audio</td>
+          <td>73.2</td>
+      </tr>
+      <tr>
+          <td>AVadCLIP</td>
+          <td>this work</td>
+          <td>RGB(ViT)+Audio</td>
+          <td>73.38</td>
+      </tr>
+  </tbody>
+</table>
+
+<h2 class="relative group">B. Implementation Details
+    <div id="b-implementation-details" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#b-implementation-details" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>We conduct experiments on an NVIDIA RTX 4090 GPU, where the visual enhancement network is a single-layer 1D convolutional network, which includes a convolutional layer with a kernel size of 3, padding size of 1, ReLU activation function, and a skip connection. Such an operation effectively facilitates the aggregation of local contextual information. For input processing, we employ a frame selection strategy tailored to different datasets, sampling one frame per 16 frames for XD-Violence and one frame per 4 frames for CCTV-Fightssub , using a uniform sampling strategy with a maximum frame count of 256; During optimization, we set the batch size, learning rate, and total epoch to 96, 1e − 5 , and 10, respectively.</p>
+
+<h2 class="relative group">C. Comparison with State-of-the-Art Methods
+    <div id="c-comparison-with-state-of-the-art-methods" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#c-comparison-with-state-of-the-art-methods" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ol>
+<li>Performance comparison on XD-Violence: Our experiments evaluate both coarse-grained and fine-grained anomaly detection performance on XD-Violence, comparing our AVadCLIP against state-of-the-art approaches, as shown in Tables I, III.</li>
+</ol>
+<p>For coarse-grained anomaly detection, using only RGB inputs, AVadCLIP ∗ (∗ denotes RGB-only input) achieves an AP score of 85.53%, surpassing all existing vision-only methods. Notably, it outperforms VadCLIP, the previous best-performing RGB-only approach, by 1.0%, demonstrating superior visual anomaly detection. When incorporating audio, AVadCLIP further improves performance, significantly outperforming all</p>
+<p>TABLE III FINE -GRAINED COMPARISONS ON XD-VIOLENCE .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>Reference</th>
+          <th>Modality</th>
+          <th>mAP@IoU(%)</th>
+          <th>mAP@IoU(%)</th>
+          <th>mAP@IoU(%)</th>
+          <th>mAP@IoU(%)</th>
+          <th>mAP@IoU(%)</th>
+          <th>mAP@IoU(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>0.1</td>
+          <td>0.2</td>
+          <td>0.3</td>
+          <td>0.4</td>
+          <td>0.5</td>
+          <td>AVG</td>
+      </tr>
+      <tr>
+          <td>Random</td>
+          <td>-</td>
+          <td>RGB(VIT)</td>
+          <td>1.82</td>
+          <td>0.92</td>
+          <td>0.48</td>
+          <td>0.23</td>
+          <td>0.09</td>
+          <td>0.71</td>
+      </tr>
+      <tr>
+          <td>DeepMIL [12]</td>
+          <td>CVPR 2018</td>
+          <td>RGB(ViT)</td>
+          <td>22.72</td>
+          <td>15.57</td>
+          <td>9.98</td>
+          <td>6.2</td>
+          <td>3.78</td>
+          <td>11.65</td>
+      </tr>
+      <tr>
+          <td>AVVD [22]</td>
+          <td>TMM 2022</td>
+          <td>RGB(ViT)</td>
+          <td>30.51</td>
+          <td>25.75</td>
+          <td>20.18</td>
+          <td>14.83</td>
+          <td>9.79</td>
+          <td>20.21</td>
+      </tr>
+      <tr>
+          <td>VadCLIP [21]</td>
+          <td>AAAI 2024</td>
+          <td>RGB(ViT)</td>
+          <td>37.03</td>
+          <td>30.84</td>
+          <td>23.38</td>
+          <td>17.9</td>
+          <td>14.31</td>
+          <td>24.70</td>
+      </tr>
+      <tr>
+          <td>AVadCLIP∗</td>
+          <td>this work</td>
+          <td>RGB(ViT)</td>
+          <td>39.63</td>
+          <td>32.77</td>
+          <td>26.84</td>
+          <td>21.58</td>
+          <td>16.39</td>
+          <td>27.44</td>
+      </tr>
+      <tr>
+          <td>AVadCLIP</td>
+          <td>this work</td>
+          <td>RGB(ViT)+Audio</td>
+          <td>41.89</td>
+          <td>34.61</td>
+          <td>27.08</td>
+          <td>22.16</td>
+          <td>17.3</td>
+          <td>28.61</td>
+      </tr>
+  </tbody>
+</table>
+<p>TABLE IV FINE -GRAINED COMPARISONS ON CCTV-FIGHTSsub .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>Reference</th>
+          <th>Modality</th>
+          <th>mAP@IoU(%)</th>
+          <th>mAP@IoU(%)</th>
+          <th>mAP@IoU(%)</th>
+          <th>mAP@IoU(%)</th>
+          <th>mAP@IoU(%)</th>
+          <th>mAP@IoU(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>0.1</td>
+          <td>0.2</td>
+          <td>0.3</td>
+          <td>0.4</td>
+          <td>0.5</td>
+          <td>AVG</td>
+      </tr>
+      <tr>
+          <td>VadCLIP [21]</td>
+          <td>AAAI 2024</td>
+          <td>RGB(ViT)</td>
+          <td>19.34</td>
+          <td>14.32</td>
+          <td>9.25</td>
+          <td>6.64</td>
+          <td>3.73</td>
+          <td>10.66</td>
+      </tr>
+      <tr>
+          <td>AVadCLIP∗</td>
+          <td>this work</td>
+          <td>RGB(ViT)</td>
+          <td>21.1</td>
+          <td>14.57</td>
+          <td>9.01</td>
+          <td>5.74</td>
+          <td>4.69</td>
+          <td>11.02</td>
+      </tr>
+      <tr>
+          <td>AVadCLIP</td>
+          <td>this work</td>
+          <td>RGB(ViT)+Audio</td>
+          <td>22.25</td>
+          <td>15.91</td>
+          <td>10.4</td>
+          <td>7</td>
+          <td>5.28</td>
+          <td>12.17</td>
+      </tr>
+  </tbody>
+</table>
+<p>TABLE V CROSS -DATASET WSVAD RESULTS ON XD-VIOLENCE AND CCTV-FIGHTSsub .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Test⇒  Train⇓</th>
+          <th>XD-Violence</th>
+          <th>CCTV-Fightssub AP(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Train⇓</td>
+          <td>AP(%)</td>
+          <td>69.24</td>
+      </tr>
+      <tr>
+          <td>XD-Violence</td>
+          <td>86.04</td>
+          <td>69.24</td>
+      </tr>
+      <tr>
+          <td>CCTV-Fightssub</td>
+          <td>76.60</td>
+          <td>73.38</td>
+      </tr>
+  </tbody>
+</table>
+<p>multimodal baselines, achieving a remarkable 4.9% gain over the latest method AVCL [49].</p>
+<p>For fine-grained anomaly detection, AVadCLIP consistently outperforms all competitors across different IoU thresholds, as detailed in Table III. With RGB-only input, AVadCLIP ∗ surpasses VadCLIP at all IoU thresholds, achieving an AVG improvement of 2.7%. Similarly, the full-modality model AVadCLIP leads across all metrics, boosting the AVG by 3.9%. These results highlight the effectiveness of multimodal learning in precisely localizing anomaly boundaries and improving category predictions.</p>
+<ol start="2">
+<li>Performance comparison on CCTV-Fightssub: The coarse-grained anomaly detection results on CCTV-Fightssub are presented in Table II. For RGB-only methods, AVadCLIP ∗ achieves 73.36% AP, surpassing the state-of-the-art VadCLIP and demonstrating the effectiveness of our approach in unimodal scenarios. For audio-visual scenarios, AVadCLIP further improves performance, outperforming all existing methods. These results indicate that incorporating audio information can further enhance anomaly detection performance, validating the effectiveness of cross-modal complementary information mining.</li>
+</ol>
+<p>We present the fine-grained anomaly detection results on CCTV-Fightssub in Table IV, and it can be observed that AVadCLIP consistently outperforms all competitors at different IoU thresholds. Using RGB-only input, AVadCLIP ∗ surpasses VadCLIP at all IoU thresholds, achieving a 0.4% improvement in AVG. Similarly, AVadCLIP with audio leads in all metrics, increasing AVG by 1.5%. These results further highlight the effectiveness of multimodal learning in accurately locating</p>
+<p>TABLE VI EFFECTIVENESS OF DESIGNED MODULES ON XD-VIOLENCE .</p>
+<table>
+  <thead>
+      <tr>
+          <th>AV</th>
+          <th>V Fusion</th>
+          <th>AV Prompt</th>
+          <th>LF OCAL</th>
+          <th>AP(%)</th>
+          <th>AVG(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>79.85</td>
+          <td>27.89</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>√</td>
+          <td>×</td>
+          <td>×</td>
+          <td>82.9</td>
+          <td>26.63</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>√  √</td>
+          <td>√ √</td>
+          <td>×</td>
+          <td>86.18</td>
+          <td>26.79</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td>√</td>
+          <td>√</td>
+          <td>√</td>
+          <td>86.04</td>
+          <td>28.61</td>
+      </tr>
+  </tbody>
+</table>
+<p>anomalous boundaries and improving category prediction.</p>
+<ol start="3">
+<li>Cross-dataset Results: Table V presents the cross-dataset evaluation results of AVadCLIP on XD-Violence and CCTVFightssub, aiming to assess its generalization capability across different domains. Despite being trained on one dataset and tested on another, AVadCLIP consistently achieves competitive performance, demonstrating strong robustness and transferability. For example, AVadCLIP trained on XD-Violence still achieves an AP of 69.24% when directly tested on the surveillance-oriented CCTV-Fightssub, with less than a 4% drop compared to the model trained specifically on that dataset. These results highlight the model&rsquo;s ability to generalize well to unseen data distributions and diverse anomaly scenarios.</li>
+</ol>
+<p>Overall, AVadCLIP achieves state-of-the-art performance in both unimodal and multimodal settings across coarse-grained and fine-grained anomaly detection tasks. The comprehensive results validate its effectiveness in leveraging audio-visual collaboration and demonstrate the feasibility of uncertaintydriven distillation strategy.</p>
+
+<h2 class="relative group">D. Ablation Studies
+    <div id="d-ablation-studies" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#d-ablation-studies" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ol>
+<li>The effect of audio-visual adaptive fusion: From Table VI, it can be observed that the introduction of audiovisual fusion improves detection performance. Furthermore, Table VII presents the impact of different audio-visual fusion strategies on anomaly detection performance. First, the cross attention fusion performs poorly in the WSVAD task, indicating that although it can capture the relationships between modalities, its complex parameterized design may negatively</li>
+</ol>
+<p>Fig. 4. Coarse-grained and Fine-grained WSVAD visualization results of AVadCLIP and the baseline model on XD-Violence.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000003_4f209ded85235536a62fc68d0ab97bd74e33dab0e0aafc4cfb72206cc221e3e3.png"
+    ></figure>
+<p>TABLE VII EFFECTIVENESS OF AUDIO -VISUAL FUSION ON XD-VIOLENCE .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>AP(%)</th>
+          <th>AVG(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Cross Attention</td>
+          <td>75.15</td>
+          <td>10.51</td>
+      </tr>
+      <tr>
+          <td>Element-wise Addition</td>
+          <td>83.02</td>
+          <td>27.66</td>
+      </tr>
+      <tr>
+          <td>Concat+Linear Projection</td>
+          <td>83.36</td>
+          <td>28.88</td>
+      </tr>
+      <tr>
+          <td>Adaptive Fusion</td>
+          <td>86.04</td>
+          <td>28.61</td>
+      </tr>
+  </tbody>
+</table>
+<p>TABLE VIII EFFECTIVENESS OF UKD ON XD-VIOLENCE .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>AP(%)</th>
+          <th>AVG(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Audio Model w/o UKD</td>
+          <td>50.89</td>
+          <td>12.2</td>
+      </tr>
+      <tr>
+          <td>Audio Model w</td>
+          <td>52.51</td>
+          <td>13.5</td>
+      </tr>
+      <tr>
+          <td>Visual Model w/o UK</td>
+          <td>84.6</td>
+          <td>22.92</td>
+      </tr>
+      <tr>
+          <td>Visual Model w</td>
+          <td>85.53</td>
+          <td>27.44</td>
+      </tr>
+      <tr>
+          <td>Audio-Visual Model</td>
+          <td>86.04</td>
+          <td>28.61</td>
+      </tr>
+  </tbody>
+</table>
+<p>TABLE IX EFFECTIVENESS OF UKD ON CCTV-FIGHTSsub .</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>AP(%)</th>
+          <th>AVG(%)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Visual Model w/o UKD</td>
+          <td>67.89</td>
+          <td>10.65</td>
+      </tr>
+      <tr>
+          <td>Visual Model w</td>
+          <td>73.36</td>
+          <td>11.02</td>
+      </tr>
+      <tr>
+          <td>Audio-Visual Model</td>
+          <td>73.38</td>
+          <td>12.17</td>
+      </tr>
+  </tbody>
+</table>
+<p>impact the generalization ability of CLIP model in downstream WSVAD tasks. Next, the simple element-wise addition strategy achieves an AP of 83.02% and an AVG of 27.66%. Then, the concatenation with linear projection approach improves the AP to 83.36% and the AVG to 28.88%, indicating that enhancing feature representation through linear transformation facilitates more effective cross-modal information capture. Finally, our proposed adaptive fusion strategy achieves the best AP of 86.04%, outperforming the other three methods on the whole. This demonstrates that our adaptive fusion strategy, as a lightweight and effective fusion strategy, can more exploit complementary information between audio and</p>
+
+<h2 class="relative group">visual modalities.
+    <div id="visual-modalities" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#visual-modalities" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ol start="2">
+<li>
+<p>The effect of audio-visual prompt and LF OCAL: As presented in Table VI, the baseline model achieves an AP of only 79.85%. Integrating the audio-visual prompt on top of the adaptive fusion mechanism significantly enhances performance, increasing the AP to 86.18%. This improvement underscores the effectiveness of the audio-visual prompt in capturing critical multimodal patterns, thereby facilitating more precise anomaly recognition. Furthermore, incorporating focal loss into the model contributes to refining anomaly boundary detection, leading to more stable performance in fine-grained anomaly localization. In summary, the audio-visual prompt primarily enhances coarse-grained anomaly detection, and focal loss further refines boundary precision, enabling the model to achieve optimal performance across both AP and AVG metrics.</p>
+</li>
+<li>
+<p>The effect of uncertainty-driven distillation: As shown in Table VIII, the proposed UKD mechanism significantly enhances anomaly detection performance in both visual-only and audio-only models. Specifically, in the visual-only setting, UKD achieves a 0.9% improvement in AP and a 4.5% increase in AVG, attaining performance levels comparable to the teacher model trained with audio-visual inputs. Similarly, the audio-only model also benefits from UKD, exhibiting consistent performance gains. These results highlight the effectiveness of UKD in leveraging data uncertainty to enhance the robustness of unimodal representations during the distillation process, making it particularly well-suited for real-world applications where modality incompleteness is prevalent. In addition, we present a comparison of the effectiveness of the UKD module on CCTV-Fightssub in Table IX. The results show that the proposed UKD mechanism significantly improves the anomaly detection performance of the unimodal model. Notably, in the visual-only scenario, adding UKD improves AP by 5.5%, achieving performance comparable to that of the audio-visual model. This finding further demonstrates the effectiveness of UKD in enhancing the robustness of unimodal representations through data uncertainty.</p>
+</li>
+</ol>
+<p>Fig. 5. Coarse-grained WSVAD visualization results of AVadCLIP, AVadCLIP ∗ , and the baseline model on XD-Violence.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000004_608312dd9cb25588aec612ab1ace3a184897c6a52032f9649a835e9c6a48e32c.png"
+    ></figure>
+<p>Fig. 6. Coarse-grained WSVAD visualization results of AVadCLIP, AVadCLIP ∗ , and the baseline model on CCTV-Fightssub .</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Image"
+    src="artifacts/image_000005_3b0d3fca2f97c4ebbf4c23c5033ed47df79639773592d397212140cd27d16dd0.png"
+    ></figure>
+
+<h2 class="relative group">E. Qualitative Results
+    <div id="e-qualitative-results" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#e-qualitative-results" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In Figure 4, we present the qualitative visualizations of AVadCLIP and the baseline model for both coarse-grained and fine-grained WSVAD. The blue curves denote the anomaly predictions by AVadCLIP, whereas the yellow curves represent those by the baseline model (RGB-only w/o UKD). As illustrated, compared to the baseline model, AVadCLIP significantly reduces anomaly confidence in normal video segments, thereby enhancing its ability to distinguish between abnormal and normal regions more accurately. The fine-grained map below also indicates that AVadCLIP can predict categories with greater precision. Notably, the observed performance improvement supports our hypothesis that audio information is more advantageous in visual occlusion (shooting) or acoustic dominant scenes (explosion), and can effectively eliminate ambiguity in visually similar patterns in anomaly detection scenes, thereby ensuring more robust detection performance.</p>
+<p>In addition, we compare the coarse-grained visualization results of the baseline model (RGB-only w/o UKD), the student model AVadCLIP ∗ , and the teacher model AVadCLIP on XD-Violence, as shown in Figure 5. Experimental results show that AVadCLIP significantly outperforms the other two counterparts. By using this model as a teacher model to guide the unimodal student model, it effectively mitigates anomaly confidence biases, steering them towards more accurate detection results. To a certain extent, this demonstrates the robustness of our proposed method.</p>
+<p>In order to demonstrate the superiority of our proposed method more comprehensively and intuitively, Figure 6 shows the coarse-grained visualization results on the CCTV-Fightssub dataset (since this dataset only includes the &ldquo;Fighting&rdquo; category, fine-grained visualizations are not provided). It can be seen that our method achieves significantly higher anomaly confidence scores in abnormal regions and notably lower scores in normal regions compared to the baseline model. This demonstrates that the integration of audio and video information can still yield substantial performance improvements in complex scenes. Besides, as can be seen from the last two rows, the unimodal model distilled with the UKD mechanism shows significantly fewer false positives compared to the baseline, demonstrating that the UKD mechanism effectively transfers audio-visual multi-modal knowledge into the unimodal model.</p>
+
+<h2 class="relative group">V. CONCLUSION
+    <div id="v-conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#v-conclusion" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In this work, we propose a novel weakly supervised framework for robust video anomaly detection using audio-visual collaboration. Leveraging the powerful representation ability</p>
+<p>and cross-modal alignment capability of CLIP, we design two distinct modules to achieve efficient audio-visual collaboration and multimodal anomaly detection, based on the frozen CLIP model. Specifically, to seamlessly integrate audio-visual information, we introduce a lightweight fusion mechanism that adaptively generates fusion weights based on the importance of audio to assist visual information. Additionally, we propose an audio-visual prompt strategy that dynamically refines text embeddings with key multimodal features, strengthening the semantic alignment between video content and corresponding textual labels. To further bolster robustness in scenarios with missing modalities, we develop an uncertainty-driven distillation module that synthesizes audio-visual representations from visual inputs, focusing on challenging features. Experimental results across two benchmarks demonstrate that our framework effectively enables video-audio anomaly detection and enhances the model&rsquo;s robustness in scenarios with incomplete modalities. In the future, we will explore the integration of additional modalities (e.g., textual description) based on VLMs to achieve more robust video anomaly detection.</p>
+
+<h2 class="relative group">REFERENCES
+    <div id="references" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#references" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li>
+<p>[1] W. Luo, W. Liu, D. Lian, and S. Gao, &ldquo;Future frame prediction network for video anomaly detection,&rdquo; IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 44, no. 11, pp. 7505–7520, 2021.</p>
+</li>
+<li>
+<p>[2] H. Lv, C. Zhou, Z. Cui, C. Xu, Y. Li, and J. Yang, &ldquo;Localizing anomalies from weakly-labeled videos,&rdquo; IEEE transactions on image processing , vol. 30, pp. 4505–4515, 2021.</p>
+</li>
+<li>
+<p>[3] P. Wu and J. Liu, &ldquo;Learning causal temporal relation and feature discrimination for anomaly detection,&rdquo; IEEE Transactions on Image Processing, vol. 30, pp. 3513–3527, 2021.</p>
+</li>
+<li>
+<p>[4] M. I. Georgescu, R. T. Ionescu, F. S. Khan, M. Popescu, and M. Shah, &ldquo;A background-agnostic framework with adversarial training for abnormal event detection in video,&rdquo; IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 44, no. 9, pp. 4505–4523, 2021.</p>
+</li>
+<li>
+<p>[5] M. Z. Zaheer, J.-H. Lee, A. Mahmood, M. Astrid, and S.-I. Lee, &ldquo;Stabilizing adversarially learned one-class novelty detection using pseudo anomalies,&rdquo; IEEE Transactions on Image Processing, vol. 31, pp. 5963– 5975, 2022.</p>
+</li>
+<li>
+<p>[6] C. Cao, Y. Lu, and Y. Zhang, &ldquo;Context recovery and knowledge retrieval: A novel two-stream framework for video anomaly detection,&rdquo; IEEE Transactions on Image Processing, 2024.</p>
+</li>
+<li>
+<p>[7] T. Liu, K.-M. Lam, and B.-K. Bao, &ldquo;Injecting text clues for improving anomalous event detection from weakly labeled videos,&rdquo; IEEE Transactions on Image Processing, 2024.</p>
+</li>
+<li>
+<p>[8] Y. Pu, X. Wu, L. Yang, and S. Wang, &ldquo;Learning prompt-enhanced context features for weakly-supervised video anomaly detection,&rdquo; IEEE Transactions on Image Processing, 2024.</p>
+</li>
+<li>
+<p>[9] P. Wu, C. Pan, Y. Yan, G. Pang, P. Wang, and Y. Zhang, &ldquo;Deep learning for video anomaly detection: A review,&rdquo; arXiv preprint arXiv:2409.05383, 2024.</p>
+</li>
+<li>
+<p>[10] P. Wu, J. Liu, X. He, Y. Peng, P. Wang, and Y. Zhang, &ldquo;Toward video anomaly retrieval from video anomaly detection: New benchmarks and model,&rdquo; IEEE Transactions on Image Processing, vol. 33, pp. 2213– 2225, 2024.</p>
+</li>
+<li>
+<p>[11] Y. Liu, H. Wang, Z. Wang, X. Zhu, J. Liu, P. Sun, R. Tang, J. Du, V. C. Leung, and L. Song, &ldquo;Crcl: Causal representation consistency learning for anomaly detection in surveillance videos,&rdquo; IEEE Transactions on Image Processing, 2025.</p>
+</li>
+<li>
+<p>[12] W. Sultani, C. Chen, and M. Shah, &ldquo;Real-world anomaly detection in surveillance videos,&rdquo; in Proceedings of the IEEE conference on computer vision and pattern recognition, 2018, pp. 6479–6488.</p>
+</li>
+<li>
+<p>[13] M. Z. Zaheer, A. Mahmood, M. Astrid, and S.-I. Lee, &ldquo;Claws: Clustering assisted weakly supervised learning with normalcy suppression for anomalous event detection,&rdquo; in Computer Vision–ECCV 2020: 16th European Conference, Glasgow, UK, August 23–28, 2020, Proceedings, Part XXII 16. Springer, 2020, pp. 358–376.</p>
+</li>
+<li>
+<p>[14] C. Huang, C. Liu, J. Wen, L. Wu, Y. Xu, Q. Jiang, and Y. Wang, &ldquo;Weakly supervised video anomaly detection via self-guided temporal discriminative transformer,&rdquo; IEEE Transactions on Cybernetics, 2022.</p>
+</li>
+<li>
+<p>[15] Z. Yang, J. Liu, and P. Wu, &ldquo;Text prompt with normality guidance for weakly supervised video anomaly detection,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2024, pp. 18 899–18 908.</p>
+</li>
+<li>
+<p>[16] J.-X. Zhong, N. Li, W. Kong, S. Liu, T. H. Li, and G. Li, &ldquo;Graph convolutional label noise cleaner: Train a plug-and-play action classifier for anomaly detection,&rdquo; in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2019, pp. 1237–1246.</p>
+</li>
+<li>
+<p>[17] S. Paul, S. Roy, and A. K. Roy-Chowdhury, &ldquo;W-talc: Weakly-supervised temporal activity localization and classification,&rdquo; in Proceedings of the European conference on computer vision, 2018, pp. 563–579.</p>
+</li>
+<li>
+<p>[18] A. Radford, J. W. Kim, C. Hallacy, A. Ramesh, G. Goh, S. Agarwal, G. Sastry, A. Askell, P. Mishkin, J. Clark et al., &ldquo;Learning transferable visual models from natural language supervision,&rdquo; in International conference on machine learning. PMLR, 2021, pp. 8748–8763.</p>
+</li>
+<li>
+<p>[19] C. Ju, T. Han, K. Zheng, Y. Zhang, and W. Xie, &ldquo;Prompting visuallanguage models for efficient video understanding,&rdquo; in Computer Vision– ECCV 2022: 17th European Conference, Tel Aviv, Israel, October 23–27, 2022, Proceedings, Part XXXV. Springer, 2022, pp. 105–124.</p>
+</li>
+<li>
+<p>[20] H. Xu, G. Ghosh, P.-Y. Huang, D. Okhonko, A. Aghajanyan, F. Metze, L. Zettlemoyer, and C. Feichtenhofer, &ldquo;Videoclip: Contrastive pre-training for zero-shot video-text understanding,&rdquo; arXiv preprint arXiv:2109.14084, 2021.</p>
+</li>
+<li>
+<p>[21] P. Wu, X. Zhou, G. Pang, L. Zhou, Q. Yan, P. Wang, and Y. Zhang, &ldquo;Vadclip: Adapting vision-language models for weakly supervised video anomaly detection,&rdquo; in Proceedings of the AAAI Conference on Artificial Intelligence, vol. 38, no. 6, 2024, pp. 6074–6082.</p>
+</li>
+<li>
+<p>[22] P. Wu, X. Liu, and J. Liu, &ldquo;Weakly supervised audio-visual violence detection,&rdquo; IEEE Transactions on Multimedia, pp. 1674–1685, 2022.</p>
+</li>
+<li>
+<p>[23] Y. Tian, J. Shi, B. Li, Z. Duan, and C. Xu, &ldquo;Audio-visual event localization in unconstrained videos,&rdquo; in Proceedings of the European conference on computer vision (ECCV), 2018, pp. 247–263.</p>
+</li>
+<li>
+<p>[24] Y. Tian, D. Li, and C. Xu, &ldquo;Unified multisensory perception: Weaklysupervised audio-visual video parsing,&rdquo; in Computer Vision–ECCV 2020: 16th European Conference, Glasgow, UK, August 23–28, 2020, Proceedings, Part III 16. Springer, 2020, pp. 436–454.</p>
+</li>
+<li>
+<p>[25] P. Wu, J. Liu, Y. Shi, Y. Sun, F. Shao, Z. Wu, and Z. Yang, &ldquo;Not only look, but also listen: Learning multimodal violence detection under weak supervision,&rdquo; in Computer Vision–ECCV 2020: 16th European Conference, Glasgow, UK, August 23–28, 2020, Proceedings, Part XXX 16. Springer, 2020, pp. 322–339.</p>
+</li>
+<li>
+<p>[26] H. Zhou, J. Yu, and W. Yang, &ldquo;Dual memory units with uncertainty regulation for weakly supervised video anomaly detection,&rdquo; in Proceedings of the AAAI Conference on Artificial Intelligence, 2023.</p>
+</li>
+<li>
+<p>[27] J. Carreira and A. Zisserman, &ldquo;Quo vadis, action recognition? a new model and the kinetics dataset,&rdquo; in proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 2017, pp. 6299–6308.</p>
+</li>
+<li>
+<p>[28] D. Tran, L. Bourdev, R. Fergus, L. Torresani, and M. Paluri, &ldquo;Learning spatiotemporal features with 3d convolutional networks,&rdquo; in Proceedings of the IEEE international conference on computer vision, 2015, pp. 4489–4497.</p>
+</li>
+<li>
+<p>[29] J. F. Gemmeke, D. P. Ellis, D. Freedman, A. Jansen, W. Lawrence, R. C. Moore, M. Plakal, and M. Ritter, &ldquo;Audio set: An ontology and humanlabeled dataset for audio events,&rdquo; in 2017 IEEE international conference on acoustics, speech and signal processing (ICASSP). IEEE, 2017, pp. 776–780.</p>
+</li>
+<li>
+<p>[30] C. Huang, J. Wen, Y. Xu, Q. Jiang, J. Yang, Y. Wang, and D. Zhang, &ldquo;Self-supervised attentive generative adversarial networks for video anomaly detection,&rdquo; IEEE transactions on neural networks and learning systems, vol. 34, no. 11, pp. 9389–9403, 2022.</p>
+</li>
+<li>
+<p>[31] C. Shi, C. Sun, Y. Wu, and Y. Jia, &ldquo;Video anomaly detection via sequentially learning multiple pretext tasks,&rdquo; in Proceedings of the IEEE/CVF International Conference on Computer Vision, 2023, pp. 10 330–10 340.</p>
+</li>
+<li>
+<p>[32] C. Huang, J. Wen, C. Liu, and Y. Liu, &ldquo;Long short-term dynamic prototype alignment learning for video anomaly detection,&rdquo; in Proceedings of the Thirty-Third International Joint Conference on Artificial Intelligence , 2024, pp. 866–874.</p>
+</li>
+<li>
+<p>[33] Y. Cong, J. Yuan, and J. Liu, &ldquo;Sparse reconstruction cost for abnormal event detection,&rdquo; in CVPR 2011. IEEE, 2011, pp. 3449–3456.</p>
+</li>
+<li>
+<p>[34] W. Luo, W. Liu, and S. Gao, &ldquo;A revisit of sparse coding based anomaly detection in stacked rnn framework,&rdquo; in Proceedings of the IEEE international conference on computer vision, 2017, pp. 341–349.</p>
+</li>
+<li>
+<p>[35] W. Liu, W. Luo, D. Lian, and S. Gao, &ldquo;Future frame prediction for anomaly detection–a new baseline,&rdquo; in Proceedings of the IEEE conference on computer vision and pattern recognition, 2018, pp. 6536– 6545.</p>
+</li>
+<li>
+<p>[36] C. Cao, H. Zhang, Y. Lu, P. Wang, and Y. Zhang, &ldquo;Scene-dependent prediction in latent space for video anomaly detection and anticipation,&rdquo; IEEE Transactions on Pattern Analysis and Machine Intelligence, 2024.</p>
+</li>
+<li>
+<p>[37] M. Hasan, J. Choi, J. Neumann, A. K. Roy-Chowdhury, and L. S. Davis, &ldquo;Learning temporal regularity in video sequences,&rdquo; in Proceedings of the IEEE conference on computer vision and pattern recognition, 2016, pp. 733–742.</p>
+</li>
+<li>
+<p>[38] D. Gong, L. Liu, V. Le, B. Saha, M. R. Mansour, S. Venkatesh, and A. v. d. Hengel, &ldquo;Memorizing normality to detect anomaly: Memoryaugmented deep autoencoder for unsupervised anomaly detection,&rdquo; in Proceedings of the IEEE/CVF international conference on computer vision, 2019, pp. 1705–1714.</p>
+</li>
+<li>
+<p>[39] Z. Yang, J. Liu, Z. Wu, P. Wu, and X. Liu, &ldquo;Video event restoration based on keyframes for video anomaly detection,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2023, pp. 14 592–14 601.</p>
+</li>
+<li>
+<p>[40] S. Li, F. Liu, and L. Jiao, &ldquo;Self-training multi-sequence learning with transformer for weakly supervised video anomaly detection,&rdquo; in Proceedings of the AAAI Conference on Artificial Intelligence, vol. 36, no. 2, 2022, pp. 1395–1403.</p>
+</li>
+<li>
+<p>[41] J.-C. Feng, F.-T. Hong, and W.-S. Zheng, &ldquo;Mist: Multiple instance selftraining framework for video anomaly detection,&rdquo; in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2021, pp. 14 009–14 018.</p>
+</li>
+<li>
+<p>[42] M. Cho, M. Kim, S. Hwang, C. Park, K. Lee, and S. Lee, &ldquo;Look around for anomalies: Weakly-supervised anomaly detection via context-motion relational learning,&rdquo; in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2023, pp. 12 137–12 146.</p>
+</li>
+<li>
+<p>[43] F.-L. Chen, D.-Z. Zhang, M.-L. Han, X.-Y. Chen, J. Shi, S. Xu, and B. Xu, &ldquo;Vlp: A survey on vision-language pre-training,&rdquo; Machine Intelligence Research, vol. 20, no. 1, pp. 38–56, 2023.</p>
+</li>
+<li>
+<p>[44] L. Zanella, W. Menapace, M. Mancini, Y. Wang, and E. Ricci, &ldquo;Harnessing large language models for training-free video anomaly detection,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2024, pp. 18 527–18 536.</p>
+</li>
+<li>
+<p>[45] Y. Yang, K. Lee, B. Dariush, Y. Cao, and S.-Y. Lo, &ldquo;Follow the rules: Reasoning for video anomaly detection with large language models,&rdquo; arXiv preprint arXiv:2407.10299, 2024.</p>
+</li>
+<li>
+<p>[46] P. Wu, X. Zhou, G. Pang, Z. Yang, Q. Yan, P. WANG, and Y. Zhang, &ldquo;Weakly supervised video anomaly detection and localization with spatio-temporal prompts,&rdquo; in ACM Multimedia 2024, 2024.</p>
+</li>
+<li>
+<p>[47] P. Wu, X. Zhou, G. Pang, Y. Sun, J. Liu, P. Wang, and Y. Zhang, &ldquo;Openvocabulary video anomaly detection,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2024, pp. 18 297–18 307.</p>
+</li>
+<li>
+<p>[48] D. Ding, L. Wang, L. Zhu, T. Gedeon, and P. Koniusz, &ldquo;Learnable expansion of graph operators for multi-modal feature fusion,&rdquo; arXiv preprint arXiv:2410.01506, 2025.</p>
+</li>
+<li>
+<p>[49] J. Meng, H. Tian, G. Lin, J.-F. Hu, and W.-S. Zheng, &ldquo;Audio-visual collaborative learning for weakly supervised video anomaly detection,&rdquo; IEEE Transactions on Multimedia, 2025.</p>
+</li>
+<li>
+<p>[50] J. Leng, Z. Wu, M. Tan, Y. Liu, J. Gan, H. Chen, and X. Gao, &ldquo;Beyond euclidean: Dual-space representation learning for weakly supervised video violence detection,&rdquo; in Advances in Neural Information Processing Systems, A. Globerson, L. Mackey, D. Belgrave, A. Fan, U. Paquet, J. Tomczak, and C. Zhang, Eds., vol. 37. Curran Associates, Inc., 2024, pp. 17 373–17 397. [Online]. Available: <a
+  href="https://proceedings.neurips.cc/paper"
+    target="_blank"
+  >https://proceedings.neurips.cc/paper</a> files/paper/ 2024/file/1f471322127d6347e5ae09a14b1e5cf7-Paper-Conference.pdf</p>
+</li>
+<li>
+<p>[51] G. Li, Y. Wei, Y. Tian, C. Xu, J.-R. Wen, and D. Hu, &ldquo;Learning to answer questions in dynamic audio-visual scenarios,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , 2022, pp. 19 108–19 118.</p>
+</li>
+<li>
+<p>[52] Y. Wei, D. Hu, Y. Tian, and X. Li, &ldquo;Learning in audio-visual context: A review, analysis, and new perspective,&rdquo; arXiv preprint arXiv:2208.09579 , 2022.</p>
+</li>
+<li>
+<p>[53] Y. Chen, Y. Liu, H. Wang, F. Liu, C. Wang, H. Frazer, and G. Carneiro, &ldquo;Unraveling instance associations: A closer look for audio-visual segmentation,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2024, pp. 26 497–26 507.</p>
+</li>
+<li>
+<p>[54] J. Ma, P. Sun, Y. Wang, and D. Hu, &ldquo;Stepping stones: a progressive training strategy for audio-visual semantic segmentation,&rdquo; in European Conference on Computer Vision. Springer, 2024, pp. 311–327.</p>
+</li>
+<li>
+<p>[55] R. Guo, L. Qu, D. Niu, Y. Qi, W. Yue, J. Shi, B. Xing, and X. Ying, &ldquo;Open-vocabulary audio-visual semantic segmentation,&rdquo; in Proceedings of the 32nd ACM International Conference on Multimedia, 2024, pp. 7533–7541.</p>
+</li>
+<li>
+<p>[56] X. He, X. Liu, Y. Li, D. Zhao, G. Shen, Q. Kong, X. Yang, and Y. Zeng, &ldquo;Cace-net: Co-guidance attention and contrastive enhancement for effective audio-visual event localization,&rdquo; in Proceedings of the 32nd ACM International Conference on Multimedia, 2024, pp. 985–993.</p>
+</li>
+<li>
+<p>[57] H. Xu, R. Zeng, Q. Wu, M. Tan, and C. Gan, &ldquo;Cross-modal relationaware networks for audio-visual event localization,&rdquo; in Proceedings of the 28th ACM international conference on multimedia, 2020, pp. 3893– 3901.</p>
+</li>
+<li>
+<p>[58] J. Zhou, D. Guo, Y. Zhong, and M. Wang, &ldquo;Advancing weaklysupervised audio-visual video parsing via segment-wise pseudo labeling,&rdquo; International Journal of Computer Vision, vol. 132, no. 11, pp. 5308–5329, 2024.</p>
+</li>
+<li>
+<p>[59] J. Zhou, D. Guo, Y. Mao, Y. Zhong, X. Chang, and M. Wang, &ldquo;Labelanticipated event disentanglement for audio-visual video parsing,&rdquo; in European Conference on Computer Vision. Springer, 2024, pp. 35–51.</p>
+</li>
+<li>
+<p>[60] J. Chalk, J. Huh, E. Kazakos, A. Zisserman, and D. Damen, &ldquo;Tim: A time interval machine for audio-visual action recognition,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2024, pp. 18 153–18 163.</p>
+</li>
+<li>
+<p>[61] Y. Liu, Z. Wu, M. Mo, J. Gan, J. Leng, and X. Gao, &ldquo;Dual space embedding learning for weakly supervised audio-visual violence detection,&rdquo; in 2024 IEEE International Conference on Multimedia and Expo (ICME) . IEEE, 2024, pp. 1–6.</p>
+</li>
+<li>
+<p>[62] J. Yu, J. Liu, Y. Cheng, R. Feng, and Y. Zhang, &ldquo;Modality-aware contrastive instance learning with self-distillation for weakly-supervised audio-visual violence detection,&rdquo; in Proceedings of the 30th ACM international conference on multimedia, 2022, pp. 6278–6287.</p>
+</li>
+<li>
+<p>[63] W.-F. Pang, Q.-H. He, Y.-j. Hu, and Y.-X. Li, &ldquo;Violence detection in videos based on fusing visual and audio information,&rdquo; in ICASSP 20212021 IEEE international conference on acoustics, speech and signal processing (ICASSP). IEEE, 2021, pp. 2260–2264.</p>
+</li>
+<li>
+<p>[64] Z. Tong, Y. Song, J. Wang, and L. Wang, &ldquo;Videomae: Masked autoencoders are data-efficient learners for self-supervised video pre-training,&rdquo; Advances in neural information processing systems, vol. 35, pp. 10 078– 10 093, 2022.</p>
+</li>
+<li>
+<p>[65] C. Jia, Y. Yang, Y. Xia, Y.-T. Chen, Z. Parekh, H. Pham, Q. Le, Y.-H. Sung, Z. Li, and T. Duerig, &ldquo;Scaling up visual and vision-language representation learning with noisy text supervision,&rdquo; in International Conference on Machine Learning. PMLR, 2021, pp. 4904–4916.</p>
+</li>
+<li>
+<p>[66] B. Ni, H. Peng, M. Chen, S. Zhang, G. Meng, J. Fu, S. Xiang, and H. Ling, &ldquo;Expanding language-image pretrained models for general video recognition,&rdquo; in Computer Vision–ECCV 2022: 17th European Conference, Tel Aviv, Israel, October 23–27, 2022, Proceedings, Part IV. Springer, 2022, pp. 1–18.</p>
+</li>
+<li>
+<p>[67] J. Cho, J. Lei, H. Tan, and M. Bansal, &ldquo;Unifying vision-and-language tasks via text generation,&rdquo; in International Conference on Machine Learning. PMLR, 2021, pp. 1931–1942.</p>
+</li>
+<li>
+<p>[68] K. Li, Y. He, Y. Wang, Y. Li, W. Wang, P. Luo, Y. Wang, L. Wang, and Y. Qiao, &ldquo;Videochat: Chat-centric video understanding,&rdquo; arXiv preprint arXiv:2305.06355, 2023.</p>
+</li>
+<li>
+<p>[69] H.-H. Wu, P. Seetharaman, K. Kumar, and J. P. Bello, &ldquo;Wav2clip: Learning robust audio representations from clip,&rdquo; in ICASSP 20222022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2022, pp. 4563–4567.</p>
+</li>
+<li>
+<p>[70] C. Lea, R. Vidal, A. Reiter, and G. D. Hager, &ldquo;Temporal convolutional networks: A unified approach to action segmentation,&rdquo; in Computer vision–ECCV 2016 workshops: Amsterdam, the Netherlands, October 8-10 and 15-16, 2016, proceedings, part III 14. Springer, 2016, pp. 47–54.</p>
+</li>
+<li>
+<p>[71] X. Chen, S. Fischer, M. C. Rue, A. Zhang, D. Mukherjee, P. O. Kanold, J. Gillis, and A. M. Zador, &ldquo;Whole-cortex in situ sequencing reveals input-dependent area identity,&rdquo; Nature, pp. 1–10, 2024.</p>
+</li>
+<li>
+<p>[72] X. Chen, N. Mishra, M. Rohaninejad, and P. Abbeel, &ldquo;Pixelsnail: An improved autoregressive generative model,&rdquo; in International conference on machine learning. PMLR, 2018, pp. 864–872.</p>
+</li>
+<li>
+<p>[73] K. Zhou, J. Yang, C. C. Loy, and Z. Liu, &ldquo;Learning to prompt for visionlanguage models,&rdquo; International Journal of Computer Vision, vol. 130, no. 9, pp. 2337–2348, 2022.</p>
+</li>
+<li>
+<p>[74] T.-Y. Lin, P. Goyal, R. Girshick, K. He, and P. Dollar, &ldquo;Focal loss ´ ´ for dense object detection,&rdquo; in Proceedings of the IEEE international conference on computer vision, 2017, pp. 2980–2988.</p>
+</li>
+<li>
+<p>[75] J. Chang, Z. Lan, C. Cheng, and Y. Wei, &ldquo;Data uncertainty learning in face recognition,&rdquo; in Proceedings of the IEEE/CVF conference on computer vision and pattern recognition, 2020, pp. 5710–5719.</p>
+</li>
+<li>
+<p>[76] Z. Yang, W. Dong, X. Li, J. Wu, L. Li, and G. Shi, &ldquo;Self-feature distillation with uncertainty modeling for degraded image recognition,&rdquo;</p>
+</li>
+<li>
+<p>in European Conference on Computer Vision. Springer, 2022, pp. 552– 569.</p>
+</li>
+<li>
+<p>[77] M. Perez, A. C. Kot, and A. Rocha, &ldquo;Detection of real-world fights in surveillance videos,&rdquo; in ICASSP 2019-2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2019, pp. 2662–2666.</p>
+</li>
+<li>
+<p>[78] Y. Tian, G. Pang, Y. Chen, R. Singh, J. W. Verjans, and G. Carneiro, &ldquo;Weakly-supervised video anomaly detection with robust temporal feature magnitude learning,&rdquo; in Proceedings of the IEEE/CVF international conference on computer vision, 2021, pp. 4975–4986.</p>
+</li>
+<li>
+<p>[79] H. K. Joo, K. Vo, K. Yamazaki, and N. Le, &ldquo;Clip-tsa: Clip-assisted temporal self-attention for weakly-supervised video anomaly detection,&rdquo; in 2023 IEEE International Conference on Image Processing (ICIP) . IEEE, 2023, pp. 3230–3234.</p>
+</li>
+<li>
+<p>[80] L. Zanella, B. Liberatori, W. Menapace, F. Poiesi, Y. Wang, and E. Ricci, &ldquo;Delving into clip latent space for video anomaly recognition,&rdquo; Computer Vision and Image Understanding, vol. 249, p. 104163, 2024.</p>
+</li>
+<li>
+<p>[81] C. Zhang, G. Li, Y. Qi, S. Wang, L. Qing, Q. Huang, and M.-H. Yang, &ldquo;Exploiting completeness and uncertainty of pseudo labels for weakly supervised video anomaly detection,&rdquo; in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2023, pp. 16 271–16 280.</p>
+</li>
+</ul>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_papers/AVadCLIP Audio-Visual Collaboration for Robust Video Anomaly Detection.md"
+          data-oid-likes="likes_papers/AVadCLIP Audio-Visual Collaboration for Robust Video Anomaly Detection.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/callm_cascading_autoencoder_and_large_language_model_for_video_anomaly_detection/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/papers/assistpda-an-online-video-surveillance-assistant-for-video-anomaly-prediction-detection-and-analysis/">
+              <span class="leading-6">
+                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-24 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+      
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 overflow-x-auto py-2">
+        <ul class="flex list-none flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 me-4">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href=""
+                title="">
+                
+                
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2025
+          
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>
