@@ -1,16 +1,25 @@
 [[main]]
-none = "none"
-
-[[main]]
 name = "papers"
 pageRef = "papers"
 identifier = "3vxdSNuqxZ"
 weight = 9_999
 
 [[main]]
-name = "test"
-pageRef = "test"
-identifier = "yKaTdvWJRt"
+name = "categories"
+pageRef = "categories"
+identifier = "d9R1G6BojF"
+weight = 9_999
+
+[[main]]
+name = "benchmarks"
+pageRef = "benchmarks"
+identifier = "Zgx9ovTuNC"
+weight = 9_999
+
+[[main]]
+name = "type"
+pageRef = "type"
+identifier = "3zAQoPi1Z8"
 weight = 9_999
 
 [[footer]]

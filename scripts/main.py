@@ -133,13 +133,13 @@ def process_single_pdf(pdf_path: Path, base_output_dir: Path):
             # 6. Write JSON as YAML front matter
             if extracted_data:
                 write_front_matter(md_file_path, extracted_data)
-            else:
-                print("  Skipping front matter, n8n call failed.")
 
-            # 7. Move original PDF to 'done'
-            done_file_path = DONE_DIR / pdf_path.name
-            shutil.move(pdf_path, done_file_path)
-            print(f"  Moved original file to: {done_file_path}")
+                # 7. Move original PDF to 'done'
+                done_file_path = DONE_DIR / pdf_path.name
+                shutil.move(pdf_path, done_file_path)
+                print(f"  Moved original file to: {done_file_path}")
+            else:
+                print("  n8n call failed.")
 
         else:
             print(f"  ERROR: API did not return a zip file.")

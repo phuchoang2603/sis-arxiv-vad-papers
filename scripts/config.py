@@ -4,8 +4,8 @@ from pathlib import Path
 
 load_dotenv()
 
-INPUT_DIR = Path("/mnt/storage/media/docs/arxiv_existing/test")
-OUTPUT_DIR = Path("/mnt/storage/media/docs/output/content/test")
+INPUT_DIR = Path("/mnt/storage/media/docs/arxiv_existing")
+OUTPUT_DIR = Path("/mnt/storage/media/docs/output/content/papers/")
 DONE_DIR = Path("/mnt/storage/media/docs/arxiv_existing/done")
 
 # --- API Configuration ---
