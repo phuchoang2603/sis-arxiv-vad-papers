@@ -4,7 +4,7 @@ type: survey
 categories:
 - Hybrid
 github_link:
-description: A comprehensive survey exploring deep learning-based video anomaly 
+summary: A comprehensive survey exploring deep learning-based video anomaly 
   detection, including emerging paradigms such as weakly supervised, 
   self-supervised, and unsupervised approaches, with a focus on core challenges,
   feature extraction, supervision schemes, loss functions, regularization 

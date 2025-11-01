@@ -4,7 +4,7 @@ title: Towards Zero-Shot Anomaly Detection and Reasoning with Multimodal Large
 type: other
 categories:
 - Hybrid
-description: Introduces a specialist visual assistant, Anomaly-OV, leveraging an
+summary: Introduces a specialist visual assistant, Anomaly-OV, leveraging an
   anomaly expert and visual token selection mechanism to improve zero-shot 
   anomaly detection and reasoning, establishing new datasets and benchmarks in 
   the domain.

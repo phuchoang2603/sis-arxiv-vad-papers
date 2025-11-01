@@ -6,7 +6,7 @@ categories:
 - Semi Supervised
 - Instruction Tuning
 github_link:
-description: Proposes a zero-shot skeleton-based video anomaly detection 
+summary: Proposes a zero-shot skeleton-based video anomaly detection 
   framework utilizing action semantic typicality and context uniqueness 
   learning, involving a language-guided typicality modeling module and a 
   test-time context uniqueness analysis module, achieving state-of-the-art 

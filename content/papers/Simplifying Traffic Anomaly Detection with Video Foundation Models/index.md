@@ -4,7 +4,7 @@ type: other
 categories:
 - Semi Supervised
 github_link: https://github.com/tue-mps/simple-tad
-description: The paper investigates the use of simple encoder-only Video Vision 
+summary: The paper investigates the use of simple encoder-only Video Vision 
   Transformers (Video ViTs) with various pre-training strategies for traffic 
   anomaly detection (TAD), demonstrating that with strong pretraining and domain
   adaptation, minimal architectural complexity can outperform complex prior 

@@ -5,7 +5,7 @@ type: other
 categories:
 - Hybrid
 github_link: https://lucazanella.github.io/lavad/
-description: Introduces a training-free method for video anomaly detection (VAD)
+summary: Introduces a training-free method for video anomaly detection (VAD)
   leveraging pre-trained large language models (LLMs) and vision-language models
   (VLMs). Proposes techniques for caption cleaning, scene description, and 
   anomaly scoring without additional training, demonstrating superior 

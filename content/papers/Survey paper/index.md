@@ -4,7 +4,7 @@ type: survey
 categories:
 - Hybrid
 github_link:
-description: Unspecified
+summary: Unspecified
 benchmarks:
 authors: []
 date: '2023-10-01'

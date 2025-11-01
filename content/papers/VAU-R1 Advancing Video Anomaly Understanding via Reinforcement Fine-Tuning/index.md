@@ -4,7 +4,7 @@ type: method
 categories:
 - Hybrid
 github_link: https://github.com/GVCLab/VAU-R1
-description: Introduces VAU-R1, a reinforcement fine-tuning framework leveraging
+summary: Introduces VAU-R1, a reinforcement fine-tuning framework leveraging
   Group Relative Policy Optimization (GRPO) to enhance multimodal large language
   models' (MLLMs) reasoning capabilities in video anomaly understanding (VAU). 
   Develops VAUBench, a comprehensive Chain-of-Thought benchmark with rich 

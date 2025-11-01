@@ -3,7 +3,7 @@ title: Aligning Effective Tokens with Video Anomaly in Large Language Models
 type: other
 categories:
 - Hybrid
-description: Proposes VA-GPT, a multimodal Large Language Model for video 
+summary: Proposes VA-GPT, a multimodal Large Language Model for video 
   anomaly detection and understanding, utilizing effective token selection and 
   generation modules (SETS and TETG) to improve spatial and temporal 
   localization of anomalies. Introduces instruct-following fine-tuning data and 

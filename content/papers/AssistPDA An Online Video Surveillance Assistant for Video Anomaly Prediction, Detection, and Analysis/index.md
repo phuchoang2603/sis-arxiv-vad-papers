@@ -5,7 +5,7 @@ type: application
 categories:
 - Hybrid
 github_link:
-description: Introducing AssistPDA, a pioneering framework for real-time online 
+summary: Introducing AssistPDA, a pioneering framework for real-time online 
   video anomaly prediction, detection, and analysis leveraging vision-language 
   models with a novel spatiotemporal relation distillation module and 
   constructed benchmark dataset VAPDA-127K.

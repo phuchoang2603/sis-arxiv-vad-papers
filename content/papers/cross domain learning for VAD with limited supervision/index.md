@@ -6,7 +6,7 @@ categories:
 - Weakly Supervised
 - Hybrid
 github_link:
-description: A proposed weakly-supervised framework that incorporates external 
+summary: A proposed weakly-supervised framework that incorporates external 
   unlabeled data during training by estimating prediction bias and adaptively 
   minimizing it using predicted uncertainty, to enhance cross-domain 
   generalization in video anomaly detection.

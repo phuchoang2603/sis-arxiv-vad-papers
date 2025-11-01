@@ -5,7 +5,7 @@ type: method
 categories:
 - Hybrid
 github_link:
-description: Proposes a novel pseudo-label generation and self-training 
+summary: Proposes a novel pseudo-label generation and self-training 
   framework incorporating CLIP for text-image alignment, learnable text prompts,
   normality visual prompts, a pseudo-label generation module guided by normality
   clues, and a self-adaptive temporal dependence learning module, achieving 

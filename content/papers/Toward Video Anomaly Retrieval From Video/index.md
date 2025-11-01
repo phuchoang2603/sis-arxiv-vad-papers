@@ -4,7 +4,7 @@ title: 'Towards Video Anomaly Retrieval from Video Anomaly Detection: New Benchm
 type: other
 categories:
 - Hybrid
-description: Proposes a new task called Video Anomaly Retrieval (VAR), 
+summary: Proposes a new task called Video Anomaly Retrieval (VAR), 
   introduces two large-scale benchmarks (UCFCrime-AR and XDViolence-AR), and 
   presents a model called Anomaly-Led Alignment Network (ALAN) for VAR, focusing
   on retrieving long untrimmed videos using cross-modal queries such as language

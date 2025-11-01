@@ -5,7 +5,7 @@ type: method
 categories:
 - Hybrid
 github_link:
-description: The paper proposes a dual-stream multimodal video anomaly detection
+summary: The paper proposes a dual-stream multimodal video anomaly detection
   network that leverages video, audio, and text modalities to achieve reliable 
   and precise anomaly detection. It introduces effective multimodal fusion, 
   abnormal-aware context prompts (ACPs), and a coarse-support-fine strategy to 

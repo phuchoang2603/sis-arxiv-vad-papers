@@ -4,7 +4,7 @@ type: method
 categories:
 - Hybrid
 github_link: https://github.com/SkiddieAhn/Paper-AnyAnomaly
-description: Proposes the AnyAnomaly model utilizing large vision language 
+summary: Proposes the AnyAnomaly model utilizing large vision language 
   models (LVLMs) for zero-shot, customizable video anomaly detection that 
   detects user-defined anomalies without additional training, incorporating 
   segment-level processing and context-aware visual question answering (VQA). 

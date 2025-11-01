@@ -5,7 +5,7 @@ type: method
 categories:
 - Hybrid
 github_link: https://github.com/Yuchen413/AnomalyRuler
-description: Proposes a rule-based reasoning framework, AnomalyRuler, for video 
+summary: Proposes a rule-based reasoning framework, AnomalyRuler, for video 
   anomaly detection using large language models, enabling fast scenario 
   adaptation with few-normal-shot prompting and enhanced robustness through 
   strategic modules.

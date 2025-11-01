@@ -4,7 +4,7 @@ title: 'Action Hints: Semantic Typicality and Context Uniqueness for Generalizab
 type: method
 categories:
 - Hybrid
-description: Proposes a zero-shot skeleton-based video anomaly detection 
+summary: Proposes a zero-shot skeleton-based video anomaly detection 
   framework leveraging action semantic typicality and context uniqueness 
   learning, utilizing language-guided semantic modeling and test-time 
   scene-adaptive boundaries to improve generalization without target domain 

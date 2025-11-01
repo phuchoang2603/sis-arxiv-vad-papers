@@ -4,7 +4,7 @@ type: method
 categories:
 - Semi Supervised
 github_link:
-description: A prediction-based video anomaly detection approach combining U-Net
+summary: A prediction-based video anomaly detection approach combining U-Net
   and Video Vision Transformer (ViViT), with modifications for video prediction,
   capturing richer temporal and global context information, enabling anomaly 
   localization.

@@ -6,7 +6,7 @@ categories:
 - Instruction Tuning
 - Hybrid
 github_link:
-description: Proposes VLAVAD, an unsupervised video anomaly detection method 
+summary: Proposes VLAVAD, an unsupervised video anomaly detection method 
   leveraging vision-language pre-trained models, utilizing semantic features, 
   Selective Prompt Adapter, and Sequence State Space Module to improve 
   interpretability and transferability, achieving state-of-the-art performance 

@@ -5,7 +5,7 @@ type: method
 categories:
 - Hybrid
 github_link: https://vera-framework.github.io
-description: Introduces VERA, a framework that enables frozen vision-language 
+summary: Introduces VERA, a framework that enables frozen vision-language 
   models to perform explainable video anomaly detection by learning detailed 
   anomaly-characterization questions from coarsely labeled data, without model 
   parameter modifications. The method decomposes complex reasoning into 

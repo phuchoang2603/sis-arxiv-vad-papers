@@ -4,7 +4,7 @@ type: other
 categories:
 - Hybrid
 github_link:
-description: Introduces a new task for comprehensive video anomaly captioning, 
+summary: Introduces a new task for comprehensive video anomaly captioning, 
   proposes a large-scale benchmark dataset CVACBench with fine-grained 
   annotations, and designs a baseline model AGPFormer using prompt learning to 
   improve anomaly understanding and description accuracy.

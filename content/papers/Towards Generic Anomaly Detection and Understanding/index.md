@@ -5,7 +5,7 @@ type: survey
 categories:
 - Hybrid
 github_link: https://github.com/caoyunkang/GPT4V-for-Generic-Anomaly-Detection
-description: This study explores the use of GPT-4V, a large visual-linguistic 
+summary: This study explores the use of GPT-4V, a large visual-linguistic 
   model, for generic anomaly detection across multiple modalities and domains, 
   demonstrating its ability to understand global and fine-grained semantics, 
   reason automatically, and improve with prompts. It evaluates GPT-4V on diverse

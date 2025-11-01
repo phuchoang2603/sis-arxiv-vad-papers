@@ -4,7 +4,7 @@ type: method
 categories:
 - Weakly Supervised
 github_link: https://github.com/coranholmes/TEVAD
-description: Proposes a framework that utilizes both visual and text features, 
+summary: Proposes a framework that utilizes both visual and text features, 
   generated through dense video captions, to enhance anomaly detection 
   performance and explainability in videos.
 benchmarks:

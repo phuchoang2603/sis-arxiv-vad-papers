@@ -6,7 +6,7 @@ categories:
 - Semi Supervised
 - Hybrid
 github_link:
-description: Proposes a hybrid framework that integrates a fast anomaly detector
+summary: Proposes a hybrid framework that integrates a fast anomaly detector
   with a slow, RAG-enhanced vision-language model to improve efficiency and 
   interpretability in video anomaly detection. It employs a retrieval-augmented 
   reasoning module for better scene-specific adaptation, uses an entropy-based 

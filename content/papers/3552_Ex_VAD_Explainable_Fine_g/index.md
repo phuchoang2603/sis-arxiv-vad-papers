@@ -5,7 +5,7 @@ type: method
 categories:
 - Hybrid
 github_link:
-description: The paper introduces Ex-VAD, a comprehensive framework for 
+summary: The paper introduces Ex-VAD, a comprehensive framework for 
   fine-grained and explainable video anomaly detection that leverages 
   visual-language models (VLMs) and large language models (LLMs). It features 
   modules for generating anomaly explanations, fusing multimodal features for 

@@ -8,7 +8,7 @@ categories:
 - Unsupervised
 - Hybrid
 github_link:
-description: A novel framework (PLOVAD) leveraging prompt tuning on large-scale 
+summary: A novel framework (PLOVAD) leveraging prompt tuning on large-scale 
   pretrained image-based vision-language models for open vocabulary video 
   anomaly detection, incorporating domain-specific and anomaly-specific prompts,
   and a temporal module to detect and categorize both seen and unseen anomalies 

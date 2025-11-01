@@ -5,7 +5,7 @@ type: method
 categories:
 - Semi Supervised
 github_link:
-description: Proposes a vision-language reasoning approach utilizing 
+summary: Proposes a vision-language reasoning approach utilizing 
   hierarchical prompts and Chain-of-Thought inference for process anomaly 
   detection in scientific experiments. Constructs a benchmark based on real 
   chemical laboratory workflows and demonstrates improved accuracy with prompt 

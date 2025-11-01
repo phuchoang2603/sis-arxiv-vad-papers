@@ -4,7 +4,7 @@ type: method
 categories:
 - Hybrid
 github_link:
-description: Proposes a generalized framework for video anomaly detection based 
+summary: Proposes a generalized framework for video anomaly detection based 
   on CLIP, introducing generative anomaly descriptions, temporal modules for 
   capturing temporal correlations, and object-centric approaches to improve 
   performance and robustness, with extensive experimentation on UCF-Crime and 

@@ -10,7 +10,7 @@ categories:
 - Unsupervised
 - Hybrid
 github_link: https://github.com/caoyunkang/Segment-Any-Anomaly
-description: Introduces AnomalyVLM, a framework leveraging hybrid prompts 
+summary: Introduces AnomalyVLM, a framework leveraging hybrid prompts 
   derived from prior knowledge to enhance zero-shot anomaly detection by 
   personalizing vision-language models, incorporating an anomaly region 
   generator and refiner, and utilizing hybrid prompts for category-specific 

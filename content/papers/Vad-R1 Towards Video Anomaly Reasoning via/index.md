@@ -4,7 +4,7 @@ type: method
 categories:
 - Hybrid
 github_link: https://github.com/wbfwonderful/Vad-R1
-description: Proposes a structured Perception-to-Cognition Chain-of-Thought and 
+summary: Proposes a structured Perception-to-Cognition Chain-of-Thought and 
   introduces Vad-Reasoning dataset, along with an improved reinforcement 
   learning algorithm AVA-GRPO, to enhance the deep reasoning capabilities of 
   Multimodal Large Language Models in video anomaly detection and understanding 

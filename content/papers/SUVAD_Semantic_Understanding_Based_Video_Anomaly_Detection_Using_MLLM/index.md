@@ -5,7 +5,7 @@ categories:
 - Semi Supervised
 - Training Free
 github_link:
-description: Proposes a training-free video anomaly detection method leveraging 
+summary: Proposes a training-free video anomaly detection method leveraging 
   multi-modal large language models for semantic understanding of videos, 
   enabling scene generalization, interpretability, and flexible anomaly 
   definition without retraining.

@@ -5,7 +5,7 @@ type: other
 categories:
 - Hybrid
 github_link:
-description: Introduces AADC-Net, a multimodal deep neural network leveraging 
+summary: Introduces AADC-Net, a multimodal deep neural network leveraging 
   pretrained vision-language models, large language models, and object detection
   (DETR) for real-time anomaly detection and categorization in surveillance 
   videos. The framework addresses data scarcity, imbalance, and computational 

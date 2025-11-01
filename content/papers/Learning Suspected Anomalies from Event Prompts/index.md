@@ -5,7 +5,7 @@ type: other
 categories:
 - Semi Supervised
 github_link: https://github.com/shiwoaz/lap
-description: Proposes a novel framework named LAP that leverages textual event 
+summary: Proposes a novel framework named LAP that leverages textual event 
   prompts and semantic similarity for weakly supervised video anomaly detection.
   It introduces a multi-prompt learning process, pseudo anomaly labeling, and 
   integrates semantic features derived from a prompt dictionary to guide the 

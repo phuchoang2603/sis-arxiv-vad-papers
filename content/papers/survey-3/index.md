@@ -8,7 +8,7 @@ categories:
 - Instruction Tuning
 - Hybrid
 github_link:
-description: This survey provides a comprehensive overview of deep 
+summary: This survey provides a comprehensive overview of deep 
   learning-based Video Anomaly Detection (VAD), covering challenges, 
   methodologies, domain-specific applications, and future research directions 
   across human-centric, vehicle-centric, and environment-centric contexts. It 

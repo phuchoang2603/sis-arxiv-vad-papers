@@ -4,7 +4,7 @@ type: other
 categories:
 - Hybrid
 github_link:
-description: This paper explores open-vocabulary video anomaly detection (OVVAD)
+summary: This paper explores open-vocabulary video anomaly detection (OVVAD)
   leveraging pre-trained large models to detect and categorize seen and unseen 
   anomalies. It proposes a disentangled approach with class-agnostic detection 
   and class-specific classification modules, enhanced by semantic knowledge 

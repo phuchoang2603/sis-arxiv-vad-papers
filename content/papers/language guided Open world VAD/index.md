@@ -6,7 +6,7 @@ categories:
 - Unsupervised
 - Hybrid
 github_link:
-description: Proposes a novel open-world VAD paradigm guided by natural 
+summary: Proposes a novel open-world VAD paradigm guided by natural 
   language, with a dynamic anomaly definition, regularization strategies, and a 
   large-scale dataset (PreVAD) with multi-level annotations and descriptions. 
   Achieves state-of-the-art zero-shot performance on seven datasets.

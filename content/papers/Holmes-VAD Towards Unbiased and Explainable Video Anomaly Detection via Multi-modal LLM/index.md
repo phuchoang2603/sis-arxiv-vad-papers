@@ -4,7 +4,7 @@ title: 'Holmes-VAD: Towards Unbiased and Explainable Video Anomaly Detection via
 type: method
 categories:
 - Hybrid
-description: A novel framework leveraging multimodal instructions and 
+summary: A novel framework leveraging multimodal instructions and 
   large-scale datasets to enable unbiased, interpretable, and accurate video 
   anomaly detection with large language models, including a new dataset 
   VAD-Instruct50k with single-frame annotations and explanatory instruction 

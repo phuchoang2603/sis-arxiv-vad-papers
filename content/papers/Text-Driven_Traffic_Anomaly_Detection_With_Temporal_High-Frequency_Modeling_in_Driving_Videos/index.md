@@ -5,7 +5,7 @@ type: other
 categories:
 - Hybrid
 github_link:
-description: The paper introduces TTHF, a novel single-stage method aligning 
+summary: The paper introduces TTHF, a novel single-stage method aligning 
   video clips with text prompts for traffic anomaly detection. It emphasizes 
   modeling high frequency in the temporal domain to capture dynamic changes in 
   driving scenes, and proposes an attentive anomaly focusing mechanism to 

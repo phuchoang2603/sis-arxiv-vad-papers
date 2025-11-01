@@ -3,7 +3,7 @@ title: Learning to Understand Open-World Video Anomalies
 type: other
 categories:
 - Hybrid
-description: Introduces HAWK, a novel framework leveraging interactive large 
+summary: Introduces HAWK, a novel framework leveraging interactive large 
   Visual Language Models with explicit and implicit motion modality integration,
   auxiliary consistency loss, and detailed language annotations for diverse 
   video anomaly scenarios. Demonstrates state-of-the-art performance in video 

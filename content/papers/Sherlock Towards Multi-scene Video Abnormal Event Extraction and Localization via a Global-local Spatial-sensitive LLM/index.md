@@ -5,7 +5,7 @@ type: other
 categories:
 - Semi Supervised
 github_link:
-description: Proposes a new task (M-VAE) for structured extraction and 
+summary: Proposes a new task (M-VAE) for structured extraction and 
   localization of abnormal events in videos, introduces Sherlock model with a 
   Global-local Spatial-sensitive MoE module and a Spatial Imbalance Regulator, 
   and demonstrates its effectiveness through extensive experiments.

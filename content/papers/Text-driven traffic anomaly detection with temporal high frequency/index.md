@@ -4,7 +4,7 @@ title: Text-Driven Traffic Anomaly Detection with Temporal High-Frequency
 type: other
 categories:
 - Hybrid
-description: Introduces a novel single-stage approach (TTHF) for traffic anomaly
+summary: Introduces a novel single-stage approach (TTHF) for traffic anomaly
   detection that aligns video clips with text prompts and models high-frequency 
   temporal changes, enhanced by an attention focusing mechanism, outperforming 
   state-of-the-art methods on benchmark datasets.

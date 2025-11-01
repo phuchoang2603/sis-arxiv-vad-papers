@@ -4,7 +4,7 @@ type: other
 categories:
 - Semi Supervised
 github_link: https://luca-zanella-dvl.github.io/AnomalyCLIP/
-description: Proposes AnomalyCLIP, a novel method leveraging Large Language and 
+summary: Proposes AnomalyCLIP, a novel method leveraging Large Language and 
   Vision (LLV) models like CLIP, combined with multiple instance learning and a 
   re-centring transformation of the CLIP feature space, to detect and classify 
   video anomalies and recognize anomaly types. Introduces a Selector model with 

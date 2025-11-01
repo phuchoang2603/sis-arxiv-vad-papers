@@ -5,7 +5,7 @@ categories:
 - Weakly Supervised
 - Semi Supervised
 github_link: https://github.com/talreiss/Accurate-Interpretable-VAD
-description: A simple attribute-based approach that represents each object by 
+summary: A simple attribute-based approach that represents each object by 
   velocity and pose attributes, combining these with deep representations, and 
   uses density estimation for anomaly scoring, achieving state-of-the-art 
   performance.

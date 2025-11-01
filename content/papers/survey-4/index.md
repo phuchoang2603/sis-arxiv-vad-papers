@@ -4,7 +4,7 @@ type: survey
 categories:
 - Hybrid
 github_link: https://github.com/fdjingliu/NSVAD
-description: A comprehensive survey and tutorial exploring the assumptions, 
+summary: A comprehensive survey and tutorial exploring the assumptions, 
   frameworks, recent advances, applications, and future trends of Networking 
   Systems for Video Anomaly Detection (NSVAD), emphasizing the integration of 
   AI, IoVT, and computing for real-world deployable systems.

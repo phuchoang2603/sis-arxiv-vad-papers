@@ -4,7 +4,7 @@ type: other
 categories:
 - Semi Supervised
 github_link:
-description: The paper proposes a hierarchical semantic contrast (HSC) method 
+summary: The paper proposes a hierarchical semantic contrast (HSC) method 
   that leverages scene-aware autoencoders, semantic contrastive learning, and 
   motion augmentation for improved scene-dependent and scene-independent video 
   anomaly detection. It incorporates pre-trained video parsing models, 

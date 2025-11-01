@@ -3,7 +3,7 @@ title: 'VISIONGPT: LLM-ASSISTED REAL-TIME ANOMALY DETECTION FOR SAFE VISUAL NAVI
 type: application
 categories:
 - Hybrid
-description: A framework combining lightweight object detection and large 
+summary: A framework combining lightweight object detection and large 
   language models for real-time visual navigation safety and anomaly detection, 
   with dynamic scenario switching and prompt engineering.
 benchmarks:

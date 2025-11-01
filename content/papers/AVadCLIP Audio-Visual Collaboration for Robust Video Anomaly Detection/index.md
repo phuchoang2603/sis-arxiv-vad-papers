@@ -5,7 +5,7 @@ categories:
 - Weakly Supervised
 - Hybrid
 github_link:
-description: A novel weakly supervised framework leveraging audio-visual 
+summary: A novel weakly supervised framework leveraging audio-visual 
   collaboration to improve the robustness and accuracy of video anomaly 
   detection.
 benchmarks:

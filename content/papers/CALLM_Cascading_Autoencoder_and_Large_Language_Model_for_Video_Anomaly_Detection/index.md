@@ -4,7 +4,7 @@ type: method
 categories:
 - Weakly Supervised
 github_link:
-description: This paper introduces a novel cascade system combining a 3D 
+summary: This paper introduces a novel cascade system combining a 3D 
   Autoencoder with a Large Visual Language Model (LVLM) for video anomaly 
   detection, leveraging weak supervision and multimodal capabilities to improve 
   detection and explanation of abnormalities.

@@ -4,7 +4,7 @@ type: other
 categories:
 - Semi Supervised
 github_link:
-description: The paper introduces VAD-LLaMA, a novel framework integrating 
+summary: The paper introduces VAD-LLaMA, a novel framework integrating 
   video-based large language models (VLLMs) for threshold-free, explainable 
   video anomaly detection, featuring a Long-Term Context (LTC) module and a 
   three-phase training process that enhances long-range context modeling and 

@@ -5,7 +5,7 @@ type: method
 categories:
 - Hybrid
 github_link:
-description: The paper proposes a prompt-based feature mapping framework (PFMF) 
+summary: The paper proposes a prompt-based feature mapping framework (PFMF) 
   to generate unseen anomalies with unbounded types and narrow the scene gap for
   video anomaly detection, outperforming state-of-the-art methods on multiple 
   datasets.

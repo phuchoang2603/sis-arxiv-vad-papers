@@ -4,7 +4,7 @@ type: other
 categories:
   - Hybrid
 github_link:
-description: Proposes a novel approach (CLAD) leveraging large vision-language models with contrastive cross-modal training for improved industrial anomaly detection and localization, enhancing interpretability and robustness.
+summary: Proposes a novel approach (CLAD) leveraging large vision-language models with contrastive cross-modal training for improved industrial anomaly detection and localization, enhancing interpretability and robustness.
 benchmarks:
   - other
 authors:

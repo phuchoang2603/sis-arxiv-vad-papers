@@ -5,7 +5,7 @@ type: method
 categories:
 - Hybrid
 github_link: https://github.com/nwpu-zxr/VadCLIP
-description: A novel paradigm for weakly supervised video anomaly detection 
+summary: A novel paradigm for weakly supervised video anomaly detection 
   leveraging frozen CLIP model with dual-branch architecture, temporal modeling 
   modules, and prompt mechanisms to utilize vision-language knowledge for both 
   coarse- and fine-grained detection tasks, achieving state-of-the-art 

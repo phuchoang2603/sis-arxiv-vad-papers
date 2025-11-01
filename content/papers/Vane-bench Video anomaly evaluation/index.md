@@ -5,7 +5,7 @@ categories:
 - Semi Supervised
 - Training Free
 github_link:
-description: This paper introduces a novel deep learning framework for detecting
+summary: This paper introduces a novel deep learning framework for detecting
   anomalies in video content by leveraging semi-supervised approaches that 
   require minimal labeled data, enhancing robustness and efficiency.
 benchmarks:

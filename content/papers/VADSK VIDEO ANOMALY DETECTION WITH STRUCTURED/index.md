@@ -5,7 +5,7 @@ categories:
 - Semi Supervised
 - Instruction Tuning
 github_link:
-description: A lightweight, interpretable, two-stage video anomaly detection 
+summary: A lightweight, interpretable, two-stage video anomaly detection 
   pipeline employing foundational models for frame description generation and 
   keyword-based classification, achieving comparable performance to 
   state-of-the-art methods with real-time inference and enhanced 

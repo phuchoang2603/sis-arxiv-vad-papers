@@ -5,7 +5,7 @@ type: benchmark
 categories:
 - Hybrid
 github_link: https://github.com/Xinyi-0724/SmartHome-Bench-LLM
-description: The paper introduces SmartHome-Bench, the first large-scale dataset
+summary: The paper introduces SmartHome-Bench, the first large-scale dataset
   and benchmark designed specifically for video anomaly detection (VAD) within 
   smart home environments, incorporating 1,203 annotated videos across seven 
   categories such as Wildlife, Senior Care, and Baby Monitoring. The dataset 

@@ -4,7 +4,7 @@ type: other
 categories:
 - Hybrid
 github_link: https://github.com/pipixin321/HolmesVAU
-description: A semi-automated hierarchical video annotation framework combined 
+summary: A semi-automated hierarchical video annotation framework combined 
   with a novel Anomaly-focused Temporal Sampler and a multimodal large language 
   model, aimed at comprehensive understanding of complex and long-term video 
   anomalies across multiple temporal scales.

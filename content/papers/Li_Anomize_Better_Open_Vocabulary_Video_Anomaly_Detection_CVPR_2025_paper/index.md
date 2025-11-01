@@ -4,7 +4,7 @@ type: method
 categories:
 - Hybrid
 github_link:
-description: The paper introduces the Anomize framework that addresses detection
+summary: The paper introduces the Anomize framework that addresses detection
   ambiguity and categorization confusion in open vocabulary video anomaly 
   detection (OVVAD) by leveraging visual and textual data augmentation, 
   dual-stream mechanisms, and label relation guidance, achieving superior 
