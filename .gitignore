@@ -11,3 +11,12 @@ node_modules
 
 # Hugo
 public
+resources
+
+# Python
+__pycache__/
+*.py[codz]
+*$py.class
+
+# Environment
+.env
