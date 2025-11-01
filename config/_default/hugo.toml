@@ -19,7 +19,7 @@ enableEmoji = true
 # googleAnalytics = "G-XXXXXXXXX"
 
 [pagination]
-pagerSize = 100
+pagerSize = 20
 
 [imaging]
 anchor = 'Center'
@@ -43,16 +43,8 @@ threshold = 0
 toLower = false
 
 [[related.indices]]
-name = "tags"
-weight = 100
-
-[[related.indices]]
 name = "categories"
 weight = 100
-
-[[related.indices]]
-name = "series"
-weight = 50
 
 [[related.indices]]
 name = "authors"
