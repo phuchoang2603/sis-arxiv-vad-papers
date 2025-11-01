@@ -1,11 +1,17 @@
+import os
+from dotenv import load_dotenv
 from pathlib import Path
 
-INPUT_DIR = Path("../../arxiv_existing/test")
-OUTPUT_DIR = Path("../content/test")
-DONE_DIR = Path("../../arxiv_existing/done")
+load_dotenv()
+
+INPUT_DIR = Path("/mnt/storage/media/docs/arxiv_existing/test")
+OUTPUT_DIR = Path("/mnt/storage/media/docs/output/content/test")
+DONE_DIR = Path("/mnt/storage/media/docs/arxiv_existing/done")
 
 # --- API Configuration ---
 DOCLING_URL = "http://localhost:5001/v1/convert/file"
+N8N_WEBHOOK_URL = "https://n8n.vps.phuchoang.sbs/webhook/arxiv_extract_json_schema"
+N8N_API_KEY = os.getenv("N8N_API_KEY")
 
 DOCLING_PAYLOAD = {
     "from_formats": "pdf",
