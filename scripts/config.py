@@ -10,7 +10,7 @@ DONE_DIR = Path("/mnt/storage/media/docs/arxiv_existing/done")
 
 # --- API Configuration ---
 DOCLING_URL = "http://localhost:5001/v1/convert/file"
-N8N_WEBHOOK_URL = "https://n8n.vps.phuchoang.sbs/webhook/arxiv_extract_json_schema"
+N8N_WEBHOOK_URL = "https://localhost:5678/webhook/arxiv_extract_json_schema"
 N8N_API_KEY = os.getenv("N8N_API_KEY")
 
 DOCLING_PAYLOAD = {

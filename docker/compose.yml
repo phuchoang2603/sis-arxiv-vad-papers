@@ -1,0 +1,96 @@
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n
+    hostname: n8n
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+      - N8N_HOST=${SUBDOMAIN}.${DOMAIN_NAME}
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - N8N_RUNNERS_ENABLED=true
+      - N8N_SECURE_COOKIE=false
+      - WEBHOOK_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
+      - OLLAMA_HOST=${OLLAMA_HOST:-ollama:11434}
+      - TZ=${GENERIC_TIMEZONE}
+    volumes:
+      - ${APPDATA}/n8n/storage:/home/node/.n8n
+      - ${SHARED_FOLDER}:${SHARED_FOLDER}
+    restart: always
+
+  mcp-gateway:
+    image: docker/mcp-gateway
+    hostname: mcp-gateway
+    ports:
+      - "8811:8811"
+    command:
+      - --servers=arxiv-mcp-server
+      - --static=true
+      - --transport=streaming
+      - --port=8811
+    depends_on:
+      - mcp-arxiv-mcp-server
+    restart: always
+
+  mcp-arxiv-mcp-server:
+    image: mcp/arxiv-mcp-server
+    hostname: mcp-arxiv-mcp-server
+    entrypoint:
+      ["/docker-mcp/misc/docker-mcp-bridge", "python", "-m", "arxiv_mcp_server"]
+    init: true
+    security_opt:
+      - no-new-privileges
+    environment:
+      - PYTHONUNBUFFERED=1
+      - ARXIV_STORAGE_PATH=/app/papers
+    labels:
+      - docker-mcp=true
+      - docker-mcp-tool-type=mcp
+      - docker-mcp-name=arxiv-mcp-server
+      - docker-mcp-transport=stdio
+    volumes:
+      - type: image
+        source: docker/mcp-gateway
+        target: /docker-mcp
+      - ${SHARED_FOLDER}/arxiv_mcp:/app/papers
+    restart: always
+
+  # # To download the required models before first run
+  docling-serve-initial:
+    image: ghcr.io/docling-project/docling-serve-cu126:main
+    command:
+      - docling-tools
+      - models
+      - download
+      - --all
+    volumes:
+      - ${APPDATA}/n8n/docling_artifacts:/opt/app-root/src/.cache/docling/models
+    restart: "no"
+
+  # For document parsing
+  docling-serve:
+    image: ghcr.io/docling-project/docling-serve-cu126:main
+    hostname: docling-serve
+    ports:
+      - "5001:5001"
+    environment:
+      DOCLING_SERVE_ENABLE_UI: "true"
+      NVIDIA_VISIBLE_DEVICES: "all"
+      DOCLING_SERVE_ARTIFACTS_PATH: "/models"
+      DOCLING_SERVE_ENABLE_REMOTE_SERVICES: "true"
+      DOCLING_SERVE_ALLOW_EXTERNAL_PLUGINS: "true"
+    deploy: # This section is for compatibility with Swarm
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    volumes:
+      - ${APPDATA}/n8n/docling_artifacts:/models
+    runtime: nvidia
+    restart: always
+    depends_on:
+      docling-serve-initial:
+        condition: service_completed_successfully
